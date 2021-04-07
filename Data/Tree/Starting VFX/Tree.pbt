@@ -328,7 +328,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 10325704398959299479
+        Id: 8603629302167445173
       }
     }
     Overrides {
@@ -687,7 +687,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 12789298421290982104
+        Id: 9632849097138670638
       }
     }
     Overrides {
@@ -1076,7 +1076,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 10771793326190373211
+        Id: 14779099188806658691
       }
     }
     Overrides {
@@ -1405,7 +1405,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 4419013654555613900
+        Id: 11131788392135189052
       }
     }
     Overrides {
@@ -1758,7 +1758,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 9928782328988291306
+        Id: 4288486983837307165
       }
     }
     Overrides {
@@ -2057,7 +2057,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 3557887327544313985
+        Id: 14875131962515328614
       }
     }
     Overrides {
@@ -2414,7 +2414,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 15990110639578776742
+        Id: 12147802266133948339
       }
     }
     Overrides {
@@ -2741,7 +2741,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 850886034924769458
+        Id: 16021815535294018144
       }
     }
     Overrides {
@@ -3128,7 +3128,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 13327092040503993609
+        Id: 7312333655936516000
       }
     }
     Overrides {
@@ -3473,7 +3473,7 @@ Objects {
     Overrides {
       Name: "cs:08_Costume"
       AssetReference {
-        Id: 17373499686396899854
+        Id: 5044328203892269816
       }
     }
     Overrides {

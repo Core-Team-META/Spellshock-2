@@ -3701,9 +3701,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              R: 0.751523376
-              G: 0.329999983
-              B: 1
+              R: 0.358
+              G: 0.163589343
               A: 1
             }
           }

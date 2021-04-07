@@ -17,7 +17,6 @@ Assets {
         }
         ParentId: 14162296025304194376
         ChildIds: 11948698844300207364
-        ChildIds: 8815771347305816030
         ChildIds: 12739807324335713114
         ChildIds: 884710762923176761
         ChildIds: 16851243399114285191
@@ -2262,386 +2261,6 @@ Assets {
         }
       }
       Objects {
-        Id: 8815771347305816030
-        Name: "left_arm_prop"
-        Transform {
-          Location {
-            X: -7.69140625
-            Y: -39.4375
-            Z: 141.289063
-          }
-          Rotation {
-            Pitch: 3.50642776
-            Yaw: -177.397842
-            Roll: 4.28746653
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2639986751200618087
-        ChildIds: 6512117158639336464
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 6512117158639336464
-        Name: "GEO_left_arm_prop"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8815771347305816030
-        ChildIds: 16945789153098846591
-        ChildIds: 3179689834687303186
-        ChildIds: 17897572447382246708
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 16945789153098846591
-        Name: "Fantasy Shield Strap 01"
-        Transform {
-          Location {
-            X: -25.053833
-            Y: 3.3662281
-            Z: 0.371292114
-          }
-          Rotation {
-            Pitch: 0.631819785
-            Yaw: -174.317459
-            Roll: -10.1270895
-          }
-          Scale {
-            X: 0.534259379
-            Y: 1.04901862
-            Z: 0.604398131
-          }
-        }
-        ParentId: 6512117158639336464
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 19.3407459
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 20.3778248
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.273
-              G: 0.200356737
-              B: 0.13923
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1562276358413043561
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3179689834687303186
-        Name: "Fantasy Gauntlet Arm 01"
-        Transform {
-          Location {
-            X: -8.61242676
-            Y: 8.04627419
-            Z: -5.43464661
-          }
-          Rotation {
-            Pitch: -1.36300516
-            Yaw: 10.128149
-            Roll: 7.5850606
-          }
-          Scale {
-            X: 1.33388484
-            Y: 1.1590327
-            Z: 1.33388472
-          }
-        }
-        ParentId: 6512117158639336464
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 27.8822212
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 22.5581589
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 24.0197048
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 18.2507038
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 1
-              G: 0.951920569
-              B: 0.669999957
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 49.9336395
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:vtile"
-            Float: 40.39888
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.35
-              G: 0.35
-              B: 0.35
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:utile"
-            Float: 16.9412174
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:vtile"
-            Float: 16.9412174
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 0.139314
-              G: 0.321
-              B: 0.191052496
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.35
-              G: 0.35
-              B: 0.35
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4438523867532045845
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17897572447382246708
-        Name: "Fantasy Sword Guard 02"
-        Transform {
-          Location {
-            X: -8.2618494
-            Y: 2.5942421
-            Z: 0.638047397
-          }
-          Rotation {
-            Pitch: -5.47079468
-            Yaw: -169.081985
-            Roll: -94.0680237
-          }
-          Scale {
-            X: 2.71409345
-            Y: 2.95085335
-            Z: 1.03383064
-          }
-        }
-        ParentId: 6512117158639336464
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 53.4458275
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 64
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.35
-              G: 0.35
-              B: 0.35
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.35
-              G: 0.35
-              B: 0.35
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 40.4015083
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 35.126873
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12949356198995646650
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 12739807324335713114
         Name: "right_clavicle"
         Transform {
@@ -4204,7 +3823,7 @@ Assets {
           }
         }
         ParentId: 2639986751200618087
-        ChildIds: 8939693188776124569
+        ChildIds: 6768267393919489728
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -4220,18 +3839,17 @@ Assets {
         }
       }
       Objects {
-        Id: 8939693188776124569
+        Id: 6768267393919489728
         Name: "Group"
         Transform {
           Location {
-            X: 0.000432550907
-            Y: -0.000269174576
-            Z: -25.9684792
+            X: -4.45172071
+            Z: -17.2380104
           }
           Rotation {
-            Pitch: -3.05175781e-05
-            Yaw: 89.9999542
-            Roll: 4.06361651e-05
+            Pitch: -6.10351563e-05
+            Yaw: 89.999794
+            Roll: 7.32375483e-05
           }
           Scale {
             X: 1
@@ -4240,13 +3858,10 @@ Assets {
           }
         }
         ParentId: 6536678353681171906
-        ChildIds: 17956627216751477181
-        ChildIds: 7612828535067644173
-        ChildIds: 188648149855261565
-        ChildIds: 8564109890304481678
-        ChildIds: 18057819865536206487
-        ChildIds: 10821856565266819001
-        ChildIds: 15175040170109702902
+        ChildIds: 3683611464412835132
+        ChildIds: 1096484004445855644
+        ChildIds: 7761534768079516252
+        ChildIds: 840120843962108453
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -4261,26 +3876,25 @@ Assets {
         }
       }
       Objects {
-        Id: 17956627216751477181
+        Id: 3683611464412835132
         Name: "Fantasy Castle Pillar 02 - Mid"
         Transform {
           Location {
-            X: 0.276933312
-            Y: 0.884032547
-            Z: 37.9005051
+            X: -2.73343158
+            Y: 0.00122785568
+            Z: 2.04922438
           }
           Rotation {
             Pitch: -4.35958862
-            Yaw: -98.8992615
             Roll: 4.28125531e-07
           }
           Scale {
-            X: 0.0519092
-            Y: 0.0519091301
-            Z: 0.181413889
+            X: 0.0518950373
+            Y: 0.0519020781
+            Z: 0.362821698
           }
         }
-        ParentId: 8939693188776124569
+        ParentId: 6768267393919489728
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4327,6 +3941,15 @@ Assets {
             }
           }
           Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Trim:utile"
             Float: 2.39383054
           }
@@ -4359,26 +3982,25 @@ Assets {
         }
       }
       Objects {
-        Id: 7612828535067644173
+        Id: 1096484004445855644
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
-            X: 0.909596443
-            Y: 2.93725348
-            Z: 10.6369133
+            X: 1.09106159
+            Y: 0.000406265259
+            Z: 52.2110138
           }
           Rotation {
             Pitch: -4.35958862
-            Yaw: -98.8992615
             Roll: 4.28125531e-07
           }
           Scale {
-            X: 1.58543038
-            Y: 1.58542895
-            Z: 1.18494582
+            X: 1.83353627
+            Y: 1.83351195
+            Z: 0.686732709
           }
         }
-        ParentId: 8939693188776124569
+        ParentId: 6768267393919489728
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -4451,95 +4073,24 @@ Assets {
         }
       }
       Objects {
-        Id: 188648149855261565
-        Name: "Fantasy Pommel 02"
-        Transform {
-          Location {
-            X: 0.0157524347
-            Y: -2.77146912
-            Z: 86.388649
-          }
-          Rotation {
-            Pitch: 4.35964823
-            Yaw: 81.1007462
-            Roll: -179.999954
-          }
-          Scale {
-            X: 0.954876244
-            Y: 0.954877913
-            Z: 0.593223691
-          }
-        }
-        ParentId: 8939693188776124569
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 54.9747276
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 42.3390083
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9675776263369201294
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8564109890304481678
+        Id: 7761534768079516252
         Name: "Fantasy Castle Pillar 02 - Mid"
         Transform {
           Location {
-            X: 1.00874758
-            Y: 2.53979254
-            Z: 14.957119
+            X: -6.41968679
+            Y: -0.000178337097
+            Z: -46.2843819
           }
           Rotation {
-            Pitch: -4.35958862
-            Yaw: -98.899292
-            Roll: 2.14062766e-07
+            Pitch: -4.35961914
           }
           Scale {
-            X: 2.07346773
-            Y: 2.07346869
-            Z: 1.36440825
+            X: 2.07347536
+            Y: 2.07347894
+            Z: 2.41192055
           }
         }
-        ParentId: 8939693188776124569
+        ParentId: 6768267393919489728
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4627,18 +4178,18 @@ Assets {
         }
       }
       Objects {
-        Id: 18057819865536206487
-        Name: "Fantasy Castle Pillar 02 - Mid"
+        Id: 840120843962108453
+        Name: "Group"
         Transform {
           Location {
-            X: -0.0835291147
-            Y: -1.41821241
-            Z: 68.4649506
+            X: -2.00031662
+            Y: -0.000281214714
+            Z: 0.0642366409
           }
           Rotation {
-            Pitch: -4.35998535
-            Yaw: -98.899292
-            Roll: 2.14062766e-07
+            Pitch: 3.4150944e-05
+            Yaw: 0.000160509415
+            Roll: -3.43643369e-05
           }
           Scale {
             X: 1
@@ -4646,7 +4197,148 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8939693188776124569
+        ParentId: 6768267393919489728
+        ChildIds: 4343592817311219366
+        ChildIds: 3603896726110642742
+        ChildIds: 5717119804451893773
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4343592817311219366
+        Name: "Fantasy Pommel 02"
+        Transform {
+          Location {
+            X: 0.0157524347
+            Y: -2.77146912
+            Z: 86.388649
+          }
+          Rotation {
+            Pitch: 4.35964823
+            Yaw: 81.1007462
+            Roll: -179.999954
+          }
+          Scale {
+            X: 0.954876244
+            Y: 0.954877913
+            Z: 0.593223691
+          }
+        }
+        ParentId: 840120843962108453
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 15592158619972675004
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 54.9747276
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 42.3390083
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9675776263369201294
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3603896726110642742
+        Name: "Group"
+        Transform {
+          Location {
+            X: 4.30938292
+            Y: 0.479562759
+            Z: 68.281105
+          }
+          Rotation {
+            Pitch: -4.36001587
+            Roll: 3.88707757
+          }
+          Scale {
+            X: 1.13342178
+            Y: 1.13342178
+            Z: 1.13342178
+          }
+        }
+        ParentId: 840120843962108453
+        ChildIds: 855389647854430629
+        ChildIds: 15112462120522438481
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 855389647854430629
+        Name: "Fantasy Castle Pillar 02 - Mid"
+        Transform {
+          Location {
+            X: 0.000326149049
+            Y: -0.00198328937
+            Z: 0.000115352974
+          }
+          Rotation {
+            Pitch: -4.35999632
+            Yaw: -98.8993
+            Roll: 2.78281755e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3603896726110642742
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4714,15 +4406,6 @@ Assets {
               Id: 2754963224534021958
             }
           }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.139314
-              G: 0.321
-              B: 0.191052496
-              A: 1
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4748,17 +4431,17 @@ Assets {
         }
       }
       Objects {
-        Id: 10821856565266819001
+        Id: 15112462120522438481
         Name: "Fantasy Castle Pillar 02 - Mid"
         Transform {
           Location {
-            X: -0.976536751
-            Y: -1.36868
-            Z: 69.6354446
+            X: -0.0137732923
+            Y: -0.0896313787
+            Z: 1.17034209
           }
           Rotation {
-            Yaw: -8.89935303
-            Roll: -4.35998535
+            Yaw: -8.89937115
+            Roll: -4.35998726
           }
           Scale {
             X: 0.800000668
@@ -4766,7 +4449,7 @@ Assets {
             Z: 0.790332675
           }
         }
-        ParentId: 8939693188776124569
+        ParentId: 3603896726110642742
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4867,7 +4550,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15175040170109702902
+        Id: 5717119804451893773
         Name: "Group"
         Transform {
           Location {
@@ -4886,7 +4569,7 @@ Assets {
             Z: 1.11822748
           }
         }
-        ParentId: 8939693188776124569
+        ParentId: 840120843962108453
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4953,15 +4636,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_shield_strap_001"
-      }
-    }
-    Assets {
-      Id: 12949356198995646650
-      Name: "Fantasy Sword Guard 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_guard_sword_002"
       }
     }
     Assets {
