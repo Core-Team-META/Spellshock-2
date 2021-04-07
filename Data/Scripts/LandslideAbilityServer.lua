@@ -155,14 +155,21 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	if isAllowed(1) then
+	
+	--if isAllowed(1) then
 		ToggleDash(true)
-		Task.Spawn(
+		--[[Task.Spawn(
 			function()
 				ToggleDash(false)
 			end,
 			6
 		)
+	end]]
+end
+
+function OnInterrupted(thisAbility)
+	if isDashing then
+		ToggleDash(false)
 	end
 end
 
@@ -223,6 +230,7 @@ ClassEquipment.unequippedEvent:Connect(OnUnequip)
 SpecialAbility.castEvent:Connect(OnAbilityCast)
 SpecialAbility.executeEvent:Connect(OnAbilityExecute)
 SpecialAbility.cooldownEvent:Connect(OnAbilityCooldown)
+SpecialAbility.interruptedEvent:Connect(OnInterrupted)
 
 function Tick(deltaTime)
 	if isDashing and Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) then

@@ -36,7 +36,7 @@ function OnPickupCast(thisAbility)
 end
 
 function OnPickupExecute(thisAbility)
-	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
+	if thisAbility:GetCurrentPhase() ~= AbilityPhase.EXECUTE then 
 		return 
 	end
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
@@ -48,7 +48,7 @@ function OnPickupExecute(thisAbility)
 	local newScale = Vector3.New(META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale"))
 	PickupObject:SetWorldScale(newScale)
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
-	ThrowAbility.isEnabled = true
+	--ThrowAbility.isEnabled = true
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -101,6 +101,10 @@ function OnThrowExecute(thisAbility)
 		PickupObject:Destroy()
 	end
     
+	if thisAbility:GetCurrentPhase() ~= AbilityPhase.EXECUTE then 
+		return 
+	end
+
     -- Get mod data
     local projectileScale = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale")
     local projectileSpeed = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod3", DEFAULT_ProjectileSpeed, PickupAbility.name..": Projectile Speed")
@@ -135,14 +139,24 @@ function OnThrowExecute(thisAbility)
 end
 
 function OnThrowAbilityRecovery(thisAbility)
-	ThrowAbility.isEnabled = false
+	--ThrowAbility.isEnabled = false
 end
 
 function OnInterrupted(thisAbility)
+	print(thisAbility.name)
 	if Object.IsValid(PickupObject) then
 		--print("Interupted: "..thisAbility.name)
 		PickupObject:Destroy()
 		PickupObject = nil
+	end
+
+	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
+		CurrentProjectile:Destroy()
+		CurrentProjectile = nil
+	end
+
+	if thisAbility == PickupAbility then
+		ThrowAbility:Interrupt()
 	end
 end
 
@@ -163,10 +177,10 @@ Equipment.unequippedEvent:Connect(OnUnequip)
 PickupAbility.castEvent:Connect( OnPickupCast )
 PickupAbility.executeEvent:Connect(OnPickupExecute)
 PickupAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)
+PickupAbility.interruptedEvent:Connect(OnInterrupted)
 ThrowAbility.executeEvent:Connect(OnThrowExecute)
 ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
 ThrowAbility.interruptedEvent:Connect(OnInterrupted)
---PickupAbility.interruptedEvent:Connect(OnInterrupted)
 
 function Tick(dTime)
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
