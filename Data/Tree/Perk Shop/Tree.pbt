@@ -209,7 +209,7 @@ Objects {
   }
   ParentId: 5611420104663390633
   ChildIds: 179159324718384714
-  ChildIds: 9152004658297598690
+  ChildIds: 17948786855663811410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -223,7 +223,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9152004658297598690
+  Id: 17948786855663811410
   Name: "Meta_PerkShop_Helper_Client"
   Transform {
     Location {
@@ -239,39 +239,39 @@ Objects {
   ParentId: 1450419042999387635
   UnregisteredParameters {
     Overrides {
-      Name: "cs:METARewards_Networked"
-      ObjectReference {
-        SelfId: 9019563002044163780
-      }
-    }
-    Overrides {
-      Name: "cs:ServerGoldBoost"
-      ObjectReference {
-        SelfId: 1740869026821939111
-      }
-    }
-    Overrides {
-      Name: "cs:ServerXPBoost"
-      ObjectReference {
-        SelfId: 12345224484326756258
-      }
-    }
-    Overrides {
       Name: "cs:PerkContainer"
       ObjectReference {
         SelfId: 13526460874545008651
       }
     }
     Overrides {
-      Name: "cs:SelfXp"
+      Name: "cs:ServerXPBoostPerk"
       ObjectReference {
         SelfId: 12345224484326756258
       }
     }
     Overrides {
-      Name: "cs:SelfGold"
+      Name: "cs:ServerGoldBoostPerk"
       ObjectReference {
         SelfId: 1740869026821939111
+      }
+    }
+    Overrides {
+      Name: "cs:SelfXPBoostPerk"
+      ObjectReference {
+        SelfId: 10762759494414890908
+      }
+    }
+    Overrides {
+      Name: "cs:SelfGoldBoostPerk"
+      ObjectReference {
+        SelfId: 16676448941378051860
+      }
+    }
+    Overrides {
+      Name: "cs:METARewards_Networked"
+      ObjectReference {
+        SelfId: 9019563002044163780
       }
     }
   }
