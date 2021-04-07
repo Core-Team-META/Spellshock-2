@@ -170,6 +170,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14803987366094808844
+  Name: "Fantasy Medal 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Medal_001"
+  }
+}
+Assets {
   Id: 14653709633606201813
   Name: "Fantasy Gauntlet Arm 01"
   PlatformAssetType: 1
@@ -257,6 +266,24 @@ Assets {
   PrimaryAsset {
     AssetType: "AnimatedMeshAssetRef"
     AssetId: "npc_human_guy_fantasy_001_ref"
+  }
+}
+Assets {
+  Id: 13707030425558109407
+  Name: "Oswald"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "OswaldRegular_ref"
+  }
+}
+Assets {
+  Id: 13673358037856315902
+  Name: "Fantasy Frame 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Frame_007"
   }
 }
 Assets {
@@ -365,6 +392,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_truncated_teardrop_001"
+  }
+}
+Assets {
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
   }
 }
 Assets {

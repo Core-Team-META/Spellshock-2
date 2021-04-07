@@ -313,7 +313,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
             VerticalJustification {
               Value: "mc:everticaljustification:baseline"
@@ -394,7 +394,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 15165554833363844727
+              Id: 13707030425558109407
             }
             VerticalJustification {
               Value: "mc:everticaljustification:baseline"
@@ -434,12 +434,21 @@ Assets {
       }
     }
     Assets {
-      Id: 15165554833363844727
-      Name: "Amarante"
+      Id: 11336346532215892341
+      Name: "Germania One"
       PlatformAssetType: 28
       PrimaryAsset {
         AssetType: "FontAssetRef"
-        AssetId: "AmaranteRegular_ref"
+        AssetId: "GermaniaOneRegular_ref"
+      }
+    }
+    Assets {
+      Id: 13707030425558109407
+      Name: "Oswald"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "OswaldRegular_ref"
       }
     }
     PrimaryAssetId {
