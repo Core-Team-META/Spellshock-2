@@ -15,7 +15,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
+        ChildIds: 12140723397528829303
+        ChildIds: 10605519470284762275
+        ChildIds: 7276947716890668344
+        ChildIds: 12308445515779901876
+        ChildIds: 11256520124544743684
         ChildIds: 576626515800066238
         ChildIds: 16606391630387610522
         ChildIds: 17455327706320776106
@@ -35,6 +40,355 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 12140723397528829303
+        Name: "Skid Trail VFX"
+        Transform {
+          Location {
+            X: 225.267578
+            Z: 30
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12978960974355529845
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Skid Shape"
+            Enum {
+              Value: "mc:eskidshape:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.248000011
+              G: 0.0935403258
+              B: 0.0503439903
+              A: 0.363
+            }
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 2.96822715
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.282010972
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 1.35988772
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17485686228362456382
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:high"
+        }
+      }
+      Objects {
+        Id: 10605519470284762275
+        Name: "Skid Trail VFX"
+        Transform {
+          Location {
+            X: 203.820313
+            Y: 60
+            Z: 30
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12978960974355529845
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Skid Shape"
+            Enum {
+              Value: "mc:eskidshape:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.248000011
+              G: 0.0935403258
+              B: 0.0503439903
+              A: 0.363
+            }
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 2.96822715
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.429200917
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 1.35988772
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17485686228362456382
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:high"
+        }
+      }
+      Objects {
+        Id: 7276947716890668344
+        Name: "Skid Trail VFX"
+        Transform {
+          Location {
+            X: 203.820313
+            Y: -60
+            Z: 30
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12978960974355529845
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Skid Shape"
+            Enum {
+              Value: "mc:eskidshape:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.248000011
+              G: 0.0935403258
+              B: 0.0503439903
+              A: 0.363
+            }
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 2.96822715
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.429200917
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 1.35988772
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17485686228362456382
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:high"
+        }
+      }
+      Objects {
+        Id: 12308445515779901876
+        Name: "Skid Trail VFX"
+        Transform {
+          Location {
+            X: 185.267578
+            Y: 120
+            Z: 30
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12978960974355529845
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Skid Shape"
+            Enum {
+              Value: "mc:eskidshape:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.248000011
+              G: 0.0935403258
+              B: 0.0503439903
+              A: 0.363
+            }
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 2.96822715
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.576390862
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 1.35988772
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17485686228362456382
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:high"
+        }
+      }
+      Objects {
+        Id: 11256520124544743684
+        Name: "Skid Trail VFX"
+        Transform {
+          Location {
+            X: 185.267578
+            Y: -120
+            Z: 30
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12978960974355529845
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Skid Shape"
+            Enum {
+              Value: "mc:eskidshape:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.248000011
+              G: 0.0935403258
+              B: 0.0503439903
+              A: 0.363
+            }
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 2.96822715
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.576390862
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 1.35988772
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17485686228362456382
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -805,6 +1159,15 @@ Assets {
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 17485686228362456382
+      Name: "Skid Trail VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_skid_trail"
       }
     }
     Assets {

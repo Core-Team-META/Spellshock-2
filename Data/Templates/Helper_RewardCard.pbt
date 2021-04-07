@@ -13347,7 +13347,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -15224,7 +15224,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 140
+          Width: 145
           Height: 18
           UIX: 24.0680485
           RenderTransformPivot {
@@ -15353,7 +15353,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 173
+          Width: 180
           Height: 18
           UIX: 200
           RenderTransformPivot {

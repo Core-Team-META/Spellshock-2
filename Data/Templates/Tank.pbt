@@ -1921,7 +1921,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -2244,7 +2244,7 @@ Assets {
           }
           Animation: "unarmed_throw"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_10"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2688,7 +2688,7 @@ Assets {
           }
           Animation: "1hand_melee_shield_bash"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_10"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
