@@ -121,7 +121,7 @@ function Tick()
 	if LOCAL_PLAYER.isDead and (_G.CurrentMenu ~= _G.MENU_TABLE["NONE"] or _G.CurrentMenu ~= _G.MENU_TABLE["Respawn"]) then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 	end
-	if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and UI.IsCursorVisible() then
+	if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and UI.IsCursorVisible() and ABGS.GetGameState() ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		UI.SetCursorVisible(false)
 	elseif _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and not UI.IsCursorVisible() then
 		UI.SetCursorVisible(true)
