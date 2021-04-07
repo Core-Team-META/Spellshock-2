@@ -22,22 +22,24 @@ local listener
 local function SetServerXpBoost()
     if serverXpBoostTime > time() and ServerXPBoostButton.isInteractable then
         ServerXPBoostButton.isInteractable = false
+        LOCAL_PLAYER.clientUserData.IsServerXpBoosted = true
     elseif serverXpBoostTime < time() and not ServerXPBoostButton.isInteractable then
         ServerXPBoostButton.isInteractable = true
+        LOCAL_PLAYER.clientUserData.IsServerXpBoosted = false
     end
 end
 
 local function SetServerGoldBoost()
     if serverGoldBoostTime > time() and ServerGoldBoostButton.isInteractable then
         ServerGoldBoostButton.isInteractable = false
+        LOCAL_PLAYER.clientUserData.IsServerGoldBoosted = true
     elseif serverGoldBoostTime < time() and not ServerGoldBoostButton.isInteractable then
         ServerGoldBoostButton.isInteractable = true
+        LOCAL_PLAYER.clientUserData.IsServerGoldBoosted = false
     end
 end
 
 function Int()
-    SetServerXpBoost()
-    SetServerGoldBoost()
     serverXpBoostTime = NETWORKED:GetCustomProperty(CONST.SERVER_XP_BOOST_KEY)
     serverGoldBoostTime = NETWORKED:GetCustomProperty(CONST.SERVER_GOLD_BOOST_KEY)
 end
