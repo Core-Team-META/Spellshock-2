@@ -1086,8 +1086,8 @@ Objects {
     Overrides {
       Name: "cs:Orc"
       Color {
-        R: 0.72
-        G: 0.0715231895
+        R: 0.721568644
+        G: 0.0705882385
         A: 1
       }
     }
