@@ -211,8 +211,8 @@ API.STARTER_PACK_GOLD_BONUS = 10000 -- How much Gold a player gets when purchasi
 API.STARTER_PACK_PREMIUM_BONUS = 500 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
 
 -- Mulipliers for Server Boost Perks - Gold & XP
-API.XP_SERVER_BOOST_MULTIPLIER = .5 -- XP Boost 100% for the entire server
-API.GOLD_SERVER_BOOST_MULTIPLIER = .5 -- Gold Boost 100% for the entire server
+API.XP_SERVER_BOOST_MULTIPLIER = 0.5 -- XP Boost 100% for the entire server
+API.GOLD_SERVER_BOOST_MULTIPLIER = 0.5 -- Gold Boost 100% for the entire server
 API.XP_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 API.GOLD_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 
@@ -369,8 +369,8 @@ API.COSMETIC_TOKEN = API.CURRENCY[2]
 API.VIP_MEMBERSHIP_KEY = "IsVip"
 API.SELF_GOLD_BOOST_KEY = "PGBK"
 API.SELF_XP_BOOST_KEY = "PXBK"
-API.SERVER_XP_BOOST_KEY = "SXBK"
-API.SERVER_GOLD_BOOST_KEY = "SGBK"
+API.SERVER_XP_BOOST_KEY = "sxt"
+API.SERVER_GOLD_BOOST_KEY = "sgt"
 API.STARTER_PACK_KEY = "SPK"
 
 API.PERK_STORAGE_KEYS = {
