@@ -4,6 +4,18 @@ local messagePrefix = "[SERVER]"
 local API_Constants = require(script:GetCustomProperty("API_Constants"))
 local AdminData = require(script:GetCustomProperty("AdminData"))
 
+
+local function ReturnPlayerByName(Name)
+    if not Name then
+        return
+    end
+    for _, player in pairs(Game.GetPlayers()) do
+        if (string.find(string.upper(player.name), string.upper(Name))) then
+            return player
+        end
+    end
+end
+
 commands = {
     ["/adminall"] = {
         OnCommandCalledClient = function (player, message)
@@ -45,7 +57,7 @@ commands = {
     },
 
     ["/broadcast"] = {
-        
+
         OnCommandCalledClient = function (player, message)
         end,
         OnCommandCalledServer = function (player, message)
@@ -55,18 +67,18 @@ commands = {
         end,
         OnCommandReceivedClient = function (player, message)
         end,
-        
+
         description = "Shows a broadcast in chat to all players",
         requireMessage = true,
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
-        
+
     },
-        
+
     ["/glitteringprizes"] = {
         OnCommandCalledClient = function (player, message)
         end,
-        OnCommandCalledServer = function (player, message)  
+        OnCommandCalledServer = function (player, message)
             local split = {CoreString.Split(message)}
             local trimMessage = CoreString.Trim(message, split[1])
             local value = tonumber(trimMessage)
@@ -115,7 +127,7 @@ commands = {
         adminRank = AdminData.AdminRanks.Admin,
     },
 
-    ["/respawn"] = {
+--[[     ["/respawn"] = {
         OnCommandCalledClient = function (player, message)
         end,
         OnCommandCalledServer = function (player, message)  
@@ -127,7 +139,7 @@ commands = {
         requireMessage = false,
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
-    },
+    }, ]]
 
     ["/fly"] = {
         OnCommandCalledClient = function (player, message)
@@ -156,8 +168,8 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
-
-    ["/tank"] = {
+--[[ 
+    ["/warrior"] = {
         OnCommandCalledClient = function (player, message)
         end,
         OnCommandCalledServer = function (player, message)  
@@ -165,7 +177,7 @@ commands = {
         end,
         OnCommandReceivedClient = function (player, message)
         end,
-        description = "Changes class to tank",
+        description = "Changes class to warrior",
         requireMessage = false,
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
@@ -198,7 +210,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
-    
+
     ["/healer"] = {
         OnCommandCalledClient = function (player, message)
         end,
@@ -226,11 +238,28 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
+ ]]
+    ["/happyplayers"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            for _, v in pairs(Game.GetPlayers()) do
+                v:AddResource(API_Constants.CURRENCY[2], 200)
+            end
+            Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you 200 Diamonds!")
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Changes team to the other",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.HigherAdmin,
+    },
 
     ["/changeteam"] = {
         OnCommandCalledClient = function (player, message)
         end,
-        OnCommandCalledServer = function (player, message)  
+        OnCommandCalledServer = function (player, message)
             if player.team == 1 then player.team = 2 return end
             if player.team == 2 then player.team = 1 return end
         end,
@@ -242,20 +271,63 @@ commands = {
         adminRank = AdminData.AdminRanks.Admin,
     },
 
-    ["/killall"] = {
+    ["/setresource"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+
+        OnCommandCalledServer = function (player, message)
+        local split = {CoreString.Split(message)}
+        local Value = tonumber(split[3])
+
+            if Value then
+                player:SetResource( split[2], Value)
+            end
+        end,
+
+        OnCommandReceivedClient = function (player, message)
+        end,
+
+        description = "Changes a resource",
+        requireMessage = true,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/addscore"] = {
         OnCommandCalledClient = function (player, message)
         end,
         OnCommandCalledServer = function (player, message)  
-            for _, v in pairs(Game.GetPlayers()) do
-                v:ApplyDamage(Damage.New(v.hitPoints))
+            local split = {CoreString.Split(message)}
+            local score = tonumber(split[2]) or 175
+            Game.IncreaseTeamScore(player.team, score)
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Adds score to the user",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/tp"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)  
+            local split = {CoreString.Split(message)}
+            if not split[2] then return end 
+
+            local TargetPlayer = ReturnPlayerByName(split[2])
+
+            if TargetPlayer then
+                player:SetWorldPosition(TargetPlayer:GetWorldPosition())
             end
         end,
         OnCommandReceivedClient = function (player, message)
         end,
-        description = "Kills all players",
-        requireMessage = false,
+        description = "Teleport to a player",
+        requireMessage = true,
         adminOnly = true,
-        adminRank = AdminData.AdminRanks.HigherAdmin,
+        adminRank = AdminData.AdminRanks.Admin,
     },
 
 }

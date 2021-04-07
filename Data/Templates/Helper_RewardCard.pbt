@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 942795955972537342
+        ParentId: 14710332786633172429
         ChildIds: 1879694575523701921
         ChildIds: 6672106617270379639
         UnregisteredParameters {
@@ -44,7 +44,7 @@ Assets {
         Control {
           Width: 300
           Height: 387
-          UIY: -500
+          UIY: 300
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1328,30 +1328,30 @@ Assets {
         }
         ParentId: 15932383015224223260
         ChildIds: 10720174407437163171
-        ChildIds: 916883462006496638
-        ChildIds: 13963465649779731948
-        ChildIds: 9350844833801169003
-        ChildIds: 15008431786940187305
         ChildIds: 4190439319682407640
+        ChildIds: 8485370593716168705
+        ChildIds: 5426226237268888254
+        ChildIds: 2532673285655740466
+        ChildIds: 16966043749985217987
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 100
-          Height: 20
-          UIY: 16.8910522
+          Width: 60
+          Height: 50
+          UIX: 114.352592
+          UIY: -18.3271313
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
-          UseParentWidth: true
           Panel {
           }
           AnchorLayout {
@@ -1394,7 +1394,9 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 22
+          Width: 20
+          Height: 24
+          UIX: 3.86626267
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1405,282 +1407,14 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 48307754774318265
+              Id: 16020038083592938182
             }
             Color {
               R: 0.830000043
-              G: 3.95774862e-07
-              A: 1
+              G: 4.45246712e-07
+              A: 0.728000045
             }
             TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 916883462006496638
-        Name: "UI Text Box"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8477623940561543414
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 200
-          Height: 30
-          UIX: -2
-          UIY: -2
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "CLICK AGAIN TO DESELECT"
-            Color {
-              R: 0.020833334
-              G: 0.0112427613
-              A: 0.854000032
-            }
-            Size: 10
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-            Font {
-              Id: 11336346532215892341
-            }
-            VerticalJustification {
-              Value: "mc:everticaljustification:center"
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13963465649779731948
-        Name: "UI Text Box"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8477623940561543414
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 200
-          Height: 30
-          UIX: 2
-          UIY: -2
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "CLICK AGAIN TO DESELECT"
-            Color {
-              R: 0.020833334
-              G: 0.0112427613
-              A: 0.854000032
-            }
-            Size: 10
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-            Font {
-              Id: 11336346532215892341
-            }
-            VerticalJustification {
-              Value: "mc:everticaljustification:center"
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9350844833801169003
-        Name: "UI Text Box"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8477623940561543414
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 200
-          Height: 30
-          UIX: -2
-          UIY: 2
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "CLICK AGAIN TO DESELECT"
-            Color {
-              R: 0.020833334
-              G: 0.0112427613
-              A: 0.854000032
-            }
-            Size: 10
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-            Font {
-              Id: 11336346532215892341
-            }
-            VerticalJustification {
-              Value: "mc:everticaljustification:center"
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15008431786940187305
-        Name: "UI Text Box"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8477623940561543414
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 200
-          Height: 30
-          UIX: 2
-          UIY: 2
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "CLICK AGAIN TO DESELECT"
-            Color {
-              R: 0.020833334
-              G: 0.0112427613
-              A: 0.854000032
-            }
-            Size: 10
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-            Font {
-              Id: 11336346532215892341
-            }
-            VerticalJustification {
-              Value: "mc:everticaljustification:center"
             }
           }
           AnchorLayout {
@@ -1722,7 +1456,271 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 200
+          Width: 70
+          Height: 30
+          UIX: -1
+          UIY: -1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "CLICK AGAIN TO DESELECT"
+            Color {
+              A: 0.702
+            }
+            Size: 9
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8485370593716168705
+        Name: "UI Text Box"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 3.25688781e-12
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8477623940561543414
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 70
+          Height: 30
+          UIX: 1
+          UIY: -1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "CLICK AGAIN TO DESELECT"
+            Color {
+              A: 0.702
+            }
+            Size: 9
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5426226237268888254
+        Name: "UI Text Box"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 6.51377563e-12
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8477623940561543414
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 70
+          Height: 30
+          UIX: -1
+          UIY: 1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "CLICK AGAIN TO DESELECT"
+            Color {
+              A: 0.702
+            }
+            Size: 9
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2532673285655740466
+        Name: "UI Text Box"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 9.77066344e-12
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8477623940561543414
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 70
+          Height: 30
+          UIX: 1
+          UIY: 1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "CLICK AGAIN TO DESELECT"
+            Color {
+              A: 0.702
+            }
+            Size: 9
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16966043749985217987
+        Name: "UI Text Box"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 9.77066344e-12
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8477623940561543414
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 70
           Height: 30
           RenderTransformPivot {
             Anchor {
@@ -1737,7 +1735,7 @@ Assets {
               B: 1
               A: 1
             }
-            Size: 10
+            Size: 9
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -19647,12 +19645,12 @@ Assets {
       }
     }
     Assets {
-      Id: 48307754774318265
-      Name: "UI Gradient Rectangular 001"
+      Id: 16020038083592938182
+      Name: "BG Highlighted 016"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Basic_Shape_002"
+        AssetId: "BackgroundHighlighted_033"
       }
     }
     Assets {
@@ -19671,6 +19669,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "BackgroundNoOutline_29"
+      }
+    }
+    Assets {
+      Id: 48307754774318265
+      Name: "UI Gradient Rectangular 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Basic_Shape_002"
       }
     }
     Assets {
