@@ -1,7 +1,8 @@
-if true then
+local Root = script:GetCustomProperty("Root"):WaitForObject()
+local enabled = Root:GetCustomProperty("Enabled")
+if not enabled then
     return
 end
-
 local Commands = require(script:GetCustomProperty("Commands"))
 
 function seperateMessage(Message)
