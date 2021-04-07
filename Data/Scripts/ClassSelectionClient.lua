@@ -314,7 +314,7 @@ function UpdateClassInfo(thisButton)
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
 	AbilityName.text = "Overview"
 	AbilityName:GetChildren()[1].text = "Overview"
-
+   Task.Wait()
 	-- Update all ability buttons and reset them to their idle state
 	for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 		local Icon = abilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
