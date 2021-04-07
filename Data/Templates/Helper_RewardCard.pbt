@@ -44,7 +44,7 @@ Assets {
         Control {
           Width: 300
           Height: 387
-          UIY: 300
+          UIY: -500
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1345,7 +1345,7 @@ Assets {
         Control {
           Width: 60
           Height: 50
-          UIX: 114.352592
+          UIX: 116.921692
           UIY: -18.3271313
           RenderTransformPivot {
             Anchor {
@@ -1396,7 +1396,7 @@ Assets {
         Control {
           Width: 20
           Height: 24
-          UIX: 3.86626267
+          UIX: -1.15534186
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1456,7 +1456,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 70
+          Width: 62
           Height: 30
           UIX: -1
           UIY: -1
@@ -1522,7 +1522,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 70
+          Width: 62
           Height: 30
           UIX: 1
           UIY: -1
@@ -1588,7 +1588,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 70
+          Width: 62
           Height: 30
           UIX: -1
           UIY: 1
@@ -1654,7 +1654,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 70
+          Width: 62
           Height: 30
           UIX: 1
           UIY: 1
@@ -1720,7 +1720,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 70
+          Width: 62
           Height: 30
           RenderTransformPivot {
             Anchor {
