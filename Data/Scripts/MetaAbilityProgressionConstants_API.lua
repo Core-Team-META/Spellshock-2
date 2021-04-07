@@ -208,7 +208,7 @@ API.STARTER_PACK_MULTIPLIER = 0.5 -- 50% To XP & Currency Gains
 API.STARTER_PACK_SHARDS_MULTIPLIER = 0.5 -- Currently A 0% Bonus
 API.STARTER_PACK_COSMETIC_MULTIPLIER = 0.5 -- 0% Bonus to cosmetic muliplier
 API.STARTER_PACK_GOLD_BONUS = 10000 -- How much Gold a player gets when purchasing the Starter Pack
-API.STARTER_PACK_PREMIUM_BONUS = 500 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
+API.STARTER_PACK_PREMIUM_BONUS = 350 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
 
 -- Mulipliers for Server Boost Perks - Gold & XP
 API.XP_SERVER_BOOST_MULTIPLIER = .5 -- XP Boost 100% for the entire server
