@@ -437,6 +437,7 @@ local function UpdateText(parent, newText, extra)
 end
 
 function UpdateAbilityInfo(thisButton)
+	Task.Wait(0.3)
 	local dataTable = thisButton.clientUserData.dataTable -- Get the ability data for this button
 	RightPanel_AbilityStatsPanel.visibility = Visibility.FORCE_OFF -- hide panel while changes are made
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
@@ -484,7 +485,7 @@ function UpdateAbilityInfo(thisButton)
 		LevelProgressBar.progress = currentXP / reqXP
 		LevelNextText.text = tostring(abilityLevel + 1)
 
-		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
+
 		AbilityXPPanel.visibility = Visibility.INHERIT
 		MaxLevelPanel.visibility = Visibility.FORCE_OFF
 		LevelProgressBar:SetFillColor(RegularFillColor)
@@ -671,7 +672,7 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	local bind = dataTable["BindID"]
 	local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[bind], META_AP()[class])
 	Level.text = tostring(abilityLevel)
-
+	
 	-- Show/Hide "upgrade" text
 	local ShowMorePanel = CurrentAbilityButton.clientUserData.panel:GetCustomProperty("ShowMorePanel"):WaitForObject()
 	local UpgradePanel =  CurrentAbilityButton.clientUserData.panel:GetCustomProperty("UpgradePanel"):WaitForObject()
