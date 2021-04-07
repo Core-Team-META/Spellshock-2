@@ -48,7 +48,7 @@ Objects {
     Overrides {
       Name: "cs:VIPMEMBR"
       NetReference {
-        Key: "9a630a8140814140828ba9db2ab94b93"
+        Key: "e5678c3a9ca347cd8e104bce8c699abc"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -57,7 +57,7 @@ Objects {
     Overrides {
       Name: "cs:GoldPack1"
       NetReference {
-        Key: "1f8c967ee23b4149b027039f3fcbfecc"
+        Key: "9b9b53b63a194dbdb74688e060e33075"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -66,7 +66,7 @@ Objects {
     Overrides {
       Name: "cs:GoldPack2"
       NetReference {
-        Key: "062eacbe6ab349fa819ec6135d8b456b"
+        Key: "8f0d07a9295046069a2014e972745697"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -75,7 +75,7 @@ Objects {
     Overrides {
       Name: "cs:GoldPack3"
       NetReference {
-        Key: "c81a7c40c1ba46dbb33f665f92aa360c"
+        Key: "1e3ae70bf08c4fa0ab3601bef00ed946"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -84,7 +84,7 @@ Objects {
     Overrides {
       Name: "cs:GoldPack4"
       NetReference {
-        Key: "e64a8cb38d594df39dad4dc9c79f53bd"
+        Key: "2b7b93a96eca459587afbb4e3292dc28"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -93,7 +93,7 @@ Objects {
     Overrides {
       Name: "cs:JewelPack1"
       NetReference {
-        Key: "4c88bde76bb94826939cdc33c920fb7c"
+        Key: "df8c1f44f1bb4bc48fb169abff92a3bd"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -102,7 +102,7 @@ Objects {
     Overrides {
       Name: "cs:JewelPack2"
       NetReference {
-        Key: "5f1861158d1b46c4986e5c8e070ef8df"
+        Key: "6745acba244f4fc4b182d0f596cc88fc"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -111,7 +111,7 @@ Objects {
     Overrides {
       Name: "cs:JewelPack3"
       NetReference {
-        Key: "8e1db13faf0c4520b3f33c000966ff0e"
+        Key: "7faf80a1c1fb4e3ea5ec9333a5128889"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -120,7 +120,7 @@ Objects {
     Overrides {
       Name: "cs:JewelPack4"
       NetReference {
-        Key: "5c9ecc9b43634af49a678a1436056271"
+        Key: "955b0ae1028d4d5dad86af508405d641"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -129,7 +129,7 @@ Objects {
     Overrides {
       Name: "cs:SELFGOLDBOOST"
       NetReference {
-        Key: "ee58a27537bd495e8a56d8b7ab1d27a6"
+        Key: "92be9ac5f97644bca5c86b13f43cbadc"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -138,7 +138,7 @@ Objects {
     Overrides {
       Name: "cs:SELFXPBOOST"
       NetReference {
-        Key: "d353a02d625648ecbc5f591d80dd14ab"
+        Key: "21a7c8f2bff34e6784e198612c79525a"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -147,7 +147,7 @@ Objects {
     Overrides {
       Name: "cs:SERVERGOLDBOOST"
       NetReference {
-        Key: "1b84a17bbed844d194f487b970ee659d"
+        Key: "74e99b0b92e84e3a844820861e1c4f49"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -156,7 +156,7 @@ Objects {
     Overrides {
       Name: "cs:SERVERXPBOOST"
       NetReference {
-        Key: "39f7b248b32c4890a7b8666d16e98e12"
+        Key: "64198bbf0f584e52bdaa193ca0eb56e8"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -165,7 +165,7 @@ Objects {
     Overrides {
       Name: "cs:StarterPack"
       NetReference {
-        Key: "c21f2a8a571e441d8fb6dc83a9e79695"
+        Key: "03722328af71484c995115f4cac95da3"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }

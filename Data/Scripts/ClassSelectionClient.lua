@@ -119,7 +119,7 @@ function OnMenuChanged(oldMenu, newMenu)
 			if META_AP()[data.ClassID] == currentClass then
 				newButton = classButton
 			end
-			classButton.clientUserData.level.text = tostring( LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[data.ClassID])) )
+			classButton.clientUserData.level.text = tostring( META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[data.ClassID]) )
 		end
 
 		OnClassClicked(newButton)
@@ -445,7 +445,7 @@ function UpdateClassInfo(thisButton)
 		DescriptionText.text = dataTable["ElfDescription"]
 	end
 
-	local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]]) --LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]]))
+	local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
 	ClassLevel.text = tostring(classLevel)
 
 	local currentXP = META_CP().GetClassXp(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
@@ -493,7 +493,12 @@ function OnClassClicked(thisButton)
 	RightPanel_AbilitiesPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilitiesLabel.visibility = Visibility.INHERIT
 	RightPanel_ClassLevelPanel.visibility = Visibility.INHERIT
-	ConfirmChoicePanel.visibility = Visibility.INHERIT
+	
+	if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+		ConfirmChoicePanel.visibility = Visibility.INHERIT
+	else
+		ConfirmChoicePanel.visibility = Visibility.FORCE_OFF
+	end
 
 	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
 	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.INHERIT

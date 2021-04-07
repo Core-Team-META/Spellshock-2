@@ -65,6 +65,14 @@ local function GetPlayer(players, name)
 	end
 end
 
+function SetChildrenText(uiObj, _text) -- <-- generic children text function by AJ
+    if Object.IsValid(uiObj) and uiObj:IsA("UIText") then uiObj.text = _text end
+
+    for i, v in ipairs(uiObj:GetChildren()) do
+        if v:IsA("UIText") then SetChildrenText(v, _text) end
+    end
+end
+
 --	nil UpdatePanelForPlayer(CoreObject, Player)
 --	Updates the visual for the player stats
 local function UpdatePanelForPlayer(panel, player)
@@ -77,8 +85,9 @@ local function UpdatePanelForPlayer(panel, player)
 
 	end
 
-	local nameTextLabel, deathsValueLabel, killsValueLabel, resourceValueLabel, resourcePanel, meMarker =
+	local nameTextLabel, nameTextPanel, deathsValueLabel, killsValueLabel, resourceValueLabel, resourcePanel, meMarker =
 	panel:GetCustomProperty("NameText"):WaitForObject(),
+	panel:GetCustomProperty("NamePanel"):WaitForObject(),	
 	panel:GetCustomProperty("DeathsValue"):WaitForObject(),
 	panel:GetCustomProperty("KillsValue"):WaitForObject(),
 	panel:GetCustomProperty("ResourceValue"):WaitForObject(),
@@ -95,7 +104,9 @@ local function UpdatePanelForPlayer(panel, player)
 		end
 	end
 
-	nameTextLabel.text = player.name
+	SetChildrenText(nameTextPanel, player.name)
+
+
 	if player.name == LocalPlayer then
 		nameTextLabel:SetColor(_G.TeamColors[3])
 	else

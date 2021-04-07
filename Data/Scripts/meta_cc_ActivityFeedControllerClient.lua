@@ -15,61 +15,21 @@ local AF_IMAGE_TEMPLATE = script:GetCustomProperty("ActivityFeedImageTemplate")
 local AF_TEXT_ON_IMAGE_TEMPLATE = script:GetCustomProperty("ActivityFeedTextOnImage")
 local AF_HEALTH_BAR_TEMPLATE = script:GetCustomProperty("ActivityFeedHealthBar")
 
+local scriptListeners = {}
+local listeners = {}
+local levelUpEnabled = false
+
 while not _G.CurrentMenu do Task.Wait() end
 
 -- Feed icons
 local NEEDS_UPDATE = false
-
-function TablePrint(tbl, indent)
-    local formatting, lua_type
-    if tbl == nil then
-        print("Table was nil")
-        return
-    end
-    if type(tbl) ~= "table" then
-        print("Table is not a table, it is a " .. type(tbl))
-        return
-    end
-    if next(tbl) == nil then
-        print("Table is empty")
-        return
-    end
-    if not indent then
-        indent = 0
-    end
-
-    -- type(v) returns nil, number, string, function, CFunction, userdata, and table.
-    -- type(v) returns string, number, function, boolean, table or nil
-    for k, v in pairs(tbl) do
-        formatting = string.rep("  ", indent) .. k .. ": "
-        lua_type = type(v)
-        if lua_type == "table" then
-            print(formatting)
-            TablePrint(v, indent + 1)
-        elseif lua_type == "boolean" then
-            print(formatting .. tostring(v))
-        elseif lua_type == "function" then
-            print(formatting .. "function")
-        elseif lua_type == "userdata" then
-			if (v.name) then
-				print(tostring(v.name))
-			else
-				print(tostring(v))
-			end
-            print(formatting .. "userdata")
-        else
-            print(formatting .. v)
-        end
-    end
-end
-
-
 
 -- Kill Feed
 local KILL_FEED_SETTINGS = script:GetCustomProperty("KillFeedSettings"):WaitForObject()
 
 local JOINED_ICON = KILL_FEED_SETTINGS:GetCustomProperty("JoinedIcon")
 local LEFT_ICON = KILL_FEED_SETTINGS:GetCustomProperty("LeftIcon")
+local LEVEL_UP_ICON = KILL_FEED_SETTINGS:GetCustomProperty("LeveledUpIcon")
 local JOINED_ICON_COLOR = KILL_FEED_SETTINGS:GetCustomProperty("JoinedIconColor")
 local LEFT_ICON_COLOR = KILL_FEED_SETTINGS:GetCustomProperty("LeftIconColor")
 
@@ -164,6 +124,14 @@ local ClassIDs = Enum{
 	"ASSASSIN"
 }
 
+local ClassNamesByID = Enum{
+	"Warrior",
+	"Mage",
+	"Hunter",
+	"Healer",
+	"Assassin"
+}
+
 for _, class in ipairs(propClassData:GetChildren()) do
 	classIcons[class:GetCustomProperty("ClassID")] = class:GetCustomProperty("Icon")
 	for _, skill in ipairs(class:GetChildren()) do
@@ -217,6 +185,8 @@ function AddLine(line, color)
 		lines[1].killedImage = JOINED_ICON
 	elseif (line[4] == "PlayerLeft") then
 		lines[1].killedImage = LEFT_ICON
+	elseif (line[4] == "PlayerLeveled") then
+		lines[1].killedImage = LEVEL_UP_ICON
 	else
 		lines[1].killedImage = line[11] or nil
 	end
@@ -345,7 +315,6 @@ function Tick(deltaTime)
 			for _, borderLine in pairs(BGImage:GetChildren()) do
 				borderLine:SetColor(BGBorderColor)
 			end
-
 		end
 	end
 
@@ -362,7 +331,7 @@ function Tick(deltaTime)
 
 				-- Full opacity until LINE_DURATION, then lerp to invisible over FADE_DURATION
 				local feedLines = lineTemplates[i]:GetChildren()
-				-- TablePrint(feedLines, 4)
+
 				local feedElements = {}
 
 				for _, element in ipairs(feedLines) do
@@ -704,9 +673,48 @@ function ResetFeed()
 	end
 end
 
---[[
-	SHOW JOIN AND LEAVE
-]]
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+
+local function ClearListeners(listeners)
+    for _, listener in ipairs(listeners) do
+        if listener and listener.isConnected then
+            listeners:Disconnect()
+        end
+    end
+    listeners = {}
+end
+
+local function OnRoundStart()
+	Task.Wait(0.1)
+	levelUpEnabled = true
+end
+
+local function OnRoundEnd()
+	levelUpEnabled = false
+	ResetFeed()
+end
+
+
+------------------------------------------------------------------------------------------------------------------------
+-- GLOBAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+function OnResourceChanged(player, resName, resAmt)
+
+	if (resName == "C_LEVEL" and levelUpEnabled) then
+		AddLine({"", 
+			string.format("%s has reached %s level %d",
+							player.name,
+							ClassNamesByID[player:GetResource("CLASS_MAP")],
+							tostring(resAmt)
+						), "", "PlayerLeveled"}, TEXT_COLOR)
+		NEEDS_UPDATE = true
+	end
+
+end
+
+
 
 -- nil OnPlayerJoined(Player)
 -- if ShowJoinAndLeave, add a message for a player joining the game
@@ -724,9 +732,8 @@ function OnPlayerLeft(player)
 	NEEDS_UPDATE = true
 end
 
-Game.roundEndEvent:Connect(ResetFeed)
-Events.Connect("Menu Changed", OnMenuChanged)
-Events.Connect("GameStateChanged", OnGameStateChanged)
+Game.roundStartEvent:Connect(OnRoundStart)
+Game.roundEndEvent:Connect(OnRoundEnd)
 
 AF_PANEL.visibility = Visibility.FORCE_OFF
 
@@ -735,3 +742,13 @@ if SHOW_JOIN_AND_LEAVE then
 	Game.playerLeftEvent:Connect(OnPlayerLeft)
 end
 
+
+scriptListeners[#scriptListeners + 1] = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+scriptListeners[#scriptListeners + 1] = Events.Connect("GameStateChanged", OnGameStateChanged)
+
+scriptListeners[#scriptListeners + 1] =
+    script.destroyEvent:Connect(
+    function()
+        ClearListeners(scriptListeners)
+    end
+)

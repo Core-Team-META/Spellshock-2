@@ -18,12 +18,9 @@ local MOST_KILLS = script:GetCustomProperty("MOST_KILLS"):WaitForObject()
 local MOST_DEATHS = script:GetCustomProperty("MOST_DEATHS"):WaitForObject()
 local ULTIMATE_KILLS = script:GetCustomProperty("ULTIMATE_KILLS"):WaitForObject()
 local KILLSTREAK = script:GetCustomProperty("KILLSTREAK"):WaitForObject()
-local CAPTURE_POINTS = script:GetCustomProperty("CAPTURE_POINTS"):WaitForObject()
 local MOST_CAPPED = script:GetCustomProperty("MOST_CAPPED"):WaitForObject()
 local HEALING_GIVEN = script:GetCustomProperty("HEALING_GIVEN"):WaitForObject()
 local MOST_DAMAGE = script:GetCustomProperty("MOST_DAMAGE"):WaitForObject()
-local MVP_PLAYER_NAME = script:GetCustomProperty("MVP_PLAYER_NAME"):WaitForObject()
-local CAPTURE_ASSISTS = script:GetCustomProperty("CAPTURE_ASSISTS"):WaitForObject()
 
 ------------------------------------------------------------------------------------------------------------------------
 -- TEMPLATES
@@ -179,10 +176,10 @@ local function BuildStats(players, parentPanel)
                 local value = player:GetResource(CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS)
                 stats.text = tostring(value)
                 player.clientUserData.MVP_Stats = player.clientUserData.MVP_Stats + value
-            elseif parentPanel == CAPTURE_ASSISTS then
+           --[[elseif parentPanel == CAPTURE_ASSISTS then
                 local value = player:GetResource(CONST.COMBAT_STATS.CAPTURE_ASSISTS)
                 stats.text = tostring(value)
-                player.clientUserData.MVP_Stats = player.clientUserData.MVP_Stats + value
+                player.clientUserData.MVP_Stats = player.clientUserData.MVP_Stats + value]]--
             end
             playerStats.y = (i - 1) * 30--+ 52
             statPanels[#statPanels + 1] = playerStats
@@ -224,13 +221,11 @@ local function BuildRoundEndStats()
     BuildStats(players, MOST_CAPPED)
 
     -- Most Capture Assists
-    table.sort(players, ComparePlayerCaptureAssists)
-    BuildStats(players, CAPTURE_ASSISTS)
+    --table.sort(players, ComparePlayerCaptureAssists)
+    --BuildStats(players, CAPTURE_ASSISTS)
 
     -- MVP
     table.sort(players, ComparePlayersForMVP)
-    MVP_PLAYER_NAME.text = players[1].name
-    MVP_PLAYER_NAME:SetColor(_G.TeamColors[players[1].team])
 end
 
 ------------------------------------------------------------------------------------------------------------------------

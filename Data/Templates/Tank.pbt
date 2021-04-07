@@ -2156,6 +2156,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2167,6 +2168,7 @@ Assets {
             CanRotate: true
           }
           Animation: "2hand_melee_dig_shovel"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_14"
           }
@@ -2199,13 +2201,13 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           CastPhaseSettings {
             Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2216,7 +2218,6 @@ Assets {
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2226,8 +2227,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2237,12 +2236,12 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           Animation: "unarmed_throw"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:invalid"
           }
@@ -2663,8 +2662,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2673,7 +2670,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2682,7 +2678,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }

@@ -38,5 +38,5 @@ function OnPlayerLeft(player)
 end
 
 listeners[#listeners + 1] = PickupAbility.executeEvent:Connect(OnPickupAbilityExecute)
-listeners[#listeners + 1] = PickupAbility.recoveryEvent:Connect(OnPickupAbilityRecovery)
+listeners[#listeners + 1] = PickupAbility.cooldownEvent:Connect(OnPickupAbilityRecovery)
 Game.playerLeftEvent:Connect(OnPlayerLeft)

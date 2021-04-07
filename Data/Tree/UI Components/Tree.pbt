@@ -11970,7 +11970,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 215
+    Width: 225
     Height: 37
     UIX: 4
     UIY: 8
@@ -11984,7 +11984,7 @@ Objects {
       Color {
         A: 0.379
       }
-      Size: 27
+      Size: 23
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -12058,7 +12058,7 @@ Objects {
         B: 0.266000032
         A: 1
       }
-      Size: 27
+      Size: 23
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -37611,6 +37611,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -1.68752682
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -37654,12 +37655,6 @@ Objects {
   }
   ParentId: 6990393760871233806
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Shadow"
-      ObjectReference {
-        SelfId: 4929104672219926534
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37682,11 +37677,11 @@ Objects {
     Text {
       Label: "MAX LEVEL REACHED"
       Color {
-        G: 0.00520833349
-        B: 0.00133293867
+        R: 1
+        G: 0.539652526
         A: 1
       }
-      Size: 12
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -37695,7 +37690,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -37731,12 +37726,6 @@ Objects {
   }
   ParentId: 6990393760871233806
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Shadow"
-      ObjectReference {
-        SelfId: 4929104672219926534
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37761,11 +37750,9 @@ Objects {
     Text {
       Label: "MAX LEVEL REACHED"
       Color {
-        G: 0.286458343
-        B: 0.0733116269
-        A: 1
+        A: 0.321
       }
-      Size: 12
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -37774,7 +37761,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -37810,12 +37797,6 @@ Objects {
   }
   ParentId: 6990393760871233806
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Shadow"
-      ObjectReference {
-        SelfId: 4929104672219926534
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37840,11 +37821,9 @@ Objects {
     Text {
       Label: "MAX LEVEL REACHED"
       Color {
-        G: 0.286458343
-        B: 0.0733116269
-        A: 1
+        A: 0.321
       }
-      Size: 12
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -37853,7 +37832,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -37889,12 +37868,6 @@ Objects {
   }
   ParentId: 6990393760871233806
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Shadow"
-      ObjectReference {
-        SelfId: 4929104672219926534
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37919,11 +37892,9 @@ Objects {
     Text {
       Label: "MAX LEVEL REACHED"
       Color {
-        G: 0.286458343
-        B: 0.0733116269
-        A: 1
+        A: 0.321
       }
-      Size: 12
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -37932,7 +37903,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -37968,12 +37939,6 @@ Objects {
   }
   ParentId: 6990393760871233806
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Shadow"
-      ObjectReference {
-        SelfId: 4929104672219926534
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37998,11 +37963,9 @@ Objects {
     Text {
       Label: "MAX LEVEL REACHED"
       Color {
-        G: 0.286458343
-        B: 0.0733116269
-        A: 1
+        A: 0.321
       }
-      Size: 12
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -38011,7 +37974,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
