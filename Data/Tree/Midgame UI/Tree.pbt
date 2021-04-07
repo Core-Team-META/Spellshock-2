@@ -17485,8 +17485,8 @@ Objects {
     Text {
       Label: "Dark Devout"
       Color {
-        R: 0.723055363
-        G: 0.0703600496
+        R: 0.725490212
+        G: 0.0705882385
         A: 1
       }
       Size: 20

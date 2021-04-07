@@ -95,6 +95,7 @@ local store = require(prop_CosmeticStore)
 
 local propUIMarkersAndPreviews = script:GetCustomProperty("UIMarkersAndPreviews"):WaitForObject()
 local propBaseUIContainer = propStoreRoot:GetCustomProperty("BaseUIContainer"):WaitForObject()
+local propCurrentTeam = script:GetCustomProperty("CurrentTeam"):WaitForObject()
 
 ------------------------------------------------------------------------------------------------------------------------
 -- SFX
@@ -398,6 +399,19 @@ function ShowStore_ClientHelper()
 		FilterStoreItems()
 	end
 	UpdateCurrencyDisplay()
+	
+	local teamName  = {propCurrentTeam:FindDescendantByName("TeamText_SHADOW"), propCurrentTeam:FindDescendantByName("TeamText")}
+	
+	if Game.GetLocalPlayer().team == 1 then
+		teamName[1].text = "Dark Devout"
+		teamName[2].text = teamName[1].text
+		teamName[2]:SetColor(Color.FromLinearHex("B91200FF"))
+	elseif Game.GetLocalPlayer().team == 2 then
+		teamName[1].text = "Legion of Light"
+		teamName[2].text = teamName[1].text
+		teamName[2]:SetColor(Color.FromLinearHex("00955CFF"))
+	end
+		
 
 	for k, v in pairs(StoreUIButtons) do
 		UpdateEntryButton(v, false)

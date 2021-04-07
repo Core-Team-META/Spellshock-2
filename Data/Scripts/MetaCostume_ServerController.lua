@@ -107,9 +107,9 @@ end
 
 
 --@param object player
-local function OnDeletePlayerDataObject(player)
+local function OnDeletePlayerDataObject(player, objectId)
     for _, object in ipairs(DATA_TRANSFER:GetChildren()) do
-        if Object.IsValid(object) and object.name == player.id then
+        if Object.IsValid(object) and object.id == objectId then
             object:Destroy()
         end
     end
@@ -325,4 +325,4 @@ Int()
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
 end
-Events.ConnectForPlayer("OnDestroyPlayerDataObject", OnDeletePlayerDataObject)
+Events.ConnectForPlayer("OnDestroyCosm", OnDeletePlayerDataObject)
