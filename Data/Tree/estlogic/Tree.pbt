@@ -890,7 +890,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1321,6 +1321,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -1384,6 +1386,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -1447,6 +1451,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -1510,6 +1516,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -1879,6 +1887,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -1942,6 +1952,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -2005,6 +2017,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -2068,6 +2082,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -2437,6 +2453,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -2500,6 +2518,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -2563,6 +2583,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -2626,6 +2648,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -2995,6 +3019,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -3058,6 +3084,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -3121,6 +3149,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -3184,6 +3214,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -3553,6 +3585,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -3616,6 +3650,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -3679,6 +3715,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -3742,6 +3780,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4110,6 +4150,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4173,6 +4215,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4236,6 +4280,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4299,6 +4345,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4668,6 +4716,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4731,6 +4781,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4794,6 +4846,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4857,6 +4911,8 @@ Objects {
     UseParentHeight: true
     Text {
       Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 20
@@ -4898,7 +4954,7 @@ Objects {
   }
   ParentId: 6957376178355688345
   ChildIds: 16760313334028087775
-  ChildIds: 1116358827731447326
+  ChildIds: 18434573848642501744
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
@@ -4909,7 +4965,7 @@ Objects {
     Overrides {
       Name: "cs:PointsText"
       ObjectReference {
-        SelfId: 1116358827731447326
+        SelfId: 18434573848642501744
       }
     }
   }
@@ -4948,7 +5004,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1116358827731447326
+  Id: 18434573848642501744
   Name: "PointsText"
   Transform {
     Location {
@@ -4962,6 +5018,62 @@ Objects {
     }
   }
   ParentId: 3272754711611253912
+  ChildIds: 15037518180598879292
+  ChildIds: 12849524449729835643
+  ChildIds: 8679898366582223095
+  ChildIds: 6537456654330079490
+  ChildIds: 1116358827731447326
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: 30
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1116358827731447326
+  Name: "PointsText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18434573848642501744
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4974,7 +5086,6 @@ Objects {
   Control {
     Width: 200
     Height: 70
-    UIY: 30
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4985,6 +5096,262 @@ Objects {
       Color {
         R: 1
         G: 0.456411064
+        A: 1
+      }
+      Size: 45
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6537456654330079490
+  Name: "PointsText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18434573848642501744
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 70
+    UIX: -1
+    UIY: -1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Text {
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      Size: 45
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8679898366582223095
+  Name: "PointsText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18434573848642501744
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 70
+    UIX: -1
+    UIY: 1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Text {
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      Size: 45
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12849524449729835643
+  Name: "PointsText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18434573848642501744
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 70
+    UIX: 1
+    UIY: -1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Text {
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      Size: 45
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 15037518180598879292
+  Name: "PointsText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18434573848642501744
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 70
+    UIX: 1
+    UIY: 1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Text {
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
         A: 1
       }
       Size: 45
