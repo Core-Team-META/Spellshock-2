@@ -7,11 +7,10 @@ local PlayerKilledEvent = script:GetCustomProperty("PlayerKilledEvent")
 local nemesisTrackerServer = script:GetCustomProperty("NemesisTrackerServer")
                                  :WaitForObject()
 
-local YourNemesisText = script:GetCustomProperty("YourNemesisText")
-                            :WaitForObject()
+-- local YourNemesisText = script:GetCustomProperty("YourNemesisText"):WaitForObject()
 -- local YourNemesisKillsText = script:GetCustomProperty("YourNemesisKillsText"):WaitForObject()
 
-local NemesisOfText = script:GetCustomProperty("NemesisOfText"):WaitForObject()
+-- local NemesisOfText = script:GetCustomProperty("NemesisOfText"):WaitForObject()
 -- local NemesisOfKillsText = script:GetCustomProperty("NemesisOfKillsText"):WaitForObject()
 
 local victoryScreenContainer =
@@ -35,7 +34,7 @@ local yourKillCountAsNemesis = 0
 local yourNemesisIs = ""
 local yourNemesisKillCount = 0
 
-local defaultNemesisColor = NemesisOfText:GetColor()
+-- local defaultNemesisColor = NemesisOfText:GetColor()
 
 local nemesisList = {}
 
@@ -357,15 +356,15 @@ function OnGameStateChanged(oldState, newState, hasDuration, time)
 
         MarkNemesis()
 
-        ShowNemesis()
+        --ShowNemesis()
 
     elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~=
         ABGS.GAME_STATE_LOBBY then
 
-        NemesisOfText.text = ""
+        --NemesisOfText.text = ""
         -- NemesisOfKillsText.text = "0"
 
-        YourNemesisText.text = ""
+       -- YourNemesisText.text = ""
         -- YourNemesisKillsText.text = "0"
 
         if #nemesisList > 0 then
@@ -447,10 +446,10 @@ function InitializeVictoryScreenMarkers()
 
     end
 
-    NemesisOfText.text = ""
+    -- NemesisOfText.text = ""
     -- NemesisOfKillsText.text = "0"
 
-    YourNemesisText.text = ""
+    -- YourNemesisText.text = ""
     -- YourNemesisKillsText.text = "0"
 
 end

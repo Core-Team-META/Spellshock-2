@@ -252,9 +252,8 @@ function CountThisTextUp(givenText, startingNumber, targetNumber, extra)
 
 			if startingNumber < targetNumber then
 				for i = startingNumber, targetNumber, math.ceil(math.abs(targetNumber - startingNumber) / 10) do
-					givenText.text = extra .. tostring(i)
 
-					SetChildrenText(givenText, givenText.text)
+					SetChildrenText(givenText, extra .. tostring(i))
 
 					Task.Wait(0.05)
 				end

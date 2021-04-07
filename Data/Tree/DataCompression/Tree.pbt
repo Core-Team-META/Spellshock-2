@@ -132,6 +132,12 @@ Objects {
         SelfId: 5659926504011352444
       }
     }
+    Overrides {
+      Name: "cs:TeamMembers_Data"
+      AssetReference {
+        Id: 9308651227270393617
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

@@ -12,6 +12,7 @@ end
 
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local TEAM_MEMBER = require(script:GetCustomProperty("TeamMembers_Data"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -74,6 +75,30 @@ local function AddDefaultCosmetics(player)
     for class = 1, 5 do
         for team = 1, 2 do
             for skin = 1, 1 do
+                for bind = 1, 5 do -- Costume Not saving with 4
+                    if bind == 5 then
+                        bind = 8 -- Used for costume ID
+                    end
+                    --#FIXME very hacky code to stop bind cosmetics
+                    if skin == 2 and bind < 8 then
+                    elseif skin == 3 and bind < 8 then
+                    elseif skin == 4 and bind < 8 then
+                    else
+                        _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, class, team, skin, bind)
+                    end
+                end
+            end
+        end
+    end
+end
+
+-- #TODO Currently used for adding multiple cosmetics to a player
+-- Builds default cosmetics
+--@params object player
+local function AddAllCosmetics(player)
+    for class = 1, 5 do
+        for team = 1, 2 do
+            for skin = 1, 5 do
                 for bind = 1, 5 do -- Costume Not saving with 4
                     if bind == 5 then
                         bind = 8 -- Used for costume ID
@@ -278,20 +303,24 @@ local function OnPlayerJoined(player)
         return
     end
     --if DoesDataVersionMatch(data) then
-        local progressData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.PROGRESSION, player)
-        OnLoadProgressionData(player, progressData)
-        OnLoadClassLevelData(player, progressData)
-        OnLoadConsumableData(player, progressData)
+    local progressData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.PROGRESSION, player)
+    OnLoadProgressionData(player, progressData)
+    OnLoadClassLevelData(player, progressData)
+    OnLoadConsumableData(player, progressData)
 
-        local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
-        OnLoadCurrencyData(player, currencyData)
-        OnLoadDailyShopData(player, currencyData)
-        OnLoadGamePlayStatsData(player, currencyData)
+    local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
+    OnLoadCurrencyData(player, currencyData)
+    OnLoadDailyShopData(player, currencyData)
+    OnLoadGamePlayStatsData(player, currencyData)
 
-        local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
-        OnLoadCostumeData(player, cosmeticData)
-        OnLoadEquippedCosmetic(player, cosmeticData)
+    local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
+    OnLoadCostumeData(player, cosmeticData)
+    OnLoadEquippedCosmetic(player, cosmeticData)
+    if TEAM_MEMBER.IsTeamMember(player) then
+        AddAllCosmetics(player)
+    else
         AddDefaultCosmetics(player)
+    end
     --end
     CONSUMABLES.context.OnPlayerJoined(player)
 end
