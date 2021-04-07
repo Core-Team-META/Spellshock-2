@@ -49,7 +49,7 @@ function OnMenuChanged(oldMenu, newMenu)
 		UI.SetCursorVisible(true)
 		UI.SetCanCursorInteractWithUI(true)
     elseif oldMenu == _G.MENU_TABLE["Respawn"] then -- hide
-        print(">> Hiding Respawn UI")
+        --print(">> Hiding Respawn UI")
         Respawn_UI.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
         UI.SetCanCursorInteractWithUI(false)

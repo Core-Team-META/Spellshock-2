@@ -46902,12 +46902,6 @@ Objects {
   ChildIds: 13707786001726002587
   ChildIds: 930236591205525677
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:BonusesPanel"
-      ObjectReference {
-        SelfId: 930236591205525677
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -47329,7 +47323,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -47536,7 +47530,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -48242,12 +48236,6 @@ Objects {
   ChildIds: 11127330566258400579
   ChildIds: 41005874799162852
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:BonusesPanel"
-      ObjectReference {
-        SelfId: 41005874799162852
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -49646,6 +49634,7 @@ Objects {
   ChildIds: 6603739694066796265
   ChildIds: 17909388280065130043
   ChildIds: 4118608483374256427
+  ChildIds: 18268053164544562503
   UnregisteredParameters {
     Overrides {
       Name: "cs:Total"
@@ -49690,6 +49679,85 @@ Objects {
   }
 }
 Objects {
+  Id: 18268053164544562503
+  Name: "Note"
+  Transform {
+    Location {
+      X: -21408.2383
+      Y: 994.611328
+      Z: -14895.0215
+    }
+    Rotation {
+      Yaw: 169.289734
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13913460953065031385
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Shadow"
+      ObjectReference {
+        SelfId: 4929104672219926534
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 37
+    UIY: -10.4957886
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "No bonuses are available for Diamonds yet."
+      Color {
+        R: 1
+        G: 0.592220783
+        B: 0.266000032
+        A: 1
+      }
+      Size: 14
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 4118608483374256427
   Name: "Total"
   Transform {
@@ -49720,7 +49788,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -49802,7 +49870,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50009,7 +50077,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50216,7 +50284,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50413,7 +50481,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50922,12 +50990,6 @@ Objects {
   ChildIds: 3455596873827802476
   ChildIds: 1419379319824309942
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:BonusesPanel"
-      ObjectReference {
-        SelfId: 1419379319824309942
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -52348,9 +52410,15 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ActiveBonuses"
+      Name: "cs:VIP"
       ObjectReference {
-        SelfId: 930236591205525677
+        SelfId: 3035201714429694036
+      }
+    }
+    Overrides {
+      Name: "cs:Total"
+      ObjectReference {
+        SelfId: 17489436017245178713
       }
     }
   }
@@ -53743,9 +53811,27 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ActiveBonuses"
+      Name: "cs:ServerBonus"
       ObjectReference {
-        SelfId: 41005874799162852
+        SelfId: 3233729070704050323
+      }
+    }
+    Overrides {
+      Name: "cs:SelfBonus"
+      ObjectReference {
+        SelfId: 3672960259019417206
+      }
+    }
+    Overrides {
+      Name: "cs:VIP"
+      ObjectReference {
+        SelfId: 1234818548957663447
+      }
+    }
+    Overrides {
+      Name: "cs:Total"
+      ObjectReference {
+        SelfId: 17534384911822998643
       }
     }
   }
@@ -56141,7 +56227,7 @@ Objects {
       }
     }
     Text {
-      Label: "+20%"
+      Label: "+0%"
       Color {
         R: 1
         G: 0.592220783
@@ -56533,9 +56619,27 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ActiveBonuses"
+      Name: "cs:ServerBonus"
       ObjectReference {
-        SelfId: 1419379319824309942
+        SelfId: 1254075602997448344
+      }
+    }
+    Overrides {
+      Name: "cs:VIP"
+      ObjectReference {
+        SelfId: 3917161551898086173
+      }
+    }
+    Overrides {
+      Name: "cs:Total"
+      ObjectReference {
+        SelfId: 13884287869892738848
+      }
+    }
+    Overrides {
+      Name: "cs:SelfBonus"
+      ObjectReference {
+        SelfId: 2370745564544479424
       }
     }
   }

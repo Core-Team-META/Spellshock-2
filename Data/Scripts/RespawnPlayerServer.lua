@@ -1,5 +1,5 @@
 ﻿function RespawnPlayer(player, objectRef)
-	print(">> Respawning "..player.name)
+	--print(">> Respawning "..player.name)
 	
 	if objectRef then
 		local RespawnObject = objectRef:GetObject()

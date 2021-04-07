@@ -38,9 +38,9 @@ function Tick(deltaTime)
 		AS.SetIsRespawning(true)
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["Respawn"]) -- broadcast to show respawn UI
 		RespawnMusic.volume = 1
-		print("RESPAWN MODE")
+		--print("RESPAWN MODE")
 	elseif (not LOCAL_PLAYER.isDead) and AS.IsRespawning() then
-		print("RESPAWN MODE: CLEARING CAM")
+		--print("RESPAWN MODE: CLEARING CAM")
 		AS.SetIsRespawning(false)
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		LOCAL_PLAYER:ClearOverrideCamera(CamLerp)
