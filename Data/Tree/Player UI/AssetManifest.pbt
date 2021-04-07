@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3807950812506028037
+  Name: "Sci-fi Ability Red 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Ability_Red_006"
+  }
+}
+Assets {
   Id: 2604353830693238371
   Name: "BG Highlighted 001"
   PlatformAssetType: 9
