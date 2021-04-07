@@ -4,6 +4,18 @@ local messagePrefix = "[SERVER]"
 local API_Constants = require(script:GetCustomProperty("API_Constants"))
 local AdminData = require(script:GetCustomProperty("AdminData"))
 
+
+local function ReturnPlayerByName(Name)
+    if not Name then
+        return
+    end
+    for _, player in pairs(Game.GetPlayers()) do
+        if (string.find(string.upper(player.name), string.upper(Name))) then
+            return player
+        end
+    end
+end
+
 commands = {
     ["/adminall"] = {
         OnCommandCalledClient = function (player, message)
@@ -242,20 +254,63 @@ commands = {
         adminRank = AdminData.AdminRanks.Admin,
     },
 
-    ["/killall"] = {
+    ["/setresource"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+
+        OnCommandCalledServer = function (player, message)
+        local split = {CoreString.Split(message)}
+        local Value = tonumber(split[3])
+
+            if Value then
+                player:SetResource( split[2], Value)
+            end
+        end,
+
+        OnCommandReceivedClient = function (player, message)
+        end,
+
+        description = "Changes a resource",
+        requireMessage = true,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/addscore"] = {
         OnCommandCalledClient = function (player, message)
         end,
         OnCommandCalledServer = function (player, message)  
-            for _, v in pairs(Game.GetPlayers()) do
-                v:ApplyDamage(Damage.New(v.hitPoints))
+            local split = {CoreString.Split(message)}
+            local score = tonumber(split[2]) or 175
+            Game.IncreaseTeamScore(player.team, score)
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Adds score to the user",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/tp"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)  
+            local split = {CoreString.Split(message)}
+            if not split[2] then return end 
+
+            local TargetPlayer = ReturnPlayerByName(split[2])
+
+            if TargetPlayer then
+                player:SetWorldPosition(TargetPlayer:GetWorldPosition())
             end
         end,
         OnCommandReceivedClient = function (player, message)
         end,
-        description = "Kills all players",
-        requireMessage = false,
+        description = "Teleport to a player",
+        requireMessage = true,
         adminOnly = true,
-        adminRank = AdminData.AdminRanks.HigherAdmin,
+        adminRank = AdminData.AdminRanks.Admin,
     },
 
 }

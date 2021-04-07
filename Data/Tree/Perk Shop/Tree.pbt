@@ -20479,7 +20479,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "1b84a17bbed844d194f487b970ee659d"
+        Key: "74e99b0b92e84e3a844820861e1c4f49"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -21566,7 +21566,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "39f7b248b32c4890a7b8666d16e98e12"
+        Key: "64198bbf0f584e52bdaa193ca0eb56e8"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -23490,7 +23490,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "ee58a27537bd495e8a56d8b7ab1d27a6"
+        Key: "74e99b0b92e84e3a844820861e1c4f49"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -25246,7 +25246,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "d353a02d625648ecbc5f591d80dd14ab"
+        Key: "21a7c8f2bff34e6784e198612c79525a"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -30246,7 +30246,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "9a630a8140814140828ba9db2ab94b93"
+        Key: "e5678c3a9ca347cd8e104bce8c699abc"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }

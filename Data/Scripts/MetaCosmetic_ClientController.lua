@@ -61,7 +61,7 @@ function OnChildAdded(parent, object)
             dataStr = object:GetCustomProperty("data")
         end
         playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
-        Events.BroadcastToServer("OnDestroyPlayerDataObject")
+        Events.BroadcastToServer("OnDestroyPlayerDataObject", object.id)
         Task.Spawn(
             function()
                 STORE_CLIENT.context.CosmeticPurchaseChange()
