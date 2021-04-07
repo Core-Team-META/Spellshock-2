@@ -238,18 +238,19 @@ end
 
 function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 	local lineColor = TEXT_COLOR
+	if not Object.IsValid(killerPlayer) then return end
 	local killerColor = _G.TeamColors[killerPlayer.team]
 	local killedColor = _G.TeamColors[killedPlayer.team]
 
 	if (killerPlayer) then
 		-- killerColor = GetTeamColor(killerPlayer) or Color.WHITE
 		if killerPlayer == LOCAL_PLAYER then
-			killerColor = SELF_TEXT_COLOR
+			killerColor = _G.TeamColors[3]
 		end
 	end
 
 	if  killedPlayer == LOCAL_PLAYER then
-		killedColor = SELF_TEXT_COLOR
+		killedColor = _G.TeamColors[3]
 	end
 
 	if not killerPlayer then

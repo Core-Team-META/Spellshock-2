@@ -1,3 +1,7 @@
+if true then
+    return
+end
+
 local Commands = require(script:GetCustomProperty("Commands"))
 
 function seperateMessage(Message)

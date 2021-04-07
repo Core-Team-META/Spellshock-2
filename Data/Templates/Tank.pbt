@@ -2616,6 +2616,7 @@ Assets {
             CanJump: true
             CanRotate: true
           }
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
           }

@@ -1,3 +1,8 @@
+if true then
+    return
+end
+
+
 Commands = {}
 
 function ReturnPlayerByName(string)

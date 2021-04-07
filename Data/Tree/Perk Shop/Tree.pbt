@@ -209,6 +209,7 @@ Objects {
   }
   ParentId: 5611420104663390633
   ChildIds: 179159324718384714
+  ChildIds: 17948786855663811410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -219,6 +220,74 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 17948786855663811410
+  Name: "Meta_PerkShop_Helper_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1450419042999387635
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:PerkContainer"
+      ObjectReference {
+        SelfId: 13526460874545008651
+      }
+    }
+    Overrides {
+      Name: "cs:ServerXPBoostPerk"
+      ObjectReference {
+        SelfId: 12345224484326756258
+      }
+    }
+    Overrides {
+      Name: "cs:ServerGoldBoostPerk"
+      ObjectReference {
+        SelfId: 1740869026821939111
+      }
+    }
+    Overrides {
+      Name: "cs:SelfXPBoostPerk"
+      ObjectReference {
+        SelfId: 10762759494414890908
+      }
+    }
+    Overrides {
+      Name: "cs:SelfGoldBoostPerk"
+      ObjectReference {
+        SelfId: 16676448941378051860
+      }
+    }
+    Overrides {
+      Name: "cs:METARewards_Networked"
+      ObjectReference {
+        SelfId: 9019563002044163780
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17412736460658752834
+    }
   }
 }
 Objects {
@@ -381,7 +450,6 @@ Objects {
   ParentId: 4991368233519662492
   ChildIds: 17255771544588772837
   ChildIds: 5133144297295509182
-  ChildIds: 16389569035431291202
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -398,67 +466,6 @@ Objects {
       }
     }
     Canvas {
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 16389569035431291202
-  Name: "UI Image"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13526460874545008651
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 50
-    Height: 50
-    UIX: 2027
-    UIY: 249
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 73478753972977788
-      }
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      TeamSettings {
-      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -6790,7 +6797,7 @@ Objects {
 }
 Objects {
   Id: 223586388464899068
-  Name: "UI Perk Purchase Button"
+  Name: "250 DIamond Perk"
   Transform {
     Location {
     }
@@ -8188,7 +8195,7 @@ Objects {
 }
 Objects {
   Id: 7702862503024652831
-  Name: "UI Perk Purchase Button"
+  Name: "100 DIamond Perk"
   Transform {
     Location {
     }
@@ -10301,7 +10308,7 @@ Objects {
 }
 Objects {
   Id: 12917823048115289600
-  Name: "UI Perk Purchase Button"
+  Name: "50 DIamond Perk"
   Transform {
     Location {
     }
@@ -11620,7 +11627,7 @@ Objects {
 }
 Objects {
   Id: 13007550825118495034
-  Name: "UI Perk Purchase Button"
+  Name: "25 Diamond Perk"
   Transform {
     Location {
     }
@@ -13132,7 +13139,7 @@ Objects {
 }
 Objects {
   Id: 996229560943480379
-  Name: "UI Perk Purchase Button"
+  Name: "100k Gold Perk"
   Transform {
     Location {
     }
@@ -14941,7 +14948,7 @@ Objects {
 }
 Objects {
   Id: 14168231976883492735
-  Name: "UI Perk Purchase Button"
+  Name: "25k Gold Perk"
   Transform {
     Location {
     }
@@ -16568,7 +16575,7 @@ Objects {
 }
 Objects {
   Id: 18357741871064067639
-  Name: "UI Perk Purchase Button"
+  Name: "5k Gold Perk"
   Transform {
     Location {
     }
@@ -17774,7 +17781,7 @@ Objects {
 }
 Objects {
   Id: 17667936965191733470
-  Name: "UI Perk Purchase Button"
+  Name: "2k Gold Perk"
   Transform {
     Location {
     }
@@ -20438,7 +20445,7 @@ Objects {
 }
 Objects {
   Id: 1740869026821939111
-  Name: "UI Perk Purchase Button"
+  Name: "Server Gold Boost Perk"
   Transform {
     Location {
     }
@@ -21525,7 +21532,7 @@ Objects {
 }
 Objects {
   Id: 12345224484326756258
-  Name: "UI Perk Purchase Button"
+  Name: "Server XP Boost Perk"
   Transform {
     Location {
     }
@@ -23449,7 +23456,7 @@ Objects {
 }
 Objects {
   Id: 16676448941378051860
-  Name: "UI Perk Purchase Button"
+  Name: "Self Gold Boost Perk"
   Transform {
     Location {
     }
@@ -25205,7 +25212,7 @@ Objects {
 }
 Objects {
   Id: 10762759494414890908
-  Name: "UI Perk Purchase Button"
+  Name: "Self XP Boost Perk"
   Transform {
     Location {
     }
@@ -26792,7 +26799,7 @@ Objects {
 }
 Objects {
   Id: 16740175398305496081
-  Name: "UI Perk Purchase Button"
+  Name: "Starter Pack Perk"
   Transform {
     Location {
     }
@@ -30205,7 +30212,7 @@ Objects {
 }
 Objects {
   Id: 13076227905804499654
-  Name: "UI Perk Purchase Button"
+  Name: "VIP Membership Perk"
   Transform {
     Location {
     }
