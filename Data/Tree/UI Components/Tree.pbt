@@ -10236,7 +10236,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -45927,6 +45927,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:Bonuses"
+      ObjectReference {
+        SelfId: 5846655424245553745
+      }
+    }
+    Overrides {
       Name: "cs:LifetimeStatsParent"
       ObjectReference {
         SelfId: 3612288466135902759
@@ -46939,7 +46945,7 @@ Objects {
 }
 Objects {
   Id: 930236591205525677
-  Name: "Bonuses"
+  Name: "Active Bonuses"
   Transform {
     Location {
       X: -0.324738979
@@ -48279,7 +48285,7 @@ Objects {
 }
 Objects {
   Id: 41005874799162852
-  Name: "Bonuses"
+  Name: "Active Bonuses"
   Transform {
     Location {
       X: -0.324738979
@@ -49619,7 +49625,7 @@ Objects {
 }
 Objects {
   Id: 13913460953065031385
-  Name: "Bonuses"
+  Name: "Active Bonuses"
   Transform {
     Location {
       X: -0.324738979
@@ -50927,7 +50933,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50959,7 +50965,7 @@ Objects {
 }
 Objects {
   Id: 1419379319824309942
-  Name: "Bonuses"
+  Name: "Active Bonuses"
   Transform {
     Location {
       X: -0.324738979
@@ -52253,6 +52259,32 @@ Objects {
   ChildIds: 9314779708071121689
   ChildIds: 2123369296981649988
   ChildIds: 10907934887396382175
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GoldBonus"
+      ObjectReference {
+        SelfId: 13751779513169700369
+      }
+    }
+    Overrides {
+      Name: "cs:DiamonBonus"
+      ObjectReference {
+        SelfId: 9314779708071121689
+      }
+    }
+    Overrides {
+      Name: "cs:ClassXPBonus"
+      ObjectReference {
+        SelfId: 2123369296981649988
+      }
+    }
+    Overrides {
+      Name: "cs:AbilityXPBonus"
+      ObjectReference {
+        SelfId: 10907934887396382175
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -52316,9 +52348,9 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:InfoPanel"
+      Name: "cs:ActiveBonuses"
       ObjectReference {
-        SelfId: 5510959260566408903
+        SelfId: 930236591205525677
       }
     }
   }
@@ -53711,9 +53743,9 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:InfoPanel"
+      Name: "cs:ActiveBonuses"
       ObjectReference {
-        SelfId: 1202063868193708624
+        SelfId: 41005874799162852
       }
     }
   }
@@ -55106,9 +55138,9 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:InfoPanel"
+      Name: "cs:ActiveBonuses"
       ObjectReference {
-        SelfId: 717058097425103244
+        SelfId: 13913460953065031385
       }
     }
   }
@@ -56501,9 +56533,9 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:InfoPanel"
+      Name: "cs:ActiveBonuses"
       ObjectReference {
-        SelfId: 5023106271505980637
+        SelfId: 1419379319824309942
       }
     }
   }

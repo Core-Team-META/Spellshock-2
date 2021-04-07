@@ -260,6 +260,31 @@ function OnGlobalStatsClicked(thisButton)
 		end
 	end
 
+	-- Update the Bonuses
+	local Bonuses = RightPanel_GlobalStats:GetCustomProperty("Bonuses"):WaitForObject()
+	local GoldBonus = Bonuses:GetCustomProperty("GoldBonus"):WaitForObject()
+	local DiamonBonus = Bonuses:GetCustomProperty("DiamonBonus"):WaitForObject()
+	local ClassXPBonus = Bonuses:GetCustomProperty("ClassXPBonus"):WaitForObject()
+	local AbilityXPBonus = Bonuses:GetCustomProperty("AbilityXPBonus"):WaitForObject()
+	
+	local bonusGold = {}
+	local bonusDiamonds = {}
+	local bonusClassXP = {}
+	local bonusAbilityXP = {}
+
+	--[[ Gold
+	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_GOLD_BOOST_KEY) then
+		bonusGold.self = CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+	end
+
+	if false then --#FIXME
+		bonusGold.server = CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+	end
+
+	if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
+		
+	end
+]]
 	-- Update the lifetime stats
 	local LifetimeStatsParent = RightPanel_GlobalStats:GetCustomProperty("LifetimeStatsParent"):WaitForObject()
 	
