@@ -4316,10 +4316,10 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 45
-    Height: 45
-    UIX: 1
-    UIY: -0.849428177
+    Width: 53
+    Height: 53
+    UIX: -1
+    UIY: -2.849
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4327,7 +4327,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 180266187625907627
+        Id: 16707489717603014527
       }
       Color {
         R: 1
@@ -4377,10 +4377,8 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 45
-    Height: 45
-    UIX: 2
-    UIY: 2
+    Width: 53
+    Height: 53
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4388,7 +4386,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 180266187625907627
+        Id: 16707489717603014527
       }
       Color {
         A: 0.582
@@ -6952,7 +6950,7 @@ Objects {
     Width: 45
     Height: 45
     UIX: 2
-    UIY: 2
+    UIY: 0.5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6960,7 +6958,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 18003367190556965134
+        Id: 11711350196513819217
       }
       Color {
         A: 0.582
@@ -7018,7 +7016,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 18003367190556965134
+        Id: 11711350196513819217
       }
       Color {
         R: 1
