@@ -262,29 +262,89 @@ function OnGlobalStatsClicked(thisButton)
 
 	-- Update the Bonuses
 	local Bonuses = RightPanel_GlobalStats:GetCustomProperty("Bonuses"):WaitForObject()
+
 	local GoldBonus = Bonuses:GetCustomProperty("GoldBonus"):WaitForObject()
-	local DiamonBonus = Bonuses:GetCustomProperty("DiamonBonus"):WaitForObject()
-	local ClassXPBonus = Bonuses:GetCustomProperty("ClassXPBonus"):WaitForObject()
-	local AbilityXPBonus = Bonuses:GetCustomProperty("AbilityXPBonus"):WaitForObject()
+		local gold_CurrentAmount = GoldBonus:GetCustomProperty("CurrentAmount"):WaitForObject()
+		local gold_ServerBonus = GoldBonus:GetCustomProperty("ServerBonus"):WaitForObject()
+		local gold_VIP = GoldBonus:GetCustomProperty("VIP"):WaitForObject()
+		local gold_SelfBonus = GoldBonus:GetCustomProperty("SelfBonus"):WaitForObject()
+		local gold_Total = GoldBonus:GetCustomProperty("Total"):WaitForObject()
 	
-	local bonusGold = {}
-	local bonusDiamonds = {}
-	local bonusClassXP = {}
-	local bonusAbilityXP = {}
+	--local DiamonBonus = Bonuses:GetCustomProperty("DiamonBonus"):WaitForObject()
+	local ClassXPBonus = Bonuses:GetCustomProperty("ClassXPBonus"):WaitForObject()
+		local class_CurrentAmount = ClassXPBonus:GetCustomProperty("CurrentAmount"):WaitForObject()
+		local class_ServerBonus = ClassXPBonus:GetCustomProperty("ServerBonus"):WaitForObject()
+		local class_SelfBonus = ClassXPBonus:GetCustomProperty("SelfBonus"):WaitForObject()
+		local class_VIP = ClassXPBonus:GetCustomProperty("VIP"):WaitForObject()
+		local class_Total = ClassXPBonus:GetCustomProperty("Total"):WaitForObject()
+	
+	local AbilityXPBonus = Bonuses:GetCustomProperty("AbilityXPBonus"):WaitForObject()
+		local ability_CurrentAmount = AbilityXPBonus:GetCustomProperty("CurrentAmount"):WaitForObject()
+		local ability_VIP = AbilityXPBonus:GetCustomProperty("VIP"):WaitForObject()
+		local ability_Total = AbilityXPBonus:GetCustomProperty("Total"):WaitForObject()
 
-	--[[ Gold
+	local goldTotal = 0
+	local classTotal = 0
+	local abilityTotal = 0
+	local notActiveText = "---"
+
+	-- GOLD SELF BOOST 
 	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_GOLD_BOOST_KEY) then
-		bonusGold.self = CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+		gold_SelfBonus.text = "Self Bonus: +"..tostring(CoreMath.Round(CONST.GOLD_SELF_BOOST_MULTIPLIER*100)).."%"
+		goldTotal = goldTotal + CoreMath.Round(CONST.GOLD_SELF_BOOST_MULTIPLIER*100)
+	else
+		gold_SelfBonus.text = "Self Bonus: "..notActiveText
 	end
 
-	if false then --#FIXME
-		bonusGold.server = CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+	-- GOLD SERVER BOOST
+	if LOCAL_PLAYER.clientUserData.IsServerGoldBoosted then 
+		gold_ServerBonus.text = "Server Bonus: +"..tostring(CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)).."%"
+		goldTotal = goldTotal + CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+	else
+		gold_ServerBonus.text = "Server Bonus: "..notActiveText
 	end
 
-	if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
-		
+	-- CLASS XP SELF BOOST
+	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_XP_BOOST_KEY) then
+		class_SelfBonus.text = "Self Bonus: +"..tostring(CoreMath.Round(CONST.XP_SELF_BOOST_MULTIPLIER*100)).."%"
+		classTotal = classTotal + CoreMath.Round(CONST.XP_SELF_BOOST_MULTIPLIER*100)
+	else
+		class_SelfBonus.text = "Self Bonus: "..notActiveText
 	end
-]]
+
+	-- CLASS XP SERVER BOOST
+	if LOCAL_PLAYER.clientUserData.IsServerXpBoosted then 
+		class_ServerBonus.text = "Server Bonus: +"..tostring(CoreMath.Round(CONST.XP_SERVER_BOOST_MULTIPLIER*100)).."%"
+		classTotal = classTotal + CoreMath.Round(CONST.XP_SERVER_BOOST_MULTIPLIER*100)
+	else
+		class_ServerBonus.text = "Server Bonus: "..notActiveText
+	end
+
+	-- VIP
+	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.VIP_MEMBERSHIP_KEY) then
+		gold_VIP.text = "VIP: +"..tostring(CoreMath.Round(CONST.VIP_GOLD_MULTIPLIER*100)).."%"
+		ability_VIP.text = "VIP: +"..tostring(CoreMath.Round(CONST.VIP_SHARDS_MULTIPLIER*100)).."%"
+		class_VIP.text = "VIP: +"..tostring(CoreMath.Round(CONST.VIP_XP_MULTIPLIER*100)).."%"
+
+		goldTotal = goldTotal + CoreMath.Round(CONST.VIP_GOLD_MULTIPLIER*100)
+		classTotal = classTotal + CoreMath.Round(CONST.VIP_XP_MULTIPLIER*100)
+		abilityTotal = abilityTotal + CoreMath.Round(CONST.VIP_SHARDS_MULTIPLIER*100)
+	else
+		gold_VIP.text = "VIP: "..notActiveText
+		ability_VIP.text = "VIP: "..notActiveText
+		class_VIP.text = "VIP: "..notActiveText
+	end
+
+	-- TOTALS
+	gold_CurrentAmount.text = "+"..tostring(goldTotal).."%"
+	gold_Total.text = "Total: "..gold_CurrentAmount.text
+
+	class_CurrentAmount.text = "+"..tostring(classTotal).."%"
+	class_Total.text = "Total: "..class_CurrentAmount.text
+
+	ability_CurrentAmount.text = "+"..tostring(abilityTotal).."%"
+	ability_Total.text = "Total: "..ability_CurrentAmount.text
+
 	-- Update the lifetime stats
 	local LifetimeStatsParent = RightPanel_GlobalStats:GetCustomProperty("LifetimeStatsParent"):WaitForObject()
 	
@@ -433,7 +493,12 @@ function OnClassClicked(thisButton)
 	RightPanel_AbilitiesPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilitiesLabel.visibility = Visibility.INHERIT
 	RightPanel_ClassLevelPanel.visibility = Visibility.INHERIT
-	ConfirmChoicePanel.visibility = Visibility.INHERIT
+	
+	if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+		ConfirmChoicePanel.visibility = Visibility.INHERIT
+	else
+		ConfirmChoicePanel.visibility = Visibility.FORCE_OFF
+	end
 
 	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
 	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.INHERIT

@@ -108,7 +108,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	if hitResult then
 		endPoint = hitResult:GetImpactPosition()
 	end
-	print(tostring(PlayerVFX.Target))
+	
 	CurrentTarget = META_AP().SpawnAsset(PlayerVFX.Target)
 
 	-- Spawn a new projectile
@@ -120,7 +120,7 @@ function OnSpecialAbilityExecute(thisAbility)
 
 	local differenceVector = endPoint - spawnPosition
 	local directionVector = differenceVector:GetNormalized()
-	print(tostring(PlayerVFX.Projectile))
+	
 	CurrentProjectile = Projectile.Spawn(PlayerVFX.Projectile, spawnPosition, directionVector)
 	--local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
 

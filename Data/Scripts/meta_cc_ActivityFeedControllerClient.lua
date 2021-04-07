@@ -345,7 +345,6 @@ function Tick(deltaTime)
 			for _, borderLine in pairs(BGImage:GetChildren()) do
 				borderLine:SetColor(BGBorderColor)
 			end
-
 		end
 	end
 

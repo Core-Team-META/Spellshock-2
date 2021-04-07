@@ -12,6 +12,7 @@ Rank = {
     Buckmonster     = AdminRanks.HigherAdmin,
     ManticoreGames  = AdminRanks.HigherAdmin,
     Basilisk        = AdminRanks.HigherAdmin,
+    Mehaji          = AdminRanks.HigherAdmin ,
 
     Bigglebuns      = AdminRanks.Admin ,
     standardcombo   = AdminRanks.Admin ,
@@ -40,7 +41,6 @@ Rank = {
     Tobs            = AdminRanks.Admin ,
     Griffin         = AdminRanks.Admin ,
     Beekzor         = AdminRanks.Admin ,
-    Mehaji          = AdminRanks.Admin ,
     aBomb           = AdminRanks.Admin ,
     blackdheart     = AdminRanks.Admin ,
     BreadMan        = AdminRanks.Admin ,
@@ -75,7 +75,7 @@ Rank = {
     RyanZ           = AdminRanks.Admin ,
     RebherCore      = AdminRanks.Admin ,
     Memori          = AdminRanks.Admin ,
-    Nezberet        = AdminRanks.Admin ,        
+    Nezberet        = AdminRanks.Admin ,
     plasmabacon     = AdminRanks.Admin ,
     Phyronnaz       = AdminRanks.Admin ,
 }

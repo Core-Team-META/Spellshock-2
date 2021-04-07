@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/18
--- Version 0.1.5
+-- Date: 2021/4/7
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ function Int()
         end
     until next(playerCosmetic)
     --UTIL.TablePrint(playerCosmetic)
-    Events.BroadcastToServer("OnDestroyPlayerDataObject")
+    Events.BroadcastToServer("OnDestroyCosm")
 end
 
 function OnChildAdded(parent, object)
@@ -61,7 +61,7 @@ function OnChildAdded(parent, object)
             dataStr = object:GetCustomProperty("data")
         end
         playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
-        Events.BroadcastToServer("OnDestroyPlayerDataObject")
+        Events.BroadcastToServer("OnDestroyCosm", object.id)
         Task.Spawn(
             function()
                 STORE_CLIENT.context.CosmeticPurchaseChange()

@@ -55,7 +55,7 @@ function CheckRespawnTimer()
 		--RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
 		local RespawnObjectReference 
 		if CurrentButton.clientUserData.stateID then
-			print("State Id: "..CurrentButton.clientUserData.stateID)
+			--print("State Id: "..CurrentButton.clientUserData.stateID)
 			local capturePointState = ABCP.GetCapturePointState(CurrentButton.clientUserData.stateID)
 			local SpawnPoints 
 			if CurrentButton == BaseButton then

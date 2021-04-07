@@ -3,8 +3,8 @@ local DEBUG = true
 -----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/23
--- Version 0.1.9
+-- Date: 2021/4/7
+-- Version 0.1.10
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -107,9 +107,9 @@ end
 
 
 --@param object player
-local function OnDeletePlayerDataObject(player)
+local function OnDeletePlayerDataObject(player, objectId)
     for _, object in ipairs(DATA_TRANSFER:GetChildren()) do
-        if Object.IsValid(object) and object.name == player.id then
+        if Object.IsValid(object) and object.id == objectId then
             object:Destroy()
         end
     end
@@ -325,4 +325,4 @@ Int()
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
 end
-Events.ConnectForPlayer("OnDestroyPlayerDataObject", OnDeletePlayerDataObject)
+Events.ConnectForPlayer("OnDestroyCosm", OnDeletePlayerDataObject)

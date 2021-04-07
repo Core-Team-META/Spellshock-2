@@ -49,9 +49,11 @@ function OnNetworkChanged(object, string)
         if string == CONST.SERVER_XP_BOOST_KEY then
             ServerXPBoostButton.isInteractable = false
             serverXpBoostTime = object:GetCustomProperty(string)
+            LOCAL_PLAYER.clientUserData.IsServerXpBoosted = true
         elseif string == CONST.SERVER_GOLD_BOOST_KEY then
             ServerGoldBoostButton.isInteractable = false
             serverGoldBoostTime = object:GetCustomProperty(string)
+            LOCAL_PLAYER.clientUserData.IsServerGoldBoosted = true
         end
     end
 end
