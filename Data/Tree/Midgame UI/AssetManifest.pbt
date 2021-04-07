@@ -125,15 +125,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12750511709314430191
-  Name: "Fantasy Ticket 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Ticket_001"
-  }
-}
-Assets {
   Id: 12368679724512819048
   Name: "BG Flat 011"
   PlatformAssetType: 9
