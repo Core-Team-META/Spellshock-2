@@ -119,7 +119,7 @@ function OnMenuChanged(oldMenu, newMenu)
 			if META_AP()[data.ClassID] == currentClass then
 				newButton = classButton
 			end
-			classButton.clientUserData.level.text = tostring( LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[data.ClassID])) )
+			classButton.clientUserData.level.text = tostring( META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[data.ClassID]) )
 		end
 
 		OnClassClicked(newButton)
@@ -445,7 +445,7 @@ function UpdateClassInfo(thisButton)
 		DescriptionText.text = dataTable["ElfDescription"]
 	end
 
-	local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]]) --LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]]))
+	local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
 	ClassLevel.text = tostring(classLevel)
 
 	local currentXP = META_CP().GetClassXp(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
