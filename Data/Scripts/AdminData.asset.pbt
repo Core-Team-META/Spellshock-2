@@ -1,6 +1,6 @@
 Assets {
-  Id: 10072342989517063542
-  Name: "RewardCardInfoHover"
+  Id: 1063287961635100261
+  Name: "AdminData"
   PlatformAssetType: 3
   TextAsset {
   }

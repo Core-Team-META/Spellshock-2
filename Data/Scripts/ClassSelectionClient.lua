@@ -187,7 +187,7 @@ function OnGlobalStatsClicked(thisButton)
 	if CurrentClassButton then
 		CurrentClassButton.clientUserData.panel.parent = LeftPanel_IdlePanel 
 		CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.FORCE_OFF
-		CurrentClassButton = nil
+		--CurrentClassButton = nil
 	end
 
 	-- return CurrentAbilityButton to idle state
@@ -214,6 +214,7 @@ function OnGlobalStatsClicked(thisButton)
 	RightPanel_AbilitiesPanel.visibility = Visibility.FORCE_OFF
 	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
 	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
+	ConfirmChoicePanel.visibility = Visibility.FORCE_OFF
 
 	-- Update the global stats
 	local PlayerStatsPanel = RightPanel_GlobalStats:GetCustomProperty("PlayerStatsPanel"):WaitForObject()
@@ -259,6 +260,31 @@ function OnGlobalStatsClicked(thisButton)
 		end
 	end
 
+	-- Update the Bonuses
+	local Bonuses = RightPanel_GlobalStats:GetCustomProperty("Bonuses"):WaitForObject()
+	local GoldBonus = Bonuses:GetCustomProperty("GoldBonus"):WaitForObject()
+	local DiamonBonus = Bonuses:GetCustomProperty("DiamonBonus"):WaitForObject()
+	local ClassXPBonus = Bonuses:GetCustomProperty("ClassXPBonus"):WaitForObject()
+	local AbilityXPBonus = Bonuses:GetCustomProperty("AbilityXPBonus"):WaitForObject()
+	
+	local bonusGold = {}
+	local bonusDiamonds = {}
+	local bonusClassXP = {}
+	local bonusAbilityXP = {}
+
+	--[[ Gold
+	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_GOLD_BOOST_KEY) then
+		bonusGold.self = CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+	end
+
+	if false then --#FIXME
+		bonusGold.server = CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+	end
+
+	if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
+		
+	end
+]]
 	-- Update the lifetime stats
 	local LifetimeStatsParent = RightPanel_GlobalStats:GetCustomProperty("LifetimeStatsParent"):WaitForObject()
 	
@@ -313,7 +339,7 @@ function UpdateClassInfo(thisButton)
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
 	AbilityName.text = "Overview"
 	AbilityName:GetChildren()[1].text = "Overview"
-
+   Task.Wait()
 	-- Update all ability buttons and reset them to their idle state
 	for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 		local Icon = abilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
@@ -407,6 +433,7 @@ function OnClassClicked(thisButton)
 	RightPanel_AbilitiesPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilitiesLabel.visibility = Visibility.INHERIT
 	RightPanel_ClassLevelPanel.visibility = Visibility.INHERIT
+	ConfirmChoicePanel.visibility = Visibility.INHERIT
 
 	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
 	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.INHERIT
@@ -437,6 +464,7 @@ local function UpdateText(parent, newText, extra)
 end
 
 function UpdateAbilityInfo(thisButton)
+	Task.Wait(0.3)
 	local dataTable = thisButton.clientUserData.dataTable -- Get the ability data for this button
 	RightPanel_AbilityStatsPanel.visibility = Visibility.FORCE_OFF -- hide panel while changes are made
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
@@ -484,7 +512,7 @@ function UpdateAbilityInfo(thisButton)
 		LevelProgressBar.progress = currentXP / reqXP
 		LevelNextText.text = tostring(abilityLevel + 1)
 
-		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
+
 		AbilityXPPanel.visibility = Visibility.INHERIT
 		MaxLevelPanel.visibility = Visibility.FORCE_OFF
 		LevelProgressBar:SetFillColor(RegularFillColor)
@@ -671,7 +699,7 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	local bind = dataTable["BindID"]
 	local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[bind], META_AP()[class])
 	Level.text = tostring(abilityLevel)
-
+	
 	-- Show/Hide "upgrade" text
 	local ShowMorePanel = CurrentAbilityButton.clientUserData.panel:GetCustomProperty("ShowMorePanel"):WaitForObject()
 	local UpgradePanel =  CurrentAbilityButton.clientUserData.panel:GetCustomProperty("UpgradePanel"):WaitForObject()
@@ -725,7 +753,9 @@ end
 function DetachCostumeFromPlayer(player, isLeaving)
 	if isLeaving then
 		for _, attachment in ipairs(player:GetAttachedObjects()) do
-			attachment:Destroy()
+			if attachment.isClientOnly then
+				attachment:Destroy()
+			end
 		end
 	elseif player.clientUserData.LobbyCostume then
 		for _, attachment in ipairs(player.clientUserData.LobbyCostume) do

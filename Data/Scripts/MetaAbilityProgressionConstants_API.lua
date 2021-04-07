@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/3
--- Version 0.1.8
+-- Date: 2021/4/6
+-- Version 0.1.9
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -94,11 +94,11 @@ API.CLASS_HEALTH = {
 }
 
 API.CLASS_REGEN = {
-    [API.CLASS.TANK] = 10.0,
-    [API.CLASS.MAGE] = 1.0,
-    [API.CLASS.HUNTER] = 1.0,
-    [API.CLASS.HEALER] = 1.0,
-    [API.CLASS.ASSASSIN] = 1.0
+    [API.CLASS.TANK] = 12.0,
+    [API.CLASS.MAGE] = 3.0,
+    [API.CLASS.HUNTER] = 4.0,
+    [API.CLASS.HEALER] = 2.0,
+    [API.CLASS.ASSASSIN] = 4.0
 }
 
 API.ReqXp = {
@@ -168,7 +168,9 @@ API.DIMINISHING_RETURNS = {
     [10] = 0.05
 }
 
-API.CLASS_XP = { --Default XP Values before multipliers
+
+--Default XP Values before multipliers
+API.CLASS_XP = { 
     Kills = 300,
     Captures = 500,
     CapAssists = 150,
@@ -176,6 +178,14 @@ API.CLASS_XP = { --Default XP Values before multipliers
     Interrupt = 25, -- Interrupt Capture Point Player
     KillOnPoint = 100
 }
+
+-- Default Gold Values
+API.GOLD_PER_KILL = 10
+API.GOLD_PER_CAPTURE = 20
+API.KILL_STREAK_BONUS_GOLD = 5
+API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
+API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
+
 
 -- Server Wide Mulitpliers (0 is default no multiplier)
 API.EVENT_XP_MULITPLIER = 0
@@ -185,35 +195,32 @@ API.EVENT_COSMETIC_MULTIPLIER = 0
 API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 --Leave at 1.0 for 100% (Default Price)
 
 -- VIP Player Values
-API.VIP_XP_MULTIPLIER = 0.5 -- 50% Bonus
-API.VIP_GOLD_MULTIPLIER = 0.5 -- 50% Bonus
-API.VIP_SHARDS_MULTIPLIER = 0.5 -- 50% Bonus
-API.VIP_COSMETIC_MULTIPLIER = 0.1 -- 10% Bonus
-API.VIP_DAILY_SHOP_DISCOUNT = 0.8 -- 20% Discount in Daily Shop
-API.VIP_SERVER_MULTIPLIER = 0.05 -- Each VIP in a server gives a 5% boost to both gold & xp
+API.VIP_XP_MULTIPLIER = 0.25 -- 25% Bonus
+API.VIP_GOLD_MULTIPLIER = 0.25 -- 25% Bonus
+API.VIP_SHARDS_MULTIPLIER = 0.25 -- 25% Bonus
+API.VIP_COSMETIC_MULTIPLIER = 0.25 -- 25% Bonus
+API.VIP_DAILY_SHOP_DISCOUNT = 0.9 -- 10% Discount in Daily Shop
+API.VIP_SERVER_MULTIPLIER = 0.0 -- Each VIP in a server gives a 5% boost to both gold & xp
 
 
 --STARTER Pack Muliplier Value
-API.STARTER_PACK_MULTIPLIER = 0.2 -- 20% To XP & Currency Gains
-API.STARTER_PACK_SHARDS_MULTIPLIER = 0 -- Currently A 0% Bonus
-API.STARTER_PACK_COSMETIC_MULTIPLIER = 0 -- 0% Bonus to cosmetic muliplier
-API.STARTER_PACK_GOLD_BONUS = 5000 -- How much Gold a player gets when purchasing the Starter Pack
-API.STARTER_PACK_PREMIUM_BONUS = 100 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
+API.STARTER_PACK_MULTIPLIER = 0.5 -- 50% To XP & Currency Gains
+API.STARTER_PACK_SHARDS_MULTIPLIER = 0.5 -- Currently A 0% Bonus
+API.STARTER_PACK_COSMETIC_MULTIPLIER = 0.5 -- 0% Bonus to cosmetic muliplier
+API.STARTER_PACK_GOLD_BONUS = 10000 -- How much Gold a player gets when purchasing the Starter Pack
+API.STARTER_PACK_PREMIUM_BONUS = 500 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
 
 -- Mulipliers for Server Boost Perks - Gold & XP
-API.XP_SERVER_BOOST_MULTIPLIER = 1 -- XP Boost 100% for the entire server
-API.GOLD_SERVER_BOOST_MULTIPLIER = 1 -- Gold Boost 100% for the entire server
+API.XP_SERVER_BOOST_MULTIPLIER = 0.5 -- XP Boost 100% for the entire server
+API.GOLD_SERVER_BOOST_MULTIPLIER = 0.5 -- Gold Boost 100% for the entire server
+API.XP_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
+API.GOLD_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 
 -- Will cap a players total multipliers to make sure nothing gets out of control
 API.MAX_TOTAL_MULTIPLIER = 3 -- Max bonus 300%
-
 API.TARGET_LEVEL_XP_BONUS = 5 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
 
-API.GOLD_PER_KILL = 10
-API.GOLD_PER_CAPTURE = 20
-API.KILL_STREAK_BONUS_GOLD = 5
-API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
-API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
+
 
 API.LEVEL_DIF_BONUS = {
     --Gold player gets from killing a higher level player
@@ -362,8 +369,8 @@ API.COSMETIC_TOKEN = API.CURRENCY[2]
 API.VIP_MEMBERSHIP_KEY = "IsVip"
 API.SELF_GOLD_BOOST_KEY = "PGBK"
 API.SELF_XP_BOOST_KEY = "PXBK"
-API.SERVER_XP_BOOST_KEY = "SXBK"
-API.SERVER_GOLD_BOOST_KEY = "SGBK"
+API.SERVER_XP_BOOST_KEY = "sxt"
+API.SERVER_GOLD_BOOST_KEY = "sgt"
 API.STARTER_PACK_KEY = "SPK"
 
 API.PERK_STORAGE_KEYS = {

@@ -67,7 +67,9 @@ function Tick(deltaTime)
 		if time() - chargeStart > MIN_CHARGE then
 			local scale = (time() - chargeStart) + 3.5
 			scale = CoreMath.Clamp(scale, 3.5, 5)
+			if Object.IsValid(HitBoxTrigger) then
 			HitBoxTrigger:SetWorldScale(Vector3.New(scale))
+			end
 		end
 		if time() - chargeStart > MAX_CHARGE then
 			isCharging = 2

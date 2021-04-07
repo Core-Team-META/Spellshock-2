@@ -157,10 +157,9 @@ function Tick(deltaTime)
             local RES = CONST.COMBAT_STATS
             --line:GetCustomProperty("PlayerImage"):WaitForObject():SetImage(player)
             line:GetCustomProperty("Name"):WaitForObject().text = "[" .. tostring(player:GetResource(CONST.CLASS_LEVEL)) .. "] " .. player.name
-            
+
             if player == LOCAL_PLAYER then
-                local myColor = Color.FromStandardHex("FFD624FF")
-                line:GetCustomProperty("Name"):WaitForObject():SetColor(myColor)
+                line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[3])
             else
                 line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[player.team])
             end

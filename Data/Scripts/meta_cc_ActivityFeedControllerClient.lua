@@ -5,6 +5,8 @@
 	Customizable activity feed, kills, join/leave, etc
 --]]
 
+local ABGS = require(script:GetCustomProperty("ABGS"))
+
 -- Internal custom properties
 local AF_PANEL = script:GetCustomProperty("ActivityFeedPanel"):WaitForObject()
 local AF_LINE_TEMPLATE = script:GetCustomProperty("ActivityFeedLineTemplate")
@@ -12,6 +14,8 @@ local AF_TEXT_TEMPLATE = script:GetCustomProperty("ActivityFeedTextTemplate")
 local AF_IMAGE_TEMPLATE = script:GetCustomProperty("ActivityFeedImageTemplate")
 local AF_TEXT_ON_IMAGE_TEMPLATE = script:GetCustomProperty("ActivityFeedTextOnImage")
 local AF_HEALTH_BAR_TEMPLATE = script:GetCustomProperty("ActivityFeedHealthBar")
+
+while not _G.CurrentMenu do Task.Wait() end
 
 -- Feed icons
 local NEEDS_UPDATE = false
@@ -174,6 +178,22 @@ end
 -- _G.TeamColors[1] = Root:GetCustomProperty("Orc")
 -- _G.TeamColors[2] = Root:GetCustomProperty("Elf")
 
+function OnMenuChanged(oldMenu, newMenu)
+    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"]) then
+		AF_PANEL.visibility = Visibility.INHERIT
+	else -- hide
+		AF_PANEL.visibility = Visibility.FORCE_OFF
+	end
+end
+
+function OnGameStateChanged (oldState, newState)
+	if newState == ABGS.GAME_STATE_ROUND then
+        AF_PANEL.visibility = Visibility.INHERIT
+	elseif newState == ABGS.GAME_STATE_ROUND_END then -- hide
+		AF_PANEL.visibility = Visibility.FORCE_OFF
+	end
+end
+
 -- nil AddLine(string, Color)
 -- Adds a line to the killfeed
 function AddLine(line, color)
@@ -218,18 +238,19 @@ end
 
 function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 	local lineColor = TEXT_COLOR
+	if not Object.IsValid(killerPlayer) then return end
 	local killerColor = _G.TeamColors[killerPlayer.team]
 	local killedColor = _G.TeamColors[killedPlayer.team]
 
 	if (killerPlayer) then
 		-- killerColor = GetTeamColor(killerPlayer) or Color.WHITE
 		if killerPlayer == LOCAL_PLAYER then
-			killerColor = SELF_TEXT_COLOR
+			killerColor = _G.TeamColors[3]
 		end
 	end
 
 	if  killedPlayer == LOCAL_PLAYER then
-		killedColor = SELF_TEXT_COLOR
+		killedColor = _G.TeamColors[3]
 	end
 
 	if not killerPlayer then
@@ -704,6 +725,10 @@ function OnPlayerLeft(player)
 end
 
 Game.roundEndEvent:Connect(ResetFeed)
+Events.Connect("Menu Changed", OnMenuChanged)
+Events.Connect("GameStateChanged", OnGameStateChanged)
+
+AF_PANEL.visibility = Visibility.FORCE_OFF
 
 if SHOW_JOIN_AND_LEAVE then
 	Game.playerJoinedEvent:Connect(OnPlayerJoined)

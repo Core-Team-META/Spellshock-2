@@ -1086,8 +1086,8 @@ Objects {
     Overrides {
       Name: "cs:Orc"
       Color {
-        R: 0.72
-        G: 0.0715231895
+        R: 0.721568644
+        G: 0.0705882385
         A: 1
       }
     }
@@ -1096,6 +1096,15 @@ Objects {
       Color {
         G: 0.580000043
         B: 0.361059815
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:Self"
+      Color {
+        R: 1
+        G: 0.839215755
+        B: 0.141176477
         A: 1
       }
     }
