@@ -149,7 +149,7 @@ local function GetXpAfterMultipliers(player, value)
     -- Self XP Boost Perk
     local selfBoostTime = _G.PerPlayerDictionary.GetNumber(player, CONST.SELF_XP_BOOST_KEY)
     if selfBoostTime and selfBoostTime >= time() then
-        multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
+        multiplier = multiplier + CONST.XP_SELF_BOOST_MULTIPLIER
     end
 
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
@@ -181,7 +181,7 @@ local function GetGoldAfterMultipliers(player, value)
     --Self Gold Boost Perk
     local selfBoostTtime = _G.PerPlayerDictionary.GetNumber(player, CONST.SELF_GOLD_BOOST_KEY)
     if selfBoostTtime and selfBoostTtime >= time() then
-        multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
+        multiplier = multiplier + CONST.GOLD_SELF_BOOST_MULTIPLIER
     end
 
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then

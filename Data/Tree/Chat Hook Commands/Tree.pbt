@@ -17,6 +17,12 @@ Objects {
   ParentId: 15158778296469342239
   ChildIds: 12624318090808764183
   ChildIds: 5037669453944058864
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -57,6 +63,12 @@ Objects {
       Name: "cs:Commands"
       AssetReference {
         Id: 4480426034829824473
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 62691240593059202
       }
     }
   }
@@ -130,6 +142,14 @@ Objects {
     }
   }
   ParentId: 12624318090808764183
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 62691240593059202
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

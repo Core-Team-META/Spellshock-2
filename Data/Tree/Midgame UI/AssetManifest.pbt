@@ -1,13 +1,4 @@
 Assets {
-  Id: 18003367190556965134
-  Name: "Fantasy Timepiece 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Timepiece_002"
-  }
-}
-Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -50,6 +41,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "CenterArrow_005Wedge"
+  }
+}
+Assets {
+  Id: 16707489717603014527
+  Name: "Fantasy Map 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Map_001"
   }
 }
 Assets {
@@ -125,15 +125,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12750511709314430191
-  Name: "Fantasy Ticket 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Ticket_001"
-  }
-}
-Assets {
   Id: 12368679724512819048
   Name: "BG Flat 011"
   PlatformAssetType: 9
@@ -167,6 +158,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_27"
+  }
+}
+Assets {
+  Id: 11711350196513819217
+  Name: "Fantasy Chest 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_004"
   }
 }
 Assets {
@@ -437,15 +437,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Alert"
-  }
-}
-Assets {
-  Id: 180266187625907627
-  Name: "Fantasy Compass 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Compass_001"
   }
 }
 Assets {
