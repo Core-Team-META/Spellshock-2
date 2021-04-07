@@ -2,7 +2,7 @@ local player = Game.GetPlayers()[1]
 
 function OnBindingPressed(player, binding)
 
-	if (binding == "ability_extra_0") then 
+	if (binding == "ability_extra_0") then
 
         -- Events.BroadcastToAllPlayers("AKI", player, player, "Rock Strike")
         -- Task.Wait(1)
@@ -68,8 +68,10 @@ function OnBindingPressed(player, binding)
         -- Task.Wait(1)
         Events.BroadcastToAllPlayers("AKI", player, player, "Staff")
 
-
 	end
+	if (binding == "ability_extra_9") then
+                player:AddResource("C_LEVEL", 1)
+        end
 end
 
 function OnPlayerJoined(player)

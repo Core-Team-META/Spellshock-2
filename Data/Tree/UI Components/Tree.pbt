@@ -11970,7 +11970,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 215
+    Width: 225
     Height: 37
     UIX: 4
     UIY: 8
@@ -11984,7 +11984,7 @@ Objects {
       Color {
         A: 0.379
       }
-      Size: 27
+      Size: 23
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -12058,7 +12058,7 @@ Objects {
         B: 0.266000032
         A: 1
       }
-      Size: 27
+      Size: 23
       Justification {
         Value: "mc:etextjustify:center"
       }

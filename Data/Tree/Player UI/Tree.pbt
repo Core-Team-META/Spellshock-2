@@ -400,6 +400,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:LeveledUpIcon"
+      AssetReference {
+        Id: 3807950812506028037
+      }
+    }
+    Overrides {
       Name: "cs:JoinedIconColor"
       Color {
         G: 1
