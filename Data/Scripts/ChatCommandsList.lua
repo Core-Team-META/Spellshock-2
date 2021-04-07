@@ -252,7 +252,7 @@ commands = {
         end,
         OnCommandReceivedClient = function (player, message)
         end,
-        description = "Changes team to the other",
+        description = "Kills all players",
         requireMessage = false,
         adminOnly = true,
         adminRank = AdminData.AdminRanks.HigherAdmin,
