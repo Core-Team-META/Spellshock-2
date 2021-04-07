@@ -116,7 +116,7 @@ function Tick(deltaTime)
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
 
-				print(tostring(mod4.damage))
+				--print(tostring(mod4.damage))
 
 				local attackData = {
 					object = enemy,
