@@ -187,7 +187,7 @@ function OnGlobalStatsClicked(thisButton)
 	if CurrentClassButton then
 		CurrentClassButton.clientUserData.panel.parent = LeftPanel_IdlePanel 
 		CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.FORCE_OFF
-		CurrentClassButton = nil
+		--CurrentClassButton = nil
 	end
 
 	-- return CurrentAbilityButton to idle state
@@ -214,6 +214,7 @@ function OnGlobalStatsClicked(thisButton)
 	RightPanel_AbilitiesPanel.visibility = Visibility.FORCE_OFF
 	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
 	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
+	ConfirmChoicePanel.visibility = Visibility.FORCE_OFF
 
 	-- Update the global stats
 	local PlayerStatsPanel = RightPanel_GlobalStats:GetCustomProperty("PlayerStatsPanel"):WaitForObject()
@@ -407,6 +408,7 @@ function OnClassClicked(thisButton)
 	RightPanel_AbilitiesPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilitiesLabel.visibility = Visibility.INHERIT
 	RightPanel_ClassLevelPanel.visibility = Visibility.INHERIT
+	ConfirmChoicePanel.visibility = Visibility.INHERIT
 
 	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
 	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.INHERIT
@@ -726,7 +728,9 @@ end
 function DetachCostumeFromPlayer(player, isLeaving)
 	if isLeaving then
 		for _, attachment in ipairs(player:GetAttachedObjects()) do
-			attachment:Destroy()
+			if attachment.isClientOnly then
+				attachment:Destroy()
+			end
 		end
 	elseif player.clientUserData.LobbyCostume then
 		for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
