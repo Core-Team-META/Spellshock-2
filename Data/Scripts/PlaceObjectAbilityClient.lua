@@ -259,7 +259,7 @@ function CalculatePlacement()
 	local secondHit = World.Raycast(playerPosition, resultPosition, {ignorePlayers = true})
 	if secondHit ~= nil 
 	and secondHit.other ~= hr.other 
-	and not secondHit.other:IsVisibleInHierarchy() -- OR SOME OTHER METHOD OF DETERMINING IT'S A WALL
+	and secondHit.other and not secondHit.other:IsVisibleInHierarchy() -- OR SOME OTHER METHOD OF DETERMINING IT'S A WALL
 	then
 		resultPosition = secondHit:GetImpactPosition()
 		resultNormal = secondHit:GetImpactNormal()

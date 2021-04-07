@@ -8,10 +8,10 @@ local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObjec
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local PerkContainer = script:GetCustomProperty("PerkContainer"):WaitForObject()
-local ServerXPBoostButton = script:GetCustomProperty("ServerXPBoost"):WaitForObject()
-local ServerGoldBoostButton = script:GetCustomProperty("ServerGoldBoost"):WaitForObject()
-local SelfXp = script:GetCustomProperty("SelfXp"):WaitForObject()
-local SelfGold = script:GetCustomProperty("SelfGold"):WaitForObject()
+local ServerXPBoostButton = script:GetCustomProperty("ServerXPBoostPerk"):WaitForObject()
+local ServerGoldBoostButton = script:GetCustomProperty("ServerGoldBoostPerk"):WaitForObject()
+local SelfXp = script:GetCustomProperty("SelfXPBoostPerk"):WaitForObject()
+local SelfGold = script:GetCustomProperty("SelfGoldBoostPerk"):WaitForObject()
 
 local serverXpBoostTime = 0
 local serverGoldBoostTime = 0
@@ -20,21 +20,17 @@ local personalGoldBoostTime = 0
 local listener
 
 local function SetServerXpBoost()
-    local boostTime = NETWORKED:GetCustomProperty(CONST.SERVER_XP_BOOST_KEY)
-    print("Server XP Boost Active: " .. tostring(boostTime > time()))
-    if boostTime > time() then
+    if serverXpBoostTime > time() and ServerXPBoostButton.isInteractable then
         ServerXPBoostButton.isInteractable = false
-    else
+    elseif serverXpBoostTime < time() and not ServerXPBoostButton.isInteractable then
         ServerXPBoostButton.isInteractable = true
     end
 end
 
 local function SetServerGoldBoost()
-    local boostTime = NETWORKED:GetCustomProperty(CONST.SERVER_GOLD_BOOST_KEY)
-    --print("Server Gold Boost Active: " .. tostring(boostTime > time()))
-    if boostTime > time() then
+    if serverGoldBoostTime > time() and ServerGoldBoostButton.isInteractable then
         ServerGoldBoostButton.isInteractable = false
-    else
+    elseif serverGoldBoostTime < time() and not ServerGoldBoostButton.isInteractable then
         ServerGoldBoostButton.isInteractable = true
     end
 end
@@ -96,7 +92,7 @@ function Tick()
     Task.Wait()
 end
 
---NETWORKED.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
---listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnResourceChanged)
+NETWORKED.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
+listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnResourceChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Int()
