@@ -84,11 +84,7 @@ local function DisconnectButtonListener(listeners)
 end
 
 local function ToggleUi(bool)
-    UI.SetCursorVisible(bool)
-    UI.SetCanCursorInteractWithUI(bool)
-    UI.SetCursorLockedToViewport(bool)
     if bool then
-        Events.Broadcast("Changing Menu", _G.MENU_TABLE["DailyShop"])
         -- PARENT_UI.isEnabled = true
         PARENT_UI.visibility = Visibility.FORCE_ON
         ORC_DAILY_SHOP_TRIGGER.isInteractable = false
@@ -104,8 +100,29 @@ local function ToggleUi(bool)
         ORC_DAILY_SHOP_TRIGGER.isInteractable = true
         ELF_DAILY_SHOP_TRIGGER.isInteractable = true
         DisconnectButtonListener(listeners)
+    end
+    Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
+    UI.SetCursorVisible(bool)
+    UI.SetCanCursorInteractWithUI(bool)
+    UI.SetCursorLockedToViewport(bool)
+end
+
+function ToggleShop(bool)
+    local currentState = GAME_STATE_API.GetGameState()
+    if bool and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and (currentState == GAME_STATE_API.GAME_STATE_LOBBY or currentState == GAME_STATE_API.GAME_STATE_ROUND or
+     LOCAL_PLAYER.clientUserData.hasSkippedReward) and not LOCAL_PLAYER.isDead then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["DailyShop"])
+    elseif _G.CurrentMenu == _G.MENU_TABLE["DailyShop"] then
         Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
     end
+end
+
+function OnMenuChanged(oldMenu, newMenu)
+	if newMenu == _G.MENU_TABLE["DailyShop"] then
+        ToggleUi(true)
+    elseif oldMenu == _G.MENU_TABLE["DailyShop"] then
+		ToggleUi(false)
+	end
 end
 
 local function FormatInt(number)
@@ -383,39 +400,29 @@ end
 
 function OnDailyShopOpen(player, keybind)
     if keybind == "ability_extra_33" and PARENT_UI:IsVisibleInHierarchy() and isAllowed(0.5) then
-        ToggleUi(false)
+        ToggleShop(false)
     end
 end
 
 function OnInteracted(trigger, player)
-    if
-        player == LOCAL_PLAYER and
-            (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and
-            not PARENT_UI:IsVisibleInHierarchy()
-     then
-        Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
-        ToggleUi(true)
+    if player == LOCAL_PLAYER and not PARENT_UI:IsVisibleInHierarchy() then
+        ToggleShop(true)
         isAllowed(0.5)
     end
 end
 
 function OnButtonInteracted(player, keybind)
-    if
-        player == LOCAL_PLAYER and keybind == "ability_extra_38" and
-            (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and
-            not PARENT_UI:IsVisibleInHierarchy()
-     then
-        Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
-        ToggleUi(true)
+    if player == LOCAL_PLAYER and keybind == "ability_extra_38" and not PARENT_UI:IsVisibleInHierarchy() then
+        ToggleShop(true)
         isAllowed(0.5)
     elseif player == LOCAL_PLAYER and keybind == "ability_extra_38" and PARENT_UI:IsVisibleInHierarchy() then
-        ToggleUi(false)
+        ToggleShop(false)
     end
 end
 
 function OnEndOverlap(trigger, player)
     if player == LOCAL_PLAYER and PARENT_UI:IsVisibleInHierarchy() then
-        ToggleUi(false)
+        ToggleShop(false)
     end
 end
 
@@ -475,8 +482,9 @@ playerListeners[#playerListeners + 1] = LOCAL_PLAYER.resourceChangedEvent:Connec
 
 CLOSE_BUTTON.clickedEvent:Connect(
     function()
-        ToggleUi(false)
+        ToggleShop(false)
     end
 )
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
+Events.Connect("Menu Changed", OnMenuChanged)
