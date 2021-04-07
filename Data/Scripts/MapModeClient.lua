@@ -17,6 +17,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 -- Internal custom property
 local AS = require(script:GetCustomProperty("API"))
+local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
 local MAP_OPEN_SFX = script:GetCustomProperty("MapOpenSFX"):WaitForObject()
@@ -39,7 +40,7 @@ end
 -- Trigger the map when the map binding is pressed
 function OnBindingPressed(player, binding)
 	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and 
-	not LOCAL_PLAYER:GetOverrideCamera() and _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+	not LOCAL_PLAYER:GetOverrideCamera() and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and (ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY or ABGS.GetGameState() == ABGS.GAME_STATE_ROUND)  then
 		LOCAL_PLAYER:SetOverrideCamera(CAMERA)
 		AS.SetIsViewingMap(true)
 		MAP_OPEN_SFX:Play()
