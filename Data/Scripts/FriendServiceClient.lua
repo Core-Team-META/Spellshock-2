@@ -18,7 +18,7 @@ local tableIDs = {}
 
 
 function SendData(IDs)
-	print("Sending friendship connection for " .. LOCAL_PLAYER.name .. ": " .. IDs)
+	print("Sending friendship connection for " .. LOCAL_PLAYER.name .. ": " .. tostring(IDs))
 	
 	Events.BroadcastToServer(EVENT_NAME, IDs)
 end
@@ -61,9 +61,7 @@ for _,player in ipairs(Game.GetPlayers()) do
 	end
 end
 
-if stringIDs ~= nil then
-	SendData(stringIDs)
-end
+SendData(stringIDs)
 
 
 function OnPlayerJoined(player)

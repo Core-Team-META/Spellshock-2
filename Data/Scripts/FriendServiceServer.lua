@@ -15,20 +15,41 @@ local EVENT_NAME = "FriendsService_Report"
 
 
 function API.AreFriends(playerA, playerB)
+	-- Either player A knows of friendship with player B
 	if playerA.serverUserData.friendIDs then
 		local id = ID.GetPlayerID(playerB)
-		return playerA.serverUserData.friendIDs[id]
+		if playerA.serverUserData.friendIDs[id] then
+			return true
+		end
 	end
+	-- Or player B knows of the friendship with player A
+	if playerB.serverUserData.friendIDs then
+		local id = ID.GetPlayerID(playerA)
+		if playerB.serverUserData.friendIDs[id] then
+			return true
+		end
+	end
+	-- Neither player knows of a friend connection between them
 	return false
 end
 
 
+function API.HasSentData(player)
+	return player.serverUserData.friendIDs ~= nil
+end
+
+
 function OnPlayerFriendsData(player, stringIDs)
-	local friendIDs = { CoreString.Split(stringIDs, ",") }
-	
 	if not player.serverUserData.friendIDs then
 		player.serverUserData.friendIDs = {}
 	end
+	
+	if not stringIDs then
+		print("Player " .. player.name .. " has no friends.")
+		return
+	end
+	
+	local friendIDs = { CoreString.Split(stringIDs, ",") }
 	
 	for _,id in ipairs(friendIDs) do
 		player.serverUserData.friendIDs[id] = true

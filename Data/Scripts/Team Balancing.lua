@@ -237,8 +237,8 @@ function DoRebalance_Friends()
 			table.insert(team2, player)
 		end
 	end
-	local teamPoints1 = CountFriendConnections(team1)
-	local teamPoints2 = CountFriendConnections(team2)
+	local teamPoints1 = CountFriendConnectionPoints(team1)
+	local teamPoints2 = CountFriendConnectionPoints(team2)
 	
 	local bestPointsTotal = teamPoints1 + teamPoints2
 	
@@ -267,8 +267,8 @@ function DoRebalance_Friends()
 			
 			table.remove(team1, randomIndex)
 			table.insert(team2, randomPlayer)
-			local newTeamPoints1 = CountFriendConnections(team1)
-			local newTeamPoints2 = CountFriendConnections(team2)
+			local newTeamPoints1 = CountFriendConnectionPoints(team1)
+			local newTeamPoints2 = CountFriendConnectionPoints(team2)
 			
 			local newPointsTotal = newTeamPoints1 + newTeamPoints2
 			
@@ -296,8 +296,8 @@ function DoRebalance_Friends()
 			
 			table.remove(team2, randomIndex)
 			table.insert(team1, randomPlayer)
-			local newTeamPoints1 = CountFriendConnections(team1)
-			local newTeamPoints2 = CountFriendConnections(team2)
+			local newTeamPoints1 = CountFriendConnectionPoints(team1)
+			local newTeamPoints2 = CountFriendConnectionPoints(team2)
 			
 			local newPointsTotal = newTeamPoints1 + newTeamPoints2
 			
@@ -325,8 +325,8 @@ function DoRebalance_Friends()
 			table.remove(team2, randomIndex2)
 			table.insert(team2, randomPlayer1)
 			table.insert(team1, randomPlayer2)
-			local newTeamPoints1 = CountFriendConnections(team1)
-			local newTeamPoints2 = CountFriendConnections(team2)
+			local newTeamPoints1 = CountFriendConnectionPoints(team1)
+			local newTeamPoints2 = CountFriendConnectionPoints(team2)
 			
 			local newPointsTotal = newTeamPoints1 + newTeamPoints2
 			
@@ -360,7 +360,7 @@ function DoRebalance_Friends()
 	end
 end
 
-function CountFriendConnections(players)
+function CountFriendConnectionPoints(players)
 	local teamPoints = 0
 	for i = 1,#players do
 		local playerA = players[i]
@@ -369,10 +369,14 @@ function CountFriendConnections(players)
 		for j = 1,#players do
 			local playerB = players[j]
 			if i ~= j and _G.FriendService.AreFriends(playerA, playerB) then
-				playerPoints = playerPoints + 1 + playerB.serverUserData.friendConnections * 0.1
+				playerPoints = playerPoints + 1
+				
+				if playerB.serverUserData.friendConnections then
+					playerPoints = playerPoints + playerB.serverUserData.friendConnections * 0.1
+				end
 			end
 		end
-		playerA.serverUserData.friendPointsOnTeam = playerPoints
+		
 		teamPoints = teamPoints + playerPoints
 	end
 	return teamPoints
@@ -394,18 +398,69 @@ function OnPlayerJoin(player)
 	
 	Task.Wait(0.15)
 	if not Object.IsValid(player) then return end
+		
+	-- Wait for the player to send their friend data
+	local waitAttempts = 0
+	while not _G.FriendService.HasSentData(player) and waitAttempts < 40 do
+		--print("Waiting for player friend data")
+		Task.Wait(0.10)
+		waitAttempts = waitAttempts + 1
+		if not Object.IsValid(player) then return end
+	end
 	
-	local playersToSwitch = ComputePlayersToSwitchTeam()
+	--print("Friend data ready!")
 	
-	if #playersToSwitch == 0 then
-		return
+	-- Exit condition in case all other players have disconnected during the wait
+	local allPlayers = Game.GetPlayers()
+	if #allPlayers <= 1 then return end
 	
-	elseif #playersToSwitch == 1 then
-		if playersToSwitch[1] == player or IsLobby() then
-			SwitchTeam(player)
-		else
-			OfferSwitchChoice()
+	player.serverUserData.friendConnections = 0
+	
+	local team1 = {}
+	local team2 = {}
+	for _,otherPlayer in ipairs(allPlayers) do
+		if otherPlayer ~= player then
+			if otherPlayer.team == 1 then
+				table.insert(team1, otherPlayer)
+			else
+				table.insert(team2, otherPlayer)
+			end
+			
+			if _G.FriendService.AreFriends(player, otherPlayer) then
+				player.serverUserData.friendConnections = player.serverUserData.friendConnections + 1
+			end
 		end
+	end
+	
+	local newTeam = player.team
+	if #team1 < #team2 then
+		newTeam = 1
+		
+	elseif #team1 > #team2 then
+		newTeam = 2
+		
+	else
+		local teamPoints1, teamPoints2
+		
+		table.insert(team1, player)
+		teamPoints1 = CountFriendConnectionPoints(team1)
+		teamPoints2 = CountFriendConnectionPoints(team2)
+		local pointsTotal = teamPoints1 + teamPoints2
+		
+		table.remove(team1, #team1)
+		table.insert(team2, player)
+		teamPoints1 = CountFriendConnectionPoints(team1)
+		teamPoints2 = CountFriendConnectionPoints(team2)
+		
+		if teamPoints1 + teamPoints2 > pointsTotal then
+			newTeam = 2
+		else
+			newTeam = 1
+		end
+	end
+	
+	if newTeam ~= player.team then
+		SwitchTeam(player)
 	end
 end
 
