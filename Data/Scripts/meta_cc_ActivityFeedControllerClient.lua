@@ -244,12 +244,12 @@ function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 	if (killerPlayer) then
 		-- killerColor = GetTeamColor(killerPlayer) or Color.WHITE
 		if killerPlayer == LOCAL_PLAYER then
-			killerColor = SELF_TEXT_COLOR
+			killerColor = _G.TeamColors[3]
 		end
 	end
 
 	if  killedPlayer == LOCAL_PLAYER then
-		killedColor = SELF_TEXT_COLOR
+		killedColor = _G.TeamColors[3]
 	end
 
 	if not killerPlayer then
