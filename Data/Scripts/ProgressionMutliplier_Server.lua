@@ -30,8 +30,10 @@ local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObjec
 ------------------------------------------------------------------------------------------------------------------------
 local playerInteruptCount = {}
 local playerKilledCount = {}
-local goldServerMultiplier = 0
-local xpServerMultiplier = 0
+local goldServerMultiplierTime = 0
+local xpServerMultiplierTime = 0
+local goldVipMultiplier = 0
+local xpVipMultiplier = 0
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -39,64 +41,51 @@ local xpServerMultiplier = 0
 --@param float value
 local function SetServerXpMultiplier(value)
     NETWORKED:SetNetworkedCustomProperty("xsm", value)
-    xpServerMultiplier = value
+    xpVipMultiplier = value
+end
+
+--@param float value
+local function SetServerGoldMultiplier(value)
+    NETWORKED:SetNetworkedCustomProperty("gsm", value)
+    goldVipMultiplier = value
 end
 
 local function IsServerXpMultiplierActive()
-    if xpServerMultiplier >= time() then
+    if xpServerMultiplierTime >= time() then
         return true
     end
     return false
 end
 
 local function IsServerGoldMultiplierActive()
-    if goldServerMultiplier >= time() then
+    if goldServerMultiplierTime >= time() then
         return true
     end
     return false
 end
 
---@param float value
-local function SetServerGoldMultiplier(value)
-    NETWORKED:SetNetworkedCustomProperty("gsm", value)
-    goldServerMultiplier = value
-end
 
 --@param int vipCount
-local function SetVipMultiplier(vipCount, goldCount, xpCount)
+local function SetVipMultiplier(vipCount)
     local xpMultiplier = 0
     local goldMultiplier = 0
     if vipCount > 1 then
         xpMultiplier = vipCount * CONST.VIP_SERVER_MULTIPLIER
         goldMultiplier = vipCount * CONST.VIP_SERVER_MULTIPLIER
     end
-    if goldCount > 0 then
-        goldMultiplier = goldMultiplier + (CONST.GOLD_SERVER_BOOST_MULTIPLIER * goldCount)
-    end
-    if xpCount > 0 then
-        xpMultiplier = xpMultiplier + (CONST.XP_SERVER_BOOST_MULTIPLIER * xpCount)
-    end
-
-    --SetServerGoldMultiplier(goldMultiplier)
-    --SetServerXpMultiplier(xpMultiplier)
+    SetServerGoldMultiplier(xpMultiplier)
+    SetServerXpMultiplier(goldMultiplier)
 end
 
 local function CalculateServerMultiplier()
     local vipCount = 0
-    local goldCount = 0
-    local xpCount = 0
+    Task.Wait()
     for _, player in ipairs(Game.GetPlayers()) do
         if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
             vipCount = vipCount + 1
         end
-        if _G.PerPlayerDictionary.Get(player, CONST.SERVER_XP_BOOST_KEY) then
-            xpCount = xpCount + 1
-        end
-        if _G.PerPlayerDictionary.Get(player, CONST.SERVER_GOLD_BOOST_KEY) then
-            goldCount = goldCount + 1
-        end
     end
-    SetVipMultiplier(vipCount, goldCount, xpCount)
+    SetVipMultiplier(vipCount)
 end
 
 local function GetProgressAfterMultiplier(multiplier, value)
@@ -142,7 +131,7 @@ end
 --@param int value
 --@param int value after mutlipliers applied
 local function GetXpAfterMultipliers(player, value)
-    local multiplier = CONST.EVENT_XP_MULITPLIER
+    local multiplier = CONST.EVENT_XP_MULITPLIER + xpVipMultiplier
     if IsServerXpMultiplierActive() then
         multiplier = multiplier + CONST.XP_SERVER_BOOST_MULTIPLIER
     end
@@ -174,7 +163,7 @@ end
 --@param int value
 --@param int value after mutlipliers applied
 local function GetGoldAfterMultipliers(player, value)
-    local multiplier = CONST.EVENT_GOLD_MULTIPLIER
+    local multiplier = CONST.EVENT_GOLD_MULTIPLIER + goldVipMultiplier
 
     if IsServerGoldMultiplierActive() then
         multiplier = multiplier + CONST.GOLD_SERVER_BOOST_MULTIPLIER
@@ -403,10 +392,10 @@ end
 -- handler params: CoreObject_, string_
 function OnNetworkedChanged(object, string)
     if object == NETWORKED then
-        if string == "xsm" then
-            xpServerMultiplier = object:GetCustomProperty(string)
-        elseif string == "gsm" then
-            goldServerMultiplier = object:GetCustomProperty(string)
+        if string == "sxt" then
+            xpServerMultiplierTime = object:GetCustomProperty(string)
+        elseif string == "sgt" then
+            goldServerMultiplierTime = object:GetCustomProperty(string)
         end
     end
 end

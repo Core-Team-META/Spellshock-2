@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 7430722513666021256
         ChildIds: 15469572666479234443
         ChildIds: 2720851433633226448
@@ -797,6 +797,10 @@ Assets {
             Name: "bp:Enable Sparks"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -20
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -848,6 +852,10 @@ Assets {
           Overrides {
             Name: "bp:Enable Sparks"
             Bool: false
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -20
           }
         }
         Collidable_v2 {
@@ -901,6 +909,10 @@ Assets {
             Name: "bp:Enable Sparks"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -20
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -952,6 +964,10 @@ Assets {
           Overrides {
             Name: "bp:Enable Sparks"
             Bool: false
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -20
           }
         }
         Collidable_v2 {

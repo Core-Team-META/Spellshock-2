@@ -25,6 +25,8 @@ Assets {
         ChildIds: 8993383170236580241
         ChildIds: 5238679175490094115
         ChildIds: 10788285486382408761
+        ChildIds: 6483784761024555174
+        ChildIds: 5842392300310339489
         Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
@@ -7514,6 +7516,240 @@ Assets {
           Radius: -1
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 6483784761024555174
+        Name: "Magic Burst Hemicircle VFX"
+        Transform {
+          Location {
+            Z: -50
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17517058638544218899
+        ChildIds: 7369702501116509254
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Local Space"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Lettering"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              R: 15
+              G: 2.82596827
+              B: 1.21807694
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 15
+              G: 2.82596827
+              B: 1.21807694
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Initial Spark Velocity"
+            Float: 25
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.8
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11696697618976263101
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7369702501116509254
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            Z: -2.58642578
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.339511722
+          }
+        }
+        ParentId: 6483784761024555174
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.25
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
+        }
+      }
+      Objects {
+        Id: 5842392300310339489
+        Name: "Magic Burst Hemicircle VFX"
+        Transform {
+          Location {
+            Z: -50
+          }
+          Rotation {
+            Yaw: -179.999954
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17517058638544218899
+        ChildIds: 5992878574707476389
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Local Space"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Lettering"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              R: 15
+              G: 2.82596827
+              B: 1.21807694
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 15
+              G: 2.82596827
+              B: 1.21807694
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Initial Spark Velocity"
+            Float: 25
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.8
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11696697618976263101
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5992878574707476389
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            Z: -2.58642578
+          }
+          Rotation {
+            Yaw: 179.999954
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.339511722
+          }
+        }
+        ParentId: 5842392300310339489
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.25
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
         }
       }
     }

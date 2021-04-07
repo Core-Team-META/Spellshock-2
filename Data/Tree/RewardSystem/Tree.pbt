@@ -13616,6 +13616,14 @@ Objects {
       Float: 0
     }
     Overrides {
+      Name: "cs:sxt"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:sgt"
+      Float: 0
+    }
+    Overrides {
       Name: "cs:rewards:isrep"
       Bool: true
     }
@@ -13629,6 +13637,14 @@ Objects {
     }
     Overrides {
       Name: "cs:xsm:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:sxt:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:sgt:isrep"
       Bool: true
     }
   }
