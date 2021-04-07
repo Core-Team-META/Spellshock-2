@@ -24,6 +24,7 @@ end
 function Tick(deltaTime)
 	if (LOCAL_PLAYER.isDead) and not AS.IsRespawning() then
 		Task.Wait(5)
+		if not LOCAL_PLAYER.isDead then return end
 		if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then return end -- Make sure we are still in the Round
 
 		-- Start cam lerp
