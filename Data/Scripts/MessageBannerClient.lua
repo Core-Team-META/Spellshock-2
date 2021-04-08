@@ -13,18 +13,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
---]]
-
---[[
+--]] --[[
 Displays text associated with the BannerMessage() event that takes the following forms:
 
 BannerMessage(String message)
 BannerMessage(String message, float duration)
---]]
-
--- Internal custom properties
+--]] -- Internal custom properties
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
+local PANEL_DEFAULT = script:GetCustomProperty("PanelDefault"):WaitForObject()
+local PANEL_ELF = script:GetCustomProperty("PanelElf"):WaitForObject()
+local PANEL_ORC = script:GetCustomProperty("PanelOrc"):WaitForObject()
+local PANEL_LOOT = script:GetCustomProperty("PanelLoot"):WaitForObject()
 
 -- User exposed properties
 local DEFAULT_DURATION = 5
@@ -40,7 +40,10 @@ local messageEndTime = 0.0
 
 -- nil OnBannerMessageEvent(string, <float>)
 -- Handles a client side banner message event
-function OnBannerMessageEvent(message, duration)
+function OnBannerMessageEvent(message, duration, type)
+
+    if not type then type = 0 end
+
     if duration then
         messageEndTime = time() + duration
     else
@@ -48,15 +51,35 @@ function OnBannerMessageEvent(message, duration)
     end
 
     PANEL.visibility = Visibility.FORCE_ON
+
+    if type == 1 then
+        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
+        if not PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_ON end
+        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
+        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+    elseif type == 2 then
+        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
+        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
+        if not PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_ON end
+        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+    elseif type == 3 then
+        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
+        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
+        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
+        if not PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_ON end
+    else
+        if not PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_ON end
+        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
+        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
+        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+    end
     TEXT_BOX.text = message
 end
 
 -- nil Tick(float)
 -- Hides the banner when the message has expired
 function Tick(deltaTime)
-    if time() > messageEndTime then
-        PANEL.visibility = Visibility.FORCE_OFF
-    end
+    if time() > messageEndTime then PANEL.visibility = Visibility.FORCE_OFF end
 end
 
 -- Initialize

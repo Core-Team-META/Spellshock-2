@@ -246,7 +246,7 @@ commands = {
             for _, v in pairs(Game.GetPlayers()) do
                 v:AddResource(API_Constants.CURRENCY[2], 200)
             end
-            Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you 200 Diamonds!")
+            Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you 200 Diamonds!", 5, 3) -- 3 = loot banner
         end,
         OnCommandReceivedClient = function (player, message)
         end,
