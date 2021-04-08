@@ -32,12 +32,16 @@ function CapturePointChanged (id, prevTeam, newTeam)
 		return
 	end
 
+    local messageType = 0
     if LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team == prevTeam then
-        Events.Broadcast("BannerMessage", "Lost " .. capturePointState.name)
+        messageType = 3 - LOCAL_PLAYER.team
+        Events.Broadcast("BannerMessage", "Lost " .. capturePointState.name, 5, messageType)
     elseif newTeam ~= 0 and LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team ~= prevTeam then
-        Events.Broadcast("BannerMessage", "Enemy Captured " .. capturePointState.name)
+        messageType = 3 - LOCAL_PLAYER.team
+        Events.Broadcast("BannerMessage", "Enemy Captured " .. capturePointState.name, 5, messageType)
     elseif LOCAL_PLAYER.team == newTeam then
-        Events.Broadcast("BannerMessage", "Captured " .. capturePointState.name)
+        messageType = LOCAL_PLAYER.team
+        Events.Broadcast("BannerMessage", "Captured " .. capturePointState.name, 5, messageType)
     end
 
 end
