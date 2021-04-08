@@ -15,8 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2904263216241882669
-        ChildIds: 16087611222072230619
+        ParentId: 4781671109827199097
+        ChildIds: 9334650424071988126
         Lifespan: 5
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -32,10 +32,13 @@ Assets {
         }
       }
       Objects {
-        Id: 16087611222072230619
-        Name: "Ship Boat Large Fog Horn 02 SFX"
+        Id: 9334650424071988126
+        Name: "Japanese Heavy Taiko Drum Beat Music Stinger Set 01"
         Transform {
           Location {
+            X: -23009.2051
+            Y: -31660.457
+            Z: 6362.85303
           }
           Rotation {
           }
@@ -46,6 +49,14 @@ Assets {
           }
         }
         ParentId: 11569731588468861643
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:emx_heavy_taiko_beat_stinger_01:40"
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -55,25 +66,30 @@ Assets {
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
-        AudioInstance {
-          AudioAsset {
-            Id: 7444474428001811896
+        Blueprint {
+          BlueprintAsset {
+            Id: 14826671335767096609
           }
-          AutoPlay: true
-          Pitch: 304.697021
-          Volume: 1
-          Falloff: 5261.32568
-          Radius: 1632.78076
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Volume: 1.15554237
+            Falloff: 3600
+            Radius: 400
+            FadeOutTime: 0.5
+            StartTime: 1
+          }
         }
       }
     }
     Assets {
-      Id: 7444474428001811896
-      Name: "Ship Boat Large Fog Horn 02 SFX"
-      PlatformAssetType: 7
+      Id: 14826671335767096609
+      Name: "Japanese Heavy Taiko Drum Beat Music Stinger Set 01"
+      PlatformAssetType: 10
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_ship_boat_large_fog_horn_02a_Cue_ref"
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "abp_stinger_japanese_taiko_heavy_beat_01_ref"
       }
     }
     PrimaryAssetId {

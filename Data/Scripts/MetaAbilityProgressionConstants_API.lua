@@ -214,8 +214,8 @@ API.STARTER_PACK_PREMIUM_BONUS = 350 -- How many cosmetic tokens a player gets w
 -- Mulipliers for Server Boost Perks - Gold & XP
 API.XP_SERVER_BOOST_MULTIPLIER = 0.5 -- XP Boost 100% for the entire server
 API.GOLD_SERVER_BOOST_MULTIPLIER = 0.5 -- Gold Boost 100% for the entire server
-API.XP_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
-API.GOLD_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
+API.XP_SERVER_BOOST_DURATION = 60 * 30 -- Currently set to 1 hour
+API.GOLD_SERVER_BOOST_DURATION = 60 * 30 -- Currently set to 1 hour
 
 -- Mulipliers for Server Boost Perks - Gold & XP
 API.XP_SELF_BOOST_MULTIPLIER = 1 -- XP Boost 100% for the entire server
