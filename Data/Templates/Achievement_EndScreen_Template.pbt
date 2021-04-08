@@ -51,9 +51,10 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 110
-          Height: 130
-          UIY: 5
+          Width: 100
+          Height: 120
+          UIX: 37.9573975
+          UIY: 10.1773682
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -100,13 +101,16 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 157
-          Height: 136
+          Width: 43
+          Height: 10
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
           Image {
             Brush {
               Id: 17289448223043935888
