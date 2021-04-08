@@ -1,9 +1,3 @@
-
--- DISABED
-if true then
-    return
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -80,7 +74,7 @@ DiamondPerk4:SetPerkReference(JewelPack4)
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
-
+--[[
 local serverXpBoostTime = 0
 local serverGoldBoostTime = 0
 local personalXpBoostTime = 0
@@ -178,3 +172,4 @@ NETWORKED.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
 listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnResourceChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Int()
+]]--
