@@ -18,40 +18,55 @@ local VIP_MULTIPLIER = script:GetCustomProperty("VIP_MULTIPLIER"):WaitForObject(
 local SERVER_MULTIPLIER = script:GetCustomProperty("SERVER_MULTIPLIER"):WaitForObject()
 local EVENT_BONUS = script:GetCustomProperty("EVENT_BONUS"):WaitForObject()
 
+local goldBoostTime = 0
+local xpBoostTime = 0
+
 while not _G.PerPlayerDictionary do
     Task.Wait()
 end
 
-_G.PerPlayerDictionary.WaitForPlayer(LOCAL_PLAYER)
+function Int()
+    goldBoostTime = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONST.SELF_GOLD_BOOST_KEY) or 0
+    xpBoostTime = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONST.SELF_XP_BOOST_KEY) or 0
+end
+
+function OnDictionaryChanged(player, key, value)
+    if key == CONST.SELF_GOLD_BOOST_KEY then
+        goldBoostTime = value - time() or 0
+        if goldBoostTime > 0 then
+            GOLD_BOOST_PANEL.visibility = Visibility.FORCE_ON
+        else
+            GOLD_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+        end
+    end
+
+    if key == CONST.SELF_XP_BOOST_KEY then
+        xpBoostTime = value - time() or 0
+        if xpBoostTime > 0 then
+            XP_BOOST_PANEL.visibility = Visibility.FORCE_ON
+        else
+            XP_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+        end
+    end
+end
 
 function Tick()
+    _G.PerPlayerDictionary.WaitForPlayer(LOCAL_PLAYER)
 
     -- GOLD SERVER BOOST
-    local goldBoostTime = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONST.SELF_GOLD_BOOST_KEY)
-    goldBoostTime = goldBoostTime and goldBoostTime - time() or 0
-
     if goldBoostTime > 0 then
-
-
-        local hours = math.floor(goldBoostTime/3600)
+        local hours = math.floor(goldBoostTime / 3600)
         local minutes = math.floor(goldBoostTime) // 60 % 60
         local seconds = math.floor(goldBoostTime) % 60
         GOLD_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
-    else
-        GOLD_BOOST_PANEL.visibility = Visibility.FORCE_OFF
     end
 
     -- XP SERVER BOOST
-    local xpBoostTime = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONST.SELF_XP_BOOST_KEY)
-    xpBoostTime = xpBoostTime and xpBoostTime - time() or 0
-
     if xpBoostTime > 0 then
-        local hours = math.floor(xpBoostTime/3600)
+        local hours = math.floor(xpBoostTime / 3600)
         local minutes = math.floor(xpBoostTime) // 60 % 60
         local seconds = math.floor(xpBoostTime) % 60
         XP_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
-    else
-        XP_BOOST_PANEL.visibility = Visibility.FORCE_OFF
     end
 
     -- VIP
@@ -63,3 +78,6 @@ function Tick()
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
 end
+
+_G.PerPlayerDictionary.valueChangedEvent:Connect(OnDictionaryChanged)
+Int()
