@@ -59,6 +59,7 @@ local function UpdateCombatAmmount(attackData)
         amount = amount * -1
         source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(amount))
         Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(amount))
+        source:AddResource(CONST.ROUND_HEALING, CoreMath.Round(amount))
     end
     Events.Broadcast("AS.PlayerDamaged", attackData)
 end
