@@ -47,12 +47,12 @@ function Int()
     end
 
     if isVip then
-        VIP_MEMBER_PANEL.visibility = Visibility.FORCE_ON
+        --VIP_MEMBER_PANEL.visibility = Visibility.FORCE_ON
         VIP_BOOST_TEXT.text = "VIP ACTIVE"
         VIP_BOOST_TEXT:SetColor(Color.GREEN)
     else
-        VIP_MEMBER_PANEL.visibility = Visibility.FORCE_OFF
-        VIP_BOOST_TEXT.text = "N/A"
+       -- VIP_MEMBER_PANEL.visibility = Visibility.FORCE_OFF
+        VIP_BOOST_TEXT.text = "Press P"
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
     XP_MULITPLIER_TEXT.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .. "x"
@@ -87,7 +87,7 @@ function OnDictionaryChanged(player, key, value)
             VIP_BOOST_TEXT:SetColor(Color.GREEN)
         else
             VIP_MEMBER_PANEL.visibility = Visibility.FORCE_OFF
-            VIP_BOOST_TEXT.text = "N/A"
+            VIP_BOOST_TEXT.text = "Press P"
             VIP_BOOST_TEXT:SetColor(Color.RED)
         end
     end

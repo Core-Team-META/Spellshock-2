@@ -12802,9 +12802,15 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ParentPanel"
+      Name: "cs:BottomRightPanel"
       ObjectReference {
         SelfId: 1872725152478004348
+      }
+    }
+    Overrides {
+      Name: "cs:BottomLeftPanel"
+      ObjectReference {
+        SelfId: 11918261185632852326
       }
     }
   }
