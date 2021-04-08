@@ -1,3 +1,9 @@
+
+-- DISABED
+if true then
+    return
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -156,15 +162,13 @@ function OnPlayerLeft(player)
 end
 
 function Tick()
-    SetServerXpBoost()
-    SetServerGoldBoost()
-    if personalXpBoostTime < time() then
-        SelfXPBoostPerk.isInteractable = true
+    if LOCAL_PLAYER.name == "Bot1" then
+    for index, resName in ipairs(CONST.SELF_BOOST_KEYS) do
+        local timeStamp = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, resName)
+        print(timeStamp - time())
     end
-    if personalGoldBoostTime < time() then
-        SelfGoldBoostPerk.isInteractable = true
-    end
-    Task.Wait()
+end
+    Task.Wait(5)
 end
 
 ------------------------------------------------------------------------------------------------------------------------

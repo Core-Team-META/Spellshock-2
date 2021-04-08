@@ -24,8 +24,6 @@ end
 local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
 local PERKS_DATA = script:GetCustomProperty("PerksData"):WaitForObject()
 
-
-
 ------------------------------------------------------------------------------------------------------------------------
 -- NET REFRENCE
 ------------------------------------------------------------------------------------------------------------------------
@@ -59,19 +57,19 @@ bundles[#bundles + 1] = {
 
 bundles[#bundles + 1] = {
     perk = SELFGOLDBOOST,
-    storageId = CONST.PERK_STORAGE_KEYS.SELF_GOLD_BOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SELF_GOLD_BOOST
 }
 bundles[#bundles + 1] = {
     perk = SELFXPBOOST,
-    storageId = CONST.PERK_STORAGE_KEYS.SELF_XP_BOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SELF_XP_BOOST
 }
 bundles[#bundles + 1] = {
     perk = SERVERXPBOOST,
-    storageId = CONST.PERK_STORAGE_KEYS.SERVER_XP_BOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SERVER_XP_BOOST
 }
 bundles[#bundles + 1] = {
     perk = SERVERGOLDBOOST,
-    storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST
 }
 bundles[#bundles + 1] = {
     perk = STARTERPACK,
@@ -165,6 +163,23 @@ local function OnSavePerkData(player, data, perks)
     Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, data)
 end
 
+local function AddTimeToMultiplier(player, resName, duration)
+    local currentTime = _G.PerPlayerDictionary.GetNumber(player, resName)
+    currentTime = currentTime and currentTime - time()
+    if currentTime > 0 then
+        currentTime = currentTime + duration + time()
+    else
+        currentTime = duration + time()
+    end
+    _G.PerPlayerDictionary.Set(player, resName, currentTime)
+end
+
+local function AddTimeToPlayersMultiplier(resName, duration)
+    for _, player in ipairs(Game.GetPlayers()) do
+        AddTimeToMultiplier(player, resName, duration)
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -194,19 +209,22 @@ function CheckPerkCountWithStorage(player, data)
             end
             if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
-                player:AddResource(CONST.COSMETIC_TOKEN, CONST.STARTER_PACK_PREMIUM_BONUS)
-                player:AddResource(CONST.GOLD, CONST.STARTER_PACK_GOLD_BONUS)
+                --_G.PERKS.SUBSCRIPTION = STARTERPACK
+                if perkCount > storageCount then
+                    player:AddResource(CONST.COSMETIC_TOKEN, CONST.STARTER_PACK_PREMIUM_BONUS)
+                    player:AddResource(CONST.GOLD, CONST.STARTER_PACK_GOLD_BONUS)
+                end
             end
 
             -- Server & Self Perk Modifers (Repeatable Purchase)
             if bundle.perk == SERVERXPBOOST and perkCount > storageCount then
-                NETWORKED:SetNetworkedCustomProperty("sxt", time() + CONST.XP_SERVER_BOOST_DURATION)
+                AddTimeToPlayersMultiplier(CONST.SELF_XP_BOOST_KEY, CONST.XP_SERVER_BOOST_DURATION)
             elseif bundle.perk == SERVERGOLDBOOST and perkCount > storageCount then
-                NETWORKED:SetNetworkedCustomProperty("sgt", time() + CONST.GOLD_SERVER_BOOST_DURATION)
+                AddTimeToPlayersMultiplier(CONST.SELF_GOLD_BOOST_KEY, CONST.GOLD_SERVER_BOOST_DURATION)
             elseif bundle.perk == SELFXPBOOST and perkCount > storageCount then
-                _G.PerPlayerDictionary.Set(player, CONST.SELF_XP_BOOST_KEY, time() + CONST.XP_SELF_BOOST_DURATION)
+                AddTimeToMultiplier(player, CONST.SELF_XP_BOOST_KEY, CONST.XP_SELF_BOOST_DURATION)
             elseif bundle.perk == SELFGOLDBOOST and perkCount > storageCount then
-                _G.PerPlayerDictionary.Set(player, CONST.SELF_GOLD_BOOST_KEY, time() + CONST.GOLD_SELF_BOOST_DURATION)
+                AddTimeToMultiplier(player, CONST.SELF_GOLD_BOOST_KEY, CONST.GOLD_SELF_BOOST_DURATION)
             end
         end
     end

@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/6
--- Version 0.1.9
+-- Date: 2021/4/7
+-- Version 0.1.10
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -22,7 +22,8 @@ API.STORAGE = {
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
-    ACHIEVEMENTS = 11
+    ACHIEVEMENTS = 11,
+    PROGRESSION_MULTIPLIERS = 12
     --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
@@ -378,8 +379,17 @@ API.COSMETIC_TOKEN = API.CURRENCY[2]
 
 -- PERK KEYS
 API.VIP_MEMBERSHIP_KEY = "IsVip"
-API.SELF_GOLD_BOOST_KEY = "PGBK"
-API.SELF_XP_BOOST_KEY = "PXBK"
+
+-- Used For Perk Multiplier Timestamps
+API.SELF_BOOST_KEYS = {
+    [1] = "PXBK",
+    [2] = "PGBK"
+}
+API.SELF_XP_BOOST_KEY = API.SELF_BOOST_KEYS[1]
+API.SELF_GOLD_BOOST_KEY = API.SELF_BOOST_KEYS[2]
+
+
+
 API.SERVER_XP_BOOST_KEY = "sxt"
 API.SERVER_GOLD_BOOST_KEY = "sgt"
 API.STARTER_PACK_KEY = "SPK"
