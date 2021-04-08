@@ -169,8 +169,9 @@ Objects {
     Text {
       Label: "Press [K] for full standings"
       Color {
-        R: 0.827
-        G: 0.433083892
+        R: 0.812000036
+        G: 0.542265475
+        B: 0.349160016
         A: 1
       }
       Size: 17
@@ -178,7 +179,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 13707030425558109407
       }
     }
     AnchorLayout {
@@ -239,7 +240,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 13707030425558109407
       }
     }
     AnchorLayout {
@@ -272,7 +273,6 @@ Objects {
   }
   ParentId: 11651999873692641338
   ChildIds: 8509718280415073527
-  ChildIds: 16894938785865472802
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -302,69 +302,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 16894938785865472802
-  Name: "BEST"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2034844553091318054
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 700
-    Height: 20
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "9999"
-      Color {
-        R: 1
-        G: 0.520995557
-        B: 0.10946171
-        A: 1
-      }
-      Size: 28
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      ClipTextToSize: true
-      Font {
-        Id: 16670222695632479546
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -405,8 +342,9 @@ Objects {
     Text {
       Label: "9999"
       Color {
-        R: 0.73791039
-        G: 0.386429429
+        R: 0.812000036
+        G: 0.542265475
+        B: 0.349160016
         A: 1
       }
       Size: 28
@@ -414,7 +352,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -447,7 +385,6 @@ Objects {
   }
   ParentId: 11651999873692641338
   ChildIds: 13744005591283853474
-  ChildIds: 18378520828366139155
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -477,69 +414,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 18378520828366139155
-  Name: "NEW"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9438416075355215881
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 700
-    Height: 20
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "9999"
-      Color {
-        R: 1
-        G: 0.520995557
-        B: 0.10946171
-        A: 1
-      }
-      Size: 28
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      ClipTextToSize: true
-      Font {
-        Id: 16670222695632479546
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -580,8 +454,9 @@ Objects {
     Text {
       Label: "9999"
       Color {
-        R: 0.73791039
-        G: 0.386429429
+        R: 0.812000036
+        G: 0.542265475
+        B: 0.349160016
         A: 1
       }
       Size: 28
@@ -589,7 +464,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -625,10 +500,8 @@ Objects {
   ChildIds: 9015481924492967318
   ChildIds: 12027403924676998488
   ChildIds: 2774026269841012540
-  ChildIds: 7248807980404943686
   ChildIds: 7420549465234224325
   ChildIds: 4831050654691659130
-  ChildIds: 18371309815782394517
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -660,70 +533,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 18371309815782394517
-  Name: "TITLE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13466606587448239597
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 20
-    UIY: 137.260742
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "BEST"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 25
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      ClipTextToSize: true
-      Font {
-        Id: 16670222695632479546
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -765,9 +574,8 @@ Objects {
     Text {
       Label: "BEST"
       Color {
-        R: 0.572
-        G: 0.572
-        B: 0.572
+        R: 0.65
+        G: 0.348675489
         A: 1
       }
       Size: 25
@@ -775,7 +583,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -819,7 +627,8 @@ Objects {
   Control {
     Width: 200
     Height: 36
-    UIY: 139.260742
+    UIX: 2
+    UIY: 137.261
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -835,71 +644,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 7248807980404943686
-  Name: "TITLE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13466606587448239597
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 20
-    UIY: -19
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "POINTS"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 25
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      ClipTextToSize: true
-      Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -952,9 +697,8 @@ Objects {
     Text {
       Label: "POINTS"
       Color {
-        R: 0.572
-        G: 0.572
-        B: 0.572
+        R: 0.65
+        G: 0.348675489
         A: 1
       }
       Size: 25
@@ -962,7 +706,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1006,7 +750,8 @@ Objects {
   Control {
     Width: 200
     Height: 36
-    UIY: -17
+    UIX: 2
+    UIY: -19
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1022,7 +767,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1124,7 +869,7 @@ Objects {
   }
   Control {
     Width: 1
-    Height: 1
+    Height: 2
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1135,9 +880,8 @@ Objects {
       Brush {
       }
       Color {
-        R: 0.039501
-        G: 0.133
-        B: 0.0846921876
+        R: 0.371237785
+        G: 0.132868335
         A: 1
       }
       TeamSettings {
@@ -1182,7 +926,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 1
+    Width: 2
     Height: 1
     RenderTransformPivot {
       Anchor {
@@ -1194,9 +938,8 @@ Objects {
       Brush {
       }
       Color {
-        R: 0.039501
-        G: 0.133
-        B: 0.0846921876
+        R: 0.371237785
+        G: 0.132868335
         A: 1
       }
       TeamSettings {
@@ -1241,7 +984,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 1
+    Width: 2
     Height: 1
     RenderTransformPivot {
       Anchor {
@@ -1253,9 +996,8 @@ Objects {
       Brush {
       }
       Color {
-        R: 0.039501
-        G: 0.133
-        B: 0.0846921876
+        R: 0.371237785
+        G: 0.132868335
         A: 1
       }
       TeamSettings {
@@ -1301,7 +1043,7 @@ Objects {
   }
   Control {
     Width: 1
-    Height: 1
+    Height: 2
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1312,9 +1054,8 @@ Objects {
       Brush {
       }
       Color {
-        R: 0.039501
-        G: 0.133
-        B: 0.0846921876
+        R: 0.371237785
+        G: 0.132868335
         A: 1
       }
       TeamSettings {
@@ -1373,9 +1114,8 @@ Objects {
         Id: 2604353830693238371
       }
       Color {
-        R: 0.0700800046
-        G: 0.24000001
-        B: 0.14088
+        R: 0.0299999714
+        G: 0.0101324404
         A: 1
       }
       TeamSettings {
@@ -1433,9 +1173,8 @@ Objects {
       Brush {
       }
       Color {
-        R: 0.039501
-        G: 0.133
-        B: 0.0846921876
+        R: 0.052
+        G: 0.0175629091
         A: 1
       }
       TeamSettings {
@@ -1493,9 +1232,8 @@ Objects {
         Id: 2604353830693238371
       }
       Color {
-        R: 0.0700800046
-        G: 0.24000001
-        B: 0.14088
+        R: 0.0299999714
+        G: 0.0101324404
         A: 1
       }
       TeamSettings {
@@ -1552,9 +1290,8 @@ Objects {
       Brush {
       }
       Color {
-        R: 0.039501
-        G: 0.133
-        B: 0.0846921876
+        R: 0.052
+        G: 0.0175629091
         A: 1
       }
       TeamSettings {
@@ -1612,9 +1349,9 @@ Objects {
       Brush {
       }
       Color {
-        G: 0.00477695325
-        B: 0.00262732524
-        A: 0.741176486
+        R: 0.0100000007
+        G: 0.00337748253
+        A: 0.5
       }
       TeamSettings {
       }
@@ -1650,7 +1387,6 @@ Objects {
   ParentId: 11651999873692641338
   ChildIds: 13296252316307219205
   ChildIds: 8101701157572150345
-  ChildIds: 14085745576547927959
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1680,69 +1416,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 14085745576547927959
-  Name: "TITLE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5905973446068407144
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 700
-    Height: 20
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "TOURNAMENT"
-      Color {
-        R: 1
-        G: 0.520995557
-        B: 0.10946171
-        A: 1
-      }
-      Size: 28
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      ClipTextToSize: true
-      Font {
-        Id: 16670222695632479546
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -1792,7 +1465,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1836,6 +1509,8 @@ Objects {
   Control {
     Width: 700
     Height: 36
+    UIX: 2
+    UIY: -2
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1851,7 +1526,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1885,7 +1560,6 @@ Objects {
   ParentId: 11651999873692641338
   ChildIds: 9604013659696274982
   ChildIds: 6498298333899257692
-  ChildIds: 12040589061977254729
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1915,69 +1589,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 12040589061977254729
-  Name: "TITLE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8624683445004435477
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 700
-    Height: 20
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "GUNS N\' GLORY"
-      Color {
-        R: 1
-        G: 0.520995557
-        B: 0.10946171
-        A: 1
-      }
-      Size: 28
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      ClipTextToSize: true
-      Font {
-        Id: 16670222695632479546
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -2018,8 +1629,8 @@ Objects {
     Text {
       Label: "GUNS N\' GLORY"
       Color {
-        R: 0.73791039
-        G: 0.386429429
+        R: 0.65
+        G: 0.348675489
         A: 1
       }
       Size: 28
@@ -2027,7 +1638,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2071,6 +1682,8 @@ Objects {
   Control {
     Width: 700
     Height: 36
+    UIX: 2
+    UIY: -2
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2086,7 +1699,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
-        Id: 16670222695632479546
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2164,7 +1777,7 @@ Objects {
     Overrides {
       Name: "cs:NewScore2"
       ObjectReference {
-        SelfId: 18378520828366139155
+        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -2176,7 +1789,7 @@ Objects {
     Overrides {
       Name: "cs:BestScore2"
       ObjectReference {
-        SelfId: 16894938785865472802
+        SelfId: 841534158063459245
       }
     }
     Overrides {
