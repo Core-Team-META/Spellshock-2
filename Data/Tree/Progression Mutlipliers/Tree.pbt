@@ -75,6 +75,12 @@ Objects {
         SelfId: 9019563002044163780
       }
     }
+    Overrides {
+      Name: "cs:Perks"
+      ObjectReference {
+        SelfId: 19076367533069996
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
