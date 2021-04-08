@@ -46984,8 +46984,6 @@ Objects {
     }
   }
   ParentId: 6170994673248962567
-  ChildIds: 324130675778820054
-  ChildIds: 1396347940856868276
   ChildIds: 11858021175792643868
   ChildIds: 18081336920113381013
   UnregisteredParameters {
@@ -47152,7 +47150,7 @@ Objects {
     Width: 100
     Height: 30
     UIX: 15
-    UIY: 50
+    UIY: 23.0256958
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -47274,419 +47272,6 @@ Objects {
     }
   }
   ParentId: 11858021175792643868
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 20
-    Height: 18
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 3483798833601977176
-      }
-      Color {
-        R: 1
-        G: 0.539652526
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 1396347940856868276
-  Name: "Bonus 2"
-  Transform {
-    Location {
-      X: 0.0263341218
-      Y: -0.222606584
-      Z: -16.4121094
-    }
-    Rotation {
-      Yaw: -0.00775909377
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7694383847699548083
-  ChildIds: 849785365740645035
-  ChildIds: 1105659199768048255
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Name"
-      ObjectReference {
-        SelfId: 1105659199768048255
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 100
-    Height: 30
-    UIX: 15
-    UIY: 25
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Panel {
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 1105659199768048255
-  Name: "Self bonus"
-  Transform {
-    Location {
-      X: -21408.418
-      Y: 991.935547
-      Z: -14878.6094
-    }
-    Rotation {
-      Yaw: 169.297516
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1396347940856868276
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Shadow"
-      ObjectReference {
-        SelfId: 4929104672219926534
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 37
-    UIX: 25.348877
-    UIY: 5.943295
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "Self bonus: +10%"
-      Color {
-        R: 1
-        G: 0.592220783
-        B: 0.266000032
-        A: 1
-      }
-      Size: 12
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 15165554833363844727
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 849785365740645035
-  Name: "Arrow"
-  Transform {
-    Location {
-      X: 5656.02148
-      Y: 27250.7227
-      Z: -8112.43945
-    }
-    Rotation {
-      Yaw: -150.622
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1396347940856868276
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 20
-    Height: 18
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 3483798833601977176
-      }
-      Color {
-        R: 1
-        G: 0.539652526
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 324130675778820054
-  Name: "Bonus 1"
-  Transform {
-    Location {
-      X: 0.0263341516
-      Y: -0.222606599
-      Z: -16.4121094
-    }
-    Rotation {
-      Yaw: -0.00775226345
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7694383847699548083
-  ChildIds: 5326188255196683279
-  ChildIds: 2747957698255226667
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Name"
-      ObjectReference {
-        SelfId: 2747957698255226667
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 100
-    Height: 30
-    UIX: 15
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Panel {
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 2747957698255226667
-  Name: "Server bonus"
-  Transform {
-    Location {
-      X: -21408.418
-      Y: 991.935547
-      Z: -14878.6094
-    }
-    Rotation {
-      Yaw: 169.297516
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 324130675778820054
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Shadow"
-      ObjectReference {
-        SelfId: 4929104672219926534
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 37
-    UIX: 25.348877
-    UIY: 5.943295
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "Event bonus: +10%"
-      Color {
-        R: 1
-        G: 0.592220783
-        B: 0.266000032
-        A: 1
-      }
-      Size: 12
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 15165554833363844727
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 5326188255196683279
-  Name: "Arrow"
-  Transform {
-    Location {
-      X: 5656.02148
-      Y: 27250.7227
-      Z: -8112.43945
-    }
-    Rotation {
-      Yaw: -150.622
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 324130675778820054
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -48289,7 +47874,7 @@ Objects {
     Overrides {
       Name: "cs:InfoHoverButton"
       ObjectReference {
-        SelfId: 19055107047417530
+        SelfId: 14121094817821452365
       }
     }
     Overrides {
@@ -53976,6 +53561,12 @@ Objects {
         SelfId: 10907934887396382175
       }
     }
+    Overrides {
+      Name: "cs:DailyShopBonus"
+      ObjectReference {
+        SelfId: 11485821782352283540
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -54040,27 +53631,15 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ServerBonus"
-      ObjectReference {
-        SelfId: 1254075602997448344
-      }
-    }
-    Overrides {
       Name: "cs:VIP"
       ObjectReference {
-        SelfId: 3917161551898086173
+        SelfId: 2047522247924039312
       }
     }
     Overrides {
       Name: "cs:Total"
       ObjectReference {
-        SelfId: 13884287869892738848
-      }
-    }
-    Overrides {
-      Name: "cs:SelfBonus"
-      ObjectReference {
-        SelfId: 2370745564544479424
+        SelfId: 18081336920113381013
       }
     }
   }
@@ -54100,7 +53679,7 @@ Objects {
 }
 Objects {
   Id: 14121094817821452365
-  Name: "Gold Button"
+  Name: "Daily Shop Button"
   Transform {
     Location {
       X: 62670.8203

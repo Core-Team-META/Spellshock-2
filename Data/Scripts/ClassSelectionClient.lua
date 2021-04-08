@@ -283,9 +283,15 @@ function OnGlobalStatsClicked(thisButton)
 		local ability_VIP = AbilityXPBonus:GetCustomProperty("VIP"):WaitForObject()
 		local ability_Total = AbilityXPBonus:GetCustomProperty("Total"):WaitForObject()
 
+	local DailyShopBonus = Bonuses:GetCustomProperty("DailyShopBonus"):WaitForObject()
+		local daily_VIP = DailyShopBonus:GetCustomProperty("VIP"):WaitForObject()
+		local daily_Total = DailyShopBonus:GetCustomProperty("Total"):WaitForObject()
+		local daily_CurrentAmount = DailyShopBonus:GetCustomProperty("CurrentAmount"):WaitForObject()
+
 	local goldTotal = 0
 	local classTotal = 0
 	local abilityTotal = 0
+	local dailyTotal = 0
 	local notActiveText = "---"
 
 	-- GOLD SELF BOOST 
@@ -325,14 +331,17 @@ function OnGlobalStatsClicked(thisButton)
 		gold_VIP.text = "VIP: +"..tostring(CoreMath.Round(CONST.VIP_GOLD_MULTIPLIER*100)).."%"
 		ability_VIP.text = "VIP: +"..tostring(CoreMath.Round(CONST.VIP_SHARDS_MULTIPLIER*100)).."%"
 		class_VIP.text = "VIP: +"..tostring(CoreMath.Round(CONST.VIP_XP_MULTIPLIER*100)).."%"
+		daily_VIP.text = "VIP: -"..tostring(CoreMath.Round((1-CONST.VIP_DAILY_SHOP_DISCOUNT)*100)).."%"
 
 		goldTotal = goldTotal + CoreMath.Round(CONST.VIP_GOLD_MULTIPLIER*100)
 		classTotal = classTotal + CoreMath.Round(CONST.VIP_XP_MULTIPLIER*100)
 		abilityTotal = abilityTotal + CoreMath.Round(CONST.VIP_SHARDS_MULTIPLIER*100)
+		dailyTotal = dailyTotal + CoreMath.Round((1-CONST.VIP_DAILY_SHOP_DISCOUNT)*100)
 	else
 		gold_VIP.text = "VIP: "..notActiveText
 		ability_VIP.text = "VIP: "..notActiveText
 		class_VIP.text = "VIP: "..notActiveText
+		daily_VIP.text = "VIP: "..notActiveText
 	end
 
 	-- TOTALS
@@ -344,6 +353,9 @@ function OnGlobalStatsClicked(thisButton)
 
 	ability_CurrentAmount.text = "+"..tostring(abilityTotal).."%"
 	ability_Total.text = ability_CurrentAmount.text
+
+	daily_CurrentAmount.text = "-"..tostring(dailyTotal).."%"
+	daily_Total.text = daily_CurrentAmount.text
 
 	-- Update the lifetime stats
 	local LifetimeStatsParent = RightPanel_GlobalStats:GetCustomProperty("LifetimeStatsParent"):WaitForObject()
