@@ -33,6 +33,7 @@ local function SetPlayerFlags(player)
     player.serverUserData.ACH_killCount = 0
     player.serverUserData.classDamage = {}
     player:SetResource(CONST.ROUND_DAMAGE, 0)
+    player:SetResource(CONST.ROUND_HEALING, 0)
 end
 
 local function OnLobby()
@@ -49,7 +50,7 @@ end
 
 -- Warrior Damage Achievements
 local function CheckClassDamageAchievements(player, key, class)
-   local amount = player.serverUserData.classDamage[class] or 0
+    local amount = player.serverUserData.classDamage[class] or 0
     for i = 1, 4 do
         if ACH_API.IsUnlocked(player, key .. tostring(i), amount) then
             ACH_API.UnlockAchievement(player, key .. tostring(i))
@@ -57,22 +58,11 @@ local function CheckClassDamageAchievements(player, key, class)
     end
 end
 
-
 local function OnResourceChanged(player, resName, resAmt)
     if resAmt == 0 then
         return
     end
-    if resName == "Objective" then
-        if ACH_API.IsUnlocked(player, "AS_NRSC1", resAmt) then
-            ACH_API.UnlockAchievement(player, "AS_NRSC1")
-        end
-        if ACH_API.IsUnlocked(player, "AS_NRSC2", resAmt) then
-            ACH_API.UnlockAchievement(player, "AS_NRSC2")
-        end
-        if ACH_API.IsUnlocked(player, "AS_NRSC3", resAmt) then
-            ACH_API.UnlockAchievement(player, "AS_NRSC3")
-        end
-    elseif resName == CONST.ROUND_DAMAGE then
+    if resName == CONST.ROUND_DAMAGE then
         local class = player:GetResource(CONST.CLASS_RES)
         -- Class Based Damage Achievements
         if class == CONST.CLASS.TANK then
@@ -86,19 +76,20 @@ local function OnResourceChanged(player, resName, resAmt)
         elseif class == CONST.CLASS.ASSASSIN then
             CheckClassDamageAchievements(player, "ASASNDMG", class)
         end
+    elseif resName == CONST.ROUND_HEALING then
 
-        if ACH_API.IsUnlocked(player, "AS_NRDMG1", resAmt) then
-            ACH_API.UnlockAchievement(player, "AS_NRDMG1")
+
+    elseif resName == "Objective" then
+        if ACH_API.IsUnlocked(player, "AS_NRSC1", resAmt) then
+            ACH_API.UnlockAchievement(player, "AS_NRSC1")
         end
-        if ACH_API.IsUnlocked(player, "AS_NRDMG2", resAmt) then
-            ACH_API.UnlockAchievement(player, "AS_NRDMG2")
+        if ACH_API.IsUnlocked(player, "AS_NRSC2", resAmt) then
+            ACH_API.UnlockAchievement(player, "AS_NRSC2")
         end
-        if ACH_API.IsUnlocked(player, "AS_NRDMG3", resAmt) then
-            ACH_API.UnlockAchievement(player, "AS_NRDMG3")
+        if ACH_API.IsUnlocked(player, "AS_NRSC3", resAmt) then
+            ACH_API.UnlockAchievement(player, "AS_NRSC3")
         end
-        if ACH_API.IsUnlocked(player, "AS_NRDMG4", resAmt) then
-            ACH_API.UnlockAchievement(player, "AS_NRDMG4")
-        end
+    else
     end
 end
 
