@@ -34,6 +34,19 @@ Assets {
   }
 }
 Assets {
+  Id: 16070869092351677475
+  Name: "ss2_live_cosmetic"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "c333b186a0784c47af674b7704808501"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 15969669977645369301
   Name: "SERVERXPBOOST"
   PlatformAssetType: 24
@@ -55,6 +68,19 @@ Assets {
       Key: "294eece8d73a49f0a56c278792698f35"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 15499488441472625293
+  Name: "ss2_live_currency"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "d5d513aebe8a4907862c98637c1f7b6f"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -95,12 +121,38 @@ Assets {
   }
 }
 Assets {
+  Id: 15115004373043497991
+  Name: "Gold Pack 3"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "1e3ae70bf08c4fa0ab3601bef00ed946"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 14862609072787733245
   Name: "GoldPack1"
   PlatformAssetType: 24
   NetReferenceAsset {
     NetReference {
       Key: "6abe1fc3670941009de6d03e43c15762"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 14795927479057744532
+  Name: "Gold Pack 2"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "8f0d07a9295046069a2014e972745697"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
       }
@@ -126,6 +178,19 @@ Assets {
   }
 }
 Assets {
+  Id: 13420476618392182070
+  Name: "Gem Pack 1"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "df8c1f44f1bb4bc48fb169abff92a3bd"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 12913628546500597405
   Name: "Premium 1"
   PlatformAssetType: 24
@@ -139,14 +204,14 @@ Assets {
   }
 }
 Assets {
-  Id: 12805171153576188001
-  Name: "SS2_ZS_PROD_PROGRESSION"
-  PlatformAssetType: 23
+  Id: 12588189623480869990
+  Name: "Gem Pack 2"
+  PlatformAssetType: 24
   NetReferenceAsset {
     NetReference {
-      Key: "efb8cc776c454a7faa0ae8a959d38706"
+      Key: "6745acba244f4fc4b182d0f596cc88fc"
       Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
+        Value: "mc:enetreferencetype:creatorperk"
       }
     }
   }
@@ -191,6 +256,19 @@ Assets {
   }
 }
 Assets {
+  Id: 11517773807771816473
+  Name: "Server Boost XP"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "64198bbf0f584e52bdaa193ca0eb56e8"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 11232852364461677985
   Name: "JewelPack3"
   PlatformAssetType: 24
@@ -210,19 +288,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_foliage_gen_leafy_groundcover_002"
-  }
-}
-Assets {
-  Id: 11128327002986300852
-  Name: "SS2_BE_PROD_CURRENCY"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "627fd490885c4745bc44c7d55a8fb5db"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
   }
 }
 Assets {
@@ -261,12 +326,38 @@ Assets {
   }
 }
 Assets {
+  Id: 9360906347466037585
+  Name: "Self Boost Gold"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "92be9ac5f97644bca5c86b13f43cbadc"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 9322991885775260177
   Name: "Premium 4"
   PlatformAssetType: 24
   NetReferenceAsset {
     NetReference {
       Key: "5c9ecc9b43634af49a678a1436056271"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 9282202850496238616
+  Name: "Server Boost Gold"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "74e99b0b92e84e3a844820861e1c4f49"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
       }
@@ -287,12 +378,38 @@ Assets {
   }
 }
 Assets {
+  Id: 8849915282742711576
+  Name: "Gem Pack 4"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "955b0ae1028d4d5dad86af508405d641"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_grass_generic_001"
+  }
+}
+Assets {
+  Id: 8209956498192832287
+  Name: "VIP Member"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "e5678c3a9ca347cd8e104bce8c699abc"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
   }
 }
 Assets {
@@ -340,19 +457,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6808601939512767875
-  Name: "SS2_ZS_PROD_CURRENCY"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "62a4022574c249e9a7c4f5227e02bf61"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 6413593786046088799
   Name: "Self XP"
   PlatformAssetType: 24
@@ -366,14 +470,14 @@ Assets {
   }
 }
 Assets {
-  Id: 6314502537449923968
-  Name: "SS2_BE_PROD_PROGRESSION"
-  PlatformAssetType: 23
+  Id: 6146440987156857156
+  Name: "Self Boost XP"
+  PlatformAssetType: 24
   NetReferenceAsset {
     NetReference {
-      Key: "06aa8a5ccba94efe82095b881462eab5"
+      Key: "21a7c8f2bff34e6784e198612c79525a"
       Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
+        Value: "mc:enetreferencetype:creatorperk"
       }
     }
   }
@@ -418,12 +522,38 @@ Assets {
   }
 }
 Assets {
+  Id: 5152362872644576611
+  Name: "Gold Pack 1"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "9b9b53b63a194dbdb74688e060e33075"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 4860066908479684099
   Name: "Premium 3"
   PlatformAssetType: 24
   NetReferenceAsset {
     NetReference {
       Key: "8e1db13faf0c4520b3f33c000966ff0e"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 4394564280714997097
+  Name: "Starter Pack"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "03722328af71484c995115f4cac95da3"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
       }
@@ -453,14 +583,40 @@ Assets {
   }
 }
 Assets {
-  Id: 3375524747070021385
-  Name: "SS2_ZS_PROD_COSMETICS"
+  Id: 3725870701821859093
+  Name: "Gem Pack 3"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "7faf80a1c1fb4e3ea5ec9333a5128889"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 3160041052331178319
+  Name: "ss2_live_progression"
   PlatformAssetType: 23
   NetReferenceAsset {
     NetReference {
-      Key: "89c321e4f4904b25afd9c8acb39a446d"
+      Key: "fda12f8c98b648b0a612628d288062a6"
       Type {
         Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
+  Id: 2175052947894896062
+  Name: "Gold Pack 4"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "2b7b93a96eca459587afbb4e3292dc28"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
       }
     }
   }
@@ -522,19 +678,6 @@ Assets {
       Key: "39f7b248b32c4890a7b8666d16e98e12"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 153758362961739178
-  Name: "SS2_BE_PROD_COSMETICS"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "5de58cc9214344bca1a53c803d5d9292"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

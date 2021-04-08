@@ -390,13 +390,13 @@ Objects {
     Overrides {
       Name: "cs:JoinedIcon"
       AssetReference {
-        Id: 14436976356615594853
+        Id: 6515528648339898184
       }
     }
     Overrides {
       Name: "cs:LeftIcon"
       AssetReference {
-        Id: 9384520849142346961
+        Id: 13252124078146314791
       }
     }
     Overrides {
