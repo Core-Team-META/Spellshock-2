@@ -80,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13892267814833461183
+  Name: "Fantasy Bell 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_BBlanket_001"
+  }
+}
+Assets {
   Id: 13707030425558109407
   Name: "Oswald"
   PlatformAssetType: 28
@@ -131,15 +140,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_042"
-  }
-}
-Assets {
-  Id: 11711350196513819217
-  Name: "Fantasy Chest 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Chest_004"
   }
 }
 Assets {

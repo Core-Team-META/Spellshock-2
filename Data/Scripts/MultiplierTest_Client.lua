@@ -37,14 +37,14 @@ function Int()
     isVip = _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.VIP_MEMBERSHIP_KEY)
 
     if isVip then
-        VIP_BOOST_TEXT.text = "ACTIVE"
+        VIP_BOOST_TEXT.text = "VIP ACTIVE"
         VIP_BOOST_TEXT:SetColor(Color.GREEN)
     else
         VIP_BOOST_TEXT.text = "N/A"
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
-    XP_MULITPLIER_TEXT.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .."x XP"
-    GOLD_MULITPLIER_TEXT.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x Gold"
+    XP_MULITPLIER_TEXT.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .."x"
+    GOLD_MULITPLIER_TEXT.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x"
 end
 
 function OnDictionaryChanged(player, key, value)
