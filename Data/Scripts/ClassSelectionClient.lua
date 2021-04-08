@@ -1,4 +1,4 @@
-﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
 -- Date: 04/02/2021
 -- Version 0.0.1
 --===========================================================================================
@@ -337,13 +337,13 @@ function OnGlobalStatsClicked(thisButton)
 
 	-- TOTALS
 	gold_CurrentAmount.text = "+"..tostring(goldTotal).."%"
-	gold_Total.text = "Total: "..gold_CurrentAmount.text
+	gold_Total.text = gold_CurrentAmount.text
 
 	class_CurrentAmount.text = "+"..tostring(classTotal).."%"
-	class_Total.text = "Total: "..class_CurrentAmount.text
+	class_Total.text = class_CurrentAmount.text
 
 	ability_CurrentAmount.text = "+"..tostring(abilityTotal).."%"
-	ability_Total.text = "Total: "..ability_CurrentAmount.text
+	ability_Total.text = ability_CurrentAmount.text
 
 	-- Update the lifetime stats
 	local LifetimeStatsParent = RightPanel_GlobalStats:GetCustomProperty("LifetimeStatsParent"):WaitForObject()
