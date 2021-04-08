@@ -13,8 +13,7 @@ local nemesisTrackerServer = script:GetCustomProperty("NemesisTrackerServer")
 -- local NemesisOfText = script:GetCustomProperty("NemesisOfText"):WaitForObject()
 -- local NemesisOfKillsText = script:GetCustomProperty("NemesisOfKillsText"):WaitForObject()
 
-local victoryScreenContainer =
-    script:GetCustomProperty("VictoryScreenContainer"):WaitForObject()
+local victoryScreenContainer = script:GetCustomProperty("VictoryScreenContainer"):WaitForObject()
 
 -- local nemesisOfStatText = script:GetCustomProperty("NemesisOfStatText"):WaitForObject()
 
@@ -162,7 +161,7 @@ function CalculateNemesis()
 
     local providedString = ""
 
-    for i = 1, 12 do
+    for i = 1, 16 do
 
         providedString = nemesisTrackerServer:GetCustomProperty(
                              "P" .. tostring(i))
