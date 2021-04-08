@@ -22,7 +22,7 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 -- User exposed properties
 local REQUIRED_PLAYERS = COMPONENT_ROOT:GetCustomProperty("RequiredPlayers")
 local COUNTDOWN_TIME = COMPONENT_ROOT:GetCustomProperty("CountdownTime")
-
+local PREVIEW_LOBBY_COUNTDOWN_TIME = COMPONENT_ROOT:GetCustomProperty("LocalLobbyTime")
 -- Check user properties
 if REQUIRED_PLAYERS < 1 then
     warn("RequiredPlayers must be positive")
@@ -43,7 +43,8 @@ function Tick(deltaTime)
 
 	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() == nil then
 		local players = Game.GetPlayers()
-		if #players >= REQUIRED_PLAYERS then
+		if #players >= REQUIRED_PLAYERS or Environment.IsPreview() then
+			if Environment.IsPreview() and PREVIEW_LOBBY_COUNTDOWN_TIME > 0 then COUNTDOWN_TIME = PREVIEW_LOBBY_COUNTDOWN_TIME end
 			ABGS.SetTimeRemainingInState(COUNTDOWN_TIME)
 		end
 	end

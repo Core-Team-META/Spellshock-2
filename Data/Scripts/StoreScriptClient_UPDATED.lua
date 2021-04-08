@@ -280,6 +280,16 @@ end
 -- LOCAL HELPER FUNCTIONS
 ----------------------------------------------------------------------------------------------------------------
 
+
+local function CheckClass(class)
+	local classTemp = {CoreString.Split(class, " ")}
+	if #classTemp > 1 then
+		return classTemp[2]
+	else
+		return class
+	end
+end
+
 local function StringSplit(s, delimiter)
 	local result = {}
 	for match in (s .. delimiter):gmatch("(.-)" .. delimiter) do
@@ -494,7 +504,12 @@ function StoreItemClicked(button)
 
 		-- Change stance of preview animated mesh
 		if entry.data.class then
-			local newStance = PreviewAnimationStances[entry.data.class]
+			local classStance = CheckClass(entry.data.class)
+			if not PreviewAnimationStances[classStance] then
+				error(script.name .. " Class Error, Fix Please")
+			end
+
+			local newStance = PreviewAnimationStances[classStance]
 			propPreviewMesh.animationStance = newStance
 			propPreviewMesh2.animationStance = newStance
 		end
@@ -917,7 +932,7 @@ function BackPageClicked()
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-	
+
 	PlaySFX("Page")
 	storePos = storePos - ITEMS_PER_PAGE
 	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
@@ -961,6 +976,8 @@ end
 ----------------------------------------------------------------------------------------------------------------
 -- CLEAR AND POPULATE STORE
 ----------------------------------------------------------------------------------------------------------------
+
+
 
 function ClearList(direction)
 	if direction == nil then
@@ -1095,9 +1112,18 @@ function PopulateStore(direction)
 		propClassIcon:SetImage(v.classIcon)
 		propTypeIcon:SetImage(v.typeIcon)
 
+
+
 		-- Change stance of preview animated mesh
 		if v.class then
-			local newStance = ItemAnimationStances[v.class]
+
+			local classStance = CheckClass(v.class)
+
+			if not ItemAnimationStances[classStance] then
+				error(script.name .. " Class Error, Fix Please")
+			end
+
+			local newStance = ItemAnimationStances[classStance]
 			previewMesh.animationStance = newStance
 			previewMeshOutline.animationStance = newStance
 		end

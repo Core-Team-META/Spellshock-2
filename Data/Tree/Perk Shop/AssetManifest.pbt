@@ -1,13 +1,4 @@
 Assets {
-  Id: 18003367190556965134
-  Name: "Fantasy Timepiece 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Timepiece_002"
-  }
-}
-Assets {
   Id: 17660938468973573690
   Name: "Fantasy Shield 001"
   PlatformAssetType: 9
@@ -26,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17370828256945431127
+  Name: "Fantasy Ability Yellow 026"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_026"
+  }
+}
+Assets {
   Id: 16259713446874198849
   Name: "Military Frame 006"
   PlatformAssetType: 9
@@ -41,6 +41,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_006"
+  }
+}
+Assets {
+  Id: 15700576236624769931
+  Name: "Frame Beveled 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px_020"
   }
 }
 Assets {
@@ -410,6 +419,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
+  Id: 813134327095273190
+  Name: "Fantasy Gear Top 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Top_010"
   }
 }
 Assets {
