@@ -6834,8 +6834,7 @@ Objects {
   Control {
     Width: 45
     Height: 45
-    UIX: 2
-    UIY: 0.5
+    UIY: -0.5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6843,7 +6842,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 11711350196513819217
+        Id: 13892267814833461183
       }
       Color {
         A: 0.582
@@ -6893,7 +6892,7 @@ Objects {
     Width: 45
     Height: 45
     UIX: -2
-    UIY: -2
+    UIY: -3
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6901,7 +6900,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 11711350196513819217
+        Id: 13892267814833461183
       }
       Color {
         R: 1
