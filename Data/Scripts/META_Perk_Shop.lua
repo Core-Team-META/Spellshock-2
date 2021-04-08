@@ -13,29 +13,36 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
-local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
 
 while not _G.PROGRESS_MULTIPLIER or not _G.STORAGE_KEYS do
     Task.Wait()
 end
 
 ------------------------------------------------------------------------------------------------------------------------
+-- OBJECTS
+------------------------------------------------------------------------------------------------------------------------
+local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
+local PERKS_DATA = script:GetCustomProperty("PerksData"):WaitForObject()
+
+
+
+------------------------------------------------------------------------------------------------------------------------
 -- NET REFRENCE
 ------------------------------------------------------------------------------------------------------------------------
-local GoldPack1 = script:GetCustomProperty("GoldPack1")
-local GoldPack2 = script:GetCustomProperty("GoldPack2")
-local GoldPack3 = script:GetCustomProperty("GoldPack3")
-local GoldPack4 = script:GetCustomProperty("GoldPack4")
-local JewelPack1 = script:GetCustomProperty("JewelPack1")
-local JewelPack2 = script:GetCustomProperty("JewelPack2")
-local JewelPack3 = script:GetCustomProperty("JewelPack3")
-local JewelPack4 = script:GetCustomProperty("JewelPack4")
-local VIP_MEMBERSHIP = script:GetCustomProperty("VIPMEMBR")
-local SELFGOLDBOOST = script:GetCustomProperty("SELFGOLDBOOST")
-local SELFXPBOOST = script:GetCustomProperty("SELFXPBOOST")
-local SERVERGOLDBOOST = script:GetCustomProperty("SERVERGOLDBOOST")
-local SERVERXPBOOST = script:GetCustomProperty("SERVERXPBOOST")
-local STARTERPACK = script:GetCustomProperty("StarterPack")
+local GoldPack1 = PERKS_DATA:GetCustomProperty("GoldPack1")
+local GoldPack2 = PERKS_DATA:GetCustomProperty("GoldPack2")
+local GoldPack3 = PERKS_DATA:GetCustomProperty("GoldPack3")
+local GoldPack4 = PERKS_DATA:GetCustomProperty("GoldPack4")
+local JewelPack1 = PERKS_DATA:GetCustomProperty("JewelPack1")
+local JewelPack2 = PERKS_DATA:GetCustomProperty("JewelPack2")
+local JewelPack3 = PERKS_DATA:GetCustomProperty("JewelPack3")
+local JewelPack4 = PERKS_DATA:GetCustomProperty("JewelPack4")
+local VIP_MEMBERSHIP = PERKS_DATA:GetCustomProperty("VipMember")
+local SELFGOLDBOOST = PERKS_DATA:GetCustomProperty("SelfGoldBoost")
+local SELFXPBOOST = PERKS_DATA:GetCustomProperty("SelfXpBoost")
+local SERVERGOLDBOOST = PERKS_DATA:GetCustomProperty("ServerGoldBoost")
+local SERVERXPBOOST = PERKS_DATA:GetCustomProperty("ServerXpBoost")
+local STARTERPACK = PERKS_DATA:GetCustomProperty("StarterPack")
 
 ------------------------------------------------------------------------------------------------------------------------
 -- TABLE BUILDER

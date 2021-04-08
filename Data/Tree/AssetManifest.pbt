@@ -12,6 +12,19 @@ Assets {
   }
 }
 Assets {
+  Id: 16543004399599665760
+  Name: "Self Gold"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "ee58a27537bd495e8a56d8b7ab1d27a6"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 16388825162191980240
   Name: "Rock Pile 002"
   PlatformAssetType: 1
@@ -113,6 +126,19 @@ Assets {
   }
 }
 Assets {
+  Id: 12913628546500597405
+  Name: "Premium 1"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "4c88bde76bb94826939cdc33c920fb7c"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 12805171153576188001
   Name: "SS2_ZS_PROD_PROGRESSION"
   PlatformAssetType: 23
@@ -121,6 +147,32 @@ Assets {
       Key: "efb8cc776c454a7faa0ae8a959d38706"
       Type {
         Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
+  Id: 12553964030818308958
+  Name: "Gold 3"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "c81a7c40c1ba46dbb33f665f92aa360c"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 11738101196508092081
+  Name: "Server Gold"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "1b84a17bbed844d194f487b970ee659d"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
       }
     }
   }
@@ -196,6 +248,45 @@ Assets {
   }
 }
 Assets {
+  Id: 9889076190420846548
+  Name: "VIP Member"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "9a630a8140814140828ba9db2ab94b93"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 9322991885775260177
+  Name: "Premium 4"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "5c9ecc9b43634af49a678a1436056271"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 8892646755837011518
+  Name: "Starter Pack"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "c21f2a8a571e441d8fb6dc83a9e79695"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
@@ -262,6 +353,19 @@ Assets {
   }
 }
 Assets {
+  Id: 6413593786046088799
+  Name: "Self XP"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "d353a02d625648ecbc5f591d80dd14ab"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 6314502537449923968
   Name: "SS2_BE_PROD_PROGRESSION"
   PlatformAssetType: 23
@@ -281,6 +385,45 @@ Assets {
   NetReferenceAsset {
     NetReference {
       Key: "199fe948139b4afcaa1c584b6f6271bf"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 5713071896546235792
+  Name: "Gold 1"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "1f8c967ee23b4149b027039f3fcbfecc"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 5240045292533111116
+  Name: "Premium 2"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "5f1861158d1b46c4986e5c8e070ef8df"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 4860066908479684099
+  Name: "Premium 3"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "8e1db13faf0c4520b3f33c000966ff0e"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
       }
@@ -342,6 +485,45 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bush_generic_001"
+  }
+}
+Assets {
+  Id: 829777521995157733
+  Name: "Gold 2"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "062eacbe6ab349fa819ec6135d8b456b"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 607962893157595191
+  Name: "Gold 4"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "e64a8cb38d594df39dad4dc9c79f53bd"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 475846468530642491
+  Name: "Server XP"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "39f7b248b32c4890a7b8666d16e98e12"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
   }
 }
 Assets {
