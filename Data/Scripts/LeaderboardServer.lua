@@ -1,8 +1,8 @@
-local GT_API = _G.META_GAME_MODES
-while not GT_API do
-	Task.Wait()
-    GT_API = _G.META_GAME_MODES
-end
+--[[
+	Very similar to the leaderboard system in Strike Team.
+	
+	Known issue: The weekly clear moment is not coinciding with that of the Core Leaderboards service.
+-]]
 
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 
@@ -55,6 +55,7 @@ function OnRoundEndUpdateEntries()
 				end
 				
 				playerScore = player.kills / deaths * 1.0
+				
 			else
 				playerScore = player:GetResource(resource)
 			end

@@ -102,7 +102,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7660,7 +7660,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ResourceForEntry"
-      String: "Assists"
+      String: "CAPASSISTS"
     }
     Overrides {
       Name: "cs:LeaderboardReference"
@@ -7709,7 +7709,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ResourceForEntry"
-      String: "Objective"
+      String: "TOTALCAP"
     }
     Overrides {
       Name: "cs:LeaderboardReference"
@@ -7758,7 +7758,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ResourceForEntry"
-      String: "Headshots"
+      String: "TOTALHEAL"
     }
     Overrides {
       Name: "cs:LeaderboardReference"
@@ -7807,7 +7807,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ResourceForEntry"
-      String: "DamageDone"
+      String: "TOTALDMG"
     }
     Overrides {
       Name: "cs:LeaderboardReference"
@@ -7903,6 +7903,12 @@ Objects {
   }
   ParentId: 10371575606117460542
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:MetaAbilityProgressionConstants_API"
+      AssetReference {
+        Id: 15718075383189814537
+      }
+    }
     Overrides {
       Name: "cs:APIBasicGameState"
       AssetReference {
