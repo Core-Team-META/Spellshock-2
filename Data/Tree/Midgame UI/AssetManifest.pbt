@@ -107,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13892267814833461183
+  Name: "Fantasy Bell 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_BBlanket_001"
+  }
+}
+Assets {
   Id: 13462854128336502995
   Name: "Center Circle 001 Outline"
   PlatformAssetType: 9
@@ -167,15 +176,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_27"
-  }
-}
-Assets {
-  Id: 11711350196513819217
-  Name: "Fantasy Chest 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Chest_004"
   }
 }
 Assets {

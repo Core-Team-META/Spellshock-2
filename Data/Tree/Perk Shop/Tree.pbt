@@ -32537,7 +32537,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 14803987366094808844
+        Id: 634785656113528393
       }
       Color {
         R: 1
@@ -32601,7 +32601,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 14803987366094808844
+        Id: 634785656113528393
       }
       Color {
         A: 0.332000017
