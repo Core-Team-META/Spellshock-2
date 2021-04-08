@@ -926,6 +926,7 @@ Objects {
   ChildIds: 3322018501996221061
   ChildIds: 130871330177744660
   ChildIds: 14405410578874710822
+  ChildIds: 18258655967248789995
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -958,6 +959,99 @@ Objects {
           Value: "mc:euianchor:bottomright"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 18258655967248789995
+  Name: "AchievementsPanel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13283850079364730335
+  ChildIds: 12469287299399734315
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 740
+    Height: 242
+    UIX: -19.7497559
+    UIY: -8.13085938
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12469287299399734315
+  Name: "Achievement_EndScreen_Template"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18258655967248789995
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12168859284952890558
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Achievement_EndScreen_Template"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3264268890164788131
     }
   }
 }
@@ -7805,12 +7899,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:CAPTURE_POINTS"
-      ObjectReference {
-        SelfId: 6808304716017240559
-      }
-    }
-    Overrides {
       Name: "cs:MOST_CAPPED"
       ObjectReference {
         SelfId: 577123614272714913
@@ -7826,18 +7914,6 @@ Objects {
       Name: "cs:MOST_DAMAGE"
       ObjectReference {
         SelfId: 15093469130826358602
-      }
-    }
-    Overrides {
-      Name: "cs:MVP_PLAYER_NAME"
-      ObjectReference {
-        SelfId: 4538025785191071436
-      }
-    }
-    Overrides {
-      Name: "cs:CAPTURE_ASSISTS"
-      ObjectReference {
-        SelfId: 6808304716017240559
       }
     }
   }

@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Achievement System Server
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/29-SS2
--- Version 0.1.7
+-- Date: 2021/4/7-SS2
+-- Version 0.1.8
 ------------------------------------------------------------------------------------------------------------------------
 local ROOT = script:GetCustomProperty("AchievementSystem"):WaitForObject()
 local isEnabled = ROOT:GetCustomProperty("Enabled")
@@ -31,6 +31,8 @@ end
 local function SetPlayerFlags(player)
     player.serverUserData.ACH_diedInRound = false
     player.serverUserData.ACH_killCount = 0
+    player.serverUserData.classDamage = {}
+    player:SetResource(CONST.ROUND_DAMAGE, 0)
 end
 
 local function OnLobby()
@@ -44,6 +46,17 @@ local function OnRoundStart()
         SetPlayerFlags(player)
     end
 end
+
+-- Warrior Damage Achievements
+local function CheckClassDamageAchievements(player, key, class)
+   local amount = player.serverUserData.classDamage[class] or 0
+    for i = 1, 4 do
+        if ACH_API.IsUnlocked(player, key .. tostring(i), amount) then
+            ACH_API.UnlockAchievement(player, key .. tostring(i))
+        end
+    end
+end
+
 
 local function OnResourceChanged(player, resName, resAmt)
     if resAmt == 0 then
@@ -59,7 +72,21 @@ local function OnResourceChanged(player, resName, resAmt)
         if ACH_API.IsUnlocked(player, "AS_NRSC3", resAmt) then
             ACH_API.UnlockAchievement(player, "AS_NRSC3")
         end
-    elseif resName == "DamageDone" then
+    elseif resName == CONST.ROUND_DAMAGE then
+        local class = player:GetResource(CONST.CLASS_RES)
+        -- Class Based Damage Achievements
+        if class == CONST.CLASS.TANK then
+            CheckClassDamageAchievements(player, "ASWARDMG", class)
+        elseif class == CONST.CLASS.MAGE then
+            CheckClassDamageAchievements(player, "ASMAGDMG", class)
+        elseif class == CONST.CLASS.HUNTER then
+            CheckClassDamageAchievements(player, "ASHUNDMG", class)
+        elseif class == CONST.CLASS.HEALER then
+            CheckClassDamageAchievements(player, "ASHELDMG", class)
+        elseif class == CONST.CLASS.ASSASSIN then
+            CheckClassDamageAchievements(player, "ASASNDMG", class)
+        end
+
         if ACH_API.IsUnlocked(player, "AS_NRDMG1", resAmt) then
             ACH_API.UnlockAchievement(player, "AS_NRDMG1")
         end
@@ -83,7 +110,8 @@ local function PlayerKilled(player, target, weaponType, isHeadShot)
     player.serverUserData.ACH_killCount =
         player.serverUserData.ACH_killCount and player.serverUserData.ACH_killCount + 1 or 1
 
-    ACH_API.AddProgress(player, "KILL", 1)
+    ACH_API.AddProgress(player, "ASKILL1", 1)
+    ACH_API.AddProgress(player, "ASKILL2", 1)
 
     target.serverUserData.ACH_killCredited = true
     target.serverUserData.ACH_diedInRound = true
