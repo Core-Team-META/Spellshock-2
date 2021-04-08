@@ -74,7 +74,7 @@ DiamondPerk4:SetPerkReference(JewelPack4)
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
-
+--[[
 local serverXpBoostTime = 0
 local serverGoldBoostTime = 0
 local personalXpBoostTime = 0
@@ -156,15 +156,13 @@ function OnPlayerLeft(player)
 end
 
 function Tick()
-    SetServerXpBoost()
-    SetServerGoldBoost()
-    if personalXpBoostTime < time() then
-        SelfXPBoostPerk.isInteractable = true
+    if LOCAL_PLAYER.name == "Bot1" then
+    for index, resName in ipairs(CONST.SELF_BOOST_KEYS) do
+        local timeStamp = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, resName)
+        print(timeStamp - time())
     end
-    if personalGoldBoostTime < time() then
-        SelfGoldBoostPerk.isInteractable = true
-    end
-    Task.Wait()
+end
+    Task.Wait(5)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -174,3 +172,4 @@ NETWORKED.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
 listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnResourceChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Int()
+]]--

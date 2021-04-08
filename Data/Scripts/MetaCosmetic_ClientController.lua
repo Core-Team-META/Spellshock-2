@@ -46,11 +46,11 @@ function Int()
                     dataStr = child:GetCustomProperty("data")
                 end
                 playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
+                Events.BroadcastToServer("OnDestroyCosm", child.id)
             end
         end
     until next(playerCosmetic)
     --UTIL.TablePrint(playerCosmetic)
-    Events.BroadcastToServer("OnDestroyCosm")
 end
 
 function OnChildAdded(parent, object)
@@ -145,7 +145,7 @@ function API.GetCurrentCostume(player, class)
     end --Not sure how it's not getting a player passed, but fails the get resource
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
     local skinId = 1
-     --API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
+    --API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
     if skinId == 0 then
         skinId = 1
     end

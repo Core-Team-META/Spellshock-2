@@ -31,7 +31,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ContestedMessage"
-      String: "ENEMIES PRESENT"
+      String: "Enemies Present!"
     }
     Overrides {
       Name: "cs:FriendlyColor"
@@ -198,7 +198,7 @@ Objects {
   ChildIds: 14609443402533045735
   ChildIds: 3806163934278572543
   ChildIds: 2203334349956171415
-  ChildIds: 2950563345152682948
+  ChildIds: 11556237253863272480
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -213,7 +213,7 @@ Objects {
   Control {
     Width: 400
     Height: 150
-    UIY: -140
+    UIY: -127.701096
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -236,8 +236,8 @@ Objects {
   }
 }
 Objects {
-  Id: 2950563345152682948
-  Name: "ContestedText"
+  Id: 11556237253863272480
+  Name: "Contested Text Panel"
   Transform {
     Location {
     }
@@ -251,6 +251,59 @@ Objects {
   }
   ParentId: 519909361420409257
   ChildIds: 1657366738582570864
+  ChildIds: 8264535637485811203
+  ChildIds: 6114065706750756703
+  ChildIds: 13114215628526086884
+  ChildIds: 6609770991142876872
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: -74.747879
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6609770991142876872
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -265,8 +318,6 @@ Objects {
   Control {
     Width: 200
     Height: 40
-    UIX: 2
-    UIY: 53
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -275,15 +326,216 @@ Objects {
     Text {
       Label: "ContestedText"
       Color {
-        R: 0.0299999714
-        G: 0.000596023805
-        A: 0.791
+        R: 1
+        A: 1
       }
       Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13114215628526086884
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 40
+    UIX: 1
+    UIY: 1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "ContestedText"
+      Color {
+        A: 0.567000031
+      }
+      Size: 17
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6114065706750756703
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 40
+    UIX: -1
+    UIY: 1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "ContestedText"
+      Color {
+        A: 0.567000031
+      }
+      Size: 17
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8264535637485811203
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 40
+    UIX: 1
+    UIY: -1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "ContestedText"
+      Color {
+        A: 0.567000031
+      }
+      Size: 17
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -314,7 +566,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2950563345152682948
+  ParentId: 11556237253863272480
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -329,8 +581,8 @@ Objects {
   Control {
     Width: 200
     Height: 40
-    UIX: -2
-    UIY: -1.17254639
+    UIX: -1
+    UIY: -1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -339,14 +591,17 @@ Objects {
     Text {
       Label: "ContestedText"
       Color {
-        R: 0.789999962
-        A: 1
+        A: 0.567000031
       }
       Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -1718,7 +1973,7 @@ Objects {
     Overrides {
       Name: "cs:ContestedText"
       ObjectReference {
-        SelfId: 2950563345152682948
+        SelfId: 11556237253863272480
       }
     }
   }
@@ -1791,6 +2046,7 @@ Objects {
   }
   ParentId: 2117647049914167800
   ChildIds: 11035460064480176686
+  ChildIds: 8720472727624352964
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1812,10 +2068,47 @@ Objects {
   }
 }
 Objects {
+  Id: 8720472727624352964
+  Name: "Ship Boat Large Fog Horn 02 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 7444474428001811896
+    }
+    Pitch: 304.697021
+    Volume: 1
+    Falloff: 5261.32568
+    Radius: 1632.78076
+  }
+}
+Objects {
   Id: 11035460064480176686
   Name: "CapturePointControlFeedback"
   Transform {
     Location {
+      X: -6402.28027
+      Y: -4374.99219
+      Z: 3589.22778
     }
     Rotation {
     }
@@ -1837,6 +2130,12 @@ Objects {
       Name: "cs:APIBasicGameState"
       AssetReference {
         Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:Sound"
+      ObjectReference {
+        SelfId: 8720472727624352964
       }
     }
   }

@@ -280,6 +280,16 @@ end
 -- LOCAL HELPER FUNCTIONS
 ----------------------------------------------------------------------------------------------------------------
 
+
+local function CheckClass(class)
+	local classTemp = {CoreString.Split(class, " ")}
+	if #classTemp > 1 then
+		return classTemp[2]
+	else
+		return class
+	end
+end
+
 local function StringSplit(s, delimiter)
 	local result = {}
 	for match in (s .. delimiter):gmatch("(.-)" .. delimiter) do
@@ -322,7 +332,7 @@ end
 function CheckIfLocked(class, requiredLvl, id)
 	local localPlayer = Game.GetLocalPlayer()
 	local selectedClass = 0
-	
+
 	if class == "Warrior" then
 		selectedClass = CP_API.TANK
 	elseif class == "Hunter" then
@@ -494,7 +504,12 @@ function StoreItemClicked(button)
 
 		-- Change stance of preview animated mesh
 		if entry.data.class then
-			local newStance = PreviewAnimationStances[entry.data.class]
+			local classStance = CheckClass(entry.data.class)
+			if not PreviewAnimationStances[classStance] then
+				error(script.name .. " Class Error, Fix Please")
+			end
+
+			local newStance = PreviewAnimationStances[classStance]
 			propPreviewMesh.animationStance = newStance
 			propPreviewMesh2.animationStance = newStance
 		end
@@ -683,7 +698,7 @@ function UpdateEntryButton(entry, highlighted)
 		else
 			--entry.itemName:SetColor(Color.RED)
 			if entry.PartOfSubscription then
-				entry.price.text = "NEED " .. propSubscriptionName
+				entry.price.text = ""--"NEED " .. propSubscriptionName
 			else
 				entry.price.text = "NOT ENOUGH FUNDS"
 			end
@@ -917,7 +932,7 @@ function BackPageClicked()
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-	
+
 	PlaySFX("Page")
 	storePos = storePos - ITEMS_PER_PAGE
 	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
@@ -1055,20 +1070,24 @@ function PopulateStore(direction)
 		
 		local locked = true
 		
-		if CheckIfLocked(v.class, v.requirement, v.id) then
-		
-			propLockedPanel.visibility = Visibility.FORCE_OFF
-			
-			locked = false
-			
-		else 
-		
-			propLockedPanel.visibility = Visibility.INHERIT
-			
-			propLockedMessage.text = "UNLOCKED AT LVL " .. tostring(v.requirement)
-			
+		if v.requirement > 50 then
+			-- #TODO 
+			if HasCosmetic(v.id) then
+				propLockedPanel.visibility = Visibility.FORCE_OFF
+				locked = false
+			else
+				propLockedPanel.visibility = Visibility.INHERIT
+				propLockedMessage.visibility = Visibility.FORCE_OFF
+			end
+		else
+			if CheckIfLocked(v.class, v.requirement, v.id) then
+				propLockedPanel.visibility = Visibility.FORCE_OFF
+				locked = false
+			else 
+				propLockedPanel.visibility = Visibility.INHERIT
+				propLockedMessage.text = "UNLOCKED AT LVL " .. tostring(v.requirement)
+			end
 		end
-
 
 		local Frames = propFramePanel:GetChildren()
 		table.insert(Frames, propPriceFrame)
@@ -1097,7 +1116,14 @@ function PopulateStore(direction)
 
 		-- Change stance of preview animated mesh
 		if v.class then
-			local newStance = ItemAnimationStances[v.class]
+
+			local classStance = CheckClass(v.class)
+
+			if not ItemAnimationStances[classStance] then
+				error(script.name .. " Class Error, Fix Please")
+			end
+
+			local newStance = ItemAnimationStances[classStance]
 			previewMesh.animationStance = newStance
 			previewMeshOutline.animationStance = newStance
 		end
@@ -1125,7 +1151,6 @@ function PopulateStore(direction)
 
 		-- KB TEST
 		-- BGMesh:SetColor(BGMeshColor)
-
 
 		newGeo.visibility = Visibility.FORCE_ON
 

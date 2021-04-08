@@ -28275,6 +28275,7 @@ Objects {
   ChildIds: 6013013364694144683
   ChildIds: 1745782377361925233
   ChildIds: 16218647263246006734
+  ChildIds: 9942937867911110629
   ChildIds: 3219523048394623588
   ChildIds: 10873749923239775016
   Collidable_v2 {
@@ -28410,8 +28411,8 @@ Objects {
   Control {
     Width: 7
     Height: 25
-    UIX: 56.4197922
-    UIY: 149.459
+    UIX: 62.525013
+    UIY: 150.424622
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28420,14 +28421,84 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "(Permanent Bonus)"
+      Label: "(Permanently Unlocked)"
       Color {
-        R: 0.619791687
-        G: 0.619791687
-        B: 0.619791687
+        R: 0.59375
+        G: 0.59375
+        B: 0.59375
         A: 1
       }
       Size: 12
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 9942937867911110629
+  Name: "Info Text"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8463090671482128606
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 7
+    Height: 25
+    UIX: 112.268051
+    UIY: 129
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    Text {
+      Label: "Warrior Costumes"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 14
       Justification {
         Value: "mc:etextjustify:left"
       }
@@ -28480,8 +28551,8 @@ Objects {
   Control {
     Width: 7
     Height: 25
-    UIX: 95.3331757
-    UIY: 128.258
+    UIX: 75.0042725
+    UIY: 127
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28490,10 +28561,9 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "All Rewards"
+      Label: "Epic"
       Color {
-        R: 1
-        G: 1
+        R: 0.311258793
         B: 1
         A: 1
       }
@@ -28550,7 +28620,7 @@ Objects {
   Control {
     Width: 7
     Height: 25
-    UIX: 48.8996582
+    UIX: 44.8643036
     UIY: 125.272934
     RenderTransformPivot {
       Anchor {
@@ -28560,7 +28630,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "50%"
+      Label: "+2"
       Color {
         R: 0.258609235
         G: 0.549999952
@@ -28699,7 +28769,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "+500"
+      Label: "+350"
       Color {
         R: 0.258609235
         G: 0.549999952
@@ -28954,6 +29024,7 @@ Objects {
   ParentId: 6534107962707541456
   ChildIds: 4541320256763837913
   ChildIds: 8053237230025298101
+  ChildIds: 7471221158636168511
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -28974,6 +29045,128 @@ Objects {
       }
     }
     Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7471221158636168511
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11122103280047744305
+  ChildIds: 4709864926426984200
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -15
+    Height: -13
+    UIX: 22.7767296
+    UIY: 22.2995777
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 15700576236624769931
+      }
+      Color {
+        R: 0.73
+        G: 0.246556297
+        A: 0.833000064
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 4709864926426984200
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7471221158636168511
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 25
+    Height: 25
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 17370828256945431127
+      }
+      Color {
+        R: 0.799999952
+        G: 0.794702
+        A: 1
+      }
+      TeamSettings {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -29014,6 +29207,10 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    Width: 2
+    Height: 2
+    UIX: 2.1288166
+    UIY: 1.4312731
     RotationAngle: 12
     RenderTransformPivot {
       Anchor {
@@ -29025,12 +29222,12 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 18003367190556965134
+        Id: 813134327095273190
       }
       Color {
-        R: 0.494791657
-        G: 0.494791657
-        B: 0.494791657
+        R: 0.802083313
+        G: 0.802083313
+        B: 0.802083313
         A: 1
       }
       TeamSettings {
@@ -29090,7 +29287,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 18003367190556965134
+        Id: 813134327095273190
       }
       Color {
         A: 0.332000017
@@ -29603,10 +29800,10 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 53
-    Height: 53
-    UIX: 14.9641352
-    UIY: 124.322754
+    Width: 63
+    Height: 63
+    UIX: 11.0945396
+    UIY: 121.867828
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -29619,7 +29816,7 @@ Objects {
       Color {
         R: 0.830000043
         G: 0.41225177
-        A: 0.295000017
+        A: 0.762
       }
       TeamSettings {
       }
@@ -32837,7 +33034,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "10%"
+      Label: "20%"
       Color {
         R: 0.258609235
         G: 0.549999952
@@ -32976,7 +33173,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "+25%"
+      Label: "+50%"
       Color {
         R: 0.258609235
         G: 0.549999952
@@ -33115,7 +33312,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "+25%"
+      Label: "+50%"
       Color {
         R: 0.258609235
         G: 0.549999952

@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/6
--- Version 0.1.9
+-- Date: 2021/4/7
+-- Version 0.1.10
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -22,7 +22,8 @@ API.STORAGE = {
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
-    ACHIEVEMENTS = 11
+    ACHIEVEMENTS = 11,
+    PROGRESSION_MULTIPLIERS = 12
     --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
@@ -96,7 +97,7 @@ API.CLASS_HEALTH = {
 API.CLASS_REGEN = {
     [API.CLASS.TANK] = 12.0,
     [API.CLASS.MAGE] = 3.0,
-    [API.CLASS.HUNTER] = 4.0,
+    [API.CLASS.HUNTER] = 5.0,
     [API.CLASS.HEALER] = 2.0,
     [API.CLASS.ASSASSIN] = 4.0
 }
@@ -195,18 +196,18 @@ API.EVENT_COSMETIC_MULTIPLIER = 0
 API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 --Leave at 1.0 for 100% (Default Price)
 
 -- VIP Player Values
-API.VIP_XP_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_GOLD_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_SHARDS_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_COSMETIC_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_DAILY_SHOP_DISCOUNT = 0.9 -- 10% Discount in Daily Shop
+API.VIP_XP_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_GOLD_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_SHARDS_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_COSMETIC_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_DAILY_SHOP_DISCOUNT = 0.8 -- 10% Discount in Daily Shop
 API.VIP_SERVER_MULTIPLIER = 0.0 -- Each VIP in a server gives a 5% boost to both gold & xp
 
 
 --STARTER Pack Muliplier Value
-API.STARTER_PACK_MULTIPLIER = 0.5 -- 50% To XP & Currency Gains
-API.STARTER_PACK_SHARDS_MULTIPLIER = 0.5 -- Currently A 0% Bonus
-API.STARTER_PACK_COSMETIC_MULTIPLIER = 0.5 -- 0% Bonus to cosmetic muliplier
+API.STARTER_PACK_MULTIPLIER = 0 -- 50% To XP & Currency Gains
+API.STARTER_PACK_SHARDS_MULTIPLIER = 0 -- Currently A 0% Bonus
+API.STARTER_PACK_COSMETIC_MULTIPLIER = 0 -- 0% Bonus to cosmetic muliplier
 API.STARTER_PACK_GOLD_BONUS = 10000 -- How much Gold a player gets when purchasing the Starter Pack
 API.STARTER_PACK_PREMIUM_BONUS = 350 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
 
@@ -314,7 +315,10 @@ API.COSMETIC_SKIN = {
     UNCOMMON = 2,
     RARE = 3,
     LEGENDARY = 4,
-    ELEMENTAL = 5
+    ELEMENTAL = 5,
+    ROYAL = 6,
+    PUNK = 7,
+    JUSTICE = 8
 }
 
 -- BINDING KEYS
@@ -334,6 +338,8 @@ API.CLASS_LEVEL = "C_LEVEL"
 API.ACCOUNT_LEVEL = "A_LEVEL"
 API.CLASS_RES = "CLASS_MAP"
 API.SKIN_RES = "SKIN_MAP"
+API.ROUND_DAMAGE = "RDMG"
+API.ROUND_HEALING = "RHEAL"
 
 API.COMBAT_STATS = {
     TOTAL_DAMAGE_RES = "TOTALDMG",
@@ -373,8 +379,17 @@ API.COSMETIC_TOKEN = API.CURRENCY[2]
 
 -- PERK KEYS
 API.VIP_MEMBERSHIP_KEY = "IsVip"
-API.SELF_GOLD_BOOST_KEY = "PGBK"
-API.SELF_XP_BOOST_KEY = "PXBK"
+
+-- Used For Perk Multiplier Timestamps
+API.SELF_BOOST_KEYS = {
+    [1] = "PXBK",
+    [2] = "PGBK"
+}
+API.SELF_XP_BOOST_KEY = API.SELF_BOOST_KEYS[1]
+API.SELF_GOLD_BOOST_KEY = API.SELF_BOOST_KEYS[2]
+
+
+
 API.SERVER_XP_BOOST_KEY = "sxt"
 API.SERVER_GOLD_BOOST_KEY = "sgt"
 API.STARTER_PACK_KEY = "SPK"

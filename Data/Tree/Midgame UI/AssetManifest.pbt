@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16469333663941198075
+  Name: "Fantasy Book 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Book_003"
+  }
+}
+Assets {
   Id: 15575092074641359796
   Name: "Frame Outlined 016"
   PlatformAssetType: 9
@@ -167,6 +176,24 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Chest_004"
+  }
+}
+Assets {
+  Id: 11478889498718573073
+  Name: "Fantasy Crown 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Crown_001"
+  }
+}
+Assets {
+  Id: 11380906219068575767
+  Name: "Fantasy Book 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Book_004"
   }
 }
 Assets {

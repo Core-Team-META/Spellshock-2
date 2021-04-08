@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/4
--- Version 0.2.0
+-- Date: 2021/4/7
+-- Version 0.2.1
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -98,7 +98,7 @@ end
 local function AddAllCosmetics(player)
     for class = 1, 5 do
         for team = 1, 2 do
-            for skin = 1, 5 do
+            for skin = 1, 8 do
                 for bind = 1, 5 do -- Costume Not saving with 4
                     if bind == 5 then
                         bind = 8 -- Used for costume ID
@@ -297,6 +297,43 @@ local function OnSaveConsumableData(player, data)
 end
 
 --@param object player
+--@param table data
+local function OnLoadMultiplierData(player, data)
+    local currency
+    if data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] then
+        currency = UTIL.ConvertStringToTable(data[CONST.STORAGE.PROGRESSION_MULTIPLIERS], ",", "=")
+        _G.PerPlayerDictionary.WaitForPlayer(player)
+        for key, value in pairs(currency) do
+            if CONST.SELF_BOOST_KEYS[key] then
+                value = value + time()
+                _G.PerPlayerDictionary.Set(player, CONST.SELF_BOOST_KEYS[key], value)
+            end
+        end
+    else --
+        for index, resName in ipairs(CONST.SELF_BOOST_KEYS) do
+            _G.PerPlayerDictionary.Set(player, resName, 0)
+        end
+    end
+end
+
+--@param object player
+--@param table data
+local function OnSaveMultiplierData(player, data)
+    local multiplierTimes = {}
+    for index, resName in ipairs(CONST.SELF_BOOST_KEYS) do
+        local timestamp = _G.PerPlayerDictionary.GetNumber(player, resName)
+        if timestamp and timestamp > 0 then
+            timestamp = timestamp - time()
+            if timestamp < 1 then
+                timestamp = 0
+            end
+        end
+        multiplierTimes [index] = timestamp
+    end
+    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] = next(multiplierTimes ) ~= nil and UTIL.ConvertTableToString(multiplierTimes , ",", "=") or ""
+end
+
+--@param object player
 local function OnPlayerJoined(player)
     Task.Wait()
     if not Object.IsValid(player) then
@@ -312,6 +349,7 @@ local function OnPlayerJoined(player)
     OnLoadCurrencyData(player, currencyData)
     OnLoadDailyShopData(player, currencyData)
     OnLoadGamePlayStatsData(player, currencyData)
+    OnLoadMultiplierData(player, currencyData)
 
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
     OnLoadCostumeData(player, cosmeticData)
@@ -365,6 +403,7 @@ function OnSavePlayerData(player)
     OnSaveCurrencyData(player, currencyData)
     OnSaveGamePlayStatsData(player, currencyData)
     OnSaveDailyShopData(player, currencyData)
+    OnSaveMultiplierData(player, currencyData)
     Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, currencyData)
 
     --data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)

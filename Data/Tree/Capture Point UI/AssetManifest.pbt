@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7444474428001811896
+  Name: "Ship Boat Large Fog Horn 02 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ship_boat_large_fog_horn_02a_Cue_ref"
+  }
+}
+Assets {
   Id: 5196377603841433560
   Name: "BG Gradient 001"
   PlatformAssetType: 9
