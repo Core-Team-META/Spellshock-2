@@ -143,6 +143,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3887137687394978091
+  Name: "Fantasy Ability Yellow 031"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_031"
+  }
+}
+Assets {
   Id: 3884726409041590116
   Name: "Sci-fi Ability Green 025"
   PlatformAssetType: 9

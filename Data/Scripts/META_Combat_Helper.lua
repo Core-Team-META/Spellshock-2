@@ -44,14 +44,21 @@ end
 local function UpdateCombatAmmount(attackData)
     local target = attackData.object
     local source = attackData.source
-    local ammount = attackData.damage.amount
-    if ammount > 0 then
-        source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(ammount))
-        Events.Broadcast("AS.LifeTimeDamage", source, CoreMath.Round(ammount))
+    local amount = attackData.damage.amount
+    if amount > 0 then
+        source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(amount))
+        source:AddResource(CONST.ROUND_DAMAGE, CoreMath.Round(amount))
+        Events.Broadcast("AS.LifeTimeDamage", source, CoreMath.Round(amount))
+
+        local class = source:GetResource(CONST.CLASS_RES)
+        source.serverUserData.classDamage = source.serverUserData.classDamage or {}
+        local classDamage = source.serverUserData.classDamage[class] or 0
+        classDamage = classDamage and classDamage + amount or amount 
+        source.serverUserData.classDamage[class] = classDamage
     else
-        ammount = ammount * -1
-        source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(ammount))
-        Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(ammount))
+        amount = amount * -1
+        source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(amount))
+        Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(amount))
     end
     Events.Broadcast("AS.PlayerDamaged", attackData)
 end
