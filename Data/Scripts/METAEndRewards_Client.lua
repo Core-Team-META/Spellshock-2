@@ -13,6 +13,7 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
 local CONSUMABLES_COSTS = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
+local ClickSFX = script:GetCustomProperty("ClickSFX")
 
 local function META_AP()
     while not _G["Meta.Ability.Progression"] do
@@ -468,7 +469,7 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
-function OnRewardSelected(thisButton)
+function OnRewardSelected(thisButton, isAutoSelect)
     if LOCAL_PLAYER.clientUserData.hasClaimedReward then return end
     if SelectedCards[thisButton] then
         -- Deselect
@@ -476,13 +477,12 @@ function OnRewardSelected(thisButton)
         SelectedCards[thisButton] = nil
         SelectionCount = SelectionCount + 1
     elseif SelectionCount > 0 then
+        World.SpawnAsset(ClickSFX)
         -- Add card to SelectedCards
         thisButton.clientUserData.selected.visibility = Visibility.INHERIT
         SelectedCards[thisButton] = thisButton.clientUserData.slotID
         SelectionCount = SelectionCount - 1
     end
-
-
 
     -- Update UI
     if SelectionCount >= 1 then
@@ -512,7 +512,7 @@ function AutoSelectRewards()
 
         -- If the card is not already selected, then select it for the player
         if not SelectedCards[card.clientUserData.button] then
-            OnRewardSelected(card.clientUserData.button)
+            OnRewardSelected(card.clientUserData.button, true)
         end
     end
 end
