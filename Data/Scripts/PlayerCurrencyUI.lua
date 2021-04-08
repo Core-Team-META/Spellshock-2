@@ -1,6 +1,7 @@
 local GoldAmount = script:GetCustomProperty("GoldAmount"):WaitForObject()
 local GemsAmount = script:GetCustomProperty("GemsAmount"):WaitForObject()
-local ParentPanel = script:GetCustomProperty("ParentPanel"):WaitForObject()
+local BottomRightPanel = script:GetCustomProperty("BottomRightPanel"):WaitForObject()
+local BottomLeftPanel = script:GetCustomProperty("BottomLeftPanel"):WaitForObject()
 
 while not _G.CurrentMenu do Task.Wait() end
 
@@ -22,13 +23,15 @@ function OnMenuChanged(oldMenu, newMenu)
                 end
             end
         end
-        ParentPanel.visibility = Visibility.INHERIT
+        BottomRightPanel.visibility = Visibility.INHERIT
+        BottomLeftPanel.visibility = Visibility.INHERIT
     elseif newMenu == "ShowIcons" then
         for _, panel in ipairs(script.parent:GetChildren()) do
             panel.visibility = Visibility.INHERIT
         end
 	else -- hide
-		ParentPanel.visibility = Visibility.FORCE_OFF
+		BottomRightPanel.visibility = Visibility.FORCE_OFF
+        BottomLeftPanel.visibility = Visibility.FORCE_OFF
 	end
 end
 
