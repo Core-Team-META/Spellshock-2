@@ -137,7 +137,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -231,6 +231,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -517,7 +521,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -614,7 +618,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -897,7 +901,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -994,7 +998,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -1277,7 +1281,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -1374,7 +1378,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -1657,7 +1661,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -1754,7 +1758,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -1851,7 +1855,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -1948,7 +1952,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -2037,7 +2041,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -2126,7 +2130,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -2629,7 +2633,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -2726,7 +2730,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -3009,7 +3013,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -3106,7 +3110,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -3389,7 +3393,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -3486,7 +3490,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -3769,7 +3773,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -3866,7 +3870,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -4149,7 +4153,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -4246,7 +4250,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -4335,7 +4339,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -4424,7 +4428,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -4521,7 +4525,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -4618,7 +4622,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -5137,7 +5141,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -5234,7 +5238,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -5517,7 +5521,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -5614,7 +5618,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -5897,7 +5901,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -5994,7 +5998,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -6277,7 +6281,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -6374,7 +6378,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -6657,7 +6661,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -6754,7 +6758,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -6851,7 +6855,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -6948,7 +6952,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -7037,7 +7041,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -7126,7 +7130,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -7629,7 +7633,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -7726,7 +7730,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -8009,7 +8013,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -8106,7 +8110,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -8389,7 +8393,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -8486,7 +8490,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -8769,7 +8773,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -8866,7 +8870,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -9149,7 +9153,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -9246,7 +9250,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -9335,7 +9339,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -9424,7 +9428,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -9521,7 +9525,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -9618,7 +9622,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -10121,7 +10125,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -10218,7 +10222,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -10501,7 +10505,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -10598,7 +10602,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -10881,7 +10885,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -10978,7 +10982,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 200
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -11261,7 +11265,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -11358,7 +11362,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -11641,7 +11645,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -11738,7 +11742,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 25
     }
   }
   Collidable_v2 {
@@ -11827,7 +11831,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -11916,7 +11920,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 15
     }
   }
   Collidable_v2 {
@@ -12013,7 +12017,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -12110,7 +12114,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
