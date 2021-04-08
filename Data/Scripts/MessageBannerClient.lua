@@ -51,25 +51,25 @@ function OnBannerMessageEvent(message, duration, type)
     end
 
     if type == 1 then
-        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
-        if not PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.INHERIT end
-        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
-        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
+        PANEL_ORC.visibility = Visibility.INHERIT
+        PANEL_ELF.visibility = Visibility.FORCE_OFF
+        PANEL_LOOT.visibility = Visibility.FORCE_OFF
     elseif type == 2 then
-        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
-        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
-        if not PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.INHERIT end
-        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
+        PANEL_ORC.visibility = Visibility.FORCE_OFF
+        PANEL_ELF.visibility = Visibility.INHERIT
+        PANEL_LOOT.visibility = Visibility.FORCE_OFF
     elseif type == 3 then
-        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
-        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
-        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
-        if not PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.INHERIT end
+        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
+        PANEL_ORC.visibility = Visibility.FORCE_OFF
+        PANEL_ELF.visibility = Visibility.FORCE_OFF
+        PANEL_LOOT.visibility = Visibility.INHERIT
     else
-        if not PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.INHERIT end
-        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
-        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
-        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+        PANEL_DEFAULT.visibility = Visibility.INHERIT
+        PANEL_ORC.visibility = Visibility.FORCE_OFF
+        PANEL_ELF.visibility = Visibility.FORCE_OFF
+        PANEL_LOOT.visibility = Visibility.FORCE_OFF
     end
     TEXT_BOX.text = message
 
