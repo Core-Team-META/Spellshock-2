@@ -300,7 +300,7 @@ function SetNemesis()
 
 	local nemesisString = ""
 
-	for i = 1, 12 do
+	for i = 1, 16 do
 	
 		if i <= #nemesisList then
 		
