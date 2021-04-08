@@ -1,6 +1,6 @@
 Assets {
   Id: 11484769493813352207
-  Name: "Assasin Elf Costume Gold Justice"
+  Name: "Assassin Elf Costume Gold Justice"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
