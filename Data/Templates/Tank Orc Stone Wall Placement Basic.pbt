@@ -155,6 +155,7 @@ Assets {
         ParentId: 13710811239096943882
         ChildIds: 3296973046739858113
         ChildIds: 11406876658059551942
+        ChildIds: 14770281063150412539
         ChildIds: 9883689104738568985
         ChildIds: 11139542045060548204
         ChildIds: 1419666337087859661
@@ -259,8 +260,7 @@ Assets {
         Name: "RockWall"
         Transform {
           Location {
-            X: -0.00048828125
-            Z: -500
+            Z: -400
           }
           Rotation {
           }
@@ -274,6 +274,9 @@ Assets {
         ChildIds: 4827425980728611759
         ChildIds: 5668841228816495267
         ChildIds: 4696256280386177950
+        ChildIds: 3427491313055073833
+        ChildIds: 16455861941858030139
+        ChildIds: 7634902645144251066
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -771,15 +774,166 @@ Assets {
         }
       }
       Objects {
-        Id: 9883689104738568985
+        Id: 3427491313055073833
+        Name: "Decal Soil Cracks Big 01"
+        Transform {
+          Location {
+            X: 93.4335938
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.665664196
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11406876658059551942
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.311000019
+              G: 0.121063463
+              B: 0.0404299833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6433548446612999816
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 16455861941858030139
+        Name: "Decal Soil Cracks Big 01"
+        Transform {
+          Location {
+            X: -82.5195313
+            Y: -382.310547
+          }
+          Rotation {
+            Yaw: -30.347168
+          }
+          Scale {
+            X: 0.665664196
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11406876658059551942
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.311000019
+              G: 0.121063463
+              B: 0.0404299833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6433548446612999816
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 7634902645144251066
+        Name: "Decal Soil Cracks Big 01"
+        Transform {
+          Location {
+            X: -82.5195313
+            Y: 382.311
+          }
+          Rotation {
+            Yaw: 30.347
+          }
+          Scale {
+            X: 0.665664196
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11406876658059551942
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.311000019
+              G: 0.121063463
+              B: 0.0404299833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6433548446612999816
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 14770281063150412539
         Name: "Gun Impact Small VFX"
         Transform {
           Location {
-            X: -222.360352
-            Y: -594.245117
+            X: -1.0234375
             Z: -82.902832
           }
           Rotation {
+            Yaw: 65.9224
           }
           Scale {
             X: 6.89345
@@ -823,6 +977,101 @@ Assets {
         }
         Relevance {
           Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 9883689104738568985
+        Name: "Gun Impact Small VFX"
+        Transform {
+          Location {
+            X: -222.360352
+            Y: -594.245117
+            Z: -82.902832
+          }
+          Rotation {
+          }
+          Scale {
+            X: 6.89345
+            Y: 6.89345
+            Z: 6.89345
+          }
+        }
+        ParentId: 2720851433633226448
+        ChildIds: 4098024159098665570
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -20
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 3902609303942155418
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 4098024159098665570
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            X: 32.1081543
+            Y: 47.5445671
+          }
+          Rotation {
+            Yaw: 65.9224319
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9883689104738568985
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
         }
       }
       Objects {
@@ -844,6 +1093,7 @@ Assets {
           }
         }
         ParentId: 2720851433633226448
+        ChildIds: 9608345947299758613
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -879,6 +1129,45 @@ Assets {
         }
         Relevance {
           Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 9608345947299758613
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            X: -72.1245651
+            Y: -104.304337
+          }
+          Rotation {
+            Yaw: 20.9253693
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11139542045060548204
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
         }
       }
       Objects {
@@ -900,6 +1189,7 @@ Assets {
           }
         }
         ParentId: 2720851433633226448
+        ChildIds: 13016622064608041442
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -938,6 +1228,45 @@ Assets {
         }
       }
       Objects {
+        Id: 13016622064608041442
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            X: -71.5321808
+            Y: -22.1561
+          }
+          Rotation {
+            Yaw: -6.04634809
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1419666337087859661
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
+        }
+      }
+      Objects {
         Id: 10687953563802784930
         Name: "Gun Impact Small VFX"
         Transform {
@@ -956,6 +1285,7 @@ Assets {
           }
         }
         ParentId: 2720851433633226448
+        ChildIds: 9414636749533077986
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -991,6 +1321,42 @@ Assets {
         }
         Relevance {
           Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 9414636749533077986
+        Name: "AudioDelay"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10687953563802784930
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
         }
       }
       Objects {
@@ -1167,6 +1533,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 6433548446612999816
+      Name: "Decal Soil Cracks Big 01"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "bp_decal_soil_cracks_001"
       }
     }
     Assets {

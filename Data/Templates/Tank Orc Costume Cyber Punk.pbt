@@ -7,7 +7,7 @@ Assets {
       RootId: 5419807368152495498
       Objects {
         Id: 5419807368152495498
-        Name: "Tank Orc Costume Rare"
+        Name: "Tank Orc Costume Cyber Punk"
         Transform {
           Scale {
             X: 1
@@ -1322,7 +1322,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
