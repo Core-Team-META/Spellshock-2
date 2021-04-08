@@ -90,18 +90,6 @@ end
 function OnPlayerJoined(player)
     local newLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
     newLine.y = 26.5 * (#playerLines + 1)
-    local title = PLAYER_TITLES.GetPlayerTitle(player)
-    local TitleImage = newLine:GetCustomProperty("TitleImage"):WaitForObject()
-    local PlayerImage = newLine:GetCustomProperty("PlayerImage"):WaitForObject()
-    PlayerImage:SetImage(player)
-
-    if title and title.icon then
-        TitleImage:SetImage(title.icon or "")
-        TitleImage:SetColor(title.iconColor or Color.WHITE)
-    else
-        TitleImage.visibility = Visibility.FORCE_OFF
-    end
-
     table.insert(playerLines, newLine)
 end
 
@@ -189,6 +177,17 @@ function Tick(deltaTime)
             line:GetCustomProperty("Healing"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_HEALING_RES))
             line:GetCustomProperty("Killstreak"):WaitForObject().text =
                 tostring(player:GetResource(RES.LARGEST_KILL_STREAK))
+            local title = PLAYER_TITLES.GetPlayerTitle(player)
+            local TitleImage = line:GetCustomProperty("TitleImage"):WaitForObject()
+            local PlayerImage = line:GetCustomProperty("PlayerImage"):WaitForObject()
+            PlayerImage:SetImage(player)
+
+            if title and title.icon then
+                TitleImage:SetImage(title.icon or "")
+                TitleImage:SetColor(title.iconColor or Color.WHITE)
+            else
+                TitleImage.visibility = Visibility.FORCE_OFF
+            end
         end
     end
 end
