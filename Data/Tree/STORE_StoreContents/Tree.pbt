@@ -11878,7 +11878,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "SP Warrior"
     }
     Overrides {
       Name: "cs:Types"
@@ -11916,7 +11916,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 0
     }
   }
   Collidable_v2 {

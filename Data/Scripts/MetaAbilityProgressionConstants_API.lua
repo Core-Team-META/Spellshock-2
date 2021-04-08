@@ -96,7 +96,7 @@ API.CLASS_HEALTH = {
 API.CLASS_REGEN = {
     [API.CLASS.TANK] = 12.0,
     [API.CLASS.MAGE] = 3.0,
-    [API.CLASS.HUNTER] = 4.0,
+    [API.CLASS.HUNTER] = 5.0,
     [API.CLASS.HEALER] = 2.0,
     [API.CLASS.ASSASSIN] = 4.0
 }
@@ -195,18 +195,18 @@ API.EVENT_COSMETIC_MULTIPLIER = 0
 API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 --Leave at 1.0 for 100% (Default Price)
 
 -- VIP Player Values
-API.VIP_XP_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_GOLD_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_SHARDS_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_COSMETIC_MULTIPLIER = 0.25 -- 25% Bonus
-API.VIP_DAILY_SHOP_DISCOUNT = 0.9 -- 10% Discount in Daily Shop
+API.VIP_XP_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_GOLD_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_SHARDS_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_COSMETIC_MULTIPLIER = 0.5 -- 25% Bonus
+API.VIP_DAILY_SHOP_DISCOUNT = 0.8 -- 10% Discount in Daily Shop
 API.VIP_SERVER_MULTIPLIER = 0.0 -- Each VIP in a server gives a 5% boost to both gold & xp
 
 
 --STARTER Pack Muliplier Value
-API.STARTER_PACK_MULTIPLIER = 0.5 -- 50% To XP & Currency Gains
-API.STARTER_PACK_SHARDS_MULTIPLIER = 0.5 -- Currently A 0% Bonus
-API.STARTER_PACK_COSMETIC_MULTIPLIER = 0.5 -- 0% Bonus to cosmetic muliplier
+API.STARTER_PACK_MULTIPLIER = 0 -- 50% To XP & Currency Gains
+API.STARTER_PACK_SHARDS_MULTIPLIER = 0 -- Currently A 0% Bonus
+API.STARTER_PACK_COSMETIC_MULTIPLIER = 0 -- 0% Bonus to cosmetic muliplier
 API.STARTER_PACK_GOLD_BONUS = 10000 -- How much Gold a player gets when purchasing the Starter Pack
 API.STARTER_PACK_PREMIUM_BONUS = 350 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
 
