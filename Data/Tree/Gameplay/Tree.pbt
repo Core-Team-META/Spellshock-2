@@ -33356,7 +33356,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LocalLobbyTime"
-      Int: 5
+      Int: 500000
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
