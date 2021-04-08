@@ -710,6 +710,8 @@ function ResetFeed()
 			end
 		end
 	end
+	lineTemplates = {}
+	lines = {}
 	Task.Wait(0.1)
 	Init()
 end
