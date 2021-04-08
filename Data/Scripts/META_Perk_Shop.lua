@@ -209,6 +209,8 @@ function CheckPerkCountWithStorage(player, data)
             end
             if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
+                Events.Broadcast("GETCOSMETIC", player, "11048")
+                Events.Broadcast("GETCOSMETIC", player, "12048")
                 --_G.PERKS.SUBSCRIPTION = STARTERPACK
                 if perkCount > storageCount then
                     player:AddResource(CONST.COSMETIC_TOKEN, CONST.STARTER_PACK_PREMIUM_BONUS)
