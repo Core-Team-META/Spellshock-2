@@ -332,7 +332,7 @@ end
 function CheckIfLocked(class, requiredLvl, id)
 	local localPlayer = Game.GetLocalPlayer()
 	local selectedClass = 0
-	
+
 	if class == "Warrior" then
 		selectedClass = CP_API.TANK
 	elseif class == "Hunter" then
@@ -698,7 +698,7 @@ function UpdateEntryButton(entry, highlighted)
 		else
 			--entry.itemName:SetColor(Color.RED)
 			if entry.PartOfSubscription then
-				entry.price.text = "NEED " .. propSubscriptionName
+				entry.price.text = ""--"NEED " .. propSubscriptionName
 			else
 				entry.price.text = "NOT ENOUGH FUNDS"
 			end
@@ -977,8 +977,6 @@ end
 -- CLEAR AND POPULATE STORE
 ----------------------------------------------------------------------------------------------------------------
 
-
-
 function ClearList(direction)
 	if direction == nil then
 		direction = 1
@@ -1072,20 +1070,19 @@ function PopulateStore(direction)
 		
 		local locked = true
 		
-		if CheckIfLocked(v.class, v.requirement, v.id) then
-		
-			propLockedPanel.visibility = Visibility.FORCE_OFF
-			
-			locked = false
-			
-		else 
-		
+		if v.requirement > 50 then
+			-- #TODO check if they have the Perk
 			propLockedPanel.visibility = Visibility.INHERIT
-			
-			propLockedMessage.text = "UNLOCKED AT LVL " .. tostring(v.requirement)
-			
+			propLockedMessage.visibility = Visibility.FORCE_OFF
+		else
+			if CheckIfLocked(v.class, v.requirement, v.id) then
+				propLockedPanel.visibility = Visibility.FORCE_OFF
+				locked = false
+			else 
+				propLockedPanel.visibility = Visibility.INHERIT
+				propLockedMessage.text = "UNLOCKED AT LVL " .. tostring(v.requirement)
+			end
 		end
-
 
 		local Frames = propFramePanel:GetChildren()
 		table.insert(Frames, propPriceFrame)
@@ -1111,8 +1108,6 @@ function PopulateStore(direction)
 		local BGImageColor = RarityDefs[v.rarity].color --newGeo:GetCustomProperty("DefaultColor")
 		propClassIcon:SetImage(v.classIcon)
 		propTypeIcon:SetImage(v.typeIcon)
-
-
 
 		-- Change stance of preview animated mesh
 		if v.class then
@@ -1151,7 +1146,6 @@ function PopulateStore(direction)
 
 		-- KB TEST
 		-- BGMesh:SetColor(BGMeshColor)
-
 
 		newGeo.visibility = Visibility.FORCE_ON
 
