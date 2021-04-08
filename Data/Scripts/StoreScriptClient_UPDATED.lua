@@ -1071,9 +1071,14 @@ function PopulateStore(direction)
 		local locked = true
 		
 		if v.requirement > 50 then
-			-- #TODO check if they have the Perk
-			propLockedPanel.visibility = Visibility.INHERIT
-			propLockedMessage.visibility = Visibility.FORCE_OFF
+			-- #TODO 
+			if HasCosmetic(v.id) then
+				propLockedPanel.visibility = Visibility.FORCE_OFF
+				locked = false
+			else
+				propLockedPanel.visibility = Visibility.INHERIT
+				propLockedMessage.visibility = Visibility.FORCE_OFF
+			end
 		else
 			if CheckIfLocked(v.class, v.requirement, v.id) then
 				propLockedPanel.visibility = Visibility.FORCE_OFF

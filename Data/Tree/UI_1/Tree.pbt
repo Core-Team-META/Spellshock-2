@@ -31,7 +31,7 @@ Objects {
 }
 Objects {
   Id: 4197521803680757974
-  Name: "Round Evaluations"
+  Name: "Top Players"
   Transform {
     Location {
     }
@@ -55,7 +55,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "UI"
+    FilePartitionName: "Top Players"
   }
 }
 Objects {

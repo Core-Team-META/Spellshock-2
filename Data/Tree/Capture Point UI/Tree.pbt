@@ -284,6 +284,10 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -347,6 +351,10 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -1791,6 +1799,7 @@ Objects {
   }
   ParentId: 2117647049914167800
   ChildIds: 11035460064480176686
+  ChildIds: 8720472727624352964
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1812,10 +1821,47 @@ Objects {
   }
 }
 Objects {
+  Id: 8720472727624352964
+  Name: "Ship Boat Large Fog Horn 02 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 7444474428001811896
+    }
+    Pitch: 304.697021
+    Volume: 1
+    Falloff: 5261.32568
+    Radius: 1632.78076
+  }
+}
+Objects {
   Id: 11035460064480176686
   Name: "CapturePointControlFeedback"
   Transform {
     Location {
+      X: -6402.28027
+      Y: -4374.99219
+      Z: 3589.22778
     }
     Rotation {
     }
@@ -1837,6 +1883,12 @@ Objects {
       Name: "cs:APIBasicGameState"
       AssetReference {
         Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:Sound"
+      ObjectReference {
+        SelfId: 8720472727624352964
       }
     }
   }

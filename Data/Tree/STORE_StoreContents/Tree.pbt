@@ -14513,7 +14513,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 0
+      Int: 60
     }
   }
   Collidable_v2 {
@@ -14602,7 +14602,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 0
+      Int: 60
     }
   }
   Collidable_v2 {

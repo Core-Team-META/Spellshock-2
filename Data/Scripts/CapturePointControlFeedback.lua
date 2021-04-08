@@ -19,6 +19,8 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local ABCP = require(script:GetCustomProperty("API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 
+local SOUND = script:GetCustomProperty("Sound"):WaitForObject()
+
 -- Constant variables
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -35,7 +37,8 @@ function CapturePointChanged (id, prevTeam, newTeam)
     local messageType = 0
     if LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team == prevTeam then
         messageType = 3 - LOCAL_PLAYER.team
-        Events.Broadcast("BannerMessage", "Lost " .. capturePointState.name, 5, messageType)
+        Events.Broadcast("BannerMessage", "Enemy Attacking " .. capturePointState.name, 5, messageType)
+        SOUND:Play()
     elseif newTeam ~= 0 and LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team ~= prevTeam then
         messageType = 3 - LOCAL_PLAYER.team
         Events.Broadcast("BannerMessage", "Enemy Captured " .. capturePointState.name, 5, messageType)
