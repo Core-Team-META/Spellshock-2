@@ -33355,6 +33355,10 @@ Objects {
       Float: 30
     }
     Overrides {
+      Name: "cs:LocalLobbyTime"
+      Int: 5
+    }
+    Overrides {
       Name: "cs:RequiredPlayers:tooltip"
       String: "Number of players needed to start the countdown"
     }

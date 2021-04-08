@@ -3711,6 +3711,26 @@ Objects {
   }
   ParentId: 17296953895266496212
   ChildIds: 11242944984169974382
+  ChildIds: 13521245677356452609
+  ChildIds: 2137426500777738859
+  ChildIds: 8553301281593751662
+  ChildIds: 6170591494316531774
+  ChildIds: 6991352356651568015
+  ChildIds: 8568557348581089068
+  ChildIds: 4625354476083671118
+  ChildIds: 6757446529232996287
+  ChildIds: 15794504909961927616
+  ChildIds: 5401550428953604015
+  ChildIds: 7244922412357479942
+  ChildIds: 14568658216643893110
+  ChildIds: 10373124158785172999
+  ChildIds: 18091468244042777238
+  ChildIds: 5266596681913662911
+  ChildIds: 13465279709044545999
+  ChildIds: 14625116514122900648
+  ChildIds: 17922150890607565343
+  ChildIds: 4591582696340788177
+  ChildIds: 11946582946048065783
   ChildIds: 583350581990755025
   ChildIds: 15347807563964884810
   ChildIds: 6590879534939059525
@@ -3721,9 +3741,6 @@ Objects {
   ChildIds: 6001054042930127631
   ChildIds: 5084245701231461171
   ChildIds: 4524289181133775947
-  ChildIds: 16775025412678082468
-  ChildIds: 3931248218289113732
-  ChildIds: 289623102097583981
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3735,414 +3752,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 289623102097583981
-  Name: "The Legend"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9939745752120650993
-  ChildIds: 1273778046020134161
-  ChildIds: 13647150911597479041
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "Play 500 Matches In Spell Shock 2"
-    }
-    Overrides {
-      Name: "cs:Required"
-      Float: 1
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "TESTING3"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 16452085222527001410
-      }
-    }
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4954130354820301591
-    }
-  }
-}
-Objects {
-  Id: 13647150911597479041
-  Name: "Cosmetic Tokens"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 289623102097583981
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ResourceName"
-      String: "COSM_TOKEN"
-    }
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: true
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8563684984866158969
-    }
-  }
-}
-Objects {
-  Id: 1273778046020134161
-  Name: "Gold"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 289623102097583981
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:ResourceName"
-      String: "GOLD"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8563684984866158969
-    }
-  }
-}
-Objects {
-  Id: 3931248218289113732
-  Name: " Unkillable"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9939745752120650993
-  ChildIds: 5581064098260970509
-  ChildIds: 7362676141923145343
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "Get a kill and play entire round without dying"
-    }
-    Overrides {
-      Name: "cs:Required"
-      Float: 1
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "TESTING2"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 9084852752205607158
-      }
-    }
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4954130354820301591
-    }
-  }
-}
-Objects {
-  Id: 7362676141923145343
-  Name: "Cosmetic Tokens"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3931248218289113732
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ResourceName"
-      String: "COSM_TOKEN"
-    }
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: true
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8563684984866158969
-    }
-  }
-}
-Objects {
-  Id: 5581064098260970509
-  Name: "Gold"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3931248218289113732
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:ResourceName"
-      String: "GOLD"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8563684984866158969
-    }
-  }
-}
-Objects {
-  Id: 16775025412678082468
-  Name: "I Got It"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9939745752120650993
-  ChildIds: 5379717484375692345
-  ChildIds: 8436577320701902645
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: " Complete capture of 1 capture point"
-    }
-    Overrides {
-      Name: "cs:Required"
-      Float: 1
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "TESTING1"
-    }
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 5485640623370883304
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4954130354820301591
-    }
-  }
-}
-Objects {
-  Id: 8436577320701902645
-  Name: "Cosmetic Tokens"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16775025412678082468
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ResourceName"
-      String: "COSM_TOKEN"
-    }
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: true
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8563684984866158969
-    }
-  }
-}
-Objects {
-  Id: 5379717484375692345
-  Name: "Gold"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16775025412678082468
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:ResourceName"
-      String: "GOLD"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8563684984866158969
-    }
   }
 }
 Objects {
@@ -5253,15 +4862,15 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Get 25 Lifetime Kills"
+      String: "Get 10 In A Single Game"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 25
+      Float: 10
     }
     Overrides {
       Name: "cs:ID"
-      String: "AS_25KILL"
+      String: "ASKILL2"
     }
     Overrides {
       Name: "cs:Icon"
@@ -5271,7 +4880,15 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: false
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASKILL"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -5389,7 +5006,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "5 total Kills"
+      String: "5 Kills In A Single Game"
     }
     Overrides {
       Name: "cs:Required"
@@ -5397,17 +5014,29 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "AS_5KILL"
+      String: "ASKILL1"
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 3887137687394978091
       }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASKILL"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -5506,8 +5135,2968 @@ Objects {
   }
 }
 Objects {
+  Id: 11946582946048065783
+  Name: "Assassin 4000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 17401352844215968768
+  ChildIds: 5751671847816965752
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "4000 Damage As Assassin"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 4000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASASNDMG4"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 5751671847816965752
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11946582946048065783
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 17401352844215968768
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11946582946048065783
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 4591582696340788177
+  Name: "Assassin 3000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 1377531301485488645
+  ChildIds: 1844208811571465707
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "3000 Damage As Assassin"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 3000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASASNDMG3"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 1844208811571465707
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4591582696340788177
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 1377531301485488645
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4591582696340788177
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 17922150890607565343
+  Name: "Assassin 2000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 15905373372996341386
+  ChildIds: 6849579369949852325
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "2000 Damage As Assassin"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 2000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASASNDMG2"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 6849579369949852325
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17922150890607565343
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 15905373372996341386
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17922150890607565343
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 14625116514122900648
+  Name: "Assassin 1000 Damage "
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 8038508410432566654
+  ChildIds: 2265898916656951492
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "1000 Damage As Assassin"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASASNDMG1"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 2265898916656951492
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14625116514122900648
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 8038508410432566654
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14625116514122900648
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 13465279709044545999
+  Name: "Healer 4000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 6190070591011371565
+  ChildIds: 2303678006825849725
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "4000 Damage As Healer"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 4000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHELDMG4"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HELDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 2303678006825849725
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13465279709044545999
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 6190070591011371565
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13465279709044545999
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 5266596681913662911
+  Name: "Healer 3000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 17546498323039916979
+  ChildIds: 16485510754295155821
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "3000 Damage As Healer"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 3000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHELDMG3"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HELDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 16485510754295155821
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5266596681913662911
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 17546498323039916979
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5266596681913662911
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 18091468244042777238
+  Name: "Healer 2000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 4585661817760901546
+  ChildIds: 2712286861168336012
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "2000 Damage As Healer"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 2000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHELDMG2"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HELDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 2712286861168336012
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18091468244042777238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 4585661817760901546
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18091468244042777238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 10373124158785172999
+  Name: "Healer 1000 Damage "
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 1996505780405070960
+  ChildIds: 15266140479155829982
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "1000 Damage As Healer"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHELDMG1"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HELDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 15266140479155829982
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10373124158785172999
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 1996505780405070960
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10373124158785172999
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 14568658216643893110
+  Name: "Hunter 4000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 12513686705912283453
+  ChildIds: 16422684354778486746
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "4000 Damage As Hunter"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 4000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHUNDMG4"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HUNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 16422684354778486746
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14568658216643893110
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 12513686705912283453
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14568658216643893110
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 7244922412357479942
+  Name: "Hunter 3000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 14875243904079344344
+  ChildIds: 13398299991953481452
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "3000 Damage As Hunter"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 3000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHUNDMG3"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HUNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 13398299991953481452
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7244922412357479942
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 14875243904079344344
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7244922412357479942
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 5401550428953604015
+  Name: "Hunter  2000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 333870710934514957
+  ChildIds: 201857573154921777
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "2000 Damage As Hunter"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 2000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHUNDMG2"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HUNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 201857573154921777
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5401550428953604015
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 333870710934514957
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5401550428953604015
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 15794504909961927616
+  Name: "Hunter 1000 Damage "
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 18402071894715211961
+  ChildIds: 5044958055054909258
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "1000 Damage As Hunter"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHUNDMG1"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "HUNDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 5044958055054909258
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15794504909961927616
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 18402071894715211961
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15794504909961927616
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 6757446529232996287
+  Name: "Mage 4000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 11433175596471831461
+  ChildIds: 5354647546716343242
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "4000 Damage As Mage"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 4000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASMAGDMG4"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "MAGDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 5354647546716343242
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6757446529232996287
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 11433175596471831461
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6757446529232996287
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 4625354476083671118
+  Name: "Mage 3000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 10615359080409603850
+  ChildIds: 2763916783850947464
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "3000 Damage As Mage"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 3000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASMAGDMG3"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "MAGDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 2763916783850947464
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4625354476083671118
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 10615359080409603850
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4625354476083671118
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 8568557348581089068
+  Name: "Mage 2000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 12034712904287143899
+  ChildIds: 151729917237215475
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "2000 Damage As Mage"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 2000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASMAGDMG2"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "MAGDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 151729917237215475
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8568557348581089068
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 12034712904287143899
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8568557348581089068
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 6991352356651568015
+  Name: "Mage 1000 Damage "
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 14350761604822027142
+  ChildIds: 2549120837697163993
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "1000 Damage As Mage"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASMAGDMG1"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "MAGDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 2549120837697163993
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6991352356651568015
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 14350761604822027142
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6991352356651568015
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 6170591494316531774
+  Name: "Warrior 4000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 16406214988136318747
+  ChildIds: 7726336801349646680
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "4000 Damage As Warrior"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 4000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASWARDMG4"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "WARDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 7726336801349646680
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6170591494316531774
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 16406214988136318747
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6170591494316531774
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 8553301281593751662
+  Name: "Warrior 3000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 3561289151011406273
+  ChildIds: 17785356655788205362
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "3000 Damage As Warrior"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 3000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASWARDMG3"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "WARDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 17785356655788205362
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8553301281593751662
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 3561289151011406273
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8553301281593751662
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 2137426500777738859
+  Name: "Warrior 2000 Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 14009386848895009953
+  ChildIds: 10356341150079015996
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "2000 Damage As Warrior"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 2000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASWARDMG2"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "WARDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 10356341150079015996
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2137426500777738859
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 14009386848895009953
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2137426500777738859
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 13521245677356452609
+  Name: "Warrior 1000 Damage "
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 15891614476572707655
+  ChildIds: 14098285575096465301
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "1000 Damage As Warrior"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASWARDMG1"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 101582251860649597
+      }
+    }
+    Overrides {
+      Name: "cs:GivesReward"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "WARDMG"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 14098285575096465301
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13521245677356452609
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 15891614476572707655
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13521245677356452609
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
   Id: 11242944984169974382
-  Name: "I Got It"
+  Name: "TEST"
   Transform {
     Location {
     }
@@ -5525,7 +8114,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: " Complete capture of 1 capture point"
+      String: "Kill Test"
     }
     Overrides {
       Name: "cs:Required"
@@ -5533,17 +8122,25 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "AS_CAP1"
+      String: "KILL"
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
         Id: 4417804760414966795
       }
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "KILL"
     }
   }
   Collidable_v2 {
@@ -5794,6 +8391,18 @@ Objects {
       Name: "cs:ACHIEVEMENTS_DETAILS_UI"
       ObjectReference {
         SelfId: 5930527055487180986
+      }
+    }
+    Overrides {
+      Name: "cs:AchievementsPanel"
+      ObjectReference {
+        SelfId: 18258655967248789995
+      }
+    }
+    Overrides {
+      Name: "cs:Achievement_EndScreen_Template"
+      AssetReference {
+        Id: 3264268890164788131
       }
     }
   }

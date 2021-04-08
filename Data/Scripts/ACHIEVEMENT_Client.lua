@@ -4,10 +4,6 @@
 -- Date: 2021/3/24
 -- Version 0.1.4-SS2
 ------------------------------------------------------------------------------------------------------------------------
-if true then
-    return
-end
-
 local ROOT = script:GetCustomProperty("AchievementSystem"):WaitForObject()
 local isEnabled = ROOT:GetCustomProperty("Enabled")
 ------------------------------------------------------------------------------------------------------------------------
@@ -24,8 +20,10 @@ local NOTIFICATION = script:GetCustomProperty("NOTIFICATION"):WaitForObject()
 local NOTIFICATION_ICON_BG = NOTIFICATION:GetCustomProperty("ICONBG"):WaitForObject()
 local NOTIFICATION_ICON = NOTIFICATION:GetCustomProperty("ICON"):WaitForObject()
 local ACHIEVEMENT_NAME_TEXT = NOTIFICATION:GetCustomProperty("ACHIEVEMENT_NAME_TEXT"):WaitForObject()
-local ACHIEVEMENT_CONTAINER = script:GetCustomProperty("CONTAINER"):WaitForObject()
-local ACHIEVEMENTS_DETAILS_UI = script:GetCustomProperty("ACHIEVEMENTS_DETAILS_UI"):WaitForObject()
+local ACHIEVEMENTS_DETAILS_UI = nil
+ --script:GetCustomProperty("ACHIEVEMENTS_DETAILS_UI"):WaitForObject()
+
+local ACHIEVEMENT_PANEL = script:GetCustomProperty("AchievementsPanel"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -69,7 +67,7 @@ local function ClearListeners(listeners)
 end
 
 local function ClearAchievements()
-    for _, child in ipairs(ACHIEVEMENT_CONTAINER:GetChildren()) do
+    for _, child in ipairs(ACHIEVEMENT_PANEL:GetChildren()) do
         if Object.IsValid(child) then
             child:Destroy()
         end
@@ -101,21 +99,22 @@ end
 local function BuildAchievementInfoPanel()
     local count = 0
     for _, achievement in pairs(ACH_API.CheckUnlockedAchievements(LOCAL_PLAYER)) do
-        if count >= 10 then
+
+        --#TODO Needs to be changed to how many achievements should show in the end round panel
+        if count >= 6 then
             break
         end
-        local achievementPanel = World.SpawnAsset(AchievementPanelTemplate, {parent = ACHIEVEMENT_CONTAINER})
+        local achievementPanel = World.SpawnAsset(AchievementPanelTemplate, {parent = ACHIEVEMENT_PANEL})
         local iconBG = achievementPanel:GetCustomProperty("ACHIEVEMENT_ICON_BG"):WaitForObject()
         local icon = achievementPanel:GetCustomProperty("ACHIEVEMENT_ICON"):WaitForObject()
         local name = achievementPanel:GetCustomProperty("ACHIEVEMENT_NAME"):WaitForObject()
-        local button = achievementPanel:GetCustomProperty("BUTTON"):WaitForObject()
+        --local button = achievementPanel:GetCustomProperty("BUTTON"):WaitForObject()
 
-        button.clientUserData.detailPanel =
-            achievementPanel:GetCustomProperty("ACHIEVEMENTS_DETAILS_UI"):WaitForObject()
-        button.clientUserData.achievement = achievement
+        --button.clientUserData.detailPanel = achievementPanel:GetCustomProperty("ACHIEVEMENTS_DETAILS_UI"):WaitForObject()
+        --button.clientUserData.achievement = achievement
 
-        listeners[#listeners + 1] = button.hoveredEvent:Connect(OnDetailsHover)
-        listeners[#listeners + 1] = button.unhoveredEvent:Connect(OnDetailsUnhover)
+        --listeners[#listeners + 1] = button.hoveredEvent:Connect(OnDetailsHover)
+        --listeners[#listeners + 1] = button.unhoveredEvent:Connect(OnDetailsUnhover)
 
         if (iconBG) then
             iconBG:SetImage(achievement.iconBG)
@@ -124,16 +123,16 @@ local function BuildAchievementInfoPanel()
 
         name.text = achievement.name
 
-        if count < 5 then
-            achievementPanel.x = count * 130
+        if count < 6 then
+            achievementPanel.x = count * 125 --#TODO Needs to be changed
             count = count + 1
         else
-            achievementPanel.x = (count - 5) * 130
+            achievementPanel.x = (count - 5) * 130 --#TODO Needs to be changed
             achievementPanel.y = 150
             count = count + 1
         end
     end
-    ACHIEVEMENTS_DETAILS_UI.visibility = Visibility.FORCE_OFF
+    --ACHIEVEMENTS_DETAILS_UI.visibility = Visibility.FORCE_OFF
 end
 
 local function AnimateNotification(id)
@@ -163,6 +162,7 @@ function Int()
     ACH_API.RegisterAchievements(ACHIEVEMENT_LIST)
     Task.Wait()
     BuildIdTable()
+    ClearAchievements()
     if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
         shouldShow = true
         NOTIFICATION.visibility = Visibility.FORCE_ON
@@ -171,7 +171,7 @@ end
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
     if newState == ABGS.GAME_STATE_LOBBY then
-        ACHIEVEMENTS_DETAILS_UI.visibility = Visibility.FORCE_OFF
+        --ACHIEVEMENTS_DETAILS_UI.visibility = Visibility.FORCE_OFF
     elseif newState ~= ABGS.GAME_STATE_ROUND then
         shouldShow = true
         NOTIFICATION.visibility = Visibility.FORCE_ON
@@ -179,13 +179,8 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         shouldShow = true
         NOTIFICATION.visibility = Visibility.FORCE_ON
     end
-    if newState == ABGS.GAME_STATE_ROUND_END then
-        Task.Spawn(
-            function()
-                --BuildAchievementInfoPanel()
-            end,
-            3
-        )
+    if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+        BuildAchievementInfoPanel()
     else
         ClearAchievements()
         ClearListeners(listeners)
