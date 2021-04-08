@@ -4999,7 +4999,7 @@ Objects {
 }
 Objects {
   Id: 11946582946048065783
-  Name: "Assassin 4000 Damage"
+  Name: "Assassin 10000 Damage"
   Transform {
     Location {
     }
@@ -5017,11 +5017,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "4000 Damage As Assassin"
+      String: "10000 Damage As Assassin"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 4000
+      Float: 10000
     }
     Overrides {
       Name: "cs:ID"
@@ -5089,6 +5089,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 5
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5129,6 +5133,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 1500
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5147,7 +5155,7 @@ Objects {
 }
 Objects {
   Id: 4591582696340788177
-  Name: "Assassin 3000 Damage"
+  Name: "Assassin 7500 Damage"
   Transform {
     Location {
     }
@@ -5165,11 +5173,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "3000 Damage As Assassin"
+      String: "7500 Damage As Assassin"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 3000
+      Float: 7500
     }
     Overrides {
       Name: "cs:ID"
@@ -5237,6 +5245,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5277,6 +5289,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 800
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5295,7 +5311,7 @@ Objects {
 }
 Objects {
   Id: 17922150890607565343
-  Name: "Assassin 2000 Damage"
+  Name: "Assassin 5000 Damage"
   Transform {
     Location {
     }
@@ -5313,11 +5329,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "2000 Damage As Assassin"
+      String: "5000 Damage As Assassin"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 2000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -5425,6 +5441,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 400
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5443,7 +5463,7 @@ Objects {
 }
 Objects {
   Id: 14625116514122900648
-  Name: "Assassin 1000 Damage "
+  Name: "Assassin 2000 Damage "
   Transform {
     Location {
     }
@@ -5461,11 +5481,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "1000 Damage As Assassin"
+      String: "2000 Damage As Assassin"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 1000
+      Float: 2000
     }
     Overrides {
       Name: "cs:ID"
@@ -5533,6 +5553,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 0
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5573,6 +5597,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 200
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5591,7 +5619,7 @@ Objects {
 }
 Objects {
   Id: 13465279709044545999
-  Name: "Healer 4000 Damage"
+  Name: "Healer 7000 Damage"
   Transform {
     Location {
     }
@@ -5609,11 +5637,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "4000 Damage As Healer"
+      String: "7000 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 4000
+      Float: 7000
     }
     Overrides {
       Name: "cs:ID"
@@ -5681,6 +5709,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 5
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5721,6 +5753,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 1500
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5739,7 +5775,7 @@ Objects {
 }
 Objects {
   Id: 5266596681913662911
-  Name: "Healer 3000 Damage"
+  Name: "Healer 5500 Damage"
   Transform {
     Location {
     }
@@ -5757,11 +5793,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "3000 Damage As Healer"
+      String: "5500 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 3000
+      Float: 5500
     }
     Overrides {
       Name: "cs:ID"
@@ -5829,6 +5865,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5869,6 +5909,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 800
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5887,7 +5931,7 @@ Objects {
 }
 Objects {
   Id: 18091468244042777238
-  Name: "Healer 2000 Damage"
+  Name: "Healer 3000 Damage"
   Transform {
     Location {
     }
@@ -5905,11 +5949,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "2000 Damage As Healer"
+      String: "3000 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 2000
+      Float: 3000
     }
     Overrides {
       Name: "cs:ID"
@@ -6017,6 +6061,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 400
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6035,7 +6083,7 @@ Objects {
 }
 Objects {
   Id: 10373124158785172999
-  Name: "Healer 1000 Damage "
+  Name: "Healer 1500 Damage "
   Transform {
     Location {
     }
@@ -6053,11 +6101,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "1000 Damage As Healer"
+      String: "1500 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 1000
+      Float: 1500
     }
     Overrides {
       Name: "cs:ID"
@@ -6125,6 +6173,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 0
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6165,6 +6217,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 200
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6183,7 +6239,7 @@ Objects {
 }
 Objects {
   Id: 14568658216643893110
-  Name: "Hunter 4000 Damage"
+  Name: "Hunter 10000 Damage"
   Transform {
     Location {
     }
@@ -6201,11 +6257,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "4000 Damage As Hunter"
+      String: "10000 Damage As Hunter"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 4000
+      Float: 10000
     }
     Overrides {
       Name: "cs:ID"
@@ -6273,6 +6329,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 5
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6313,6 +6373,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 1500
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6331,7 +6395,7 @@ Objects {
 }
 Objects {
   Id: 7244922412357479942
-  Name: "Hunter 3000 Damage"
+  Name: "Hunter 7500 Damage"
   Transform {
     Location {
     }
@@ -6349,11 +6413,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "3000 Damage As Hunter"
+      String: "7500 Damage As Hunter"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 3000
+      Float: 7500
     }
     Overrides {
       Name: "cs:ID"
@@ -6421,6 +6485,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6461,6 +6529,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 800
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6479,7 +6551,7 @@ Objects {
 }
 Objects {
   Id: 5401550428953604015
-  Name: "Hunter  2000 Damage"
+  Name: "Hunter 5000 Damage"
   Transform {
     Location {
     }
@@ -6497,11 +6569,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "2000 Damage As Hunter"
+      String: "5000 Damage As Hunter"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 2000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -6609,6 +6681,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 400
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6627,7 +6703,7 @@ Objects {
 }
 Objects {
   Id: 15794504909961927616
-  Name: "Hunter 1000 Damage "
+  Name: "Hunter 2000 Damage "
   Transform {
     Location {
     }
@@ -6645,11 +6721,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "1000 Damage As Hunter"
+      String: "2000 Damage As Hunter"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 1000
+      Float: 2000
     }
     Overrides {
       Name: "cs:ID"
@@ -6717,6 +6793,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 0
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6757,6 +6837,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 200
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6775,7 +6859,7 @@ Objects {
 }
 Objects {
   Id: 6757446529232996287
-  Name: "Mage 4000 Damage"
+  Name: "Mage 10000 Damage"
   Transform {
     Location {
     }
@@ -6793,11 +6877,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "4000 Damage As Mage"
+      String: "10000 Damage As Mage"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 4000
+      Float: 10000
     }
     Overrides {
       Name: "cs:ID"
@@ -6865,6 +6949,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 5
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6905,6 +6993,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 1500
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6923,7 +7015,7 @@ Objects {
 }
 Objects {
   Id: 4625354476083671118
-  Name: "Mage 3000 Damage"
+  Name: "Mage 7500 Damage"
   Transform {
     Location {
     }
@@ -6941,11 +7033,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "3000 Damage As Mage"
+      String: "7500 Damage As Mage"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 3000
+      Float: 7500
     }
     Overrides {
       Name: "cs:ID"
@@ -7013,6 +7105,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7053,6 +7149,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 800
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7071,7 +7171,7 @@ Objects {
 }
 Objects {
   Id: 8568557348581089068
-  Name: "Mage 2000 Damage"
+  Name: "Mage 5000 Damage"
   Transform {
     Location {
     }
@@ -7089,11 +7189,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "2000 Damage As Mage"
+      String: "5000 Damage As Mage"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 2000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -7201,6 +7301,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 400
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7219,7 +7323,7 @@ Objects {
 }
 Objects {
   Id: 6991352356651568015
-  Name: "Mage 1000 Damage "
+  Name: "Mage 2000 Damage "
   Transform {
     Location {
     }
@@ -7237,11 +7341,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "1000 Damage As Mage"
+      String: "2000 Damage As Mage"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 1000
+      Float: 2000
     }
     Overrides {
       Name: "cs:ID"
@@ -7309,6 +7413,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 0
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7349,6 +7457,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 200
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7367,7 +7479,7 @@ Objects {
 }
 Objects {
   Id: 6170591494316531774
-  Name: "Warrior 4000 Damage"
+  Name: "Warrior 10000 Damage"
   Transform {
     Location {
     }
@@ -7385,11 +7497,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "4000 Damage As Warrior"
+      String: "10000 Damage As Warrior"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 4000
+      Float: 10000
     }
     Overrides {
       Name: "cs:ID"
@@ -7457,6 +7569,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 5
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7497,6 +7613,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 1500
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7515,7 +7635,7 @@ Objects {
 }
 Objects {
   Id: 8553301281593751662
-  Name: "Warrior 3000 Damage"
+  Name: "Warrior 7500 Damage"
   Transform {
     Location {
     }
@@ -7533,11 +7653,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "3000 Damage As Warrior"
+      String: "7500 Damage As Warrior"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 3000
+      Float: 7500
     }
     Overrides {
       Name: "cs:ID"
@@ -7605,6 +7725,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7645,6 +7769,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 800
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7663,7 +7791,7 @@ Objects {
 }
 Objects {
   Id: 2137426500777738859
-  Name: "Warrior 2000 Damage"
+  Name: "Warrior 5000 Damage"
   Transform {
     Location {
     }
@@ -7681,11 +7809,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "2000 Damage As Warrior"
+      String: "5000 Damage As Warrior"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 2000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -7793,6 +7921,10 @@ Objects {
       Name: "cs:ResourceName"
       String: "GOLD"
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 400
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7811,7 +7943,7 @@ Objects {
 }
 Objects {
   Id: 13521245677356452609
-  Name: "Warrior 1000 Damage "
+  Name: "Warrior 2000 Damage "
   Transform {
     Location {
     }
@@ -7829,11 +7961,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "1000 Damage As Warrior"
+      String: "2000 Damage As Warrior"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 1000
+      Float: 2000
     }
     Overrides {
       Name: "cs:ID"
@@ -7901,6 +8033,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 0
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7940,6 +8076,10 @@ Objects {
     Overrides {
       Name: "cs:ResourceName"
       String: "GOLD"
+    }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 200
     }
   }
   Collidable_v2 {
@@ -8045,6 +8185,10 @@ Objects {
       Name: "cs:Enabled"
       Bool: true
     }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 25
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8084,6 +8228,10 @@ Objects {
     Overrides {
       Name: "cs:ResourceName"
       String: "GOLD"
+    }
+    Overrides {
+      Name: "cs:Amount"
+      Int: 5
     }
   }
   Collidable_v2 {
