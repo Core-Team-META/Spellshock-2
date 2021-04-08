@@ -26,7 +26,7 @@ local LEFT_PROGRESS_BAR = script:GetCustomProperty("LeftProgressBar"):WaitForObj
 local RIGHT_PROGRESS_BAR = script:GetCustomProperty("RightProgressBar"):WaitForObject()
 local LEFT_THRESHOLD_MARKER = script:GetCustomProperty("LeftThresholdMarker"):WaitForObject()
 local RIGHT_THRESHOLD_MARKER = script:GetCustomProperty("RightThresholdMarker"):WaitForObject()
-local CONTESTED_TEXT = script:GetCustomProperty("ContestedText"):WaitForObject()
+local CONTESTED_TEXT_PANEL = script:GetCustomProperty("ContestedText"):WaitForObject()
 
 -- User exposed properties
 local SHOW_POINT_NAME = COMPONENT_ROOT:GetCustomProperty("ShowPointName")
@@ -55,6 +55,18 @@ function GetViewedPlayer()
     end
 
     return LOCAL_PLAYER
+end
+
+function SetChildrenText(uiObj, _text)
+	if Object.IsValid(uiObj) and uiObj:IsA("UIText") then
+		uiObj.text = _text
+	end
+
+	for i, v in ipairs(uiObj:GetChildren()) do
+		if v:IsA("UIText") then
+			SetChildrenText(v, _text)
+		end
+	end
 end
 
 -- nil Tick(float)
@@ -179,11 +191,9 @@ function Tick(deltaTime)
 
     -- Show contested message
     if capturePointState.friendliesPresent > 0 and capturePointState.enemiesPresent > 0 then
-        CONTESTED_TEXT.text = CONTESTED_MESSAGE
-        CONTESTED_TEXT:GetChildren()[1].text = CONTESTED_MESSAGE
+        SetChildrenText(CONTESTED_TEXT_PANEL, CONTESTED_MESSAGE)
     else
-        CONTESTED_TEXT.text = ""
-        CONTESTED_TEXT:GetChildren()[1].text = ""
+        SetChildrenText(CONTESTED_TEXT_PANEL, "")
     end
 end
 
