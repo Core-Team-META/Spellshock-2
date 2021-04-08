@@ -53,15 +53,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16469333663941198075
-  Name: "Fantasy Book 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Book_003"
-  }
-}
-Assets {
   Id: 15575092074641359796
   Name: "Frame Outlined 016"
   PlatformAssetType: 9
@@ -104,6 +95,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFI_Icon_020"
+  }
+}
+Assets {
+  Id: 13892267814833461183
+  Name: "Fantasy Bell 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_BBlanket_001"
   }
 }
 Assets {
@@ -170,30 +170,12 @@ Assets {
   }
 }
 Assets {
-  Id: 11711350196513819217
-  Name: "Fantasy Chest 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Chest_004"
-  }
-}
-Assets {
   Id: 11478889498718573073
   Name: "Fantasy Crown 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Crown_001"
-  }
-}
-Assets {
-  Id: 11380906219068575767
-  Name: "Fantasy Book 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Book_004"
   }
 }
 Assets {
@@ -404,6 +386,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3910619376972392297
+  Name: "Fantasy Coins 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_005"
+  }
+}
+Assets {
   Id: 3483798833601977176
   Name: "Fantasy Shape 003"
   PlatformAssetType: 9
@@ -455,6 +446,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
+  Id: 634785656113528393
+  Name: "Fantasy Medal 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Medal_002"
   }
 }
 Assets {

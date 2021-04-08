@@ -40146,7 +40146,8 @@ Objects {
   Control {
     Width: 60
     Height: 60
-    UIY: 31.5191193
+    UIX: -6.05737305
+    UIY: 26.6718445
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -40154,7 +40155,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 11711350196513819217
+        Id: 13892267814833461183
       }
       Color {
         R: 1
@@ -40218,9 +40219,9 @@ Objects {
       }
       Color {
         R: 1
-        G: 0.7880795
+        G: 0.788079441
         B: 0.199999988
-        A: 1
+        A: 0.728000045
       }
       TeamSettings {
       }
@@ -40266,7 +40267,8 @@ Objects {
   Control {
     Width: 64
     Height: 64
-    UIY: 31.5191193
+    UIX: -6.05737305
+    UIY: 26.6718445
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -40274,7 +40276,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 11711350196513819217
+        Id: 13892267814833461183
       }
       Color {
         R: 0.0700000525
