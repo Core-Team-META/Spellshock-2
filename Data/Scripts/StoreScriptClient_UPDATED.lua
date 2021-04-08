@@ -632,7 +632,14 @@ function UpdateEntryButton(entry, highlighted)
 
 	function SetFramesColor(frames, color)
 		for _, frame in ipairs(frames) do
-			frame:SetColor(color)
+
+			if frame:IsA("UIImage") then
+				frame:SetColor(color)
+			elseif frame:IsA("UIPanel") then
+				local fin = frame:FindDescendantByName("Rarity Fin")
+				fin:SetColor(color)
+			end
+
 		end
 	end
 
