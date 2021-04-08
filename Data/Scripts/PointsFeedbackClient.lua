@@ -471,7 +471,7 @@ end
 
 function OnGameStateChanged(oldState, newState, hasDuration, time)
 	if newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_ROUND_END then
-		Task.Wait(5)
+		Task.Wait(10)
 		allowFeed = true
 	else
 		allowFeed = false
