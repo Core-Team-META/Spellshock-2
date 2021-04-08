@@ -314,7 +314,10 @@ API.COSMETIC_SKIN = {
     UNCOMMON = 2,
     RARE = 3,
     LEGENDARY = 4,
-    ELEMENTAL = 5
+    ELEMENTAL = 5,
+    ROYAL = 6,
+    PUNK = 7,
+    JUSTICE = 8
 }
 
 -- BINDING KEYS
