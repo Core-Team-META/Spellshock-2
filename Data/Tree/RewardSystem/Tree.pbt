@@ -13495,6 +13495,12 @@ Objects {
         Id: 3692130031545591443
       }
     }
+    Overrides {
+      Name: "cs:ClickSFX"
+      AssetReference {
+        Id: 13059262407258792093
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
