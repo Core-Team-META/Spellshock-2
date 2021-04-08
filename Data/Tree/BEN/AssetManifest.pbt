@@ -1,4 +1,13 @@
 Assets {
+  Id: 16215335743376183929
+  Name: "Meta Heartbeat Single 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_meta_heartbeat_single_01_Cue_ref"
+  }
+}
+Assets {
   Id: 10577491396371571795
   Name: "Depth of Field Post Process"
   PlatformAssetType: 6
