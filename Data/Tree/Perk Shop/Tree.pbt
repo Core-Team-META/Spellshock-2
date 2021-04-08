@@ -28277,7 +28277,6 @@ Objects {
   ChildIds: 16218647263246006734
   ChildIds: 9942937867911110629
   ChildIds: 3219523048394623588
-  ChildIds: 16271982754076935947
   ChildIds: 10873749923239775016
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -28386,76 +28385,6 @@ Objects {
   }
 }
 Objects {
-  Id: 16271982754076935947
-  Name: "Info Text"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8463090671482128606
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 7
-    Height: 25
-    UIX: 117.385742
-    UIY: 150.033447
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    Text {
-      Label: "Costume"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 15
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:top"
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 3219523048394623588
   Name: "Info Text"
   Transform {
@@ -28483,7 +28412,7 @@ Objects {
     Width: 7
     Height: 25
     UIX: 62.525013
-    UIY: 177.638992
+    UIY: 150.424622
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28494,9 +28423,9 @@ Objects {
     Text {
       Label: "(Permanently Unlocked)"
       Color {
-        R: 0.859375
-        G: 0.859375
-        B: 0.859375
+        R: 0.59375
+        G: 0.59375
+        B: 0.59375
         A: 1
       }
       Size: 12
@@ -28552,8 +28481,8 @@ Objects {
   Control {
     Width: 7
     Height: 25
-    UIX: 169.172195
-    UIY: 128.258
+    UIX: 112.268051
+    UIY: 129
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28562,14 +28491,14 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "Warrior"
+      Label: "Warrior Costumes"
       Color {
         R: 1
         G: 1
         B: 1
         A: 1
       }
-      Size: 15
+      Size: 14
       Justification {
         Value: "mc:etextjustify:left"
       }
@@ -28622,8 +28551,8 @@ Objects {
   Control {
     Width: 7
     Height: 25
-    UIX: 83.9682
-    UIY: 128.258
+    UIX: 75.0042725
+    UIY: 127
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28632,10 +28561,10 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "Legendary"
+      Label: "Epic"
       Color {
-        R: 0.470000029
-        G: 0.140066251
+        R: 0.311258793
+        B: 1
         A: 1
       }
       Size: 15
@@ -28691,7 +28620,7 @@ Objects {
   Control {
     Width: 7
     Height: 25
-    UIX: 53.8282318
+    UIX: 44.8643036
     UIY: 125.272934
     RenderTransformPivot {
       Anchor {
@@ -28701,7 +28630,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "+1"
+      Label: "+2"
       Color {
         R: 0.258609235
         G: 0.549999952
