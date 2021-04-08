@@ -1,6 +1,38 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 4646961424574862806
+  Name: "Tutorial"
+  Transform {
+    Location {
+      X: -8791.50586
+      Y: 272059.75
+      Z: 7539.61084
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Tutorial"
+  }
+}
+Objects {
   Id: 3457668934632133835
   Name: "Progression Mutlipliers"
   Transform {
