@@ -10,7 +10,9 @@ while not AnimationAbility.owner do
 end
 
 function OnDestroyed()
-    Attachment:Destroy()
+	if Object.IsValid(Attachment) then
+		Attachment:Destroy()
+	end
 end
 
 function Tick(deltaTime)
