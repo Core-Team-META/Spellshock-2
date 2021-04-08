@@ -10,9 +10,12 @@ local VIP_BOOST_TEXT = VIP_MEMBER_PANEL:GetCustomProperty("ActiveText"):WaitForO
 
 local XP_BOOST_PANEL = PERK_PANEL:GetCustomProperty("XPBoost"):WaitForObject()
 local XP_BOOST_TEXT = XP_BOOST_PANEL:GetCustomProperty("ActiveText"):WaitForObject()
+local XP_MULITPLIER_TEXT = XP_BOOST_PANEL:GetCustomProperty("Multiplier"):WaitForObject()
 
 local GOLD_BOOST_PANEL = PERK_PANEL:GetCustomProperty("GoldBoost"):WaitForObject()
 local GOLD_BOOST_TEXT = GOLD_BOOST_PANEL:GetCustomProperty("ActiveText"):WaitForObject()
+local GOLD_MULITPLIER_TEXT = GOLD_BOOST_PANEL:GetCustomProperty("Multiplier"):WaitForObject()
+
 
 local VIP_MULTIPLIER = script:GetCustomProperty("VIP_MULTIPLIER"):WaitForObject()
 local SERVER_MULTIPLIER = script:GetCustomProperty("SERVER_MULTIPLIER"):WaitForObject()
@@ -40,6 +43,8 @@ function Int()
         VIP_BOOST_TEXT.text = "N/A"
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
+    XP_MULITPLIER_TEXT.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .."x XP"
+    GOLD_MULITPLIER_TEXT.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x Gold"
 end
 
 function OnDictionaryChanged(player, key, value)
