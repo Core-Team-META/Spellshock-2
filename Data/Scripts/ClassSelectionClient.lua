@@ -289,7 +289,7 @@ function OnGlobalStatsClicked(thisButton)
 	local notActiveText = "---"
 
 	-- GOLD SELF BOOST 
-	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_GOLD_BOOST_KEY) then
+	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_GOLD_BOOST_KEY) - time() > 0 then
 		gold_SelfBonus.text = "Self Bonus: +"..tostring(CoreMath.Round(CONST.GOLD_SELF_BOOST_MULTIPLIER*100)).."%"
 		goldTotal = goldTotal + CoreMath.Round(CONST.GOLD_SELF_BOOST_MULTIPLIER*100)
 	else
@@ -297,27 +297,27 @@ function OnGlobalStatsClicked(thisButton)
 	end
 
 	-- GOLD SERVER BOOST
-	if LOCAL_PLAYER.clientUserData.IsServerGoldBoosted then 
-		gold_ServerBonus.text = "Server Bonus: +"..tostring(CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)).."%"
-		goldTotal = goldTotal + CoreMath.Round(CONST.GOLD_SERVER_BOOST_MULTIPLIER*100)
+	if CONST.EVENT_GOLD_MULTIPLIER > 0 then 
+		gold_ServerBonus.text = "Event Bonus: +"..tostring(CoreMath.Round(CONST.EVENT_GOLD_MULTIPLIER*100)).."%"
+		goldTotal = goldTotal + CoreMath.Round(CONST.EVENT_GOLD_MULTIPLIER*100)
 	else
-		gold_ServerBonus.text = "Server Bonus: "..notActiveText
+		gold_ServerBonus.text = "Event Bonus: "..notActiveText
 	end
 
 	-- CLASS XP SELF BOOST
-	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_XP_BOOST_KEY) then
+	if _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.SELF_XP_BOOST_KEY) - time() > 0 then
 		class_SelfBonus.text = "Self Bonus: +"..tostring(CoreMath.Round(CONST.XP_SELF_BOOST_MULTIPLIER*100)).."%"
 		classTotal = classTotal + CoreMath.Round(CONST.XP_SELF_BOOST_MULTIPLIER*100)
 	else
 		class_SelfBonus.text = "Self Bonus: "..notActiveText
 	end
 
-	-- CLASS XP SERVER BOOST
-	if LOCAL_PLAYER.clientUserData.IsServerXpBoosted then 
-		class_ServerBonus.text = "Server Bonus: +"..tostring(CoreMath.Round(CONST.XP_SERVER_BOOST_MULTIPLIER*100)).."%"
-		classTotal = classTotal + CoreMath.Round(CONST.XP_SERVER_BOOST_MULTIPLIER*100)
+	-- CLASS XP EVENT BOOST
+	if CONST.EVENT_XP_MULITPLIER > 0 then 
+		class_ServerBonus.text = "Event Bonus: +"..tostring(CoreMath.Round(CONST.EVENT_XP_MULITPLIER*100)).."%"
+		classTotal = classTotal + CoreMath.Round(CONST.EVENT_XP_MULITPLIER*100)
 	else
-		class_ServerBonus.text = "Server Bonus: "..notActiveText
+		class_ServerBonus.text = "Event Bonus: "..notActiveText
 	end
 
 	-- VIP
