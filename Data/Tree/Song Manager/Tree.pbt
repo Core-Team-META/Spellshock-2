@@ -1543,7 +1543,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Volume: 0.35
       Falloff: 3600
       Radius: 400
       FadeInTime: 1
@@ -1940,7 +1939,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Volume: 0.35
       Falloff: 2500
       Radius: 6500
       FadeInTime: 1

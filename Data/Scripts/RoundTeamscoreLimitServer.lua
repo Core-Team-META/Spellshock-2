@@ -38,7 +38,11 @@ function Tick(deltaTime)
 		local winningTeam = nil
 
 		for i = 0, 2 do
-			if Game.GetTeamScore(i) >= DynamicCapturePoints:GetCustomProperty("ScoreLimit") then
+			local scoreLimit = DynamicCapturePoints:GetCustomProperty("ScoreLimit")
+			if scoreLimit > 500 then
+				scoreLimit = 500
+			end
+			if Game.GetTeamScore(i) >= scoreLimit then
 				if winningTeam then
 					--Events.Broadcast("TieVictory")
 					--ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)

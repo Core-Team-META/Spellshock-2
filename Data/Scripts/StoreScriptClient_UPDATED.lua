@@ -698,10 +698,12 @@ function UpdateEntryButton(entry, highlighted)
 		--entry.priceBG:SetColor(entry.priceBGHoverColor)
 		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("HighlightColor")) --matching rarity
 		--entry.BGMesh:SetColor(entry.BGMesh:GetColor() + entry.geo:GetCustomProperty("HighlightColor")) dulled down
+		entry.BGMesh:SetSmartProperty("Swirl Color", RarityDefs[entry.data.rarity].color)
 	elseif  CosmeticIsEquipped(entry.data.id) then
 		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
 		--SetFramesColor(entry.frames, entry.frameEquippedColor) dulled down
 		entry.priceBG:SetColor(entry.priceBGEquippedColor)
+		entry.BGMesh:SetSmartProperty("Swirl Color", RarityDefs[entry.data.rarity].color)
 		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("EquippedColor")) --matching rarity
 		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("EquippedColor")) dulled down
 	elseif  HasCosmetic(entry.data.id) then
@@ -710,6 +712,7 @@ function UpdateEntryButton(entry, highlighted)
 		entry.priceBG:SetColor(entry.priceBGOwnedColor)
 		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("OwnedColor")) --matching rarity
 		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("OwnedColor")) dulled down
+		entry.BGMesh:SetSmartProperty("Swirl Color", RarityDefs[entry.data.rarity].color)
 	else 
 		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
 		--SetFramesColor(entry.frames, entry.frameDefaultColor) dulled down
