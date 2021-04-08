@@ -43,7 +43,7 @@ function Tick(deltaTime)
 
 	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() == nil then
 		local players = Game.GetPlayers()
-		if #players >= REQUIRED_PLAYERS or Environment.IsPreview() then
+		if #players >= REQUIRED_PLAYERS or (Environment.IsPreview() and PREVIEW_LOBBY_COUNTDOWN_TIME > 0) then
 			if Environment.IsPreview() and PREVIEW_LOBBY_COUNTDOWN_TIME > 0 then COUNTDOWN_TIME = PREVIEW_LOBBY_COUNTDOWN_TIME end
 			ABGS.SetTimeRemainingInState(COUNTDOWN_TIME)
 		end
