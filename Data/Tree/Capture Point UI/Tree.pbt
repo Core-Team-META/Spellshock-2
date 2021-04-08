@@ -2388,6 +2388,18 @@ Objects {
         Id: 16110112929129872087
       }
     }
+    Overrides {
+      Name: "cs:PointLostSFX"
+      AssetReference {
+        Id: 18412587982388751784
+      }
+    }
+    Overrides {
+      Name: "cs:PointCapturedSFX"
+      AssetReference {
+        Id: 12418529147461123418
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
