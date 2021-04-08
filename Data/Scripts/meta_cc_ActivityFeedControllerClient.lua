@@ -427,7 +427,6 @@ function OnResourceChanged(player, resName, resAmt)
 			-- print("No: " .. player.name .. " - " .. resName .. " - " .. tostring(resAmt))
 		end
 
-
 	end
 	NEEDS_UPDATE = true
 end

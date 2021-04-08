@@ -445,15 +445,15 @@ Objects {
     }
     Overrides {
       Name: "cs:AllowSubscriptionPurchase"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:KeepSubscriptionCosmetics"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:SubscriptionTagName"
-      String: "VIP"
+      String: "SP"
     }
     Overrides {
       Name: "cs:StoreContents"
