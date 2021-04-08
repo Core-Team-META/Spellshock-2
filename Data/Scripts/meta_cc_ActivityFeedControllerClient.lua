@@ -341,9 +341,11 @@ function Tick(deltaTime)
 			BGBorderColor.a =  CoreMath.Clamp(1.0 - (age - LINE_DURATION) / FADE_DURATION, 0.0, 0.7)
 
 			local BGImage = lineTemplates[i]:GetChildren()[1]
-			BGImage:SetColor(BGColor)
-			for _, borderLine in pairs(BGImage:GetChildren()) do
-				borderLine:SetColor(BGBorderColor)
+			if (BGImage) then
+				BGImage:SetColor(BGColor)
+				for _, borderLine in pairs(BGImage:GetChildren()) do
+					borderLine:SetColor(BGBorderColor)
+				end
 			end
 		end
 	end
@@ -739,6 +741,8 @@ end
 Game.roundEndEvent:Connect(ResetFeed)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+
+-- LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
 
 AF_PANEL.visibility = Visibility.FORCE_OFF
 
