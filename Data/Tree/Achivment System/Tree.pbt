@@ -1417,7 +1417,7 @@ Objects {
     Width: 350
     Height: 75
     UIX: 380
-    UIY: 125
+    UIY: -100
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1428,12 +1428,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topright"
+          Value: "mc:euianchor:bottomright"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topright"
+          Value: "mc:euianchor:bottomright"
         }
       }
     }
@@ -4999,7 +4999,7 @@ Objects {
 }
 Objects {
   Id: 11946582946048065783
-  Name: "Assassin 10000 Damage"
+  Name: "The Darkness"
   Transform {
     Location {
     }
@@ -5034,7 +5034,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 6471483824635504535
       }
     }
     Overrides {
@@ -5155,7 +5155,7 @@ Objects {
 }
 Objects {
   Id: 4591582696340788177
-  Name: "Assassin 7500 Damage"
+  Name: "Slayer"
   Transform {
     Location {
     }
@@ -5190,7 +5190,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 6471483824635504535
       }
     }
     Overrides {
@@ -5311,7 +5311,7 @@ Objects {
 }
 Objects {
   Id: 17922150890607565343
-  Name: "Assassin 5000 Damage"
+  Name: "Phantom"
   Transform {
     Location {
     }
@@ -5346,7 +5346,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 6471483824635504535
       }
     }
     Overrides {
@@ -5463,7 +5463,7 @@ Objects {
 }
 Objects {
   Id: 14625116514122900648
-  Name: "Assassin 2000 Damage "
+  Name: "Striker"
   Transform {
     Location {
     }
@@ -5498,7 +5498,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 6471483824635504535
       }
     }
     Overrides {
@@ -5619,7 +5619,7 @@ Objects {
 }
 Objects {
   Id: 13465279709044545999
-  Name: "Healer 7000 Damage"
+  Name: "The Chosen"
   Transform {
     Location {
     }
@@ -5654,7 +5654,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 15270045714178679479
       }
     }
     Overrides {
@@ -5775,7 +5775,7 @@ Objects {
 }
 Objects {
   Id: 5266596681913662911
-  Name: "Healer 5500 Damage"
+  Name: "Exalted"
   Transform {
     Location {
     }
@@ -5810,7 +5810,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 15270045714178679479
       }
     }
     Overrides {
@@ -5931,7 +5931,7 @@ Objects {
 }
 Objects {
   Id: 18091468244042777238
-  Name: "Healer 3000 Damage"
+  Name: "Auror"
   Transform {
     Location {
     }
@@ -5966,7 +5966,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 15270045714178679479
       }
     }
     Overrides {
@@ -6083,7 +6083,7 @@ Objects {
 }
 Objects {
   Id: 10373124158785172999
-  Name: "Healer 1500 Damage "
+  Name: "Disciple"
   Transform {
     Location {
     }
@@ -6118,7 +6118,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 15270045714178679479
       }
     }
     Overrides {
@@ -6239,7 +6239,7 @@ Objects {
 }
 Objects {
   Id: 14568658216643893110
-  Name: "Hunter 10000 Damage"
+  Name: "Legend"
   Transform {
     Location {
     }
@@ -6274,7 +6274,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 1841191188658464764
       }
     }
     Overrides {
@@ -6395,7 +6395,7 @@ Objects {
 }
 Objects {
   Id: 7244922412357479942
-  Name: "Hunter 7500 Damage"
+  Name: "Ranger"
   Transform {
     Location {
     }
@@ -6430,7 +6430,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 1841191188658464764
       }
     }
     Overrides {
@@ -6551,7 +6551,7 @@ Objects {
 }
 Objects {
   Id: 5401550428953604015
-  Name: "Hunter 5000 Damage"
+  Name: "Pathfinder"
   Transform {
     Location {
     }
@@ -6586,7 +6586,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 1841191188658464764
       }
     }
     Overrides {
@@ -6703,7 +6703,7 @@ Objects {
 }
 Objects {
   Id: 15794504909961927616
-  Name: "Hunter 2000 Damage "
+  Name: "Trapper"
   Transform {
     Location {
     }
@@ -6738,7 +6738,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 1841191188658464764
       }
     }
     Overrides {
@@ -6859,7 +6859,7 @@ Objects {
 }
 Objects {
   Id: 6757446529232996287
-  Name: "Mage 10000 Damage"
+  Name: "Spellweaver"
   Transform {
     Location {
     }
@@ -6894,7 +6894,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 9340368042789197982
       }
     }
     Overrides {
@@ -7015,7 +7015,7 @@ Objects {
 }
 Objects {
   Id: 4625354476083671118
-  Name: "Mage 7500 Damage"
+  Name: "Elementalist"
   Transform {
     Location {
     }
@@ -7050,7 +7050,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 9340368042789197982
       }
     }
     Overrides {
@@ -7171,7 +7171,7 @@ Objects {
 }
 Objects {
   Id: 8568557348581089068
-  Name: "Mage 5000 Damage"
+  Name: "Arcanist"
   Transform {
     Location {
     }
@@ -7206,7 +7206,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 9340368042789197982
       }
     }
     Overrides {
@@ -7323,7 +7323,7 @@ Objects {
 }
 Objects {
   Id: 6991352356651568015
-  Name: "Mage 2000 Damage "
+  Name: "Spellcaster"
   Transform {
     Location {
     }
@@ -7358,7 +7358,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 9340368042789197982
       }
     }
     Overrides {
@@ -7479,7 +7479,7 @@ Objects {
 }
 Objects {
   Id: 6170591494316531774
-  Name: "Warrior 10000 Damage"
+  Name: "The Avalanche"
   Transform {
     Location {
     }
@@ -7514,7 +7514,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 8824779270827057466
       }
     }
     Overrides {
@@ -7635,7 +7635,7 @@ Objects {
 }
 Objects {
   Id: 8553301281593751662
-  Name: "Warrior 7500 Damage"
+  Name: "Devastator"
   Transform {
     Location {
     }
@@ -7670,7 +7670,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 8824779270827057466
       }
     }
     Overrides {
@@ -7791,7 +7791,7 @@ Objects {
 }
 Objects {
   Id: 2137426500777738859
-  Name: "Warrior 5000 Damage"
+  Name: "Crusher"
   Transform {
     Location {
     }
@@ -7826,7 +7826,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 8824779270827057466
       }
     }
     Overrides {
@@ -7943,7 +7943,7 @@ Objects {
 }
 Objects {
   Id: 13521245677356452609
-  Name: "Warrior 2000 Damage "
+  Name: "Brawler"
   Transform {
     Location {
     }
@@ -7978,7 +7978,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 101582251860649597
+        Id: 8824779270827057466
       }
     }
     Overrides {
