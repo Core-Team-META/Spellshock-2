@@ -3908,6 +3908,30 @@ Objects {
         Id: 3392388590054420013
       }
     }
+    Overrides {
+      Name: "cs:03_Pyroblast_Projectile"
+      AssetReference {
+        Id: 190311559756997868
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Impact"
+      AssetReference {
+        Id: 7677382368845934921
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Break"
+      AssetReference {
+        Id: 8929882190614343836
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Attachment"
+      AssetReference {
+        Id: 7156613417916661940
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4104,6 +4128,18 @@ Objects {
       Name: "cs:03_Iceberg_Attachment"
       AssetReference {
         Id: 7921538902990370686
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Projectile"
+      AssetReference {
+        Id: 12126443012913655570
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Impact"
+      AssetReference {
+        Id: 14248801232993029065
       }
     }
   }
@@ -4454,6 +4490,30 @@ Objects {
         Id: 382110103784642460
       }
     }
+    Overrides {
+      Name: "cs:03_Pyroblast_Projectile"
+      AssetReference {
+        Id: 1501139048018181677
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Impact"
+      AssetReference {
+        Id: 382110103784642460
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Attachment"
+      AssetReference {
+        Id: 8863279680582417533
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Break"
+      AssetReference {
+        Id: 493810947062000790
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4650,6 +4710,18 @@ Objects {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
         Id: 16667705773786617483
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Projectile"
+      AssetReference {
+        Id: 5654866788548477920
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Impact"
+      AssetReference {
+        Id: 7794121287511761576
       }
     }
   }
