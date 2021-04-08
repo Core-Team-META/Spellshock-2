@@ -14,14 +14,16 @@ end
 local task = Task.Spawn(function()
 
 	--Task.Wait(0) --play when the ability is spawned
-	Ease3D.EasePosition(RockWall, Vector3.New(0, 0, 0), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
-	Ease3D.EasePosition(Center, Vector3.New(95, 12, 0), .6, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
-	Ease3D.EasePosition(Mid, Vector3.New(10, 1, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
-	Ease3D.EasePosition(Outer, Vector3.New(-105, -9, 0), .2, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
+	Ease3D.EasePosition(RockWall, Vector3.New(0, 0, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
+	Ease3D.EasePosition(Center, Vector3.New(95, 12, 0), .8, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
 	Ease3D.EaseScale(Center, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
+	Task.Wait(.1)
+	Ease3D.EasePosition(Mid, Vector3.New(10, 1, 0), .8, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.OUT)
 	Ease3D.EaseScale(Mid, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
+	Task.Wait(.1)
+	Ease3D.EasePosition(Outer, Vector3.New(-105, -9, 0), .8, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.OUT)
 	Ease3D.EaseScale(Outer, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
-	Task.Wait(Root:GetCustomProperty("lifeSpan")-1.1) --play 1 sec before the ability is destroyed
+	Task.Wait(Root:GetCustomProperty("lifeSpan")-1.3) --play 1 sec before the ability is destroyed
 	
 	if Object.IsValid(GravelSFX) then
 		GravelSFX:Play()

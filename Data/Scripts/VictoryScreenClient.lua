@@ -51,6 +51,7 @@ local WINNER_SORT_TYPES = { "KILL_DEATH", "RESOURCE" }
 ------------------------------------------------------------------------------------------------------------------------
 local UpdateUITask = nil
 local inVictory = false
+local originalTextSize = {}
 ------------------------------------------------------------------------------------------------------------------------
 --	LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -70,6 +71,14 @@ function SetChildrenText(uiObj, _text) -- <-- generic children text function by 
 
     for i, v in ipairs(uiObj:GetChildren()) do
         if v:IsA("UIText") then SetChildrenText(v, _text) end
+    end
+end
+
+function SetChildrenFontSize(uiObj, _size) -- <-- generic children text function by AJ
+    if Object.IsValid(uiObj) and uiObj:IsA("UIText") then uiObj.fontSize = _size end
+
+    for i, v in ipairs(uiObj:GetChildren()) do
+        if v:IsA("UIText") then SetChildrenFontSize(v, _size) end
     end
 end
 
@@ -111,6 +120,12 @@ local function UpdatePanelForPlayer(panel, player)
 		nameTextLabel:SetColor(_G.TeamColors[3])
 	else
 		nameTextLabel:SetColor(_G.TeamColors[player.team])
+	end
+	
+	if string.len(player.name) > 20 then
+		SetChildrenFontSize(nameTextLabel, math.ceil(originalTextSize[panel.id] * 0.7))
+	else 
+		SetChildrenFontSize(nameTextLabel, originalTextSize[panel.id])
 	end
 
 	killsValueLabel.text = tostring(player.kills)
@@ -239,6 +254,10 @@ end
 
 --	Get the default sort type if the current one is not valid
 WINNER_SORT_TYPE = GetProperty(WINNER_SORT_TYPE, WINNER_SORT_TYPES)
+
+for x, p in ipairs(PlayerPanels) do
+	originalTextSize[p.id] = p:GetCustomProperty("NameText"):WaitForObject().fontSize
+end
 
 --	Connect events appropriately
 --Events.Connect("SendToVictoryScreen", SendToVictoryScreen)

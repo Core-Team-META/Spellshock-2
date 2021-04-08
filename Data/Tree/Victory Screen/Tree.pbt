@@ -779,6 +779,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -4
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -794,7 +795,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 10
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -850,7 +851,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -3
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -863,7 +864,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 10
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -919,7 +920,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -3
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -932,7 +933,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 10
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -988,7 +989,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1001,7 +1002,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 10
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -1057,7 +1058,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1070,7 +1071,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 10
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -2304,7 +2305,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 15
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2373,7 +2374,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -2442,7 +2443,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -2511,7 +2512,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -2580,7 +2581,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -2649,7 +2650,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -3883,7 +3884,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 15
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3952,7 +3953,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -4021,7 +4022,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -4090,7 +4091,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -4159,7 +4160,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -4228,7 +4229,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -5531,7 +5532,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -5600,7 +5601,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -5669,7 +5670,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -5738,7 +5739,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -5807,7 +5808,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -7110,7 +7111,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -7179,7 +7180,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -7248,7 +7249,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -7317,7 +7318,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -7386,7 +7387,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -8688,7 +8689,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -8757,7 +8758,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -8826,7 +8827,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -8895,7 +8896,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -8964,7 +8965,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -10266,7 +10267,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -10335,7 +10336,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -10404,7 +10405,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -10473,7 +10474,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -10542,7 +10543,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 18
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -11843,7 +11844,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 24
+      Size: 22
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -11912,7 +11913,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 22
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -11981,7 +11982,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 22
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -12050,7 +12051,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 22
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -12119,7 +12120,7 @@ Objects {
       Color {
         A: 0.337
       }
-      Size: 24
+      Size: 22
       Justification {
         Value: "mc:etextjustify:center"
       }
