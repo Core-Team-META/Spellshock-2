@@ -10,6 +10,7 @@
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
+local EaseUI = require(script:GetCustomProperty("EaseUI"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 while not _G.CurrentMenu do
@@ -96,6 +97,7 @@ local store = require(prop_CosmeticStore)
 local propUIMarkersAndPreviews = script:GetCustomProperty("UIMarkersAndPreviews"):WaitForObject()
 local propBaseUIContainer = propStoreRoot:GetCustomProperty("BaseUIContainer"):WaitForObject()
 local propCurrentTeam = script:GetCustomProperty("CurrentTeam"):WaitForObject()
+local propEquipOnRespawnMessage = script:GetCustomProperty("EquipOnRespawnMessage"):WaitForObject()
 
 ------------------------------------------------------------------------------------------------------------------------
 -- SFX
@@ -257,6 +259,8 @@ local typeFilterButtonData = {}
 local filterButtonData = {}
 local classID_TO_filterButton = {}
 
+local defaultRespawnMessagePosition = propEquipOnRespawnMessage.y
+
 local defaultColor = Color.FromLinearHex("63F3FFFF")
 
 local checkPerks = nil
@@ -385,6 +389,8 @@ function ShowStore_ClientHelper()
 	if player ~= Game.GetLocalPlayer() then
 		return
 	end
+	
+	propEquipOnRespawnMessage.y = defaultRespawnMessagePosition + 1000
 
 	setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0, true)
 	setPreviewMesh:RotateTo(Rotation.New(0, 0, -90), 0, true)
@@ -616,7 +622,7 @@ end
 
 function SelectNothing()
 	currentZoom = equippedZoom
-	if currentlySelected ~= nil then
+	if currentlySelected ~= nil and Object.IsValid(currentlySelected.BGMesh) then
 		currentlySelected.BGMesh:SetColor(currentlySelected.BGMeshColor)
 	end
 	propPurchaseButton.visibility = Visibility.FORCE_OFF
@@ -907,6 +913,8 @@ function ApplyCosmetic(entry)
 		--ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", nil, nil, true)
 		return
 	end
+	
+	EaseUI.EaseY(propEquipOnRespawnMessage, defaultRespawnMessagePosition, 1, EaseUI.EasingEquation.ELASTIC, EaseUI.EasingDirection.INOUT)
 	--print("Requesting" .. entry.data.id)
 	--print(entry.data.visible)
 	propPurchaseButton.visibility = Visibility.FORCE_OFF
@@ -921,6 +929,10 @@ function ApplyCosmetic(entry)
 	cosmeticResourceName = UTIL.GetSkinString(class, team, bind)
 	--print("Broadcasting Equip: "..cosmeticResourceName)
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
+	
+	Task.Wait(3)
+	
+	EaseUI.EaseY(propEquipOnRespawnMessage, defaultRespawnMessagePosition + 1000, 1, EaseUI.EasingEquation.ELASTIC, EaseUI.EasingDirection.INOUT)
 end
 
 function ApplyCosmeticHelper()

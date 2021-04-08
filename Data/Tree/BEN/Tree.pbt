@@ -1,6 +1,118 @@
 Name: "BEN"
 RootId: 12935185397369316502
 Objects {
+  Id: 14291644262325182723
+  Name: "Heart Beat"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  ChildIds: 5236111476486582131
+  ChildIds: 14340600663168930898
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 14340600663168930898
+  Name: "HeartBeatHandler"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14291644262325182723
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:HeartbeatSFX"
+      ObjectReference {
+        SelfId: 5236111476486582131
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:DynamicCapturePoints"
+      ObjectReference {
+        SelfId: 14570647703378092628
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16329543708675641342
+    }
+  }
+}
+Objects {
+  Id: 5236111476486582131
+  Name: "Meta Heartbeat Single 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14291644262325182723
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16215335743376183929
+    }
+    Volume: 2
+    Falloff: -1
+    Radius: -1
+  }
+}
+Objects {
   Id: 4189845317229286629
   Name: "OnJoinRoundEndGame"
   Transform {
