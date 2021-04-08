@@ -5,6 +5,12 @@
 	Customizable activity feed, kills, join/leave, etc
 --]]
 
+while not _G["Class.Progression"] do
+	Task.Wait()
+	end
+	
+local API = _G["Class.Progression"]
+
 local ABGS = require(script:GetCustomProperty("ABGS"))
 
 -- Internal custom properties
@@ -15,21 +21,62 @@ local AF_IMAGE_TEMPLATE = script:GetCustomProperty("ActivityFeedImageTemplate")
 local AF_TEXT_ON_IMAGE_TEMPLATE = script:GetCustomProperty("ActivityFeedTextOnImage")
 local AF_HEALTH_BAR_TEMPLATE = script:GetCustomProperty("ActivityFeedHealthBar")
 
-local scriptListeners = {}
-local listeners = {}
-local levelUpEnabled = false
-
 while not _G.CurrentMenu do Task.Wait() end
 
 -- Feed icons
 local NEEDS_UPDATE = false
+
+function TablePrint(tbl, indent)
+    local formatting, lua_type
+    if tbl == nil then
+        print("Table was nil")
+        return
+    end
+    if type(tbl) ~= "table" then
+        print("Table is not a table, it is a " .. type(tbl))
+        return
+    end
+    if next(tbl) == nil then
+        print("Table is empty")
+        return
+    end
+    if not indent then
+        indent = 0
+    end
+
+    -- type(v) returns nil, number, string, function, CFunction, userdata, and table.
+    -- type(v) returns string, number, function, boolean, table or nil
+    for k, v in pairs(tbl) do
+        formatting = string.rep("  ", indent) .. k .. ": "
+        lua_type = type(v)
+        if lua_type == "table" then
+            print(formatting)
+            TablePrint(v, indent + 1)
+        elseif lua_type == "boolean" then
+            print(formatting .. tostring(v))
+        elseif lua_type == "function" then
+            print(formatting .. "function")
+        elseif lua_type == "userdata" then
+			if (v.name) then
+				print(tostring(v.name))
+			else
+				print(tostring(v))
+			end
+            print(formatting .. "userdata")
+        else
+            print(formatting .. v)
+        end
+    end
+end
+
+
 
 -- Kill Feed
 local KILL_FEED_SETTINGS = script:GetCustomProperty("KillFeedSettings"):WaitForObject()
 
 local JOINED_ICON = KILL_FEED_SETTINGS:GetCustomProperty("JoinedIcon")
 local LEFT_ICON = KILL_FEED_SETTINGS:GetCustomProperty("LeftIcon")
-local LEVEL_UP_ICON = KILL_FEED_SETTINGS:GetCustomProperty("LeveledUpIcon")
+local LEVELED_UP_ICON = KILL_FEED_SETTINGS:GetCustomProperty("LeveledUpIcon")
 local JOINED_ICON_COLOR = KILL_FEED_SETTINGS:GetCustomProperty("JoinedIconColor")
 local LEFT_ICON_COLOR = KILL_FEED_SETTINGS:GetCustomProperty("LeftIconColor")
 
@@ -92,7 +139,7 @@ end
 
 
 ---------------------------------------------------------------------------------------------------------
--- CONSTANTS
+-- CONSTANTS AND TABLES
 ---------------------------------------------------------------------------------------------------------
 local function Enum(values) for i,v in ipairs(values) do values[v] = i end return values end
 
@@ -124,7 +171,7 @@ local ClassIDs = Enum{
 	"ASSASSIN"
 }
 
-local ClassNamesByID = Enum{
+local ClassLabelFromID = Enum{
 	"Warrior",
 	"Mage",
 	"Hunter",
@@ -141,30 +188,21 @@ for _, class in ipairs(propClassData:GetChildren()) do
 	end
 end
 
--- team 1 is Orc
--- team 2 is Elf
--- _G.TeamColors[1] = Root:GetCustomProperty("Orc")
--- _G.TeamColors[2] = Root:GetCustomProperty("Elf")
+local playerClassLevels = {
+	API.GetClassLevel(LOCAL_PLAYER, API.TANK),
+	API.GetClassLevel(LOCAL_PLAYER, API.MAGE),
+	API.GetClassLevel(LOCAL_PLAYER, API.HUNTER),
+	API.GetClassLevel(LOCAL_PLAYER, API.HEALER),
+	API.GetClassLevel(LOCAL_PLAYER, API.ASSASSIN)
+}
 
-function OnMenuChanged(oldMenu, newMenu)
-    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"]) then
-		AF_PANEL.visibility = Visibility.INHERIT
-	else -- hide
-		AF_PANEL.visibility = Visibility.FORCE_OFF
-	end
-end
-
-function OnGameStateChanged (oldState, newState)
-	if newState == ABGS.GAME_STATE_ROUND then
-        AF_PANEL.visibility = Visibility.INHERIT
-	elseif newState == ABGS.GAME_STATE_ROUND_END then -- hide
-		AF_PANEL.visibility = Visibility.FORCE_OFF
-	end
-end
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
 
 -- nil AddLine(string, Color)
 -- Adds a line to the killfeed
-function AddLine(line, color)
+local function AddLine(line, color)
 	for i = NUM_LINES, 2, -1 do
 		lines[i] = lines[i - 1]
 	end
@@ -185,8 +223,8 @@ function AddLine(line, color)
 		lines[1].killedImage = JOINED_ICON
 	elseif (line[4] == "PlayerLeft") then
 		lines[1].killedImage = LEFT_ICON
-	elseif (line[4] == "PlayerLeveled") then
-		lines[1].killedImage = LEVEL_UP_ICON
+	elseif (line[4] == "PlayerLeveledUp") then
+		lines[1].killedImage = LEVELED_UP_ICON
 	else
 		lines[1].killedImage = line[11] or nil
 	end
@@ -195,7 +233,7 @@ function AddLine(line, color)
 end
 
 
-function GetTeamColor(player)
+local function GetTeamColor(player)
 	if (player.team == LOCAL_PLAYER.team) then
 		return FRIENDLY_COLOR
 	else
@@ -206,7 +244,8 @@ end
 -- nil OnKill(string, string, <string>)
 -- Catches the event from the server and adds a line
 
-function OnKill(killerPlayer, killedPlayer, damageAbilityName)
+
+local function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 	local lineColor = TEXT_COLOR
 	if not Object.IsValid(killerPlayer) then return end
 	local killerColor = _G.TeamColors[killerPlayer.team]
@@ -263,8 +302,7 @@ function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 	end
 end
 
-
-function GetIcon(element, feedIcon)
+local function GetIcon(element, feedIcon)
 
 	for i = 1, 6 do
 		local iconLayer = element:FindDescendantByName("Layer_0"..tostring(i))
@@ -296,6 +334,121 @@ function GetIcon(element, feedIcon)
 end
 
 
+-- Initialize
+-- Spawn, space out and hide lines
+local function Init()
+		for i = 1, NUM_LINES do
+			lineTemplates[i] = World.SpawnAsset(AF_LINE_TEMPLATE, {parent = AF_PANEL})
+			local elements = {}
+	
+			lineTemplates[i].height = ICON_SIZE
+	
+			elements['KillerImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
+			elements['KillerImage'].name = "KillerImage"
+			elements['KillerImage'].width = ICON_SIZE
+			elements['KillerImage'].height = ICON_SIZE
+			elements['KillerImage'].visibility = Visibility.FORCE_OFF
+	
+			elements['KillerText'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
+			elements['KillerText'].name = "KillerText"
+			elements['KillerText'].visibility = Visibility.FORCE_OFF
+	
+			elements['KillerHealth'] = World.SpawnAsset(AF_HEALTH_BAR_TEMPLATE, {parent = lineTemplates[i]})
+			elements['KillerHealth'].width = 25
+			elements['KillerHealth'].height = ICON_SIZE
+			elements['KillerHealth'].name = "KillerHealth"
+			elements['KillerHealth'].visibility = Visibility.FORCE_OFF
+	
+			elements['KilledTextLabel'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
+			elements['KilledTextLabel'].name = "KilledTextLabel"
+	
+			elements['KilledImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
+			elements['KilledImage'].name = "KilledImage"
+			elements['KilledImage'].width = ICON_SIZE
+			elements['KilledImage'].height = ICON_SIZE
+			elements['KilledImage'].visibility = Visibility.FORCE_OFF
+	
+			elements['KilledText'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
+			elements['KilledText'].name = "KilledText"
+	
+			elements['KilledWithTextLabel'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
+			elements['KilledWithTextLabel'].name = "KilledWithTextLabel"
+	
+			elements['SkillImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
+			elements['SkillImage'].width = ICON_SIZE
+			elements['SkillImage'].height = ICON_SIZE
+			elements['SkillImage'].name = "SkillImage"
+			elements['SkillImage'].visibility = Visibility.FORCE_OFF
+	
+			elements['SpecialImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
+			elements['SpecialImage'].name = "SpecialImage"
+			elements['SpecialImage'].width = ICON_SIZE
+			elements['SpecialImage'].height = ICON_SIZE
+			elements['SpecialImage'].visibility = Visibility.FORCE_OFF
+	
+			elements['Distance'] = World.SpawnAsset(AF_TEXT_ON_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
+			elements['Distance'].width = ICON_SIZE
+			elements['Distance'].height = ICON_SIZE
+			elements['Distance'].name = "Distance"
+			elements['Distance'].visibility = Visibility.FORCE_OFF
+	
+			lineTemplates[i].y = (i - 1) * (VERTICAL_SPACING + lineTemplates[i].height)
+		end
+	end
+
+-- Resets kill feed lines
+local function ResetFeed()
+	for i = 1, NUM_LINES do
+		if lines[i] then
+			local feedLines = lineTemplates[i]:GetChildren()
+			for _, element in ipairs(feedLines) do
+				-- if (element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_OFF end
+				if (element) then
+					element:Destroy()
+				end
+			end
+		end
+	end
+	lineTemplates = {}
+	lines = {}
+	Task.Wait(0.1)
+	Init()
+end
+
+------------------------------------------------------------------------------------------------------------------------
+-- GLOBAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+function OnResourceChanged(player, resName, resAmt)
+	if (resName == "C_LEVEL") then
+		if resAmt > playerClassLevels[player:GetResource("CLASS_MAP")] then
+			playerClassLevels[player:GetResource("CLASS_MAP")] = resAmt
+			AddLine({"", string.format("%s has gained %s level %d", player.name, ClassLabelFromID[player:GetResource("CLASS_MAP")], tostring(resAmt)), "", "PlayerLeveledUp"}, TEXT_COLOR)
+		else
+			-- print("No: " .. player.name .. " - " .. resName .. " - " .. tostring(resAmt))
+		end
+
+
+	end
+	NEEDS_UPDATE = true
+end
+
+function OnMenuChanged(oldMenu, newMenu)
+    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"]) then
+		AF_PANEL.visibility = Visibility.INHERIT
+	else -- hide
+		AF_PANEL.visibility = Visibility.FORCE_OFF
+	end
+end
+
+function OnGameStateChanged (oldState, newState)
+	if newState == ABGS.GAME_STATE_ROUND then
+        AF_PANEL.visibility = Visibility.INHERIT
+	elseif newState == ABGS.GAME_STATE_ROUND_END then -- hide
+		AF_PANEL.visibility = Visibility.FORCE_OFF
+	end
+end
+
+
 function Tick(deltaTime)
 
 	for i = 1, NUM_LINES do
@@ -311,13 +464,14 @@ function Tick(deltaTime)
 			BGBorderColor.a =  CoreMath.Clamp(1.0 - (age - LINE_DURATION) / FADE_DURATION, 0.0, 0.7)
 
 			local BGImage = lineTemplates[i]:GetChildren()[1]
-			BGImage:SetColor(BGColor)
-			for _, borderLine in pairs(BGImage:GetChildren()) do
-				borderLine:SetColor(BGBorderColor)
+			if (BGImage) then
+				BGImage:SetColor(BGColor)
+				for _, borderLine in pairs(BGImage:GetChildren()) do
+					borderLine:SetColor(BGBorderColor)
+				end
 			end
 		end
 	end
-
 
 	if (NEEDS_UPDATE) then
 		for i = 1, NUM_LINES do
@@ -331,7 +485,7 @@ function Tick(deltaTime)
 
 				-- Full opacity until LINE_DURATION, then lerp to invisible over FADE_DURATION
 				local feedLines = lineTemplates[i]:GetChildren()
-
+				-- TablePrint(feedLines, 4)
 				local feedElements = {}
 
 				for _, element in ipairs(feedLines) do
@@ -588,132 +742,12 @@ function Tick(deltaTime)
 				-- 	feedElements["Distance"].x = xPos
 				-- 	xPos = xPos - feedElements["Distance"].width - GAP_SPACE
 				-- end
-
-
-
-
-
 			end
 		end
 		NEEDS_UPDATE = false
 	end
 
 end
-
--- Initialize
--- Spawn, space out and hide lines
-for i = 1, NUM_LINES do
-	lineTemplates[i] = World.SpawnAsset(AF_LINE_TEMPLATE, {parent = AF_PANEL})
-	local elements = {}
-
-	lineTemplates[i].height = ICON_SIZE
-
-	elements['KillerImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
-	elements['KillerImage'].name = "KillerImage"
-	elements['KillerImage'].width = ICON_SIZE
-	elements['KillerImage'].height = ICON_SIZE
-	elements['KillerImage'].visibility = Visibility.FORCE_OFF
-
-	elements['KillerText'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
-	elements['KillerText'].name = "KillerText"
-	elements['KillerText'].visibility = Visibility.FORCE_OFF
-
-	elements['KillerHealth'] = World.SpawnAsset(AF_HEALTH_BAR_TEMPLATE, {parent = lineTemplates[i]})
-	elements['KillerHealth'].width = 25
-	elements['KillerHealth'].height = ICON_SIZE
-	elements['KillerHealth'].name = "KillerHealth"
-	elements['KillerHealth'].visibility = Visibility.FORCE_OFF
-
-	elements['KilledTextLabel'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
-	elements['KilledTextLabel'].name = "KilledTextLabel"
-
-	elements['KilledImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
-	elements['KilledImage'].name = "KilledImage"
-	elements['KilledImage'].width = ICON_SIZE
-	elements['KilledImage'].height = ICON_SIZE
-	elements['KilledImage'].visibility = Visibility.FORCE_OFF
-
-	elements['KilledText'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
-	elements['KilledText'].name = "KilledText"
-
-	elements['KilledWithTextLabel'] = World.SpawnAsset(AF_TEXT_TEMPLATE, {parent = lineTemplates[i]})
-	elements['KilledWithTextLabel'].name = "KilledWithTextLabel"
-
-	elements['SkillImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
-	elements['SkillImage'].width = ICON_SIZE
-	elements['SkillImage'].height = ICON_SIZE
-	elements['SkillImage'].name = "SkillImage"
-	elements['SkillImage'].visibility = Visibility.FORCE_OFF
-
-	elements['SpecialImage'] = World.SpawnAsset(AF_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
-	elements['SpecialImage'].name = "SpecialImage"
-	elements['SpecialImage'].width = ICON_SIZE
-	elements['SpecialImage'].height = ICON_SIZE
-	elements['SpecialImage'].visibility = Visibility.FORCE_OFF
-
-	elements['Distance'] = World.SpawnAsset(AF_TEXT_ON_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
-	elements['Distance'].width = ICON_SIZE
-	elements['Distance'].height = ICON_SIZE
-	elements['Distance'].name = "Distance"
-	elements['Distance'].visibility = Visibility.FORCE_OFF
-
-	lineTemplates[i].y = (i - 1) * (VERTICAL_SPACING + lineTemplates[i].height)
-end
-
-Events.Connect("AKI", OnKill)
-
-function ResetFeed()
-	for i = 1, NUM_LINES do
-		if lines[i] then
-			local feedLines = lineTemplates[i]:GetChildren()
-			for _, element in ipairs(feedLines) do
-				if (element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_OFF end
-			end
-		end
-	end
-end
-
-------------------------------------------------------------------------------------------------------------------------
--- LOCAL FUNCTIONS
-------------------------------------------------------------------------------------------------------------------------
-
-local function ClearListeners(listeners)
-    for _, listener in ipairs(listeners) do
-        if listener and listener.isConnected then
-            listeners:Disconnect()
-        end
-    end
-    listeners = {}
-end
-
-local function OnRoundStart()
-	Task.Wait(0.1)
-	levelUpEnabled = true
-end
-
-local function OnRoundEnd()
-	levelUpEnabled = false
-	ResetFeed()
-end
-
-
-------------------------------------------------------------------------------------------------------------------------
--- GLOBAL FUNCTIONS
-------------------------------------------------------------------------------------------------------------------------
-function OnResourceChanged(player, resName, resAmt)
-
-	-- if (resName == "C_LEVEL" and levelUpEnabled) then
-	-- 	AddLine({"", 
-	-- 		string.format("%s has reached %s level %d",
-	-- 						player.name,
-	-- 						ClassNamesByID[player:GetResource("CLASS_MAP")],
-	-- 						tostring(resAmt)
-	-- 					), "", "PlayerLeveled"}, TEXT_COLOR)
-	-- 	NEEDS_UPDATE = true
-	-- end
-
-end
-
 
 
 -- nil OnPlayerJoined(Player)
@@ -732,23 +766,25 @@ function OnPlayerLeft(player)
 	NEEDS_UPDATE = true
 end
 
--- Game.roundStartEvent:Connect(OnRoundStart)
-Game.roundEndEvent:Connect(ResetFeed)
+------------------------------------------------------------------------------------------------------------------------
+-- EVENTS & SETUP
+------------------------------------------------------------------------------------------------------------------------
+-- Initialize feed lines
+Init()
 
+-- Hide panel initially
 AF_PANEL.visibility = Visibility.FORCE_OFF
 
+Events.Connect("AKI", OnKill)
+Game.roundEndEvent:Connect(ResetFeed)
+Events.Connect("Menu Changed", OnMenuChanged)
+Events.Connect("GameStateChanged", OnGameStateChanged)
+
+LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+
+-- Optional show join and leave messages
 if SHOW_JOIN_AND_LEAVE then
 	Game.playerJoinedEvent:Connect(OnPlayerJoined)
 	Game.playerLeftEvent:Connect(OnPlayerLeft)
 end
 
-
--- scriptListeners[#scriptListeners + 1] = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
-scriptListeners[#scriptListeners + 1] = Events.Connect("GameStateChanged", OnGameStateChanged)
-
-scriptListeners[#scriptListeners + 1] =
-    script.destroyEvent:Connect(
-    function()
-        ClearListeners(scriptListeners)
-    end
-)
