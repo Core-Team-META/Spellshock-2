@@ -185,6 +185,7 @@ function Tick(deltaTime)
             if title and title.icon then
                 TitleImage:SetImage(title.icon or "")
                 TitleImage:SetColor(title.iconColor or Color.WHITE)
+                TitleImage.visibility = Visibility.FORCE_ON
             else
                 TitleImage.visibility = Visibility.FORCE_OFF
             end
