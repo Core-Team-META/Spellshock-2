@@ -779,7 +779,7 @@ Game.roundEndEvent:Connect(ResetFeed)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 
-LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+-- LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
 
 -- Optional show join and leave messages
 if SHOW_JOIN_AND_LEAVE then
