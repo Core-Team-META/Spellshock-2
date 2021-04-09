@@ -278,4 +278,3 @@ Game.playerJoinedEvent:Connect(Setup)
 Game.playerLeftEvent:Connect(Remove)
 
 Events.Connect("GameStateChanged", OnGameStateChanged)
-Events.Connect("PrintNemesis", PrintNemesisIndex)

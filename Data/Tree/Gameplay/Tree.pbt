@@ -281,6 +281,8 @@ Objects {
     Volume: 0.8
     Falloff: 3600
     Radius: 400
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
   }
 }
 Objects {
