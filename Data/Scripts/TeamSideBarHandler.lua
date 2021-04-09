@@ -83,6 +83,14 @@ function RemovePanel(player)
         local panel = table.remove(AllPanels, player.clientUserData.panelIndex)
         panel:Destroy()
         PlayerHasPanel[player] = nil
+    else
+        for index, panel in ipairs(AllPanels) do --, includeTeams = LOCAL_PLAYER.team
+            if panel.clientUserData.player == player then
+                table.remove(AllPanels, index)
+                panel:Destroy()
+                PlayerHasPanel[player] = nil
+            end
+        end
     end
 end
 
@@ -176,14 +184,14 @@ function Tick()
         end
     end
 
-    --[[ Check if panels are missing
-    if #AllPanels ~= #Game.GetPlayers({ignorePlayers = LOCAL_PLAYER}) then
+    -- Check if panels are missing
+    if #AllPanels < #Game.GetPlayers({ignorePlayers = LOCAL_PLAYER}) then
         for index, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do
             if not AllPanels[player] then
                 AddNewPanel(player)
             end
         end
-    end]]
+    end
 end
 
 OnMenuChanged(nil, _G.CurrentMenu)
@@ -191,10 +199,10 @@ OnMenuChanged(nil, _G.CurrentMenu)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
--- Add a new panel for every player already in the server
+--[[Add a new panel for every player already in the server
 for _, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do --, includeTeams = LOCAL_PLAYER.team
     AddNewPanel(player)
-end
+end]]
 
 --LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Events.Connect("Menu Changed", OnMenuChanged)

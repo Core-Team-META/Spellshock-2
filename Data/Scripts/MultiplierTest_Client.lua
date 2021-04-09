@@ -61,8 +61,12 @@ function Int()
         VIP_BOOST_TEXT.text = "Press P"
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
-    XP_MULITPLIER_TEXT.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .. "x"
-    GOLD_MULITPLIER_TEXT.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x"
+    for _, xpText in ipairs(XP_MULITPLIER_TEXT:GetChildren()) do
+        xpText.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .. "x"
+    end
+    for _, goldText in ipairs(GOLD_MULITPLIER_TEXT:GetChildren()) do
+        goldText.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x"
+    end
 end
 
 function OnDictionaryChanged(player, key, value)
