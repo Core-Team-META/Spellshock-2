@@ -97,7 +97,6 @@ function OnClassChanged(player, classID)
 end
 
 function OnRewardSelected(player)
-    warn(player.name.." skipped rewards. Equipping class.")
     local classID = player:GetResource("CLASS_MAP")
     if classID == 0 then
         classID = META_AP().TANK
@@ -127,7 +126,7 @@ function OnGameStateChanged(oldState, newState)
             end
         end
     elseif newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
-        Task.Wait()
+        Task.Wait() 
         for _, player in ipairs(Game.GetPlayers()) do 
             -- unequip everything 
             UnequipPlayer(player)
