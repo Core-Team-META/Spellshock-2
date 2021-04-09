@@ -9761,6 +9761,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
+          Width: 80
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -9879,7 +9880,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -9951,7 +9952,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -10023,7 +10024,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -10095,7 +10096,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -11191,7 +11192,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               A: 1
             }
