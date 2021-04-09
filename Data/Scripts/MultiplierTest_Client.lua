@@ -23,6 +23,8 @@ local EVENT_BONUS = script:GetCustomProperty("EVENT_BONUS"):WaitForObject()
 local goldBoostTime = 0
 local xpBoostTime = 0
 local isVip = false
+local xpIsVisable = false
+local goldIsVisable = false
 
 while not _G.PerPlayerDictionary do
     Task.Wait()
@@ -37,13 +39,17 @@ function Int()
 
     if goldBoostTime - time() > 0 then
         GOLD_BOOST_PANEL.visibility = Visibility.FORCE_ON
+        goldIsVisable = true
     else
         GOLD_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+        goldIsVisable = false
     end
     if xpBoostTime - time() > 0 then
         XP_BOOST_PANEL.visibility = Visibility.FORCE_ON
+        xpIsVisable = true
     else
         XP_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+        xpIsVisable = false
     end
 
     if isVip then
@@ -67,8 +73,10 @@ function OnDictionaryChanged(player, key, value)
         goldBoostTime = value or 0
         if goldBoostTime - time() > 0 then
             GOLD_BOOST_PANEL.visibility = Visibility.FORCE_ON
+            goldIsVisable = true
         else
             GOLD_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+            goldIsVisable = false
         end
     end
 
@@ -76,8 +84,10 @@ function OnDictionaryChanged(player, key, value)
         xpBoostTime = value or 0
         if xpBoostTime - time() > 0 then
             XP_BOOST_PANEL.visibility = Visibility.FORCE_ON
+            xpIsVisable = true
         else
             XP_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+            xpIsVisable = false
         end
     end
     if key == CONST.VIP_MEMBERSHIP_KEY then
@@ -105,6 +115,9 @@ function Tick()
         local seconds = math.floor(currentGoldBoost) % 60
         GOLD_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
         end
+    elseif goldIsVisable then
+        GOLD_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+        goldIsVisable = false
     end
 
     local currentXpBoost = xpBoostTime - time()
@@ -118,6 +131,10 @@ function Tick()
         local seconds = math.floor(currentXpBoost) % 60
         XP_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
         end
+
+    elseif xpIsVisable then
+        XP_BOOST_PANEL.visibility = Visibility.FORCE_OFF
+        xpIsVisable = false
     end
 end
 
