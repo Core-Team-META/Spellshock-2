@@ -277,17 +277,17 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             currentAmmount = META_CP().GetClassXp(LOCAL_PLAYER, class)
             reqXp = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
 
-            CardTitle.text = infoTable.ClassName.." XP"
+            CardTitle.text = infoTable.ClassName .. " XP"
             ClassPanel:Destroy()
             AbilityName.text = infoTable.ClassName
             AbilityName:SetColor(RarityColors[rarity])
-            
+
             CurrentLevel.text = tostring(classLevel)
             NextLevel.text = tostring(classLevel + 1)
 
             GlobalStatsIcon:Destroy()
 
-            InfoTitle.text = infoTable.ClassName.." XP"
+            InfoTitle.text = infoTable.ClassName .. " XP"
             InfoDescription.text = CardDescriptions[rewardType]
         else
             infoTable = rewardAssets[rewardType][bind]
@@ -307,6 +307,13 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             Footnote:Destroy()
 
             if rewardType == REWARD_UTIL.REWARD_TYPES.CONSUMABLES or rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
+                --[[elseif rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
+                PointsPanel:Destroy()
+                ProgressPanel:Destroy()
+                ProgressPanel = nil
+                RarityTextOutline:Destroy()
+                RarityTextOutline = nil
+                SkillPointsAmount:Destroy()]]
                 local function CONSUMABLE()
                     return _G["Consumables"]
                 end
@@ -317,13 +324,6 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
 
                 CurrentLevel.text = tostring(Level)
                 NextLevel.text = tostring(Level + 1)
-            --[[elseif rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
-                PointsPanel:Destroy()
-                ProgressPanel:Destroy()
-                ProgressPanel = nil
-                RarityTextOutline:Destroy()
-                RarityTextOutline = nil
-                SkillPointsAmount:Destroy()]]
             else -- Gold or Cosmetic
                 GlobalStatsIcon:Destroy()
                 PointsPanel:Destroy()
@@ -337,7 +337,7 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
         else
             AbilityIcon:SetImage(infoTable.Image)
         end
-        
+
         if infoTable.Color then
             AbilityIcon:SetColor(infoTable.Color)
         end
@@ -431,6 +431,10 @@ end
 
 -- #TODO
 local function IsFirstWinOfTheDay(player)
+    local currentTime = os.time(os.date("!*t"))
+    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
+        return true
+    end
     return false
 end
 
@@ -448,9 +452,10 @@ local function CalculateSelectionCount()
         end
     end
 
-    
-
-    -- +1 for Extra Reward Perk #TODO
+    -- +1 for Extra Reward VIP Perk
+    if LOCAL_PLAYER:GetResource(CONST.VIP_MEMBERSHIP_KEY) == 1 then
+        SelectionCount = SelectionCount + 1
+    end
 
     -- For testing
     --SelectionCount = 4
@@ -470,7 +475,9 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(thisButton, isAutoSelect)
-    if LOCAL_PLAYER.clientUserData.hasClaimedReward then return end
+    if LOCAL_PLAYER.clientUserData.hasClaimedReward then
+        return
+    end
     if SelectedCards[thisButton] then
         -- Deselect
         thisButton.clientUserData.selected.visibility = Visibility.FORCE_OFF
@@ -532,7 +539,12 @@ function OnRewardSelect()
     end
     ANIMATION.context.RevealChosenCards(SelectedCards, CardPanels)
     Events.BroadcastToServer(NAMESPACE .. "GivePlayerRewards", playerRewards)
-    Task.Spawn(function() ToggleUI(false) end, 3)
+    Task.Spawn(
+        function()
+            ToggleUI(false)
+        end,
+        3
+    )
 end
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --

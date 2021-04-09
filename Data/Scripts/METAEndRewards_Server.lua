@@ -56,9 +56,9 @@ local function IsTeamWinner(player)
 end
 
 local function IsFirstWinOfTheDay(player)
-    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
+    local currentTime = os.time(os.date("!*t"))
     if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
-        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
+        --player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(os.time(os.date("!*t")) + (24 * 60 * 60)))
         return true
     end
     return false
@@ -198,6 +198,9 @@ end
 function GivePlayerRewards(player, rewardList)
     for _, slotID in pairs(rewardList) do
         REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
+    end
+    if IsFirstWinOfTheDay(player) then
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(os.time(os.date("!*t")) + (24 * 60 * 60)))
     end
     playerRewards[player.id] = nil
 end
