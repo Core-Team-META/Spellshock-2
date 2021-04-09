@@ -1390,6 +1390,12 @@ Objects {
         Id: 11974742996071064388
       }
     }
+    Overrides {
+      Name: "cs:Costume_Equipment"
+      AssetReference {
+        Id: 268472779935127967
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

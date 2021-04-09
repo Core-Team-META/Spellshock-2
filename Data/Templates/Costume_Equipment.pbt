@@ -19,11 +19,19 @@ Assets {
         ChildIds: 8843172285795340494
         UnregisteredParameters {
           Overrides {
-            Name: "cs:SKINID"
+            Name: "cs:OID"
             Int: 0
           }
           Overrides {
-            Name: "cs:SKINID:isrep"
+            Name: "cs:ClassID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:OID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:ClassID:isrep"
             Bool: true
           }
         }

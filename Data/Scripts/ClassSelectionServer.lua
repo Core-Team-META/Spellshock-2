@@ -16,6 +16,9 @@ end
 
 local ABGS = require(script:GetCustomProperty("ABGS"))
 
+-- Used for end screen
+local COSTUME_EQUIPMENT_TEMPLATE = script:GetCustomProperty("Costume_Equipment")
+
 local ClassTemplates = {
     [META_AP().TANK] = "EC351247C6D7EC9F:Tank",
     [META_AP().HUNTER] = "EF4AB61158655526:Hunter",
@@ -48,6 +51,18 @@ local function EquipPlayer(player, classID)
     newClass:Equip(player)
 end
 
+local function UnequipPlayer(player)
+    for _, equipment in pairs(player:GetEquipment()) do
+        if Object.IsValid(equipment) then
+            equipment:Unequip()
+        end
+        Task.Wait()
+        if Object.IsValid(equipment) then
+            equipment:Destroy()
+        end
+    end
+end
+
 function OnClassChanged(player, classID)
     --if classID == player.serverUserData.CurrentClass then return end 
 
@@ -65,15 +80,7 @@ function OnClassChanged(player, classID)
         player.animationStance = Class_Stances[classID]]
     if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND_END or ABGS.GetGameState() ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
         --unequip everything
-        for _, equipment in pairs(player:GetEquipment()) do
-            if Object.IsValid(equipment) then
-                equipment:Unequip()
-            end
-            Task.Wait()
-            if Object.IsValid(equipment) then
-                equipment:Destroy()
-            end
-        end
+        UnequipPlayer(player)
 
         --player.animationStance = Class_Stances[classID]
         EquipPlayer(player, classID)
@@ -95,7 +102,7 @@ function OnRewardSelected(player)
     if classID == 0 then
         classID = META_AP().TANK
     end
-
+    UnequipPlayer(player)
     EquipPlayer(player, classID)
 end
 
@@ -105,15 +112,7 @@ function OnGameStateChanged(oldState, newState)
         -- Equip a class for every player
         for _, player in ipairs(Game.GetPlayers()) do 
             -- unequip everything just in case
-            for _, equipment in ipairs(player:GetEquipment()) do
-                if Object.IsValid(equipment) then
-                    equipment:Unequip()
-                end
-                Task.Wait()
-                if Object.IsValid(equipment) then
-                    equipment:Destroy()
-                end
-            end
+            UnequipPlayer(player)
             
             local classID = player:GetResource("CLASS_MAP")
             if classID == 0 then
@@ -131,17 +130,21 @@ function OnGameStateChanged(oldState, newState)
         Task.Wait()
         for _, player in ipairs(Game.GetPlayers()) do 
             -- unequip everything 
-            for _, equipment in pairs(player:GetEquipment()) do
-                if Object.IsValid(equipment) then
-                    equipment:Unequip()
-                end
-                Task.Wait()
-                if Object.IsValid(equipment) then
-                    equipment:Destroy()
-                end
-            end
-            player:SetVisibility(true)
+            UnequipPlayer(player)
+
             local classID = player:GetResource("CLASS_MAP")
+            if classID == 0 then
+                classID = META_AP().TANK
+            end
+
+            local newOutfit = World.SpawnAsset(COSTUME_EQUIPMENT_TEMPLATE)
+            local skinId = GetCurrentCosmeticId(player, classID, 8)
+            newOutfit:SetNetworkedCustomProperty("OID", skinId)
+            newOutfit:SetNetworkedCustomProperty("ClassID", classID)
+            
+         
+
+            --player:SetVisibility(true)
             player.animationStance = Class_Stances[classID]
         end
     end
