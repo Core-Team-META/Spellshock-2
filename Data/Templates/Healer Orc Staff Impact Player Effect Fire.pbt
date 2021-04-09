@@ -7,7 +7,7 @@ Assets {
       RootId: 15565373798192254699
       Objects {
         Id: 15565373798192254699
-        Name: "Healer Staff Impact Player Effect"
+        Name: "Healer Orc Staff Impact Player Effect Fire"
         Transform {
           Scale {
             X: 1
@@ -21,6 +21,7 @@ Assets {
         ChildIds: 12621334625180328647
         UnregisteredParameters {
         }
+        Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
