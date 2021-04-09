@@ -7,7 +7,7 @@ Assets {
       RootId: 16479932894033316834
       Objects {
         Id: 16479932894033316834
-        Name: "Assasin Elf Costume Gold Justice"
+        Name: "Assassin Elf Costume Gold Justice"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 14705857793810768308
         ChildIds: 16941004884119493135
         ChildIds: 16142278470835418159
@@ -94,6 +94,7 @@ Assets {
         ChildIds: 6260245711855548122
         ChildIds: 7872694448536965263
         ChildIds: 15723805632290054920
+        ChildIds: 15341721140677667038
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -167,7 +168,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 7736855885758844635
             }
           }
           Overrides {
@@ -182,15 +183,6 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Sides:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:color"
             Color {
               R: 0.5
               G: 0.5
@@ -221,11 +213,15 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Faces:utile"
-            Float: 1.52409577
+            Float: 0.774340212
           }
           Overrides {
             Name: "ma:Font.Bevel:utile"
             Float: 2.12443638
+          }
+          Overrides {
+            Name: "ma:Font.Faces:vtile"
+            Float: 0.362361848
           }
         }
         Collidable_v2 {
@@ -409,19 +405,19 @@ Assets {
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
-            X: -2.31662226
-            Y: -0.103445575
-            Z: 17.2700443
+            X: -2.31611848
+            Y: -0.10266237
+            Z: 17.2703838
           }
           Rotation {
-            Pitch: -4.35958672
+            Pitch: -4.35958862
             Yaw: 13.6007185
             Roll: 3.15207435e-05
           }
           Scale {
-            X: 1.229
-            Y: 1.22900784
-            Z: 1.20598769
+            X: 1.41919529
+            Y: 1.41922176
+            Z: 1.198946
           }
         }
         ParentId: 6567224489457935051
@@ -476,6 +472,93 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 9675776263369201294
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15341721140677667038
+        Name: "Fantasy Sword Grip 01"
+        Transform {
+          Location {
+            X: -3.58398438
+            Y: -0.369140625
+            Z: 3.22949219
+          }
+          Rotation {
+            Pitch: -4.35958862
+            Yaw: 13.6007347
+            Roll: 3.01828495e-05
+          }
+          Scale {
+            X: 0.0831975564
+            Y: 0.0832119733
+            Z: -0.0751088336
+          }
+        }
+        ParentId: 6567224489457935051
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.67244333
+              G: 0.412542701
+              B: 0.0202885587
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 25.1128387
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 36.1982269
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 7736855885758844635
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.270276338
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.278380305
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14080263485477216753
           }
           Teams {
           }
@@ -548,6 +631,7 @@ Assets {
         ChildIds: 13230778367058203481
         ChildIds: 16786776623017102735
         ChildIds: 17365396391022122129
+        ChildIds: 2446551595588649577
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -621,7 +705,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 7736855885758844635
             }
           }
           Overrides {
@@ -636,15 +720,6 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Sides:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:color"
             Color {
               R: 0.5
               G: 0.5
@@ -675,11 +750,15 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Faces:utile"
-            Float: 1.52409577
+            Float: 0.774340212
           }
           Overrides {
             Name: "ma:Font.Bevel:utile"
             Float: 2.12443638
+          }
+          Overrides {
+            Name: "ma:Font.Faces:vtile"
+            Float: 0.362361848
           }
         }
         Collidable_v2 {
@@ -863,19 +942,19 @@ Assets {
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
-            X: -2.37149191
-            Y: -0.116434447
-            Z: 16.5349541
+            X: -2.37204432
+            Y: -0.116006657
+            Z: 16.5349159
           }
           Rotation {
-            Pitch: -4.35958672
+            Pitch: -4.35958862
             Yaw: 13.6006908
             Roll: 1.60547074e-07
           }
           Scale {
-            X: 1.229
-            Y: 1.22900784
-            Z: 1.20598757
+            X: 1.41919529
+            Y: 1.41922176
+            Z: 1.19894576
           }
         }
         ParentId: 1752120307057892332
@@ -930,6 +1009,92 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 9675776263369201294
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2446551595588649577
+        Name: "Fantasy Sword Grip 01"
+        Transform {
+          Location {
+            X: -3.51953125
+            Y: -0.411132813
+            Z: 2.47833252
+          }
+          Rotation {
+            Pitch: -4.35958862
+            Yaw: 13.6007032
+          }
+          Scale {
+            X: 0.0831975564
+            Y: 0.0832119733
+            Z: -0.0751087591
+          }
+        }
+        ParentId: 1752120307057892332
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.67244333
+              G: 0.412542701
+              B: 0.0202885587
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 25.1128387
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 36.1982269
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 7736855885758844635
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.270276338
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.278380305
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14080263485477216753
           }
           Teams {
           }
@@ -4414,6 +4579,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_pommel_003"
+      }
+    }
+    Assets {
+      Id: 14080263485477216753
+      Name: "Gem - Diamond 8-Sided Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_diamond_8_sided_polished_001"
       }
     }
     Assets {
