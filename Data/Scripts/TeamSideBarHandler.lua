@@ -25,6 +25,7 @@ local Y_Offset = 42
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local ClassIcons = {}
 local AllPanels = {}
+local PlayerHasPanel = {}
 local ClassCountTable = ClassCountPanel:GetChildren()
 
 for _, classData in ipairs(ClassMenuData:GetChildren()) do
@@ -72,6 +73,7 @@ function AddNewPanel(player)
     newPanel.visibility = Visibility.FORCE_OFF
     newPanel.clientUserData.player = player  
     table.insert(AllPanels, newPanel)
+    PlayerHasPanel[player] = true
     player.clientUserData.panelIndex = #AllPanels
     --print(">> Adding panel for "..player.name)
 end
@@ -80,6 +82,7 @@ function RemovePanel(player)
     if AllPanels[player.clientUserData.panelIndex] then
         local panel = table.remove(AllPanels, player.clientUserData.panelIndex)
         panel:Destroy()
+        PlayerHasPanel[player] = nil
     end
 end
 
@@ -170,6 +173,15 @@ function Tick()
             countText.text = tostring(classCounts[index])
         else
             countText.text = "0"
+        end
+    end
+
+    -- Check if panels are missing
+    if #AllPanels ~= #Game.GetPlayers({ignorePlayers = LOCAL_PLAYER}) then
+        for index, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do
+            if not AllPanels[player] then
+                AddNewPanel(player)
+            end
         end
     end
 end
