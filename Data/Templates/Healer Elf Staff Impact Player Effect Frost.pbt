@@ -7,7 +7,7 @@ Assets {
       RootId: 8823531889918004866
       Objects {
         Id: 8823531889918004866
-        Name: "Healer Staff Impact Player Effect"
+        Name: "Healer Elf Staff Impact Player Effect Frost"
         Transform {
           Scale {
             X: 1
@@ -21,6 +21,7 @@ Assets {
         ChildIds: 9643728662945637419
         UnregisteredParameters {
         }
+        Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
