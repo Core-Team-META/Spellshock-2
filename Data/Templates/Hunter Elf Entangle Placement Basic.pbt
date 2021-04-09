@@ -7,7 +7,7 @@ Assets {
       RootId: 2298231852152351130
       Objects {
         Id: 2298231852152351130
-        Name: "Hunter Elf Leap Placement Basic"
+        Name: "Hunter Elf Entangle Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -34,6 +34,7 @@ Assets {
             Bool: true
           }
         }
+        Lifespan: 6
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
