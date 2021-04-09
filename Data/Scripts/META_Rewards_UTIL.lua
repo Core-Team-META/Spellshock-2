@@ -84,12 +84,6 @@ local SKILL_AMOUNT = {
     [API.RARITY.RARE] = {min = 10, max = 15},
     [API.RARITY.EPIC] = {min = 30, max = 35},
     [API.RARITY.LEGENDARY] = {min = 50, max = 75}
-    --[[ KB Test
-    [API.RARITY.UNCOMMON] =  {min = 500000, max = 800000},
-    [API.RARITY.RARE] =      {min = 1000000, max = 1500000},
-    [API.RARITY.EPIC] =      {min = 3000000, max = 3500000},
-    [API.RARITY.LEGENDARY] = {min = 5000000, max = 7500000}
-    ]]
 }
 
 local COSMETIC_AMOUNT = {
