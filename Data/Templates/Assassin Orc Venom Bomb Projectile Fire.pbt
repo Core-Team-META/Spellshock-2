@@ -17,6 +17,7 @@ Assets {
         }
         ParentId: 14162296025304194376
         ChildIds: 14271654522816296019
+        Lifespan: 10
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

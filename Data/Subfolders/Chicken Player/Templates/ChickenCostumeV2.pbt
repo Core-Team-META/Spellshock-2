@@ -129,6 +129,7 @@ Assets {
             }
           }
         }
+        Lifespan: 15
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
