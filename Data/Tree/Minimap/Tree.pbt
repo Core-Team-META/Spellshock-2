@@ -285,7 +285,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Game ID"
-      String: "4ce78c/screenshotstestdivided"
+      String: "8261dd/spellshock-2-minimap"
     }
     Overrides {
       Name: "bp:Screenshot Index"

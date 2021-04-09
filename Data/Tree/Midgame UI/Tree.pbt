@@ -1776,7 +1776,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         R: 1
         G: 1
@@ -1846,7 +1846,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }
@@ -1913,7 +1913,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }
@@ -1980,7 +1980,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }
@@ -2047,7 +2047,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }
@@ -3205,7 +3205,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         R: 1
         G: 1
@@ -3275,7 +3275,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }
@@ -3342,7 +3342,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }
@@ -3409,7 +3409,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }
@@ -3476,7 +3476,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "2x"
+      Label: "0x"
       Color {
         A: 0.269000024
       }

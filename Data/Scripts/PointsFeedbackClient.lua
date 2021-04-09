@@ -396,7 +396,7 @@ function OnResourceChanged(player, resourceName, resourceValue)
 		return
 	end
 	
-	Task.Wait(0.1)
+	Task.Wait(0.5)
 	
 	while reseting do
 		Task.Wait()
