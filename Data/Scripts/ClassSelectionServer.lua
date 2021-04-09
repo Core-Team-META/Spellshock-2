@@ -4,15 +4,15 @@
 --===========================================================================================
 
 local function META_AP()
-	while not _G["Meta.Ability.Progression"] do Task.Wait() end
+    while not _G["Meta.Ability.Progression"] do
+        Task.Wait()
+    end
     return _G["Meta.Ability.Progression"]
 end
-
 
 local function GetCurrentCosmeticId(player, classID, bind)
     return META_AP()["VFX"].GetCurrentCosmeticId(player, classID, bind)
 end
-
 
 local ABGS = require(script:GetCustomProperty("ABGS"))
 
@@ -28,11 +28,11 @@ local ClassTemplates = {
 }
 
 local Class_Stances = {
-	[META_AP().TANK] = "2hand_melee_stance",
-	[META_AP().HUNTER] = "2hand_rifle_aim_shoulder",
-	[META_AP().MAGE] = "2hand_staff_ready",
-	[META_AP().ASSASSIN] = "unarmed_ready",
-	[META_AP().HEALER] = "2hand_staff_stance"
+    [META_AP().TANK] = "2hand_melee_stance",
+    [META_AP().HUNTER] = "2hand_rifle_aim_shoulder",
+    [META_AP().MAGE] = "2hand_staff_ready",
+    [META_AP().ASSASSIN] = "unarmed_ready",
+    [META_AP().HEALER] = "2hand_staff_stance"
 }
 
 local function EquipPlayer(player, classID)
@@ -64,14 +64,14 @@ local function UnequipPlayer(player)
 end
 
 function OnClassChanged(player, classID)
-    --if classID == player.serverUserData.CurrentClass then return end 
+    --if classID == player.serverUserData.CurrentClass then return end
 
     if player:GetResource("CLASS_MAP") == classID then
         if player:GetResource("CLOSE_CLASS_SELECTION") == 0 then
             player:SetResource("CLOSE_CLASS_SELECTION", 1)
         else
             player:SetResource("CLOSE_CLASS_SELECTION", 0)
-        end  
+        end
     else
         player:SetResource("CLASS_MAP", classID)
     end
@@ -106,13 +106,15 @@ function OnRewardSelected(player)
 end
 
 function OnGameStateChanged(oldState, newState)
-    if (newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND) or
-    (newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY) then
+    if
+        (newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND) or
+            (newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY)
+     then
         -- Equip a class for every player
-        for _, player in ipairs(Game.GetPlayers()) do 
+        for _, player in ipairs(Game.GetPlayers()) do
             -- unequip everything just in case
             UnequipPlayer(player)
-            
+
             local classID = player:GetResource("CLASS_MAP")
             if classID == 0 then
                 classID = META_AP().TANK
@@ -126,9 +128,9 @@ function OnGameStateChanged(oldState, newState)
             end
         end
     elseif newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
-        Task.Wait() 
-        for _, player in ipairs(Game.GetPlayers()) do 
-            -- unequip everything 
+        Task.Wait()
+        for _, player in ipairs(Game.GetPlayers()) do
+            -- unequip everything
             UnequipPlayer(player)
 
             local classID = player:GetResource("CLASS_MAP")
@@ -140,10 +142,9 @@ function OnGameStateChanged(oldState, newState)
             local skinId = GetCurrentCosmeticId(player, classID, 8)
             newOutfit:SetNetworkedCustomProperty("OID", skinId)
             newOutfit:SetNetworkedCustomProperty("ClassID", classID)
-            
-         
+            newOutfit:Equip(player)
 
-            --player:SetVisibility(true)
+            player:SetVisibility(true)
             player.animationStance = Class_Stances[classID]
         end
     end
@@ -164,8 +165,11 @@ function OnPlayerJoined(player)
         --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
         --newClass:Equip(player)
         player:SetVisibility(false)
-    elseif currentState == ABGS.GAME_STATE_ROUND_END or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE
-    or currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_REWARDS_END then
+    elseif
+        currentState == ABGS.GAME_STATE_ROUND_END or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE or
+            currentState == ABGS.GAME_STATE_REWARDS or
+            currentState == ABGS.GAME_STATE_REWARDS_END
+     then
         EquipPlayer(player, META_AP().TANK)
     end
 
