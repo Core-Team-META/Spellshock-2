@@ -12,7 +12,8 @@ Rank = {
     Buckmonster     = AdminRanks.HigherAdmin,
     ManticoreGames  = AdminRanks.HigherAdmin,
     Basilisk        = AdminRanks.HigherAdmin,
-    Mehaji          = AdminRanks.HigherAdmin ,
+    Mehaji          = AdminRanks.HigherAdmin,
+    Griffin         = AdminRanks.HigherAdmin,
 
     Bigglebuns      = AdminRanks.Admin ,
     standardcombo   = AdminRanks.Admin ,
@@ -39,7 +40,6 @@ Rank = {
     Sobchak         = AdminRanks.Admin ,
     Scav            = AdminRanks.Admin ,
     Tobs            = AdminRanks.Admin ,
-    Griffin         = AdminRanks.Admin ,
     Beekzor         = AdminRanks.Admin ,
     aBomb           = AdminRanks.Admin ,
     blackdheart     = AdminRanks.Admin ,

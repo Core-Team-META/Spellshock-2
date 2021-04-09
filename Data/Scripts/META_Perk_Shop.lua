@@ -221,8 +221,10 @@ function CheckPerkCountWithStorage(player, data)
             -- Server & Self Perk Modifers (Repeatable Purchase)
             if bundle.perk == SERVERXPBOOST and perkCount > storageCount then
                 AddTimeToPlayersMultiplier(CONST.SELF_XP_BOOST_KEY, CONST.XP_SERVER_BOOST_DURATION)
+                Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min XP boost!", 5, 3)
             elseif bundle.perk == SERVERGOLDBOOST and perkCount > storageCount then
                 AddTimeToPlayersMultiplier(CONST.SELF_GOLD_BOOST_KEY, CONST.GOLD_SERVER_BOOST_DURATION)
+                Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min Gold boost!", 5, 3)
             elseif bundle.perk == SELFXPBOOST and perkCount > storageCount then
                 AddTimeToMultiplier(player, CONST.SELF_XP_BOOST_KEY, CONST.XP_SELF_BOOST_DURATION)
             elseif bundle.perk == SELFGOLDBOOST and perkCount > storageCount then
