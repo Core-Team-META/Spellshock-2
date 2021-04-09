@@ -204,7 +204,9 @@ function CheckPerkCountWithStorage(player, data)
                 end
                 player:AddResource(bundle.resourceName, reward)
             end
-            if bundle.perkType == CONST.PERK_TYPES.FLAG and player:HasPerk(bundle.perk) then
+            -- VIP Bonus
+            if bundle.storageId == CONST.PERK_STORAGE_KEYS.VIP_MEMBER and player:HasPerk(bundle.perk) then
+                player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
             end
             if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) then
@@ -261,6 +263,9 @@ function OnPlayerJoined(player)
         end
         if bundle.flag and player:HasPerk(bundle.perk) then
             _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
+            if bundle.flag == CONST.VIP_MEMBERSHIP_KEY then
+                player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
+            end
         end
     end
     OnSavePerkData(player, data, perks)

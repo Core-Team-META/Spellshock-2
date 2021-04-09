@@ -136,7 +136,7 @@ Objects {
     Overrides {
       Name: "cs:VipMember"
       NetReference {
-        Key: "e5678c3a9ca347cd8e104bce8c699abc"
+        Key: "9a630a8140814140828ba9db2ab94b93"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
