@@ -30,7 +30,6 @@ function AttachCostume(player)
 	while not ClassID or ClassID == 0 do
 		ClassID = ParentEquipment:GetCustomProperty("ClassID")
 	end
-
 	DestroyCostume(player)
 	local CostumeTemplate = META_VFX().GetCosmeticMuid(player, ClassID, player.team, skin, 8)
 	--local CostumeTemplate = META_VFX().GetCurrentCostume(player, ClassID) --ParentEquipment:GetCustomProperty("CostumeTemplate")
