@@ -176,14 +176,14 @@ function Tick()
         end
     end
 
-    -- Check if panels are missing
+    --[[ Check if panels are missing
     if #AllPanels ~= #Game.GetPlayers({ignorePlayers = LOCAL_PLAYER}) then
         for index, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do
             if not AllPanels[player] then
                 AddNewPanel(player)
             end
         end
-    end
+    end]]
 end
 
 OnMenuChanged(nil, _G.CurrentMenu)
