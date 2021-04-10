@@ -3,6 +3,8 @@
 -- Version 0.0.1
 --===========================================================================================
 
+local GarbageCollection = script:GetCustomProperty("GarbageCollection"):WaitForObject()
+
 local function META_AP()
     while not _G["Meta.Ability.Progression"] do
         Task.Wait()
@@ -48,13 +50,16 @@ local function EquipPlayer(player, classID)
     newClass:SetNetworkedCustomProperty("RID", rId)
     newClass:SetNetworkedCustomProperty("TID", tId)
     Task.Wait()
-    newClass:Equip(player)
+    if Object.IsValid(player) then
+        newClass:Equip(player)
+    end
 end
 
 local function UnequipPlayer(player)
     for _, equipment in pairs(player:GetEquipment()) do
         if Object.IsValid(equipment) then
             equipment:Unequip()
+            equipment.parent = GarbageCollection
         end
         Task.Wait()
         if Object.IsValid(equipment) then

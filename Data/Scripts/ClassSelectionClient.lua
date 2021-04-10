@@ -91,6 +91,7 @@ ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 function OnMenuChanged(oldMenu, newMenu)
 	if newMenu == _G.MENU_TABLE["ClassSelection"] or newMenu == _G.MENU_TABLE["ClassAbilities"] then -- show
 		Task.Wait()
+		if not Object.IsValid(LOCAL_PLAYER) then return end
 
 		if newMenu == _G.MENU_TABLE["ClassSelection"] then
 			if LOCAL_PLAYER.team == 1 then
@@ -542,6 +543,7 @@ end
 
 function UpdateAbilityInfo(thisButton)
 	Task.Wait(0.3)
+	if not Object.IsValid(LOCAL_PLAYER) then return end
 	local dataTable = thisButton.clientUserData.dataTable -- Get the ability data for this button
 	RightPanel_AbilityStatsPanel.visibility = Visibility.FORCE_OFF -- hide panel while changes are made
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
