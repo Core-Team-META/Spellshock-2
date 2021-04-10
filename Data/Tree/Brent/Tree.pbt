@@ -1,6 +1,35 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 1133890144562814122
+  Name: "Garbage Cleanup"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Garbage Cleanup"
+  }
+}
+Objects {
   Id: 4646961424574862806
   Name: "Tutorial"
   Transform {

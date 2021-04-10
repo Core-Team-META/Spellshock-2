@@ -1,4 +1,6 @@
 ﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local GarbageCollection = script:GetCustomProperty("GarbageCollection"):WaitForObject()
+
 local FX_Template = Equipment:GetCustomProperty("FX_Template")
 
 local ClassEquipmentReference
@@ -7,16 +9,24 @@ local _Owner = nil
 local PlayerDiedEvent = nil
 
 local function META_AP()
-	while not _G["Meta.Ability.Progression"] do Task.Wait() end
-    return _G["Meta.Ability.Progression"]
+	while not _G["Meta.Ability.Progression"] do
+		Task.Wait()
+	end
+	return _G["Meta.Ability.Progression"]
 end
-
 
 local function GetCurrentCosmeticId(player, classID, bind)
-    return META_AP()["VFX"].GetCurrentCosmeticId(player, classID, bind)
+	return META_AP()["VFX"].GetCurrentCosmeticId(player, classID, bind)
 end
 
-
+local function DestroyEquipment()
+	Equipment:Unequip()
+	Equipment.parent = GarbageCollection
+	Task.Wait()
+	if Object.IsValid(Equipment) then
+		Equipment:Destroy()
+	end
+end
 
 function OnPlayerDied(player, _)
 	PlayerDiedEvent:Disconnect()
@@ -25,9 +35,7 @@ end
 
 function OnPlayerLeft(player)
 	if player == _Owner then
-		Equipment:Unequip()
-		Task.Wait()
-		Equipment:Destroy()
+		DestroyEquipment()
 	end
 end
 
@@ -47,7 +55,7 @@ function OnEquip(equipment, player)
 	end
 	--Task.Wait()
 	--Task.Wait()
-	PlayerDiedEvent = player.diedEvent:Connect( OnPlayerDied )
+	PlayerDiedEvent = player.diedEvent:Connect(OnPlayerDied)
 	player:SetVisibility(false, false)
 	player.animationStance = "unarmed_stance"
 	_Owner = player
@@ -69,6 +77,9 @@ function Tick(deltaTime)
 	if Timer >= 0 then
 		Timer = Timer - deltaTime
 		if Timer < 0 then
+			if not Object.IsValid(Equipment) then
+				return
+			end
 			if not Object.IsValid(_Owner) then
 				Equipment:Destroy()
 				return
@@ -89,9 +100,7 @@ function Tick(deltaTime)
 				classEquipment:SetNetworkedCustomProperty("TID", tId)
 				classEquipment:Equip(_Owner)
 			end
-			Equipment:Unequip()
-			Task.Wait()
-			Equipment:Destroy()
+			DestroyEquipment()
 		end
 	end
 end
