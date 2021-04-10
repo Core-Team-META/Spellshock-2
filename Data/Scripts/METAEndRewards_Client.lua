@@ -450,10 +450,7 @@ local function CalculateSelectionCount()
         if IsFirstWinOfTheDay(LOCAL_PLAYER) then
             SelectionCount = SelectionCount + 1
         end
-    end
-
-    -- +1 for Extra Reward VIP Perk
-    if LOCAL_PLAYER:GetResource(CONST.VIP_MEMBERSHIP_KEY) == 1 then
+    elseif LOCAL_PLAYER:GetResource(CONST.VIP_MEMBERSHIP_KEY) == 1 then
         SelectionCount = SelectionCount + 1
     end
 
