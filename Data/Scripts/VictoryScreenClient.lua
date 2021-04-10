@@ -234,10 +234,8 @@ end
 
 function OnGameStateChanged(oldState, newState, hasDuration, time)
 	if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE and oldState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
-		--print(">> Team Victory CLIENT")
 		SendToVictoryScreen()
     elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-        --print(">> CLOSING Team Victory CLIENT")
 		RestoreFromPodium()      
     end
 end

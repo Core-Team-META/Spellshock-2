@@ -36,24 +36,19 @@ function Tick(deltaTime)
 
 	if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
 		local winningTeam = nil
+		
+		local scoreLimit = DynamicCapturePoints and DynamicCapturePoints:GetCustomProperty("ScoreLimit") or 500
+		local OrcScore = Game.GetTeamScore(1)
+		local ElfScore = Game.GetTeamScore(2)
 
-		for i = 0, 2 do
-			local scoreLimit = DynamicCapturePoints and DynamicCapturePoints:GetCustomProperty("ScoreLimit") or 500
-			
-			if Game.GetTeamScore(i) >= scoreLimit then
-				if winningTeam then
-					--Events.Broadcast("TieVictory")
-					--ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
-					
-					if Game.GetTeamScore(i) > Game.GetTeamScore(winningTeam) then
-						winningTeam = i
-					else -- In the case of a tie, which ever team gets the next kill will win
-						return
-					end	
-				else
-					winningTeam = i
-				end
-			end
+		if OrcScore < scoreLimit and ElfScore < scoreLimit then return end
+
+		if OrcScore == ElfScore then 
+			return -- In the case of a tie, which ever team gets the next kill will win
+		elseif OrcScore > ElfScore then
+			winningTeam = 1
+		elseif ElfScore > OrcScore then
+			winningTeam = 2
 		end
 
 		if winningTeam then
