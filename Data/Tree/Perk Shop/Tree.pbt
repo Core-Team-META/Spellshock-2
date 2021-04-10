@@ -33095,6 +33095,7 @@ Objects {
   ChildIds: 14765395634179265916
   ChildIds: 7115196470324137238
   ChildIds: 17182104802880178975
+  ChildIds: 14563802454456989363
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -33132,6 +33133,75 @@ Objects {
   }
 }
 Objects {
+  Id: 14563802454456989363
+  Name: "Info Text"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14891594412285093649
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 59
+    Height: 25
+    UIX: 2.48008728
+    UIY: 188.097702
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    Text {
+      Label: "2 Reward Card Choices Win or Lose"
+      Color {
+        R: 0.258609235
+        G: 0.549999952
+        A: 1
+      }
+      Size: 12
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 17182104802880178975
   Name: "Info Text"
   Transform {
@@ -33158,7 +33228,7 @@ Objects {
   Control {
     Width: 7
     Height: 25
-    UIX: 4.29898071
+    UIX: 11.6130486
     UIY: 211.458725
     RenderTransformPivot {
       Anchor {
