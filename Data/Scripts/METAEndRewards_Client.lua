@@ -444,12 +444,14 @@ local function CalculateSelectionCount()
 
     -- +1 for winning
     if IsTeamWinner(LOCAL_PLAYER) then
-        SelectionCount = SelectionCount + 1
-
+        --[[
         -- +1 for First Win of the Day
         if IsFirstWinOfTheDay(LOCAL_PLAYER) then
             SelectionCount = SelectionCount + 1
         end
+        ]]
+        SelectionCount = SelectionCount + 1
+     --
     elseif LOCAL_PLAYER:GetResource(CONST.VIP_MEMBERSHIP_KEY) == 1 then
         SelectionCount = SelectionCount + 1
     end
