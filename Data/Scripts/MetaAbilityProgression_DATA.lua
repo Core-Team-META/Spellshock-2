@@ -556,7 +556,7 @@ classTable = {
             [7] = {mod1 = {min = 40, max = 62}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 0.13},
             [8] = {mod1 = {min = 44, max = 63}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 0.13},
             [9] = {mod1 = {min = 46, max = 64}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 0.13},
-           [10] = {mod1 = {min = 50, max = 650, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 0.13}
+           [10] = {mod1 = {min = 50, max = 65}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 0.13}
         },
         --NOT USED
         [CONST.BIND.RMB] = {
