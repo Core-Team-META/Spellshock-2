@@ -1,5 +1,41 @@
-Name: "StorageKeys"
+Name: "Storage _ Refrences"
 RootId: 11064051587082207804
+Objects {
+  Id: 9940421920727960232
+  Name: "GameLinks"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11064051587082207804
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:AfkGameID"
+      String: "9abe5f/spellshock-2-afk-zone"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 10325830659551376446
+    }
+  }
+}
 Objects {
   Id: 3306084329147392987
   Name: "PerksData"

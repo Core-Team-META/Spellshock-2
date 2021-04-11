@@ -2,8 +2,11 @@
 -- Meta Afk System Server
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 3/12/2021
--- Version 0.1.3-ST
+-- Version 0.1.3-SS2
 ------------------------------------------------------------------------------------------------------------------------
+while not _G.GAME_LINKS do
+    Task.Wait()
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- Requires
 ------------------------------------------------------------------------------------------------------------------------
@@ -19,7 +22,7 @@ if not ENABLE_AFK then
     return
 end
 local GAME_TRANSFER = AFK_SETTINGS:GetCustomProperty("GameId") or "d44cf9/strike-team-loadout"
-local AFK_TIME = AFK_SETTINGS:GetCustomProperty("TimeUntilKick") or 180
+local AFK_TIME = AFK_SETTINGS:GetCustomProperty("TimeUntilKick") or 15
 local AFK_WARNING_TIME = AFK_SETTINGS:GetCustomProperty("AfkWarningTime") or 30
 local AFK_TICK_TIME = AFK_SETTINGS:GetCustomProperty("TimePerTick") or 1
 local SHOULD_USE_WHITELIST = AFK_SETTINGS:GetCustomProperty("UseWhitelist")
@@ -91,12 +94,9 @@ function Tick(dt)
     if Environment.IsPreview() or Environment.IsMultiplayerPreview() then return end 
     if shouldUpdate then
         for _, player in ipairs(Game.GetPlayers()) do
-            if playersIdleTime[player.id].time <= time() + 0.5 then
-                player:SetResource("IsReturningToLoadout", 1)
-            end
             if playersIdleTime[player.id].time <= time() then
                 --player:TransferToGame(GAME_TRANSFER)
-                local gameId = _G["LoadoutGameId"]
+                local gameId = _G.GAME_LINKS.AFK
                 player:TransferToGame(gameId)
             elseif
                 SHOULD_DISPLAY_WARNING and (playersIdleTime[player.id].time - AFK_WARNING_TIME) <= time() and
