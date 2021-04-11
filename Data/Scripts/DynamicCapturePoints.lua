@@ -9,6 +9,7 @@ local CapturePointColliders = BaseCollision:GetCustomProperties()
 local RequiredPlayers = script:GetCustomProperty("RequiredPlayers")
 local SmallMapScore = script:GetCustomProperty("SmallMapScore")
 local BigMapScore = script:GetCustomProperty("BigMapScore")
+local GameType = script:GetCustomProperty("GameType")
 
 local Configuration_A = {[1] = true, [5] = true} -- these would get disabled; based off of "order"
 local Configuration_B = {[4] = true, [2] = true}
@@ -33,8 +34,10 @@ function OnRoundStart()
         CP_Configuration = configTable[randIndex]
         NewBases = basesTable[randIndex]
         script:SetNetworkedCustomProperty("ScoreLimit", SmallMapScore)
+        script:SetNetworkedCustomProperty("GameType", 1)
     else
         script:SetNetworkedCustomProperty("ScoreLimit", BigMapScore)
+        script:SetNetworkedCustomProperty("GameType", 2)
     end
 
     for _, id in ipairs(ABCP.GetCapturePoints()) do

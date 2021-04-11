@@ -1701,7 +1701,15 @@ Objects {
       Int: 300
     }
     Overrides {
+      Name: "cs:GameType"
+      Int: 0
+    }
+    Overrides {
       Name: "cs:ScoreLimit:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:GameType:isrep"
       Bool: true
     }
   }

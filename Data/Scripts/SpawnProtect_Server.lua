@@ -1,15 +1,96 @@
-﻿local ORC_SPAWN_TRIGGER = script:GetCustomProperty("OrcTrigger"):WaitForObject()
-local ELF_SPAWN_TRIGGER = script:GetCustomProperty("ElfTrigger"):WaitForObject()
-local SHOULD_DIE = script:GetCustomProperty("ShouldDie")
+﻿------------------------------------------------------------------------------------------------------------------------
+-- Spawn Protect Server
+-- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+-- Date: 2021/4/11
+-- Version 0.0.1
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+-- OBJECTS
+------------------------------------------------------------------------------------------------------------------------
+local DynamicCapturePoints = script:GetCustomProperty("DynamicCapturePoints"):WaitForObject()
 
-function OnBeginOverLap(trigger, player)
-    local teamId = trigger:GetCustomProperty("TeamId")
-    if player:IsA("Player") and teamId ~= player.team then
-        player:Die()
+local SmallOrc = script:GetCustomProperty("SmallOrc"):WaitForObject()
+local LargeOrcBase = script:GetCustomProperty("OrcBase"):WaitForObject()
+
+local SmallElf = script:GetCustomProperty("SmallElf"):WaitForObject()
+local LargeElfBase = script:GetCustomProperty("ElfBase"):WaitForObject()
+
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL VARIABLES
+------------------------------------------------------------------------------------------------------------------------
+
+local listeners = {}
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+
+local function IsAValidPlayer(object)
+    return object and Object.IsValid(object) and object:IsA("Player")
+end
+
+local function IsOrcbase(trigger)
+    return trigger == SmallOrc or trigger == LargeOrcBase
+end
+
+local function IsElfbase(trigger)
+    return trigger == SmallElf or trigger == LargeElfBase
+end
+
+local function ClearListeners()
+    for _, listener in ipairs(listeners) do
+        if listener and listener.isConnected then
+            listener:Disconnect()
+        end
+    end
+    listeners = {}
+end
+
+local function EnableSmallSpawnProtect()
+    listeners[#listeners + 1] = SmallOrc.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = SmallElf.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = SmallElf.endOverlapEvent:Connect(OnEndOverlap)
+    listeners[#listeners + 1] = SmallOrc.endOverlapEvent:Connect(OnEndOverlap)
+end
+
+local function EnableLargeSpawnProtect()
+    listeners[#listeners + 1] = SmallOrc.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = SmallElf.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = SmallElf.endOverlapEvent:Connect(OnEndOverlap)
+    listeners[#listeners + 1] = SmallOrc.endOverlapEvent:Connect(OnEndOverlap)
+end
+
+------------------------------------------------------------------------------------------------------------------------
+-- GLOAB FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+
+function OnBeginOverLap(trigger, object)
+    if IsAValidPlayer(object) then
+        if IsOrcbase(trigger) and object.team == 1 then
+            object.serverUserData.SpawnProtect = true
+        elseif IsElfbase(trigger) and object.team == 2 then
+            object.serverUserData.SpawnProtect = true
+        end
     end
 end
 
-if SHOULD_DIE then
-    ORC_SPAWN_TRIGGER.beginOverlapEvent:Connect(OnBeginOverLap)
-    ELF_SPAWN_TRIGGER.beginOverlapEvent:Connect(OnBeginOverLap)
+function OnEndOverlap(trigger, object)
+    object.serverUserData.SpawnProtect = nil
 end
+
+function OnNetworkChanged(object, string)
+    if object == DynamicCapturePoints and string == "GameType" then
+        local gameType = object:GetCustomProperty(string)
+        ClearListeners()
+        if gameType == 1 then
+            EnableSmallSpawnProtect()
+        elseif gameType == 2 then
+            EnableLargeSpawnProtect()
+        end
+    end
+end
+
+------------------------------------------------------------------------------------------------------------------------
+-- LISTENERS
+------------------------------------------------------------------------------------------------------------------------
+
+DynamicCapturePoints.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
