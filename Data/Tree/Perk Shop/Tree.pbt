@@ -4744,7 +4744,7 @@ Objects {
       }
     }
     Text {
-      Label: "+25%"
+      Label: "+37%"
       Color {
         R: 0.965761542
         G: 1
@@ -4812,7 +4812,7 @@ Objects {
       }
     }
     Text {
-      Label: "+25%"
+      Label: "+37%"
       Color {
         A: 1
       }
@@ -7095,7 +7095,7 @@ Objects {
       }
     }
     Text {
-      Label: "250"
+      Label: "300"
       Color {
         A: 0.493000031
       }
@@ -7155,7 +7155,7 @@ Objects {
       }
     }
     Text {
-      Label: "250"
+      Label: "300"
       Color {
         R: 1
         G: 0.584635735
@@ -7830,7 +7830,7 @@ Objects {
       }
     }
     Text {
-      Label: "+15%"
+      Label: "25%"
       Color {
         R: 0.965761542
         G: 1
@@ -7898,7 +7898,7 @@ Objects {
       }
     }
     Text {
-      Label: "+15%"
+      Label: "25%"
       Color {
         A: 1
       }
@@ -9216,7 +9216,7 @@ Objects {
       }
     }
     Text {
-      Label: "100"
+      Label: "150"
       Color {
         A: 0.493000031
       }
@@ -9276,7 +9276,7 @@ Objects {
       }
     }
     Text {
-      Label: "100"
+      Label: "150"
       Color {
         R: 1
         G: 0.584635735
@@ -9943,7 +9943,7 @@ Objects {
       }
     }
     Text {
-      Label: "+5%"
+      Label: "10%"
       Color {
         R: 0.965761542
         G: 1
@@ -10011,7 +10011,7 @@ Objects {
       }
     }
     Text {
-      Label: "+5%"
+      Label: "10%"
       Color {
         A: 1
       }
@@ -10844,7 +10844,7 @@ Objects {
       }
     }
     Text {
-      Label: "50"
+      Label: "70"
       Color {
         A: 0.493000031
       }
@@ -10904,7 +10904,7 @@ Objects {
       }
     }
     Text {
-      Label: "50"
+      Label: "70"
       Color {
         R: 1
         G: 0.584635735

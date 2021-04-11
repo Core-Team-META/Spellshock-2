@@ -111,19 +111,19 @@ bundles[#bundles + 1] = {
     perk = JewelPack2,
     storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK2,
     resourceName = CONST.COSMETIC_TOKEN,
-    reward = 50
+    reward = 70
 }
 bundles[#bundles + 1] = {
     perk = JewelPack3,
     storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK3,
     resourceName = CONST.COSMETIC_TOKEN,
-    reward = 100
+    reward = 150
 }
 bundles[#bundles + 1] = {
     perk = JewelPack4,
     storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK4,
     resourceName = CONST.COSMETIC_TOKEN,
-    reward = 250
+    reward = 300
 }
 
 --------------------------------------------------------------------------------------------------------------------------
