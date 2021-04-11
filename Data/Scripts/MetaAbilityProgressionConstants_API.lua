@@ -173,8 +173,8 @@ API.DIMINISHING_RETURNS = {
 --Default XP Values before multipliers
 API.CLASS_XP = { 
     Kills = 300,
-    Captures = 500,
-    CapAssists = 150,
+    Captures = 450,
+    CapAssists = 400,
     Wins = 1500,
     Interrupt = 25, -- Interrupt Capture Point Player
     KillOnPoint = 100
