@@ -33924,14 +33924,14 @@ Objects {
   Settings {
     IsDefault: true
     PlayerMovementSettings {
-      WalkSpeed: 640
+      WalkSpeed: 740
       MaxAcceleration: 1800
       WalkableFloorAngle: 48
       JumpMaxCount: 1
       JumpVelocity: 900
       GroundFriction: 8
       GravityScale: 1.9
-      MaxSwimSpeed: 420
+      MaxSwimSpeed: 520
       Buoyancy: 1
       TouchForceFactor: 1
       BrakingDecelerationFlying: 600
