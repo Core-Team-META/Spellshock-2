@@ -2,8 +2,8 @@ local NAMESPACE = "METAER."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/5/2021
--- Version 0.1.1
+-- Date: 2021/4/12
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -225,20 +225,4 @@ end
 GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "GivePlayerRewards", GivePlayerRewards)
 Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
-
---[[ FOR TESTING -----------------------
-function OnBindingPressed(whichPlayer, binding)
-    if (binding == "ability_extra_46") then
-        TEMP_CardCount = TEMP_CardCount + 1
-    end
-end
-
-function OnPlayerJoined(player)
-    -- hook up binding in player joined event here, move to more appropriate place if needed
-    player.bindingPressedEvent:Connect(OnBindingPressed)
-end
-
--- on player joined/left functions need to be defined before calling event:Connect()
---Game.playerJoinedEvent:Connect(OnPlayerJoined)
-----------------------------------------------------------------------------------------------------
-]]
+-------------------------------------------------------------------------------------------------------------------------

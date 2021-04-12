@@ -2,8 +2,8 @@ local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/5
--- Version 0.1.5
+-- Date: 2021/4/12
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -57,16 +57,15 @@ local function CalculateRewardSlot(player)
     local tbl = {}
     local randomChance = math.random(1, 100)
     if randomChance < 98 then
-        local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
-        if randomChance > 85 then
-            tbl = {[bindId] = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, REWARD_UTIL.GetSkillLargeAmmount()), P = 0}
-        elseif randomChance > 40 then
-            tbl = {[bindId] = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, REWARD_UTIL.GetSkillMediumAmmount()), P = 0}
-        else
-            tbl = {[bindId] = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, REWARD_UTIL.GetSkillSmallAmmount()), P = 0}
-        end
+        local skillReward = REWARD_UTIL.GetSkillReward()
+        skillReward.amount = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, skillReward.amount)
+        skillReward.P = 0
+        tbl = skillReward
     else
-        tbl = {C = _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player, REWARD_UTIL.GetCostumeTokenAmmount()), P = 0}
+        local cosmeticToken = REWARD_UTIL.GetCosmeticReward()
+        cosmeticToken.amount = _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player, cosmeticToken.amount)
+        cosmeticToken.P = 0
+        tbl = cosmeticToken
     end
     return tbl
 end
@@ -86,6 +85,7 @@ local function GenerateShopItems(player, forced)
     local tempTbl = {}
     for i = 1, 6 do
         tempTbl[i] = CalculateRewardSlot(player)
+        tempTbl[i].amount = tempTbl[i].amount * 2
     end
     local currentTime = os.time(os.date("!*t"))
     player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH or 0
@@ -94,7 +94,7 @@ local function GenerateShopItems(player, forced)
     end
     local refreshTime = currentTime + (24 * 60 * 60)
     --player:SetResource("DS_REFRESH", CoreMath.Round(refreshTime))
-    tempTbl["TIME"] = {T = refreshTime, R = CoreMath.Round(player.serverUserData.DS_REFRESH)}
+    tempTbl["TIME"] = {T = refreshTime, R = CoreMath.Round(player.serverUserData.DS_REFRESH), V = 1}
     local resourceTime = CoreMath.Round(refreshTime - os.time(os.date("!*t")))
     player:SetResource("DS_REFRESHTIME", CoreMath.Round(resourceTime + time()))
     dailyRewards[player.id] = tempTbl
@@ -112,7 +112,7 @@ end
 --@param object player
 --@param table data
 function OnLoadPlayerDailyShop(player, data)
-    if data and data["TIME"] and data["TIME"].T and not Has24HoursPassed(data["TIME"].T) then
+    if data and data["TIME"] and data["TIME"].T and data["TIME"].V == 1 and not Has24HoursPassed(data["TIME"].T) then
         dailyRewards[player.id] = data
         player.serverUserData.DS_REFRESH = data["TIME"].R or 0
         player:SetResource("DS_REFRESHTIME", CoreMath.Round(data["TIME"].T - os.time(os.date("!*t")) + time()))
@@ -128,7 +128,7 @@ function OnPlayerLeft(player)
 end
 
 function OnPurchase(player, id, slot)
-    local cost = REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id])
+    local cost = REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id], slot)
 
     -- Event Daily Cost Reduction
     cost = CoreMath.Round(cost * CONST.EVENT_DAILY_SHOP_DISCOUNT)
