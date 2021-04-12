@@ -189,14 +189,14 @@ for _, class in ipairs(propClassData:GetChildren()) do
 	end
 end
 
-local playerClassLevels = {
+--[[ local playerClassLevels = {
 	API.GetClassLevel(LOCAL_PLAYER, API.TANK),
 	API.GetClassLevel(LOCAL_PLAYER, API.MAGE),
 	API.GetClassLevel(LOCAL_PLAYER, API.HUNTER),
 	API.GetClassLevel(LOCAL_PLAYER, API.HEALER),
 	API.GetClassLevel(LOCAL_PLAYER, API.ASSASSIN)
 }
-
+ ]]
 local pointNames = {
     [1] = "WC",
     [2] = "AS",
@@ -430,7 +430,7 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 function OnResourceChanged(player, resName, resAmt)
-	if (resName == "C_LEVEL") then
+--[[ 	if (resName == "C_LEVEL") then
 		if resAmt > playerClassLevels[player:GetResource("CLASS_MAP")] then
 			playerClassLevels[player:GetResource("CLASS_MAP")] = resAmt
 			AddLine({"", string.format("%s has gained %s level %d", player.name, ClassLabelFromID[player:GetResource("CLASS_MAP")], tostring(resAmt)), "", "PlayerLeveledUp"}, TEXT_COLOR)
@@ -439,7 +439,7 @@ function OnResourceChanged(player, resName, resAmt)
 		end
 
 	end
-	NEEDS_UPDATE = true
+	NEEDS_UPDATE = true ]]
 end
 
 function OnMenuChanged(oldMenu, newMenu)
@@ -583,7 +583,10 @@ function Tick(deltaTime)
 						if (lines[i].killedLocation ~= "") then
 
 							local textBox = element:FindDescendantByName("Text Box")
-							textBox.text = lines[i].killedLocation
+							textBox.text = "?"
+							if (lines[i].killedLocation) then
+								textBox.text = lines[i].killedLocation
+							end
 
 							feedElements["killedLocation"] = element
 							feedElements["killedLocation"].width = 40
