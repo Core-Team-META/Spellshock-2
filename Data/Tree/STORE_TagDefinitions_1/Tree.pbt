@@ -23,7 +23,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 8178901969581781700
+        Id: 8614122186465498534
       }
     }
   }
@@ -65,7 +65,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 2562562495929064540
+        Id: 12302547594047116782
       }
     }
   }
@@ -107,7 +107,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 11110360824915348075
+        Id: 5485640623370883304
       }
     }
   }
@@ -153,7 +153,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 1185698000734154284
+        Id: 8744665518178580042
       }
     }
   }
@@ -191,7 +191,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17459582866457614450
+        Id: 17370828256945431127
       }
     }
   }

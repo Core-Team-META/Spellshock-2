@@ -35,4 +35,5 @@ end
 if LOCAL_PLAYER == EQUIPMENT.owner then
     Events.Broadcast("Set Class Icon", EQUIPMENT.name, ICON)
     Events.Broadcast("SetConsumablesNetworkObject", ConsumablesNetwork)
+    Events.Broadcast("SetRemountObject", EQUIPMENT)
 end
