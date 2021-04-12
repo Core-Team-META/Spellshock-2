@@ -6267,6 +6267,12 @@ Objects {
         Id: 14248801232993029065
       }
     }
+    Overrides {
+      Name: "cs:04_Iceberg_Attachment"
+      AssetReference {
+        Id: 7921538902990370686
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7196,6 +7202,12 @@ Objects {
       Name: "cs:03_Pyroblast_Impact"
       AssetReference {
         Id: 7794121287511761576
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Attachment"
+      AssetReference {
+        Id: 7816712407552257158
       }
     }
   }
