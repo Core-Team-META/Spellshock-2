@@ -53,10 +53,10 @@ local function EnableSmallSpawnProtect()
 end
 
 local function EnableLargeSpawnProtect()
-    listeners[#listeners + 1] = SmallOrc.beginOverlapEvent:Connect(OnBeginOverLap)
-    listeners[#listeners + 1] = SmallElf.beginOverlapEvent:Connect(OnBeginOverLap)
-    listeners[#listeners + 1] = SmallElf.endOverlapEvent:Connect(OnEndOverlap)
-    listeners[#listeners + 1] = SmallOrc.endOverlapEvent:Connect(OnEndOverlap)
+    listeners[#listeners + 1] = LargeOrcBase.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = LargeElfBase.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = LargeElfBase.endOverlapEvent:Connect(OnEndOverlap)
+    listeners[#listeners + 1] = LargeOrcBase.endOverlapEvent:Connect(OnEndOverlap)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
