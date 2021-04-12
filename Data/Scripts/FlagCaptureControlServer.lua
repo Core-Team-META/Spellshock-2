@@ -367,7 +367,7 @@ function OnBeginOverlap(thisTrigger, other)
         local lastCapture = other.serverUserData.lasterCapturePoint
         lastCapture = lastCapture or {}
         lastCapture.point = ORDER
-        lastCapture.time = time()
+        lastCapture.time = nil
         other.serverUserData.lasterCapturePoint = lastCapture
     end
 end
