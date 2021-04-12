@@ -583,15 +583,19 @@ function Tick(deltaTime)
 						if (lines[i].killedLocation ~= "") then
 
 							local textBox = element:FindDescendantByName("Text Box")
-							textBox.text = "?"
+
 							if (lines[i].killedLocation) then
 								textBox.text = lines[i].killedLocation
+								if (not element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_ON end
+							else
+								textBox.text = ""
+								if (element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_OFF end
 							end
 
 							feedElements["killedLocation"] = element
 							feedElements["killedLocation"].width = 40
 							feedElements["killedLocation"].height = 40
-							if (not element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_ON end
+
 						else
 							if (element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_OFF end
 						end
