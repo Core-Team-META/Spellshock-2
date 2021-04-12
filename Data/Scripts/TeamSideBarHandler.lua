@@ -36,18 +36,6 @@ for _, classData in ipairs(ClassMenuData:GetChildren()) do
     icon:SetImage(ClassIcons[ClassID])
 end
 
-function OnBindingPressed(player, binding)
-    -- U key
-    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"]
-    or _G.CurrentMenu == _G.MENU_TABLE["Respawn"] and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
-        if TeamInfoPanel.visibility == Visibility.INHERIT then
-            TeamInfoPanel.visibility = Visibility.FORCE_OFF
-        else
-            TeamInfoPanel.visibility = Visibility.INHERIT
-        end
-    end
-end
-
 function OnMenuChanged(oldMenu, newMenu)
     if (newMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] or  newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"])
     and (ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY) then -- show
@@ -55,16 +43,6 @@ function OnMenuChanged(oldMenu, newMenu)
     else
 		TeamLeftSideBar.visibility = Visibility.FORCE_OFF
 	end
-end
-
-function OnGameStateChanged (oldState, newState)
-	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
-        TeamInfoPanel.visibility = Visibility.INHERIT
-    elseif _G.CurrentMenu == _G.MENU_TABLE["NONE"] and newState == ABGS.GAME_STATE_LOBBY then
-        TeamInfoPanel.visibility = Visibility.INHERIT
-    else
-        TeamInfoPanel.visibility = Visibility.FORCE_OFF
-    end
 end
 
 function AddNewPanel(player)
@@ -124,7 +102,7 @@ function Tick()
     for index, playerPanel in ipairs(AllPanels) do
         if Object.IsValid(playerPanel) then -- check that the panel hasn't been destroyed
             local player = playerPanel.clientUserData.player -- get the player that belongs to this panel
-            if Object.IsValid(player) and player.team == LOCAL_PLAYER.team then -- check if the player is valid and is on the LOCAL_PLAYER's team
+            if (LOCAL_PLAYER.name == "Ooccoo" or LOCAL_PLAYER.name == "Morticai" or LOCAL_PLAYER.name == "Buckmonster" or LOCAL_PLAYER.name == "Rolok") or (Object.IsValid(player) and player.team == LOCAL_PLAYER.team) then -- check if the player is valid and is on the LOCAL_PLAYER's team
                 --print("  > "..player.name)
                 
                 -- Increment the class count
@@ -184,26 +162,18 @@ function Tick()
         end
     end
 
-    -- Check if panels are missing
+    --[[ Check if panels are missing
     if #AllPanels < #Game.GetPlayers({ignorePlayers = LOCAL_PLAYER}) then
         for index, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do
             if not AllPanels[player] then
                 AddNewPanel(player)
             end
         end
-    end
+    end]]
 end
 
 OnMenuChanged(nil, _G.CurrentMenu)
---TeamInfoPanel.visibility = Visibility.FORCE_OFF
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
---[[Add a new panel for every player already in the server
-for _, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do --, includeTeams = LOCAL_PLAYER.team
-    AddNewPanel(player)
-end]]
-
---LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Events.Connect("Menu Changed", OnMenuChanged)
---Events.Connect("GameStateChanged", OnGameStateChanged)

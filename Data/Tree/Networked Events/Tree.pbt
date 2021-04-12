@@ -95,6 +95,10 @@ Objects {
       String: ""
     }
     Overrides {
+      Name: "cs:PCL"
+      String: ""
+    }
+    Overrides {
       Name: "cs:TLS:isrep"
       Bool: true
     }
@@ -105,6 +109,14 @@ Objects {
     Overrides {
       Name: "cs:OVS:isrep"
       Bool: true
+    }
+    Overrides {
+      Name: "cs:PCL:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:PCL:tooltip"
+      String: "Play Class Level up event"
     }
   }
   WantsNetworking: true
