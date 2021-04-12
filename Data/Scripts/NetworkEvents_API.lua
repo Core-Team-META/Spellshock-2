@@ -12,6 +12,11 @@ function OnVictory(message)
     script:SetNetworkedCustomProperty("OVS", message)
 end
 
+function OnPlayerClassLevelUp(player, classID, level)
+    local data = player.id..","..tostring(classID)..","..tostring(level)
+    script:SetNetworkedCustomProperty("PCL", data)
+end
+
 function OnGameStateChanged(oldState, newState)
     if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
         script:SetNetworkedCustomProperty("OVS", "")
@@ -22,3 +27,4 @@ Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("ToggleLoadScreen", OnToggleLoadScreen)
 Events.Connect("PlayerDied", OnPlayerDied)
 Events.Connect("TeamVictory_Client", OnVictory)
+Events.Connect("PlayerClassLevelUp_Server", OnPlayerClassLevelUp)

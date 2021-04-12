@@ -10,6 +10,12 @@ Assets {
           Id: 11974742996071064388
         }
       }
+      Overrides {
+        Name: "cs:CONST"
+        AssetReference {
+          Id: 15718075383189814537
+        }
+      }
     }
   }
   SerializationVersion: 81
