@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/7
--- Version 0.2.1
+-- Date: 2021/4/11
+-- Version 0.2.2
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -24,6 +24,7 @@ local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObje
 local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
 local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
 local MOUNT_MANAGER = script:GetCustomProperty("MountManager_Server"):WaitForObject()
+local CLASS_SELECTION = script:GetCustomProperty("ClassSelectionServer"):WaitForObject()
 
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
@@ -330,7 +331,7 @@ local function OnSaveMultiplierData(player, data)
         end
         multiplierTimes [index] = timestamp
     end
-    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] = next(multiplierTimes ) ~= nil and UTIL.ConvertTableToString(multiplierTimes , ",", "=") or ""
+    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] = next(multiplierTimes) ~= nil and UTIL.ConvertTableToString(multiplierTimes , ",", "=") or ""
 end
 
 --@param object player
@@ -359,6 +360,8 @@ local function OnPlayerJoined(player)
     else
         AddDefaultCosmetics(player)
     end
+    local classId = cosmeticData[CONST.STORAGE.CLASS_FAVORITE] or 1
+    CLASS_SELECTION.context.OnPlayerJoined(player, classId)
     --end
     CONSUMABLES.context.OnPlayerJoined(player)
 end
@@ -391,6 +394,8 @@ function OnSavePlayerData(player)
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
     OnSaveCostumeData(player, cosmeticData)
     OnSaveEquippedCosmetic(player, cosmeticData)
+    local classId = player:GetResource(CONST.CLASS_RES)
+    cosmeticData[CONST.STORAGE.CLASS_FAVORITE] = classId > 0 and classId or 1
     Storage.SetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player, cosmeticData)
 
     local progressData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.PROGRESSION, player)

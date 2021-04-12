@@ -5944,6 +5944,7 @@ Objects {
   ChildIds: 10674866817263595707
   ChildIds: 11957674035243578709
   ChildIds: 1515101890303513706
+  ChildIds: 17398683915711506933
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5974,6 +5975,74 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17398683915711506933
+  Name: "MAKRO_TEXT"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15188400136981675426
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 89
+    Height: 35
+    UIX: -25
+    UIY: -65.009964
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "MAP"
+      Color {
+        R: 1
+        G: 0.609006643
+        B: 0.279999971
+        A: 1
+      }
+      Size: 9
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -7228,6 +7297,7 @@ Objects {
   ChildIds: 6770351018579931954
   ChildIds: 4040777859642934345
   ChildIds: 11751162444982300827
+  ChildIds: 7293590907425887312
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7258,6 +7328,74 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7293590907425887312
+  Name: "MAKRO_TEXT"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13391572410033061346
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 89
+    Height: 35
+    UIX: -25
+    UIY: -65.009964
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "CLASS INFO"
+      Color {
+        R: 1
+        G: 0.609006643
+        B: 0.279999971
+        A: 1
+      }
+      Size: 9
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -8574,6 +8712,7 @@ Objects {
   ChildIds: 15603748636445998308
   ChildIds: 17044378075595166318
   ChildIds: 2552574817937905578
+  ChildIds: 6424677627066013482
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -8604,6 +8743,74 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6424677627066013482
+  Name: "MAKRO_TEXT"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16274965121088166168
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 89
+    Height: 35
+    UIX: -25
+    UIY: -65.009964
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "DAILY SHOP"
+      Color {
+        R: 1
+        G: 0.609006643
+        B: 0.279999971
+        A: 1
+      }
+      Size: 9
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -9859,6 +10066,7 @@ Objects {
   ChildIds: 7131922865031806597
   ChildIds: 5646951611773231462
   ChildIds: 2724764113250252043
+  ChildIds: 10793764760019528771
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -9889,6 +10097,74 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10793764760019528771
+  Name: "MAKRO_TEXT"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4353991398021423902
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 89
+    Height: 35
+    UIX: -25
+    UIY: -65.009964
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "COSMETIC SHOP"
+      Color {
+        R: 1
+        G: 0.609006643
+        B: 0.279999971
+        A: 1
+      }
+      Size: 9
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -11145,6 +11421,7 @@ Objects {
   ChildIds: 14838448428800381971
   ChildIds: 1284703636140350588
   ChildIds: 8975988431178332700
+  ChildIds: 3496558634911892302
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -11175,6 +11452,74 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3496558634911892302
+  Name: "MAKRO_TEXT"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2547882933687971956
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 89
+    Height: 35
+    UIX: -25
+    UIY: -65.009964
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "PERK SHOP"
+      Color {
+        R: 1
+        G: 0.609006643
+        B: 0.279999971
+        A: 1
+      }
+      Size: 9
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -21386,7 +21731,7 @@ Objects {
   Control {
     Width: 400
     Height: 101
-    UIX: 48.3846436
+    UIX: -1.98651123
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -21447,7 +21792,7 @@ Objects {
   Control {
     Width: 200
     Height: 109
-    UIX: 73.3873138
+    UIX: 23.0161591
     UIY: -1
     RenderTransformPivot {
       Anchor {
@@ -21890,6 +22235,7 @@ Objects {
   Control {
     Width: 60
     Height: 60
+    UIX: 14.9833984
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -21933,6 +22279,7 @@ Objects {
   ChildIds: 1304179139472824892
   ChildIds: 2249792988978930973
   ChildIds: 8578182611752176422
+  ChildIds: 7029289788510873598
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -21963,6 +22310,74 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7029289788510873598
+  Name: "MAKRO_TEXT"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12218812939096285443
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 89
+    Height: 35
+    UIX: -25
+    UIY: -65.009964
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "HEALING POTION"
+      Color {
+        R: 1
+        G: 0.609006643
+        B: 0.279999971
+        A: 1
+      }
+      Size: 9
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -23392,7 +23807,7 @@ Objects {
   Control {
     Width: 60
     Height: 60
-    UIX: 84
+    UIX: 98.9834
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -23514,12 +23929,13 @@ Objects {
         B: 0.279999971
         A: 1
       }
-      Size: 9
+      Size: 10
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"

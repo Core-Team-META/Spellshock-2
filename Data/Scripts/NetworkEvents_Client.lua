@@ -21,6 +21,11 @@ function OnNetworkedChanged(object, string)
             if message ~= "" then
                 Events.Broadcast("TeamVictory_Client", message)
             end
+        elseif string == "PCL" then
+            local data = NETWORK:GetCustomProperty(string)
+            if data ~= "" then
+                Events.Broadcast("PlayerClassLevelUp_Client", data)
+            end
         end
     end
 end

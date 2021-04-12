@@ -155,17 +155,18 @@ function OnGameStateChanged(oldState, newState)
     end
 end
 
-function OnPlayerJoined(player)
+-- Context called from Meta Player Storage Manager
+function OnPlayerJoined(player, classId)
     --player.serverUserData.CurrentClass = META_AP().TANK
-    player:SetResource("CLASS_MAP", META_AP().TANK)
-    player.animationStance = Class_Stances[META_AP().TANK]
+    player:SetResource("CLASS_MAP", classId)
+    player.animationStance = Class_Stances[classId]
     local currentState = ABGS.GetGameState()
     if currentState == ABGS.GAME_STATE_LOBBY then
         if ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
             -- Don't equip if the game state is about to change
             return
         end
-        EquipPlayer(player, META_AP().TANK)
+        EquipPlayer(player, classId)
     elseif currentState == ABGS.GAME_STATE_ROUND then
         --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
         --newClass:Equip(player)
@@ -175,7 +176,7 @@ function OnPlayerJoined(player)
             currentState == ABGS.GAME_STATE_REWARDS or
             currentState == ABGS.GAME_STATE_REWARDS_END
      then
-        EquipPlayer(player, META_AP().TANK)
+        EquipPlayer(player, classId)
     end
 
     --[[Task.Wait(2)
@@ -188,7 +189,7 @@ if Environment.IsSinglePlayerPreview() then
     OnPlayerJoined(Game.GetPlayers()[1])
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Events.ConnectForPlayer("ClassChanged_SERVER", OnClassChanged)
 Events.Connect("CH_ClassChanged_SERVER", OnClassChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)

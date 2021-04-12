@@ -7,6 +7,7 @@ local ClassEquipmentReference
 local Timer = -1
 local _Owner = nil
 local PlayerDiedEvent = nil
+local PlayerDamageEvent = nil
 
 local function META_AP()
 	while not _G["Meta.Ability.Progression"] do
@@ -28,8 +29,15 @@ local function DestroyEquipment()
 	end
 end
 
+function OnPlayerDamaged(player, dmg)
+	PlayerDamageEvent:Disconnect()
+	PlayerDamageEvent = nil
+	Timer = 0
+end
+
 function OnPlayerDied(player, _)
 	PlayerDiedEvent:Disconnect()
+	PlayerDiedEvent = nil
 	Timer = 0
 end
 
@@ -56,6 +64,7 @@ function OnEquip(equipment, player)
 	--Task.Wait()
 	--Task.Wait()
 	PlayerDiedEvent = player.diedEvent:Connect(OnPlayerDied)
+	PlayerDamageEvent = player.damagedEvent:Connect(OnPlayerDamaged)
 	player:SetVisibility(false, false)
 	player.animationStance = "unarmed_stance"
 	_Owner = player
@@ -67,7 +76,16 @@ function OnUnequip(equipment, player)
 		player:SetVisibility(true)
 		player.serverUserData.isAnimorphed = false
 	end
-	PlayerDiedEvent:Disconnect()
+
+	if PlayerDiedEvent then
+		PlayerDiedEvent:Disconnect()
+		PlayerDiedEvent = nil
+	end
+
+	if PlayerDamageEvent then
+		PlayerDamageEvent:Disconnect()
+		PlayerDamageEvent = nil
+	end
 end
 
 Equipment.equippedEvent:Connect(OnEquip)
