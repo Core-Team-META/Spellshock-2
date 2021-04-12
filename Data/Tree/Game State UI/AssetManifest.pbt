@@ -224,6 +224,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1372025318724450931
+  Name: "Cash Register Purchase Deep Boomy 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_cash_register_purchase_deep_boomy_01_Cue_ref"
+  }
+}
+Assets {
   Id: 1046635934407451220
   Name: "Fantasy Craft Crystal 018"
   PlatformAssetType: 9
