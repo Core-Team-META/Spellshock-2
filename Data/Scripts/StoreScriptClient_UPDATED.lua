@@ -1140,7 +1140,9 @@ function PopulateStore(direction)
 		local BGMeshColor = newGeo:GetCustomProperty("DefaultColor")
 		local BGImageColor = RarityDefs[v.rarity].color --newGeo:GetCustomProperty("DefaultColor")
 		propClassIcon:SetImage(v.classIcon)
+		propClassIcon:SetColor(Color.WHITE)
 		propTypeIcon:SetImage(v.typeIcon)
+		propTypeIcon:SetColor(Color.WHITE)
 
 		-- Change stance of preview animated mesh
 		if v.class then
@@ -1739,7 +1741,9 @@ function SpawnFilterButtonRow(holder, defList, clickFunction, color)
 
 		if data.icon then
 			propIcon:SetImage(data.icon)
+			propIcon:SetColor(Color.WHITE)
 			propIcon:GetChildren()[1]:SetImage(data.icon)
+			propIcon:GetChildren()[1]:SetColor(Color.WHITE)
 		else
 			propIcon.visibility = Visibility.FORCE_OFF
 			propTitle.anchor = UIPivot.MIDDLE_CENTER

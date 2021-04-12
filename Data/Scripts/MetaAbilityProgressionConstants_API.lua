@@ -329,7 +329,8 @@ API.COSMETIC_SKIN = {
     ELEMENTAL = 5,
     ROYAL = 6,
     PUNK = 7,
-    JUSTICE = 8
+    JUSTICE = 8,
+    AFTERLIFE = 9
 }
 
 -- BINDING KEYS
