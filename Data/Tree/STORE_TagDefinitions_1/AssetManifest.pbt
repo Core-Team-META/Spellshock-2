@@ -1,45 +1,45 @@
 Assets {
-  Id: 17459582866457614450
-  Name: "Hammer"
+  Id: 17370828256945431127
+  Name: "Fantasy Ability Yellow 026"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Icon_Hammer"
+    AssetId: "UI_Fantasy_Ability_Yellow_026"
   }
 }
 Assets {
-  Id: 11110360824915348075
-  Name: "Electric Loop"
+  Id: 12302547594047116782
+  Name: "Fantasy Ability Purple 021"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Icon_044"
+    AssetId: "UI_Fantasy_Ability_Purple_021"
   }
 }
 Assets {
-  Id: 8178901969581781700
-  Name: "Sun"
+  Id: 8744665518178580042
+  Name: "Fantasy Ability Green 018"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Icon_Sun"
+    AssetId: "UI_Fantasy_Ability_Green_018"
   }
 }
 Assets {
-  Id: 2562562495929064540
-  Name: "Daggers"
+  Id: 8614122186465498534
+  Name: "Fantasy Ability Yellow 037"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_icon_Daggers"
+    AssetId: "UI_Fantasy_Ability_Yellow_037"
   }
 }
 Assets {
-  Id: 1185698000734154284
-  Name: "Arrow"
+  Id: 5485640623370883304
+  Name: "Fantasy Ability Blue 029"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Icon_Arrow"
+    AssetId: "UI_Fantasy_Ability_Blue_029"
   }
 }
