@@ -293,6 +293,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
+]]
 
     ["/addscore"] = {
         OnCommandCalledClient = function (player, message)
@@ -329,7 +330,7 @@ commands = {
         requireMessage = true,
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
-    }, ]]
+    },
 
 }
 
