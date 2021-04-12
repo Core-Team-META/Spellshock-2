@@ -350,6 +350,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5403075034352191900
+  Name: "Fantasy Trophy 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_001"
+  }
+}
+Assets {
   Id: 5223287246289902870
   Name: "Frame Outline Thin 001"
   PlatformAssetType: 9

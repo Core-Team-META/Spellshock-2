@@ -32,7 +32,7 @@ function OnNetworkPropertyChanged(thisObject, name)
 		AnimatedMesh.animationStance = AnimationStance
 		
 		AnimatedMesh.parent = nil
-		AnimatedMesh:Follow(HawkRoot, 800)
+		AnimatedMesh:Follow(HawkRoot, 1400)
 	end
 end
 

@@ -61,7 +61,7 @@ Assets {
       Overrides {
         Name: "cs:04_Iceberg_Attachment"
         AssetReference {
-          Id: 10750937685288866590
+          Id: 841534158063459245
         }
       }
       Overrides {

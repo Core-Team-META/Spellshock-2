@@ -50,15 +50,13 @@ Assets {
           }
         }
         ParentId: 4639327349381918715
+        ChildIds: 4205254922811921030
         ChildIds: 14750262217057442121
         ChildIds: 7839807138013007610
-        ChildIds: 328671677227639735
-        ChildIds: 9588517332301509322
-        ChildIds: 4075026384960015435
         ChildIds: 16120254706378471092
+        ChildIds: 328671677227639735
         ChildIds: 8700832067591189207
         ChildIds: 18427305398017107186
-        ChildIds: 16116060885571236122
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -73,23 +71,26 @@ Assets {
         }
       }
       Objects {
-        Id: 14750262217057442121
-        Name: "Ice Cracking Melting Loop 01 SFX"
+        Id: 4205254922811921030
+        Name: "Ice"
         Transform {
           Location {
             X: 20
             Y: -5
-            Z: 170
+            Z: 15
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.43
+            Y: 0.43
+            Z: 0.43
           }
         }
         ParentId: 7137485898097808953
+        ChildIds: 9588517332301509322
+        ChildIds: 4075026384960015435
+        ChildIds: 16116060885571236122
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -99,90 +100,8 @@ Assets {
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
-        AudioInstance {
-          AudioAsset {
-            Id: 7241023699057474115
-          }
-          AutoPlay: true
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 7839807138013007610
-        Name: "Ice Frost Attack Whoosh Impact 01 SFX"
-        Transform {
-          Location {
-            Z: 130
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7137485898097808953
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 17039004499830472759
-          }
-          AutoPlay: true
-          Volume: 1
-          Falloff: 5000
-          Radius: 500
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 328671677227639735
-        Name: "Decal Snow Patch"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 2.9
-            Y: 2.4
-            Z: 1.60000026
-          }
-        }
-        ParentId: 7137485898097808953
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 3834487395638995980
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
@@ -190,9 +109,7 @@ Assets {
         Name: "Stone Block Standard Broken"
         Transform {
           Location {
-            X: 20
-            Y: -5
-            Z: 141.89502
+            Z: 126.89502
           }
           Rotation {
           }
@@ -202,7 +119,7 @@ Assets {
             Z: 1.57122171
           }
         }
-        ParentId: 7137485898097808953
+        ParentId: 4205254922811921030
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -250,9 +167,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 20
-            Y: -5
-            Z: 38.2426758
+            Z: 23.2426758
           }
           Rotation {
             Yaw: -44.9999924
@@ -263,7 +178,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 7137485898097808953
+        ParentId: 4205254922811921030
         ChildIds: 492881075883476320
         ChildIds: 4038122734624499122
         ChildIds: 8607163289698412104
@@ -490,368 +405,13 @@ Assets {
         }
       }
       Objects {
-        Id: 16120254706378471092
-        Name: "Group"
-        Transform {
-          Location {
-            X: 20
-            Y: -5
-            Z: 38.2426758
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7137485898097808953
-        ChildIds: 3238820073749390993
-        ChildIds: 972802579640125499
-        ChildIds: 7520386329535348796
-        ChildIds: 17957992418610292255
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3238820073749390993
-        Name: "Ice Spikes Volume VFX"
-        Transform {
-          Location {
-            X: 151.901367
-            Y: -163.574219
-          }
-          Rotation {
-            Yaw: -45
-          }
-          Scale {
-            X: 1.15336895
-            Y: 1.15336895
-            Z: 1.15336895
-          }
-        }
-        ParentId: 16120254706378471092
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Size"
-            Float: 0.515294373
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 5
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 6093444816407687955
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 972802579640125499
-        Name: "Ice Spikes Volume VFX"
-        Transform {
-          Location {
-            X: -167.350586
-            Y: -160.816406
-          }
-          Rotation {
-            Yaw: -135
-          }
-          Scale {
-            X: 1.15336895
-            Y: 1.15336895
-            Z: 1.15336895
-          }
-        }
-        ParentId: 16120254706378471092
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Size"
-            Float: 0.515294373
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 5
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 6093444816407687955
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7520386329535348796
-        Name: "Ice Spikes Volume VFX"
-        Transform {
-          Location {
-            X: -200.194458
-            Y: 200.786987
-          }
-          Rotation {
-            Yaw: 135
-          }
-          Scale {
-            X: 1.15336895
-            Y: 1.15336895
-            Z: 1.15336895
-          }
-        }
-        ParentId: 16120254706378471092
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Size"
-            Float: 0.515294373
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 5
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 6093444816407687955
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 17957992418610292255
-        Name: "Ice Spikes Volume VFX"
-        Transform {
-          Location {
-            X: 191.817871
-            Y: 188.456543
-          }
-          Rotation {
-            Yaw: 44.9999962
-          }
-          Scale {
-            X: 1.15336895
-            Y: 1.15336895
-            Z: 1.15336895
-          }
-        }
-        ParentId: 16120254706378471092
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Size"
-            Float: 0.515294373
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 5
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 6093444816407687955
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 8700832067591189207
-        Name: "Snow Volume VFX"
-        Transform {
-          Location {
-            Z: 0.229980469
-          }
-          Rotation {
-          }
-          Scale {
-            X: 10
-            Y: 10
-            Z: 10
-          }
-        }
-        ParentId: 7137485898097808953
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Density"
-            Float: 6
-          }
-          Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-              X: 10
-              Z: 50
-            }
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 3.85536265
-          }
-          Overrides {
-            Name: "bp:Volume Type"
-            Enum {
-              Value: "mc:evfxvolumetype:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 1.5
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 2590787292447476024
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 18427305398017107186
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-            Z: 46.0063477
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7137485898097808953
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 16116060885571236122
         Name: "Stones"
         Transform {
           Location {
-            X: -9.7109375
-            Y: 0.123046875
-            Z: 28.6582031
+            X: -29.7109375
+            Y: 5.12304688
+            Z: 13.6582031
           }
           Rotation {
           }
@@ -861,7 +421,7 @@ Assets {
             Z: 1.04945099
           }
         }
-        ParentId: 7137485898097808953
+        ParentId: 4205254922811921030
         ChildIds: 8297246885262810944
         ChildIds: 9878971637291537570
         ChildIds: 622068995434580742
@@ -1541,6 +1101,492 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 14750262217057442121
+        Name: "Ice Cracking Melting Loop 01 SFX"
+        Transform {
+          Location {
+            X: 20
+            Y: -5
+            Z: 170
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7137485898097808953
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7241023699057474115
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 7839807138013007610
+        Name: "Ice Frost Attack Whoosh Impact 01 SFX"
+        Transform {
+          Location {
+            Z: 130
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7137485898097808953
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 17039004499830472759
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: 5000
+          Radius: 500
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 16120254706378471092
+        Name: "Group"
+        Transform {
+          Location {
+            X: 20
+            Y: -5
+            Z: 38.2425919
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7137485898097808953
+        ChildIds: 3238820073749390993
+        ChildIds: 972802579640125499
+        ChildIds: 7520386329535348796
+        ChildIds: 17957992418610292255
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3238820073749390993
+        Name: "Ice Spikes Volume VFX"
+        Transform {
+          Location {
+            X: 151.901367
+            Y: -163.574219
+          }
+          Rotation {
+            Yaw: -45
+          }
+          Scale {
+            X: 1.15336895
+            Y: 1.15336895
+            Z: 1.15336895
+          }
+        }
+        ParentId: 16120254706378471092
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Size"
+            Float: 0.515294373
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6093444816407687955
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 972802579640125499
+        Name: "Ice Spikes Volume VFX"
+        Transform {
+          Location {
+            X: -167.350586
+            Y: -160.816406
+          }
+          Rotation {
+            Yaw: -135
+          }
+          Scale {
+            X: 1.15336895
+            Y: 1.15336895
+            Z: 1.15336895
+          }
+        }
+        ParentId: 16120254706378471092
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Size"
+            Float: 0.515294373
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6093444816407687955
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7520386329535348796
+        Name: "Ice Spikes Volume VFX"
+        Transform {
+          Location {
+            X: -200.194458
+            Y: 200.786987
+          }
+          Rotation {
+            Yaw: 135
+          }
+          Scale {
+            X: 1.15336895
+            Y: 1.15336895
+            Z: 1.15336895
+          }
+        }
+        ParentId: 16120254706378471092
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Size"
+            Float: 0.515294373
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6093444816407687955
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17957992418610292255
+        Name: "Ice Spikes Volume VFX"
+        Transform {
+          Location {
+            X: 191.817871
+            Y: 188.456543
+          }
+          Rotation {
+            Yaw: 44.9999962
+          }
+          Scale {
+            X: 1.15336895
+            Y: 1.15336895
+            Z: 1.15336895
+          }
+        }
+        ParentId: 16120254706378471092
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Size"
+            Float: 0.515294373
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6093444816407687955
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 328671677227639735
+        Name: "Decal Snow Patch"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2.9
+            Y: 2.4
+            Z: 1.60000026
+          }
+        }
+        ParentId: 7137485898097808953
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 3834487395638995980
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 8700832067591189207
+        Name: "Snow Volume VFX"
+        Transform {
+          Location {
+            Z: 0.229980469
+          }
+          Rotation {
+          }
+          Scale {
+            X: 10
+            Y: 10
+            Z: 10
+          }
+        }
+        ParentId: 7137485898097808953
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 6
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+              X: 10
+              Z: 50
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 3.85536265
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 1.5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2590787292447476024
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 18427305398017107186
+        Name: "Explosion Kit Dust Ring VFX"
+        Transform {
+          Location {
+            Z: 46.0063477
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7137485898097808953
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8368756853707329605
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+    }
+    Assets {
+      Id: 7185380311906960862
+      Name: "Rock 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 6093444816407687955
+      Name: "Ice Spikes Volume VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ice_spike_volume"
+      }
     }
     Assets {
       Id: 7241023699057474115
@@ -1567,24 +1613,6 @@ Assets {
       PrimaryAsset {
         AssetType: "DecalBlueprintAssetRef"
         AssetId: "bp_decal_snow_patch_001"
-      }
-    }
-    Assets {
-      Id: 7185380311906960862
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
-      Id: 6093444816407687955
-      Name: "Ice Spikes Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_ice_spike_volume"
       }
     }
     Assets {
