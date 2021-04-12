@@ -14,7 +14,7 @@ end
 
 local function PlayerDamageTaken(attackData)
     local object = attackData.object
-    if object ~= Equipment.owner then
+    if object ~= Equipment.owner or attackData.damage.amount < 0 then
         return
     end
     if Object.IsValid(object) and object:IsA("Player") and object == Equipment.owner then
