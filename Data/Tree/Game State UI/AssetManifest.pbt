@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14826671335767096609
+  Name: "Japanese Heavy Taiko Drum Beat Music Stinger Set 01"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_stinger_japanese_taiko_heavy_beat_01_ref"
+  }
+}
+Assets {
   Id: 14510957445621872854
   Name: "Fantasy Jewelry 013"
   PlatformAssetType: 9
@@ -59,15 +68,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ingredient_040"
-  }
-}
-Assets {
-  Id: 13910897681816001187
-  Name: "Sports Crowd Intense Cheer Yeah 01 SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_sports_crowd_cheer_intense_yeah_01_Cue_ref"
   }
 }
 Assets {
@@ -113,6 +113,15 @@ Assets {
   PrimaryAsset {
     AssetType: "FontAssetRef"
     AssetId: "GermaniaOneRegular_ref"
+  }
+}
+Assets {
+  Id: 10901942278299474248
+  Name: "Fantasy Corners 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Corners_003"
   }
 }
 Assets {
@@ -179,6 +188,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6859120864649472739
+  Name: "Fantasy Club 011"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Weapon_Club_011"
+  }
+}
+Assets {
   Id: 6647019327388432606
   Name: "Fantasy Craft Stone 022"
   PlatformAssetType: 9
@@ -212,6 +230,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_009"
+  }
+}
+Assets {
+  Id: 2791845266855844444
+  Name: "Fantasy Corners 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Corners_004"
   }
 }
 Assets {

@@ -7504,7 +7504,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -7518,8 +7518,8 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 401.004883
-      Y: 641.439087
+      X: 947.708
+      Y: 823.729614
       Z: 137.091064
     }
     Rotation {
@@ -7532,7 +7532,6 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
-  ChildIds: 1904364591418938321
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7573,38 +7572,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 1904364591418938321
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 6658932407153625848
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -7613,12 +7580,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -784.313232
-      Y: -159.529663
+      X: -1430.35974
+      Y: 9.78344727
       Z: 137.091064
     }
     Rotation {
-      Yaw: -154.074646
+      Yaw: -110.749008
     }
     Scale {
       X: 1
@@ -7627,7 +7594,6 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
-  ChildIds: 14831126661385034196
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7668,38 +7634,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 14831126661385034196
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 1615917204554894950
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -7708,12 +7642,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -333.87085
-      Y: -759.718567
+      X: -704.049438
+      Y: -1206.93335
       Z: 137.091064
     }
     Rotation {
-      Yaw: -125.849335
+      Yaw: -95.7355042
     }
     Scale {
       X: 1
@@ -7722,7 +7656,6 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
-  ChildIds: 17542577698311608302
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7763,38 +7696,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 17542577698311608302
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3528478233713128702
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -7803,12 +7704,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 434.037537
-      Y: -738.986755
+      X: 753.149902
+      Y: -1246.55994
       Z: 137.091064
     }
     Rotation {
-      Yaw: -62.47052
+      Yaw: -19.4589844
     }
     Scale {
       X: 1
@@ -7817,7 +7718,6 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
-  ChildIds: 14091970891296580840
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7858,38 +7758,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 14091970891296580840
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 13794083324186123428
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -7898,12 +7766,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -510.488159
-      Y: 562.057373
+      X: -902.258667
+      Y: 876.131409
       Z: 137.091064
     }
     Rotation {
-      Yaw: 151.603226
+      Yaw: 84.2113724
     }
     Scale {
       X: 1
@@ -7912,7 +7780,6 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
-  ChildIds: 7379515431862392493
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7953,38 +7820,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 7379515431862392493
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3339707589393332470
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -7993,11 +7828,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 863.139
-      Y: -161.000366
+      X: 1210.91736
+      Y: -570.425659
       Z: 137.091064
     }
     Rotation {
+      Yaw: -54.3486328
     }
     Scale {
       X: 1
@@ -8006,7 +7842,6 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
-  ChildIds: 9239430688573995793
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -8047,38 +7882,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 9239430688573995793
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 4536654716746327627
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -8105,7 +7908,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -8133,7 +7936,6 @@ Objects {
     }
   }
   ParentId: 15742096495686500615
-  ChildIds: 864194799562582992
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -8174,38 +7976,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 864194799562582992
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 2121977409205181662
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -8228,7 +7998,6 @@ Objects {
     }
   }
   ParentId: 15742096495686500615
-  ChildIds: 1497474116997761697
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -8269,38 +8038,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 1497474116997761697
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 6612599516593354739
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -8323,7 +8060,6 @@ Objects {
     }
   }
   ParentId: 15742096495686500615
-  ChildIds: 12107305002965053068
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -8364,38 +8100,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 12107305002965053068
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 14773343175116809841
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -8418,7 +8122,6 @@ Objects {
     }
   }
   ParentId: 15742096495686500615
-  ChildIds: 558818661511475256
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -8459,38 +8162,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 558818661511475256
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 14434310473645765923
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -12406,7 +12077,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -12433,7 +12104,6 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
-  ChildIds: 12967089068216034532
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12474,38 +12144,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 12967089068216034532
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3385644434733375197
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -12528,7 +12166,6 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
-  ChildIds: 2141601659351878510
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12569,38 +12206,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 2141601659351878510
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 15598756173282397136
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -12623,7 +12228,6 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
-  ChildIds: 6844264966421837522
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12664,40 +12268,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 6844264966421837522
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: 0.000156930444
-      Y: -0.00018702267
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 5430095217647731193
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -12720,7 +12290,6 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
-  ChildIds: 3357602572779044390
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12761,38 +12330,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 3357602572779044390
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 10037204465365045963
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -12815,7 +12352,6 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
-  ChildIds: 11832638819457921700
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12856,38 +12392,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 11832638819457921700
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 1706176892733962969
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -12909,7 +12413,6 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
-  ChildIds: 8853507674661148706
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12950,40 +12453,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 8853507674661148706
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: 0.000313860888
-      Y: -0.000374045339
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 4976701251698735137
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -13012,7 +12481,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -13040,7 +12509,6 @@ Objects {
     }
   }
   ParentId: 5510827948355619499
-  ChildIds: 10384098503232937277
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -13081,39 +12549,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 10384098503232937277
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Y: 0.00146484375
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3107348770230615204
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -13136,7 +12571,6 @@ Objects {
     }
   }
   ParentId: 5510827948355619499
-  ChildIds: 13992273208628870283
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -13177,39 +12611,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 13992273208628870283
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Y: 0.00146484375
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 10304884204456985901
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -13232,7 +12633,6 @@ Objects {
     }
   }
   ParentId: 5510827948355619499
-  ChildIds: 4527821350829432152
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -13273,39 +12673,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 4527821350829432152
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Y: 0.00146484375
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3103704151281301179
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -13328,7 +12695,6 @@ Objects {
     }
   }
   ParentId: 5510827948355619499
-  ChildIds: 14544323353165102863
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -13369,39 +12735,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 14544323353165102863
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Y: 0.00146484375
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 10545934005390707173
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -13424,7 +12757,6 @@ Objects {
     }
   }
   ParentId: 5510827948355619499
-  ChildIds: 15872725743463867412
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -13465,40 +12797,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 15872725743463867412
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: -0.00146484375
-      Y: -0.0029296875
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 12833544161582231679
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -17347,7 +16645,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -17380,7 +16678,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -17408,7 +16706,6 @@ Objects {
     }
   }
   ParentId: 5615551507275436675
-  ChildIds: 11275456465963924746
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -17449,38 +16746,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 11275456465963924746
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 1700316418680255042
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -17503,7 +16768,6 @@ Objects {
     }
   }
   ParentId: 5615551507275436675
-  ChildIds: 5799938394250236795
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -17544,38 +16808,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 5799938394250236795
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 17462909767377723160
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -17598,7 +16830,6 @@ Objects {
     }
   }
   ParentId: 5615551507275436675
-  ChildIds: 3275293228877126575
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -17639,38 +16870,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 3275293228877126575
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 1826998979715455587
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -17693,7 +16892,6 @@ Objects {
     }
   }
   ParentId: 5615551507275436675
-  ChildIds: 1603032235739561294
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -17734,38 +16932,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 1603032235739561294
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 9020644011791581471
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -17788,7 +16954,6 @@ Objects {
     }
   }
   ParentId: 5615551507275436675
-  ChildIds: 9870954779271520159
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -17829,38 +16994,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 9870954779271520159
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 2278236365684644466
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -21717,7 +20850,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -21745,7 +20878,6 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
-  ChildIds: 4897713298772459545
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -21786,41 +20918,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 4897713298772459545
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: -0.000374045572
-      Y: -0.00031386051
-      Z: -0.000418913056
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 10152954026756936936
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -21843,7 +20940,6 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
-  ChildIds: 16527720958919527926
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -21884,39 +20980,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 16527720958919527926
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Z: -0.000418913056
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3436344277829228176
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -21939,7 +21002,6 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
-  ChildIds: 13807680958129921633
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -21980,39 +21042,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 13807680958129921633
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Z: -0.000418913056
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 12924742095167650479
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22035,7 +21064,6 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
-  ChildIds: 12400610573907127480
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22076,41 +21104,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 12400610573907127480
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: -0.000374045572
-      Y: -0.00031386051
-      Z: -0.000418913056
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 11333889632161771925
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22133,7 +21126,6 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
-  ChildIds: 16222358827468600489
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22174,39 +21166,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 16222358827468600489
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Z: -0.000418913056
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 7615354564118827316
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22229,7 +21188,6 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
-  ChildIds: 1342020935534537381
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22270,39 +21228,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 1342020935534537381
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Z: -0.000418913056
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 10593915100713627
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22331,7 +21256,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -22359,7 +21284,6 @@ Objects {
     }
   }
   ParentId: 18269206194719203306
-  ChildIds: 4008189312903861596
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22400,40 +21324,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 4008189312903861596
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Y: 0.00244140625
-    }
-    Rotation {
-      Yaw: 1.02452832e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 6017480738070668025
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22456,7 +21346,6 @@ Objects {
     }
   }
   ParentId: 18269206194719203306
-  ChildIds: 6516460025930467054
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22497,41 +21386,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 6516460025930467054
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: 0.0009765625
-      Y: -0.001953125
-    }
-    Rotation {
-      Yaw: 1.02452832e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 4265202758819450866
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22554,7 +21408,6 @@ Objects {
     }
   }
   ParentId: 18269206194719203306
-  ChildIds: 146423348763405523
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22595,41 +21448,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 146423348763405523
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: 0.0009765625
-      Y: -0.001953125
-    }
-    Rotation {
-      Yaw: 1.02452832e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 14550472445736963200
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22652,7 +21470,6 @@ Objects {
     }
   }
   ParentId: 18269206194719203306
-  ChildIds: 16263238116011882368
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22693,41 +21510,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 16263238116011882368
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      X: 0.0009765625
-      Y: -0.001953125
-    }
-    Rotation {
-      Yaw: 1.02452832e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 7102490510392368314
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -22750,7 +21532,6 @@ Objects {
     }
   }
   ParentId: 18269206194719203306
-  ChildIds: 16546606106936797365
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -22791,40 +21572,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 16546606106936797365
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-      Y: 0.00244140625
-    }
-    Rotation {
-      Yaw: 1.02452832e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 5780186930419382058
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -31851,7 +30598,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -31865,12 +30612,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 337.003906
-      Y: 552.119141
+      X: -207.817383
+      Y: 984.400391
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999847
+      Yaw: 140.775223
     }
     Scale {
       X: 1
@@ -31879,7 +30626,6 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
-  ChildIds: 7474998151134417409
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -31920,38 +30666,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 7474998151134417409
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 14614418209855093852
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -31960,12 +30674,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -697.996094
-      Y: -147.880859
+      X: -785.290039
+      Y: -688.611328
       Z: 137.091064
     }
     Rotation {
-      Yaw: -141
+      Yaw: 124.711983
     }
     Scale {
       X: 1
@@ -31974,7 +30688,6 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
-  ChildIds: 14469837638036264511
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32015,38 +30728,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 14469837638036264511
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3020199994745022316
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32055,12 +30736,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -307.996094
-      Y: -677.880859
+      X: -483.314453
+      Y: -1166.28711
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999695
+      Yaw: 2.8403666
     }
     Scale {
       X: 1
@@ -32069,7 +30750,6 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
-  ChildIds: 10905440410483908302
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32114,45 +30794,12 @@ Objects {
   }
 }
 Objects {
-  Id: 10905440410483908302
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: 6.83018879e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 5168945020684575482
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
-    }
-  }
-}
-Objects {
   Id: 4671093696253445581
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 367.003906
-      Y: -622.880859
+      X: 289.646484
+      Y: -1090.01563
       Z: 137.091064
     }
     Rotation {
@@ -32165,7 +30812,6 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
-  ChildIds: 9712278165228283449
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32206,38 +30852,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 9712278165228283449
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 4671093696253445581
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32246,12 +30860,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -472.996094
-      Y: 497.119141
+      X: -1106.39746
+      Y: 266.199219
       Z: 137.091064
     }
     Rotation {
-      Yaw: 150.60994
+      Yaw: 158.321793
     }
     Scale {
       X: 1
@@ -32260,7 +30874,6 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
-  ChildIds: 18282567797371323444
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32301,39 +30914,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 18282567797371323444
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -3.41509417e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3002762210794041960
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32342,12 +30922,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 697.003906
-      Y: -112.880859
+      X: 1350.05859
+      Y: -68.53125
       Z: 137.091064
     }
     Rotation {
-      Yaw: 8.51160431
+      Yaw: 13.6372194
     }
     Scale {
       X: 1
@@ -32356,7 +30936,6 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
-  ChildIds: 12821481772546960672
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32397,39 +30976,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 12821481772546960672
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -3.41509417e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 10387259133955011845
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32458,7 +31004,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -32486,7 +31032,6 @@ Objects {
     }
   }
   ParentId: 14713109632114477840
-  ChildIds: 16943686791522300878
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32527,38 +31072,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 16943686791522300878
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 822484314130537471
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32581,7 +31094,6 @@ Objects {
     }
   }
   ParentId: 14713109632114477840
-  ChildIds: 7504931888393446770
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32622,38 +31134,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 7504931888393446770
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 14328325983799667231
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32676,7 +31156,6 @@ Objects {
     }
   }
   ParentId: 14713109632114477840
-  ChildIds: 620115994124321149
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32717,38 +31196,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 620115994124321149
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 3382078873213148225
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32771,7 +31218,6 @@ Objects {
     }
   }
   ParentId: 14713109632114477840
-  ChildIds: 16245704793105416134
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32812,38 +31258,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 16245704793105416134
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 11107824073196214716
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
@@ -32866,7 +31280,6 @@ Objects {
     }
   }
   ParentId: 14713109632114477840
-  ChildIds: 567657897962070873
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -32907,38 +31320,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 567657897962070873
-  Name: "Weapon Guide 1hand_pistol"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.857933939
-    }
-  }
-  ParentId: 13618026709082559922
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13364399744462623960
-    }
-    TeamSettings {
     }
   }
 }
