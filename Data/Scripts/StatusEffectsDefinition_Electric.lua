@@ -23,7 +23,7 @@ function EffectTick(player, source, damage)
 		rotation = nil,
 		tags = {id = "StatusEffect", name = "Electric"}
 	}
-	COMBAT().ApplyDamage(attackData)
+	--COMBAT().ApplyDamage(attackData)
 
     -- Hurt other team members around us
 	local position = player:GetWorldPosition()
