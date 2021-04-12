@@ -478,7 +478,7 @@ function UpdateClassInfo(thisButton)
 	local classHealth = CONST.CLASS_HEALTH[META_AP()[dataTable.ClassID]] + (classLevel * 2)
 	BaseHealth.text = tostring(classHealth)
 
-	local regenAmount = (0.06 + (0.04 * classLevel)) * CONST.CLASS_REGEN[META_AP()[dataTable["ClassID"]]] * 60
+	local regenAmount = (0.41 + (0.008 * classLevel)) * CONST.CLASS_REGEN[META_AP()[dataTable["ClassID"]]] * 60
 	--if regenAmount > 2 then regenAmount = 2 end
 	HealthRegen.text = string.format("+%s / 1m", tostring(regenAmount))
 

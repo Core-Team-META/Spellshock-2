@@ -305,15 +305,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6771331753314177437
-  Name: "Fantasy Ability Blue 014"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_014"
-  }
-}
-Assets {
   Id: 6375726263607251280
   Name: "Fantasy Ability Green 043"
   PlatformAssetType: 9
