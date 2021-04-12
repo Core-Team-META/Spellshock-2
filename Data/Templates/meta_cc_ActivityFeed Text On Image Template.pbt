@@ -78,7 +78,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -392,10 +392,11 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 4327115782314725386
+              Id: 11676337619610062221
             }
             Color {
-              R: 0.98
+              R: 0.0572916679
+              G: 0.0227649063
               A: 1
             }
             TeamSettings {
@@ -450,11 +451,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 4327115782314725386
+              Id: 11676337619610062221
             }
             Color {
-              R: 0.494791657
-              A: 1
+              R: 0.138431624
+              G: 0.0409152322
+              A: 0.841
             }
             TeamSettings {
             }
@@ -498,6 +500,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
+          Height: -6
           UIY: 3
           RenderTransformPivot {
             Anchor {
@@ -515,13 +518,15 @@ Assets {
               B: 1
               A: 1
             }
-            Size: 17
+            Size: 13
             Justification {
               Value: "mc:etextjustify:center"
             }
-            AutoWrapText: true
             Font {
               Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:baseline"
             }
           }
           AnchorLayout {
@@ -549,12 +554,12 @@ Assets {
       }
     }
     Assets {
-      Id: 4327115782314725386
-      Name: "Icon Health"
+      Id: 11676337619610062221
+      Name: "UI Basic Shape Hexagon"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_Health"
+        AssetId: "UI_Basic_Shape_Hexagon"
       }
     }
     Assets {

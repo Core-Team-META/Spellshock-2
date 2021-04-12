@@ -50,6 +50,15 @@ local JOIN_MESSAGE_START = time() + 1.0
 local lineTemplates = {}
 local lines = {}				-- Each line is a table with: text, color, displayTime
 
+local pointNames = {
+    [1] = "WC",
+    [2] = "A",
+    [3] = "M",
+    [4] = "OM",
+    [5] = "TG"
+}
+
+
 -- nil AddLine(string, Color)
 -- Adds a line to the killfeed
 function AddLine(line, color)
@@ -79,11 +88,16 @@ end
 
 -- nil OnAddKillFeedKill(string, string, <string>)
 -- Catches the event from the server and adds a line
-function OnAddKillFeedKill(killerPlayer, killedPlayer, abilityName)
+function OnAddKillFeedKill(killerPlayer, killedPlayer, abilityName, pointId)
 	local lineColor = TEXT_COLOR
-
+	local pointName = ""
 	if killerPlayer == LOCAL_PLAYER or killedPlayer == LOCAL_PLAYER then
 		lineColor = SELF_TEXT_COLOR
+	end
+
+	--#TODO Gets the pointName, will remain a empty string if it doesn't exsist
+	if pointId and pointId > 0 then
+		pointName = pointNames[pointId] or ""
 	end
 
 	if not killerPlayer then
@@ -91,7 +105,7 @@ function OnAddKillFeedKill(killerPlayer, killedPlayer, abilityName)
 	elseif not abilityName or abilityName == "" then
 		AddLine(string.format("%s killed %s", killerPlayer.name, killedPlayer.name), lineColor)
 	else
-		AddLine(string.format("%s killed %s with %s", killerPlayer.name, killedPlayer.name, abilityName), lineColor)
+		AddLine(string.format("%s killed %s with %s at %s ", killerPlayer.name, killedPlayer.name, abilityName, pointName), lineColor)
 	end
 end
 

@@ -179,6 +179,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13364399744462623960
+  Name: "Weapon Guide 1hand_pistol"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "weapon_guide_pistol_BP_ref"
+  }
+}
+Assets {
   Id: 13052602919425992455
   Name: "Sphere - Half Thick"
   PlatformAssetType: 1

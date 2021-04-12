@@ -71,6 +71,7 @@ function OnChildAdded(parent, object)
     end
 end
 
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
@@ -119,7 +120,7 @@ function API.GetCurrentCosmetic(player, bind, class)
     if skinId == 0 then
         skinId = 1
     end
-    return cosmeticTable[class][player.team][skinId][bind]
+    return cosmeticTable[class][player.team][skinId][bind] 
 end
 
 --@param object player
@@ -129,8 +130,10 @@ function API.GetCosmeticMuid(player, class, team, skin, bind)
     while not _G.COSMETIC_TABLE_BUILT do
         Task.Wait()
     end
-    Task.Wait()
-    return cosmeticTable[class][team][skin][bind]
+    while not UTIL.IsTableValid(cosmeticTable, class, team, skin, bind) do
+        Task.Wait()
+    end
+    return cosmeticTable[class][team][skin][bind] 
 end
 
 --@param object player

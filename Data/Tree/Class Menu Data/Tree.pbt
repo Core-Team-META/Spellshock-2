@@ -4537,7 +4537,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ElfDescription"
-      String: "\342\200\234These forests and streams are home to many creatures, guardian. You are their shield; go forth and protect them.\342\200\235"
+      String: "\342\200\234These forests and streams are home to many creatures, warrior. You are their shield; go forth and protect them.\342\200\235"
     }
     Overrides {
       Name: "cs:AM_Stance"
@@ -4944,7 +4944,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press 4 to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds."
+      String: "Instant \342\200\223 Press 4 to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage and stun enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds.  Stun = 2 seconds."
     }
     Overrides {
       Name: "cs:Bind"

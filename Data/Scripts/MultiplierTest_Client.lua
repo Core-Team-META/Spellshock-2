@@ -57,15 +57,23 @@ function Int()
         VIP_BOOST_TEXT.text = "VIP ACTIVE"
         VIP_BOOST_TEXT:SetColor(Color.GREEN)
     else
-       -- VIP_MEMBER_PANEL.visibility = Visibility.FORCE_OFF
+        -- VIP_MEMBER_PANEL.visibility = Visibility.FORCE_OFF
         VIP_BOOST_TEXT.text = "Press P"
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
     for _, xpText in ipairs(XP_MULITPLIER_TEXT:GetChildren()) do
-        xpText.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .. "x"
+        if isVip then
+            xpText.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1 + CONST.VIP_XP_MULTIPLIER) .. "x"
+        else
+            xpText.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .. "x"
+        end
     end
     for _, goldText in ipairs(GOLD_MULITPLIER_TEXT:GetChildren()) do
-        goldText.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x"
+        if isVip then
+            goldText.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1 + CONST.VIP_GOLD_MULTIPLIER) .. "x"
+        else
+            goldText.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x"
+        end
     end
 end
 
@@ -115,9 +123,9 @@ function Tick()
         if hours > 23 then
             GOLD_BOOST_TEXT.text = "1 Day+"
         else
-        local minutes = math.floor(currentGoldBoost) // 60 % 60
-        local seconds = math.floor(currentGoldBoost) % 60
-        GOLD_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+            local minutes = math.floor(currentGoldBoost) // 60 % 60
+            local seconds = math.floor(currentGoldBoost) % 60
+            GOLD_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
         end
     elseif goldIsVisable then
         GOLD_BOOST_PANEL.visibility = Visibility.FORCE_OFF
@@ -131,11 +139,10 @@ function Tick()
         if hours > 23 then
             XP_BOOST_TEXT.text = "1 Day+"
         else
-        local minutes = math.floor(currentXpBoost) // 60 % 60
-        local seconds = math.floor(currentXpBoost) % 60
-        XP_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+            local minutes = math.floor(currentXpBoost) // 60 % 60
+            local seconds = math.floor(currentXpBoost) % 60
+            XP_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
         end
-
     elseif xpIsVisable then
         XP_BOOST_PANEL.visibility = Visibility.FORCE_OFF
         xpIsVisable = false

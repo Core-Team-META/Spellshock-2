@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13910897681816001187
+  Name: "Sports Crowd Intense Cheer Yeah 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_sports_crowd_cheer_intense_yeah_01_Cue_ref"
+  }
+}
+Assets {
   Id: 13340664223849013695
   Name: "Fantasy Axe 005"
   PlatformAssetType: 9
@@ -161,6 +170,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6925803453475622504
+  Name: "Combo Achievement Tribal Flute Drum Shine Stingers Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_stinger_combo_achievement_tribal_flute_drum_shine_01_ref"
+  }
+}
+Assets {
   Id: 6647019327388432606
   Name: "Fantasy Craft Stone 022"
   PlatformAssetType: 9
@@ -212,6 +230,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
+  Id: 1372025318724450931
+  Name: "Cash Register Purchase Deep Boomy 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_cash_register_purchase_deep_boomy_01_Cue_ref"
   }
 }
 Assets {
