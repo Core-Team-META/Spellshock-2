@@ -179,6 +179,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11142210224783054821
+  Name: "Center Arrow 008 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_008Wedge"
+  }
+}
+Assets {
   Id: 10901942278299474248
   Name: "Fantasy Corners 003"
   PlatformAssetType: 9
@@ -194,15 +203,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundHighlighted_032"
-  }
-}
-Assets {
-  Id: 9532585046617020932
-  Name: "Center Arrow 004 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_004Wedge"
   }
 }
 Assets {
