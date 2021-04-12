@@ -28,7 +28,7 @@ local function IsOutOfCombat()
 end
 
 function OnEquipped(equipment, player)
-    listener = Events.Connect("CombatWrapAPI.OnDamageTaken", PlayerDamageTaken)
+    listener = Events.Connect("CombatWrapAPI.GoingToTakeDamage", PlayerDamageTaken)
 end
 
 function OnUnequipped(equipment, player)

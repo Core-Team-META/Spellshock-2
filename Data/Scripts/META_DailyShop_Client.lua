@@ -173,6 +173,9 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
             local soldPanel = panel:GetCustomProperty("SOLD_PANEL"):WaitForObject()
             local PROGRESS_BARS = panel:GetCustomProperty("PROGRESS_BARS"):WaitForObject()
             local RewardCurrencyIcon = panel:GetCustomProperty("RewardCurrencyIcon"):WaitForObject()
+            local OutterFrame = panel:GetCustomProperty("OUTTER_FRAME"):WaitForObject()
+            local OUTTER_FRAME2 = panel:GetCustomProperty("OUTTER_FRAME_1"):WaitForObject()
+            local ClassImage = panel:GetCustomProperty("ClassImage"):WaitForObject()
 
             Icon:SetImage(infoTable.Image)
             Value.text = tostring(amount)
@@ -182,7 +185,8 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
             else
                 Name.text = tostring(infoTable.Name)
             end
-
+            OutterFrame:SetColor(RarityColors[rarity])
+            OUTTER_FRAME2:SetColor(RarityColors[rarity])
             PROGRESS_BARS.visibility = Visibility.FORCE_OFF
             if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
                 --Progress Bars
@@ -192,6 +196,7 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
                 local NextLevel = PROGRESS_BARS:GetCustomProperty("NextLevel"):WaitForObject()
 
                 local currentLevel = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetLevelString(class, bind))
+                ClassImage:SetImage(infoTable.ClassIcon)
                 LVL.text = tostring(currentLevel)
                 local nextLevel = currentLevel + 1
                 if nextLevel < 10 then
@@ -202,9 +207,11 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
                 RewardCurrencyIcon:SetImage(ShardIcon)
                 CURRENT_BAR.progress = currentAmmount / requiredAmount
                 REWARD_BAR.progress = (currentAmmount + amount) / requiredAmount
+                ClassImage.visibility = Visibility.FORCE_ON
                 PROGRESS_BARS.visibility = Visibility.FORCE_ON
             else
                 RewardCurrencyIcon:SetImage(GemIcon)
+                ClassImage.visibility = Visibility.FORCE_OFF
             end
 
             -- Event Cost Reduction
