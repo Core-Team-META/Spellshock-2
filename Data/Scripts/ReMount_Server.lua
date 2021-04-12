@@ -17,8 +17,8 @@ local function PlayerDamageTaken(attackData)
     if object ~= Equipment.owner or attackData.damage.amount < 0 then
         return
     end
-    if Object.IsValid(object) and object:IsA("Player") and object == Equipment.owner then
-        UpdateMountPreventTime(time() + 2)
+    if Object.IsValid(object) and object:IsA("Player") and object == Equipment.owner and object.isMounted then
+        UpdateMountPreventTime(time() + 1.5)
         Equipment.owner.canMount = false
     end
 end
