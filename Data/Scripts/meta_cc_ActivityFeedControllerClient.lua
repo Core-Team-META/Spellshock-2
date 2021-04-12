@@ -727,7 +727,7 @@ function Tick(deltaTime)
 
 				local xPos = -20
 
-				if (lines[i].killedLocation ~= "") then
+				if (lines[i].killedLocation ~= "" and lines[i].killedLocation ~= nil) then
 					feedElements["killedLocation"].x = xPos
 					xPos = xPos - feedElements["killedLocation"].width - GAP_SPACE
 				end
