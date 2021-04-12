@@ -13620,7 +13620,7 @@ Objects {
 }
 Objects {
   Id: 17910728817571265557
-  Name: "Point M"
+  Name: "Point MK"
   Transform {
     Location {
       X: -5867.57422
@@ -13650,7 +13650,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShortName"
-      String: "M"
+      String: "MK"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -17627,7 +17627,7 @@ Objects {
 }
 Objects {
   Id: 16321515820500395030
-  Name: "Point A"
+  Name: "Point AS"
   Transform {
     Location {
       X: 8298.51074
@@ -17658,7 +17658,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShortName"
-      String: "A"
+      String: "AS"
     }
     Overrides {
       Name: "cs:CaptureThreshold"

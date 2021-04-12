@@ -474,7 +474,8 @@ function UpdateClassInfo(thisButton)
 	HealthRegen.text = string.format("+%s / 1m", tostring(regenAmount))
 
 	-- Change the costume on the animated mesh
-	local costumeTemplate = META_AP().VFX.GetCurrentCostume(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
+	local costumeTemplate = META_AP().VFX.GetCurrentCosmetic(LOCAL_PLAYER, 8, META_AP()[dataTable["ClassID"]])
+	 --META_AP().VFX.GetCurrentCostume(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
 	if LOCAL_PLAYER.team == 1 then
 		EquipCostumeToAnimatedMesh(Orc_AnimatedMesh, costumeTemplate, dataTable["Stance"], dataTable["Animation"])
 	else
@@ -1028,7 +1029,18 @@ end)
 SpinnerTask.repeatCount = -1
 SpinnerTask.repeatInterval = 0
 
-OnClassClicked(CurrentClassButton)
+
+local currentClass = LOCAL_PLAYER:GetResource("CLASS_MAP")
+local newButton 
+for _, classButton in ipairs(ClassButtons) do
+	local data = classButton.clientUserData.dataTable
+	if META_AP()[data.ClassID] == currentClass then
+		newButton = classButton
+	end
+	classButton.clientUserData.level.text = tostring( META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[data.ClassID]) )
+end
+
+OnClassClicked(newButton)
 Events.Connect("Menu Changed", OnMenuChanged)
 --Events.Connect("GameStateChanged", OnGameStateChanged)
 GlobalStatsButton.clickedEvent:Connect(OnGlobalStatsClicked)

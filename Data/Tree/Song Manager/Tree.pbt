@@ -652,8 +652,6 @@ Objects {
   ChildIds: 1111324371193178376
   ChildIds: 10174524806202731056
   ChildIds: 10132135645300084462
-  ChildIds: 16124568138909524682
-  ChildIds: 7007306855525581865
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -665,96 +663,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 7007306855525581865
-  Name: "Elf base"
-  Transform {
-    Location {
-      X: 23039.8223
-      Y: 25670.418
-      Z: 7256.41211
-    }
-    Rotation {
-    }
-    Scale {
-      X: 37.4545
-      Y: 37.4545
-      Z: 37.4545
-    }
-  }
-  ParentId: 3395137385791868017
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:SONG"
-      ObjectReference {
-        SelfId: 1778773841650752877
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-}
-Objects {
-  Id: 16124568138909524682
-  Name: "Orc base"
-  Transform {
-    Location {
-      X: -19328.4551
-      Y: -26233.707
-      Z: 6338.88721
-    }
-    Rotation {
-    }
-    Scale {
-      X: 55.9181137
-      Y: 55.9181137
-      Z: 55.9181137
-    }
-  }
-  ParentId: 3395137385791868017
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:SONG"
-      ObjectReference {
-        SelfId: 8159300865285051927
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
   }
 }
 Objects {

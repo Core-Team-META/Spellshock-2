@@ -266,7 +266,7 @@ Objects {
 }
 Objects {
   Id: 12502215343179190632
-  Name: "TEMP Spawn Protect"
+  Name: "Spawn Protect"
   Transform {
     Location {
     }

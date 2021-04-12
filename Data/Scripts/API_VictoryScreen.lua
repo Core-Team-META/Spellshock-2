@@ -180,7 +180,7 @@ function API.TeleportWinners( player, spawnObject)
 	player:SetWorldPosition(spawnPosition)
 	player:SetWorldRotation(spawnRotation)
 	
-	Task.Wait(.1)
+	Task.Wait(0.1)
 
 	player:ResetVelocity()
 	player:SetWorldPosition(spawnPosition)
@@ -196,14 +196,14 @@ function API.TeleportWinners( player, spawnObject)
 
 	--player.animationStance = "unarmed_stance"
 	
-	--[[for i=1,5 do
-		Task.Wait(.1)
+	for i=1,5 do
+		Task.Wait()
 
 		player:ResetVelocity()
 		player:SetWorldPosition(spawnPosition)
 		player:SetWorldRotation(spawnRotation)	
 		
-	end]]
+	end
 end
 
 

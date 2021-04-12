@@ -364,6 +364,11 @@ function OnBeginOverlap(thisTrigger, other)
     if other:IsA("Player") then
         playersOnPoint[other] = true
         other.serverUserData.onCapturePoint = true
+        local lastCapture = other.serverUserData.lasterCapturePoint
+        lastCapture = lastCapture or {}
+        lastCapture.point = ORDER
+        lastCapture.time = time()
+        other.serverUserData.lasterCapturePoint = lastCapture
     end
 end
 
@@ -371,6 +376,11 @@ function OnEndOverlap(thisTrigger, other)
     if other:IsA("Player") then
         playersOnPoint[other] = nil
         other.serverUserData.onCapturePoint = nil
+        local lastCapture = other.serverUserData.lasterCapturePoint
+        lastCapture = lastCapture or {}
+        lastCapture.point = ORDER
+        lastCapture.time = time() + 10
+        other.serverUserData.lasterCapturePoint = lastCapture
     end
 end
 
