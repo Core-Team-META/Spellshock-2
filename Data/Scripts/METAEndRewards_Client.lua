@@ -431,8 +431,12 @@ end
 
 -- #TODO
 local function IsFirstWinOfTheDay(player)
-    local currentTime = os.time(os.date("!*t"))
-    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
+    local count = 0
+    while player:GetResource(CONST.WIN_OF_THE_DAY_TIME) == 0 or count < 15 do
+        Task.Wait(0.1)
+        count = count + 1
+    end
+    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) == 1 then
         return true
     end
     return false
@@ -444,14 +448,13 @@ local function CalculateSelectionCount()
 
     -- +1 for winning
     if IsTeamWinner(LOCAL_PLAYER) then
-        --[[
+        --
         -- +1 for First Win of the Day
         if IsFirstWinOfTheDay(LOCAL_PLAYER) then
             SelectionCount = SelectionCount + 1
         end
-        ]]
+
         SelectionCount = SelectionCount + 1
-     --
     elseif LOCAL_PLAYER:GetResource(CONST.VIP_MEMBERSHIP_KEY) == 1 then
         SelectionCount = SelectionCount + 1
     end

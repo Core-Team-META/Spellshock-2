@@ -157,6 +157,7 @@ end
 
 -- Context called from Meta Player Storage Manager
 function OnPlayerJoined(player, classId)
+    classId = classId or 1
     --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", classId)
     player.animationStance = Class_Stances[classId]

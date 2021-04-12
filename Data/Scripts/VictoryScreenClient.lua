@@ -17,7 +17,7 @@ repeat
 until GT_API]]
 
 local ABGS = require(script:GetCustomProperty("ABGS"))
-
+local MPC_API = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
 --	OBJECTS AND REFERENCES
 ------------------------------------------------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ local function GetPlayer(players, name)
 	end
 end
 
-function SetChildrenText(uiObj, _text) -- <-- generic children text function by AJ
+local function SetChildrenText(uiObj, _text) -- <-- generic children text function by AJ
     if Object.IsValid(uiObj) and uiObj:IsA("UIText") then uiObj.text = _text end
 
     for i, v in ipairs(uiObj:GetChildren()) do
@@ -74,12 +74,76 @@ function SetChildrenText(uiObj, _text) -- <-- generic children text function by 
     end
 end
 
-function SetChildrenFontSize(uiObj, _size) -- <-- generic children text function by AJ
+local function SetChildrenFontSize(uiObj, _size) -- <-- generic children text function by AJ
     if Object.IsValid(uiObj) and uiObj:IsA("UIText") then uiObj.fontSize = _size end
 
     for i, v in ipairs(uiObj:GetChildren()) do
         if v:IsA("UIText") then SetChildrenFontSize(v, _size) end
     end
+end
+
+local function GetTitle(class, level)
+	if class == MPC_API.CLASS.TANK then
+		if level < 10 then
+			return "Young Warrior"
+		elseif level < 20 then
+			return "Experienced Warrior"
+		elseif level < 30 then
+			return "Great Warrior"
+		elseif level < 40 then
+			return "Greater Warrior"
+		else 
+			return "Legendary Warrior"
+		end
+	elseif class == MPC_API.CLASS.MAGE then
+		if level < 10 then
+			return "Young Mage"
+		elseif level < 20 then
+			return "Experienced Mage"
+		elseif level < 30 then
+			return "Great Mage"
+		elseif level < 40 then
+			return "Greater Mage"
+		else 
+			return "Legendary Mage"
+		end	
+	elseif class == MPC_API.CLASS.HUNTER then
+		if level < 10 then
+			return "Young Hunter"
+		elseif level < 20 then
+			return "Experienced Hunter"
+		elseif level < 30 then
+			return "Great Hunter"
+		elseif level < 40 then
+			return "Greater Hunter"
+		else 
+			return "Legendary Hunter"
+		end	
+	elseif class == MPC_API.CLASS.HEALER then
+		if level < 10 then
+			return "Young Healer"
+		elseif level < 20 then
+			return "Experienced Healer"
+		elseif level < 30 then
+			return "Great Healer"
+		elseif level < 40 then
+			return "Greater Healer"
+		else 
+			return "Legendary Healer"
+		end	
+	elseif class == MPC_API.CLASS.ASSASSIN then
+		if level < 10 then
+			return "Young MAssassin"
+		elseif level < 20 then
+			return "Experienced Assassin"
+		elseif level < 30 then
+			return "Great Assassin"
+		elseif level < 40 then
+			return "Greater Assassin"
+		else 
+			return "Legendary Assassin"
+		end	
+	end
 end
 
 --	nil UpdatePanelForPlayer(CoreObject, Player)
@@ -94,15 +158,16 @@ local function UpdatePanelForPlayer(panel, player)
 
 	end
 
-	local nameTextLabel, nameTextPanel, deathsValueLabel, killsValueLabel, resourceValueLabel, resourcePanel, meMarker =
+	local nameTextLabel, nameTextPanel, deathsValueLabel, killsValueLabel, resourceValueLabel, resourcePanel, meMarker, title =
 	panel:GetCustomProperty("NameText"):WaitForObject(),
 	panel:GetCustomProperty("NamePanel"):WaitForObject(),	
 	panel:GetCustomProperty("DeathsValue"):WaitForObject(),
 	panel:GetCustomProperty("KillsValue"):WaitForObject(),
 	panel:GetCustomProperty("ResourceValue"):WaitForObject(),
 	panel:GetCustomProperty("ResourcePanel"):WaitForObject(),
-	panel:GetCustomProperty("MeMarker"):WaitForObject()
-
+	panel:GetCustomProperty("MeMarker"):WaitForObject(),
+	panel:GetCustomProperty("Title"):WaitForObject()
+	
 	if player == LocalPlayer then
 		if not meMarker:IsVisibleInHierarchy() then
 			meMarker.visibility = Visibility.FORCE_ON
@@ -135,7 +200,25 @@ local function UpdatePanelForPlayer(panel, player)
 		resourceValueLabel.text = tostring(player:GetResource(WINNER_SORT_RESOURCE))
 		resourcePanel.visibility = Visibility.INHERIT
 	end
-
+	
+	local selectedClass = player:GetResource("CLASS_MAP")
+	local currentLevel = player:GetResource("C_LEVEL")
+	
+	local icons = title:GetCustomProperty("ClassIcons"):WaitForObject()
+	local titleText = title:GetCustomProperty("TitleText"):WaitForObject()
+	local levelText = title:GetCustomProperty("Level"):WaitForObject()
+	
+	SetChildrenText(titleText, GetTitle(selectedClass, currentLevel))
+	SetChildrenText(levelText, tostring(currentLevel))
+	
+	for x, c in ipairs(icons:GetChildren()) do
+		if c.name == "CLASS_" .. tostring(selectedClass) then
+			c.visibility = Visibility.INHERIT
+		else 
+			c.visibility = Visibility.FORCE_OFF
+		end
+	end
+	
 	panel.visibility = Visibility.INHERIT
 end
 
