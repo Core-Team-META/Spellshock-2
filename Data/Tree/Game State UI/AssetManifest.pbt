@@ -161,6 +161,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6925803453475622504
+  Name: "Combo Achievement Tribal Flute Drum Shine Stingers Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_stinger_combo_achievement_tribal_flute_drum_shine_01_ref"
+  }
+}
+Assets {
   Id: 6647019327388432606
   Name: "Fantasy Craft Stone 022"
   PlatformAssetType: 9

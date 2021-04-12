@@ -29,6 +29,7 @@ local PANEL_ORC = script:GetCustomProperty("PanelOrc"):WaitForObject()
 local PANEL_LOOT = script:GetCustomProperty("PanelLoot"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local PlayerClassLevelup = script:GetCustomProperty("PlayerClassLevelup"):WaitForObject()
+local LevelupSFX = script:GetCustomProperty("LevelupSFX"):WaitForObject()
 
 -- User exposed properties
 local DEFAULT_DURATION = 5
@@ -117,6 +118,7 @@ function OnPlayerClassLevelUp(data)
 
     propBannerText.text = _Player.name.." is now a level "..classLevel.." "..className.."!"
     PlayerClassLevelup.visibility = Visibility.INHERIT
+    LevelupSFX:Play()
     playerLevelTimer = time() + 5
 end
 

@@ -17,6 +17,7 @@ Objects {
   ParentId: 1898078422538986234
   ChildIds: 17950739310239373445
   ChildIds: 873064101278729739
+  ChildIds: 6564181716504520007
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -29,6 +30,46 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 6564181716504520007
+  Name: "Combo Achievement Tribal Flute Drum Shine Stingers Set 01 SFX"
+  Transform {
+    Location {
+      X: -23716.5195
+      Y: -32489.4688
+      Z: 6896.3374
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2636403225592205996
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 6925803453475622504
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+    }
   }
 }
 Objects {
@@ -12537,6 +12578,12 @@ Objects {
       Name: "cs:PlayerClassLevelup"
       ObjectReference {
         SelfId: 1930242174723141137
+      }
+    }
+    Overrides {
+      Name: "cs:LevelupSFX"
+      ObjectReference {
+        SelfId: 6564181716504520007
       }
     }
   }
