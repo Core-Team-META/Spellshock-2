@@ -165,6 +165,7 @@ Objects {
       Y: 599.99939
     }
     Rotation {
+      Yaw: -25
     }
     Scale {
       X: 0.8
@@ -201,6 +202,7 @@ Objects {
       Y: -449.999695
     }
     Rotation {
+      Yaw: 20
     }
     Scale {
       X: 0.8
@@ -237,6 +239,7 @@ Objects {
       Y: 449.999329
     }
     Rotation {
+      Yaw: -20
     }
     Scale {
       X: 0.8
@@ -273,6 +276,7 @@ Objects {
       Y: -299.999817
     }
     Rotation {
+      Yaw: 15
     }
     Scale {
       X: 0.8
@@ -309,6 +313,7 @@ Objects {
       Y: 299.999939
     }
     Rotation {
+      Yaw: -15
     }
     Scale {
       X: 0.8
@@ -345,6 +350,7 @@ Objects {
       Y: -149.999908
     }
     Rotation {
+      Yaw: 10
     }
     Scale {
       X: 0.8
@@ -377,10 +383,11 @@ Objects {
   Name: "2"
   Transform {
     Location {
-      X: -99.9999
-      Y: 149.999969
+      X: -99.9997559
+      Y: 150.000031
     }
     Rotation {
+      Yaw: -10
     }
     Scale {
       X: 0.8
@@ -13245,10 +13252,10 @@ Objects {
     Location {
       X: -598.04541
       Y: -7.62939453e-06
-      Z: 250
+      Z: 190
     }
     Rotation {
-      Pitch: -10
+      Pitch: -15
     }
     Scale {
       X: 1
@@ -13267,12 +13274,13 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Camera {
+    InitialDistance: -180
     MinDistance: 300
     MaxDistance: 600
     PositionOffset {
     }
     RotationOffset {
-      Pitch: -10
+      Pitch: -12
     }
     FieldOfView: 90
     ViewWidth: 1200
