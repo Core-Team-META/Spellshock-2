@@ -500,7 +500,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Height: -13
+          Height: -6
           UIY: 3
           RenderTransformPivot {
             Anchor {

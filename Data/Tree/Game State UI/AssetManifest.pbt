@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13910897681816001187
+  Name: "Sports Crowd Intense Cheer Yeah 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_sports_crowd_cheer_intense_yeah_01_Cue_ref"
+  }
+}
+Assets {
   Id: 13340664223849013695
   Name: "Fantasy Axe 005"
   PlatformAssetType: 9

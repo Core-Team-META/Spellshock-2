@@ -18,6 +18,7 @@ Objects {
   ChildIds: 17950739310239373445
   ChildIds: 873064101278729739
   ChildIds: 6333488504136646255
+  ChildIds: 10555476697004943581
   ChildIds: 6564181716504520007
   UnregisteredParameters {
   }
@@ -71,6 +72,42 @@ Objects {
       Falloff: 3600
       Radius: 400
     }
+  }
+}
+Objects {
+  Id: 10555476697004943581
+  Name: "Sports Crowd Intense Cheer Yeah 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2636403225592205996
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 13910897681816001187
+    }
+    Volume: 1
+    Falloff: -1
+    Radius: -1
+    EnableOcclusion: true
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
   }
 }
 Objects {
@@ -12617,7 +12654,7 @@ Objects {
     Overrides {
       Name: "cs:LevelupSFX"
       ObjectReference {
-        SelfId: 6564181716504520007
+        SelfId: 10555476697004943581
       }
     }
     Overrides {

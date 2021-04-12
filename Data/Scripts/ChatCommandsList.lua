@@ -91,7 +91,7 @@ commands = {
         description = string.format( "Adds %s to the player", API_Constants.CURRENCY[1]),
         requireMessage = false,
         adminOnly = true,
-        adminRank = AdminData.AdminRanks.Admin,
+        adminRank = AdminData.AdminRanks.HigherAdmin,
     },
 
     ["/lookinggood"] = {
@@ -110,9 +110,9 @@ commands = {
         description = string.format( "Adds %s to the player", API_Constants.CURRENCY[2]),
         requireMessage = false,
         adminOnly = true,
-        adminRank = AdminData.AdminRanks.Admin,
+        adminRank = AdminData.AdminRanks.HigherAdmin,
     },
-
+--[[ 
     ["/kill"] = {
         OnCommandCalledClient = function (player, message)
         end,
@@ -127,7 +127,7 @@ commands = {
         adminRank = AdminData.AdminRanks.Admin,
     },
 
---[[     ["/respawn"] = {
+    ["/respawn"] = {
         OnCommandCalledClient = function (player, message)
         end,
         OnCommandCalledServer = function (player, message)  
@@ -139,7 +139,7 @@ commands = {
         requireMessage = false,
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
-    }, ]]
+    },
 
     ["/fly"] = {
         OnCommandCalledClient = function (player, message)
@@ -168,6 +168,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
+     ]]
 --[[ 
     ["/warrior"] = {
         OnCommandCalledClient = function (player, message)
@@ -256,7 +257,7 @@ commands = {
         adminRank = AdminData.AdminRanks.HigherAdmin,
     },
 
-    ["/changeteam"] = {
+--[[     ["/changeteam"] = {
         OnCommandCalledClient = function (player, message)
         end,
         OnCommandCalledServer = function (player, message)
@@ -328,7 +329,7 @@ commands = {
         requireMessage = true,
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
-    },
+    }, ]]
 
 }
 
