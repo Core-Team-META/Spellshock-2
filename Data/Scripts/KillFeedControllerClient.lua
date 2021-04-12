@@ -51,11 +51,11 @@ local lineTemplates = {}
 local lines = {}				-- Each line is a table with: text, color, displayTime
 
 local pointNames = {
-    [1] = "War Camp",
-    [2] = "Airship",
-    [3] = "Marketplace",
-    [4] = "Old Mine",
-    [5] = "Temple Glade"
+    [1] = "WC",
+    [2] = "A",
+    [3] = "M",
+    [4] = "OM",
+    [5] = "TG"
 }
 
 
