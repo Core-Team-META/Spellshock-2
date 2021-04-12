@@ -35,6 +35,8 @@ Objects {
   ChildIds: 10959278184286091569
   ChildIds: 15028143661754266087
   ChildIds: 2610898865359085650
+  ChildIds: 6630217517382758772
+  ChildIds: 8140457688792633889
   ChildIds: 2521983690256259040
   ChildIds: 8795372980405501426
   ChildIds: 5736680010893308505
@@ -1589,6 +1591,200 @@ Objects {
   }
 }
 Objects {
+  Id: 8140457688792633889
+  Name: "STORE_HealerElfCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14040370941955306933
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Celestial Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 15165156536569580955
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6630217517382758772
+  Name: "STORE_HealerOrcCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14040370941955306933
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Wicked Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 10280288507484418596
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 2610898865359085650
   Name: "STORE_HealerElfCostumePunk"
   Transform {
@@ -3103,6 +3299,8 @@ Objects {
   ChildIds: 9721803026555458167
   ChildIds: 7692884652120230274
   ChildIds: 6578833183770604221
+  ChildIds: 12129973096210460538
+  ChildIds: 3148474391431488214
   ChildIds: 6119372117797679230
   ChildIds: 12286710690963255487
   ChildIds: 6354342633521026028
@@ -4653,6 +4851,200 @@ Objects {
   }
 }
 Objects {
+  Id: 3148474391431488214
+  Name: "STORE_AssassinElfCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12672419140041425297
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Celestial Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 12544879553930214832
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12129973096210460538
+  Name: "STORE_AssassinOrcCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12672419140041425297
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Wicked Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13305624167474119657
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 6578833183770604221
   Name: "STORE_AssassinElfCostumePunk"
   Transform {
@@ -6183,6 +6575,8 @@ Objects {
   ChildIds: 6494669486914412015
   ChildIds: 15517934468837375573
   ChildIds: 9626688823886975949
+  ChildIds: 14975287630744146632
+  ChildIds: 8313691221586582163
   ChildIds: 13258418934991207318
   ChildIds: 10611460568713770089
   ChildIds: 9686661234464263271
@@ -7733,6 +8127,200 @@ Objects {
   }
 }
 Objects {
+  Id: 8313691221586582163
+  Name: "STORE_MageElfCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10535149848714323386
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Celestial Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 3281960719896229810
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 14975287630744146632
+  Name: "STORE_MageOrcCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10535149848714323386
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Wicked Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 17591324247412889914
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 9626688823886975949
   Name: "STORE_MageElfCostumePunk"
   Transform {
@@ -9247,6 +9835,8 @@ Objects {
   ChildIds: 5749018703745451234
   ChildIds: 13093035169518167104
   ChildIds: 1848605734204263611
+  ChildIds: 861909038544750193
+  ChildIds: 12013801449036224691
   ChildIds: 1518678894978041679
   ChildIds: 2527967482449587084
   ChildIds: 13165287837118709503
@@ -10797,6 +11387,200 @@ Objects {
   }
 }
 Objects {
+  Id: 12013801449036224691
+  Name: "STORE_HunterElfCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16806644396874094188
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Celestial Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Elf_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 18441570777324082556
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 861909038544750193
+  Name: "STORE_HunterOrcCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16806644396874094188
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Wicked Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Orc_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 606554569325609681
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 1848605734204263611
   Name: "STORE_HunterElfCostumePunk"
   Transform {
@@ -12311,6 +13095,8 @@ Objects {
   ChildIds: 14185998502530551114
   ChildIds: 179713294667721768
   ChildIds: 284906943835425740
+  ChildIds: 7268588817221443355
+  ChildIds: 13149701031558610285
   ChildIds: 2075351885057384382
   ChildIds: 15012338187201026628
   ChildIds: 12647329218218582882
@@ -13843,6 +14629,200 @@ Objects {
       AssetReference {
         Id: 13771863303307330246
       }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 13149701031558610285
+  Name: "STORE_TankElfCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6411471204784472395
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Celestial Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Tank_Elf_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 8576687567869604610
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 7268588817221443355
+  Name: "STORE_TankOrcCostumeAfterlife"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6411471204784472395
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Wicked Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Tank_Orc_Afterlife_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 4765810477310161646
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
     }
   }
   Collidable_v2 {
