@@ -70,6 +70,10 @@ Assets {
             Int: 0
           }
           Overrides {
+            Name: "cs:MT"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:OID:isrep"
             Bool: true
           }
@@ -88,6 +92,14 @@ Assets {
           Overrides {
             Name: "cs:RID:isrep"
             Bool: true
+          }
+          Overrides {
+            Name: "cs:MT:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:MT:tooltip"
+            String: "Mount Timer"
           }
         }
         WantsNetworking: true
@@ -361,6 +373,7 @@ Assets {
         ChildIds: 1059382485272021003
         ChildIds: 2626836070982711195
         ChildIds: 3688459431311766187
+        ChildIds: 3395704479817453357
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -900,6 +913,12 @@ Assets {
         }
         ParentId: 4159325021862714735
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -951,6 +970,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 3580804332177889778
+          }
+        }
+      }
+      Objects {
+        Id: 3395704479817453357
+        Name: "ReMount_Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4159325021862714735
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8824906113032024380
           }
         }
       }
