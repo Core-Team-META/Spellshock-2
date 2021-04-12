@@ -155,6 +155,7 @@ local feedFields = Enum{
 	"killedColor",
 	"killerImage",
 	"killedImage",
+	"killedLocation",
 	"displayTime"
 }
 
@@ -196,6 +197,14 @@ local playerClassLevels = {
 	API.GetClassLevel(LOCAL_PLAYER, API.ASSASSIN)
 }
 
+local pointNames = {
+    [1] = "WC",
+    [2] = "AS",
+    [3] = "MK",
+    [4] = "OM",
+    [5] = "TG"
+}
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -228,6 +237,7 @@ local function AddLine(line, color)
 	else
 		lines[1].killedImage = line[11] or nil
 	end
+	lines[1].killedLocation = line[12] or nil
 	lines[1].displayTime = time()
 
 end
@@ -245,7 +255,7 @@ end
 -- Catches the event from the server and adds a line
 
 
-local function OnKill(killerPlayer, killedPlayer, damageAbilityName)
+local function OnKill(killerPlayer, killedPlayer, damageAbilityName, zone)
 	local lineColor = TEXT_COLOR
 	if not Object.IsValid(killerPlayer) then return end
 	local killerColor = _G.TeamColors[killerPlayer.team]
@@ -287,6 +297,7 @@ local function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 		feedTable[feedFields.killedColor] = killedColor
 		feedTable[feedFields.killerImage] = classIcons[ClassIDs[killerPlayer:GetResource("CLASS_MAP")]]
 		feedTable[feedFields.killedImage] = classIcons[ClassIDs[killedPlayer:GetResource("CLASS_MAP")]]
+		feedTable[feedFields.killedLocation] = pointNames[zone] or nil
 
 		if (SHOW_DISTANCE) then
 			feedTable[6] = tostring(CoreMath.Round(GetDistance(killerPlayer, killedPlayer) / 100,0)) .. "m"
@@ -386,11 +397,11 @@ local function Init()
 			elements['SpecialImage'].height = ICON_SIZE
 			elements['SpecialImage'].visibility = Visibility.FORCE_OFF
 	
-			elements['Distance'] = World.SpawnAsset(AF_TEXT_ON_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
-			elements['Distance'].width = ICON_SIZE
-			elements['Distance'].height = ICON_SIZE
-			elements['Distance'].name = "Distance"
-			elements['Distance'].visibility = Visibility.FORCE_OFF
+			elements['killedLocation'] = World.SpawnAsset(AF_TEXT_ON_IMAGE_TEMPLATE, {parent = lineTemplates[i]})
+			elements['killedLocation'].width = ICON_SIZE
+			elements['killedLocation'].height = ICON_SIZE
+			elements['killedLocation'].name = "killedLocation"
+			elements['killedLocation'].visibility = Visibility.FORCE_OFF
 	
 			lineTemplates[i].y = (i - 1) * (VERTICAL_SPACING + lineTemplates[i].height)
 		end
@@ -568,6 +579,21 @@ function Tick(deltaTime)
 						end
 
 					end
+					if (element.name == "killedLocation") then
+						if (lines[i].killedLocation ~= "") then
+
+							local textBox = element:FindDescendantByName("Text Box")
+							textBox.text = lines[i].killedLocation
+
+							feedElements["killedLocation"] = element
+							feedElements["killedLocation"].width = 40
+							feedElements["killedLocation"].height = 40
+							if (not element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_ON end
+						else
+							if (element:IsVisibleInHierarchy()) then element.visibility = Visibility.FORCE_OFF end
+						end
+
+					end
 					if (element.name == "KilledTextLabel") then
 						if (lines[i].killer ~= "") then
 							local textBox = element:FindDescendantByName("Text Box")
@@ -693,6 +719,11 @@ function Tick(deltaTime)
 				end
 
 				local xPos = -20
+
+				if (lines[i].killedLocation ~= "") then
+					feedElements["killedLocation"].x = xPos
+					xPos = xPos - feedElements["killedLocation"].width - GAP_SPACE
+				end
 
 				if (lines[i].skillUsedImage ~= "") then
 					-- Skill
