@@ -50,6 +50,16 @@ local function EnableSmallSpawnProtect()
     listeners[#listeners + 1] = SmallElf.beginOverlapEvent:Connect(OnBeginOverLap)
     listeners[#listeners + 1] = SmallElf.endOverlapEvent:Connect(OnEndOverlap)
     listeners[#listeners + 1] = SmallOrc.endOverlapEvent:Connect(OnEndOverlap)
+    for _, object in ipairs(SmallOrc:GetOverlappingObjects()) do
+        if IsAValidPlayer(object) then
+            OnBeginOverLap(SmallOrc, object)
+        end
+    end
+    for _, object in ipairs(SmallElf:GetOverlappingObjects()) do
+        if IsAValidPlayer(object) then
+            OnBeginOverLap(SmallElf, object)
+        end
+    end
 end
 
 local function EnableLargeSpawnProtect()
@@ -57,6 +67,16 @@ local function EnableLargeSpawnProtect()
     listeners[#listeners + 1] = LargeElfBase.beginOverlapEvent:Connect(OnBeginOverLap)
     listeners[#listeners + 1] = LargeElfBase.endOverlapEvent:Connect(OnEndOverlap)
     listeners[#listeners + 1] = LargeOrcBase.endOverlapEvent:Connect(OnEndOverlap)
+    for _, object in ipairs(LargeOrcBase:GetOverlappingObjects()) do
+        if IsAValidPlayer(object) then
+            OnBeginOverLap(LargeOrcBase, object)
+        end
+    end
+    for _, object in ipairs(LargeElfBase:GetOverlappingObjects()) do
+        if IsAValidPlayer(object) then
+            OnBeginOverLap(LargeElfBase, object)
+        end
+    end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
