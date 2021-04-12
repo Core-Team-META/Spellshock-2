@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/7
--- Version 0.1.10
+-- Date: 2021/4/11
+-- Version 0.1.11
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -23,7 +23,8 @@ API.STORAGE = {
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
     ACHIEVEMENTS = 11,
-    PROGRESSION_MULTIPLIERS = 12
+    PROGRESSION_MULTIPLIERS = 12,
+    CLASS_FAVORITE = 13
     --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
