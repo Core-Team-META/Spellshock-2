@@ -1,5 +1,5 @@
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
-local Equipment = script:FindAncestorByType("Equipment") --script:GetCustomProperty("Equipment"):WaitForObject()
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local function META_CP()
     return _G["Class.Progression"]
@@ -8,12 +8,12 @@ end
 -------------------------------------------------------------------------------
 -- Local Variables
 -------------------------------------------------------------------------------
-local playerRegen = {}
 local regenPrevent = time()
 local regenAmount = 0.1
 local regenPeriod = 1.0
 local nextRegen = 0
 local classId = 1
+local listener
 
 local function GetRegenValue(player, classId)
     local regenForClass = CONST.CLASS_REGEN[classId]
@@ -22,9 +22,10 @@ end
 
 local function PlayerDamageTaken(attackData)
     local object = attackData.object
-    if Object.IsValid(object) and object:IsA("Player") then
-        regenPrevent = time() + 10
+    if object ~= Equipment.owner then
+        return
     end
+    regenPrevent = time() + 10
 end
 
 local function IsOutOfCombat()
@@ -32,12 +33,21 @@ local function IsOutOfCombat()
 end
 
 function OnEquipped(equipment, player)
-    classId = Equipment.owner:GetResource("CLASS_MAP")
+    classId = player:GetResource("CLASS_MAP")
+    listener = Events.Connect("CombatWrapAPI.OnDamageTaken", PlayerDamageTaken)
+end
+
+function OnUnequipped(equipment, player)
+    listener:Disconnect()
+    listener = nil
 end
 
 function Tick(deltaTime)
+    if not listener then
+        return
+    end
     if
-        Equipment.owner and Object.IsValid(Equipment.owner) and not Equipment.owner.isDead and
+        Equipment and Equipment.owner and Object.IsValid(Equipment.owner) and not Equipment.owner.isDead and
             Equipment.owner.hitPoints < Equipment.owner.maxHitPoints and
             time() > nextRegen and
             IsOutOfCombat()
@@ -56,4 +66,4 @@ end
 -- Listeners
 -------------------------------------------------------------------------------
 Equipment.equippedEvent:Connect(OnEquipped)
-Events.Connect("CombatWrapAPI.OnDamageTaken", PlayerDamageTaken)
+Equipment.unequippedEvent:Connect(OnUnequipped)
