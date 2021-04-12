@@ -84,64 +84,94 @@ end
 
 local function GetTitle(class, level)
 	if class == MPC_API.CLASS.TANK then
-		if level < 10 then
-			return "Young Warrior"
+		if level < 5 then
+			return "Trainee"
+		elseif level < 10 then
+			return "Reckless Brawler"			
 		elseif level < 20 then
-			return "Experienced Warrior"
+			return "Resolute Fighter"
 		elseif level < 30 then
-			return "Great Warrior"
+			return "Battle-Hardened Warrior"
+		elseif level < 35 then
+			return "Unbreakable Berserker"			
 		elseif level < 40 then
-			return "Greater Warrior"
+			return "Rock Smasher"
+		elseif level < 45 then
+			return "Earthbreaker"
 		else 
-			return "Legendary Warrior"
+			return "The Warrior King"
 		end
 	elseif class == MPC_API.CLASS.MAGE then
-		if level < 10 then
-			return "Young Mage"
+		if level < 5 then
+			return "Trainee"
+		elseif level < 10 then
+			return "Apprentice Spellcaster"	
 		elseif level < 20 then
-			return "Experienced Mage"
+			return "Gifted Spellweaver"
 		elseif level < 30 then
-			return "Great Mage"
+			return "Capable Sorcerer"
+		elseif level < 35 then		
+			return "Elementalist"
 		elseif level < 40 then
-			return "Greater Mage"
+			return "Master of Elements"
+		elseif level < 45 then
+			return "Legendary Mage"			
 		else 
-			return "Legendary Mage"
+			return "Supreme Mage"
 		end	
 	elseif class == MPC_API.CLASS.HUNTER then
-		if level < 10 then
-			return "Young Hunter"
+		if level < 5 then
+			return "Trainee"
+		elseif level < 10 then
+			return "Novice Woodsman"	
 		elseif level < 20 then
-			return "Experienced Hunter"
+			return "Skilled Trapper"
 		elseif level < 30 then
-			return "Great Hunter"
+			return "Proficient Warden"
+		elseif level < 35 then
+			return "Veteran Warden"			
 		elseif level < 40 then
 			return "Greater Hunter"
+		elseif level < 45 then
+			return "Master Hunter"			
 		else 
-			return "Legendary Hunter"
+			return "Grandmaster Hunter"
 		end	
 	elseif class == MPC_API.CLASS.HEALER then
-		if level < 10 then
-			return "Young Healer"
+		if level <5 then
+			return "Trainee"
+		elseif level < 10 then
+			return "Apprentice Medic"
 		elseif level < 20 then
-			return "Experienced Healer"
+			return "Experienced Medic"
 		elseif level < 30 then
-			return "Great Healer"
+			return "Steadfast Disciple"
+		elseif level < 35 then
+			return "Sun Priest"			
 		elseif level < 40 then
-			return "Greater Healer"
+			return "Chosen Healer"
+		elseif level < 45 then
+			return "The Sunweaver"			
 		else 
-			return "Legendary Healer"
+			return "Transcendent Healer"
 		end	
 	elseif class == MPC_API.CLASS.ASSASSIN then
-		if level < 10 then
-			return "Young MAssassin"
+		if level < 5 then
+			return "Trainee"
+		elseif level < 10 then
+			return "Common Pickpocket"
+		elseif level < 10 then
+			return "Knife Master"			
 		elseif level < 20 then
-			return "Experienced Assassin"
+			return "Shadow Duelist"
 		elseif level < 30 then
-			return "Great Assassin"
+			return "Dark Ninja"
 		elseif level < 40 then
-			return "Greater Assassin"
+			return "The Night Shadow"
+		elseif level < 45 then
+			return "Death's Blade"			
 		else 
-			return "Legendary Assassin"
+			return "Infamous Assassin"
 		end	
 	end
 end
