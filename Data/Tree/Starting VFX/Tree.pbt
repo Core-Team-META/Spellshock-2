@@ -65,6 +65,7 @@ Objects {
   ChildIds: 3709093809306849383
   ChildIds: 225338738759154585
   ChildIds: 11863908858317647879
+  ChildIds: 11738025836652880815
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -88,6 +89,126 @@ Objects {
     SubobjectId: 6071797233955588048
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 11738025836652880815
+  Name: "Assassin_Elf_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15151230995144375052
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 12544879553930214832
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Costume"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Beginning"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Attack"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Launch"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6665958889220481136
+    }
   }
 }
 Objects {
@@ -1021,6 +1142,7 @@ Objects {
   ChildIds: 5306486270232008887
   ChildIds: 13933192735790262906
   ChildIds: 5776448743445574931
+  ChildIds: 14071064146755698638
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -1044,6 +1166,126 @@ Objects {
     SubobjectId: 4329744983662216885
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 14071064146755698638
+  Name: "Assassin_Orc_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1478165411166770972
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 13305624167474119657
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Costume"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Beginning"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Attack"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Launch"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 9293650821442732191
+    }
   }
 }
 Objects {
@@ -2019,6 +2261,7 @@ Objects {
   ChildIds: 12647207182390820553
   ChildIds: 10227316520240388793
   ChildIds: 13547074372584335728
+  ChildIds: 8014432357421435008
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -2042,6 +2285,96 @@ Objects {
     SubobjectId: 6071797233955588048
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 8014432357421435008
+  Name: "Healer_Elf_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13135148747188130515
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 15165156536569580955
+      }
+    }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_SunBeam_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_DivineLight_Active"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_SunBeam_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Supernova_Charge"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:04_Supernova_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Supernova_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4287529334157423026
+    }
   }
 }
 Objects {
@@ -2765,6 +3098,7 @@ Objects {
   ChildIds: 13222205284125132718
   ChildIds: 782210214295923017
   ChildIds: 17899414020424111569
+  ChildIds: 15860435673967831476
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -2788,6 +3122,96 @@ Objects {
     SubobjectId: 4329744983662216885
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 15860435673967831476
+  Name: "Healer_Orc_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1966937509179175376
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 10280288507484418596
+      }
+    }
+    Overrides {
+      Name: "cs:03_DivineLight_Active"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_SunBeam_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_SunBeam_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Supernova_Charge"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:04_Supernova_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Supernova_Ending"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16070017289157504481
+    }
   }
 }
 Objects {
@@ -3553,6 +3977,7 @@ Objects {
   ChildIds: 8449658068846696808
   ChildIds: 2870724284258458332
   ChildIds: 18141155338194809113
+  ChildIds: 16598319323925104383
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -3576,6 +4001,78 @@ Objects {
     SubobjectId: 6071797233955588048
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 16598319323925104383
+  Name: "Hunter_Elf_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9675846803834844328
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 18441570777324082556
+      }
+    }
+    Overrides {
+      Name: "cs:01_RainofArrows_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_RainofArrows_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_BearTrap_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:03_BearTrap_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Hawk_Template"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13263787292238581681
+    }
   }
 }
 Objects {
@@ -4161,6 +4658,7 @@ Objects {
   ChildIds: 14360582580306528324
   ChildIds: 16321719940437831108
   ChildIds: 2845256920249090901
+  ChildIds: 719512212565882130
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -4184,6 +4682,78 @@ Objects {
     SubobjectId: 4329744983662216885
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 719512212565882130
+  Name: "Hunter_Orc_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1753463153320144683
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 606554569325609681
+      }
+    }
+    Overrides {
+      Name: "cs:01_RainofArrows_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_BearTrap_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:01_RainofArrows_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_BearTrap_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Hawk_Template"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17952693581840529841
+    }
   }
 }
 Objects {
@@ -4805,6 +5375,7 @@ Objects {
   ChildIds: 15313539032618190512
   ChildIds: 13833440826593393822
   ChildIds: 18236077725111569949
+  ChildIds: 17461741986269950273
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -4828,6 +5399,108 @@ Objects {
     SubobjectId: 6071797233955588048
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 17461741986269950273
+  Name: "Mage_Elf_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17200648636998409393
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 3281960719896229810
+      }
+    }
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Attachment"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_Tornado_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Attachment"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Break"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1083974979704324912
+    }
   }
 }
 Objects {
@@ -5633,6 +6306,7 @@ Objects {
   ChildIds: 12007395968169172407
   ChildIds: 16680699645217042637
   ChildIds: 7657574915540273167
+  ChildIds: 4200157429373330951
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -5656,6 +6330,108 @@ Objects {
     SubobjectId: 4329744983662216885
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 4200157429373330951
+  Name: "Mage_Orc_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5657075643519372304
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 17591324247412889914
+      }
+    }
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Attachment"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:01_Tornado_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_Pyroblast_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Attachment"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_Iceberg_Break"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15748669819301712087
+    }
   }
 }
 Objects {
@@ -6503,6 +7279,7 @@ Objects {
   ChildIds: 4230043731780213105
   ChildIds: 15505660901637873497
   ChildIds: 5451145470384665415
+  ChildIds: 12357765767423278140
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6524,6 +7301,96 @@ Objects {
   InstanceHistory {
     SelfId: 1909557250613290468
     SubobjectId: 6071797233955588048
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 12357765767423278140
+  Name: "Tank_Elf_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1909557250613290468
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 8576687567869604610
+      }
+    }
+    Overrides {
+      Name: "cs:01_RockStrike_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_StoneWall_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_ShieldDash_Attachment"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_BoulderThrow_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_StoneWall_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_ShieldDash_Bash"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_BoulderThrow_Pickup"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8308231682525855788
+    }
+  }
+  InstanceHistory {
+    SelfId: 15023700050194966386
+    SubobjectId: 11438475381006353734
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
   }
@@ -7247,6 +8114,7 @@ Objects {
   ChildIds: 14713392221952514279
   ChildIds: 17015824175176787298
   ChildIds: 5961630843074848889
+  ChildIds: 10350562740622549657
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7268,6 +8136,96 @@ Objects {
   InstanceHistory {
     SelfId: 8274554278962242689
     SubobjectId: 4329744983662216885
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 10350562740622549657
+  Name: "Tank_Orc_Afterlife"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8274554278962242689
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 9
+    }
+    Overrides {
+      Name: "cs:08_Costume"
+      AssetReference {
+        Id: 4765810477310161646
+      }
+    }
+    Overrides {
+      Name: "cs:01_RockStrike_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_StoneWall_Placement"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_ShieldDash_Attachment"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_BoulderThrow_Projectile"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_StoneWall_Preview"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:03_ShieldDash_Bash"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:04_BoulderThrow_Pickup"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17951190285812977083
+    }
+  }
+  InstanceHistory {
+    SelfId: 11511678337778933379
+    SubobjectId: 15060869678388985015
     InstanceId: 16072469884466055001
     TemplateId: 12098153250026619541
   }
