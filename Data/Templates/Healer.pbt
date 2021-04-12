@@ -882,7 +882,7 @@ Assets {
       }
       Objects {
         Id: 14112328780250061073
-        Name: "DestructibleWeaponServer"
+        Name: "HealerWeaponServer"
         Transform {
           Location {
             X: 18265.5566
@@ -899,14 +899,6 @@ Assets {
         }
         ParentId: 17566732273178486209
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:DamageToObjects"
-            Int: 129
-          }
-          Overrides {
-            Name: "cs:DamageToPlayers"
-            Int: 20
-          }
           Overrides {
             Name: "cs:BindingName"
             String: "LMB"
@@ -933,7 +925,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 18154052875178810801
+            Id: 2316124691437571928
           }
         }
       }
