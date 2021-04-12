@@ -6599,9 +6599,9 @@ Assets {
             Z: 14.2567902
           }
           Rotation {
-            Pitch: -79.0248947
+            Pitch: -79.0249
             Yaw: 66.0390549
-            Roll: -65.7746658
+            Roll: -65.7746582
           }
           Scale {
             X: 0.232124582
@@ -6614,7 +6614,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 10666558334236215950
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -6632,8 +6632,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.202
-              B: 0.00336661539
+              R: 0.526
+              B: 0.00876653288
               A: 1
             }
           }
@@ -13774,6 +13774,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_ring_faceted_001"
+      }
+    }
+    Assets {
+      Id: 5351428073291024820
+      Name: "Emissive Glow Opaque"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_opaque_emissive"
       }
     }
     Assets {

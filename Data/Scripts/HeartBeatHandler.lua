@@ -15,7 +15,7 @@ end
 function OnTeamScoreChanged(team)
     local teamScore = Game.GetTeamScore(team)
     local scoreLimit = DynamicCapturePoints:GetCustomProperty("ScoreLimit")
-    if teamScore >= (scoreLimit-30) and not loopTask then
+    if teamScore >= (scoreLimit-30) and not loopTask and ABGS.GAME_STATE_ROUND == ABGS.GetGameState() then
         loopTask = Task.Spawn(function ()
             HeartbeatSFX:Play()
         end)

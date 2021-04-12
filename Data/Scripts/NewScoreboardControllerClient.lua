@@ -90,18 +90,6 @@ end
 function OnPlayerJoined(player)
     local newLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
     newLine.y = 26.5 * (#playerLines + 1)
-    local title = PLAYER_TITLES.GetPlayerTitle(player)
-    local TitleImage = newLine:GetCustomProperty("TitleImage"):WaitForObject()
-    local PlayerImage = newLine:GetCustomProperty("PlayerImage"):WaitForObject()
-    PlayerImage:SetImage(player)
-
-    if title and title.icon then
-        TitleImage:SetImage(title.icon or "")
-        TitleImage:SetColor(title.iconColor or Color.WHITE)
-    else
-        TitleImage.visibility = Visibility.FORCE_OFF
-    end
-
     table.insert(playerLines, newLine)
 end
 
@@ -173,7 +161,16 @@ function Tick(deltaTime)
             local line = playerLines[i]
             local RES = CONST.COMBAT_STATS
             --line:GetCustomProperty("PlayerImage"):WaitForObject():SetImage(player)
-            line:GetCustomProperty("Name"):WaitForObject().text = player.name
+            local nameText = line:GetCustomProperty("Name"):WaitForObject()
+            nameText.text = player.name
+            if player:GetResource(CONST.VIP_MEMBERSHIP_KEY) == 1 then
+                nameText.x = 145
+                line:GetCustomProperty("VIPImage"):WaitForObject().visibility = Visibility.FORCE_ON
+            else
+                nameText.x = 120
+                line:GetCustomProperty("VIPImage"):WaitForObject().visibility = Visibility.FORCE_OFF
+            end
+          
             line:GetCustomProperty("Level"):WaitForObject().text = tostring(player:GetResource(CONST.CLASS_LEVEL))
             if player == LOCAL_PLAYER then
                 line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[3])
@@ -189,6 +186,20 @@ function Tick(deltaTime)
             line:GetCustomProperty("Healing"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_HEALING_RES))
             line:GetCustomProperty("Killstreak"):WaitForObject().text =
                 tostring(player:GetResource(RES.LARGEST_KILL_STREAK))
+            local title = PLAYER_TITLES.GetPlayerTitle(player)
+            local TitleImage = line:GetCustomProperty("TitleImage"):WaitForObject()
+            local PlayerImage = line:GetCustomProperty("PlayerImage"):WaitForObject()
+            PlayerImage:SetImage(player)
+           
+       
+
+            if title and title.icon then
+                TitleImage:SetImage(title.icon or "")
+                TitleImage:SetColor(title.iconColor or Color.WHITE)
+                TitleImage.visibility = Visibility.FORCE_ON
+            else
+                TitleImage.visibility = Visibility.FORCE_OFF
+            end
         end
     end
 end
@@ -199,6 +210,7 @@ PANEL.visibility = Visibility.FORCE_OFF
 headerLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
 headerLine:GetCustomProperty("PlayerImage"):WaitForObject().visibility = Visibility.FORCE_OFF
 headerLine:GetCustomProperty("TitleImage"):WaitForObject().visibility = Visibility.FORCE_OFF
+headerLine:GetCustomProperty("VIPImage"):WaitForObject().visibility = Visibility.FORCE_OFF
 headerLine:GetCustomProperty("Level"):WaitForObject().text = "Level"
 headerLine:GetCustomProperty("Name"):WaitForObject().text = "Name"
 headerLine:GetCustomProperty("KillsText"):WaitForObject().text = "Kills"
@@ -208,6 +220,7 @@ headerLine:GetCustomProperty("CapturePoints"):WaitForObject().text = "Captures"
 headerLine:GetCustomProperty("Damage"):WaitForObject().text = "Damage"
 headerLine:GetCustomProperty("Healing"):WaitForObject().text = "Healing"
 headerLine:GetCustomProperty("Killstreak"):WaitForObject().text = "Kill Streak"
+
 
 for _, player in ipairs(Game.GetPlayers()) do
     OnPlayerJoined(player)

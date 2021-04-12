@@ -19,12 +19,18 @@ Displays text associated with the BannerMessage() event that takes the following
 BannerMessage(String message)
 BannerMessage(String message, float duration)
 --]] -- Internal custom properties
+local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local CONST = require(script:GetCustomProperty("CONST"))
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
 local PANEL_DEFAULT = script:GetCustomProperty("PanelDefault"):WaitForObject()
 local PANEL_ELF = script:GetCustomProperty("PanelElf"):WaitForObject()
 local PANEL_ORC = script:GetCustomProperty("PanelOrc"):WaitForObject()
 local PANEL_LOOT = script:GetCustomProperty("PanelLoot"):WaitForObject()
+local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
+local PlayerClassLevelup = script:GetCustomProperty("PlayerClassLevelup"):WaitForObject()
+local LevelupSFX = script:GetCustomProperty("LevelupSFX"):WaitForObject()
+local LootSFX = script:GetCustomProperty("LootSFX"):WaitForObject()
 
 -- User exposed properties
 local DEFAULT_DURATION = 5
@@ -37,6 +43,14 @@ end
 
 -- Variables
 local messageEndTime = 0.0
+local playerLevelTimer = 0.0
+local classIcons = {}
+
+--[[for _, classData in ipairs(ClassMenuData:GetChildren()) do
+    local ClassName = classData:GetCustomProperty("ClassID")
+    local ClassID = UTIL.CLASS[ClassName]
+    classIcons[ClassID] = classData:GetCustomProperty("Icon")
+end]]
 
 -- nil OnBannerMessageEvent(string, <float>)
 -- Handles a client side banner message event
@@ -50,38 +64,75 @@ function OnBannerMessageEvent(message, duration, type)
         messageEndTime = time() + DEFAULT_DURATION
     end
 
-    PANEL.visibility = Visibility.FORCE_ON
-
     if type == 1 then
-        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
-        if not PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_ON end
-        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
-        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
+        PANEL_ORC.visibility = Visibility.INHERIT
+        PANEL_ELF.visibility = Visibility.FORCE_OFF
+        PANEL_LOOT.visibility = Visibility.FORCE_OFF
     elseif type == 2 then
-        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
-        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
-        if not PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_ON end
-        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
+        PANEL_ORC.visibility = Visibility.FORCE_OFF
+        PANEL_ELF.visibility = Visibility.INHERIT
+        PANEL_LOOT.visibility = Visibility.FORCE_OFF
     elseif type == 3 then
-        if PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_OFF end
-        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
-        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
-        if not PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_ON end
+        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
+        PANEL_ORC.visibility = Visibility.FORCE_OFF
+        PANEL_ELF.visibility = Visibility.FORCE_OFF
+        PANEL_LOOT.visibility = Visibility.INHERIT
+        LootSFX:Play()
     else
-        if not PANEL_DEFAULT:IsVisibleInHierarchy() then PANEL_DEFAULT.visibility = Visibility.FORCE_ON end
-        if PANEL_ORC:IsVisibleInHierarchy() then PANEL_ORC.visibility = Visibility.FORCE_OFF end
-        if PANEL_ELF:IsVisibleInHierarchy() then PANEL_ELF.visibility = Visibility.FORCE_OFF end
-        if PANEL_LOOT:IsVisibleInHierarchy() then PANEL_LOOT.visibility = Visibility.FORCE_OFF end
+        PANEL_DEFAULT.visibility = Visibility.INHERIT
+        PANEL_ORC.visibility = Visibility.FORCE_OFF
+        PANEL_ELF.visibility = Visibility.FORCE_OFF
+        PANEL_LOOT.visibility = Visibility.FORCE_OFF
     end
     TEXT_BOX.text = message
+
+    PANEL.visibility = Visibility.INHERIT
+end
+
+function OnPlayerClassLevelUp(data)
+    local tbl = UTIL.StringSplit(",", data)
+    local playerID = tbl[1]
+    local classID = tonumber(tbl[2])
+    local classLevel = tbl[3]
+    local className = CONST.CLASS_NAME[classID]
+    local classIcon = classIcons[classID]
+    local _Player
+
+    for _, player in ipairs(Game.GetPlayers()) do
+        if player.id == playerID then
+            _Player = player
+            break
+        end
+    end
+
+    local propTeamBanners = PlayerClassLevelup:GetCustomProperty("TeamBanners"):WaitForObject()
+    local propBannerText = PlayerClassLevelup:GetCustomProperty("BannerText"):WaitForObject()
+
+    for index, panel in ipairs(propTeamBanners:GetChildren()) do
+        if index == _Player.team then
+            panel.visibility = Visibility.INHERIT
+        else
+            panel.visibility = Visibility.FORCE_OFF
+        end 
+    end
+
+    propBannerText.text = _Player.name.." is now a level "..classLevel.." "..className.."!"
+    PlayerClassLevelup.visibility = Visibility.INHERIT
+    LevelupSFX:Play()
+    playerLevelTimer = time() + 5
 end
 
 -- nil Tick(float)
 -- Hides the banner when the message has expired
 function Tick(deltaTime)
     if time() > messageEndTime then PANEL.visibility = Visibility.FORCE_OFF end
+    if time() > playerLevelTimer then PlayerClassLevelup.visibility = Visibility.FORCE_OFF end
 end
 
 -- Initialize
 PANEL.visibility = Visibility.FORCE_OFF
+PlayerClassLevelup.visibility = Visibility.FORCE_OFF
 Events.Connect("BannerMessage", OnBannerMessageEvent)
+Events.Connect("PlayerClassLevelUp_Client", OnPlayerClassLevelUp)

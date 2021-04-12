@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14826671335767096609
+  Name: "Japanese Heavy Taiko Drum Beat Music Stinger Set 01"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_stinger_japanese_taiko_heavy_beat_01_ref"
+  }
+}
+Assets {
   Id: 14510957445621872854
   Name: "Fantasy Jewelry 013"
   PlatformAssetType: 9
@@ -107,6 +116,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10901942278299474248
+  Name: "Fantasy Corners 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Corners_003"
+  }
+}
+Assets {
   Id: 9561753793354183925
   Name: "Fantasy Crossbow 003"
   PlatformAssetType: 9
@@ -161,6 +179,24 @@ Assets {
   }
 }
 Assets {
+  Id: 6925803453475622504
+  Name: "Combo Achievement Tribal Flute Drum Shine Stingers Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_stinger_combo_achievement_tribal_flute_drum_shine_01_ref"
+  }
+}
+Assets {
+  Id: 6859120864649472739
+  Name: "Fantasy Club 011"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Weapon_Club_011"
+  }
+}
+Assets {
   Id: 6647019327388432606
   Name: "Fantasy Craft Stone 022"
   PlatformAssetType: 9
@@ -197,6 +233,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2791845266855844444
+  Name: "Fantasy Corners 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Corners_004"
+  }
+}
+Assets {
   Id: 2182215656788171490
   Name: "Fantasy Craft Crystal 015"
   PlatformAssetType: 9
@@ -212,6 +257,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
+  Id: 1372025318724450931
+  Name: "Cash Register Purchase Deep Boomy 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_cash_register_purchase_deep_boomy_01_Cue_ref"
   }
 }
 Assets {

@@ -7,7 +7,7 @@ Assets {
       RootId: 15193641405411111252
       Objects {
         Id: 15193641405411111252
-        Name: "Mage Iceberg FX"
+        Name: "Mage Iceberg Attachment Basic"
         Transform {
           Scale {
             X: 1
@@ -17,6 +17,7 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 16521302198778403157
+        Lifespan: 15
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

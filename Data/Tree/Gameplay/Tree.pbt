@@ -281,6 +281,8 @@ Objects {
     Volume: 0.8
     Falloff: 3600
     Radius: 400
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
   }
 }
 Objects {
@@ -7516,11 +7518,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 401.004883
-      Y: 641.439087
+      X: 947.708
+      Y: 823.729614
       Z: 137.091064
     }
     Rotation {
+      Yaw: 40.5369911
     }
     Scale {
       X: 1
@@ -7577,11 +7580,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -784.313232
-      Y: -159.529663
+      X: -1430.35974
+      Y: 9.78344727
       Z: 137.091064
     }
     Rotation {
+      Yaw: -110.749008
     }
     Scale {
       X: 1
@@ -7638,11 +7642,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -333.87085
-      Y: -759.718567
+      X: -704.049438
+      Y: -1206.93335
       Z: 137.091064
     }
     Rotation {
+      Yaw: -95.7355042
     }
     Scale {
       X: 1
@@ -7699,11 +7704,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 434.037537
-      Y: -738.986755
+      X: 753.149902
+      Y: -1246.55994
       Z: 137.091064
     }
     Rotation {
+      Yaw: -19.4589844
     }
     Scale {
       X: 1
@@ -7760,11 +7766,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -510.488159
-      Y: 562.057373
+      X: -902.258667
+      Y: 876.131409
       Z: 137.091064
     }
     Rotation {
+      Yaw: 84.2113724
     }
     Scale {
       X: 1
@@ -7821,11 +7828,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 863.139
-      Y: -161.000366
+      X: 1210.91736
+      Y: -570.425659
       Z: 137.091064
     }
     Rotation {
+      Yaw: -54.3486328
     }
     Scale {
       X: 1
@@ -7894,6 +7902,8 @@ Objects {
   ParentId: 4559935034785672696
   ChildIds: 14434310473645765923
   ChildIds: 14773343175116809841
+  ChildIds: 6612599516593354739
+  ChildIds: 2121977409205181662
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -7908,15 +7918,140 @@ Objects {
   }
 }
 Objects {
+  Id: 2121977409205181662
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 75.8212891
+      Y: 6548.51
+      Z: -128.344482
+    }
+    Rotation {
+      Yaw: -77.6904297
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 15742096495686500615
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 6612599516593354739
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -1186.53467
+      Y: -2544.55273
+      Z: -914.090088
+    }
+    Rotation {
+      Yaw: -100.776978
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 15742096495686500615
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 14773343175116809841
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 5091.51758
-      Y: -2899.31201
-      Z: -158.031494
+      X: 7340.55957
+      Y: 357.815918
+      Z: 601.095
     }
     Rotation {
+      Yaw: -174.466141
     }
     Scale {
       X: 1
@@ -7973,11 +8108,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 2174.99219
-      Y: 4436.32715
+      X: 3793.09473
+      Y: 4359.59473
       Z: -128.344482
     }
     Rotation {
+      Yaw: -152.347122
     }
     Scale {
       X: 1
@@ -12016,11 +12152,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -697.996094
-      Y: -147.880859
+      X: -697.99585
+      Y: -147.880768
       Z: 137.091064
     }
     Rotation {
+      Yaw: -147.389648
     }
     Scale {
       X: 1
@@ -12077,11 +12214,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -307.996094
+      X: -307.996033
       Y: -677.880859
       Z: 137.091064
     }
     Rotation {
+      Yaw: -102.58551
     }
     Scale {
       X: 1
@@ -12138,11 +12276,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 367.003906
-      Y: -622.880859
+      X: 367.003937
+      Y: -622.880798
       Z: 137.091064
     }
     Rotation {
+      Yaw: -69.1394043
     }
     Scale {
       X: 1
@@ -12199,11 +12338,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -472.996094
-      Y: 497.119141
+      X: -472.996582
+      Y: 497.119019
       Z: 137.091064
     }
     Rotation {
+      Yaw: 131.994308
     }
     Scale {
       X: 1
@@ -12334,6 +12474,9 @@ Objects {
   ParentId: 16313267587009276285
   ChildIds: 12833544161582231679
   ChildIds: 10545934005390707173
+  ChildIds: 3103704151281301179
+  ChildIds: 10304884204456985901
+  ChildIds: 3107348770230615204
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -12348,15 +12491,202 @@ Objects {
   }
 }
 Objects {
+  Id: 3107348770230615204
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -4292.42773
+      Y: 3712.20508
+      Z: -51.4360352
+    }
+    Rotation {
+      Yaw: -52.1998901
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5510827948355619499
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 10304884204456985901
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 2336.3877
+      Y: -2438.44849
+      Z: 413.772095
+    }
+    Rotation {
+      Yaw: 131.321198
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5510827948355619499
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 3103704151281301179
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -5482.73047
+      Y: -645.90625
+      Z: -68.255249
+    }
+    Rotation {
+      Yaw: 32.1882286
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5510827948355619499
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 10545934005390707173
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -3446.73438
-      Y: -6669.9624
-      Z: 338.834961
+      X: -4973.89063
+      Y: -4536.7749
+      Z: 165.981567
     }
     Rotation {
+      Yaw: 45.6417809
     }
     Scale {
       X: 1
@@ -12413,11 +12743,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 7416.73486
-      Y: 7970.0376
-      Z: -291.165039
+      X: 6217.9541
+      Y: 8744.68555
+      Z: 784.936035
     }
     Rotation {
+      Yaw: -11.5200195
     }
     Scale {
       X: 1
@@ -13618,7 +13949,7 @@ Objects {
 }
 Objects {
   Id: 17910728817571265557
-  Name: "Point M"
+  Name: "Point MK"
   Transform {
     Location {
       X: -5867.57422
@@ -13648,7 +13979,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShortName"
-      String: "M"
+      String: "MK"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -16340,6 +16671,9 @@ Objects {
   ParentId: 17910728817571265557
   ChildIds: 2278236365684644466
   ChildIds: 9020644011791581471
+  ChildIds: 1826998979715455587
+  ChildIds: 17462909767377723160
+  ChildIds: 1700316418680255042
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -16354,15 +16688,202 @@ Objects {
   }
 }
 Objects {
+  Id: 1700316418680255042
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 7329.56641
+      Y: -2226.70117
+      Z: 106.441895
+    }
+    Rotation {
+      Yaw: -142.176056
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5615551507275436675
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 17462909767377723160
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 2464.77637
+      Y: -1007.04395
+      Z: 191.23584
+    }
+    Rotation {
+      Yaw: 108.123215
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5615551507275436675
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 1826998979715455587
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -1602.95068
+      Y: -5401.96143
+      Z: 577.646484
+    }
+    Rotation {
+      Yaw: 162.676926
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5615551507275436675
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 9020644011791581471
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -1779.62549
-      Y: -6913.45557
-      Z: 25.7561035
+      X: -2090.62793
+      Y: -7288.21826
+      Z: 57.4892578
     }
     Rotation {
+      Yaw: 92.4710846
     }
     Scale {
       X: 1
@@ -16419,11 +16940,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 4996.44531
-      Y: 2076.42773
-      Z: 47.449707
+      X: 4267.20361
+      Y: 1428.93921
+      Z: 90.5871582
     }
     Rotation {
+      Yaw: 35.0146332
     }
     Scale {
       X: 1
@@ -17625,7 +18147,7 @@ Objects {
 }
 Objects {
   Id: 16321515820500395030
-  Name: "Point A"
+  Name: "Point AS"
   Transform {
     Location {
       X: 8298.51074
@@ -17656,7 +18178,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShortName"
-      String: "A"
+      String: "AS"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -17785,7 +18307,7 @@ Objects {
     Rotation {
       Pitch: 0.719020784
       Yaw: 51.7297516
-      Roll: -0.0062255403
+      Roll: -0.00622558594
     }
     Scale {
       X: 35.8
@@ -20342,11 +20864,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 337.003906
+      X: 337.003418
       Y: 552.119141
-      Z: 137.091064
+      Z: 137.09082
     }
     Rotation {
+      Yaw: 62.0712128
     }
     Scale {
       X: 1
@@ -20403,11 +20926,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -697.996094
-      Y: -147.880859
-      Z: 137.091064
+      X: -697.996216
+      Y: -147.88092
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -171.218704
     }
     Scale {
       X: 1
@@ -20464,11 +20988,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -307.996094
-      Y: -677.880859
-      Z: 137.091064
+      X: -307.99646
+      Y: -677.880676
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -101.091
     }
     Scale {
       X: 1
@@ -20525,11 +21050,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 367.003906
-      Y: -622.880859
-      Z: 137.091064
+      X: 367.004028
+      Y: -622.881104
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -61.1365662
     }
     Scale {
       X: 1
@@ -20586,11 +21112,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -472.996094
-      Y: 497.119141
-      Z: 137.091064
+      X: -472.99585
+      Y: 497.119324
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -168.867447
     }
     Scale {
       X: 1
@@ -20647,11 +21174,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 697.003906
-      Y: -112.880859
-      Z: 137.091064
+      X: 697.003601
+      Y: -112.880432
+      Z: 137.09082
     }
     Rotation {
+      Yaw: 7.8696084
     }
     Scale {
       X: 1
@@ -20721,6 +21249,9 @@ Objects {
   ParentId: 16321515820500395030
   ChildIds: 5780186930419382058
   ChildIds: 7102490510392368314
+  ChildIds: 14550472445736963200
+  ChildIds: 4265202758819450866
+  ChildIds: 6017480738070668025
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -20735,15 +21266,202 @@ Objects {
   }
 }
 Objects {
+  Id: 6017480738070668025
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 5399.85303
+      Y: -2395.35645
+      Z: 139.317383
+    }
+    Rotation {
+      Yaw: -165.300781
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 4265202758819450866
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 574.062683
+      Y: -4418.79883
+      Z: 568.079102
+    }
+    Rotation {
+      Yaw: 124.965172
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 14550472445736963200
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -2171.41528
+      Y: -6469.87256
+      Z: 693.085449
+    }
+    Rotation {
+      Yaw: 100.408844
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 7102490510392368314
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -5463.42188
-      Y: -5032.08887
-      Z: -363.507813
+      X: -6684.07617
+      Y: -3356.21948
+      Z: -135.068359
     }
     Rotation {
+      Yaw: -6.36865234
     }
     Scale {
       X: 1
@@ -20800,11 +21518,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 2011.5802
-      Y: 6442.90967
-      Z: -1288.50781
+      X: 3882.35352
+      Y: 5327.75146
+      Z: -125.364258
     }
     Rotation {
+      Yaw: 160.920074
     }
     Scale {
       X: 1
@@ -29893,12 +30612,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 337.003906
-      Y: 552.119141
+      X: -207.817383
+      Y: 984.400391
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999847
+      Yaw: 140.775223
     }
     Scale {
       X: 1
@@ -29955,12 +30674,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -697.996094
-      Y: -147.880859
+      X: -785.290039
+      Y: -688.611328
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999504
+      Yaw: 124.711983
     }
     Scale {
       X: 1
@@ -30017,12 +30736,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -307.996094
-      Y: -677.880859
+      X: -483.314453
+      Y: -1166.28711
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999695
+      Yaw: 2.8403666
     }
     Scale {
       X: 1
@@ -30079,12 +30798,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 367.003906
-      Y: -622.880859
+      X: 289.646484
+      Y: -1090.01563
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999847
+      Yaw: -19.8969116
     }
     Scale {
       X: 1
@@ -30141,12 +30860,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -472.996094
-      Y: 497.119141
+      X: -1106.39746
+      Y: 266.199219
       Z: 137.091064
     }
     Rotation {
-      Yaw: 60
+      Yaw: 158.321793
     }
     Scale {
       X: 1
@@ -30203,12 +30922,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 697.003906
-      Y: -112.880859
+      X: 1350.05859
+      Y: -68.53125
       Z: 137.091064
     }
     Rotation {
-      Yaw: 60
+      Yaw: 13.6372194
     }
     Scale {
       X: 1
@@ -30278,6 +30997,9 @@ Objects {
   ParentId: 13392592636105101133
   ChildIds: 13618026709082559922
   ChildIds: 11107824073196214716
+  ChildIds: 3382078873213148225
+  ChildIds: 14328325983799667231
+  ChildIds: 822484314130537471
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -30292,6 +31014,192 @@ Objects {
   }
 }
 Objects {
+  Id: 822484314130537471
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -4657.01367
+      Y: -1504.875
+      Z: 266.855957
+    }
+    Rotation {
+      Yaw: -103.731506
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 14713109632114477840
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 14328325983799667231
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -3917.78516
+      Y: -2721.06836
+      Z: 265.662354
+    }
+    Rotation {
+      Yaw: -20.0256653
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 14713109632114477840
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 3382078873213148225
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -6721.99219
+      Y: -3915.9375
+      Z: 528.619873
+    }
+    Rotation {
+      Yaw: 44.5798645
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 14713109632114477840
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 11107824073196214716
   Name: "Spawn Point"
   Transform {
@@ -30301,6 +31209,7 @@ Objects {
       Z: 927.091064
     }
     Rotation {
+      Yaw: 21.7018986
     }
     Scale {
       X: 1
@@ -30357,11 +31266,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 7337.00391
-      Y: 482.119141
-      Z: 427.091064
+      X: 3446.23633
+      Y: 1478.16797
+      Z: 288.124512
     }
     Rotation {
+      Yaw: -22.1248169
     }
     Scale {
       X: 1
@@ -33356,7 +34266,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LocalLobbyTime"
-      Int: 5
+      Int: 30
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
@@ -33922,14 +34832,14 @@ Objects {
   Settings {
     IsDefault: true
     PlayerMovementSettings {
-      WalkSpeed: 640
+      WalkSpeed: 740
       MaxAcceleration: 1800
       WalkableFloorAngle: 48
       JumpMaxCount: 1
       JumpVelocity: 900
       GroundFriction: 8
       GravityScale: 1.9
-      MaxSwimSpeed: 420
+      MaxSwimSpeed: 520
       Buoyancy: 1
       TouchForceFactor: 1
       BrakingDecelerationFlying: 600

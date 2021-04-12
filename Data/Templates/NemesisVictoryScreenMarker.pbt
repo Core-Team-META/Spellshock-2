@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 3401383139692093591
         ChildIds: 8935678803375046015
         ChildIds: 9135895041219395310
         ChildIds: 7174222016834209919
@@ -27,21 +27,9 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:NemesisNameText"
-            ObjectReference {
-              SubObjectId: 9231843216343688860
-            }
-          }
-          Overrides {
             Name: "cs:DestroyedText"
             ObjectReference {
               SubObjectId: 16299547591896547834
-            }
-          }
-          Overrides {
-            Name: "cs:DestroyedNameText"
-            ObjectReference {
-              SubObjectId: 17954316234232137697
             }
           }
           Overrides {
@@ -62,7 +50,7 @@ Assets {
         }
         Control {
           Height: 115
-          UIY: 199.097244
+          UIY: 530
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"

@@ -111,19 +111,19 @@ bundles[#bundles + 1] = {
     perk = JewelPack2,
     storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK2,
     resourceName = CONST.COSMETIC_TOKEN,
-    reward = 50
+    reward = 70
 }
 bundles[#bundles + 1] = {
     perk = JewelPack3,
     storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK3,
     resourceName = CONST.COSMETIC_TOKEN,
-    reward = 100
+    reward = 150
 }
 bundles[#bundles + 1] = {
     perk = JewelPack4,
     storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK4,
     resourceName = CONST.COSMETIC_TOKEN,
-    reward = 250
+    reward = 300
 }
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -204,7 +204,9 @@ function CheckPerkCountWithStorage(player, data)
                 end
                 player:AddResource(bundle.resourceName, reward)
             end
-            if bundle.perkType == CONST.PERK_TYPES.FLAG and player:HasPerk(bundle.perk) then
+            -- VIP Bonus
+            if bundle.storageId == CONST.PERK_STORAGE_KEYS.VIP_MEMBER and player:HasPerk(bundle.perk) then
+                player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
             end
             if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) then
@@ -221,8 +223,10 @@ function CheckPerkCountWithStorage(player, data)
             -- Server & Self Perk Modifers (Repeatable Purchase)
             if bundle.perk == SERVERXPBOOST and perkCount > storageCount then
                 AddTimeToPlayersMultiplier(CONST.SELF_XP_BOOST_KEY, CONST.XP_SERVER_BOOST_DURATION)
+                Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min XP boost!", 5, 3)
             elseif bundle.perk == SERVERGOLDBOOST and perkCount > storageCount then
                 AddTimeToPlayersMultiplier(CONST.SELF_GOLD_BOOST_KEY, CONST.GOLD_SERVER_BOOST_DURATION)
+                Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min Gold boost!", 5, 3)
             elseif bundle.perk == SELFXPBOOST and perkCount > storageCount then
                 AddTimeToMultiplier(player, CONST.SELF_XP_BOOST_KEY, CONST.XP_SELF_BOOST_DURATION)
             elseif bundle.perk == SELFGOLDBOOST and perkCount > storageCount then
@@ -259,6 +263,9 @@ function OnPlayerJoined(player)
         end
         if bundle.flag and player:HasPerk(bundle.perk) then
             _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
+            if bundle.flag == CONST.VIP_MEMBERSHIP_KEY then
+                player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
+            end
         end
     end
     OnSavePerkData(player, data, perks)

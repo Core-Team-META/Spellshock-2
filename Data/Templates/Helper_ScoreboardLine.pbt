@@ -19,6 +19,7 @@ Assets {
         ChildIds: 15574431451992460765
         ChildIds: 16690130693437400001
         ChildIds: 17925700208914788918
+        ChildIds: 6502777163635995126
         ChildIds: 5748389925553274148
         ChildIds: 12655242082259094922
         ChildIds: 5611923143272407215
@@ -93,6 +94,12 @@ Assets {
             Name: "cs:PlayerImage"
             ObjectReference {
               SubObjectId: 17925700208914788918
+            }
+          }
+          Overrides {
+            Name: "cs:VIPImage"
+            ObjectReference {
+              SubObjectId: 6502777163635995126
             }
           }
         }
@@ -318,6 +325,70 @@ Assets {
         }
       }
       Objects {
+        Id: 6502777163635995126
+        Name: "VIP Image"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -4.61037744e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 20
+          Height: 20
+          UIX: 120
+          UIY: -5
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 11478889498718573073
+            }
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
         Id: 5748389925553274148
         Name: "Name"
         Transform {
@@ -344,9 +415,10 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 225
-          Height: 30
-          UIX: 120
+          Width: 185
+          Height: 20
+          UIX: 145
+          UIY: -5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -936,6 +1008,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "Icon_Profile"
+      }
+    }
+    Assets {
+      Id: 11478889498718573073
+      Name: "Fantasy Crown 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Equip_Crown_001"
       }
     }
     Assets {

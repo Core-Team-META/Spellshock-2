@@ -34,6 +34,15 @@ local pointsFeedbacKMainPanel = script:GetCustomProperty("PointsFeedbacKMainPane
 
 local localPlayer = Game.GetLocalPlayer()
 
+
+local playerClassXP = {
+	CP_API.GetClassLevel(localPlayer, CP_API.TANK),
+	CP_API.GetClassLevel(localPlayer, CP_API.MAGE),
+	CP_API.GetClassLevel(localPlayer, CP_API.HUNTER),
+	CP_API.GetClassLevel(localPlayer, CP_API.HEALER),
+	CP_API.GetClassLevel(localPlayer, CP_API.ASSASSIN)
+}
+
 local trackedResources = RESOURCES_TO_TRACK:GetChildren()
 local resourceTable = {}
 local originalValue = {}
@@ -395,8 +404,14 @@ function OnResourceChanged(player, resourceName, resourceValue)
 		SetupTrackedResources()
 		return
 	end
+
+	if (resourceName == "CLASS_XP") then
+		if playerClassXP[player:GetResource("CLASS_MAP")] ~= player:GetResource("CLASS_XP") then
+			-- todo finish this
+		end
+	end
 	
-	Task.Wait(0.1)
+	Task.Wait(0.5)
 	
 	while reseting do
 		Task.Wait()

@@ -1640,7 +1640,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to throw a small bottle of poison that shatters when it lands; poisoning nearby enemies. Slow Effect = 70%. Slow Duration = 4s."
+      String: "Instant \342\200\223 Press and hold R to preview where the venom bomb will go.  Release R to throw a small bottle of poison that shatters when it lands; poisoning nearby enemies. Slow Effect = 70%. Slow Duration = 4s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2605,7 +2605,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press 4 to summon a encase yourself in ice damage nearby enemies, preventing your movement and reducing damage while it is active. Also heals when cast. Damage Radius = 800."
+      String: "Instant \342\200\223 Press 4 to encase yourself in ice, damage nearby enemies, and prevent all damage while it is active.  You will be immobile while encased in ice.  Also heals when cast. Damage Radius = 800."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2828,7 +2828,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant/Guided \342\200\223 Press R to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle. "
+      String: "Instant/Guided \342\200\223 Press R to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle.  If it has not collided within 10 seconds it will explode."
     }
     Overrides {
       Name: "cs:Bind"
@@ -3007,7 +3007,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to throw a small bottle filled with magical liquid that shatters when it lands, transforming nearby enemies into harmless chickens for a short time."
+      String: "Instant \342\200\223 Press and hold E to show a preview of where your throw will go. Release E to throw a small bottle filled with magical liquid that shatters when it lands, transforming nearby enemies into harmless chickens for a short time.  Warning, it will also reset their cooldowns."
     }
     Overrides {
       Name: "cs:Bind"
@@ -3928,7 +3928,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you. Enemies that step on it take damage and are stunned for a short time. Placement Range = 3100. "
+      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you and your teammates. Enemies that step on it take damage and are stunned for a short time. Placement Range = 3100. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -4533,11 +4533,11 @@ Objects {
     }
     Overrides {
       Name: "cs:OrcDescription"
-      String: "\342\200\234These harsh lands are our birthright, guardian. You are the first and last line of defense; crush these invaders and defend our homes.\342\200\235"
+      String: "\342\200\234These harsh lands are our birthright, warrior. You are the first and last line of defense; crush these invaders and defend our homes.\342\200\235"
     }
     Overrides {
       Name: "cs:ElfDescription"
-      String: "\342\200\234These forests and streams are home to many creatures, guardian. You are their shield; go forth and protect them.\342\200\235"
+      String: "\342\200\234These forests and streams are home to many creatures, warrior. You are their shield; go forth and protect them.\342\200\235"
     }
     Overrides {
       Name: "cs:AM_Stance"
@@ -4944,7 +4944,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press 4 to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds."
+      String: "Instant \342\200\223 Press 4 to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage and stun enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds.  Stun = 2 seconds."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5079,7 +5079,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to charge forward, dealing damage and knocking back enemies. Activating another ability will interrupt the charge. Enemy Impulse = 200000."
+      String: "Instant \342\200\223 Press R to charge forward, dealing damage and knocking back enemies. Activating another ability will interrupt the charge."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5392,7 +5392,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you. Projectile Speed = 4000. Impulse Amount = 110000."
+      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you."
     }
     Overrides {
       Name: "cs:Bind"

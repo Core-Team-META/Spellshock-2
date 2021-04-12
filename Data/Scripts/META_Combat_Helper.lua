@@ -113,7 +113,10 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 end
 
 function GoingToTakeDamage(attackData)
-    --local source = attackData.source
+    local object = attackData.object
+    if object.serverUserData.SpawnProtect and attackData.damage.amount > 0 then
+        attackData.damage.amount = 0
+    end
 end
 
 --#TODO Will need to check Gamestate for round in progress
@@ -152,7 +155,7 @@ function OnCapturePointChanged(playerId)
     end
 end
 
---Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
+Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
 Events.Connect("CombatWrapAPI.OnDamageTaken", OnDamageTaken)
 Events.Connect("CombatWrapAPI.ObjectHasDied", OnDied)
 Events.Connect("Stats.Helper.CapturePoint", OnCapturePointChanged)

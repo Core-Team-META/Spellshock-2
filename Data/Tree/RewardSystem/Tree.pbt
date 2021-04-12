@@ -2425,7 +2425,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 1127
+    Width: 1240
     Height: 620
     UIY: 272.363312
     RenderTransformPivot {
@@ -3680,8 +3680,8 @@ Objects {
         Id: 14060330023043759337
       }
       Color {
-        R: 0.02
-        G: 0.00198675506
+        R: 0.05
+        G: 0.00496688811
         A: 1
       }
       TeamSettings {
@@ -13493,6 +13493,12 @@ Objects {
       Name: "cs:ConsumablesUpgradeCost_Data"
       AssetReference {
         Id: 3692130031545591443
+      }
+    }
+    Overrides {
+      Name: "cs:ClickSFX"
+      AssetReference {
+        Id: 13059262407258792093
       }
     }
   }

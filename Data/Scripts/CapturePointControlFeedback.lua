@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Copyright 2019 Manticore Games, Inc. 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -19,7 +19,10 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local ABCP = require(script:GetCustomProperty("API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 
-local SOUND = script:GetCustomProperty("Sound"):WaitForObject()
+-- Audio templates
+local PointUncappedSFX = script:GetCustomProperty("PointUncappedSFX")
+local propPointLostSFX = script:GetCustomProperty("PointLostSFX")
+local propPointCapturedSFX = script:GetCustomProperty("PointCapturedSFX")
 
 -- Constant variables
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -27,10 +30,11 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 -- nil CapturePointChanged(Number, Number, Number)
 -- Sends a message to message banner about the state change of the capture point.
 function CapturePointChanged (id, prevTeam, newTeam)
-
+    Task.Wait()
+    Task.Wait()
     local capturePointState = ABCP.GetCapturePointState(id)
 
-	if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then
+	if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND or capturePointState.isEnabled == false then
 		return
 	end
 
@@ -38,13 +42,15 @@ function CapturePointChanged (id, prevTeam, newTeam)
     if LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team == prevTeam then
         messageType = 3 - LOCAL_PLAYER.team
         Events.Broadcast("BannerMessage", "Enemy Attacking " .. capturePointState.name, 5, messageType)
-        SOUND:Play()
+        World.SpawnAsset(PointUncappedSFX)
     elseif newTeam ~= 0 and LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team ~= prevTeam then
         messageType = 3 - LOCAL_PLAYER.team
         Events.Broadcast("BannerMessage", "Enemy Captured " .. capturePointState.name, 5, messageType)
+        World.SpawnAsset(propPointLostSFX)
     elseif LOCAL_PLAYER.team == newTeam then
         messageType = LOCAL_PLAYER.team
         Events.Broadcast("BannerMessage", "Captured " .. capturePointState.name, 5, messageType)
+        World.SpawnAsset(propPointCapturedSFX)
     end
 
 end

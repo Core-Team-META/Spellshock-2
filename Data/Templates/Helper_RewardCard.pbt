@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14710332786633172429
+        ParentId: 4781671109827199097
         ChildIds: 1879694575523701921
         ChildIds: 6672106617270379639
         UnregisteredParameters {
@@ -1064,6 +1064,7 @@ Assets {
           }
         }
         ParentId: 16580490208791630311
+        ChildIds: 329346422237299734
         ChildIds: 10753074143427577841
         ChildIds: 6513661335997967051
         ChildIds: 14663627177369457455
@@ -1196,6 +1197,52 @@ Assets {
                 Value: "mc:euianchor:middlecenter"
               }
             }
+          }
+        }
+      }
+      Objects {
+        Id: 329346422237299734
+        Name: "RewardCardAudioHandler"
+        Transform {
+          Location {
+            X: 0.001953125
+            Y: -0.017578125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6672106617270379639
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:CardButton"
+            ObjectReference {
+              SubObjectId: 14663627177369457455
+            }
+          }
+          Overrides {
+            Name: "cs:SFX_REWARD_HOVER"
+            AssetReference {
+              Id: 9369078904023052454
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 10124502312207793063
           }
         }
       }
@@ -9714,6 +9761,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
+          Width: 80
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -9832,7 +9880,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -9904,7 +9952,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -9976,7 +10024,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -10048,7 +10096,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               R: 0.96875
               G: 0.193137571
@@ -11144,7 +11192,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Text {
-            Label: "120"
+            Label: "1200000"
             Color {
               A: 1
             }

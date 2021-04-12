@@ -138,6 +138,12 @@ Objects {
         Id: 9308651227270393617
       }
     }
+    Overrides {
+      Name: "cs:ClassSelectionServer"
+      ObjectReference {
+        SelfId: 12481345003269002044
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

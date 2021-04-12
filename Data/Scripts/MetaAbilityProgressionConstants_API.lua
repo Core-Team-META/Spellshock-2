@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/7
--- Version 0.1.10
+-- Date: 2021/4/11
+-- Version 0.1.11
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -23,7 +23,8 @@ API.STORAGE = {
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
     ACHIEVEMENTS = 11,
-    PROGRESSION_MULTIPLIERS = 12
+    PROGRESSION_MULTIPLIERS = 12,
+    CLASS_FAVORITE = 13
     --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
@@ -87,7 +88,7 @@ API.CLASS_NAME = {
 }
 
 API.CLASS_HEALTH = {
-    [API.CLASS.TANK] = 500,
+    [API.CLASS.TANK] = 400,
     [API.CLASS.MAGE] = 300,
     [API.CLASS.HUNTER] = 350,
     [API.CLASS.HEALER] = 320,
@@ -173,8 +174,8 @@ API.DIMINISHING_RETURNS = {
 --Default XP Values before multipliers
 API.CLASS_XP = { 
     Kills = 300,
-    Captures = 500,
-    CapAssists = 150,
+    Captures = 450,
+    CapAssists = 400,
     Wins = 1500,
     Interrupt = 25, -- Interrupt Capture Point Player
     KillOnPoint = 100
@@ -214,8 +215,8 @@ API.STARTER_PACK_PREMIUM_BONUS = 350 -- How many cosmetic tokens a player gets w
 -- Mulipliers for Server Boost Perks - Gold & XP
 API.XP_SERVER_BOOST_MULTIPLIER = 0.5 -- XP Boost 100% for the entire server
 API.GOLD_SERVER_BOOST_MULTIPLIER = 0.5 -- Gold Boost 100% for the entire server
-API.XP_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
-API.GOLD_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
+API.XP_SERVER_BOOST_DURATION = 60 * 30 -- Currently set to 1 hour
+API.GOLD_SERVER_BOOST_DURATION = 60 * 30 -- Currently set to 1 hour
 
 -- Mulipliers for Server Boost Perks - Gold & XP
 API.XP_SELF_BOOST_MULTIPLIER = 1 -- XP Boost 100% for the entire server
@@ -281,6 +282,16 @@ API.LEVEL_DIF_BONUS = {
     [48] = 144,
     [49] = 147,
     [50] = 150
+}
+
+
+
+API.POINT_NAMES = {
+    [1] = "War Camp",
+    [2] = "Airship",
+    [3] = "Marketplace",
+    [4] = "Old Mine",
+    [5] = "Temple Glade"
 }
 
 ------------------------------------------------------------------------------------------------------------------------

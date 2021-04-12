@@ -64,7 +64,7 @@ function OnStunBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(other) or not Object.IsValid(PickupAbility) or not PickupAbility.owner or not Object.IsValid(PickupAbility.owner) or not other:IsA("Player")
 	or other == PickupAbility.owner or Teams.AreTeamsFriendly(other.team, PickupAbility.owner.team) or COMBAT().IsDead(other) then return end
 
-	API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, PickupAbility.owner, 3, 0, 0)
+	API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, PickupAbility.owner, 2, 0, 0)
 end
 
 function OnBoulderBeginOverlap(thisTrigger, other)

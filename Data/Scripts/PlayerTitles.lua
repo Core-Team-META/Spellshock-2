@@ -270,11 +270,13 @@ Module.titles = {
 			"1f67a03d5a8f478b993aad1c79b45640", -- Rolok
 			"385b45d7abdb499f8664c6cb01df521b", -- estlogic
 			"9cc8d222e6d14da68dc2ba0a9a4f0439", -- Melamoryxq
-			--"d1073dbcc404405cbef8ce728e53d380", -- Morticai
+			"d1073dbcc404405cbef8ce728e53d380", -- Morticai
 			"94d3fd50c4824f019421895ec8dbf099", -- Mucusinator
 			"91166471c6ea4d17be6772da4973e6b7", -- mjcortes782
 			"f9df3457225741c89209f6d484d0eba8", -- NicholasForeman
 			"e730c40ae54d4c588658667927acc6d8", -- WitcherSilver
+			"fdb45035857a4e87b17344cd891c48c5" -- KonzZwodrei (https://www.twitch.tv/konz23)
+	
 
 			-- "fdae8d1d32b040d792dc589edda59ced", -- Shhteve
 			-- "5c3b7b02607c4e368fc063c410123697", -- Knar

@@ -1,9 +1,9 @@
-﻿local NAMESPACE = "METAER."
+local NAMESPACE = "METAER."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/5/2021
--- Version 0.1.1
+-- Date: 2021/4/12
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -56,12 +56,16 @@ local function IsTeamWinner(player)
 end
 
 local function IsFirstWinOfTheDay(player)
-    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
+    local currentTime = os.time(os.date("!*t"))
     if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
-        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, 1)
         return true
     end
     return false
+end
+
+local function ShouldClaimWinOfTheDay(player)
+    return player:GetResource(CONST.WIN_OF_THE_DAY_TIME) == 1
 end
 
 --@param object player
@@ -199,6 +203,9 @@ function GivePlayerRewards(player, rewardList)
     for _, slotID in pairs(rewardList) do
         REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
     end
+    if ShouldClaimWinOfTheDay(player) then
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(os.time(os.date("!*t")) + (24 * 60 * 60)))
+    end
     playerRewards[player.id] = nil
 end
 
@@ -218,20 +225,4 @@ end
 GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "GivePlayerRewards", GivePlayerRewards)
 Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
-
---[[ FOR TESTING -----------------------
-function OnBindingPressed(whichPlayer, binding)
-    if (binding == "ability_extra_46") then
-        TEMP_CardCount = TEMP_CardCount + 1
-    end
-end
-
-function OnPlayerJoined(player)
-    -- hook up binding in player joined event here, move to more appropriate place if needed
-    player.bindingPressedEvent:Connect(OnBindingPressed)
-end
-
--- on player joined/left functions need to be defined before calling event:Connect()
---Game.playerJoinedEvent:Connect(OnPlayerJoined)
-----------------------------------------------------------------------------------------------------
-]]
+-------------------------------------------------------------------------------------------------------------------------

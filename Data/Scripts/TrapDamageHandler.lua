@@ -34,7 +34,7 @@ local OverlapEvent
 
 function DoDamage(other)
 	if other:IsA("Player") and other.team ~= TrapOwner.team and not other.isDead then
-		print(other.name)
+		other:ResetVelocity()
 		if OverlapEvent then
 			OverlapEvent:Disconnect()
 			OverlapEvent = nil
@@ -50,8 +50,6 @@ function DoDamage(other)
 		dmg.amount = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod3", DEFAULT_DamageAmount, "Bear Trap : Damage Amount")
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = TrapOwner
-		--dmg.sourceAbility = SpecialAbility
-				
 
 		local attackData = {
 			object = other,
@@ -63,6 +61,8 @@ function DoDamage(other)
 		}
 		COMBAT().ApplyDamage(attackData)
 		Root:Destroy()
+		Task.Wait()
+		other:ResetVelocity()
 	end
 end
 
