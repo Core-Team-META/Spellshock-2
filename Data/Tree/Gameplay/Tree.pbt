@@ -7504,7 +7504,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -7523,6 +7523,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
+      Yaw: 40.5369911
     }
     Scale {
       X: 1
@@ -7531,6 +7532,7 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
+  ChildIds: 1904364591418938321
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7571,6 +7573,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 1904364591418938321
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 6658932407153625848
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -7584,6 +7618,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
+      Yaw: -154.074646
     }
     Scale {
       X: 1
@@ -7592,6 +7627,7 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
+  ChildIds: 14831126661385034196
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7632,6 +7668,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 14831126661385034196
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 1615917204554894950
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -7645,6 +7713,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
+      Yaw: -125.849335
     }
     Scale {
       X: 1
@@ -7653,6 +7722,7 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
+  ChildIds: 17542577698311608302
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7693,6 +7763,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 17542577698311608302
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3528478233713128702
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -7706,6 +7808,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
+      Yaw: -62.47052
     }
     Scale {
       X: 1
@@ -7714,6 +7817,7 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
+  ChildIds: 14091970891296580840
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7758,6 +7862,38 @@ Objects {
   }
 }
 Objects {
+  Id: 14091970891296580840
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 13794083324186123428
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
   Id: 3339707589393332470
   Name: "Spawn Point"
   Transform {
@@ -7767,6 +7903,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
+      Yaw: 151.603226
     }
     Scale {
       X: 1
@@ -7775,6 +7912,7 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
+  ChildIds: 7379515431862392493
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7815,6 +7953,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 7379515431862392493
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3339707589393332470
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -7836,6 +8006,7 @@ Objects {
     }
   }
   ParentId: 8334843144106114592
+  ChildIds: 9239430688573995793
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7876,6 +8047,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 9239430688573995793
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 4536654716746327627
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -7896,11 +8099,13 @@ Objects {
   ParentId: 4559935034785672696
   ChildIds: 14434310473645765923
   ChildIds: 14773343175116809841
+  ChildIds: 6612599516593354739
+  ChildIds: 2121977409205181662
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -7910,15 +8115,16 @@ Objects {
   }
 }
 Objects {
-  Id: 14773343175116809841
+  Id: 2121977409205181662
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 5091.51758
-      Y: -2899.31201
-      Z: -158.031494
+      X: 75.8212891
+      Y: 6548.51
+      Z: -128.344482
     }
     Rotation {
+      Yaw: -77.6904297
     }
     Scale {
       X: 1
@@ -7927,6 +8133,7 @@ Objects {
     }
   }
   ParentId: 15742096495686500615
+  ChildIds: 864194799562582992
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -7971,15 +8178,48 @@ Objects {
   }
 }
 Objects {
-  Id: 14434310473645765923
+  Id: 864194799562582992
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 2121977409205181662
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 6612599516593354739
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 2174.99219
-      Y: 4436.32715
-      Z: -128.344482
+      X: -1186.53467
+      Y: -2544.55273
+      Z: -914.090088
     }
     Rotation {
+      Yaw: -100.776978
     }
     Scale {
       X: 1
@@ -7988,6 +8228,7 @@ Objects {
     }
   }
   ParentId: 15742096495686500615
+  ChildIds: 1497474116997761697
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -8028,6 +8269,228 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 1497474116997761697
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 6612599516593354739
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 14773343175116809841
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 7340.55957
+      Y: 357.815918
+      Z: 601.095
+    }
+    Rotation {
+      Yaw: -174.466141
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 15742096495686500615
+  ChildIds: 12107305002965053068
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 12107305002965053068
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 14773343175116809841
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 14434310473645765923
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 3793.09473
+      Y: 4359.59473
+      Z: -128.344482
+    }
+    Rotation {
+      Yaw: -152.347122
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 15742096495686500615
+  ChildIds: 558818661511475256
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 558818661511475256
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 14434310473645765923
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -11943,7 +12406,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -11970,6 +12433,7 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
+  ChildIds: 12967089068216034532
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12010,6 +12474,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 12967089068216034532
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3385644434733375197
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -12018,11 +12514,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -697.996094
-      Y: -147.880859
+      X: -697.99585
+      Y: -147.880768
       Z: 137.091064
     }
     Rotation {
+      Yaw: -147.389648
     }
     Scale {
       X: 1
@@ -12031,6 +12528,7 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
+  ChildIds: 2141601659351878510
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12071,6 +12569,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 2141601659351878510
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 15598756173282397136
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -12079,11 +12609,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -307.996094
+      X: -307.996033
       Y: -677.880859
       Z: 137.091064
     }
     Rotation {
+      Yaw: -102.58551
     }
     Scale {
       X: 1
@@ -12092,6 +12623,7 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
+  ChildIds: 6844264966421837522
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12132,6 +12664,40 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 6844264966421837522
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: 0.000156930444
+      Y: -0.00018702267
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 5430095217647731193
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -12140,11 +12706,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 367.003906
-      Y: -622.880859
+      X: 367.003937
+      Y: -622.880798
       Z: 137.091064
     }
     Rotation {
+      Yaw: -69.1394043
     }
     Scale {
       X: 1
@@ -12153,6 +12720,7 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
+  ChildIds: 3357602572779044390
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12197,15 +12765,48 @@ Objects {
   }
 }
 Objects {
+  Id: 3357602572779044390
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 10037204465365045963
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
   Id: 1706176892733962969
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -472.996094
-      Y: 497.119141
+      X: -472.996582
+      Y: 497.119019
       Z: 137.091064
     }
     Rotation {
+      Yaw: 131.994308
     }
     Scale {
       X: 1
@@ -12214,6 +12815,7 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
+  ChildIds: 11832638819457921700
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12254,6 +12856,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 11832638819457921700
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 1706176892733962969
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -12275,6 +12909,7 @@ Objects {
     }
   }
   ParentId: 1816628359332808745
+  ChildIds: 8853507674661148706
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12315,6 +12950,40 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 8853507674661148706
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: 0.000313860888
+      Y: -0.000374045339
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 4976701251698735137
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -12336,11 +13005,14 @@ Objects {
   ParentId: 16313267587009276285
   ChildIds: 12833544161582231679
   ChildIds: 10545934005390707173
+  ChildIds: 3103704151281301179
+  ChildIds: 10304884204456985901
+  ChildIds: 3107348770230615204
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -12350,15 +13022,16 @@ Objects {
   }
 }
 Objects {
-  Id: 10545934005390707173
+  Id: 3107348770230615204
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -3446.73438
-      Y: -6669.9624
-      Z: 338.834961
+      X: -4292.42773
+      Y: 3712.20508
+      Z: -51.4360352
     }
     Rotation {
+      Yaw: -52.1998901
     }
     Scale {
       X: 1
@@ -12367,6 +13040,7 @@ Objects {
     }
   }
   ParentId: 5510827948355619499
+  ChildIds: 10384098503232937277
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12411,15 +13085,49 @@ Objects {
   }
 }
 Objects {
-  Id: 12833544161582231679
+  Id: 10384098503232937277
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Y: 0.00146484375
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3107348770230615204
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 10304884204456985901
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 7416.73486
-      Y: 7970.0376
-      Z: -291.165039
+      X: 2336.3877
+      Y: -2438.44849
+      Z: 413.772095
     }
     Rotation {
+      Yaw: 131.321198
     }
     Scale {
       X: 1
@@ -12428,6 +13136,7 @@ Objects {
     }
   }
   ParentId: 5510827948355619499
+  ChildIds: 13992273208628870283
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -12468,6 +13177,328 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 13992273208628870283
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Y: 0.00146484375
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 10304884204456985901
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 3103704151281301179
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -5482.73047
+      Y: -645.90625
+      Z: -68.255249
+    }
+    Rotation {
+      Yaw: 32.1882286
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5510827948355619499
+  ChildIds: 4527821350829432152
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 4527821350829432152
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Y: 0.00146484375
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3103704151281301179
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 10545934005390707173
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -4973.89063
+      Y: -4536.7749
+      Z: 165.981567
+    }
+    Rotation {
+      Yaw: 45.6417809
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5510827948355619499
+  ChildIds: 14544323353165102863
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 14544323353165102863
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Y: 0.00146484375
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 10545934005390707173
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 12833544161582231679
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 6217.9541
+      Y: 8744.68555
+      Z: 784.936035
+    }
+    Rotation {
+      Yaw: -11.5200195
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5510827948355619499
+  ChildIds: 15872725743463867412
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 15872725743463867412
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: -0.00146484375
+      Y: -0.0029296875
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 12833544161582231679
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -16316,7 +17347,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -16342,11 +17373,14 @@ Objects {
   ParentId: 17910728817571265557
   ChildIds: 2278236365684644466
   ChildIds: 9020644011791581471
+  ChildIds: 1826998979715455587
+  ChildIds: 17462909767377723160
+  ChildIds: 1700316418680255042
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -16356,15 +17390,16 @@ Objects {
   }
 }
 Objects {
-  Id: 9020644011791581471
+  Id: 1700316418680255042
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -1779.62549
-      Y: -6913.45557
-      Z: 25.7561035
+      X: 7329.56641
+      Y: -2226.70117
+      Z: 106.441895
     }
     Rotation {
+      Yaw: -142.176056
     }
     Scale {
       X: 1
@@ -16373,6 +17408,7 @@ Objects {
     }
   }
   ParentId: 5615551507275436675
+  ChildIds: 11275456465963924746
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -16417,15 +17453,48 @@ Objects {
   }
 }
 Objects {
-  Id: 2278236365684644466
+  Id: 11275456465963924746
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 1700316418680255042
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 17462909767377723160
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 4996.44531
-      Y: 2076.42773
-      Z: 47.449707
+      X: 2464.77637
+      Y: -1007.04395
+      Z: 191.23584
     }
     Rotation {
+      Yaw: 108.123215
     }
     Scale {
       X: 1
@@ -16434,6 +17503,7 @@ Objects {
     }
   }
   ParentId: 5615551507275436675
+  ChildIds: 5799938394250236795
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -16474,6 +17544,323 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 5799938394250236795
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 17462909767377723160
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 1826998979715455587
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -1602.95068
+      Y: -5401.96143
+      Z: 577.646484
+    }
+    Rotation {
+      Yaw: 162.676926
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5615551507275436675
+  ChildIds: 3275293228877126575
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 3275293228877126575
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 1826998979715455587
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 9020644011791581471
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -2090.62793
+      Y: -7288.21826
+      Z: 57.4892578
+    }
+    Rotation {
+      Yaw: 92.4710846
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5615551507275436675
+  ChildIds: 1603032235739561294
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 1603032235739561294
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 9020644011791581471
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 2278236365684644466
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 4267.20361
+      Y: 1428.93921
+      Z: 90.5871582
+    }
+    Rotation {
+      Yaw: 35.0146332
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 5615551507275436675
+  ChildIds: 9870954779271520159
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 9870954779271520159
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 2278236365684644466
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -17787,7 +19174,7 @@ Objects {
     Rotation {
       Pitch: 0.719020784
       Yaw: 51.7297516
-      Roll: -0.0062255403
+      Roll: -0.00622558594
     }
     Scale {
       X: 35.8
@@ -20330,7 +21717,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -20344,11 +21731,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 337.003906
+      X: 337.003418
       Y: 552.119141
-      Z: 137.091064
+      Z: 137.09082
     }
     Rotation {
+      Yaw: 62.0712128
     }
     Scale {
       X: 1
@@ -20357,6 +21745,7 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
+  ChildIds: 4897713298772459545
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20397,6 +21786,41 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 4897713298772459545
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: -0.000374045572
+      Y: -0.00031386051
+      Z: -0.000418913056
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 10152954026756936936
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -20405,11 +21829,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -697.996094
-      Y: -147.880859
-      Z: 137.091064
+      X: -697.996216
+      Y: -147.88092
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -171.218704
     }
     Scale {
       X: 1
@@ -20418,6 +21843,7 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
+  ChildIds: 16527720958919527926
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20458,6 +21884,39 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 16527720958919527926
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Z: -0.000418913056
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3436344277829228176
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -20466,11 +21925,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -307.996094
-      Y: -677.880859
-      Z: 137.091064
+      X: -307.99646
+      Y: -677.880676
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -101.091
     }
     Scale {
       X: 1
@@ -20479,6 +21939,7 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
+  ChildIds: 13807680958129921633
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20519,6 +21980,39 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 13807680958129921633
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Z: -0.000418913056
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 12924742095167650479
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -20527,11 +22021,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 367.003906
-      Y: -622.880859
-      Z: 137.091064
+      X: 367.004028
+      Y: -622.881104
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -61.1365662
     }
     Scale {
       X: 1
@@ -20540,6 +22035,7 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
+  ChildIds: 12400610573907127480
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20580,6 +22076,41 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 12400610573907127480
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: -0.000374045572
+      Y: -0.00031386051
+      Z: -0.000418913056
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 11333889632161771925
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -20588,11 +22119,12 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -472.996094
-      Y: 497.119141
-      Z: 137.091064
+      X: -472.99585
+      Y: 497.119324
+      Z: 137.09082
     }
     Rotation {
+      Yaw: -168.867447
     }
     Scale {
       X: 1
@@ -20601,6 +22133,7 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
+  ChildIds: 16222358827468600489
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20645,15 +22178,49 @@ Objects {
   }
 }
 Objects {
+  Id: 16222358827468600489
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Z: -0.000418913056
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 7615354564118827316
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
   Id: 10593915100713627
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 697.003906
-      Y: -112.880859
-      Z: 137.091064
+      X: 697.003601
+      Y: -112.880432
+      Z: 137.09082
     }
     Rotation {
+      Yaw: 7.8696084
     }
     Scale {
       X: 1
@@ -20662,6 +22229,7 @@ Objects {
     }
   }
   ParentId: 13753849502154434662
+  ChildIds: 1342020935534537381
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20702,6 +22270,39 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 1342020935534537381
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Z: -0.000418913056
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 10593915100713627
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -20723,11 +22324,14 @@ Objects {
   ParentId: 16321515820500395030
   ChildIds: 5780186930419382058
   ChildIds: 7102490510392368314
+  ChildIds: 14550472445736963200
+  ChildIds: 4265202758819450866
+  ChildIds: 6017480738070668025
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -20737,15 +22341,16 @@ Objects {
   }
 }
 Objects {
-  Id: 7102490510392368314
+  Id: 6017480738070668025
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -5463.42188
-      Y: -5032.08887
-      Z: -363.507813
+      X: 5399.85303
+      Y: -2395.35645
+      Z: 139.317383
     }
     Rotation {
+      Yaw: -165.300781
     }
     Scale {
       X: 1
@@ -20754,6 +22359,7 @@ Objects {
     }
   }
   ParentId: 18269206194719203306
+  ChildIds: 4008189312903861596
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20798,15 +22404,50 @@ Objects {
   }
 }
 Objects {
-  Id: 5780186930419382058
+  Id: 4008189312903861596
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Y: 0.00244140625
+    }
+    Rotation {
+      Yaw: 1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 6017480738070668025
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 4265202758819450866
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 2011.5802
-      Y: 6442.90967
-      Z: -1288.50781
+      X: 574.062683
+      Y: -4418.79883
+      Z: 568.079102
     }
     Rotation {
+      Yaw: 124.965172
     }
     Scale {
       X: 1
@@ -20815,6 +22456,7 @@ Objects {
     }
   }
   ParentId: 18269206194719203306
+  ChildIds: 6516460025930467054
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -20855,6 +22497,334 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 6516460025930467054
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: 0.0009765625
+      Y: -0.001953125
+    }
+    Rotation {
+      Yaw: 1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 4265202758819450866
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 14550472445736963200
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -2171.41528
+      Y: -6469.87256
+      Z: 693.085449
+    }
+    Rotation {
+      Yaw: 100.408844
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  ChildIds: 146423348763405523
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 146423348763405523
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: 0.0009765625
+      Y: -0.001953125
+    }
+    Rotation {
+      Yaw: 1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 14550472445736963200
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 7102490510392368314
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -6684.07617
+      Y: -3356.21948
+      Z: -135.068359
+    }
+    Rotation {
+      Yaw: -6.36865234
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  ChildIds: 16263238116011882368
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 16263238116011882368
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      X: 0.0009765625
+      Y: -0.001953125
+    }
+    Rotation {
+      Yaw: 1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 7102490510392368314
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 5780186930419382058
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 3882.35352
+      Y: 5327.75146
+      Z: -125.364258
+    }
+    Rotation {
+      Yaw: 160.920074
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  ChildIds: 16546606106936797365
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 16546606106936797365
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+      Y: 0.00244140625
+    }
+    Rotation {
+      Yaw: 1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 5780186930419382058
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -29881,7 +31851,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -29909,6 +31879,7 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
+  ChildIds: 7474998151134417409
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -29953,6 +31924,38 @@ Objects {
   }
 }
 Objects {
+  Id: 7474998151134417409
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 14614418209855093852
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
   Id: 3020199994745022316
   Name: "Spawn Point"
   Transform {
@@ -29962,7 +31965,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999504
+      Yaw: -141
     }
     Scale {
       X: 1
@@ -29971,6 +31974,7 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
+  ChildIds: 14469837638036264511
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -30011,6 +32015,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 14469837638036264511
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3020199994745022316
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -30033,6 +32069,7 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
+  ChildIds: 10905440410483908302
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -30073,6 +32110,39 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 10905440410483908302
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 5168945020684575482
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -30086,7 +32156,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
-      Yaw: 59.9999847
+      Yaw: -19.8969116
     }
     Scale {
       X: 1
@@ -30095,6 +32165,7 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
+  ChildIds: 9712278165228283449
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -30135,6 +32206,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 9712278165228283449
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 4671093696253445581
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -30148,7 +32251,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
-      Yaw: 60
+      Yaw: 150.60994
     }
     Scale {
       X: 1
@@ -30157,6 +32260,7 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
+  ChildIds: 18282567797371323444
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -30201,6 +32305,39 @@ Objects {
   }
 }
 Objects {
+  Id: 18282567797371323444
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.41509417e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3002762210794041960
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
   Id: 10387259133955011845
   Name: "Spawn Point"
   Transform {
@@ -30210,7 +32347,7 @@ Objects {
       Z: 137.091064
     }
     Rotation {
-      Yaw: 60
+      Yaw: 8.51160431
     }
     Scale {
       X: 1
@@ -30219,6 +32356,7 @@ Objects {
     }
   }
   ParentId: 2825754394719247576
+  ChildIds: 12821481772546960672
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -30259,6 +32397,39 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 12821481772546960672
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.41509417e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 10387259133955011845
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
@@ -30280,17 +32451,305 @@ Objects {
   ParentId: 13392592636105101133
   ChildIds: 13618026709082559922
   ChildIds: 11107824073196214716
+  ChildIds: 3382078873213148225
+  ChildIds: 14328325983799667231
+  ChildIds: 822484314130537471
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 822484314130537471
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -4657.01367
+      Y: -1504.875
+      Z: 266.855957
+    }
+    Rotation {
+      Yaw: -103.731506
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 14713109632114477840
+  ChildIds: 16943686791522300878
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 16943686791522300878
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 822484314130537471
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 14328325983799667231
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -3917.78516
+      Y: -2721.06836
+      Z: 265.662354
+    }
+    Rotation {
+      Yaw: -20.0256653
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 14713109632114477840
+  ChildIds: 7504931888393446770
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 7504931888393446770
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 14328325983799667231
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 3382078873213148225
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -6721.99219
+      Y: -3915.9375
+      Z: 528.619873
+    }
+    Rotation {
+      Yaw: 44.5798645
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 14713109632114477840
+  ChildIds: 620115994124321149
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 620115994124321149
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 3382078873213148225
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
   }
 }
 Objects {
@@ -30303,6 +32762,7 @@ Objects {
       Z: 927.091064
     }
     Rotation {
+      Yaw: 21.7018986
     }
     Scale {
       X: 1
@@ -30311,6 +32771,7 @@ Objects {
     }
   }
   ParentId: 14713109632114477840
+  ChildIds: 16245704793105416134
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -30355,15 +32816,48 @@ Objects {
   }
 }
 Objects {
+  Id: 16245704793105416134
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 11107824073196214716
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
   Id: 13618026709082559922
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 7337.00391
-      Y: 482.119141
-      Z: 427.091064
+      X: 3446.23633
+      Y: 1478.16797
+      Z: 288.124512
     }
     Rotation {
+      Yaw: -22.1248169
     }
     Scale {
       X: 1
@@ -30372,6 +32866,7 @@ Objects {
     }
   }
   ParentId: 14713109632114477840
+  ChildIds: 567657897962070873
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -30412,6 +32907,38 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 567657897962070873
+  Name: "Weapon Guide 1hand_pistol"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.857933939
+    }
+  }
+  ParentId: 13618026709082559922
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13364399744462623960
+    }
+    TeamSettings {
     }
   }
 }
