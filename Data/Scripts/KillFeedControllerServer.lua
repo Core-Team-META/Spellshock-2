@@ -19,7 +19,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 function OnPlayerDied(player, damage)
 	if damage.sourceAbility then
 	local lastCapturePoint = player.serverUserData.lasterCapturePoint
-	if lastCapturePoint and lastCapturePoint.time < time() and lastCapturePoint.point > 0 then
+	if lastCapturePoint and (not lastCapturePoint.time or lastCapturePoint.time > time()) and lastCapturePoint.point > 0 then
 		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name, lastCapturePoint.point)
 	else
 		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name, nil)
