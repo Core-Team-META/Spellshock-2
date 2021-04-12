@@ -30,6 +30,7 @@ local PANEL_LOOT = script:GetCustomProperty("PanelLoot"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local PlayerClassLevelup = script:GetCustomProperty("PlayerClassLevelup"):WaitForObject()
 local LevelupSFX = script:GetCustomProperty("LevelupSFX"):WaitForObject()
+local LootSFX = script:GetCustomProperty("LootSFX"):WaitForObject()
 
 -- User exposed properties
 local DEFAULT_DURATION = 5
@@ -78,6 +79,7 @@ function OnBannerMessageEvent(message, duration, type)
         PANEL_ORC.visibility = Visibility.FORCE_OFF
         PANEL_ELF.visibility = Visibility.FORCE_OFF
         PANEL_LOOT.visibility = Visibility.INHERIT
+        LootSFX:Play()
     else
         PANEL_DEFAULT.visibility = Visibility.INHERIT
         PANEL_ORC.visibility = Visibility.FORCE_OFF
