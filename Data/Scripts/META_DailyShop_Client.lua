@@ -181,7 +181,8 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
             Value.text = tostring(amount)
             Value:GetChildren()[1].text = tostring(amount)
             if class then
-                Name.text = CONST.CLASS_NAME[class] .. " " .. tostring(infoTable.Name)
+                -- Name.text = CONST.CLASS_NAME[class] .. " " .. tostring(infoTable.Name)
+                Name.text = tostring(infoTable.Name)
             else
                 Name.text = tostring(infoTable.Name)
             end
