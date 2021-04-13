@@ -7,12 +7,10 @@ local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 -- Objects
 ------------------------------------------------------------------------------------------------------------------------
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-local SONG_TRIGGERS = script:GetCustomProperty("SongTriggers"):WaitForObject()
-local SONGS = script:GetCustomProperty("Songs"):WaitForObject()
-local ORC_START_SONG = script:GetCustomProperty("ORC_START_SONG"):WaitForObject()
-local ELF_START_SONG = script:GetCustomProperty("ELF_START_SONG"):WaitForObject()
+
 local ELF_SONGS = script:GetCustomProperty("ElfSongs"):WaitForObject()
 local ORC_SONGS = script:GetCustomProperty("OrcSongs"):WaitForObject()
+local RewardsSFX = script:GetCustomProperty("RewardsSFX"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- Variables
 ------------------------------------------------------------------------------------------------------------------------
@@ -68,8 +66,9 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime)
     elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         FindTeamSong(newState)
     elseif newState == ABGS.GAME_STATE_REWARDS then
-		Task.Wait(1.5)
-        FindTeamSong(newState)
+		FindTeamSong(newState)
+        Task.Wait(1.5)
+        RewardsSFX:Play()
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
         --FindTeamSong(newState)
     else
