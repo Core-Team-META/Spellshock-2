@@ -56,6 +56,7 @@ local function UpdateCombatAmmount(attackData)
         classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
     else
+        if attackData.tags.Type == "HealthPotion" then return end
         amount = amount * -1
         local afterHeal = target.hitPoints + amount
         if afterHeal > target.maxHitPoints then
