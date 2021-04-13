@@ -147,7 +147,9 @@ end
 function OnPlayerDied(player, _)
 	Task.Wait()
 	if Timer > 0 then
-		BreakIceCube(player)
+		if Object.IsValid(player) then
+			BreakIceCube(player)
+		end
 	end
 end
 
