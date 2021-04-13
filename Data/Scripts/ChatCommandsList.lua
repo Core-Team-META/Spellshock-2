@@ -4,6 +4,16 @@ local messagePrefix = "[SERVER]"
 local API_Constants = require(script:GetCustomProperty("API_Constants"))
 local AdminData = require(script:GetCustomProperty("AdminData"))
 
+----------------------------------------------------------------------------------------------------------------
+-- LOCAL HELPER FUNCTIONS
+----------------------------------------------------------------------------------------------------------------
+
+local function META_AP()
+	return _G["Meta.Ability.Progression"]
+end
+
+-- CUSTOM Chicken Suit
+local chickenSuit = script:GetCustomProperty("ChickenSuit")
 
 local function ReturnPlayerByName(Name)
     if not Name then
@@ -293,7 +303,46 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
-]]
+
+
+
+
+
+
+    ]]
+
+    ["/chicken"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            local split = {CoreString.Split(message)}
+            local target = split[2] or nil
+            local duration = tonumber(split[3]) or 5
+
+            print(tostring(target))
+            if (target) then
+                target = ReturnPlayerByName(target)
+            end
+
+			-- equip animal costume
+			if target and not target.isDead and not target.serverUserData.isAnimorphed then
+				target.serverUserData.isAnimorphed = true
+
+				local newCostume = META_AP().SpawnAsset(chickenSuit)
+				newCostume:SetScale(newCostume:GetScale() * 1.5)
+				newCostume:SetNetworkedCustomProperty("Duration", duration)
+				newCostume:Equip(target)
+			end
+
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Turns user into a chicken for X seconds",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.HigherAdmin,
+    },
+
 
     ["/addscore"] = {
         OnCommandCalledClient = function (player, message)
