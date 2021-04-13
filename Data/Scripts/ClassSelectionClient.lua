@@ -776,7 +776,7 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	if not isAllowed(1.5) then
+	if not isAllowed(1) then
 		return
 	end
 	RightPanel_UpgradeButton.isInteractable = false
@@ -786,6 +786,7 @@ function OnUpgradeButtonClicked(thisButton)
 
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 	ResourceChangedEventListener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
+	Task.Wait(0.5)
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 
 	-- Make the animated mesh do an animation
