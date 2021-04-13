@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 13624246894614848861
         ChildIds: 9955337757731663309
         ChildIds: 3532122148595187989
@@ -84,6 +84,8 @@ Assets {
         ChildIds: 16152092227041796093
         ChildIds: 13443320217315244288
         ChildIds: 731948123447409732
+        ChildIds: 16171132540186493714
+        ChildIds: 18084836605820674651
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2865,6 +2867,252 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 4438523867532045845
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16171132540186493714
+        Name: "Fantasy Crossbow Foregrip 01"
+        Transform {
+          Location {
+            X: 56.6259766
+            Y: 41.1914063
+            Z: 19.9008789
+          }
+          Rotation {
+            Pitch: -89.3832397
+            Yaw: -53.8108521
+            Roll: -15.881012
+          }
+          Scale {
+            X: -0.201495528
+            Y: 0.136535302
+            Z: 0.36563763
+          }
+        }
+        ParentId: 13624246894614848861
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 6.2516675
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 8.35984898
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Faces:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Sides:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Sides:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Faces:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:utile"
+            Float: 4.12768316
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:vtile"
+            Float: 6.2516675
+          }
+          Overrides {
+            Name: "ma:Font.Faces:utile"
+            Float: 5.75358057
+          }
+          Overrides {
+            Name: "ma:Font.Faces:vtile"
+            Float: 7.69379425
+          }
+          Overrides {
+            Name: "ma:Font.Sides:utile"
+            Float: 7.69379425
+          }
+          Overrides {
+            Name: "ma:Font.Sides:vtile"
+            Float: 8.01990509
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8177352336675649221
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18084836605820674651
+        Name: "Fantasy Crossbow Foregrip 01"
+        Transform {
+          Location {
+            X: 59.0771484
+            Y: -42.59375
+            Z: 20.3701172
+          }
+          Rotation {
+            Pitch: -87.3358154
+            Yaw: -24.5731201
+            Roll: 93.4773865
+          }
+          Scale {
+            X: -0.201495528
+            Y: 0.136535302
+            Z: 0.36563763
+          }
+        }
+        ParentId: 13624246894614848861
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 6.2516675
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 8.35984898
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Faces:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Sides:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Sides:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Faces:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:utile"
+            Float: 4.12768316
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:vtile"
+            Float: 6.2516675
+          }
+          Overrides {
+            Name: "ma:Font.Faces:utile"
+            Float: 5.75358057
+          }
+          Overrides {
+            Name: "ma:Font.Faces:vtile"
+            Float: 7.69379425
+          }
+          Overrides {
+            Name: "ma:Font.Sides:utile"
+            Float: 7.69379425
+          }
+          Overrides {
+            Name: "ma:Font.Sides:vtile"
+            Float: 8.01990509
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8177352336675649221
           }
           Teams {
           }

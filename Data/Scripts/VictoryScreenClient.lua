@@ -93,25 +93,25 @@ local function GetTitle(class, level)
         if level < 5 then
             return 'Trainee'
         elseif level < 10 then
-            return 'Mad Brawler'
+            return 'Fighter'
         elseif level < 20 then
-            return 'Decimator'
+            return 'Brawler'
         elseif level < 30 then
-            return 'Warlord'
-        elseif level < 35 then
             return 'Berserker'
+        elseif level < 35 then
+            return 'Warlord'
         elseif level < 40 then
-            return 'Rock Smasher'
+            return 'Earth-breaker'
         elseif level < 45 then
-            return 'Earth breaker'
+            return 'Avalanche'
         else
-            return 'Warrior Royale'
+            return 'Warrior King'
         end
     elseif class == MPC_API.CLASS.MAGE then
         if level < 5 then
             return 'Trainee'
         elseif level < 10 then
-            return 'Spellcaster'
+            return 'Apprentice'
         elseif level < 20 then
             return 'Spellweaver'
         elseif level < 30 then
@@ -121,7 +121,7 @@ local function GetTitle(class, level)
         elseif level < 40 then
             return 'Wizard'
         elseif level < 45 then
-            return 'Mage Legend'
+            return 'High Wizard'
         else
             return 'Supreme Mage'
         end
@@ -133,15 +133,15 @@ local function GetTitle(class, level)
         elseif level < 20 then
             return 'Huntsman'
         elseif level < 30 then
-            return 'Game Warden'
+            return 'Beast Caller'
         elseif level < 35 then
-            return 'Veteran Warden'
+            return 'Game Warden'
         elseif level < 40 then
-            return 'Greater Hunter'
+            return 'Falcon Lord'
         elseif level < 45 then
             return 'Master Hunter'
         else
-            return 'Hunter Royale'
+            return 'Grand Hunter'
         end
     elseif class == MPC_API.CLASS.HEALER then
         if level < 5 then
@@ -149,17 +149,17 @@ local function GetTitle(class, level)
         elseif level < 10 then
             return 'Medic'
         elseif level < 20 then
-            return 'Combat Nurse'
+            return 'Combat Medic'
         elseif level < 30 then
-            return 'Dr Feel Good'
+            return 'Cleric'
         elseif level < 35 then
-            return 'Sun Priest'
+            return 'High Cleric'
         elseif level < 40 then
             return 'Chosen Healer'
         elseif level < 45 then
-            return 'The Sunweaver'
+            return 'The Gifted'
         else
-            return 'Heal god'
+            return 'Sunweaver'
         end
     elseif class == MPC_API.CLASS.ASSASSIN then
         if level < 5 then
@@ -169,15 +169,15 @@ local function GetTitle(class, level)
         elseif level < 10 then
             return 'Knife Master'
         elseif level < 20 then
-            return 'Duelist'
+            return 'Rogue'
         elseif level < 30 then
-            return 'Dark Ninja'
+            return 'Duelist'
         elseif level < 40 then
-            return 'Night Shadow'
+            return 'Dark Ninja'
         elseif level < 45 then
-            return "Death's Blade"
+            return 'Master Thief'
         else
-            return 'Creed Assassin'
+            return 'Night Shadow'
         end
     end
 end
