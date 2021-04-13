@@ -16,13 +16,12 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 9011166080721436331
         ChildIds: 5159809916847399340
         UnregisteredParameters {
           Overrides {
             Name: "cs:OutlineObject"
             ObjectReference {
-              SubObjectId: 9011166080721436331
+              SelfId: 841534158063459245
             }
           }
         }
@@ -37,56 +36,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 9011166080721436331
-        Name: "Outline Object"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7865490742969968367
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.305999756
-              B: 0.378000021
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Dynamic Thickness"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 12032540805562280382
-          }
-          TeamSettings {
-          }
         }
       }
       Objects {
@@ -151,15 +100,6 @@ Assets {
         Relevance {
           Value: "mc:eproxyrelevance:medium"
         }
-      }
-    }
-    Assets {
-      Id: 12032540805562280382
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     Assets {

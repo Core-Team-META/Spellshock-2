@@ -97,8 +97,6 @@ function Tick()
 				if not PlayerTargets[player] and WouldDieOnStrike(player) then
 					PlayerTargets[player] = World.SpawnAsset(PlayerTargetTemplate)
 					PlayerTargets[player]:AttachToPlayer(player, "root")
-					local outline = PlayerTargets[player]:GetCustomProperty("OutlineObject"):WaitForObject()
-					outline:SetSmartProperty("Object To Outline", player)
 				elseif PlayerTargets[player] and not WouldDieOnStrike(player) then
 					PlayerTargets[player]:Destroy()
 					PlayerTargets[player] = nil
