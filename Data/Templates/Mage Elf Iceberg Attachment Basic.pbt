@@ -1592,7 +1592,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Stroke Width"
-            Float: 0.0168179013
+            Float: 0.00906547531
           }
           Overrides {
             Name: "bp:Color"
