@@ -67,7 +67,7 @@ function Attack()
 			}
 		COMBAT().ApplyDamage(attackData)
 		local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 		return
 	end	
 	META_AP().SpawnAsset(PlayerVFX.Attack, {position = SpecialAbility.owner:GetWorldPosition()})
