@@ -89,6 +89,9 @@ function HealProjectileOnImpact(projectile, other, hitresult)
 end
 
 function HealPlayerFromHealProjectile()
+    if not Object.IsValid(SHOOT_ABILITY) or not SHOOT_ABILITY.owner or not Object.IsValid(SHOOT_ABILITY.owner) then
+        return
+    end
     local dmg = Damage.New()
     dmg.amount = -20
     dmg.reason = DamageReason.COMBAT
