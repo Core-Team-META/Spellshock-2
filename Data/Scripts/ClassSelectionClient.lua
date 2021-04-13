@@ -421,7 +421,6 @@ function UpdateClassInfo(thisButton)
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
 	AbilityName.text = "Overview"
 	AbilityName:GetChildren()[1].text = "Overview"
-	Task.Wait()
 	-- Update all ability buttons and reset them to their idle state
 	for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 		local Icon = abilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
@@ -443,7 +442,7 @@ function UpdateClassInfo(thisButton)
 		local shardCost = SHARD_COSTS[level].reqXP
 		local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 		local goldCost = SHARD_COSTS[level].reqGold
-
+	
 		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 			UpgradePanel.visibility = Visibility.INHERIT
@@ -610,7 +609,7 @@ function UpdateAbilityInfo(thisButton)
 		GoldCost.text = UTIL.FormatInt(goldCost)
 		LevelProgressBar.progress = currentXP / reqXP
 		LevelNextText.text = tostring(abilityLevel + 1)
-
+		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_ON
 		AbilityXPPanel.visibility = Visibility.INHERIT
 		MaxLevelPanel.visibility = Visibility.FORCE_OFF
 		LevelProgressBar:SetFillColor(RegularFillColor)
@@ -831,7 +830,7 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 	local goldCost = SHARD_COSTS[abilityLevel].reqGold
 
-	if currentShards >= shardCost and currentGold >= goldCost then
+	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then
 		UpgradePanel.visibility = Visibility.INHERIT
 		ShowMorePanel.visibility = Visibility.FORCE_OFF
 		RightPanel_UpgradeButton.isInteractable = true
