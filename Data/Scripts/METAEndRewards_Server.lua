@@ -56,8 +56,9 @@ local function IsTeamWinner(player)
 end
 
 local function IsFirstWinOfTheDay(player)
-    local currentTime = os.time(os.date("!*t"))
-    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
+    local currentTime = os.date("!*t").yday + 1
+    local storedDay = player:GetResource(CONST.WIN_OF_THE_DAY_TIME)
+    if storedDay < currentTime or storedDay == 2 or storedDay > 400 then
         player:SetResource(CONST.WIN_OF_THE_DAY_TIME, 1)
         return true
     end
@@ -204,7 +205,8 @@ function GivePlayerRewards(player, rewardList)
         REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
     end
     if ShouldClaimWinOfTheDay(player) then
-        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(os.time(os.date("!*t")) + (24 * 60 * 60)))
+        local currentDay = os.date("!*t").yday + 1
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, currentDay)
     end
     playerRewards[player.id] = nil
 end
