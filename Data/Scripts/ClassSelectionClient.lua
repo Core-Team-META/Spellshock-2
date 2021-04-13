@@ -91,6 +91,7 @@ local LevelResourceName = nil
 local isUpgrading = false
 local ResourceListener = nil
 local ClassButtons = {}
+local preUpgradeGold = 0
 
 ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 
@@ -775,7 +776,7 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	if not isAllowed(1) then
+	if isUpgrading then
 		return
 	end
 	RightPanel_UpgradeButton.isInteractable = false
@@ -783,9 +784,10 @@ function OnUpgradeButtonClicked(thisButton)
 	local classData = CurrentClassButton.clientUserData.dataTable
 	local abilityData = CurrentAbilityButton.clientUserData.dataTable
 
+	preUpgradeGold = LOCAL_PLAYER:GetResource("GOLD")
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 	ResourceChangedEventListener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
-	Task.Wait(0.5)
+	Task.Wait(0.2)
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 
 	-- Make the animated mesh do an animation
@@ -827,7 +829,13 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	local UpgradePanel = CurrentAbilityButton.clientUserData.panel:GetCustomProperty("UpgradePanel"):WaitForObject()
 	local currentShards = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[class], META_AP()[bind])
 	local shardCost = SHARD_COSTS[abilityLevel].reqXP
+
 	local currentGold = LOCAL_PLAYER:GetResource("GOLD")
+	local timeOutTime = time() + 2
+	while currentGold == preUpgradeGold or timeOutTime > time() do
+		Task.Wait()
+		currentGold = LOCAL_PLAYER:GetResource("GOLD")
+	end
 	local goldCost = SHARD_COSTS[abilityLevel].reqGold
 
 	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then
