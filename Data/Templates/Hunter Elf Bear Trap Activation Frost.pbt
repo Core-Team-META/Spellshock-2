@@ -101,6 +101,8 @@ Assets {
           Volume: 1
           Falloff: -1
           Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
       Objects {

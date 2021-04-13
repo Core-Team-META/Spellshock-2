@@ -134,7 +134,7 @@ end
 function IsLobby()
 	local gameState = ABGS.GetGameState()
 	return gameState == ABGS.GAME_STATE_LOBBY
-		or gameState == ABGS.GAME_STATE_REWARDS
+		or gameState == ABGS.GAME_STATE_REWARDS_END
 end
 
 
@@ -224,7 +224,7 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 
 function OnGameStateChanged(oldState, newState)
-	if newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
+	if newState == ABGS.GAME_STATE_REWARDS_END and oldState ~= ABGS.GAME_STATE_REWARDS_END then
 		ClearCachedPlayerValues()
 		DoRebalance()
 	end

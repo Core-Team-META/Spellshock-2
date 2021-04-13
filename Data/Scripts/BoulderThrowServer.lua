@@ -130,8 +130,9 @@ function OnThrowExecute(thisAbility)
     local ProjectileCollision = CurrentProjectile:GetCustomProperty("Collision"):WaitForObject()
     ProjectileCollision.team = Equipment.owner.team
 
-	for _, other in pairs(StunTrigger:GetOverlappingObjects()) do
-		OnStunBeginOverlap(StunTrigger, other)
+	for _, player in ipairs(Game.FindPlayersInSphere(spawnPosition, ProjectileRadius, {ignoreTeams=Equipment.owner.team})) do
+		OnStunBeginOverlap(StunTrigger, player)
+		OnBoulderBeginOverlap(_, player)
 	end
 
     CurrentProjectile:MoveContinuous(ProjectileVelocity)
