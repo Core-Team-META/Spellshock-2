@@ -3734,6 +3734,7 @@ Objects {
   ChildIds: 583350581990755025
   ChildIds: 15347807563964884810
   ChildIds: 6590879534939059525
+  ChildIds: 9754271479728149723
   ChildIds: 7980969744669299717
   ChildIds: 14354267796329889438
   ChildIds: 9299662965625373958
@@ -4435,7 +4436,7 @@ Objects {
 }
 Objects {
   Id: 7980969744669299717
-  Name: "Healing Embraced"
+  Name: "No Time"
   Transform {
     Location {
     }
@@ -4453,25 +4454,33 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Get 25,000 Lifetime Healing"
+      String: "3000 Healing In A Round"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 25000
+      Float: 3000
     }
     Overrides {
       Name: "cs:ID"
-      String: "AS_25KHEAL"
+      String: "ASHEAL2"
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
         Id: 8854358530398708523
       }
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASHEAL"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -4544,6 +4553,150 @@ Objects {
     }
   }
   ParentId: 7980969744669299717
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "GOLD"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 9754271479728149723
+  Name: "Proven"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  ChildIds: 15045231503107648160
+  ChildIds: 14390208760989365017
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "2000 Healing In A Round"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 2000
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "ASHEAL1"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Family"
+      String: "ASHEAL"
+    }
+    Overrides {
+      Name: "cs:IsRepeatable"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 14390208760989365017
+  Name: "Cosmetic Tokens"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9754271479728149723
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "COSM_TOKEN"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8563684984866158969
+    }
+  }
+}
+Objects {
+  Id: 15045231503107648160
+  Name: "Gold"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9754271479728149723
   UnregisteredParameters {
     Overrides {
       Name: "cs:Enabled"
@@ -8129,7 +8282,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
