@@ -66,7 +66,7 @@ function OnNetworkObjectDestroyed()
 end
 
 function OnLocalResourceChanged(player, resName, resAmount)
-    if resName ~= UTIL.GetConsumableXpString(CONST.CONSUMABLE_KEYS.HEALTH_POTION) then
+    if resName ~= UTIL.GetConsumableLevelString(CONST.CONSUMABLE_KEYS.HEALTH_POTION) then
         return
     end
     level = resAmount

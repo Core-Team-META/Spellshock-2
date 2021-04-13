@@ -52,7 +52,7 @@ function SetNetworkObject(thisObject)
 end
 
 function OnLocalResourceChanged(player, resName, resAmount)
-    if resName ~= UTIL.GetConsumableXpString(CONST.CONSUMABLE_KEYS.MOUNT_SPEED) then return end
+    if resName ~= UTIL.GetConsumableLevelString(CONST.CONSUMABLE_KEYS.MOUNT_SPEED) then return end
     mountLevel = resAmount
     LevelText.text = tostring(mountLevel)
 end
