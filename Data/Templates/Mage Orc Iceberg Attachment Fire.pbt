@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 12299905109983723795
         WantsNetworking: true
         Collidable_v2 {
@@ -49,6 +49,7 @@ Assets {
           }
         }
         ParentId: 15739669149277617441
+        ChildIds: 5298528023624783101
         ChildIds: 13996680431514198260
         ChildIds: 11876390206056589449
         ChildIds: 11695209412229200336
@@ -68,6 +69,68 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 5298528023624783101
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.7696383
+            Y: 3.7696383
+            Z: 1
+          }
+        }
+        ParentId: 12299905109983723795
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Corner Rounding"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Stroke Width"
+            Float: 0.00906547531
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.72
+              G: 0.048
+              A: 0.6
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              R: 10
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 9377227685447941950
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -871,9 +934,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1.41042972
-            Y: 1.41804707
-            Z: 0.561650515
+            X: 0.96367079
+            Y: 0.96887511
+            Z: 0.383745492
           }
         }
         ParentId: 12299905109983723795
@@ -1921,6 +1984,15 @@ Assets {
         Relevance {
           Value: "mc:eproxyrelevance:critical"
         }
+      }
+    }
+    Assets {
+      Id: 9377227685447941950
+      Name: "2D Basic Shapes Decal"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "dcl_basicShapes"
       }
     }
     Assets {

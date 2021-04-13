@@ -1,6 +1,141 @@
 Name: "BEN"
 RootId: 12935185397369316502
 Objects {
+  Id: 16416131498132746793
+  Name: "Bell Feedback"
+  Transform {
+    Location {
+      X: -3297.33545
+      Y: -3607.31177
+      Z: 5236.98584
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  ChildIds: 10203455416443750590
+  ChildIds: 14996873474237789481
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14996873474237789481
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 3297.33545
+      Y: 3607.31177
+      Z: -5236.98584
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16416131498132746793
+  ChildIds: 16092321819556394275
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 16092321819556394275
+  Name: "Ship Boat Bell Ring 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14996873474237789481
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 8383064983738244106
+    }
+    Volume: 1
+    Falloff: -1
+    Radius: -1
+    EnableOcclusion: true
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 10203455416443750590
+  Name: "Trigger"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 24.9922886
+    }
+    Scale {
+      X: 3.31168652
+      Y: 3.31168652
+      Z: 3.31168652
+    }
+  }
+  ParentId: 16416131498132746793
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+}
+Objects {
   Id: 14291644262325182723
   Name: "Heart Beat"
   Transform {
@@ -1727,41 +1862,5 @@ Objects {
     ScriptAsset {
       Id: 16389341816514845889
     }
-  }
-}
-Objects {
-  Id: 16092321819556394275
-  Name: "Ship Boat Bell Ring 01 SFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  AudioInstance {
-    AudioAsset {
-      Id: 8383064983738244106
-    }
-    Volume: 1
-    Falloff: -1
-    Radius: -1
-    EnableOcclusion: true
-    IsSpatializationEnabled: true
-    IsAttenuationEnabled: true
   }
 }

@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 7137485898097808953
         Lifespan: 15
         WantsNetworking: true
@@ -57,6 +57,7 @@ Assets {
         ChildIds: 328671677227639735
         ChildIds: 8700832067591189207
         ChildIds: 18427305398017107186
+        ChildIds: 13868828346887611000
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1425,9 +1426,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 2.9
-            Y: 2.4
-            Z: 1.60000026
+            X: 1.99103737
+            Y: 1.64775407
+            Z: 1.09850323
           }
         }
         ParentId: 7137485898097808953
@@ -1569,6 +1570,69 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
+      Objects {
+        Id: 13868828346887611000
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.7696383
+            Y: 3.7696383
+            Z: 1
+          }
+        }
+        ParentId: 7137485898097808953
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Corner Rounding"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Stroke Width"
+            Float: 0.00906547531
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.6
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              G: 5
+              B: 2
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 9377227685447941950
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
     }
     Assets {
       Id: 7185380311906960862
@@ -1631,6 +1695,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_mil_dirt_impact_explosikit_dustRing"
+      }
+    }
+    Assets {
+      Id: 9377227685447941950
+      Name: "2D Basic Shapes Decal"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "dcl_basicShapes"
       }
     }
     PrimaryAssetId {
