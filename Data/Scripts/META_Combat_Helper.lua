@@ -53,10 +53,17 @@ local function UpdateCombatAmmount(attackData)
         local class = source:GetResource(CONST.CLASS_RES)
         source.serverUserData.classDamage = source.serverUserData.classDamage or {}
         local classDamage = source.serverUserData.classDamage[class] or 0
-        classDamage = classDamage and classDamage + amount or amount 
+        classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
     else
         amount = amount * -1
+        local afterHeal = target.hitPoints + amount
+        if afterHeal > target.maxHitPoints then
+            local overhealing = target.maxHitPoints - afterHeal
+            if overhealing < 0 then
+                amount = 0
+            end
+        end
         source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(amount))
         Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(amount))
         source:AddResource(CONST.ROUND_HEALING, CoreMath.Round(amount))
@@ -87,8 +94,6 @@ local function DevHelperFunction(attackData)
         end
     end
 end
-
-
 
 local function ResetPlayers()
     for _, player in ipairs(Game.GetPlayers()) do
@@ -133,7 +138,8 @@ function OnDied(attackData)
         if source then
             local sourceData = source.serverUserData
             sourceData.playersKilled = sourceData.playersKilled or {}
-            sourceData.playersKilled[target.id] = sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
+            sourceData.playersKilled[target.id] =
+                sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
             source:AddResource(CONST.LIFE_TIME_KILLS, 1)
