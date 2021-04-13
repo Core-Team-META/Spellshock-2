@@ -62,6 +62,8 @@ local refreshTime, refreshCount
 local closeButtonLisener = nil
 local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 local shopItems = SHOP_ITEMS:GetChildren()
+local shouldRefresh = true
+
 
 local CardDescriptions = {
     [REWARD_UTIL.REWARD_TYPES.GOLD] = "Gold can be used to upgrade abilities and purchase items at the Daily Shop.",
@@ -266,42 +268,43 @@ local function BuildRewardSlots(tbl)
             tonumber(reward.rarity),
             tonumber(reward.amount)
         )
-        local refreshCost = REWARD_UTIL.CalculateGoldRefreshCost(refreshCount)
-        if refreshCost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
-            AMOUNT.text = FormatInt(refreshCost)
-            AMOUNT_SHADOW.text = FormatInt(refreshCost)
+    end
+    --warn("Refresh Count: " .. tostring(refreshCount))
+    local refreshCost = REWARD_UTIL.CalculateGoldRefreshCost(refreshCount)
+    if refreshCost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
+        AMOUNT.text = FormatInt(refreshCost)
+        AMOUNT_SHADOW.text = FormatInt(refreshCost)
 
-            AMOUNT:SetColor(Color.RED)
-            AMOUNT_SHADOW:SetColor(Color.RED)
+        AMOUNT:SetColor(Color.RED)
+        AMOUNT_SHADOW:SetColor(Color.RED)
 
-            REFRESH_BUTTON.isInteractable = false
-        else
-            AMOUNT.text = FormatInt(refreshCost)
-            AMOUNT_SHADOW.text = FormatInt(refreshCost)
+        REFRESH_BUTTON.isInteractable = false
+    else
+        AMOUNT.text = FormatInt(refreshCost)
+        AMOUNT_SHADOW.text = FormatInt(refreshCost)
 
-            AMOUNT:SetColor(Color.BLACK)
-            AMOUNT_SHADOW:SetColor(Color.BLACK)
+        AMOUNT:SetColor(Color.BLACK)
+        AMOUNT_SHADOW:SetColor(Color.BLACK)
 
-            REFRESH_BUTTON.isInteractable = true
-        end
-        refreshCost = REWARD_UTIL.CalculatePremiumRefreshCost(refreshCount)
-        if refreshCost > LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN) then
-            REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
-            REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_BUTTON.isInteractable = true
+    end
+    refreshCost = REWARD_UTIL.CalculatePremiumRefreshCost(refreshCount)
+    if refreshCost > LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN) then
+        REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
 
-            REFRESH_AMOUNT_PREMIUM:SetColor(Color.RED)
-            REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.RED)
+        REFRESH_AMOUNT_PREMIUM:SetColor(Color.RED)
+        REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.RED)
 
-            REFRESH_BUTTON_PREMIUM.isInteractable = false
-        else
-            REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
-            REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_BUTTON_PREMIUM.isInteractable = false
+    else
+        REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
 
-            REFRESH_AMOUNT_PREMIUM:SetColor(Color.BLACK)
-            REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.BLACK)
+        REFRESH_AMOUNT_PREMIUM:SetColor(Color.BLACK)
+        REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.BLACK)
 
-            REFRESH_BUTTON_PREMIUM.isInteractable = true
-        end
+        REFRESH_BUTTON_PREMIUM.isInteractable = true
     end
 end
 
@@ -434,11 +437,28 @@ function Tick()
             REFRESH_IN_TEXT.text = timeText
             REFRESH_IN_TEXT_HIGHLIGHT.text = timeText
             REFRESH_IN_TEXT_SHADOW.text = timeText
-        else
+            shouldRefresh = true
+        elseif shouldRefresh then
             local timeText = "Refresh Avaliable"
             REFRESH_IN_TEXT.text = timeText
             REFRESH_IN_TEXT_HIGHLIGHT.text = timeText
             REFRESH_IN_TEXT_SHADOW.text = timeText
+
+            REFRESH_AMOUNT_SHADOW_PREMIUM.text = "Free"
+            REFRESH_AMOUNT_PREMIUM.text = "Free"
+            REFRESH_AMOUNT_PREMIUM:SetColor(Color.BLACK)
+            REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.BLACK)
+
+            AMOUNT.text = "Free"
+            AMOUNT_SHADOW.text = "Free"
+
+            AMOUNT:SetColor(Color.BLACK)
+            AMOUNT_SHADOW:SetColor(Color.BLACK)
+
+            REFRESH_BUTTON.isInteractable = true
+
+            REFRESH_BUTTON_PREMIUM.isInteractable = true
+            shouldRefresh = false
         end
         -- UPDATE GOLD (Added by KonzZwodrei, better check this) -- checked
         GOLD_TXT.text = FormatInt(LOCAL_PLAYER:GetResource(CONST.GOLD))
