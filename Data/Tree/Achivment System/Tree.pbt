@@ -5017,11 +5017,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "10000 Damage As Assassin"
+      String: "5000 Damage As Assassin"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 10000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -5173,11 +5173,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "7500 Damage As Assassin"
+      String: "3500 Damage As Assassin"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 7500
+      Float: 3500
     }
     Overrides {
       Name: "cs:ID"
@@ -5329,11 +5329,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "5000 Damage As Assassin"
+      String: "2500 Damage As Assassin"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 5000
+      Float: 2500
     }
     Overrides {
       Name: "cs:ID"
@@ -5637,11 +5637,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "7000 Damage As Healer"
+      String: "3000 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 7000
+      Float: 3000
     }
     Overrides {
       Name: "cs:ID"
@@ -5793,11 +5793,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "5500 Damage As Healer"
+      String: "2500 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 5500
+      Float: 2500
     }
     Overrides {
       Name: "cs:ID"
@@ -5949,11 +5949,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "3000 Damage As Healer"
+      String: "1500 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 3000
+      Float: 1500
     }
     Overrides {
       Name: "cs:ID"
@@ -6101,11 +6101,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "1500 Damage As Healer"
+      String: "1000 Damage As Healer"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 1500
+      Float: 1000
     }
     Overrides {
       Name: "cs:ID"
@@ -6257,11 +6257,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "10000 Damage As Hunter"
+      String: "5000 Damage As Hunter"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 10000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -6413,11 +6413,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "7500 Damage As Hunter"
+      String: "3500 Damage As Hunter"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 7500
+      Float: 3500
     }
     Overrides {
       Name: "cs:ID"
@@ -6569,11 +6569,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "5000 Damage As Hunter"
+      String: "2500 Damage As Hunter"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 5000
+      Float: 2500
     }
     Overrides {
       Name: "cs:ID"
@@ -6877,11 +6877,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "10000 Damage As Mage"
+      String: "5000 Damage As Mage"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 10000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -7033,11 +7033,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "7500 Damage As Mage"
+      String: "3500 Damage As Mage"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 7500
+      Float: 3500
     }
     Overrides {
       Name: "cs:ID"
@@ -7189,11 +7189,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "5000 Damage As Mage"
+      String: "2500 Damage As Mage"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 5000
+      Float: 2500
     }
     Overrides {
       Name: "cs:ID"
@@ -7497,11 +7497,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "10000 Damage As Warrior"
+      String: "5000 Damage As Warrior"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 10000
+      Float: 5000
     }
     Overrides {
       Name: "cs:ID"
@@ -7653,11 +7653,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "7500 Damage As Warrior"
+      String: "3500 Damage As Warrior"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 7500
+      Float: 3500
     }
     Overrides {
       Name: "cs:ID"
@@ -7809,11 +7809,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "5000 Damage As Warrior"
+      String: "2500 Damage As Warrior"
     }
     Overrides {
       Name: "cs:Required"
-      Float: 5000
+      Float: 2500
     }
     Overrides {
       Name: "cs:ID"
