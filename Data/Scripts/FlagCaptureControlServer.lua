@@ -94,7 +94,8 @@ local BINDING_IGNORE = {
     ability_extra_16 = true,
     ability_extra_10 = true,
     ability_extra_14 = true,
-    ability_extra_27 = true
+    ability_extra_27 = true,
+    ability_extra_37 = true
 }
 
 -- nil Reset()

@@ -3,9 +3,6 @@ local MAIN_PANEL = script:GetCustomProperty("LeaderboardMainPanel"):WaitForObjec
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-local showToggle = false
-
-
 function GenerateLeaderboard()
 	local leaderboardControllers = MAIN_PANEL:FindDescendantsByType("Script")
 	for _,v in ipairs(leaderboardControllers) do
@@ -13,24 +10,13 @@ function GenerateLeaderboard()
 	end
 end
 
-
-function OnBindingPressed(player, binding)
-	if binding ~= "ability_extra_37" then -- K
-		return
-	end
-	
-	if showToggle then
-		showToggle = false
-		
-		MAIN_PANEL.visibility = Visibility.FORCE_OFF
-	else 
-		showToggle = true
-		
-		MAIN_PANEL.visibility = Visibility.FORCE_ON
-		
+function OnMenuChanged(oldMenu, newMenu)
+    if newMenu == _G.MENU_TABLE["Leaderboards"] then
 		GenerateLeaderboard()
-	end
+		MAIN_PANEL.visibility = Visibility.INHERIT
+    else
+		MAIN_PANEL.visibility = Visibility.FORCE_OFF
+    end
 end
 
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
-
+Events.Connect("Menu Changed", OnMenuChanged)

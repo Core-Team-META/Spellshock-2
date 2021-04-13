@@ -5863,7 +5863,7 @@ Objects {
 }
 Objects {
   Id: 368675356200495528
-  Name: "Achievements"
+  Name: "Leaderboards"
   Transform {
     Location {
     }
@@ -14566,6 +14566,12 @@ Objects {
       Name: "cs:BottomLeftPanel"
       ObjectReference {
         SelfId: 11918261185632852326
+      }
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
   }
