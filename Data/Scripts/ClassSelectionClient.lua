@@ -776,7 +776,7 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	if not isAllowed(0.5) then
+	if not isAllowed(1.5) then
 		return
 	end
 	RightPanel_UpgradeButton.isInteractable = false
