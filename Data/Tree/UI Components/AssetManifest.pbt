@@ -26,15 +26,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17807712156856663918
-  Name: "Dragon"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Icon_Dragon"
-  }
-}
-Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -239,6 +230,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
+  Id: 14012817403198044743
+  Name: "Globe"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_019"
   }
 }
 Assets {

@@ -1,14 +1,19 @@
+local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+
 local CooldownIndicator = script:GetCustomProperty("CooldownIndicator"):WaitForObject()
+local LevelText = script:GetCustomProperty("Level_Text"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local PropertyChangeEvent
 local INDICATORS = {CooldownIndicator}
 
+local mountLevel = 1
 local indicator
 local endTime
 local totalCooldown
+local listener
 
-while not _G.CurrentMenu do
+while not _G.CurrentMenu or not _G.PerPlayerDictionary do
     Task.Wait()
 end
 
@@ -46,6 +51,18 @@ function SetNetworkObject(thisObject)
     PropertyChangeEvent = thisObject.destroyEvent:Connect(OnNetworkObjectDestroyed)
 end
 
+function OnLocalResourceChanged(player, resName, resAmount)
+    if resName ~= UTIL.GetConsumableXpString(CONST.CONSUMABLE_KEYS.MOUNT_SPEED) then return end
+    mountLevel = resAmount
+    LevelText.text = tostring(mountLevel)
+end
+
+function OnPlayerLeft(player)
+    if player == LOCAL_PLAYER then
+        listener:Disconnect()
+    end
+end
+
 function Tick()
     -- Update the shadow
     if not indicator then return end
@@ -73,3 +90,8 @@ end
 
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("SetRemountObject", SetNetworkObject)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
+listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
+Task.Wait(3)
+mountLevel = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetConsumableLevelString(CONST.CONSUMABLE_KEYS.MOUNT_SPEED))
+LevelText.text = tostring(mountLevel)

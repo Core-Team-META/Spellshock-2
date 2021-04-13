@@ -53,7 +53,8 @@ function OnMenuChanged(oldMenu, newMenu)
         Respawn_UI.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
         UI.SetCanCursorInteractWithUI(false)
-        Events.BroadcastToServer("ClassChanged_SERVER", CurrentClassButton.clientUserData.classID) -- broadcast to server the player's selected class
+        local classId = CurrentClassButton and CurrentClassButton.clientUserData.classID or 1
+        Events.BroadcastToServer("ClassChanged_SERVER", classId) -- broadcast to server the player's selected class
 	end
 end
 

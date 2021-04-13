@@ -421,7 +421,6 @@ function UpdateClassInfo(thisButton)
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
 	AbilityName.text = "Overview"
 	AbilityName:GetChildren()[1].text = "Overview"
-	Task.Wait()
 	-- Update all ability buttons and reset them to their idle state
 	for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 		local Icon = abilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
@@ -443,7 +442,7 @@ function UpdateClassInfo(thisButton)
 		local shardCost = SHARD_COSTS[level].reqXP
 		local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 		local goldCost = SHARD_COSTS[level].reqGold
-
+	
 		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 			UpgradePanel.visibility = Visibility.INHERIT
@@ -478,7 +477,7 @@ function UpdateClassInfo(thisButton)
 	local classHealth = CONST.CLASS_HEALTH[META_AP()[dataTable.ClassID]] + (classLevel * 2)
 	BaseHealth.text = tostring(classHealth)
 
-	local regenAmount = (0.06 + (0.04 * classLevel)) * CONST.CLASS_REGEN[META_AP()[dataTable["ClassID"]]] * 60
+	local regenAmount = (0.41 + (0.008 * classLevel)) * CONST.CLASS_REGEN[META_AP()[dataTable["ClassID"]]] * 60
 	--if regenAmount > 2 then regenAmount = 2 end
 	HealthRegen.text = string.format("+%s / 1m", tostring(regenAmount))
 
@@ -610,7 +609,7 @@ function UpdateAbilityInfo(thisButton)
 		GoldCost.text = UTIL.FormatInt(goldCost)
 		LevelProgressBar.progress = currentXP / reqXP
 		LevelNextText.text = tostring(abilityLevel + 1)
-
+		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_ON
 		AbilityXPPanel.visibility = Visibility.INHERIT
 		MaxLevelPanel.visibility = Visibility.FORCE_OFF
 		LevelProgressBar:SetFillColor(RegularFillColor)
@@ -776,7 +775,7 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	if not isAllowed(0.5) then
+	if not isAllowed(1) then
 		return
 	end
 	RightPanel_UpgradeButton.isInteractable = false
@@ -786,6 +785,7 @@ function OnUpgradeButtonClicked(thisButton)
 
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 	ResourceChangedEventListener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
+	Task.Wait(0.5)
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 
 	-- Make the animated mesh do an animation
@@ -830,7 +830,7 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 	local goldCost = SHARD_COSTS[abilityLevel].reqGold
 
-	if currentShards >= shardCost and currentGold >= goldCost then
+	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then
 		UpgradePanel.visibility = Visibility.INHERIT
 		ShowMorePanel.visibility = Visibility.FORCE_OFF
 		RightPanel_UpgradeButton.isInteractable = true

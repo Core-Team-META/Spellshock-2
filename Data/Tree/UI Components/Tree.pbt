@@ -70614,7 +70614,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 17807712156856663918
+        Id: 14012817403198044743
       }
       Color {
         A: 0.5
@@ -70675,7 +70675,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 17807712156856663918
+        Id: 14012817403198044743
       }
       Color {
         R: 1
@@ -70788,7 +70788,7 @@ Objects {
   Control {
     Width: 292
     Height: 37
-    UIX: 2
+    UIX: 8
     UIY: 23
     RenderTransformPivot {
       Anchor {

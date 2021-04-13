@@ -26,7 +26,7 @@ Objects {
     }
     Overrides {
       Name: "cs:TimeUntilKick"
-      Int: 240
+      Int: 120
     }
     Overrides {
       Name: "cs:DisplayWarning"

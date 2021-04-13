@@ -412,8 +412,10 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 2
-          Height: 2
+          Width: 15
+          Height: 15
+          UIY: 3.26475763
+          RotationAngle: 180
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -421,7 +423,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 16283107410363040620
+              Id: 18243728065481809219
             }
             Color {
               R: 1
@@ -475,12 +477,12 @@ Assets {
       }
     }
     Assets {
-      Id: 16283107410363040620
-      Name: "UI Basic Shape Circle"
+      Id: 18243728065481809219
+      Name: "Frame Rect 001 Wedge"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Basic_Shape_Circle"
+        AssetId: "FrameRect_001Wedge"
       }
     }
     PrimaryAssetId {

@@ -2583,7 +2583,7 @@ Assets {
           }
           Overrides {
             Name: "cs:OwnerImpulse"
-            Int: 25000
+            Int: 35000
           }
           Overrides {
             Name: "cs:EnemyImpulse"

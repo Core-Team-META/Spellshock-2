@@ -3178,7 +3178,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -3188,7 +3188,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             PreventOtherAbilities: true
             Facing_V2 {

@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15775978992330089425
+  Name: "BG Flat 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_32"
+  }
+}
+Assets {
   Id: 15575092074641359796
   Name: "Frame Outlined 016"
   PlatformAssetType: 9
@@ -68,6 +77,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "LineFull_003"
+  }
+}
+Assets {
+  Id: 14509317390755952210
+  Name: "Frame Outlined 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_032"
   }
 }
 Assets {
@@ -347,6 +365,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_028"
+  }
+}
+Assets {
+  Id: 5403075034352191900
+  Name: "Fantasy Trophy 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_001"
   }
 }
 Assets {

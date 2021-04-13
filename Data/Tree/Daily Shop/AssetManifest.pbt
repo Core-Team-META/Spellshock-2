@@ -170,6 +170,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
+  }
+}
+Assets {
   Id: 11067005555803527386
   Name: "Fantasy Corners 005"
   PlatformAssetType: 9
@@ -251,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5196377603841433560
+  Name: "BG Gradient 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundFlat_020"
+  }
+}
+Assets {
   Id: 4727080213227783003
   Name: "Fantasy Craft Crystal 007"
   PlatformAssetType: 9
@@ -266,6 +284,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Red_016"
+  }
+}
+Assets {
+  Id: 3910619376972392297
+  Name: "Fantasy Coins 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_005"
   }
 }
 Assets {

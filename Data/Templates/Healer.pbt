@@ -2764,8 +2764,8 @@ Assets {
             MultiShot: 1
             ProjectileSpeed: 20000
             ProjectileLifeSpan: 10
-            ProjectileLength: 30
-            ProjectileRadius: 30
+            ProjectileLength: 55
+            ProjectileRadius: 55
             ProjectileDrag: -0.1
             SpreadMin: 0.2
             SpreadMax: 4

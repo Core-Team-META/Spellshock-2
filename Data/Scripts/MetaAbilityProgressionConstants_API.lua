@@ -96,11 +96,11 @@ API.CLASS_HEALTH = {
 }
 
 API.CLASS_REGEN = {
-    [API.CLASS.TANK] = 12.0,
-    [API.CLASS.MAGE] = 3.0,
-    [API.CLASS.HUNTER] = 5.0,
+    [API.CLASS.TANK] = 16.0,
+    [API.CLASS.MAGE] = 4.0,
+    [API.CLASS.HUNTER] = 6.0,
     [API.CLASS.HEALER] = 2.0,
-    [API.CLASS.ASSASSIN] = 4.0
+    [API.CLASS.ASSASSIN] = 7.0
 }
 
 API.ReqXp = {
@@ -226,7 +226,7 @@ API.GOLD_SELF_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 
 -- Will cap a players total multipliers to make sure nothing gets out of control
 API.MAX_TOTAL_MULTIPLIER = 3 -- Max bonus 300%
-API.TARGET_LEVEL_XP_BONUS = 5 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
+API.TARGET_LEVEL_XP_BONUS = 10 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
 
 
 

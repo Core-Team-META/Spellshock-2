@@ -14,8 +14,12 @@ local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-while not ABILITY.owner do
+while Object.IsValid(ABILITY) and not ABILITY.owner do
 	Task.Wait()
+end
+
+if not Object.IsValid(ABILITY) then
+	script:Destroy()
 end
 
 if ABILITY.owner == LOCAL_PLAYER then

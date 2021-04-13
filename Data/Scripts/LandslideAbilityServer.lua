@@ -113,7 +113,7 @@ function ToggleDash(mode)
 	if mode then --
 		--[[originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
 		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction]] originalPlayerSettings.BrakingDecelerationWalking =
-			SpecialAbility.owner.brakingDecelerationWalking
+		SpecialAbility.owner.brakingDecelerationWalking
 		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
 
 		SpecialAbility.owner.movementControlMode = MovementMode.NONE
@@ -123,11 +123,18 @@ function ToggleDash(mode)
 
 		local directionVector = SpecialAbility.owner:GetWorldRotation() * Vector3.FORWARD
 		DashImpulseVector = directionVector * OwnerImpulseAmount
-		TriggerEventConnection = Trigger.beginOverlapEvent:Connect(OnBeginOverlap)
-
+		
 		local attachmentTemplate = PlayerVFX.Attachment
 		AttachedFX = META_AP().SpawnAsset(attachmentTemplate, {position = SpecialAbility.owner:GetWorldPosition()})
 		AttachedFX:AttachToPlayer(SpecialAbility.owner, "root")
+
+		for _, other in ipairs(Trigger:GetOverlappingObjects()) do
+			if other:IsA("Player") then
+				AddImpulseToPlayer(other)
+			end
+		end
+
+		TriggerEventConnection = Trigger.beginOverlapEvent:Connect(OnBeginOverlap)
 	else
 		if TriggerEventConnection then
 			TriggerEventConnection:Disconnect()

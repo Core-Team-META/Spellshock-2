@@ -51,30 +51,6 @@ Objects {
   ParentId: 7699960455379020988
   UnregisteredParameters {
     Overrides {
-      Name: "cs:SongTriggers"
-      ObjectReference {
-        SelfId: 3395137385791868017
-      }
-    }
-    Overrides {
-      Name: "cs:Songs"
-      ObjectReference {
-        SelfId: 12652278405279320986
-      }
-    }
-    Overrides {
-      Name: "cs:ORC_START_SONG"
-      ObjectReference {
-        SelfId: 8159300865285051927
-      }
-    }
-    Overrides {
-      Name: "cs:ELF_START_SONG"
-      ObjectReference {
-        SelfId: 1778773841650752877
-      }
-    }
-    Overrides {
       Name: "cs:MetaAbilityProgressionConstants_API"
       AssetReference {
         Id: 15718075383189814537
@@ -90,6 +66,12 @@ Objects {
       Name: "cs:OrcSongs"
       ObjectReference {
         SelfId: 8625504559866801273
+      }
+    }
+    Overrides {
+      Name: "cs:RewardsSFX"
+      ObjectReference {
+        SelfId: 3157584536586350236
       }
     }
   }
@@ -199,7 +181,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 3157584536586350236
+        SelfId: 935252118520641425
       }
     }
   }
@@ -461,7 +443,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 3157584536586350236
+        SelfId: 935252118520641425
       }
     }
   }
@@ -1296,7 +1278,7 @@ Objects {
 }
 Objects {
   Id: 935252118520641425
-  Name: "Orchestral Adventurous Victory Fanfare Music Stinger Set 01"
+  Name: "Orchestral Adventurous: Meadow Town Loop"
   Transform {
     Location {
     }
