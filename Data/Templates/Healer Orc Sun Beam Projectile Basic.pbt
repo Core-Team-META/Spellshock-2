@@ -221,7 +221,7 @@ Assets {
         }
         ParentId: 6339643438101885973
         ChildIds: 8297035135627670579
-        ChildIds: 11786478783282034180
+        ChildIds: 14316958771257823675
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1532,122 +1532,58 @@ Assets {
         }
       }
       Objects {
-        Id: 11786478783282034180
-        Name: "Layered Thrusters VFX"
+        Id: 14316958771257823675
+        Name: "Plasma Laser"
         Transform {
           Location {
-            Z: -535.211609
+            Z: -519.372375
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 5.5822835
-            Y: 5.5822897
-            Z: 20.9992046
+            X: 3.04741216
+            Y: 3.04741454
+            Z: 3.43014479
           }
         }
         ParentId: 4656506542533561003
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Bend Thrust Cone"
-            Float: 0
+            Name: "bp:Speed"
+            Float: 20
           }
           Overrides {
-            Name: "bp:Displacement Amount"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Color B"
+            Name: "bp:Central Core Color"
             Color {
-              R: 0.39200002
-              G: 0.038347844
+              R: 0.710000038
+              G: 0.366755
               A: 1
             }
           }
           Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Color A"
+            Name: "bp:Color B"
             Color {
-              R: 0.39200002
-              G: 0.038347844
+              R: 0.63
+              G: 0.312913924
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color C"
             Color {
+              R: 0.340000033
               A: 1
             }
           }
           Overrides {
-            Name: "bp:Mid Layer End Pinch"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Core End Pinch"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Top Layer End Pinch"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Top Layer Fade Length"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Core Fade Length"
-            Float: 0.223169759
-          }
-          Overrides {
-            Name: "bp:Core Texture Style Morph"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Type"
-            Enum {
-              Value: "mc:ethrustermeshvar:1"
+            Name: "bp:Hot Core Color"
+            Color {
+              R: 1
+              G: 0.749403954
+              B: 0.57
+              A: 1
             }
-          }
-          Overrides {
-            Name: "bp:Core Hot Spot Length"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Mid Layer Hot Spot Length"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Mid Layer Texture Style Morph"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Top Layer Hot Spot Length"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Top Layer Texture Style Morph"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Enable Top Layer"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Enable Inner Core Layer"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Enable Mid Layer"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Mid Layer Fade Length"
-            Float: 0
           }
         }
         Collidable_v2 {
@@ -1661,16 +1597,10 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 2426790310185116976
+            Id: 12022824903258480392
           }
           TeamSettings {
           }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -1792,12 +1722,12 @@ Assets {
       }
     }
     Assets {
-      Id: 2426790310185116976
-      Name: "Layered Thrusters VFX"
-      PlatformAssetType: 8
+      Id: 12022824903258480392
+      Name: "Plasma Laser"
+      PlatformAssetType: 6
       PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_thruster_var"
+        AssetType: "BlueprintAssetRef"
+        AssetId: "fxbp_plasma_laser"
       }
     }
     PrimaryAssetId {
