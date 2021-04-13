@@ -14,6 +14,10 @@ Rank = {
     Basilisk        = AdminRanks.HigherAdmin,
     Mehaji          = AdminRanks.HigherAdmin,
     Griffin         = AdminRanks.HigherAdmin,
+    Bot1            = AdminRanks.HigherAdmin,
+    Bot2            = AdminRanks.HigherAdmin,
+    Bot3            = AdminRanks.HigherAdmin,
+    Bot4            = AdminRanks.HigherAdmin,
 
     Bigglebuns      = AdminRanks.Admin ,
     standardcombo   = AdminRanks.Admin ,
