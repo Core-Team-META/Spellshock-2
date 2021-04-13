@@ -142,11 +142,11 @@ function GetCaptureSpeed()
 
     if capturePlayer.team ~= progressedTeam then
         if MULTIPLY_WITH_PLAYERS then
-            multiplier = -1 - (enemiesPresent-1)*playerMultiplier
+            multiplier = -1 - (enemiesPresent - 1) * playerMultiplier
         end
     else
         if MULTIPLY_WITH_PLAYERS then
-            multiplier = 1 + (friendliesPresent-1)*playerMultiplier
+            multiplier = 1 + (friendliesPresent - 1) * playerMultiplier
         end
     end
 
@@ -156,7 +156,7 @@ function GetCaptureSpeed()
         lastCaptureSpeed = newCaptureSpeed
         script:SetNetworkedCustomProperty("LastCaptureSpeed", newCaptureSpeed)
     end
-    
+
     return newCaptureSpeed
 end
 
@@ -240,7 +240,6 @@ function GetPlayersPresent()
     return friendCount, friendlies, enemyCount, enemies
 end
 
-
 -- nil UpdateReplicatedProgress()
 -- Sets the replicated values so the client can match the current state (needed whenever capture speed or capturing team
 -- changes)
@@ -309,19 +308,19 @@ end
 function ResetCapturePlayer()
     UpdateReplicatedProgress()
     --if capturePlayer and Object.IsValid(capturePlayer) then
-        --print("RESETTING CAPTURE PLAYER")
-        if Object.IsValid(capturePlayerAnimation) then
-            capturePlayerAnimation.owner = nil
-            capturePlayerAnimation:Destroy()
-            capturePlayerAnimation = nil
-        end
-        for _, event in ipairs(capturePlayerEvents) do
-            event:Disconnect()
-        end
-        capturePlayerEvents = {}
-        CAPTURE_TRIGGER.isInteractable = isCurrentEnabled
-        script:SetNetworkedCustomProperty("CapturePlayerID", "")
-        capturePlayer = nil
+    --print("RESETTING CAPTURE PLAYER")
+    if Object.IsValid(capturePlayerAnimation) then
+        capturePlayerAnimation.owner = nil
+        capturePlayerAnimation:Destroy()
+        capturePlayerAnimation = nil
+    end
+    for _, event in ipairs(capturePlayerEvents) do
+        event:Disconnect()
+    end
+    capturePlayerEvents = {}
+    CAPTURE_TRIGGER.isInteractable = isCurrentEnabled
+    script:SetNetworkedCustomProperty("CapturePlayerID", "")
+    capturePlayer = nil
     --end
 end
 
@@ -346,7 +345,7 @@ end
 
 function OnInteractedEvent(thisTrigger, player)
     -- update capturePlayer
-    if capturePlayer == nil then
+    if capturePlayer == nil and Object.IsValid(player) and player:IsA("Player") then
         capturePlayer = player
         player.serverUserData.isCapturingPoint = true
         table.insert(capturePlayerEvents, capturePlayer.damagedEvent:Connect(OnCapturePlayerDamaged))
@@ -433,7 +432,9 @@ function Tick(deltaTime)
         end
 
         script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
-        Events.Broadcast("Stats.Helper.CapturePoint", capturePlayer.id)
+        if capturePlayer and Object.IsValid(capturePlayer) and capturePlayer.id then
+            Events.Broadcast("Stats.Helper.CapturePoint", capturePlayer.id)
+        end
         -- Disable if DisableOnCapture
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then
             SetEnabled(false)
