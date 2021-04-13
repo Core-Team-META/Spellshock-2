@@ -83,7 +83,7 @@ function OnAbilityExecute(thisAbility)
 	-- Get the velocity vecotr based on the player's forward vector
 	local PlayerRotation = player:GetWorldRotation()
 	local LookQuaternion = Quaternion.New(PlayerRotation)
-	local ForwardVector = LookQuaternions:GetForwardVector()
+	local ForwardVector = LookQuaternion:GetForwardVector()
 	ForwardVector.z = 0
 	local VelocityVector = ForwardVector * ProjectileSpeed
 	ProjectileVelocity = VelocityVector
