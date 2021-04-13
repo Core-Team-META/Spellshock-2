@@ -77,8 +77,15 @@ local function OnResourceChanged(player, resName, resAmt)
             CheckClassDamageAchievements(player, "ASASNDMG", class)
         end
     elseif resName == CONST.ROUND_HEALING then
-
-
+        if ACH_API.IsUnlocked(player, "ASHEAL1", resAmt) then
+            ACH_API.UnlockAchievement(player, "ASHEAL1")
+        end
+        if ACH_API.IsUnlocked(player, "ASHEAL2", resAmt) then
+            ACH_API.UnlockAchievement(player, "ASHEAL2")
+        end
+        if ACH_API.IsUnlocked(player, "ASHEAL3", resAmt) then
+            ACH_API.UnlockAchievement(player, "ASHEAL3")
+        end
     elseif resName == "Objective" then
         if ACH_API.IsUnlocked(player, "AS_NRSC1", resAmt) then
             ACH_API.UnlockAchievement(player, "AS_NRSC1")
