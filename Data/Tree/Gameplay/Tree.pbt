@@ -215,8 +215,8 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 100
-    Height: 100
+    Width: 50
+    Height: 50
     RotationAngle: 45
     RenderTransformPivot {
       Anchor {
@@ -281,8 +281,6 @@ Objects {
     Volume: 0.8
     Falloff: 3600
     Radius: 400
-    IsSpatializationEnabled: true
-    IsAttenuationEnabled: true
   }
 }
 Objects {
