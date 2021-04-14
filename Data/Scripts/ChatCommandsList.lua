@@ -340,10 +340,10 @@ commands = {
         description = "Turns user into a chicken for X seconds",
         requireMessage = false,
         adminOnly = true,
-        adminRank = AdminData.AdminRanks.HigherAdmin,
+        adminRank = AdminData.AdminRanks.Admin,
     },
 
-
+--[[ 
     ["/addscore"] = {
         OnCommandCalledClient = function (player, message)
         end,
@@ -380,7 +380,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
-
+ ]]
 }
 
 return commands
