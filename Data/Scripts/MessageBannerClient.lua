@@ -197,7 +197,7 @@ function LocalPlayerClassLevelUp(classID, classLevel)
 
         if Rarity then
             warn("Rarity")
-            propSkinsUnlocked.text = string.format("- %d %s skins are now unlocked -")
+            propSkinsUnlocked.text = string.format("- %d %s skins are now unlocked -", Amount, Rarity)
         else
             propSkinsUnlocked.visibility = Visibility.FORCE_OFF
         end
