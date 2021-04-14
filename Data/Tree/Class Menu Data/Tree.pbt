@@ -4677,7 +4677,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings. Charge and hold for a more powerful attack! Charge and hold for additional damage. Charge Radius =  500. Full Charge Time = 1.5 seconds"
+      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings. Charge and hold for a more powerful attack that does additional damage. Charge Radius =  500. Full Charge Time = 1.5 seconds"
     }
     Overrides {
       Name: "cs:Bind"
