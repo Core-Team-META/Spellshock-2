@@ -116,7 +116,7 @@ function ClassLevelUp(player, class)
         SetClassLevel(player, class, level)
         SetClassXp(player, class, xp)
 
-        if level > 9 and math.fmod(level, 5) == 0 then
+        if level > 4 and math.fmod(level, 5) == 0 then
             Events.Broadcast("PlayerClassLevelUp_Server", player, class, level)
         end
 
