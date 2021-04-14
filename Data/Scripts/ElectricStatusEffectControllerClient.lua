@@ -59,7 +59,7 @@ function Tick()
 
     if fakeDamageTick then
         if owner ~= LOCAL_PLAYER and (LOCAL_PLAYER.id == source) then
-            Events.Broadcast("PlayerDamage", 15, owner:GetWorldPosition(), owner, LOCAL_PLAYER)
+            --Events.Broadcast("PlayerDamage", 15, owner:GetWorldPosition(), owner, LOCAL_PLAYER)
         end
     end
 end

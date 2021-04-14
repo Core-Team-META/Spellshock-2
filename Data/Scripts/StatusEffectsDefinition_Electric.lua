@@ -34,20 +34,22 @@ function EffectTick(player, source, damage)
 
 	local damageRange = Vector2.New(15,15)
 	for _, enemy in pairs(enemiesInRange) do
-		if Object.IsValid(enemy) then
-			local amount = math.random(damageRange.x, damageRange.y)
-			local dmg = Damage.New(amount)
-           -- dmg.sourcePlayer = source
-			
-			local attackData = {
-				object = enemy,
-				damage = dmg,
-				source = source,
-				position = nil,
-				rotation = nil,
-				tags = {id = "BasicAttack"}
-			}
-			COMBAT().ApplyDamage(attackData)
+		if enemy ~= player then
+			if Object.IsValid(enemy) then
+				local amount = math.random(damageRange.x, damageRange.y)
+				local dmg = Damage.New(amount)
+			-- dmg.sourcePlayer = source
+				
+				local attackData = {
+					object = enemy,
+					damage = dmg,
+					source = source,
+					position = nil,
+					rotation = nil,
+					tags = {id = "BasicAttack"}
+				}
+				COMBAT().ApplyDamage(attackData)
+			end
 		end
 	end
 
