@@ -41,12 +41,12 @@ function ComputePlayerValue(player)
 		value = value + winRateValue
 	end
 	player.serverUserData.balanceValue = value
-	
+	--[[
 	print("[Balance] Player " .. player.name .. 
 		", classValue = " .. tostring(accountLevel) .. "->" .. tostring(totalClassValue) .. 
 		", winRateValue = " .. tostring(weightedWinRate) .. "->" .. tostring(winRateValue) .. 
 		", totalValue = " .. tostring(value))
-	
+	--]]
 	return value
 end
 
@@ -64,57 +64,6 @@ function ComputeTeamValue(teamOfPlayers)
 		value = value + ComputePlayerValue(player)
 	end
 	return value
-end
-
-
-function ComputePlayersToSwitchTeam(playerToIgnore)
-	local playersThatCouldBeSwitched = {}
-	local bestDelta
-	
-	local team1 = Game.GetPlayers({includeTeams = 1, ignorePlayers = playerToIgnore})
-	local team2 = Game.GetPlayers({includeTeams = 2, ignorePlayers = playerToIgnore})
-	
-	local value1 = ComputeTeamValue(team1)
-	local value2 = ComputeTeamValue(team2)
-	
-	bestDelta = math.abs(value1 - value2)
-	
-	--print("ComputePlayersToSwitchTeam()")
-	--print("bestDelta = " .. bestDelta)
-	
-	-- Test moving players from team 1 to team 2
-	for _,player in ipairs(team1) do
-		local value = player.serverUserData.balanceValue
-		local v1 = value1 - value
-		local v2 = value2 + value
-		local delta = math.abs(v1 - v2)
-		if delta < bestDelta then
-			playersThatCouldBeSwitched = {player}
-			bestDelta = delta
-			
-		elseif delta == bestDelta and #playersThatCouldBeSwitched > 0 then
-			table.insert(playersThatCouldBeSwitched, player)
-		end
-	end
-	
-	-- Test moving players from team 2 to team 1
-	for _,player in ipairs(team2) do
-		local value = player.serverUserData.balanceValue
-		local v1 = value1 + value
-		local v2 = value2 - value
-		local delta = math.abs(v1 - v2)
-		if delta < bestDelta then
-			playersThatCouldBeSwitched = {player}
-			bestDelta = delta
-			
-		elseif delta == bestDelta and #playersThatCouldBeSwitched > 0 then
-			table.insert(playersThatCouldBeSwitched, player)
-		end
-	end
-	
-	--print("#playersThatCouldBeSwitched = " .. tostring(#playersThatCouldBeSwitched))
-	
-	return playersThatCouldBeSwitched
 end
 
 
@@ -152,27 +101,79 @@ end
 function DoRebalance(playerToIgnore)
 	--print("DoRebalance()")
 	
-	for i = 1,3 do
-		local playersToSwitch = ComputePlayersToSwitchTeam(playerToIgnore)
+	local team1 = Game.GetPlayers({includeTeams = 1, ignorePlayers = playerToIgnore})
+	local team2 = Game.GetPlayers({includeTeams = 2, ignorePlayers = playerToIgnore})
+	
+	if #team1 + #team2 <= 1 then return end
+	
+	-- First, balance amount of players on each time to have no more than 1 extra player
+	while #team1 > #team2 do
+		local player = team1[1]
+		table.remove(team1, 1)
+		table.insert(team2, player)
+	end
+	while #team2 > #team1 do
+		local player = team2[1]
+		table.remove(team2, 1)
+		table.insert(team1, player)
+	end
+	
+	-- If each team has one player it's done
+	if #team1 == 1 and #team2 == 1 then return end
+	
+	-- Swap players until value delta is minimized
+	local value1 = ComputeTeamValue(team1)
+	local value2 = ComputeTeamValue(team2)
+	
+	local bestDelta = math.abs(value1 - value2)
+	
+	local i = 0
+	while i < 64 do
+		i = i + 1
 		
-		if #playersToSwitch == 0 then
-			return
+		-- Remove a random player from each team
+		local randomIndex = math.random(1, #team1)
+		local player1 = team1[randomIndex]
+		table.remove(team1, randomIndex)
 		
-		elseif #playersToSwitch == 1 then
-			local player = playersToSwitch[1]
-			SwitchTeam(player)
-			
+		randomIndex = math.random(1, #team2)
+		local player2 = team2[randomIndex]
+		table.remove(team2, randomIndex)
+		
+		-- Swap them
+		table.insert(team1, player2)
+		table.insert(team2, player1)
+		
+		-- Recalculate value to see if this is better
+		local v1 = value1 - player1.serverUserData.balanceValue
+		local v2 = value2 - player2.serverUserData.balanceValue
+		
+		local newDelta = math.abs(v1 - v2)
+		
+		if bestDelta > newDelta then
+			bestDelta = newDelta
+			value1 = v1
+			value2 = v2
 		else
-			local randomIndex = math.random(1, #playersToSwitch)
-			local randomPlayer = playersToSwitch[randomIndex]
-			SwitchTeam(randomPlayer)
+			-- Revert the swap
+			table.remove(team1, #team1)
+			table.remove(team2, #team2)
+			table.insert(team1, player1)
+			table.insert(team2, player2)
 		end
 	end
-end
-
-
-function OnResourceChanged(player, resourceName, newValue)
-	--
+	
+	-- Apply any team switching
+	for _,player in ipairs(team1) do
+		if player.team ~= 1 then
+			SwitchTeam(player)
+		end
+	end
+	for _,player in ipairs(team2) do
+		if player.team ~= 2 then
+			SwitchTeam(player)
+		end
+	end
 end
 
 
@@ -181,22 +182,29 @@ function OnPlayerJoin(player)
 		player.team = 1
 		return
 	end
-	
-	player.resourceChangedEvent:Connect(OnResourceChanged)
-	
+		
 	Task.Wait(0.15)
 	if not Object.IsValid(player) then return end
 	
-	local playersToSwitch = ComputePlayersToSwitchTeam()
+	local team1 = Game.GetPlayers({includeTeams = 1, ignorePlayers = player})
+	local team2 = Game.GetPlayers({includeTeams = 2, ignorePlayers = player})
 	
-	if #playersToSwitch == 0 then
-		return
-	
-	elseif #playersToSwitch == 1 then
-		if playersToSwitch[1] == player or IsLobby() then
+	if player.team == 1 and #team1 > #team2 then
+		-- Player was put on the wrong team and now the player count is imbalanced
+		SwitchTeam(player)
+		
+	elseif player.team == 2 and #team2 > #team1 then
+		-- Player was put on the wrong team and now the player count is imbalanced
+		SwitchTeam(player)
+		
+	elseif #team1 == #team2 then
+		-- If player count was even, put the player on the team that's losing
+		local score1 = Game.GetTeamScore(1)
+		local score2 = Game.GetTeamScore(2)
+		
+		if (score1 > score2 and player.team == 1)
+		or (score2 > score1 and player.team == 2) then
 			SwitchTeam(player)
-		else
-			OfferSwitchChoice()
 		end
 	end
 end
@@ -210,12 +218,6 @@ function OnPlayerLeft(playerToIgnore)
 	
 	if IsLobby() then
 		DoRebalance(playerToIgnore)
-	else
-		local playersToSwitch = ComputePlayersToSwitchTeam(playerToIgnore)
-	
-		if #playersToSwitch > 0 then
-			OfferSwitchChoice()
-		end
 	end
 end
 
@@ -224,7 +226,7 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 
 function OnGameStateChanged(oldState, newState)
-	if newState == ABGS.GAME_STATE_REWARDS_END and oldState ~= ABGS.GAME_STATE_REWARDS_END then
+	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
 		ClearCachedPlayerValues()
 		DoRebalance()
 	end
