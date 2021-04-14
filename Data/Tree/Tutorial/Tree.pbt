@@ -21,7 +21,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Enabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -1768,7 +1768,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "bp:Game ID"
-      String: "1ab48f/ss2-test-4"
+      String: "f8b143/spellshock-2"
     }
     Overrides {
       Name: "bp:Screenshot Index"
@@ -1881,7 +1881,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "bp:Game ID"
-      String: "1ab48f/ss2-test-4"
+      String: "f8b143/spellshock-2"
     }
     Overrides {
       Name: "bp:Screenshot Index"
@@ -1994,7 +1994,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "bp:Game ID"
-      String: "1ab48f/ss2-test-4"
+      String: "f8b143/spellshock-2"
     }
     Overrides {
       Name: "bp:Screenshot Index"
@@ -2106,7 +2106,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "bp:Game ID"
-      String: "1ab48f/ss2-test-4"
+      String: "f8b143/spellshock-2"
     }
     Overrides {
       Name: "bp:Screenshot Index"

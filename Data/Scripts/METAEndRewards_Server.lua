@@ -58,7 +58,7 @@ end
 local function IsFirstWinOfTheDay(player)
     local currentTime = os.date("!*t").yday + 1
     local storedDay = player:GetResource(CONST.WIN_OF_THE_DAY_TIME)
-    if storedDay < currentTime or storedDay == 2 or storedDay > 400 then
+    if storedDay < currentTime or storedDay == 2 or storedDay > 366 then -- Works leap years and Jan 1st
         player:SetResource(CONST.WIN_OF_THE_DAY_TIME, 1)
         return true
     end
@@ -188,7 +188,7 @@ end
 function CalculateRewards()
     playerRewards = {}
     for _, player in ipairs(Game.GetPlayers()) do
-        if player.serverUserData.ClassesPlayed then
+        if player.serverUserData.ClassesPlayed and player.serverUserData.HasPlayedRound then
             playerRewards[player.id] = GetPlayerRewards(player)
             -- player.serverUserData.ClassesPlayed = nil
             --local isVip = player.serverUserData.IsVip
@@ -200,13 +200,16 @@ function CalculateRewards()
     ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
 end
 
+--#TODO Create server side logic that checks how many cards player should be able to claim. Currently client validated
 function GivePlayerRewards(player, rewardList)
-    for _, slotID in pairs(rewardList) do
-        REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
-    end
-    if ShouldClaimWinOfTheDay(player) then
-        local currentDay = os.date("!*t").yday + 2
-        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, currentDay)
+    if player.serverUserData.HasPlayedRound then
+        for _, slotID in pairs(rewardList) do
+            REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
+        end
+        if ShouldClaimWinOfTheDay(player) then
+            local currentDay = os.date("!*t").yday + 2
+            player:SetResource(CONST.WIN_OF_THE_DAY_TIME, currentDay)
+        end
     end
     playerRewards[player.id] = nil
 end

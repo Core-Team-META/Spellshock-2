@@ -26,6 +26,8 @@ local AFK_TIME = AFK_SETTINGS:GetCustomProperty("TimeUntilKick") or 15
 local AFK_WARNING_TIME = AFK_SETTINGS:GetCustomProperty("AfkWarningTime") or 30
 local AFK_TICK_TIME = AFK_SETTINGS:GetCustomProperty("TimePerTick") or 1
 local SHOULD_USE_WHITELIST = AFK_SETTINGS:GetCustomProperty("UseWhitelist")
+local SHOULD_USE_PLAYER_WHITELIST = AFK_SETTINGS:GetCustomProperty("PlayerWhitelist")
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Local Variables
 ------------------------------------------------------------------------------------------------------------------------
@@ -47,6 +49,9 @@ end
 -- Sets up playersIdleTime info for player and connects the binding pressed event.
 --@params object player
 function OnPlayerJoined(player)
+    if SHOULD_USE_PLAYER_WHITELIST and KEYBINDS.IsTeamMember(player) then
+        return
+    end
     playersIdleTime[player.id] = {}
     playersIdleTime[player.id].time = time() + AFK_TIME
     playersIdleTime[player.id].warning = false
@@ -57,7 +62,7 @@ end
 --@params object player
 function OnPlayerLeft(player)
     if Object.IsValid(player) then
-        if playersIdleTime[player.id].listener then
+        if playersIdleTime[player.id] and playersIdleTime[player.id].listener then
             playersIdleTime[player.id].listener:Disconnect()
         end
         playersIdleTime[player.id] = nil
@@ -91,19 +96,23 @@ end
 
 -- Loops through players to check their last keypress time against current time
 function Tick(dt)
-    if Environment.IsPreview() or Environment.IsMultiplayerPreview() then return end 
+    if Environment.IsPreview() or Environment.IsMultiplayerPreview() then
+        return
+    end
     if shouldUpdate then
         for _, player in ipairs(Game.GetPlayers()) do
-            if playersIdleTime[player.id].time <= time() then
-                --player:TransferToGame(GAME_TRANSFER)
-                local gameId = _G.GAME_LINKS.AFK
-                player:TransferToGame(gameId)
-            elseif
-                SHOULD_DISPLAY_WARNING and (playersIdleTime[player.id].time - AFK_WARNING_TIME) <= time() and
-                    not playersIdleTime[player.id].warning
-             then
-                Events.BroadcastToPlayer(player, "AFK_WARN", playersIdleTime[player.id].time)
-                playersIdleTime[player.id].warning = true
+            if playersIdleTime[player.id] then
+                if playersIdleTime[player.id].time <= time() then
+                    --player:TransferToGame(GAME_TRANSFER)
+                    local gameId = _G.GAME_LINKS.AFK
+                    player:TransferToGame(gameId)
+                elseif
+                    SHOULD_DISPLAY_WARNING and (playersIdleTime[player.id].time - AFK_WARNING_TIME) <= time() and
+                        not playersIdleTime[player.id].warning
+                 then
+                    Events.BroadcastToPlayer(player, "AFK_WARN", playersIdleTime[player.id].time)
+                    playersIdleTime[player.id].warning = true
+                end
             end
         end
         Task.Wait(AFK_TICK_TIME)
