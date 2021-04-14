@@ -329,9 +329,10 @@ local function OnSaveMultiplierData(player, data)
                 timestamp = 0
             end
         end
-        multiplierTimes [index] = timestamp
+        multiplierTimes[index] = timestamp
     end
-    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] = next(multiplierTimes) ~= nil and UTIL.ConvertTableToString(multiplierTimes , ",", "=") or ""
+    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] =
+        next(multiplierTimes) ~= nil and UTIL.ConvertTableToString(multiplierTimes, ",", "=") or ""
 end
 
 --@param object player
@@ -355,6 +356,7 @@ local function OnPlayerJoined(player)
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
     OnLoadCostumeData(player, cosmeticData)
     OnLoadEquippedCosmetic(player, cosmeticData)
+
     if TEAM_MEMBER.IsTeamMember(player) then
         AddAllCosmetics(player)
     else
@@ -417,6 +419,29 @@ function OnSavePlayerData(player)
     --data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
 
     --Storage.SetPlayerData(player, data)
+    local progressDataSize = Storage.SizeOfData(progressData)
+    local currencyDataSize = Storage.SizeOfData(currencyData)
+    local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
+
+    print(
+        "\n--------------------------------\n" ..
+            player.name ..
+                " Shared Storage Size: " ..
+                    "\nProgress Data Size: " ..
+                        tostring(progressDataSize) ..
+                            " (" .. tostring(CoreMath.Round((progressDataSize / 16000) * 100, 2)) .. "%)"
+    )
+    print(
+        "Currency Data Size: " ..
+            tostring(currencyDataSize) .. " (" .. tostring(CoreMath.Round((currencyDataSize / 16000) * 100, 2)) .. "%)"
+    )
+    print(
+        "Cosmetic Data Size: " ..
+            tostring(cosmeticDataSize) ..
+                " (" ..
+                    tostring(CoreMath.Round((cosmeticDataSize / 16000) * 100, 2)) ..
+                        "%)" .. "\n--------------------------------"
+    )
 end
 
 ------------------------------------------------------------------------------------------------------------------------
