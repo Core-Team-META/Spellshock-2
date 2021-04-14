@@ -205,7 +205,7 @@ function GivePlayerRewards(player, rewardList)
         REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
     end
     if ShouldClaimWinOfTheDay(player) then
-        local currentDay = os.date("!*t").yday + 1
+        local currentDay = os.date("!*t").yday + 2
         player:SetResource(CONST.WIN_OF_THE_DAY_TIME, currentDay)
     end
     playerRewards[player.id] = nil
