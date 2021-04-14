@@ -52,16 +52,22 @@ function OnGameStateChanged(oldState, newState)
 		LOCAL_PLAYER.clientUserData.hasSkippedReward = false
 	elseif newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_ROUND_END then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
-	elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
+	elseif
+		newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS and
+			not LOCAL_PLAYER.clientUserData.hasSkippedReward
+	 then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["Rewards"])
-	elseif newState == ABGS.GAME_STATE_REWARDS_END and oldState ~= ABGS.GAME_STATE_REWARDS_END and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
+	elseif
+		newState == ABGS.GAME_STATE_REWARDS_END and oldState ~= ABGS.GAME_STATE_REWARDS_END and
+			not LOCAL_PLAYER.clientUserData.hasSkippedReward
+	 then
 		Events.Broadcast("Changing Menu", "ShowIcons")
 	end
 end
 
 function OnBindingPressed(whichPlayer, binding)
 	local CurrentGameState = ABGS.GetGameState()
-	
+
 	if (binding == "ability_extra_50") and CurrentGameState == ABGS.GAME_STATE_ROUND and SpamPrevent() then --F1
 		--print(">> TUTORIAL MENU")
 		local newState
@@ -74,8 +80,11 @@ function OnBindingPressed(whichPlayer, binding)
 		end
 		Events.Broadcast("Changing Menu", newState)
 	elseif (binding == "ability_extra_28" and SpamPrevent()) then -- O and CurrentGameState == ABGS.GAME_STATE_LOBBY
-		if LOCAL_PLAYER.clientUserData.hasSkippedReward or ((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) 
-		and not LOCAL_PLAYER.isDead then
+		if
+			LOCAL_PLAYER.clientUserData.hasSkippedReward or
+				((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) and
+					not LOCAL_PLAYER.isDead
+		 then
 			--print(">> COSMETIC SHOP")
 			if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["CosmeticStore"]) -- Show
@@ -86,13 +95,16 @@ function OnBindingPressed(whichPlayer, binding)
 	elseif binding == "ability_extra_27" and SpamPrevent() then -- i
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and (CurrentGameState == ABGS.GAME_STATE_ROUND) then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassAbilities"])
-		elseif (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == "ShowIcons") and
-		(CurrentGameState == ABGS.GAME_STATE_LOBBY or LOCAL_PLAYER.clientUserData.hasSkippedReward) then
-			
-			if CurrentGameState == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
+		elseif
+			(_G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == "ShowIcons") and
+				(CurrentGameState == ABGS.GAME_STATE_LOBBY or LOCAL_PLAYER.clientUserData.hasSkippedReward)
+		 then
+			if
+				CurrentGameState == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2
+			 then
 				return
 			end
-			
+
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"])
 		else
 			if _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] or _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
@@ -100,12 +112,25 @@ function OnBindingPressed(whichPlayer, binding)
 			end
 		end
 	elseif binding == "ability_extra_37" and SpamPrevent() then -- K
-		if LOCAL_PLAYER.clientUserData.hasSkippedReward or ((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) 
-		and not LOCAL_PLAYER.isDead then
+		if
+			LOCAL_PLAYER.clientUserData.hasSkippedReward or
+				((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) and
+					not LOCAL_PLAYER.isDead
+		 then
 			--print(">> LEADERBOARDS")
 			if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["Leaderboards"]) -- Show
 			elseif _G.CurrentMenu == _G.MENU_TABLE["Leaderboards"] then
+				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+			end
+		end
+	elseif (binding == "ability_extra_51" and SpamPrevent()) then -- O and CurrentGameState == ABGS.GAME_STATE_LOBBY
+		if LOCAL_PLAYER.clientUserData.hasSkippedReward or ((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) 
+		and not LOCAL_PLAYER.isDead then
+			--print(">> COSMETIC SHOP")
+			if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+				Events.Broadcast("Changing Menu", _G.MENU_TABLE["Tutorial_Slides"]) -- Show
+			elseif _G.CurrentMenu == _G.MENU_TABLE["Tutorial_Slides"] then
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
 		end
@@ -116,7 +141,10 @@ function Tick()
 	if LOCAL_PLAYER.isDead and _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and _G.CurrentMenu ~= _G.MENU_TABLE["Respawn"] then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 	end
-	if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and UI.IsCursorVisible() and ABGS.GetGameState() ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
+	if
+		_G.CurrentMenu == _G.MENU_TABLE["NONE"] and UI.IsCursorVisible() and
+			ABGS.GetGameState() ~= ABGS.GAME_STATE_PLAYER_SHOWCASE
+	 then
 		UI.SetCursorVisible(false)
 	elseif _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and not UI.IsCursorVisible() then
 		UI.SetCursorVisible(true)

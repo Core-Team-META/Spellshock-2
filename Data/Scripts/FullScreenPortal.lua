@@ -43,6 +43,7 @@ function GetJumpButtons(jumpButtons)
     return buttons
 end
 
+
 JUMP_BUTTONS = GetJumpButtons(JUMP_BUTTONS)
 
 -----------------------------
@@ -57,20 +58,6 @@ local numberOfImages = 4
 
 Game.GetLocalPlayer().bindingPressedEvent:Connect(
     function(player, binding)
-        if binding == "ability_extra_51" then
-            isEnabled = not isEnabled
-            SCREEN_GROUP.visibility = isEnabled and Visibility.INHERIT or Visibility.FORCE_OFF
-            UI_CONTAINER.visibility = isEnabled and Visibility.INHERIT or Visibility.FORCE_OFF
-            if isEnabled then
-                lastMenu = _G.CurrentMenu
-                Events.Broadcast("Changing Menu", _G.MENU_TABLE["Tutorial_Slides"])
-            elseif lastMenu and lastMenu ~= _G.CurrentMenu then
-                Events.Broadcast("Changing Menu", lastMenu)
-            end
-            UI.SetCursorVisible(isEnabled)
-            UI.SetCanCursorInteractWithUI(isEnabled)
-        end
-
         if isEnabled then
             if binding == "ability_extra_48" then
                 GoLeft()
@@ -85,14 +72,14 @@ Game.GetLocalPlayer().bindingPressedEvent:Connect(
 function GoLeft()
     imageIndex = imageIndex - 1
     if imageIndex < 1 then
-        imageIndex = 1
+        imageIndex = 4
     end
 end
 
 function GoRight()
     imageIndex = imageIndex + 1
     if imageIndex > numberOfImages then
-        imageIndex = numberOfImages
+        imageIndex = 1
     end
 end
 
@@ -156,10 +143,30 @@ function OnUnhover(arrow)
 end
 
 for index, jumpButton in ipairs(JUMP_BUTTONS) do
-    print(index)
+    --print(index)
     jumpButton.button.pressedEvent:Connect(
         function()
             JumpToIndex(index)
         end
     )
 end
+
+function ToggleUi(bool)
+    isEnabled = bool
+    SCREEN_GROUP.visibility = isEnabled and Visibility.INHERIT or Visibility.FORCE_OFF
+    UI_CONTAINER.visibility = isEnabled and Visibility.INHERIT or Visibility.FORCE_OFF
+    UI.SetCursorVisible(isEnabled)
+    UI.SetCanCursorInteractWithUI(isEnabled)
+end
+
+
+
+function OnMenuChanged(oldMenu, newMenu)
+    if newMenu == _G.MENU_TABLE["Tutorial_Slides"] then
+        ToggleUi(true)
+    elseif oldMenu == _G.MENU_TABLE["Tutorial_Slides"] then
+        ToggleUi(false)
+    end
+end
+
+Events.Connect("Menu Changed", OnMenuChanged)
