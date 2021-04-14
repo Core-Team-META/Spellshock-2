@@ -346,20 +346,16 @@ local function OnPlayerJoined(player)
     OnLoadProgressionData(player, progressData)
     OnLoadClassLevelData(player, progressData)
     OnLoadConsumableData(player, progressData)
-    local progressDataSize = Storage.SizeOfData(progressData)
 
     local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     OnLoadCurrencyData(player, currencyData)
     OnLoadDailyShopData(player, currencyData)
     OnLoadGamePlayStatsData(player, currencyData)
     OnLoadMultiplierData(player, currencyData)
-    local currencyDataSize = Storage.SizeOfData(currencyData)
 
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
     OnLoadCostumeData(player, cosmeticData)
     OnLoadEquippedCosmetic(player, cosmeticData)
-
-    local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
 
     if TEAM_MEMBER.IsTeamMember(player) then
         AddAllCosmetics(player)
@@ -370,18 +366,6 @@ local function OnPlayerJoined(player)
     CLASS_SELECTION.context.OnPlayerJoined(player, classId)
     --end
     CONSUMABLES.context.OnPlayerJoined(player)
-
-    print(
-        "\n--------------------------------\n" ..
-            player.name ..
-                " Joined Shared Storage Size: " ..
-                    "\nProgress Data Size: " ..
-                        tostring(progressDataSize) ..
-                            "\nCurrency Data Size: " ..
-                                tostring(currencyDataSize) ..
-                                    "\nCosmetic Data Size: " ..
-                                        tostring(cosmeticDataSize) .. "\n--------------------------------"
-    )
 end
 
 local function OnPlayerLeft(player)
@@ -438,16 +422,25 @@ function OnSavePlayerData(player)
     local progressDataSize = Storage.SizeOfData(progressData)
     local currencyDataSize = Storage.SizeOfData(currencyData)
     local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
+
     print(
         "\n--------------------------------\n" ..
             player.name ..
-                " Left Shared Storage Size: " ..
+                " Shared Storage Size: " ..
                     "\nProgress Data Size: " ..
                         tostring(progressDataSize) ..
-                            "\nCurrency Data Size: " ..
-                                tostring(currencyDataSize) ..
-                                    "\nCosmetic Data Size: " ..
-                                        tostring(cosmeticDataSize) .. "\n--------------------------------"
+                            " (" .. tostring(CoreMath.Round((progressDataSize / 16000) * 100, 2)) .. "%)"
+    )
+    print(
+        "Currency Data Size: " ..
+            tostring(currencyDataSize) .. " (" .. tostring(CoreMath.Round((currencyDataSize / 16000) * 100, 2)) .. "%)"
+    )
+    print(
+        "Cosmetic Data Size: " ..
+            tostring(cosmeticDataSize) ..
+                " (" ..
+                    tostring(CoreMath.Round((cosmeticDataSize / 16000) * 100, 2)) ..
+                        "%)" .. "\n--------------------------------"
     )
 end
 
