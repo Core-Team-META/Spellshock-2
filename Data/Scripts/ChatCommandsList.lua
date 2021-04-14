@@ -321,7 +321,8 @@ commands = {
             local target = split[2] or nil
             local duration = tonumber(split[3]) or 5
 
-            print(tostring(target))
+            if duration > 30 then duration = 30 end
+
             if (target) then
                 target = ReturnPlayerByName(target)
             end

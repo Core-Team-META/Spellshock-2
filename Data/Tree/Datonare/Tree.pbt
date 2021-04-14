@@ -206,7 +206,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:OpenRadialKeybind"
-      String: "ability_extra_10"
+      String: "ability_extra_42"
     }
   }
   Collidable_v2 {

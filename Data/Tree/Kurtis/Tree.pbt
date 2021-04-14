@@ -102,6 +102,7 @@ Objects {
     }
   }
   ParentId: 16625053971837530583
+  ChildIds: 8589364593371973335
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -133,6 +134,48 @@ Objects {
           Value: "mc:euianchor:topleft"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 8589364593371973335
+  Name: "RadialSegment"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14710332786633172429
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11197490735130221972
+      value {
+        Overrides {
+          Name: "Name"
+          String: "RadialSegment"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16326530563404916797
     }
   }
 }

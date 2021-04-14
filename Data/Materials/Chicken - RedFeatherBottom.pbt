@@ -1,6 +1,6 @@
 Assets {
   Id: 244066850900665391
-  Name: "RedFeatherBottom"
+  Name: "Chicken - RedFeatherBottom"
   PlatformAssetType: 13
   SerializationVersion: 81
   CustomMaterialAsset {
