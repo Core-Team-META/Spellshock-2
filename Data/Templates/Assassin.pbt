@@ -3309,7 +3309,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
-            Bool: true
+            Bool: false
           }
         }
         WantsNetworking: true

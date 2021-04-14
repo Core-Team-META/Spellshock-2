@@ -50,9 +50,9 @@ end
 function OnExecuteAbility(ability)
     if ability.owner == LOCAL_PLAYER then
         if ability.clientUserData.chargeAmount < 1 then
-            if DAGGER_LEFT_ABILITY.owner and DAGGER_LEFT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
+            if DAGGER_LEFT_ABILITY.owner and DAGGER_LEFT_ABILITY.isEnabled and DAGGER_LEFT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
                 DAGGER_LEFT_ABILITY:Activate()
-            elseif DAGGER_RIGHT_ABILITY.owner and DAGGER_RIGHT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
+            elseif DAGGER_RIGHT_ABILITY.owner and DAGGER_RIGHT_ABILITY.isEnabled and DAGGER_RIGHT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
                 DAGGER_RIGHT_ABILITY:Activate()
             else
                 CHARGING_ABILITY:Interrupt()
