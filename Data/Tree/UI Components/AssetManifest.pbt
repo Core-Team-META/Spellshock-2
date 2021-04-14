@@ -611,15 +611,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7243817981913966754
-  Name: "Fantasy Shape 005"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Shape_005"
-  }
-}
-Assets {
   Id: 7154012582208942186
   Name: "Icon Arrow Up"
   PlatformAssetType: 9

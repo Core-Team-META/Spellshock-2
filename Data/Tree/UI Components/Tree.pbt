@@ -10236,7 +10236,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -70402,9 +70402,9 @@ Objects {
   }
   ParentId: 7095145862351693363
   ChildIds: 914536038276369548
+  ChildIds: 4322653546660966320
   ChildIds: 1057891568897577117
   ChildIds: 17582023163407846866
-  ChildIds: 4322653546660966320
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -70435,97 +70435,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middleright"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 4322653546660966320
-  Name: "Global Stats Button"
-  Transform {
-    Location {
-      X: -1040.04
-      Y: 1925.85791
-      Z: -11
-    }
-    Rotation {
-      Yaw: 15.0000248
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7795528929938579083
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 100
-    Height: 30
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    UseParentHeight: true
-    Button {
-      FontColor {
-        A: 1
-      }
-      FontSize: 20
-      ButtonColor {
-        R: 1
-        G: 1
-        B: 1
-      }
-      HoveredColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      PressedColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Brush {
-        Id: 841534158063459245
-      }
-      IsButtonEnabled: true
-      OnlyUseMainColor: true
-      ClickMode {
-        Value: "mc:ebuttonclickmode:default"
-      }
-      Font {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -70700,6 +70609,96 @@ Objects {
   }
 }
 Objects {
+  Id: 4322653546660966320
+  Name: "Global Stats Button"
+  Transform {
+    Location {
+      X: -1040.04
+      Y: 1925.85791
+      Z: -11
+    }
+    Rotation {
+      Yaw: 15.0000248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7795528929938579083
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 30
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Button {
+      FontColor {
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        R: 0.651405811
+        G: 0.351532787
+        A: 0.488000035
+      }
+      HoveredColor {
+        R: 0.679999948
+        G: 0.175629109
+        A: 0.640000045
+      }
+      PressedColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 0.520000041
+      }
+      DisabledColor {
+        R: 0.0885416642
+        G: 0.0885416642
+        B: 0.0885416642
+        A: 0.587
+      }
+      Brush {
+        Id: 841534158063459245
+      }
+      IsButtonEnabled: true
+      OnlyUseMainColor: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 914536038276369548
   Name: "Hover Tip"
   Transform {
@@ -70717,9 +70716,7 @@ Objects {
   ParentId: 7795528929938579083
   ChildIds: 1233147282234079257
   ChildIds: 3749478624037838426
-  ChildIds: 16463972814206175492
   ChildIds: 15638229123550251810
-  ChildIds: 3373853584265894530
   ChildIds: 9613410327691044919
   ChildIds: 12652377381983190005
   Collidable_v2 {
@@ -70863,7 +70860,8 @@ Objects {
       Label: "View Global Stats"
       Color {
         R: 1
-        G: 0.456411064
+        G: 1
+        B: 1
         A: 1
       }
       Size: 20
@@ -70915,9 +70913,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 52
-    Height: -24
-    UIX: 9
+    Width: 38
+    Height: -36
+    UIX: 13.0542507
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -70930,70 +70928,9 @@ Objects {
         Id: 3483798833601977176
       }
       Color {
-        R: 0.846
-        G: 0.386123925
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 3373853584265894530
-  Name: "Arrow"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -1.7075472e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 914536038276369548
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 52
-    Height: -15
-    UIX: -6
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 7243817981913966754
-      }
-      Color {
-        R: 0.846
-        G: 0.386123925
+        R: 0.972781479
+        G: 1
+        B: 0.97
         A: 1
       }
       TeamSettings {
@@ -71039,9 +70976,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 52
-    Height: -24
-    UIX: 7
+    Width: 38
+    Height: -36
+    UIX: 13.0542507
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -71052,68 +70989,6 @@ Objects {
     Image {
       Brush {
         Id: 3483798833601977176
-      }
-      Color {
-        R: 0.401000023
-        G: 0.103569441
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 16463972814206175492
-  Name: "Arrow Shadow"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -1.7075472e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 914536038276369548
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 52
-    Height: -15
-    UIX: -8
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 7243817981913966754
       }
       Color {
         R: 0.401000023
