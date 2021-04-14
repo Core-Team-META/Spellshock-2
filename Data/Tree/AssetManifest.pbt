@@ -73,6 +73,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15740376057655838420
+  Name: "Plastic Shiny"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "plastic_shiny_001"
+  }
+}
+Assets {
   Id: 15499488441472625293
   Name: "ss2_live_currency"
   PlatformAssetType: 23
@@ -230,6 +239,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12235551212621628069
+  Name: "Dodecahedron"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_dodecahedron_001"
+  }
+}
+Assets {
   Id: 11738101196508092081
   Name: "Server Gold"
   PlatformAssetType: 24
@@ -291,12 +309,30 @@ Assets {
   }
 }
 Assets {
+  Id: 11076240285386210842
+  Name: "Prism - 5-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_pentagon_001"
+  }
+}
+Assets {
   Id: 10784387645319107096
   Name: "Tree Oak 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_oak_001"
+  }
+}
+Assets {
+  Id: 10184847056121543272
+  Name: "Basic Material"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_pbr_material_001"
   }
 }
 Assets {
@@ -388,6 +424,15 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
+  }
+}
+Assets {
+  Id: 8619830679695120720
+  Name: "Prism - 6-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_hexagon_001"
   }
 }
 Assets {
@@ -548,6 +593,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4832317491132024529
+  Name: "Creature Bird Chicken Cluck 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_bird_chicken_cluck_01a_Cue_ref"
+  }
+}
+Assets {
   Id: 4394564280714997097
   Name: "Starter Pack"
   PlatformAssetType: 24
@@ -583,6 +637,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3973623883385786958
+  Name: "Raptor Mob"
+  PlatformAssetType: 17
+  PrimaryAsset {
+    AssetType: "AnimatedMeshAssetRef"
+    AssetId: "npc_raptor_default_basic_001_ref"
+  }
+}
+Assets {
   Id: 3725870701821859093
   Name: "Gem Pack 3"
   PlatformAssetType: 24
@@ -609,6 +672,33 @@ Assets {
   }
 }
 Assets {
+  Id: 2810379255825890868
+  Name: "Gem - Heart Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gem_heart_polished_001"
+  }
+}
+Assets {
+  Id: 2635330027741249494
+  Name: "Diamond - 6-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_diamond_6_sided_001"
+  }
+}
+Assets {
+  Id: 2448982667642731065
+  Name: "Prism - 5-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_pentagon_hq_001"
+  }
+}
+Assets {
   Id: 2175052947894896062
   Name: "Gold Pack 4"
   PlatformAssetType: 24
@@ -619,6 +709,15 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
+  }
+}
+Assets {
+  Id: 1548290123576091299
+  Name: "Creature Bird Rooster Full Morning Caw 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_bird_rooster_full_morning_caw_01_Cue_ref"
   }
 }
 Assets {

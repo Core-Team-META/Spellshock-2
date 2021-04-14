@@ -6,7 +6,7 @@ while not LOCAL_PLAYER.clientUserData.radialMenu do Task.Wait() end
 local radialView = LOCAL_PLAYER.clientUserData.radialMenu
 
 local AllowedPlayers = {
-	"Morticai", "Ooccoo", "Rolok", "Bigglebuns", "Buckmonster", "Basilisk", "Bot1", "Bot2"
+	"Morticai", "Ooccoo", "Rolok", "Bigglebuns", "Buckmonster", "Basilisk", "ManticoreGames"
 }
 
 Task.Wait(2)

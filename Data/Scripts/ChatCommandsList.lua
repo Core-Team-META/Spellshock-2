@@ -13,7 +13,13 @@ local function META_AP()
 end
 
 -- CUSTOM Chicken Suit
-local chickenSuit = script:GetCustomProperty("ChickenSuit")
+local chickenSuits = {
+    script:GetCustomProperty("ChickenSuit1"),
+    script:GetCustomProperty("ChickenSuit2"),
+    script:GetCustomProperty("ChickenSuit3"),
+    script:GetCustomProperty("ChickenSuit4"),
+    script:GetCustomProperty("ChickenSuit5")
+}
 
 local function ReturnPlayerByName(Name)
     if not Name then
@@ -305,10 +311,6 @@ commands = {
     },
 
 
-
-
-
-
     ]]
 
     ["/chicken"] = {
@@ -326,8 +328,9 @@ commands = {
 
 			-- equip animal costume
 			if target and not target.isDead and not target.serverUserData.isAnimorphed then
+                print("[Admin] " .. player.name .. " chickened " .. tostring(target.name))
 				target.serverUserData.isAnimorphed = true
-
+                local chickenSuit = chickenSuits[math.random(1, #chickenSuits)]
 				local newCostume = META_AP().SpawnAsset(chickenSuit)
 				newCostume:SetScale(newCostume:GetScale() * 1.5)
 				newCostume:SetNetworkedCustomProperty("Duration", duration)

@@ -12,7 +12,7 @@ local view = RadialView.New(MENU_UI,SEGMENT_ASSET,SEGMENTS_DATA,45)
 LOCAL_PLAYER.clientUserData.radialMenu = view
 
 view.OnOpened:Connect(function()
-    --print("It opened!")
+    print("It opened!")
 end)
 
 view.OnSectionClicked:Connect(function(sectionID)
