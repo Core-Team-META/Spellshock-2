@@ -93,8 +93,6 @@ function OnBannerMessageEvent(message, duration, type)
 end
 
 function HasUnlockedCardSlot(_ClassID, _ClassLevel)
-    warn("Checking unlocked card: "..tostring(_ClassLevel))
-    print(tostring(_ClassID))
     -- Any class rank 50 and one other other class rank 25
     
     -- At least 2 classes rank 25
@@ -196,14 +194,12 @@ function LocalPlayerClassLevelUp(classID, classLevel)
         local propCardSlotUnlocked = LocalPlayerClassLevelup:GetCustomProperty("CardSlotUnlocked"):WaitForObject()
 
         if Rarity then
-            warn("Rarity")
             propSkinsUnlocked.text = string.format("- %d %s skins are now unlocked -", Amount, Rarity)
         else
             propSkinsUnlocked.visibility = Visibility.FORCE_OFF
         end
 
         if unlockedCardSlot then
-            warn("Unlocked card")
             propCardSlotUnlocked.visibility = Visibility.INHERIT
         else
             propCardSlotUnlocked.visibility = Visibility.FORCE_OFF
@@ -212,7 +208,6 @@ function LocalPlayerClassLevelUp(classID, classLevel)
         local propTeamBanners = LocalPlayerClassLevelup:GetCustomProperty("TeamBanners"):WaitForObject()
         for index, panel in ipairs(propTeamBanners:GetChildren()) do
             if index == LOCAL_PLAYER.team then
-                warn("Showing banner")
                 panel.visibility = Visibility.INHERIT
             else
                 panel.visibility = Visibility.FORCE_OFF
@@ -257,7 +252,6 @@ function OnPlayerClassLevelUp(data)
     end
 
     if _Player == LOCAL_PLAYER then
-        warn("Showing local level up")
         LocalPlayerClassLevelUp(classID, tonumber(classLevel))
     end
 
