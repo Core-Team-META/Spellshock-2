@@ -8,11 +8,11 @@ local SEGMENTS_DATA = script:GetCustomProperty("Segments")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-local view = RadialView.New(MENU_UI,SEGMENT_ASSET,SEGMENTS_DATA,45)
+local view = RadialView.New(MENU_UI,SEGMENT_ASSET,SEGMENTS_DATA,0)
 LOCAL_PLAYER.clientUserData.radialMenu = view
 
 view.OnOpened:Connect(function()
-    --print("It opened!")
+
 end)
 
 view.OnSectionClicked:Connect(function(sectionID)

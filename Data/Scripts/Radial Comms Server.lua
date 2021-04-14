@@ -22,7 +22,7 @@ end
 function Goto(player, location)
 	-- Clear any pre-existing points of interest so we only have 1 active point up at any given time
 	ClearPointsOfInterest(player.team)
-	
+
 	-- Based on the location, we'll set up a point there and broadcast to our team as well
 	if(location == "AS") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})

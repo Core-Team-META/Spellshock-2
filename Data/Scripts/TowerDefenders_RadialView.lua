@@ -215,7 +215,7 @@ function RadialMenu:_CheckSections()
     local pos = Vector2.New(self.radial_menu_container.x, self.radial_menu_container.y)
     local center = screenSize/2
     local dif = (cursorPosition - (center + pos)):GetNormalized()
-    local angle = math.atan(dif.y, dif.x)
+    local angle = math.atan(dif.y, dif.x) + 45
     local deg = math.deg(angle)+180 -- 0 -> 360
 
     local whole = math.floor(deg+offset) % 360

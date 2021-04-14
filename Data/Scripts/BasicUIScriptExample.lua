@@ -6,16 +6,24 @@ while not LOCAL_PLAYER.clientUserData.radialMenu do Task.Wait() end
 local radialView = LOCAL_PLAYER.clientUserData.radialMenu
 
 local AllowedPlayers = {
-	"Morticai", "Ooccoo", "Rolok", "Bigglebuns", "Buckmonster", "Basilisk", "Bot1", "Bot2"
+	"Morticai", "Ooccoo", "Rolok", "Bigglebuns", "Buckmonster", "Basilisk", "ManticoreGames",
 }
+
+local viewStatus = false
 
 Task.Wait(2)
 
 function OnBindingPressed(player, binding)
 	if not PlayerCanIssueCommands(player.name) then return end
 	if(binding == OpenRadialKeybind) then
-		radialView:Open()
-		Events.BroadcastToServer("OpenComms")
+		if not viewStatus then
+			radialView:Open()
+			Events.BroadcastToServer("OpenComms")
+			viewStatus = true
+		else
+			radialView:Close()
+			viewStatus = false
+		end
 	end
 end
 
