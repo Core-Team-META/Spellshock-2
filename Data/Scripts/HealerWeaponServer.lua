@@ -12,6 +12,8 @@ local DEFAULT_DamageRange = {min=30, max=40}
 
 local BindingName = script:GetCustomProperty("BindingName")
 local AbilityMod = script:GetCustomProperty("AbilityMod")
+local damagedListener
+local spamPrevent = time()
 
 function OnProjectileSpawned(thisWeapon, newProjectile)
 	-- nil out the owner so the projectile can impact teammates
@@ -20,7 +22,7 @@ end
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount
-	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
+	if spamPrevent < time() and Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Healer Staff: Damage Range")
 		amount = math.random(rangeTable.min, rangeTable.max)
 	else 
@@ -53,6 +55,7 @@ function OnTargetImpact(theWeapon, impactData)
 	}
 
     COMBAT().ApplyDamage(attackData)
+	spamPrevent = time() + 0.3
 end
 
 WEAPON.targetImpactedEvent:Connect(OnTargetImpact)
@@ -69,4 +72,4 @@ function OnDestroyed(obj)
 end
 
 WEAPON.destroyEvent:Connect(OnDestroyed)
-WEAPON.projectileSpawnedEvent:Connect(OnProjectileSpawned)
+damagedListener = WEAPON.projectileSpawnedEvent:Connect(OnProjectileSpawned)
