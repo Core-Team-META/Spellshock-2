@@ -89,7 +89,7 @@ local function GenerateShopItems(player, forced)
     end
     local currentTime = os.time(os.date("!*t"))
     player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH or 0
-    local refreshTime = currentTime + 60
+    local refreshTime = currentTime + (24 * 60 * 60)
     --(24 * 60 * 60)
     if forced then
         player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1
@@ -165,7 +165,11 @@ function OnPremiumRefresh(player)
     local refreshCount = player.serverUserData.DS_REFRESH or 0
     local remainingCosmToken =
         player:GetResource(CONST.COSMETIC_TOKEN) - CoreMath.Round(REWARD_UTIL.CalculatePremiumRefreshCost(refreshCount))
-    if remainingCosmToken >= 0 then
+    if player:GetResource("DS_REFRESHTIME") < time() then
+        player.serverUserData.DS_REFRESH = 0
+        GenerateShopItems(player, false)
+        ReplicateShopItems(player)
+    elseif remainingCosmToken >= 0 then
         GenerateShopItems(player, true)
         ReplicateShopItems(player)
         player:SetResource(CONST.COSMETIC_TOKEN, remainingCosmToken)
