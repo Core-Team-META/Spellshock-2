@@ -98,6 +98,20 @@ function OfferSwitchChoice()
 end
 
 
+function ApplyTeamChanges(team1, team2)
+	for _,player in ipairs(team1) do
+		if player.team ~= 1 then
+			SwitchTeam(player)
+		end
+	end
+	for _,player in ipairs(team2) do
+		if player.team ~= 2 then
+			SwitchTeam(player)
+		end
+	end
+end
+
+
 function DoRebalance(playerToIgnore)
 	--print("DoRebalance()")
 	
@@ -119,7 +133,10 @@ function DoRebalance(playerToIgnore)
 	end
 	
 	-- If each team has one player it's done
-	if #team1 == 1 and #team2 == 1 then return end
+	if #team1 == 1 and #team2 == 1 then
+		ApplyTeamChanges(team1, team2)
+		return
+	end
 	
 	-- Swap players until value delta is minimized
 	local value1 = ComputeTeamValue(team1)
@@ -164,16 +181,7 @@ function DoRebalance(playerToIgnore)
 	end
 	
 	-- Apply any team switching
-	for _,player in ipairs(team1) do
-		if player.team ~= 1 then
-			SwitchTeam(player)
-		end
-	end
-	for _,player in ipairs(team2) do
-		if player.team ~= 2 then
-			SwitchTeam(player)
-		end
-	end
+	ApplyTeamChanges(team1, team2)
 end
 
 
