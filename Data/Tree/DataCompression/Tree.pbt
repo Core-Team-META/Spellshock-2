@@ -1,36 +1,6 @@
 Name: "DataCompression"
 RootId: 15057716785033630782
 Objects {
-  Id: 12368577691492172997
-  Name: "StorageTest"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15057716785033630782
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 16710408555258235694
-    }
-  }
-}
-Objects {
   Id: 1716975878147083837
   Name: "MetaPlayerStorageHelper_Server"
   Transform {

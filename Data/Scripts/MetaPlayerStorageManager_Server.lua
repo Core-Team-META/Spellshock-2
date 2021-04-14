@@ -329,9 +329,10 @@ local function OnSaveMultiplierData(player, data)
                 timestamp = 0
             end
         end
-        multiplierTimes [index] = timestamp
+        multiplierTimes[index] = timestamp
     end
-    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] = next(multiplierTimes) ~= nil and UTIL.ConvertTableToString(multiplierTimes , ",", "=") or ""
+    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] =
+        next(multiplierTimes) ~= nil and UTIL.ConvertTableToString(multiplierTimes, ",", "=") or ""
 end
 
 --@param object player
@@ -345,16 +346,21 @@ local function OnPlayerJoined(player)
     OnLoadProgressionData(player, progressData)
     OnLoadClassLevelData(player, progressData)
     OnLoadConsumableData(player, progressData)
+    local progressDataSize = Storage.SizeOfData(progressData)
 
     local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     OnLoadCurrencyData(player, currencyData)
     OnLoadDailyShopData(player, currencyData)
     OnLoadGamePlayStatsData(player, currencyData)
     OnLoadMultiplierData(player, currencyData)
+    local currencyDataSize = Storage.SizeOfData(currencyData)
 
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
     OnLoadCostumeData(player, cosmeticData)
     OnLoadEquippedCosmetic(player, cosmeticData)
+
+    local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
+
     if TEAM_MEMBER.IsTeamMember(player) then
         AddAllCosmetics(player)
     else
@@ -364,6 +370,18 @@ local function OnPlayerJoined(player)
     CLASS_SELECTION.context.OnPlayerJoined(player, classId)
     --end
     CONSUMABLES.context.OnPlayerJoined(player)
+
+    print(
+        "\n--------------------------------\n" ..
+            player.name ..
+                " Joined Shared Storage Size: " ..
+                    "\nProgress Data Size: " ..
+                        tostring(progressDataSize) ..
+                            "\nCurrency Data Size: " ..
+                                tostring(currencyDataSize) ..
+                                    "\nCosmetic Data Size: " ..
+                                        tostring(cosmeticDataSize) .. "\n--------------------------------"
+    )
 end
 
 local function OnPlayerLeft(player)
@@ -417,6 +435,20 @@ function OnSavePlayerData(player)
     --data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
 
     --Storage.SetPlayerData(player, data)
+    local progressDataSize = Storage.SizeOfData(progressData)
+    local currencyDataSize = Storage.SizeOfData(currencyData)
+    local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
+    print(
+        "\n--------------------------------\n" ..
+            player.name ..
+                " Left Shared Storage Size: " ..
+                    "\nProgress Data Size: " ..
+                        tostring(progressDataSize) ..
+                            "\nCurrency Data Size: " ..
+                                tostring(currencyDataSize) ..
+                                    "\nCosmetic Data Size: " ..
+                                        tostring(cosmeticDataSize) .. "\n--------------------------------"
+    )
 end
 
 ------------------------------------------------------------------------------------------------------------------------
