@@ -14,11 +14,11 @@ end
 
 -- CUSTOM Chicken Suit
 local chickenSuits = {
-    script:GetCustomProperty("ChickenSuit1"),
-    script:GetCustomProperty("ChickenSuit2"),
-    script:GetCustomProperty("ChickenSuit3"),
-    script:GetCustomProperty("ChickenSuit4"),
-    script:GetCustomProperty("ChickenSuit5")
+    [1] = script:GetCustomProperty("ChickenSuit1"),
+    [2] =script:GetCustomProperty("ChickenSuit2"),
+    [3] =script:GetCustomProperty("ChickenSuit3"),
+    [4] =script:GetCustomProperty("ChickenSuit4"),
+    [5] =script:GetCustomProperty("ChickenSuit5")
 }
 
 local function ReturnPlayerByName(Name)
@@ -113,7 +113,7 @@ commands = {
     ["/lookinggood"] = {
         OnCommandCalledClient = function (player, message)
         end,
-        OnCommandCalledServer = function (player, message)  
+        OnCommandCalledServer = function (player, message)
             local split = {CoreString.Split(message)}
             local trimMessage = CoreString.Trim(message, split[1])
             local value = tonumber(trimMessage)
@@ -331,8 +331,9 @@ commands = {
 			if target and not target.isDead and not target.serverUserData.isAnimorphed then
                 print("[Admin] " .. player.name .. " chickened " .. tostring(target.name))
 				target.serverUserData.isAnimorphed = true
-                local chickenSuit = chickenSuits[math.random(1, #chickenSuits)]
+                local chickenSuit = chickenSuits[math.random(1, #chickenSuits-1)]
 				local newCostume = META_AP().SpawnAsset(chickenSuit)
+                if not newCostume then return end
 				newCostume:SetScale(newCostume:GetScale() * 1.5)
 				newCostume:SetNetworkedCustomProperty("Duration", duration)
 				newCostume:Equip(target)
