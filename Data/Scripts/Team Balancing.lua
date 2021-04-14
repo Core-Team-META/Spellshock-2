@@ -226,7 +226,10 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 
 function OnGameStateChanged(oldState, newState)
-	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+		while not ABGS.GetTimeRemainingInState() do Task.Wait() end -- Wait for the state to have a timer
+		local delay = ABGS.GetTimeRemainingInState() - 8 
+		Task.Wait(delay)
 		ClearCachedPlayerValues()
 		DoRebalance()
 	end
