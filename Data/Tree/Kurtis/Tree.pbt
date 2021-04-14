@@ -37,12 +37,16 @@ Objects {
       Int: 15
     }
     Overrides {
-      Name: "cs:UseWhitelist"
+      Name: "cs:KeybindWhitelist"
       Bool: false
     }
     Overrides {
       Name: "cs:TimePerTick"
       Int: 1
+    }
+    Overrides {
+      Name: "cs:PlayerWhitelist"
+      Bool: true
     }
     Overrides {
       Name: "cs:DisplayWarning:tooltip"
@@ -65,7 +69,7 @@ Objects {
       String: "Amount of time in seconds a player will be given a countdown prior to being kicked, if DisplayWarning is set to true."
     }
     Overrides {
-      Name: "cs:UseWhitelist:tooltip"
+      Name: "cs:KeybindWhitelist:tooltip"
       String: "If enabled a currently idle player will only no longer count as idle until a whitelist keybind is pressed."
     }
   }
