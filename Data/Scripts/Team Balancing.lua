@@ -9,7 +9,7 @@ local WIN_RATE_MIN = 0.2
 local WIN_RATE_MAX = 0.8
 local WIN_RATE_EXPONENT = 1
 local WIN_RATE_COEFFICIENT = 500
-
+local LOBBY_REBALANCE_TIME = 8
 
 function ComputePlayerValue(player)
 	-- Return the cached value
@@ -81,9 +81,16 @@ end
 
 
 function IsLobby()
-	local gameState = ABGS.GetGameState()
+	--[[local gameState = ABGS.GetGameState()
 	return gameState == ABGS.GAME_STATE_LOBBY
-		or gameState == ABGS.GAME_STATE_REWARDS_END
+		or gameState == ABGS.GAME_STATE_REWARDS_END]]
+
+	local timeRemaining = ABGS.GetTimeRemainingInState() or 20
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and timeRemaining < LOBBY_REBALANCE_TIME then
+		return true
+	else
+		return false
+	end
 end
 
 
@@ -236,7 +243,7 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 function OnGameStateChanged(oldState, newState)
 	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
 		while not ABGS.GetTimeRemainingInState() do Task.Wait() end -- Wait for the state to have a timer
-		local delay = ABGS.GetTimeRemainingInState() - 8 
+		local delay = ABGS.GetTimeRemainingInState() - LOBBY_REBALANCE_TIME
 		Task.Wait(delay)
 		ClearCachedPlayerValues()
 		DoRebalance()
