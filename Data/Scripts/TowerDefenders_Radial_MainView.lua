@@ -18,8 +18,13 @@ function Close(view)
 end
 
 function OnNetworkPropertyChanged(obj, property)
-	local value = obj:GetCustomProperty(property)
-	
+	if(property == "GameType") then
+		LoadRadialComms()
+	end
+end
+
+function LoadRadialComms()
+local value = DynamicCapturePoints:GetCustomProperty("GameType")	
 	if(not view) then
 		view = RadialView.New(MENU_UI,SEGMENT_ASSET,PARTIAL_SEGMENTS_DATA,0)
 		LOCAL_PLAYER.clientUserData.radialMenu = view
@@ -90,7 +95,12 @@ function OnNetworkPropertyChanged(obj, property)
 	end)
 	
 	end
-	
+end
+
+function OnPlayerJoined(player)
+	if(player == LOCAL_PLAYER) then
+		LoadRadialComms()
+	end
 end
 
 function OnPlayerLeft(player)
@@ -104,3 +114,4 @@ end
 
 DynamicCapturePoints.networkedPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
+Game.playerJoinedEvent:Connect(OnPlayerJoined)

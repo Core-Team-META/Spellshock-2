@@ -124,7 +124,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1755,7 +1755,7 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
-      Y: 6000
+      Y: 3060
     }
     Rotation {
     }
@@ -1868,7 +1868,7 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
-      Y: 4000
+      Y: 2040
     }
     Rotation {
     }
@@ -1981,7 +1981,7 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
-      Y: 2000
+      Y: 1020
     }
     Rotation {
     }

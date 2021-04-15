@@ -91,7 +91,7 @@ function Tick(dt)
         return
     end
 
-    local position = Vector3.New(500, (imageIndex - 1) * -2000, 0)
+    local position = Vector3.New(600, (imageIndex - 1) * -1020, 0)
     PIVOT:MoveTo(position, 0.2, true)
 
     for index, button in ipairs(JUMP_BUTTONS) do
