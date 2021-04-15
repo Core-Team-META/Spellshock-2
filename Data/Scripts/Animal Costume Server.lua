@@ -106,6 +106,8 @@ function Tick(deltaTime)
 			if ClassEquipmentReference then
 				local classEquipment = World.SpawnAsset(ClassEquipmentReference)
 				local classID = classEquipment:GetCustomProperty("ClassID")
+				local costumeID = classEquipment:GetCustomProperty("OID")
+				classID = classID or costumeID
 				if classID and classID > 0 then
 					local oId = GetCurrentCosmeticId(_Owner, classID, 8)
 					local qId = GetCurrentCosmeticId(_Owner, classID, 1)
@@ -117,6 +119,12 @@ function Tick(deltaTime)
 					classEquipment:SetNetworkedCustomProperty("EID", eId)
 					classEquipment:SetNetworkedCustomProperty("RID", rId)
 					classEquipment:SetNetworkedCustomProperty("TID", tId)
+				elseif costumeID then
+					classID = _Owner:GetResource("CLASS_MAP") 
+					classID = classID > 0 and classID or 1
+					local oId = GetCurrentCosmeticId(_Owner, classID, 8)
+					classEquipment:SetNetworkedCustomProperty("OID", oId)
+					classEquipment:SetNetworkedCustomProperty("ClassID", classID)
 				end
 				classEquipment:Equip(_Owner)
 			end
