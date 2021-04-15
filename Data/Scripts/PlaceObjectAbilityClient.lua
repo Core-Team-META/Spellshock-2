@@ -1,7 +1,8 @@
--- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Original Author: Chris - (https://www.coregames.com/user/d97586e1f850481da13ee26d5cbddc02)
+-- Modified by: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
 -- Modified by: standardcombo (https://www.coregames.com/user/b4c6e32137e54571814b5e8f27aa2fcd)
--- Date: 04/02/2021
--- Version: 0.0.1
+-- Date: 04/15/2021
+-- Version: 0.1.1
 --===========================================================================================
 local AS = require(script:GetCustomProperty("API_Spectator"))
 local function META_AP()
