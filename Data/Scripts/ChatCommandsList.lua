@@ -18,7 +18,8 @@ local chickenSuits = {
     [2] = script:GetCustomProperty("ChickenSuit2"),
     [3] = script:GetCustomProperty("ChickenSuit3"),
     [4] = script:GetCustomProperty("ChickenSuit4"),
-    [5] = script:GetCustomProperty("ChickenSuit5")
+    [5] = script:GetCustomProperty("ChickenSuit5"),
+    [6] = script:GetCustomProperty("ChickenSuit6")
 }
 
 local function ReturnPlayerByName(Name)
@@ -331,7 +332,8 @@ commands = {
 			if target and not target.isDead and not target.serverUserData.isAnimorphed then
                 print("[Admin] " .. player.name .. " chickened " .. tostring(target.name))
 				target.serverUserData.isAnimorphed = true
-                local chickenSuit = chickenSuits[math.random(1, #chickenSuits-1)]
+                local randomChicken = math.random(1, #chickenSuits)
+                local chickenSuit = chickenSuits[randomChicken]
 				local newCostume = META_AP().SpawnAsset(chickenSuit)
                 if not newCostume then return end
 				newCostume:SetScale(newCostume:GetScale() * 1.5)
@@ -348,7 +350,7 @@ commands = {
         adminRank = AdminData.AdminRanks.Admin,
     },
 
---[[ 
+
     ["/addscore"] = {
         OnCommandCalledClient = function (player, message)
         end,
@@ -385,7 +387,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
- ]]
+
 }
 
 return commands
