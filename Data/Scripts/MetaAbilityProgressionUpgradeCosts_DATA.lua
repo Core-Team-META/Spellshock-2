@@ -12,12 +12,12 @@ local API = {
         reqGold = 700
     },
     [4] = {
-        reqXP = 250,
+        reqXP = 225,
         reqGold = 2500
     },
     [5] = {
         reqXP = 350,
-        reqGold = 4000
+        reqGold = 4500
     },
     [6] = {
         reqXP = 500,
