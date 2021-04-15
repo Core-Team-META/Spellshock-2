@@ -3,7 +3,7 @@
 -- Date: 04/02/2021
 -- Version: 0.0.1
 --===========================================================================================
-
+local AS = require(script:GetCustomProperty("API_Spectator"))
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
@@ -89,6 +89,9 @@ function SetPreviewing(value)
 			previewScale = Vector3.New(CoreMath.Round(radius / 50, 3)) --Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 		end
 
+		lastValidPlacement.position = SpecialAbility.owner:GetWorldPosition() - Vector3.New(0,0,-50)
+		lastValidPlacement.rotation = SpecialAbility.owner:GetWorldRotation()
+
 		local ObjectTemplate
 		if PreviewObjectTemplate then
 			ObjectTemplate = PreviewObjectTemplate
@@ -118,12 +121,8 @@ end
 function OnBindingPressed(player, binding)
 	if not isPreviewing and binding == AbilityBinding and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 		SetPreviewing(true)
-		lastValidPlacement = {}
-	elseif
-		isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and Object.IsValid(objectHalogram) and
-			lastValidPlacement.position and
-			lastValidPlacement.rotation
-	 then
+	elseif isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and not AS.IsViewingMap()
+	and Object.IsValid(objectHalogram) and lastValidPlacement.position and lastValidPlacement.rotation then
 		SpecialAbility:Activate()
 		Task.Wait()
 		SetPreviewing(false)
@@ -136,6 +135,7 @@ function OnSpecialAbilityCast(thisAbility)
 	-- Get the target data, to modify it before it's sent over the network
 	local targetData = thisAbility:GetTargetData()
 	-- Position
+	--print(">> Placement: "..tostring(lastValidPlacement.position))
 	targetData:SetHitPosition(lastValidPlacement.position)
 	-- Rotation
 	local r = lastValidPlacement.rotation
@@ -235,7 +235,6 @@ function CalculatePlacement()
 	local forwardVector = playerViewRotation * Vector3.FORWARD
 	
 	local edgeOfRange = playerViewPosition + forwardVector * PlacementRange
-	
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 	
 	local resultPosition, resultNormal, resultIsVisibleInHierarchy
@@ -246,13 +245,16 @@ function CalculatePlacement()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
-		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
+		hr = World.Raycast(edgeOfRange, edgeOfRange - Vector3.New(0,0,100000), {ignorePlayers = true})
 		if hr ~= nil and hr.other ~= nil then
 			resultPosition = hr:GetImpactPosition()
 			resultNormal = hr:GetImpactNormal()
 			resultIsVisibleInHierarchy = hr.other:IsVisibleInHierarchy()
-		else
-			return nil
+		elseif SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) then
+			--hr = World.Raycast(SpecialAbility.owner:GetWorldPosition(), SpecialAbility.owner:GetWorldPosition() - Vector3.New(0,0,10000), {ignorePlayers = true})
+			resultPosition = SpecialAbility.owner:GetWorldPosition()
+			resultNormal = Vector3.UP
+			resultIsVisibleInHierarchy = true
 		end
 	end
 	-- Now, do a final raycast from the player to the target point, to check for walls
@@ -284,7 +286,7 @@ function Tick(deltaTime)
 		end
 	end
 
-	if objectHalogram and Object.IsValid(objectHalogram) then
+	if objectHalogram and Object.IsValid(objectHalogram) and not AS.IsViewingMap() then
 		if SpecialAbility.owner == nil or LOCAL_PLAYER.isDead then
 			objectHalogram:Destroy()
 			objectHalogram = nil
