@@ -15,10 +15,10 @@ end
 -- CUSTOM Chicken Suit
 local chickenSuits = {
     [1] = script:GetCustomProperty("ChickenSuit1"),
-    [2] =script:GetCustomProperty("ChickenSuit2"),
-    [3] =script:GetCustomProperty("ChickenSuit3"),
-    [4] =script:GetCustomProperty("ChickenSuit4"),
-    [5] =script:GetCustomProperty("ChickenSuit5")
+    [2] = script:GetCustomProperty("ChickenSuit2"),
+    [3] = script:GetCustomProperty("ChickenSuit3"),
+    [4] = script:GetCustomProperty("ChickenSuit4"),
+    [5] = script:GetCustomProperty("ChickenSuit5")
 }
 
 local function ReturnPlayerByName(Name)
