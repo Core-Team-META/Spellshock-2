@@ -2441,7 +2441,7 @@ Objects {
       }
     }
     Text {
-      Label: "PRESS P\" TO GO TO THE PERK SHOP. PERKS ARE PURCHASED WITH CORE CREDITS."
+      Label: "PRESS \"P\" TO GO TO THE PERK SHOP. PERKS ARE PURCHASED WITH CORE CREDITS."
       Color {
         R: 1
         G: 0.783841074
@@ -2978,7 +2978,7 @@ Objects {
   }
   Control {
     Width: 1
-    Height: 277
+    Height: 294
     UIX: 336.04718
     UIY: 229.871185
     RenderTransformPivot {
