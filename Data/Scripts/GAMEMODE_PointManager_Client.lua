@@ -45,50 +45,6 @@ local function CleanUp()
         end
     end
 end
-
-
-local function AddNewPoints()
-    Task.Wait(0.2)
-    for _, interest in ipairs(SPAWNED_OBJECTS:GetChildren()) do
-		if(interest:GetCustomProperty("Team") == LOCAL_PLAYER.team) then
-	        if not points[interest] then
-	            local shouldShow = interest:GetCustomProperty("ShouldShow")
-	            local INTEREST_ICON = interest:GetCustomProperty("POI")
-	            if shouldShow and INTEREST_ICON then
-	                local indicator = World.SpawnAsset(INTEREST_ICON, {parent = CONTAINER})
-	                points[interest] = indicator
-	                indicator.visibility = Visibility.INHERIT
-	                local pointData = indicator.clientUserData
-	                pointData.needsUpdate = false	              
-	                pointData.ICON = indicator:GetCustomProperty("ICON"):WaitForObject()
-	                
-	                -- Commenting out the countdown stuff in case we wanted to reintroduce it at some point
-	                --pointData.COUNT_DOWN_TEXT = indicator:GetCustomProperty("COUNT_DOWN_TEXT"):WaitForObject()
-	                --pointData.LEFT_INNER = indicator:GetCustomProperty("LEFT_INNER"):WaitForObject()
-	                --pointData.RIGHT_INNER = indicator:GetCustomProperty("RIGHT_INNER"):WaitForObject()
-	                --pointData.LEFT_INNER_IMAGE = pointData.LEFT_INNER:GetChildren()[1]
-	                --pointData.LEFT_IMAGE = indicator:GetCustomProperty("LEFT_IMAGE"):WaitForObject()
-	                --pointData.RIGHT_IMAGE = indicator:GetCustomProperty("RIGHT_IMAGE"):WaitForObject()
-	                --pointData.RIGHT_INNER_IMAGE = pointData.RIGHT_INNER:GetChildren()[1]
-	
-	                --pointData.LEFT_INNER.visibility = Visibility.FORCE_OFF
-	                --pointData.RIGHT_INNER.visibility = Visibility.FORCE_OFF
-	           	 	--indicator.clientUserData.needsUpdate = true
-	            end
-	        end
-	    end
-    end
-end
-
-local function RemovePoint(object)
-    for point, indicator in pairs(points) do
-        if indicator and object == point and Object.IsValid(indicator) then
-            indicator:Destroy()
-            points[indicator] = nil
-        end
-    end
-end
-
 local function SetTeamColor(point, indicator)
     --if not pointTeam then
     local str = point:GetCustomProperty("DATA")
@@ -165,6 +121,52 @@ local function SetTeamColor(point, indicator)
     end
 end
 
+local function AddNewPoints()
+    Task.Wait(0.2)
+    for _, interest in ipairs(SPAWNED_OBJECTS:GetChildren()) do
+		if(interest:GetCustomProperty("Team") == LOCAL_PLAYER.team) then
+	        if not points[interest] then
+	            local shouldShow = interest:GetCustomProperty("ShouldShow")
+	            local INTEREST_ICON = interest:GetCustomProperty("POI")
+	            if shouldShow and INTEREST_ICON then
+	                local indicator = World.SpawnAsset(INTEREST_ICON, {parent = CONTAINER})
+	                points[interest] = indicator
+	                indicator.visibility = Visibility.INHERIT
+	                local pointData = indicator.clientUserData
+	                pointData.needsUpdate = false	              
+	                pointData.ICON = indicator:GetCustomProperty("ICON"):WaitForObject()
+	                local circle = indicator:FindChildByName("SolidCircle")
+	                if(Object.IsValid(circle)) then
+						circle:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
+					end
+	                -- Commenting out the countdown stuff in case we wanted to reintroduce it at some point
+	                --pointData.COUNT_DOWN_TEXT = indicator:GetCustomProperty("COUNT_DOWN_TEXT"):WaitForObject()
+	                --pointData.LEFT_INNER = indicator:GetCustomProperty("LEFT_INNER"):WaitForObject()
+	                --pointData.RIGHT_INNER = indicator:GetCustomProperty("RIGHT_INNER"):WaitForObject()
+	                --pointData.LEFT_INNER_IMAGE = pointData.LEFT_INNER:GetChildren()[1]
+	                --pointData.LEFT_IMAGE = indicator:GetCustomProperty("LEFT_IMAGE"):WaitForObject()
+	                --pointData.RIGHT_IMAGE = indicator:GetCustomProperty("RIGHT_IMAGE"):WaitForObject()
+	                --pointData.RIGHT_INNER_IMAGE = pointData.RIGHT_INNER:GetChildren()[1]
+	
+	                --pointData.LEFT_INNER.visibility = Visibility.FORCE_OFF
+	                --pointData.RIGHT_INNER.visibility = Visibility.FORCE_OFF
+	           	 	--indicator.clientUserData.needsUpdate = true
+	           	 end
+	        end
+	    end
+    end
+end
+
+local function RemovePoint(object)
+    for point, indicator in pairs(points) do
+        if indicator and object == point and Object.IsValid(indicator) then
+            indicator:Destroy()
+            points[indicator] = nil
+        end
+    end
+end
+
+
 local function UpdatePoint(point, indicator)
     local pointPos = point:GetWorldPosition()
     pointPos.z = pointPos.z + HEIGHT_OFFSET
@@ -212,9 +214,9 @@ local function UpdatePoint(point, indicator)
         indicator.x = (viewRight .. directionToPoint) * (screenSize.x - 110) / 2
         indicator.y = screenSize.y / 2 - MARGIN
     end
-    if Object.IsValid(point) and Object.IsValid(indicator) then
-        SetTeamColor(point, indicator)
-    end
+    --if Object.IsValid(point) and Object.IsValid(indicator) then
+    --    SetTeamColor(point, indicator)
+    --end
 end
 
 function HasPoint(interest)
