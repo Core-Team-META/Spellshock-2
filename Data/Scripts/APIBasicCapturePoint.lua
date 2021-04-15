@@ -147,8 +147,6 @@ function API.GetTeamScoreRate(team)
 
 	-- Determine what the scoreRate should be
 	if ownedPoints == 5 then
-		scoreRate = 6
-	elseif ownedPoints == 4 then
 		scoreRate = 4
 	else
 		scoreRate = 3
