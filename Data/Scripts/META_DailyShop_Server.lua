@@ -87,10 +87,11 @@ local function GenerateShopItems(player, forced)
         tempTbl[i] = CalculateRewardSlot(player)
         tempTbl[i].amount = tempTbl[i].amount * 2
     end
-    local currentTime = os.time(os.date("!*t"))
     player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH or 0
+
+    local currentTime = os.time(os.date("!*t"))
     local refreshTime = currentTime + (24 * 60 * 60)
-    --(24 * 60 * 60)
+
     if forced then
         player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1
         refreshTime = player:GetResource("DS_REFRESHTIME")
@@ -115,7 +116,7 @@ end
 --@param object player
 --@param table data
 function OnLoadPlayerDailyShop(player, data)
-    if data and data["TIME"] and data["TIME"].T and data["TIME"].V == 1 and not Has24HoursPassed(data["TIME"].T) then
+    if data and data["TIME"] and data["TIME"].T and tonumber(data["TIME"].V) == 1 and not Has24HoursPassed(data["TIME"].T) then
         dailyRewards[player.id] = data
         player.serverUserData.DS_REFRESH = data["TIME"].R or 0
         player:SetResource("DS_REFRESHTIME", CoreMath.Round(data["TIME"].T - os.time(os.date("!*t")) + time()))
@@ -127,6 +128,7 @@ end
 --@param object player
 function OnPlayerLeft(player)
     OnDeletePlayerDataObject(player)
+    --UTIL.TablePrint(dailyRewards[player.id])
     dailyRewards[player.id] = nil
 end
 
