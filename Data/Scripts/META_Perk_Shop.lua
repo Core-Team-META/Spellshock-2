@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/4/6
@@ -93,7 +93,7 @@ bundles[#bundles + 1] = {
     perk = GoldPack3,
     storageId = CONST.PERK_STORAGE_KEYS.GOLD_PACK3,
     resourceName = CONST.GOLD,
-    reward = 25000
+    reward = 30000
 }
 bundles[#bundles + 1] = {
     perk = GoldPack4,
