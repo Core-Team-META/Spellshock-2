@@ -90,3 +90,4 @@ end
 Events.ConnectForPlayer("GroupUp", GroupUp)
 Events.ConnectForPlayer("Goto", Goto)
 Events.ConnectForPlayer("OpenComms", OpenComms)
+Events.ConnectForPlayer("CloseComms", CloseComms)

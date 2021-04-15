@@ -6,7 +6,7 @@ while not LOCAL_PLAYER.clientUserData.radialMenu do Task.Wait() end
 local radialView = LOCAL_PLAYER.clientUserData.radialMenu
 
 local AllowedPlayers = {
-	"Morticai", "Ooccoo", "Rolok", "Bigglebuns", "Buckmonster", "Basilisk", "ManticoreGames",
+	"Morticai", "Ooccoo", "Rolok", "Bigglebuns", "Buckmonster", "Basilisk", "ManticoreGames"
 }
 
 local viewStatus = false
@@ -22,6 +22,7 @@ function OnBindingPressed(player, binding)
 			viewStatus = true
 		else
 			radialView:Close()
+			Events.BroadcastToServer("CloseComms")
 			viewStatus = false
 		end
 	end

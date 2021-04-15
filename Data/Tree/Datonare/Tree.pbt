@@ -343,6 +343,7 @@ Objects {
   }
   ParentId: 1252045471737945394
   ChildIds: 8729322646067135448
+  ChildIds: 8269325526331056550
   UnregisteredParameters {
     Overrides {
       Name: "cs:Menu"
@@ -362,6 +363,18 @@ Objects {
         SelfId: 8729322646067135448
       }
     }
+    Overrides {
+      Name: "cs:PartialSegments"
+      ObjectReference {
+        SelfId: 8269325526331056550
+      }
+    }
+    Overrides {
+      Name: "cs:DynamicCapturePoints"
+      ObjectReference {
+        SelfId: 14570647703378092628
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -376,6 +389,35 @@ Objects {
     ScriptAsset {
       Id: 14915196541471507362
     }
+  }
+}
+Objects {
+  Id: 8269325526331056550
+  Name: "PartialSegments"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9614222007564886776
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "PartialSegments"
   }
 }
 Objects {
