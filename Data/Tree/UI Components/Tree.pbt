@@ -14896,7 +14896,7 @@ Objects {
   ChildIds: 3379140545594169613
   ChildIds: 18093620829905408944
   ChildIds: 1268988796100474884
-  ChildIds: 10649538141768359779
+  ChildIds: 15984325759003544911
   ChildIds: 10419566582551390275
   ChildIds: 8025399032197385219
   UnregisteredParameters {
@@ -14915,7 +14915,7 @@ Objects {
     Overrides {
       Name: "cs:UpgradePanel"
       ObjectReference {
-        SelfId: 10649538141768359779
+        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -15534,7 +15534,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10649538141768359779
+  Id: 15984325759003544911
   Name: "UPGRADE"
   Transform {
     Location {
@@ -15549,7 +15549,7 @@ Objects {
     }
   }
   ParentId: 1804652100783243884
-  ChildIds: 12365874773469645645
+  ChildIds: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15585,12 +15585,12 @@ Objects {
   }
 }
 Objects {
-  Id: 12365874773469645645
+  Id: 17636248757288882306
   Name: "UI Panel"
   Transform {
     Location {
-      X: 3155.33984
-      Y: -39106.7578
+      X: 3155.35156
+      Y: -39106.8125
       Z: -6969.58887
     }
     Rotation {
@@ -15602,15 +15602,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10649538141768359779
-  ChildIds: 9878081927860059190
-  ChildIds: 16646728276444879373
-  ChildIds: 15853486781141414489
-  ChildIds: 4499229339260662818
-  ChildIds: 705845115737134227
-  ChildIds: 9706999383929273078
-  ChildIds: 4605445334817009727
-  ChildIds: 2925931218151208796
+  ParentId: 15984325759003544911
+  ChildIds: 4406334572582703272
+  ChildIds: 9336014404339672291
+  ChildIds: 7207003407788392048
+  ChildIds: 1213592387889151342
+  ChildIds: 4432769689996950401
+  ChildIds: 10937681880729792296
+  ChildIds: 6962023004287253917
+  ChildIds: 9671564153499777811
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15646,7 +15646,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2925931218151208796
+  Id: 9671564153499777811
   Name: "UI Image"
   Transform {
     Location {
@@ -15662,7 +15662,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
+  ParentId: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15676,7 +15676,7 @@ Objects {
     Width: 20
     Height: 41
     UIX: -9.39913177
-    UIY: -62.6166649
+    UIY: -62.6166687
     RotationAngle: 270
     RenderTransformPivot {
       Anchor {
@@ -15710,7 +15710,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4605445334817009727
+  Id: 6962023004287253917
   Name: "UI Image"
   Transform {
     Location {
@@ -15726,7 +15726,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
+  ParentId: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15772,7 +15772,64 @@ Objects {
   }
 }
 Objects {
-  Id: 9706999383929273078
+  Id: 10937681880729792296
+  Name: "UI Panel"
+  Transform {
+    Location {
+      X: 0.0195312649
+      Y: 0.0292968638
+    }
+    Rotation {
+      Yaw: -3.07358496e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17636248757288882306
+  ChildIds: 11351587522904642348
+  ChildIds: 16378104878626054731
+  ChildIds: 11447502143276827198
+  ChildIds: 11325245478545026504
+  ChildIds: 17992522908130374725
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIX: 7.13524294
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17992522908130374725
   Name: "Upgrade_SHADOW"
   Transform {
     Location {
@@ -15789,8 +15846,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
-  ChildIds: 10831419011402379930
+  ParentId: 10937681880729792296
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15803,24 +15859,28 @@ Objects {
   Control {
     Width: 70
     Height: 17
-    UIX: 10.7194586
-    UIY: 0.226305366
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "UPGRADE"
+      Label: "Upgrade"
       Color {
+        R: 1
+        G: 0.633333385
         A: 1
       }
-      Size: 13
+      Size: 15
       Justification {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:none:none"
       }
     }
     AnchorLayout {
@@ -15838,16 +15898,16 @@ Objects {
   }
 }
 Objects {
-  Id: 10831419011402379930
-  Name: "Upgrade"
+  Id: 11325245478545026504
+  Name: "Upgrade_SHADOW"
   Transform {
     Location {
-      X: 3155.36328
-      Y: -39106.8438
+      X: 3155.35547
+      Y: -39106.8203
       Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423248
+      Yaw: -136.423233
     }
     Scale {
       X: 1
@@ -15855,7 +15915,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9706999383929273078
+  ParentId: 10937681880729792296
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15868,26 +15928,30 @@ Objects {
   Control {
     Width: 70
     Height: 17
-    UIX: -1.0218991
-    UIY: -1.8839457
+    UIX: 2
+    UIY: 2
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "UPGRADE"
+      Label: "Upgrade"
       Color {
-        R: 0.97
-        G: 0.539602697
-        A: 1
+        R: 0.010416667
+        G: 0.00659722276
+        A: 0.162
       }
-      Size: 13
+      Size: 15
       Justification {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:none:none"
       }
     }
     AnchorLayout {
@@ -15905,7 +15969,220 @@ Objects {
   }
 }
 Objects {
-  Id: 705845115737134227
+  Id: 11447502143276827198
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10937681880729792296
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: 2
+    UIY: -2
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Upgrade"
+      Color {
+        R: 0.010416667
+        G: 0.00659722276
+        A: 0.162
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:none:none"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16378104878626054731
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10937681880729792296
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -2
+    UIY: 2
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Upgrade"
+      Color {
+        R: 0.010416667
+        G: 0.00659722276
+        A: 0.162
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:none:none"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11351587522904642348
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10937681880729792296
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -2
+    UIY: -2
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Upgrade"
+      Color {
+        R: 0.010416667
+        G: 0.00659722276
+        A: 0.162
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:none:none"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 4432769689996950401
   Name: "BG_FADE"
   Transform {
     Location {
@@ -15919,7 +16196,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
+  ParentId: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15967,7 +16244,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4499229339260662818
+  Id: 1213592387889151342
   Name: "BG_FADE"
   Transform {
     Location {
@@ -15981,7 +16258,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
+  ParentId: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -16028,7 +16305,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15853486781141414489
+  Id: 7207003407788392048
   Name: "BG_FADE"
   Transform {
     Location {
@@ -16042,7 +16319,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
+  ParentId: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -16089,7 +16366,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16646728276444879373
+  Id: 9336014404339672291
   Name: "BG_FADE"
   Transform {
     Location {
@@ -16103,7 +16380,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
+  ParentId: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -16148,7 +16425,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9878081927860059190
+  Id: 4406334572582703272
   Name: "BG_FADE"
   Transform {
     Location {
@@ -16161,7 +16438,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12365874773469645645
+  ParentId: 17636248757288882306
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
