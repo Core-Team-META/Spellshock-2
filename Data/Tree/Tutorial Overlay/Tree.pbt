@@ -45,7 +45,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6169,7 +6169,7 @@ Objects {
       }
     }
     Text {
-      Label: "INFORMATIONA ABOUT YOUR EQUIPPED CLASS IS DISPLAYED HERE. YOUR CLASS RANK WILL INCREASE AS YOU PLAY THE GAME, INCREASING MAX HEALTH AND HEALTH REGEN. HIGHER RANKS UNLOCK COSMETIC ITEMS."
+      Label: "INFORMATION ABOUT YOUR EQUIPPED CLASS IS DISPLAYED HERE. YOUR CLASS RANK WILL INCREASE AS YOU PLAY THE GAME, INCREASING MAX HEALTH AND HEALTH REGEN. HIGHER RANKS UNLOCK COSMETIC ITEMS."
       Color {
         R: 1
         G: 0.783841074
