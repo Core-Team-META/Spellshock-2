@@ -49,6 +49,9 @@ JUMP_BUTTONS = GetJumpButtons(JUMP_BUTTONS)
 -----------------------------
 
 SCREEN_GROUP:AttachToLocalView()
+local screenPos = SCREEN_GROUP:GetPosition()
+screenPos.x = screenPos.x + 25
+SCREEN_GROUP:SetPosition(screenPos)
 
 SCREEN_GROUP.visibility = Visibility.FORCE_OFF
 local isEnabled = false
@@ -88,7 +91,7 @@ function Tick(dt)
         return
     end
 
-    local position = Vector3.New(500, (imageIndex - 1) * -1000, 0)
+    local position = Vector3.New(500, (imageIndex - 1) * -2000, 0)
     PIVOT:MoveTo(position, 0.2, true)
 
     for index, button in ipairs(JUMP_BUTTONS) do

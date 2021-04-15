@@ -1680,6 +1680,7 @@ Objects {
   Name: "ScreenGroup"
   Transform {
     Location {
+      X: 16.2626953
     }
     Rotation {
     }
@@ -1754,7 +1755,7 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
-      Y: 3000
+      Y: 6000
     }
     Rotation {
     }
@@ -1867,7 +1868,7 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
-      Y: 2000
+      Y: 4000
     }
     Rotation {
     }
@@ -1980,7 +1981,7 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
-      Y: 1000
+      Y: 2000
     }
     Rotation {
     }
