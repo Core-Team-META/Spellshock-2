@@ -24,6 +24,9 @@ function OnMenuChanged(oldMenu, newMenu)
             BottomRightPanel.visibility = Visibility.INHERIT
         end
         BottomLeftPanel.visibility = Visibility.INHERIT
+    elseif newMenu == _G.MENU_TABLE["ClassSelection"] or newMenu == _G.MENU_TABLE["ClassAbilities"] then
+        BottomLeftPanel.visibility = Visibility.INHERIT
+        BottomRightPanel.visibility = Visibility.FORCE_OFF
 	else -- hide
 		BottomRightPanel.visibility = Visibility.FORCE_OFF
         BottomLeftPanel.visibility = Visibility.FORCE_OFF
