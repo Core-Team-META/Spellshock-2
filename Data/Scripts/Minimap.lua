@@ -28,6 +28,8 @@ local BORDER_SIZE = script:GetCustomProperty("BorderSize")
 local PLAYER_PANEL = script:GetCustomProperty("PlayerPanel"):WaitForObject()
 local LOCAL_PLAYER_PANEL = script:GetCustomProperty("LocalPlayerPanel"):WaitForObject()
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 --local WORLD_SHAPES = script:GetCustomProperty("WorldShapes"):WaitForObject()
 
 --[[local worldShapes = ROOT:FindDescendantsByType("StaticMesh")
@@ -188,10 +190,12 @@ function Tick()
 		end
 	end
 
-	if ABGS.IsGameStateManagerRegistered() and _G.CurrentMenu and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and 
+	if ABGS.IsGameStateManagerRegistered() and _G.CurrentMenu and 
 	(ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY or ABGS.GetGameState() == ABGS.GAME_STATE_ROUND) and 
-	not AS.IsRespawning() and not AS.IsViewingMap() and not AS.IsJoiningMidgame() then
+	not AS.IsRespawning() and not AS.IsViewingMap() and not AS.IsJoiningMidgame() and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.tutorialActive)  then
+	
 		ROOT.visibility = Visibility.INHERIT
+
 	else
 		ROOT.visibility = Visibility.FORCE_OFF
 	end

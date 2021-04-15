@@ -72,8 +72,10 @@ function OnBindingPressed(whichPlayer, binding)
 		--print(">> TUTORIAL MENU")
 		local newState
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+			LOCAL_PLAYER.clientUserData.tutorialActive = true
 			newState = _G.MENU_TABLE["Tutorial"]
 		elseif _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] then
+			LOCAL_PLAYER.clientUserData.tutorialActive = nil
 			newState = _G.MENU_TABLE["NONE"]
 		else
 			return
