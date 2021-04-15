@@ -1,6 +1,93 @@
 Name: "Kurtis"
 RootId: 16625053971837530583
 Objects {
+  Id: 10263716687303919574
+  Name: "META_AFK_Component"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16625053971837530583
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:GameId"
+      String: "9abe5f/spellshock-2-afk-zone"
+    }
+    Overrides {
+      Name: "cs:TimeUntilKick"
+      Int: 120
+    }
+    Overrides {
+      Name: "cs:DisplayWarning"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:AfkWarningTime"
+      Int: 15
+    }
+    Overrides {
+      Name: "cs:KeybindWhitelist"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:TimePerTick"
+      Int: 1
+    }
+    Overrides {
+      Name: "cs:PlayerWhitelist"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:DisplayWarning:tooltip"
+      String: "Set to true AFK players will get a countdown notification before they are kicked."
+    }
+    Overrides {
+      Name: "cs:Enabled:tooltip"
+      String: "Make sure this is checked to enable the component."
+    }
+    Overrides {
+      Name: "cs:GameId:tooltip"
+      String: "Game id of where afk players should be sent. Defaults to Core Plaza."
+    }
+    Overrides {
+      Name: "cs:TimeUntilKick:tooltip"
+      String: "Time in seconds before a player is considered AFK and kicked."
+    }
+    Overrides {
+      Name: "cs:AfkWarningTime:tooltip"
+      String: "Amount of time in seconds a player will be given a countdown prior to being kicked, if DisplayWarning is set to true."
+    }
+    Overrides {
+      Name: "cs:KeybindWhitelist:tooltip"
+      String: "If enabled a currently idle player will only no longer count as idle until a whitelist keybind is pressed."
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "AFK_Component"
+  }
+}
+Objects {
   Id: 14710332786633172429
   Name: "UI Container"
   Transform {
@@ -15,6 +102,7 @@ Objects {
     }
   }
   ParentId: 16625053971837530583
+  ChildIds: 8589364593371973335
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -46,6 +134,48 @@ Objects {
           Value: "mc:euianchor:topleft"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 8589364593371973335
+  Name: "RadialSegment"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14710332786633172429
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11197490735130221972
+      value {
+        Overrides {
+          Name: "Name"
+          String: "RadialSegment"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16326530563404916797
     }
   }
 }

@@ -7,7 +7,7 @@ Assets {
       RootId: 15370437023255049173
       Objects {
         Id: 15370437023255049173
-        Name: "Tank Elf Boulder Throw Projectile Fire"
+        Name: "Tank Orc Boulder Throw Projectile Fire"
         Transform {
           Scale {
             X: 1
@@ -40,6 +40,7 @@ Assets {
             }
           }
         }
+        Lifespan: 6
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -315,7 +316,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -430,7 +431,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {

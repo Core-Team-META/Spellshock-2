@@ -8,6 +8,24 @@ Assets {
   }
 }
 Assets {
+  Id: 17696531540460943644
+  Name: "Fantasy Trophy 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_003"
+  }
+}
+Assets {
+  Id: 17289448223043935888
+  Name: "UI Gradient Rectangular 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_002"
+  }
+}
+Assets {
   Id: 16759978556497479664
   Name: "Center Arrow 005 Wedge"
   PlatformAssetType: 9
@@ -71,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12978135121763375046
+  Name: "Fantasy Craft Stone 028"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Stone_028"
+  }
+}
+Assets {
   Id: 12631208036329707850
   Name: "Fantasy Ability Purple 036"
   PlatformAssetType: 9
@@ -86,6 +113,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Gem_005"
+  }
+}
+Assets {
+  Id: 12175762712311518774
+  Name: "Survival First Aid 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Survival_Equip_FirstAid_002"
   }
 }
 Assets {
@@ -179,6 +215,24 @@ Assets {
   }
 }
 Assets {
+  Id: 7387673503276873905
+  Name: "UI Basic Shape Square"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_Square"
+  }
+}
+Assets {
+  Id: 7294692278211928688
+  Name: "Unlock"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Urban_Icon_061"
+  }
+}
+Assets {
   Id: 6569410210520716887
   Name: "Fantasy Ability Teal 014"
   PlatformAssetType: 9
@@ -212,6 +266,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_020"
+  }
+}
+Assets {
+  Id: 4990637989068521051
+  Name: "Fantasy Ability Red 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_007"
   }
 }
 Assets {
@@ -266,6 +329,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_009"
+  }
+}
+Assets {
+  Id: 3031555368145541451
+  Name: "Fantasy Chest 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_003"
   }
 }
 Assets {

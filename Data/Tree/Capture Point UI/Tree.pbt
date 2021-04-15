@@ -31,7 +31,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ContestedMessage"
-      String: "ENEMIES PRESENT"
+      String: "Enemies Present!"
     }
     Overrides {
       Name: "cs:FriendlyColor"
@@ -99,13 +99,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 9056989470977300209
-    SubobjectId: 11347049515492703570
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
-    WasRoot: true
-  }
 }
 Objects {
   Id: 7895765569822440729
@@ -136,12 +129,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 7895765569822440729
-    SubobjectId: 10185829993762608826
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
   }
 }
 Objects {
@@ -192,12 +179,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 11934359013686954649
-    SubobjectId: 4996584153830990138
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
-  }
 }
 Objects {
   Id: 519909361420409257
@@ -217,7 +198,7 @@ Objects {
   ChildIds: 14609443402533045735
   ChildIds: 3806163934278572543
   ChildIds: 2203334349956171415
-  ChildIds: 2950563345152682948
+  ChildIds: 11556237253863272480
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -232,7 +213,7 @@ Objects {
   Control {
     Width: 400
     Height: 150
-    UIY: -140
+    UIY: -127.701096
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -253,16 +234,10 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 519909361420409257
-    SubobjectId: 16717120289739567626
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
-  }
 }
 Objects {
-  Id: 2950563345152682948
-  Name: "ContestedText"
+  Id: 11556237253863272480
+  Name: "Contested Text Panel"
   Transform {
     Location {
     }
@@ -276,6 +251,59 @@ Objects {
   }
   ParentId: 519909361420409257
   ChildIds: 1657366738582570864
+  ChildIds: 8264535637485811203
+  ChildIds: 6114065706750756703
+  ChildIds: 13114215628526086884
+  ChildIds: 6609770991142876872
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: -74.747879
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6609770991142876872
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -290,8 +318,6 @@ Objects {
   Control {
     Width: 200
     Height: 40
-    UIX: 2
-    UIY: 53
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -300,15 +326,18 @@ Objects {
     Text {
       Label: "ContestedText"
       Color {
-        R: 0.0299999714
-        G: 0.000596023805
-        A: 0.791
+        R: 1
+        A: 1
       }
       Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -324,11 +353,203 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 2950563345152682948
-    SubobjectId: 14428041308681977959
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
+}
+Objects {
+  Id: 13114215628526086884
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 40
+    UIX: 1
+    UIY: 1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "ContestedText"
+      Color {
+        A: 0.567000031
+      }
+      Size: 17
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6114065706750756703
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 40
+    UIX: -1
+    UIY: 1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "ContestedText"
+      Color {
+        A: 0.567000031
+      }
+      Size: 17
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8264535637485811203
+  Name: "ContestedText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11556237253863272480
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 40
+    UIX: 1
+    UIY: -1
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "ContestedText"
+      Color {
+        A: 0.567000031
+      }
+      Size: 17
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
   }
 }
 Objects {
@@ -345,7 +566,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2950563345152682948
+  ParentId: 11556237253863272480
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -360,8 +581,8 @@ Objects {
   Control {
     Width: 200
     Height: 40
-    UIX: -2
-    UIY: -1.17254639
+    UIX: -1
+    UIY: -1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -370,14 +591,17 @@ Objects {
     Text {
       Label: "ContestedText"
       Color {
-        R: 0.789999962
-        A: 1
+        A: 0.567000031
       }
       Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -392,12 +616,6 @@ Objects {
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 2950563345152682948
-    SubobjectId: 14428041308681977959
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
   }
 }
 Objects {
@@ -454,12 +672,6 @@ Objects {
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 2203334349956171415
-    SubobjectId: 18328492082285915444
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
   }
 }
 Objects {
@@ -523,12 +735,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 16754482831175254335
-    SubobjectId: 597804231238281884
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
-  }
 }
 Objects {
   Id: 2795031673989079821
@@ -591,12 +797,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 2795031673989079821
-    SubobjectId: 14267897188220553390
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
-  }
 }
 Objects {
   Id: 13075142405115967064
@@ -655,12 +855,6 @@ Objects {
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 13075142405115967064
-    SubobjectId: 6177828338089762299
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
   }
 }
 Objects {
@@ -724,12 +918,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 6703562890210891398
-    SubobjectId: 13677401783892786469
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
-  }
 }
 Objects {
   Id: 10766297364050520261
@@ -792,12 +980,6 @@ Objects {
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 10766297364050520261
-    SubobjectId: 8476232940598018918
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
   }
 }
 Objects {
@@ -864,12 +1046,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 3806163934278572543
-    SubobjectId: 15283536484261966428
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
-  }
 }
 Objects {
   Id: 15399021949484086650
@@ -934,12 +1110,6 @@ Objects {
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 3806163934278572543
-    SubobjectId: 15283536484261966428
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
   }
 }
 Objects {
@@ -1803,7 +1973,7 @@ Objects {
     Overrides {
       Name: "cs:ContestedText"
       ObjectReference {
-        SelfId: 2950563345152682948
+        SelfId: 11556237253863272480
       }
     }
   }
@@ -1820,12 +1990,6 @@ Objects {
     ScriptAsset {
       Id: 16482955611069593019
     }
-  }
-  InstanceHistory {
-    SelfId: 6429399724891288225
-    SubobjectId: 13398739294564669698
-    InstanceId: 6610135967179747994
-    TemplateId: 10840005683375302091
   }
 }
 Objects {
@@ -1858,13 +2022,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 2117647049914167800
-    SubobjectId: 11698519804033821645
-    InstanceId: 7820318464840177922
-    TemplateId: 14677087816454980018
-    WasRoot: true
-  }
 }
 Objects {
   Id: 10295276800436755102
@@ -1882,6 +2039,12 @@ Objects {
   }
   ParentId: 2117647049914167800
   ChildIds: 11035460064480176686
+  ChildIds: 3447265082562247552
+  ChildIds: 17395965750454647770
+  ChildIds: 2555836839541670904
+  ChildIds: 7680263082509659766
+  ChildIds: 17440107242901087067
+  ChildIds: 588169000312404710
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1895,11 +2058,297 @@ Objects {
   }
   NetworkContext {
   }
-  InstanceHistory {
-    SelfId: 10295276800436755102
-    SubobjectId: 3592239411772588203
-    InstanceId: 7820318464840177922
-    TemplateId: 14677087816454980018
+}
+Objects {
+  Id: 588169000312404710
+  Name: "Brass Hit Low Music Stinger 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 9700420677989277499
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 17440107242901087067
+  Name: "Cinematic Low Brass Bram Hit Music Stinger Kit 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_cinematiclowhornskit:38"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 553785167321958200
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 7680263082509659766
+  Name: "Evil Failure Low Brass Music Loop/Stinger Kit 01 "
+  Transform {
+    Location {
+      X: -23833.1016
+      Y: -31568.7637
+      Z: 6402.2085
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_evilfailurelowhornskit:43"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13297191547870213432
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 2555836839541670904
+  Name: "Japanese Heavy Taiko Drum Beat Music Stinger Set 01"
+  Transform {
+    Location {
+      X: -23009.2051
+      Y: -31660.457
+      Z: 6362.85303
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_heavy_taiko_beat_stinger_01:40"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 14826671335767096609
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 17395965750454647770
+  Name: "Orchestral Victory Achievement Music Stinger Set 01"
+  Transform {
+    Location {
+      X: -23326.3809
+      Y: -31329.4375
+      Z: 6356.98535
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_orchestralvictoryachievement_01:52"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10477657774098762667
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 3447265082562247552
+  Name: "Japanese Taiko Drum Quick Music Stinger Set 01"
+  Transform {
+    Location {
+      X: -23783.4258
+      Y: -31645.8242
+      Z: 6400.1123
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_quicktaikoaccentstinger_01:43"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4927819370716866759
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
   }
 }
 Objects {
@@ -1907,6 +2356,9 @@ Objects {
   Name: "CapturePointControlFeedback"
   Transform {
     Location {
+      X: -6402.28027
+      Y: -4374.99219
+      Z: 3589.22778
     }
     Rotation {
     }
@@ -1930,6 +2382,24 @@ Objects {
         Id: 11974742996071064388
       }
     }
+    Overrides {
+      Name: "cs:PointUncappedSFX"
+      AssetReference {
+        Id: 16110112929129872087
+      }
+    }
+    Overrides {
+      Name: "cs:PointLostSFX"
+      AssetReference {
+        Id: 18412587982388751784
+      }
+    }
+    Overrides {
+      Name: "cs:PointCapturedSFX"
+      AssetReference {
+        Id: 12418529147461123418
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1944,11 +2414,5 @@ Objects {
     ScriptAsset {
       Id: 12278046237934023350
     }
-  }
-  InstanceHistory {
-    SelfId: 11035460064480176686
-    SubobjectId: 2747140211805712411
-    InstanceId: 7820318464840177922
-    TemplateId: 14677087816454980018
   }
 }

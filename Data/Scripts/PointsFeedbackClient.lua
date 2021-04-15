@@ -16,6 +16,7 @@ until CP_API
 ------------------------------------------------------------------------------------------------------------------------
 local EaseUI = require(script:GetCustomProperty("EaseUI"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+local MPC_API = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 
 ------------------------------------------------------------------------------------------------------------------------
 -- CUSTOM SETTINGS
@@ -33,11 +34,22 @@ local pointsFeedbacKMainPanel = script:GetCustomProperty("PointsFeedbacKMainPane
 
 local localPlayer = Game.GetLocalPlayer()
 
+
+local playerClassXP = {
+	CP_API.GetClassLevel(localPlayer, CP_API.TANK),
+	CP_API.GetClassLevel(localPlayer, CP_API.MAGE),
+	CP_API.GetClassLevel(localPlayer, CP_API.HUNTER),
+	CP_API.GetClassLevel(localPlayer, CP_API.HEALER),
+	CP_API.GetClassLevel(localPlayer, CP_API.ASSASSIN)
+}
+
 local trackedResources = RESOURCES_TO_TRACK:GetChildren()
 local resourceTable = {}
 local originalValue = {}
+local reseting = false
 
 local function SetupTrackedResources()
+	reseting = true
 	for _, res in ipairs(trackedResources) do
 		originalValue[res.name] = localPlayer:GetResource(res.name) or 0
 
@@ -51,6 +63,7 @@ local function SetupTrackedResources()
 		}
 
 	end
+	reseting = false
 end
 
 SetupTrackedResources()
@@ -248,9 +261,8 @@ function CountThisTextUp(givenText, startingNumber, targetNumber, extra)
 
 			if startingNumber < targetNumber then
 				for i = startingNumber, targetNumber, math.ceil(math.abs(targetNumber - startingNumber) / 10) do
-					givenText.text = extra .. tostring(i)
 
-					SetChildrenText(givenText, givenText.text)
+					SetChildrenText(givenText, extra .. tostring(i))
 
 					Task.Wait(0.05)
 				end
@@ -316,7 +328,7 @@ end
 
 function CheckResource(resource, value)
 
-	if resourceTable[resource] and value > 0 then
+	if resourceTable[resource] and value > 0 or resource == "CLASS_XP" then
 		return true
 	end
 
@@ -385,12 +397,24 @@ end
 
 function OnResourceChanged(player, resourceName, resourceValue)
 	-- print("--------------------------")
-	-- print(resourceName .. " : " .. tostring(resourceValue))
+	--print(resourceName .. " : " .. tostring(resourceValue))
 
 	-- If changes class, update original amounts
 	if (resourceName == "CLASS_MAP") then
 		SetupTrackedResources()
 		return
+	end
+
+	if (resourceName == "CLASS_XP") then
+		if playerClassXP[player:GetResource("CLASS_MAP")] ~= player:GetResource("CLASS_XP") then
+			-- todo finish this
+		end
+	end
+	
+	Task.Wait(0.5)
+	
+	while reseting do
+		Task.Wait()
 	end
 
 	if CheckResource(resourceName, resourceValue) and not allowFeed then
@@ -404,6 +428,8 @@ function OnResourceChanged(player, resourceName, resourceValue)
 
 	if (resourceValue - originalValue[resourceName] > 0) then
 		PushQueue({resourceName, resourceValue - originalValue[resourceName]})
+	elseif resourceName == "CLASS_XP" and localPlayer:GetResource("C_LEVEL") > 1 then
+		PushQueue({resourceName, MPC_API.ReqXp[localPlayer:GetResource("C_LEVEL") - 1] - originalValue[resourceName] + localPlayer:GetResource(resourceName)})
 	end
 	originalValue[resourceName] = resourceValue
 end
@@ -460,7 +486,7 @@ end
 
 function OnGameStateChanged(oldState, newState, hasDuration, time)
 	if newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_ROUND_END then
-		Task.Wait(5)
+		Task.Wait(10)
 		allowFeed = true
 	else
 		allowFeed = false

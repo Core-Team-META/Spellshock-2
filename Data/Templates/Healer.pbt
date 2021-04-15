@@ -70,6 +70,10 @@ Assets {
             Int: 0
           }
           Overrides {
+            Name: "cs:MT"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:OID:isrep"
             Bool: true
           }
@@ -87,6 +91,10 @@ Assets {
           }
           Overrides {
             Name: "cs:TID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:MT:isrep"
             Bool: true
           }
         }
@@ -442,6 +450,7 @@ Assets {
         ChildIds: 5059740429878840452
         ChildIds: 1911379253016179784
         ChildIds: 14680580072878226303
+        ChildIds: 810074995634851025
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -882,7 +891,7 @@ Assets {
       }
       Objects {
         Id: 14112328780250061073
-        Name: "DestructibleWeaponServer"
+        Name: "HealerWeaponServer"
         Transform {
           Location {
             X: 18265.5566
@@ -899,14 +908,6 @@ Assets {
         }
         ParentId: 17566732273178486209
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:DamageToObjects"
-            Int: 129
-          }
-          Overrides {
-            Name: "cs:DamageToPlayers"
-            Int: 20
-          }
           Overrides {
             Name: "cs:BindingName"
             String: "LMB"
@@ -933,7 +934,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 18154052875178810801
+            Id: 2316124691437571928
           }
         }
       }
@@ -1057,6 +1058,12 @@ Assets {
         }
         ParentId: 17566732273178486209
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1161,6 +1168,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 15332437072175436836
+          }
+        }
+      }
+      Objects {
+        Id: 810074995634851025
+        Name: "ReMount_Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8824906113032024380
           }
         }
       }
@@ -2115,7 +2160,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -2719,8 +2764,8 @@ Assets {
             MultiShot: 1
             ProjectileSpeed: 20000
             ProjectileLifeSpan: 10
-            ProjectileLength: 30
-            ProjectileRadius: 30
+            ProjectileLength: 55
+            ProjectileRadius: 55
             ProjectileDrag: -0.1
             SpreadMin: 0.2
             SpreadMax: 4

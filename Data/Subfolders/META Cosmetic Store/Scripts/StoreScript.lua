@@ -16,6 +16,11 @@ repeat
 	Task.Wait()
 until CP_API
 
+while not _G["Meta.Ability.Progression"] and not _G["Meta.Ability.Progression"]["VFX"] do
+	Task.Wait()
+end
+local COSMETIC_API = _G["Meta.Ability.Progression"]["VFX"]
+
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
@@ -75,21 +80,29 @@ end
 function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Orc_Rare_Outfit
 	if returnString then
 		local infoTable = StringSplit(id, "_")
-		if not CONST.CLASS[string.upper(infoTable[1])] or not CONST.TEAM[string.upper(infoTable[2])] 
-		or not CONST.COSMETIC_SKIN[string.upper(infoTable[3])] or not CONST.COSMETIC_BIND[string.upper(infoTable[4])] then
-			error("Cosmetic Store - the ID property of "..hierarchyName.." is not formatted correctly")
+		if
+			not CONST.CLASS[string.upper(infoTable[1])] or not CONST.TEAM[string.upper(infoTable[2])] or
+				not CONST.COSMETIC_SKIN[string.upper(infoTable[3])] or
+				not CONST.COSMETIC_BIND[string.upper(infoTable[4])]
+		 then
+			error("Cosmetic Store - the ID property of " .. hierarchyName .. " is not formatted correctly")
 		end
 
 		local skin = CONST.COSMETIC_SKIN[string.upper(infoTable[3])]
 		if skin < 10 then
-			skin = "0"..tostring(skin)
+			skin = "0" .. tostring(skin)
 		else
 			skin = tostring(skin)
 		end
 
-    	return string.format("%d%d%s%d", CONST.CLASS[string.upper(infoTable[1])], CONST.TEAM[string.upper(infoTable[2])],
-		skin, CONST.COSMETIC_BIND[string.upper(infoTable[4])])
-	else	
+		return string.format(
+			"%d%d%s%d",
+			CONST.CLASS[string.upper(infoTable[1])],
+			CONST.TEAM[string.upper(infoTable[2])],
+			skin,
+			CONST.COSMETIC_BIND[string.upper(infoTable[4])]
+		)
+	else
 		local class = tonumber(id:sub(1, 1))
 		local team = tonumber(id:sub(2, 2))
 		local skin = tonumber(id:sub(3, 4))
@@ -100,33 +113,22 @@ function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Or
 end
 
 function CheckIfLocked(player, class, requiredLvl)
-	
 	local selectedClass = 0
-	
+
 	if class == "Warrior" then
-		
 		selectedClass = CP_API.TANK
-		
 	elseif class == "Hunter" then
-	
 		selectedClass = CP_API.HUNTER
-		
 	elseif class == "Mage" then
-	
 		selectedClass = CP_API.MAGE
-		
 	elseif class == "Healer" then
-	
 		selectedClass = CP_API.HEALER
-		
 	elseif class == "Assassin" then
-	
 		selectedClass = CP_API.ASSASSIN
-		
 	end
-	
+
 	--print("Checking " .. class .. " : " .. CP_API.GetClassLevel(player, selectedClass) .. " vs " .. tostring(requiredLvl))
-	
+
 	return CP_API.GetClassLevel(player, selectedClass) >= requiredLvl
 end
 
@@ -178,7 +180,6 @@ function SavePreviousSettings(player)
 	else
 		previousMovementMode[player.id] = MovementControlMode.LOOK_RELATIVE
 	end]]
-
 	previousLookMode[player.id] = player.lookControlMode
 	previousMovementMode[player.id] = player.movementControlMode
 end
@@ -209,7 +210,7 @@ function ApplyCosmetic(player, templateId, cosmeticId, visible) --#region
 	AppliedCosmeticsTemplate[player.id] = templateId
 	AppliedCosmeticsVisibility[player.id] = visible
 	
-	ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", player.id, templateId)  ]] 
+	ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", player.id, templateId)  ]]
 	if not cosmeticId then
 		return
 	end
@@ -217,7 +218,6 @@ function ApplyCosmetic(player, templateId, cosmeticId, visible) --#region
 	local team = tonumber(cosmeticId:sub(2, 2))
 	local skin = tonumber(cosmeticId:sub(3, 4))
 	local bind = tonumber(cosmeticId:sub(5, 5))]]
-
 	local class, team, skin, bind = ID_Converter(cosmeticId, false)
 	META_VFX().SetBindCosmetic(player, class, team, bind, skin)
 	Task.Wait()
@@ -266,8 +266,6 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 		return
 	end
 
-	
-
 	if isPartOfSubscription then
 		if playerOwnedSubscriptionCosmetics[player.id] == nil then
 			playerOwnedSubscriptionCosmetics[player.id] = {}
@@ -281,12 +279,11 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 		playerOwnedCosmetics[player.id] = {}
 	end
 	playerOwnedCosmetics[player.id][cosmeticId] = true
-	
+
 	--[[local class = tonumber(cosmeticId:sub(1, 1))
 	local team = tonumber(cosmeticId:sub(2, 2))
 	local skin = tonumber(cosmeticId:sub(3, 4))
 	local bind = tonumber(cosmeticId:sub(5, 5))]]
-
 	local class, team, skin, bind = ID_Converter(cosmeticId, false)
 	--player:SetResource("S" .. cosmeticId, 1)
 	META_VFX().BuildCosmeticStringTable(player, cosmeticId)
@@ -304,7 +301,11 @@ function GetCosmeticFromServer(player, cosmeticId)
 		playerOwnedCosmetics[player.id] = {}
 	end
 	playerOwnedCosmetics[player.id][cosmeticId] = true
-
+	local class = tonumber(cosmeticId:sub(1, 1))
+	local team = tonumber(cosmeticId:sub(2, 2))
+	local skin = tonumber(cosmeticId:sub(3, 4))
+	local bind = tonumber(cosmeticId:sub(5, 5))
+	COSMETIC_API.UnlockCosmetic(player, class, team, skin, bind)
 	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
 end
 
@@ -485,7 +486,7 @@ function InitializeStoreSever()
 				end
 
 				if StoreElements[propID] then
-					error("Item "..storeInfo.name.." has the same ID as another item: "..storeInfo:GetCustomProperty("ID"))
+					error("Item " .. storeInfo.name .. " has the same ID as another item: " .. storeInfo:GetCustomProperty("ID"))
 				end
 
 				StoreElements[propID] = {propCost, propResourceName, partOfSubscription, propTags, propLockedUntil}

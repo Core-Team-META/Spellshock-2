@@ -5,7 +5,10 @@
 -- Version 0.1.4-SS2
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
-
+------------------------------------------------------------------------------------------------------------------------
+-- REQUIRE
+------------------------------------------------------------------------------------------------------------------------
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSTANTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -211,7 +214,7 @@ function API.GiveRewards(player, id)
                     player.serverUserData.Storage:AddSkin(weaponId, skinId)
                 end
             end
-            --API.SetClaimed(player, id)
+        --API.SetClaimed(player, id)
         end
     end
 end
@@ -366,10 +369,12 @@ end
 --@param object player
 function API.LoadAchievementStorage(player)
     local data = Storage.GetPlayerData(player)
-    if data.ACHIEVEMENT then
-        local achievementData = data.ACHIEVEMENT
-        for key, value in pairs(achievementData) do
-            player:SetResource(key, value)
+    if data[CONST.STORAGE.ACHIEVEMENTS] then
+        local achievementData = data[CONST.STORAGE.ACHIEVEMENTS]
+        if type(achievementData) ~= "number" then
+            for key, value in pairs(achievementData) do
+                player:SetResource(key, value)
+            end
         end
     end
 end
@@ -386,13 +391,14 @@ function API.SaveAchievementStorage(player)
         end
     end
 
-    data.ACHIEVEMENT = tempTbl
+    data[CONST.STORAGE.ACHIEVEMENTS] = tempTbl
     Storage.SetPlayerData(player, data)
 end
 
-
 function API.FormatInt(number)
-    if not tonumber(number) then return end
+    if not tonumber(number) then
+        return
+    end
     local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
     int = int:reverse():gsub("(%d%d%d)", "%1,")
     return minus .. int:reverse():gsub("^,", "") .. fraction

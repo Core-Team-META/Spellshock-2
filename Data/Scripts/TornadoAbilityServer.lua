@@ -1,3 +1,8 @@
+-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version: 0.0.1
+--===========================================================================================
+
 -- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
@@ -44,29 +49,7 @@ function PlaceObject(thisAbility)
 	CurrentTornado.lifeSpan = mod4.duration
 	CurrentTornado:SetNetworkedCustomProperty("DecalScale", decalScale)
 	CurrentTornado:SetNetworkedCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
-	
-	--[[ Damage enemies
-	local nearbyEnemies = Game.FindPlayersInSphere(position, DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
-	for _, enemy in pairs(nearbyEnemies) do
-		local dmg = Damage.New()
-		dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
-		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = SpecialAbility.owner
-		dmg.sourceAbility = SpecialAbility
 
-		local attackData = {
-			object = enemy,
-			damage = dmg,
-			source = dmg.sourcePlayer,
-			position = nil,
-			rotation = nil,
-			tags = {id = "Mage_Q"}
-		}
-		COMBAT().ApplyDamage(attackData)
-		local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", {}, SpecialAbility.name .. ": Status")
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
-	end	]]
-	
 	Timer = 0.1
 end
 
@@ -111,7 +94,7 @@ function Tick(deltaTime)
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
 
-				print(tostring(mod4.damage))
+				--print(tostring(mod4.damage))
 
 				local attackData = {
 					object = enemy,

@@ -7,7 +7,7 @@ Assets {
       RootId: 11569940419982232802
       Objects {
         Id: 11569940419982232802
-        Name: "Boulder Throw Projectile TEST"
+        Name: "Tank Orc Boulder Throw Projectile Basic"
         Transform {
           Scale {
             X: 1
@@ -40,6 +40,7 @@ Assets {
             }
           }
         }
+        Lifespan: 6
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -284,6 +285,15 @@ Assets {
             Name: "bp:Burst"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.387000024
+              G: 0.282200426
+              B: 0.125000983
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -305,7 +315,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {

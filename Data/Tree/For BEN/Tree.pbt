@@ -1852,15 +1852,15 @@ Objects {
   Name: "Players collision"
   Transform {
     Location {
-      X: 310.011597
-      Y: 13.6834106
+      X: 310.010864
+      Y: 13.6840086
       Z: 1791.17578
     }
     Rotation {
     }
     Scale {
-      X: 5.98933935
-      Y: 0.725815773
+      X: 5.98932791
+      Y: 1.41315246
       Z: 44.1020546
     }
   }
@@ -3434,16 +3434,16 @@ Objects {
   Name: "collision"
   Transform {
     Location {
-      X: 302.713806
-      Y: 13.6782675
+      X: 302.713501
+      Y: 13.6783352
       Z: 1846.07642
     }
     Rotation {
       Yaw: -3.05175781e-05
     }
     Scale {
-      X: 5.70786953
-      Y: 0.725820303
+      X: 5.70785952
+      Y: 1.41316104
       Z: 43.736393
     }
   }
@@ -3554,6 +3554,8 @@ Objects {
   ChildIds: 13671284273415983427
   ChildIds: 7718568551427512001
   ChildIds: 9217056826464283178
+  ChildIds: 16648946032976381228
+  ChildIds: 4051748264459384856
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3566,6 +3568,96 @@ Objects {
   }
   NetworkContext {
     Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 4051748264459384856
+  Name: "players collision"
+  Transform {
+    Location {
+      X: -48.9364967
+      Y: -507.81427
+      Z: 1677.51904
+    }
+    Rotation {
+      Yaw: -119.411728
+    }
+    Scale {
+      X: 41.3965263
+      Y: 41.3965263
+      Z: 136.811356
+    }
+  }
+  ParentId: 9332962590063961445
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7049191719222274714
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 16648946032976381228
+  Name: "players collision"
+  Transform {
+    Location {
+      X: -127.978134
+      Y: 205.92688
+      Z: 1647.68909
+    }
+    Rotation {
+      Yaw: 62.0396
+    }
+    Scale {
+      X: 41.3965263
+      Y: 41.3965263
+      Z: 136.811356
+    }
+  }
+  ParentId: 9332962590063961445
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7049191719222274714
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
   }
 }
 Objects {
@@ -7789,9 +7881,9 @@ Objects {
   Name: "players collision"
   Transform {
     Location {
-      X: -202.501068
-      Y: 67.9762344
-      Z: 1677.51904
+      X: -202.501083
+      Y: 67.976181
+      Z: 1647.68909
     }
     Rotation {
       Yaw: 62.0395889

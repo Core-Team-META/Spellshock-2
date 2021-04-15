@@ -1,3 +1,8 @@
+-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
 -- Module dependencies
 local MODULE = require(script:GetCustomProperty("ModuleManager"))
 function COMBAT()
@@ -41,7 +46,10 @@ function PlaceObject(thisAbility)
 
 	local placementTemplate = PlayerVFX.Placement
 	META_AP().SpawnAsset(placementTemplate, {position = position, rotation = rotation, scale = vfxScale})
+	
 	Task.Wait(0.25)
+	if not SpecialAbility or not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
+
 	-- Damage enemies
 	local nearbyEnemies = Game.FindPlayersInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})

@@ -14,9 +14,9 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
+local PLAYER_TITLES = require(script:GetCustomProperty("PlayerTitles"))
 
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
@@ -43,7 +43,7 @@ local ENEMY_COLOR = Color.New(1.0, 0.0, 0.0)
 
 -- Wait for team colors
 while not _G.TeamColors do
-	Task.Wait()
+    Task.Wait()
 end
 
 -- Variables
@@ -54,25 +54,31 @@ local atPlayerShowcase
 local roundEndTime = 0.0
 local bindingDown = false
 
+local localPlayerTitle = PLAYER_TITLES.GetPlayerTitle(LOCAL_PLAYER)
+
 function OnTeamVictory(messsage)
-    if messsage == "" then return end
+    if messsage == "" then
+        return
+    end
     TEAM_NAME.text = messsage
     TEAM_NAME:GetChildren()[1].text = messsage
     HEADER.visibility = Visibility.INHERIT
 end
 
 -- nil OnBindingPressed(Player, string)
--- Keep track of the binding state to show the scoreboard 
+-- Keep track of the binding state to show the scoreboard
 function OnBindingPressed(player, binding)
     if binding == BINDING then
         local currentState = ABGS.GetGameState()
-        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then return end
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+            return
+        end
         bindingDown = true
     end
 end
 
 -- nil OnBindingReleased(Player, string)
--- Keep track of the binding state to show the scoreboard 
+-- Keep track of the binding state to show the scoreboard
 function OnBindingReleased(player, binding)
     if binding == BINDING then
         bindingDown = false
@@ -138,7 +144,6 @@ function ComparePlayers(player1, player2)
     return player1.name < player2.name
 end
 
-
 -- nil Tick(float)
 -- Update visibility and displayed information
 function Tick(deltaTime)
@@ -149,28 +154,52 @@ function Tick(deltaTime)
     end
 
     if PANEL.visibility == Visibility.INHERIT then
-        local players = Game.GetPlayers() 
+        local players = Game.GetPlayers()
         table.sort(players, ComparePlayers)
 
         for i, player in ipairs(players) do
             local line = playerLines[i]
             local RES = CONST.COMBAT_STATS
             --line:GetCustomProperty("PlayerImage"):WaitForObject():SetImage(player)
-            line:GetCustomProperty("Name"):WaitForObject().text = "[" .. tostring(player:GetResource(CONST.CLASS_LEVEL)) .. "] " .. player.name
-            
+            local nameText = line:GetCustomProperty("Name"):WaitForObject()
+            nameText.text = player.name
+            if player:GetResource(CONST.VIP_MEMBERSHIP_KEY) == 1 then
+                nameText.x = 145
+                line:GetCustomProperty("VIPImage"):WaitForObject().visibility = Visibility.FORCE_ON
+            else
+                nameText.x = 120
+                line:GetCustomProperty("VIPImage"):WaitForObject().visibility = Visibility.FORCE_OFF
+            end
+          
+            line:GetCustomProperty("Level"):WaitForObject().text = tostring(player:GetResource(CONST.CLASS_LEVEL))
             if player == LOCAL_PLAYER then
-                local myColor = Color.FromStandardHex("FFD624FF")
-                line:GetCustomProperty("Name"):WaitForObject():SetColor(myColor)
+                line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[3])
             else
                 line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[player.team])
             end
             line:GetCustomProperty("KillsText"):WaitForObject().text = tostring(player.kills)
             line:GetCustomProperty("DeathsText"):WaitForObject().text = tostring(player.deaths)
             line:GetCustomProperty("UltKills"):WaitForObject().text = tostring(player:GetResource(RES.ULTIMATE_KILL))
-            line:GetCustomProperty("CapturePoints"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_CAPTURE_POINTS))
+            line:GetCustomProperty("CapturePoints"):WaitForObject().text =
+                tostring(player:GetResource(RES.TOTAL_CAPTURE_POINTS))
             line:GetCustomProperty("Damage"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_DAMAGE_RES))
             line:GetCustomProperty("Healing"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_HEALING_RES))
-            line:GetCustomProperty("Killstreak"):WaitForObject().text = tostring(player:GetResource(RES.LARGEST_KILL_STREAK))
+            line:GetCustomProperty("Killstreak"):WaitForObject().text =
+                tostring(player:GetResource(RES.LARGEST_KILL_STREAK))
+            local title = PLAYER_TITLES.GetPlayerTitle(player)
+            local TitleImage = line:GetCustomProperty("TitleImage"):WaitForObject()
+            local PlayerImage = line:GetCustomProperty("PlayerImage"):WaitForObject()
+            PlayerImage:SetImage(player)
+           
+       
+
+            if title and title.icon then
+                TitleImage:SetImage(title.icon or "")
+                TitleImage:SetColor(title.iconColor or Color.WHITE)
+                TitleImage.visibility = Visibility.FORCE_ON
+            else
+                TitleImage.visibility = Visibility.FORCE_OFF
+            end
         end
     end
 end
@@ -179,7 +208,10 @@ end
 PANEL.visibility = Visibility.FORCE_OFF
 
 headerLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
---headerLine:GetCustomProperty("PlayerImage"):WaitForObject().visibility = Visibility.FORCE_OFF
+headerLine:GetCustomProperty("PlayerImage"):WaitForObject().visibility = Visibility.FORCE_OFF
+headerLine:GetCustomProperty("TitleImage"):WaitForObject().visibility = Visibility.FORCE_OFF
+headerLine:GetCustomProperty("VIPImage"):WaitForObject().visibility = Visibility.FORCE_OFF
+headerLine:GetCustomProperty("Level"):WaitForObject().text = "Level"
 headerLine:GetCustomProperty("Name"):WaitForObject().text = "Name"
 headerLine:GetCustomProperty("KillsText"):WaitForObject().text = "Kills"
 headerLine:GetCustomProperty("DeathsText"):WaitForObject().text = "Deaths"
@@ -188,6 +220,7 @@ headerLine:GetCustomProperty("CapturePoints"):WaitForObject().text = "Captures"
 headerLine:GetCustomProperty("Damage"):WaitForObject().text = "Damage"
 headerLine:GetCustomProperty("Healing"):WaitForObject().text = "Healing"
 headerLine:GetCustomProperty("Killstreak"):WaitForObject().text = "Kill Streak"
+
 
 for _, player in ipairs(Game.GetPlayers()) do
     OnPlayerJoined(player)

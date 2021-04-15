@@ -1,4 +1,9 @@
-﻿-- Module dependencies
+-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
@@ -111,6 +116,13 @@ function OnAbilityExecute(thisAbility)
 	local LifeSpan = MoveDuration + 5
 
 	local DamageTrigger = RockProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
+	
+	for _, other in ipairs(DamageTrigger:GetOverlappingObjects()) do
+		if other:IsA("Player") then
+			OnBeginOverlap(_, other)
+		end
+	end
+	
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	local ViewRotation = SpecialAbility.owner:GetViewWorldRotation()
 	ViewRotation.x = 0

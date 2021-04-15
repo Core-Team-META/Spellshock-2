@@ -26,15 +26,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17807712156856663918
-  Name: "Dragon"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Icon_Dragon"
-  }
-}
-Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -242,6 +233,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14012817403198044743
+  Name: "Globe"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_019"
+  }
+}
+Assets {
   Id: 14002637459053075183
   Name: "4 Point Star"
   PlatformAssetType: 9
@@ -251,12 +251,39 @@ Assets {
   }
 }
 Assets {
+  Id: 13892267814833461183
+  Name: "Fantasy Bell 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_BBlanket_001"
+  }
+}
+Assets {
   Id: 13812233672819790707
   Name: "Fantasy Human Guy 1"
   PlatformAssetType: 17
   PrimaryAsset {
     AssetType: "AnimatedMeshAssetRef"
     AssetId: "npc_human_guy_fantasy_001_ref"
+  }
+}
+Assets {
+  Id: 13707030425558109407
+  Name: "Oswald"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "OswaldRegular_ref"
+  }
+}
+Assets {
+  Id: 13673358037856315902
+  Name: "Fantasy Frame 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Frame_007"
   }
 }
 Assets {
@@ -323,15 +350,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12804716500201279526
-  Name: "BG Highlighted 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_020"
-  }
-}
-Assets {
   Id: 12684968738269658065
   Name: "Icon Add"
   PlatformAssetType: 9
@@ -365,6 +383,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_truncated_teardrop_001"
+  }
+}
+Assets {
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
   }
 }
 Assets {
@@ -584,12 +611,12 @@ Assets {
   }
 }
 Assets {
-  Id: 7243817981913966754
-  Name: "Fantasy Shape 005"
+  Id: 7154012582208942186
+  Name: "Icon Arrow Up"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Shape_005"
+    AssetId: "Icon_ArrowUp"
   }
 }
 Assets {
@@ -959,6 +986,24 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bush_generic_001"
+  }
+}
+Assets {
+  Id: 634785656113528393
+  Name: "Fantasy Medal 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Medal_002"
+  }
+}
+Assets {
+  Id: 185579684214908868
+  Name: "Fantasy Glove 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Glove_010"
   }
 }
 Assets {

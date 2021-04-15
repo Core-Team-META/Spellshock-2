@@ -1,8 +1,8 @@
 Name: "DataCompression"
 RootId: 15057716785033630782
 Objects {
-  Id: 12368577691492172997
-  Name: "StorageTest"
+  Id: 1716975878147083837
+  Name: "MetaPlayerStorageHelper_Server"
   Transform {
     Location {
     }
@@ -15,6 +15,20 @@ Objects {
     }
   }
   ParentId: 15057716785033630782
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StorageManager"
+      ObjectReference {
+        SelfId: 6952690835358040343
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -26,7 +40,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 16710408555258235694
+      Id: 16778058870011329019
     }
   }
 }
@@ -86,6 +100,18 @@ Objects {
       Name: "cs:MountManager_Server"
       ObjectReference {
         SelfId: 5659926504011352444
+      }
+    }
+    Overrides {
+      Name: "cs:TeamMembers_Data"
+      AssetReference {
+        Id: 9308651227270393617
+      }
+    }
+    Overrides {
+      Name: "cs:ClassSelectionServer"
+      ObjectReference {
+        SelfId: 12481345003269002044
       }
     }
   }

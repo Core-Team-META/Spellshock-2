@@ -1,4 +1,9 @@
-﻿local TeamName = script:GetCustomProperty("TeamName"):WaitForObject()
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local TeamName = script:GetCustomProperty("TeamName"):WaitForObject()
 local TeamInfoPanel = script:GetCustomProperty("TeamInfoPanel"):WaitForObject()
 local TeamMembersPanel = script:GetCustomProperty("TeamMembersPanel"):WaitForObject()
 local Helper_TeamMemberPanel = script:GetCustomProperty("Helper_TeamMemberPanel")
@@ -20,6 +25,7 @@ local Y_Offset = 42
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local ClassIcons = {}
 local AllPanels = {}
+local PlayerHasPanel = {}
 local ClassCountTable = ClassCountPanel:GetChildren()
 
 for _, classData in ipairs(ClassMenuData:GetChildren()) do
@@ -30,18 +36,6 @@ for _, classData in ipairs(ClassMenuData:GetChildren()) do
     icon:SetImage(ClassIcons[ClassID])
 end
 
-function OnBindingPressed(player, binding)
-    -- U key
-    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"]
-    or _G.CurrentMenu == _G.MENU_TABLE["Respawn"] and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
-        if TeamInfoPanel.visibility == Visibility.INHERIT then
-            TeamInfoPanel.visibility = Visibility.FORCE_OFF
-        else
-            TeamInfoPanel.visibility = Visibility.INHERIT
-        end
-    end
-end
-
 function OnMenuChanged(oldMenu, newMenu)
     if (newMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] or  newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"])
     and (ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY) then -- show
@@ -49,45 +43,6 @@ function OnMenuChanged(oldMenu, newMenu)
     else
 		TeamLeftSideBar.visibility = Visibility.FORCE_OFF
 	end
-end
-
-function OnGameStateChanged (oldState, newState)
-	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
-        TeamInfoPanel.visibility = Visibility.INHERIT
-    elseif _G.CurrentMenu == _G.MENU_TABLE["NONE"] and newState == ABGS.GAME_STATE_LOBBY then
-        TeamInfoPanel.visibility = Visibility.INHERIT
-    else
-        TeamInfoPanel.visibility = Visibility.FORCE_OFF
-    end
-end
-
-function AddNewPanel(player)
-    local newPanel = World.SpawnAsset(Helper_TeamMemberPanel, {parent = TeamMembersPanel})
-    --newPanel.y = #AllPanels * 42
-    newPanel.visibility = Visibility.FORCE_OFF
-    newPanel.clientUserData.player = player  
-    table.insert(AllPanels, newPanel)
-    player.clientUserData.panelIndex = #AllPanels
-    --print(">> Adding panel for "..player.name)
-end
-
-function RemovePanel(player)
-    if AllPanels[player.clientUserData.panelIndex] then
-        local panel = table.remove(AllPanels, player.clientUserData.panelIndex)
-        panel:Destroy()
-    end
-end
-
-function OnPlayerJoined(player)
-    if player ~= LOCAL_PLAYER then --player.team == LOCAL_PLAYER.team and
-        AddNewPanel(player) 
-    end
-end
-
-function OnPlayerLeft(player)
-    if player ~= LOCAL_PLAYER then
-        RemovePanel(player)
-    end
 end
 
 function Tick()
@@ -100,16 +55,16 @@ function Tick()
         TeamName:GetChildren()[1].text = "Legion of Light"
     end 
 
-    
     --print(">> Updating team panels: "..tostring(#AllPanels))
     -- Loop through table
     local teamPanelCount = 0
     local classCounts = {}
-    for index, playerPanel in ipairs(AllPanels) do
-        if Object.IsValid(playerPanel) then -- check that the panel hasn't been destroyed
-            local player = playerPanel.clientUserData.player -- get the player that belongs to this panel
-            if Object.IsValid(player) and player.team == LOCAL_PLAYER.team then -- check if the player is valid and is on the LOCAL_PLAYER's team
-                --print("  > "..player.name)
+    local Teammates = Game.GetPlayers({includeTeams=LOCAL_PLAYER.team, ignorePlayers = LOCAL_PLAYER})
+    
+    if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY or ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then 
+        for index, playerPanel in ipairs(AllPanels) do
+            if Teammates[index] then 
+                local player = Teammates[index]
                 
                 -- Increment the class count
                 local classID = player:GetResource(CONST.CLASS_RES)
@@ -119,33 +74,30 @@ function Tick()
                     classCounts[classID] = classCounts[classID] + 1
                 end
 
-                if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
-                    local Name = playerPanel:GetCustomProperty("Name"):WaitForObject()
-                    local Icon = playerPanel:GetCustomProperty("Icon"):WaitForObject()
-                    local Level = playerPanel:GetCustomProperty("Level"):WaitForObject()
-                    local HealthBar = playerPanel:GetCustomProperty("HealthBar"):WaitForObject()
-                    
-                            
-                    local level = player:GetResource(CONST.CLASS_LEVEL)
+                local Name = playerPanel:GetCustomProperty("Name"):WaitForObject()
+                local Icon = playerPanel:GetCustomProperty("Icon"):WaitForObject()
+                local Level = playerPanel:GetCustomProperty("Level"):WaitForObject()
+                local HealthBar = playerPanel:GetCustomProperty("HealthBar"):WaitForObject()
+                   
+                local level = player:GetResource(CONST.CLASS_LEVEL)
 
-                    -- set the panel Y offset
-                    playerPanel.y = teamPanelCount * Y_Offset
-                    teamPanelCount = teamPanelCount + 1
+                -- set the panel Y offset
+                playerPanel.y = teamPanelCount * Y_Offset
+                teamPanelCount = teamPanelCount + 1
 
-                    -- Set panel info
-                    Name.text = player.name
-                    Level.text = tostring(level)
-                    HealthBar.progress = player.hitPoints / player.maxHitPoints
-                    if ClassIcons[classID] then
-                        if player.hitPoints ~= 0 then
-                            Icon:SetImage(ClassIcons[classID])
-                        else
-                            Icon:SetImage(DeadIcon)
-                        end
+                -- Set panel info
+                Name.text = player.name
+                Level.text = tostring(level)
+                HealthBar.progress = player.hitPoints / player.maxHitPoints
+                if ClassIcons[classID] then
+                    if player.hitPoints ~= 0 then
+                        Icon:SetImage(ClassIcons[classID])
+                    else
+                        Icon:SetImage(DeadIcon)
                     end
-                
-                    playerPanel.visibility = Visibility.INHERIT
                 end
+            
+                playerPanel.visibility = Visibility.INHERIT
             else
                 playerPanel.visibility = Visibility.FORCE_OFF
             end
@@ -169,16 +121,14 @@ function Tick()
     end
 end
 
+for i=1, 8 do
+    local newPanel = World.SpawnAsset(Helper_TeamMemberPanel, {parent = TeamMembersPanel})
+    newPanel.visibility = Visibility.FORCE_OFF 
+    table.insert(AllPanels, newPanel)
+end 
+
 OnMenuChanged(nil, _G.CurrentMenu)
-TeamInfoPanel.visibility = Visibility.FORCE_OFF
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Game.playerLeftEvent:Connect(OnPlayerLeft)
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)
+--Game.playerLeftEvent:Connect(OnPlayerLeft)
 
--- Add a new panel for every player already in the server
-for _, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do --, includeTeams = LOCAL_PLAYER.team
-    AddNewPanel(player)
-end
-
---LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Events.Connect("Menu Changed", OnMenuChanged)
-Events.Connect("GameStateChanged", OnGameStateChanged)

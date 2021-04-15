@@ -15,10 +15,13 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8445789955444278387
+        ParentId: 8186585380273645899
         ChildIds: 15574431451992460765
         ChildIds: 16690130693437400001
+        ChildIds: 17925700208914788918
+        ChildIds: 6502777163635995126
         ChildIds: 5748389925553274148
+        ChildIds: 12655242082259094922
         ChildIds: 5611923143272407215
         ChildIds: 15894122926016324975
         ChildIds: 15319641687036921557
@@ -28,7 +31,7 @@ Assets {
         ChildIds: 5069508001469646867
         UnregisteredParameters {
           Overrides {
-            Name: "cs:PlayerImage"
+            Name: "cs:TitleImage"
             ObjectReference {
               SubObjectId: 16690130693437400001
             }
@@ -81,6 +84,24 @@ Assets {
               SubObjectId: 5069508001469646867
             }
           }
+          Overrides {
+            Name: "cs:Level"
+            ObjectReference {
+              SubObjectId: 12655242082259094922
+            }
+          }
+          Overrides {
+            Name: "cs:PlayerImage"
+            ObjectReference {
+              SubObjectId: 17925700208914788918
+            }
+          }
+          Overrides {
+            Name: "cs:VIPImage"
+            ObjectReference {
+              SubObjectId: 6502777163635995126
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -92,7 +113,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 800
+          Width: 900
           Height: 30
           RenderTransformPivot {
             Anchor {
@@ -178,7 +199,7 @@ Assets {
       }
       Objects {
         Id: 16690130693437400001
-        Name: "Player Image"
+        Name: "Title Image"
         Transform {
           Location {
           }
@@ -197,7 +218,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -215,6 +236,134 @@ Assets {
           Image {
             Brush {
               Id: 7468938898826778178
+            }
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17925700208914788918
+        Name: "Player Image"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -2.04905664e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 20
+          Height: 20
+          UIX: 40
+          UIY: -5
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 7468938898826778178
+            }
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6502777163635995126
+        Name: "VIP Image"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -4.61037744e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 20
+          Height: 20
+          UIX: 120
+          UIY: -5
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 11478889498718573073
             }
             Color {
               R: 1
@@ -266,9 +415,10 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 300
-          Height: 30
-          UIX: 50
+          Width: 185
+          Height: 20
+          UIX: 145
+          UIY: -5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -284,6 +434,73 @@ Assets {
             Size: 14
             Justification {
               Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            ClipTextToSize: true
+            Font {
+              Id: 11336346532215892341
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12655242082259094922
+        Name: "Level"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -2.04905664e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 60
+          Height: 30
+          UIX: 60
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 14
+            Justification {
+              Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
             ClipTextToSize: true
@@ -334,7 +551,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 250
+          UIX: 350
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -401,7 +618,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 325
+          UIX: 425
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -468,7 +685,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 400
+          UIX: 500
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -535,7 +752,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 475
+          UIX: 575
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -602,7 +819,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 550
+          UIX: 650
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -669,7 +886,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 625
+          UIX: 725
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -736,7 +953,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 700
+          UIX: 800
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -791,6 +1008,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "Icon_Profile"
+      }
+    }
+    Assets {
+      Id: 11478889498718573073
+      Name: "Fantasy Crown 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Equip_Crown_001"
       }
     }
     Assets {

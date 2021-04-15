@@ -29,8 +29,6 @@ local BindingName = script:GetCustomProperty("BindingName")
 local AbilityMod = script:GetCustomProperty("AbilityMod")
 
 function OnTargetImpact(theWeapon, impactData)
-	print ("Hello from MageWanderServer")
-
 	local amount = DAMAGE_TO_OBJECTS
 	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
@@ -61,6 +59,7 @@ function OnTargetImpact(theWeapon, impactData)
 	}
 	COMBAT().ApplyDamage(attackData)
 
+	--[[
 	if impactData.targetObject:IsA("Player") then
 		print ("Doing the impulse!")
 		local impactPlayer = impactData.targetObject
@@ -70,27 +69,20 @@ function OnTargetImpact(theWeapon, impactData)
 		speed = speed:GetNormalized()
 		speed = speed * 800 + Vector3.UP * 400
 		impactPlayer:AddImpulse(speed * impactPlayer.mass)
-	end
+	end]]--
 	
 	-- Apply the slowdown thing on the heavy attack
 	if  impactData.targetObject:IsA("Player") then
 		--local status = META_AP().GetAbilityMod(theWeapon.owner, META_AP().LMB, "mod5", {}, WEAPON.name .. ": Status")
 		API_SE.ApplyStatusEffect(
 			impactData.targetObject,
-			API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
+			API_SE.STATUS_EFFECT_DEFINITIONS["Electric"].id,
 			theWeapon.owner,
-			1,
-			0,
-			0.1
-			--status.duration,
-			--status.damage,
-			--status.multiplier
+			3, -- duration
+			15, -- damage
+			1 -- multiplier
 		)
 	end
-
-	--COMBAT().ApplyDamage(impactData.targetObject, dmg, dmg.sourcePlayer)
-	
-	--BroadcastDamageFeedback(dmg.amount, pos)
 end
 
 WEAPON.targetImpactedEvent:Connect(OnTargetImpact)

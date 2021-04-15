@@ -232,6 +232,12 @@ Objects {
         SelfId: 14151859424388630810
       }
     }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -285,9 +291,8 @@ Objects {
     Overrides {
       Name: "cs:SelfTextColor"
       Color {
-        R: 0.956862807
-        G: 0.356862754
-        B: 0.00784313772
+        R: 0.919999957
+        G: 0.71284759
         A: 1
       }
     }
@@ -385,13 +390,19 @@ Objects {
     Overrides {
       Name: "cs:JoinedIcon"
       AssetReference {
-        Id: 14436976356615594853
+        Id: 6515528648339898184
       }
     }
     Overrides {
       Name: "cs:LeftIcon"
       AssetReference {
-        Id: 9384520849142346961
+        Id: 13252124078146314791
+      }
+    }
+    Overrides {
+      Name: "cs:LeveledUpIcon"
+      AssetReference {
+        Id: 3807950812506028037
       }
     }
     Overrides {

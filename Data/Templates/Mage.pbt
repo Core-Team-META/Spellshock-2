@@ -70,6 +70,10 @@ Assets {
             Int: 0
           }
           Overrides {
+            Name: "cs:MT"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:OID:isrep"
             Bool: true
           }
@@ -87,6 +91,10 @@ Assets {
           }
           Overrides {
             Name: "cs:TID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:MT:isrep"
             Bool: true
           }
         }
@@ -469,6 +477,7 @@ Assets {
         ChildIds: 10156097226255100435
         ChildIds: 6012454820415092162
         ChildIds: 14293992110905083350
+        ChildIds: 17282809403770464451
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -995,6 +1004,12 @@ Assets {
         }
         ParentId: 18222319590489236690
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1049,6 +1064,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 3580804332177889778
+          }
+        }
+      }
+      Objects {
+        Id: 17282809403770464451
+        Name: "ReMount_Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18222319590489236690
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8824906113032024380
           }
         }
       }
@@ -2320,7 +2373,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -2434,7 +2487,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2444,7 +2497,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2777,7 +2830,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2787,7 +2840,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.2
             CanMove: true
             PreventOtherAbilities: true
             Facing_V2 {

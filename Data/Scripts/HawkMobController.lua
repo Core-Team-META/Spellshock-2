@@ -32,12 +32,14 @@ function OnNetworkPropertyChanged(thisObject, name)
 		AnimatedMesh.animationStance = AnimationStance
 		
 		AnimatedMesh.parent = nil
-		AnimatedMesh:Follow(HawkRoot, 800)
+		AnimatedMesh:Follow(HawkRoot, 1400)
 	end
 end
 
 function OnRootDestroyed(thisObject)
 	if Object.IsValid( AnimatedMesh) then
+		World.SpawnAsset("2C05043BAB603C59:HawkPoof", {position = AnimatedMesh:GetWorldPosition()})
+		Task.Wait()
 		AnimatedMesh:Destroy()
 	end
 end

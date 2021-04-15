@@ -14,6 +14,7 @@ Objects {
       Z: 1
     }
   }
+  ChildIds: 11064051587082207804
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
   ChildIds: 728687643111351772
@@ -35,6 +36,9 @@ Objects {
   ChildIds: 15804942893272727399
   ChildIds: 7134391544964931455
   ChildIds: 1672145936829432866
+  ChildIds: 7894618171110748117
+  ChildIds: 18439257393742900714
+  ChildIds: 13701375997520260708
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -47,6 +51,93 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 13701375997520260708
+  Name: "Datonare"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Datonare"
+  }
+}
+Objects {
+  Id: 18439257393742900714
+  Name: "Front UI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Front UI"
+  }
+}
+Objects {
+  Id: 7894618171110748117
+  Name: "Blake"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Blake"
   }
 }
 Objects {
@@ -1784,5 +1875,34 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Gameplay"
+  }
+}
+Objects {
+  Id: 11064051587082207804
+  Name: "Storage & Refrences"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Storage _ Refrences"
   }
 }

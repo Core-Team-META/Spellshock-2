@@ -129,7 +129,7 @@ Assets {
         Name: "Dagger1"
         Transform {
           Location {
-            Z: 800
+            Z: 1600
           }
           Rotation {
             Pitch: 58

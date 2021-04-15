@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/18
--- Version 0.1.5
+-- Date: 2021/4/7
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -41,10 +41,16 @@ function Int()
         Task.Wait()
         for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
             if child.name == LOCAL_PLAYER.id then
+                local dataStr = child:GetCustomProperty("data")
+                while dataStr == "" or not dataStr do
+                    dataStr = child:GetCustomProperty("data")
+                end
+                playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
+                Events.BroadcastToServer("OnDestroyCosm", child.id)
             end
         end
-    until playerCosmetic
-    Events.BroadcastToServer("OnDestroyPlayerDataObject")
+    until next(playerCosmetic)
+    --UTIL.TablePrint(playerCosmetic)
 end
 
 function OnChildAdded(parent, object)
@@ -55,7 +61,7 @@ function OnChildAdded(parent, object)
             dataStr = object:GetCustomProperty("data")
         end
         playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
-        Events.BroadcastToServer("OnDestroyPlayerDataObject")
+        Events.BroadcastToServer("OnDestroyCosm", object.id)
         Task.Spawn(
             function()
                 STORE_CLIENT.context.CosmeticPurchaseChange()
@@ -64,6 +70,7 @@ function OnChildAdded(parent, object)
         )
     end
 end
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Public Server API
@@ -113,7 +120,7 @@ function API.GetCurrentCosmetic(player, bind, class)
     if skinId == 0 then
         skinId = 1
     end
-    return cosmeticTable[class][player.team][skinId][bind]
+    return cosmeticTable[class][player.team][skinId][bind] 
 end
 
 --@param object player
@@ -123,7 +130,10 @@ function API.GetCosmeticMuid(player, class, team, skin, bind)
     while not _G.COSMETIC_TABLE_BUILT do
         Task.Wait()
     end
-    return cosmeticTable[class][team][skin][bind]
+    while not UTIL.IsTableValid(cosmeticTable, class, team, skin, bind) do
+        Task.Wait()
+    end
+    return cosmeticTable[class][team][skin][bind] 
 end
 
 --@param object player
@@ -133,9 +143,12 @@ function API.GetCurrentCostume(player, class)
         Task.Wait()
     end
     class = class or 1
-    if not player:IsA("Player") then return end --Not sure how it's not getting a player passed, but fails the get resource
+    if not player:IsA("Player") then
+        return
+    end --Not sure how it's not getting a player passed, but fails the get resource
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
-    local skinId = 1--API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
+    local skinId = 1
+    --API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
     if skinId == 0 then
         skinId = 1
     end

@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Class Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.1
+-- Date: 2021/4/7
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ end
 local function SetClassXp(player, class, xp)
     classProgression[player.id][class][API.XP] = xp
     player:SetResource("CLASS_XP", xp)
-    player:SetResource(UTIL.GetClassXPString(class), classProgression[player.id][class][API.XP])
+    player:SetResource(UTIL.GetClassXPString(class), xp)
 end
 
 local function GetReqXp(level)
@@ -109,12 +109,17 @@ function ClassLevelUp(player, class)
     local reqXp = GetReqXp(level)
     local xp = API.GetClassXP(player, class)
     if xp >= reqXp and level < CONST.MAX_CLASS_LEVEL then
-        print("Gained Kill XP " .. player.name)
+        --print("Gained Kill XP " .. player.name)
         level = CoreMath.Round(level + 1)
         xp = xp - reqXp
         API.SetClassLevel(player, class)
         SetClassLevel(player, class, level)
         SetClassXp(player, class, xp)
+
+        if level > 4 and math.fmod(level, 5) == 0 then
+            Events.Broadcast("PlayerClassLevelUp_Server", player, class, level)
+        end
+
         ClassLevelUp(player, class)
     end
 end
@@ -143,7 +148,9 @@ function API.GetClassLevel(player, class)
      then
         return 1
     end
-    player:SetResource("CLASS_XP", CoreMath.Round(API.GetClassXP(player, class)))
+    local xp =  CoreMath.Round(API.GetClassXP(player, class))
+    player:SetResource("CLASS_XP", xp)
+    player:SetResource(UTIL.GetClassXPString(class), xp)
     return tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
 end
 
@@ -159,8 +166,10 @@ function API.AddXP(player, class, xp)
     if classProgression[player.id][class][CONST.PROGRESS.LEVEL] == CONST.MAX_CLASS_LEVEL then
         return
     end
-    classProgression[player.id][class][CONST.PROGRESS.XP] = CoreMath.Round(API.GetClassXP(player, class) + xp)
-    player:SetResource("CLASS_XP", CoreMath.Round(API.GetClassXP(player, class) + xp))
+    local newXp = CoreMath.Round(API.GetClassXP(player, class) + xp)
+    classProgression[player.id][class][CONST.PROGRESS.XP] = newXp
+    player:SetResource("CLASS_XP", newXp)
+    player:SetResource(UTIL.GetClassXPString(class), newXp)
     ClassLevelUp(player, class)
 end
 

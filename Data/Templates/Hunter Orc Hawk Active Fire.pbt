@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 15405480592344343542
         UnregisteredParameters {
           Overrides {
@@ -81,6 +81,7 @@ Assets {
         ChildIds: 6889804752926115066
         ChildIds: 2314150398402463349
         ChildIds: 11467822934775976084
+        ChildIds: 2763974662296479358
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -4723,6 +4724,77 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 2763974662296479358
+        Name: "Basic Explosion VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.747483075
+            Y: 0.747483075
+            Z: 0.747483075
+          }
+        }
+        ParentId: 15405480592344343542
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Fire"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Smoke"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.350000024
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Local Space"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 10
+          }
+          Overrides {
+            Name: "bp:Enable Light"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 10616134472715023449
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:high"
+        }
+      }
     }
     Assets {
       Id: 11594524757616528940
@@ -4848,6 +4920,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_cloth_fabric_flap_bright_rustle_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 10616134472715023449
+      Name: "Basic Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_explosion"
       }
     }
     PrimaryAssetId {

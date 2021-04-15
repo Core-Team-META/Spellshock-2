@@ -94,7 +94,8 @@ local BINDING_IGNORE = {
     ability_extra_16 = true,
     ability_extra_10 = true,
     ability_extra_14 = true,
-    ability_extra_27 = true
+    ability_extra_27 = true,
+    ability_extra_37 = true
 }
 
 -- nil Reset()
@@ -132,7 +133,7 @@ function GetCaptureSpeed()
         return 0.0
     end
 
-    if not capturePlayer then
+    if not capturePlayer or not Object.IsValid(capturePlayer) then
         return lastCaptureProgress
     end
 
@@ -141,11 +142,11 @@ function GetCaptureSpeed()
 
     if capturePlayer.team ~= progressedTeam then
         if MULTIPLY_WITH_PLAYERS then
-            multiplier = -1 - (enemiesPresent-1)*playerMultiplier
+            multiplier = -1 - (enemiesPresent - 1) * playerMultiplier
         end
     else
         if MULTIPLY_WITH_PLAYERS then
-            multiplier = 1 + (friendliesPresent-1)*playerMultiplier
+            multiplier = 1 + (friendliesPresent - 1) * playerMultiplier
         end
     end
 
@@ -155,7 +156,7 @@ function GetCaptureSpeed()
         lastCaptureSpeed = newCaptureSpeed
         script:SetNetworkedCustomProperty("LastCaptureSpeed", newCaptureSpeed)
     end
-    
+
     return newCaptureSpeed
 end
 
@@ -239,7 +240,6 @@ function GetPlayersPresent()
     return friendCount, friendlies, enemyCount, enemies
 end
 
-
 -- nil UpdateReplicatedProgress()
 -- Sets the replicated values so the client can match the current state (needed whenever capture speed or capturing team
 -- changes)
@@ -307,20 +307,26 @@ end
 
 function ResetCapturePlayer()
     UpdateReplicatedProgress()
-    if capturePlayer and Object.IsValid(capturePlayer) then
-        --print("RESETTING CAPTURE PLAYER")
-        if Object.IsValid(capturePlayerAnimation) then
-            capturePlayerAnimation.owner = nil
-            capturePlayerAnimation:Destroy()
-            capturePlayerAnimation = nil
-        end
-        for _, event in pairs(capturePlayerEvents) do
-            event:Disconnect()
-        end
-        capturePlayerEvents = {}
-        CAPTURE_TRIGGER.isInteractable = isCurrentEnabled
-        script:SetNetworkedCustomProperty("CapturePlayerID", "")
-        capturePlayer = nil
+    --if capturePlayer and Object.IsValid(capturePlayer) then
+    --print("RESETTING CAPTURE PLAYER")
+    if Object.IsValid(capturePlayerAnimation) then
+        capturePlayerAnimation.owner = nil
+        capturePlayerAnimation:Destroy()
+        capturePlayerAnimation = nil
+    end
+    for _, event in ipairs(capturePlayerEvents) do
+        event:Disconnect()
+    end
+    capturePlayerEvents = {}
+    CAPTURE_TRIGGER.isInteractable = isCurrentEnabled
+    script:SetNetworkedCustomProperty("CapturePlayerID", "")
+    capturePlayer = nil
+    --end
+end
+
+function OnPlayerLeft(player)
+    if player == capturePlayer then
+        ResetCapturePlayer()
     end
 end
 
@@ -339,7 +345,7 @@ end
 
 function OnInteractedEvent(thisTrigger, player)
     -- update capturePlayer
-    if capturePlayer == nil then
+    if capturePlayer == nil and Object.IsValid(player) and player:IsA("Player") then
         capturePlayer = player
         player.serverUserData.isCapturingPoint = true
         table.insert(capturePlayerEvents, capturePlayer.damagedEvent:Connect(OnCapturePlayerDamaged))
@@ -358,6 +364,11 @@ function OnBeginOverlap(thisTrigger, other)
     if other:IsA("Player") then
         playersOnPoint[other] = true
         other.serverUserData.onCapturePoint = true
+        local lastCapture = other.serverUserData.lasterCapturePoint
+        lastCapture = lastCapture or {}
+        lastCapture.point = ORDER
+        lastCapture.time = nil
+        other.serverUserData.lasterCapturePoint = lastCapture
     end
 end
 
@@ -365,6 +376,11 @@ function OnEndOverlap(thisTrigger, other)
     if other:IsA("Player") then
         playersOnPoint[other] = nil
         other.serverUserData.onCapturePoint = nil
+        local lastCapture = other.serverUserData.lasterCapturePoint
+        lastCapture = lastCapture or {}
+        lastCapture.point = ORDER
+        lastCapture.time = time() + 10
+        other.serverUserData.lasterCapturePoint = lastCapture
     end
 end
 
@@ -416,7 +432,9 @@ function Tick(deltaTime)
         end
 
         script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
-        Events.Broadcast("Stats.Helper.CapturePoint", capturePlayer.id)
+        if capturePlayer and Object.IsValid(capturePlayer) and capturePlayer.id then
+            Events.Broadcast("Stats.Helper.CapturePoint", capturePlayer.id)
+        end
         -- Disable if DisableOnCapture
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then
             SetEnabled(false)
@@ -433,7 +451,7 @@ function Tick(deltaTime)
         lastTeamScoreAwardTime = lastTeamScoreAwardTime + 5.0
 
         if owningTeam ~= 0 then
-            Game.IncreaseTeamScore(owningTeam, TEAM_SCORE_RATE)
+            Game.IncreaseTeamScore(owningTeam, ABCP.GetTeamScoreRate(owningTeam))
         end
     end
 
@@ -454,6 +472,7 @@ if RESET_ON_ROUND_END then
     ZONE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 end
 
+Game.playerLeftEvent:Connect(OnPlayerLeft)
 Reset()
 
 local functionTable = {}

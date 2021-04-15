@@ -51,30 +51,6 @@ Objects {
   ParentId: 7699960455379020988
   UnregisteredParameters {
     Overrides {
-      Name: "cs:SongTriggers"
-      ObjectReference {
-        SelfId: 3395137385791868017
-      }
-    }
-    Overrides {
-      Name: "cs:Songs"
-      ObjectReference {
-        SelfId: 12652278405279320986
-      }
-    }
-    Overrides {
-      Name: "cs:ORC_START_SONG"
-      ObjectReference {
-        SelfId: 8159300865285051927
-      }
-    }
-    Overrides {
-      Name: "cs:ELF_START_SONG"
-      ObjectReference {
-        SelfId: 1778773841650752877
-      }
-    }
-    Overrides {
       Name: "cs:MetaAbilityProgressionConstants_API"
       AssetReference {
         Id: 15718075383189814537
@@ -90,6 +66,12 @@ Objects {
       Name: "cs:OrcSongs"
       ObjectReference {
         SelfId: 8625504559866801273
+      }
+    }
+    Overrides {
+      Name: "cs:RewardsSFX"
+      ObjectReference {
+        SelfId: 3157584536586350236
       }
     }
   }
@@ -199,7 +181,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 3157584536586350236
+        SelfId: 935252118520641425
       }
     }
   }
@@ -313,7 +295,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 6737949795334203683
+        SelfId: 17601287680247368645
       }
     }
   }
@@ -461,7 +443,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 3157584536586350236
+        SelfId: 935252118520641425
       }
     }
   }
@@ -575,7 +557,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 12407423805149081047
+        SelfId: 8159300865285051927
       }
     }
   }
@@ -652,8 +634,6 @@ Objects {
   ChildIds: 1111324371193178376
   ChildIds: 10174524806202731056
   ChildIds: 10132135645300084462
-  ChildIds: 16124568138909524682
-  ChildIds: 7007306855525581865
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -665,96 +645,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 7007306855525581865
-  Name: "Elf base"
-  Transform {
-    Location {
-      X: 23039.8223
-      Y: 25670.418
-      Z: 7256.41211
-    }
-    Rotation {
-    }
-    Scale {
-      X: 37.4545
-      Y: 37.4545
-      Z: 37.4545
-    }
-  }
-  ParentId: 3395137385791868017
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:SONG"
-      ObjectReference {
-        SelfId: 1778773841650752877
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-}
-Objects {
-  Id: 16124568138909524682
-  Name: "Orc base"
-  Transform {
-    Location {
-      X: -19328.4551
-      Y: -26233.707
-      Z: 6338.88721
-    }
-    Rotation {
-    }
-    Scale {
-      X: 55.9181137
-      Y: 55.9181137
-      Z: 55.9181137
-    }
-  }
-  ParentId: 3395137385791868017
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:SONG"
-      ObjectReference {
-        SelfId: 8159300865285051927
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
   }
 }
 Objects {
@@ -1388,7 +1278,7 @@ Objects {
 }
 Objects {
   Id: 935252118520641425
-  Name: "Orchestral Adventurous Victory Fanfare Music Stinger Set 01"
+  Name: "Orchestral Adventurous: Meadow Town Loop"
   Transform {
     Location {
     }
@@ -1543,8 +1433,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Repeat: true
-      Volume: 0.35
       Falloff: 3600
       Radius: 400
       FadeInTime: 1
@@ -1941,8 +1829,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Repeat: true
-      Volume: 0.35
       Falloff: 2500
       Radius: 6500
       FadeInTime: 1

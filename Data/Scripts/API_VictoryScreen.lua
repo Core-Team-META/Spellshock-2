@@ -171,7 +171,7 @@ function API.CalculateWinners(winnerSortType, winnerSortResource)
 end
 
 function API.TeleportWinners( player, spawnObject)
-	player:SetVisibility(false)
+	--player:SetVisibility(false)
 	local spawnPosition = spawnObject:GetWorldPosition()
 	local spawnRotation = spawnObject:GetWorldRotation()
 	player:Respawn({position = spawnPosition, rotation = spawnRotation})
@@ -180,30 +180,30 @@ function API.TeleportWinners( player, spawnObject)
 	player:SetWorldPosition(spawnPosition)
 	player:SetWorldRotation(spawnRotation)
 	
-	Task.Wait(.1)
+	Task.Wait(0.1)
 
 	player:ResetVelocity()
 	player:SetWorldPosition(spawnPosition)
 	player:SetWorldRotation(spawnRotation)	
 	
-	for _, equipment in pairs(player:GetEquipment()) do -- remove all equipment
+	--[[for _, equipment in pairs(player:GetEquipment()) do -- remove all equipment
 		equipment:Destroy()
-	end
+	end]]--
 
 	Task.Wait()
 	
-	player:SetVisibility(true)
+	--player:SetVisibility(true)
 
 	--player.animationStance = "unarmed_stance"
 	
-	--[[for i=1,5 do
-		Task.Wait(.1)
+	for i=1,5 do
+		Task.Wait()
 
 		player:ResetVelocity()
 		player:SetWorldPosition(spawnPosition)
 		player:SetWorldRotation(spawnRotation)	
 		
-	end]]
+	end
 end
 
 
@@ -211,11 +211,11 @@ end
 --	nil API.OnPlayerTeleported(Player, CoreObject, table, float, CoreObject, bool)
 --	Callback, overwriteable, called when a player is spawned
 function API.OnPlayerTeleported(victoryScreen, player,  topThreePlayerStats, duration, respawnOnDeactivate)
-	for _, equipment in pairs(player:GetEquipment()) do -- remove all equipment
+	--[[for _, equipment in pairs(player:GetEquipment()) do -- remove all equipment
 		if Object.IsValid(equipment) then
 			equipment:Destroy()
 		end
-	end
+	end]]--
 
 	
 	local data = {

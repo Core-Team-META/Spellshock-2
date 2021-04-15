@@ -3,8 +3,8 @@ local DEBUG = true
 -----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/23
--- Version 0.1.9
+-- Date: 2021/4/7
+-- Version 0.1.10
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -84,8 +84,8 @@ local function SetCurrentCosmetic(player, skinId)
     playerEquippedCosmetic[player][class][CONST.COSTUME_ID][player.team] = skinId
     --player:SetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID), skinId)
     --print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
-    --local key = UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)
-    --_G.PerPlayerDictionary.Set(player, key, skinId)
+    local key = UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)
+    _G.PerPlayerDictionary.Set(player, key, skinId)
     --print("SetCurrentCosmetic: " .. key)
 end
 
@@ -100,16 +100,16 @@ local function SetBindCosmetic(player, class, team, bind, skin)
     playerEquippedCosmetic[player][class][bind][team] = skin
     --player:SetResource(UTIL.GetSkinString(class, team, bind), skin)
     --print(player:GetResource(UTIL.GetSkinString(class, team, bind)))
-    --local key = UTIL.GetSkinString(class, team, bind)
-    --_G.PerPlayerDictionary.Set(player, key, skin)
+    local key = UTIL.GetSkinString(class, team, bind)
+    _G.PerPlayerDictionary.Set(player, key, skin)
     --print("SetBindCosmetic: " .. key)
 end
 
 
 --@param object player
-local function OnDeletePlayerDataObject(player)
+local function OnDeletePlayerDataObject(player, objectId)
     for _, object in ipairs(DATA_TRANSFER:GetChildren()) do
-        if Object.IsValid(object) and object.name == player.id then
+        if Object.IsValid(object) and object.id == objectId then
             object:Destroy()
         end
     end
@@ -194,8 +194,8 @@ function BuildEquippedCosmeticDataTable(player, data)
                 for teamId, skinId in pairs(binds) do
                     playerEquippedCosmetic[player][class][bind][teamId] = skinId
                     --player:SetResource(UTIL.GetSkinString(class, teamId, bind), skinId)
-                    --local key = UTIL.GetSkinString(class, teamId, bind)
-                   -- _G.PerPlayerDictionary.Set(player, key, skinId)
+                    local key = UTIL.GetSkinString(class, teamId, bind)
+                    _G.PerPlayerDictionary.Set(player, key, skinId)
                     --print("BuildEquippedCosmeticDataTable 1: " .. key)
                 end
             end
@@ -210,8 +210,8 @@ function BuildEquippedCosmeticDataTable(player, data)
                 for _, team in pairs(CONST.TEAM) do
                     playerEquippedCosmetic[player][class][bind][team] = CONST.DEFAULT_SKIN
                     --player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
-                    --local key = UTIL.GetSkinString(class, team, bind)
-                    --_G.PerPlayerDictionary.Set(player, key, 1)
+                    local key = UTIL.GetSkinString(class, team, bind)
+                    _G.PerPlayerDictionary.Set(player, key, 1)
                     --print("BuildEquippedCosmeticDataTable 2: " .. key)
                 end
             end
@@ -325,4 +325,4 @@ Int()
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
 end
-Events.ConnectForPlayer("OnDestroyPlayerDataObject", OnDeletePlayerDataObject)
+Events.ConnectForPlayer("OnDestroyCosm", OnDeletePlayerDataObject)

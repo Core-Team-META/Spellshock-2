@@ -1,10 +1,10 @@
 Assets {
-  Id: 18003367190556965134
-  Name: "Fantasy Timepiece 002"
+  Id: 18334996790730598272
+  Name: "BG Highlighted 006"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Timepiece_002"
+    AssetId: "BackgroundHighlighted_015"
   }
 }
 Assets {
@@ -53,6 +53,24 @@ Assets {
   }
 }
 Assets {
+  Id: 16707489717603014527
+  Name: "Fantasy Map 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Map_001"
+  }
+}
+Assets {
+  Id: 15775978992330089425
+  Name: "BG Flat 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_32"
+  }
+}
+Assets {
   Id: 15575092074641359796
   Name: "Frame Outlined 016"
   PlatformAssetType: 9
@@ -68,6 +86,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "LineFull_003"
+  }
+}
+Assets {
+  Id: 14509317390755952210
+  Name: "Frame Outlined 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_032"
   }
 }
 Assets {
@@ -98,6 +125,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13892267814833461183
+  Name: "Fantasy Bell 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_BBlanket_001"
+  }
+}
+Assets {
   Id: 13462854128336502995
   Name: "Center Circle 001 Outline"
   PlatformAssetType: 9
@@ -122,15 +158,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Stone_028"
-  }
-}
-Assets {
-  Id: 12750511709314430191
-  Name: "Fantasy Ticket 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Ticket_001"
   }
 }
 Assets {
@@ -167,6 +194,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_27"
+  }
+}
+Assets {
+  Id: 11478889498718573073
+  Name: "Fantasy Crown 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Crown_001"
   }
 }
 Assets {
@@ -341,6 +377,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5403075034352191900
+  Name: "Fantasy Trophy 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_001"
+  }
+}
+Assets {
   Id: 5223287246289902870
   Name: "Frame Outline Thin 001"
   PlatformAssetType: 9
@@ -359,6 +404,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5074753616812184675
+  Name: "Frame Ring 1x 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameRing1x_004"
+  }
+}
+Assets {
   Id: 5000878413771410888
   Name: "Fantasy Anvil 001"
   PlatformAssetType: 9
@@ -374,6 +428,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Icon_Horse"
+  }
+}
+Assets {
+  Id: 3910619376972392297
+  Name: "Fantasy Coins 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_005"
   }
 }
 Assets {
@@ -413,6 +476,24 @@ Assets {
   }
 }
 Assets {
+  Id: 2286364455446697578
+  Name: "Frame Beveled 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px__015"
+  }
+}
+Assets {
+  Id: 1959355218031822315
+  Name: "Frame Highlighted 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameHighlighted_015"
+  }
+}
+Assets {
   Id: 1814707273787853473
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -428,6 +509,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
+  Id: 634785656113528393
+  Name: "Fantasy Medal 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Medal_002"
   }
 }
 Assets {

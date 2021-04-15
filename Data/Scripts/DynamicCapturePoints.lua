@@ -1,9 +1,15 @@
+-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
 local ABCP = require(script:GetCustomProperty("ABCP"))
 local BaseCollision = script:GetCustomProperty("BaseCollision"):WaitForObject()
 local CapturePointColliders = BaseCollision:GetCustomProperties()
 local RequiredPlayers = script:GetCustomProperty("RequiredPlayers")
 local SmallMapScore = script:GetCustomProperty("SmallMapScore")
 local BigMapScore = script:GetCustomProperty("BigMapScore")
+local GameType = script:GetCustomProperty("GameType")
 
 local Configuration_A = {[1] = true, [5] = true} -- these would get disabled; based off of "order"
 local Configuration_B = {[4] = true, [2] = true}
@@ -28,8 +34,10 @@ function OnRoundStart()
         CP_Configuration = configTable[randIndex]
         NewBases = basesTable[randIndex]
         script:SetNetworkedCustomProperty("ScoreLimit", SmallMapScore)
+        script:SetNetworkedCustomProperty("GameType", 1)
     else
         script:SetNetworkedCustomProperty("ScoreLimit", BigMapScore)
+        script:SetNetworkedCustomProperty("GameType", 2)
     end
 
     for _, id in ipairs(ABCP.GetCapturePoints()) do
@@ -63,6 +71,12 @@ function OnRoundStart()
 
         Events.Broadcast("ToggleLoadScreen", false)
         Events.Broadcast("Teleport")
+    else
+        for _, player in ipairs(AllPlayers) do
+            if Object.IsValid(player) then
+                player:Respawn()
+            end
+        end
     end
 end
 

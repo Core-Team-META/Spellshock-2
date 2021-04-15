@@ -24,6 +24,7 @@ end
 function Tick(deltaTime)
 	if (LOCAL_PLAYER.isDead) and not AS.IsRespawning() then
 		Task.Wait(5)
+		if not LOCAL_PLAYER.isDead then return end
 		if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then return end -- Make sure we are still in the Round
 
 		-- Start cam lerp
@@ -38,9 +39,9 @@ function Tick(deltaTime)
 		AS.SetIsRespawning(true)
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["Respawn"]) -- broadcast to show respawn UI
 		RespawnMusic.volume = 1
-		print("RESPAWN MODE")
+		--print("RESPAWN MODE")
 	elseif (not LOCAL_PLAYER.isDead) and AS.IsRespawning() then
-		print("RESPAWN MODE: CLEARING CAM")
+		--print("RESPAWN MODE: CLEARING CAM")
 		AS.SetIsRespawning(false)
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		LOCAL_PLAYER:ClearOverrideCamera(CamLerp)

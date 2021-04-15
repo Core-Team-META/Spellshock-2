@@ -1,10 +1,10 @@
 Assets {
-  Id: 17696531540460943644
-  Name: "Fantasy Trophy 003"
+  Id: 17660938468973573690
+  Name: "Fantasy Shield 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Trophy_003"
+    AssetId: "UI_Fantasy_Weapon_Shield_001"
   }
 }
 Assets {
@@ -14,6 +14,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameTri_001Wedge"
+  }
+}
+Assets {
+  Id: 17370828256945431127
+  Name: "Fantasy Ability Yellow 026"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_026"
   }
 }
 Assets {
@@ -35,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15700576236624769931
+  Name: "Frame Beveled 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px_020"
+  }
+}
+Assets {
   Id: 15450196944859968109
   Name: "Crosshair 021"
   PlatformAssetType: 9
@@ -50,6 +68,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Medal_001"
+  }
+}
+Assets {
+  Id: 14071047772389908219
+  Name: "Fantasy Craft Gem 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_001"
   }
 }
 Assets {
@@ -125,12 +152,30 @@ Assets {
   }
 }
 Assets {
+  Id: 11711350196513819217
+  Name: "Fantasy Chest 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_004"
+  }
+}
+Assets {
   Id: 11569271256789181933
   Name: "Fantasy Craft Crystal 005"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_005"
+  }
+}
+Assets {
+  Id: 11478889498718573073
+  Name: "Fantasy Crown 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Crown_001"
   }
 }
 Assets {
@@ -152,12 +197,12 @@ Assets {
   }
 }
 Assets {
-  Id: 10590055343228908066
-  Name: "Survival Craft Ribbon 001"
+  Id: 10694062733782524247
+  Name: "Fantasy Medal 003"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Survival_Crafting_Ribbon_001"
+    AssetId: "UI_Fantasy_Equip_Medal_003"
   }
 }
 Assets {
@@ -305,6 +350,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3031555368145541451
+  Name: "Fantasy Chest 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_003"
+  }
+}
+Assets {
   Id: 2632397470656515207
   Name: "Shopping"
   PlatformAssetType: 9
@@ -365,6 +419,33 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
+  Id: 813134327095273190
+  Name: "Fantasy Gear Top 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Top_010"
+  }
+}
+Assets {
+  Id: 634785656113528393
+  Name: "Fantasy Medal 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Medal_002"
+  }
+}
+Assets {
+  Id: 492386355073538419
+  Name: "Fantasy Dagger 009"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Weapon_Dagger_009"
   }
 }
 Assets {

@@ -43,7 +43,7 @@ function OnBindingPressed(player, bind)
             source = dmg.sourcePlayer,
             position = nil,
             rotation = nil,
-            tags = {}
+            tags = {Type = "HealthPotion"}
         }
 
         local vfx = META_AP().SpawnAsset(HealingPotionVFX, {position = player:GetWorldPosition() - Vector3.New(0,0,100)})

@@ -7,7 +7,14 @@ local DEAD = script:GetCustomProperty("Dead"):WaitForObject()
 local DIRECTION_ROOT = script:GetCustomProperty("DirectionRoot"):WaitForObject()
 local ARROW = script:GetCustomProperty("Arrow"):WaitForObject()
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 ROOT.visibility = Visibility.FORCE_OFF
+
+-- Wait for team colors
+while not _G.TeamColors do
+	Task.Wait()
+end
 
 local myPlayer = nil
 local initialized = false
@@ -17,12 +24,20 @@ function SetPlayer(player)
 	initialized = true
 	
 	ROOT.visibility = Visibility.INHERIT
-
-	CIRCLE_BG.isEnabled = (player == Game.GetLocalPlayer())
+	
+	CIRCLE_BG.isEnabled = (player == LOCAL_PLAYER)
 	CIRCLE_BG:SetColor(_G.TeamColors[myPlayer.team])
 	ARROW:SetColor(_G.TeamColors[myPlayer.team])
 	-- Set player's initial name letter
 	NAME.text = string.sub(player.name, 1, 1)
+	if player == LOCAL_PLAYER then
+		NAME:SetColor(Color.FromStandardHex("F7EF00FF"))
+	else
+		local teamColor = Color.New(_G.TeamColors[player.team])
+		teamColor.a = 0.7
+
+		CIRCLE:SetColor(teamColor)
+	end
 
 	UpdateContent()
 end
@@ -46,8 +61,15 @@ function UpdateContent()
 		DIRECTION_ROOT.rotationAngle = rot.z - 60
 	end
 
+	if myPlayer == LOCAL_PLAYER then
+		ARROW:SetColor(Color.FromStandardHex("F7EF00FF"))
+	else
+		ARROW:SetColor(_G.TeamColors[myPlayer.team])
+		local teamColor = Color.New(_G.TeamColors[myPlayer.team])
+		teamColor.a = 0.7
+		CIRCLE:SetColor(teamColor)
+	end
 	CIRCLE_BG:SetColor(_G.TeamColors[myPlayer.team])
-	ARROW:SetColor(_G.TeamColors[myPlayer.team])
 end
 
 function Tick()

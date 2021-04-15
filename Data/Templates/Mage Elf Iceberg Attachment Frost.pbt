@@ -17,6 +17,7 @@ Assets {
         }
         ParentId: 14162296025304194376
         ChildIds: 7742696503168086289
+        Lifespan: 15
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -49,15 +50,15 @@ Assets {
           }
         }
         ParentId: 8167322934774301301
+        ChildIds: 3708970669496613884
+        ChildIds: 13932671251810042744
         ChildIds: 17474801734570375530
         ChildIds: 5625580635564564277
         ChildIds: 15663055401451509779
-        ChildIds: 3977295095965584279
         ChildIds: 10442227138035608010
         ChildIds: 10377713534342587415
         ChildIds: 16311769420508334192
         ChildIds: 16021308099788175323
-        ChildIds: 7131395419582000828
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -69,6 +70,785 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 3708970669496613884
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.7696383
+            Y: 3.7696383
+            Z: 1
+          }
+        }
+        ParentId: 7742696503168086289
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Corner Rounding"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Stroke Width"
+            Float: 0.00906547531
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.49333331
+              B: 0.580392182
+              A: 0.6
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              G: 5
+              B: 4.50000048
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 9377227685447941950
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 13932671251810042744
+        Name: "Group"
+        Transform {
+          Location {
+            X: 20
+            Y: -5
+            Z: 15
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.43
+            Y: 0.43
+            Z: 0.43
+          }
+        }
+        ParentId: 7742696503168086289
+        ChildIds: 3977295095965584279
+        ChildIds: 7131395419582000828
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3977295095965584279
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            Z: 126.89502
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.905730426
+            Y: 1.1583271
+            Z: 1.57122171
+          }
+        }
+        ParentId: 13932671251810042744
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 926391387561774024
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.135662258
+              B: 0.241000012
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7131395419582000828
+        Name: "Stones"
+        Transform {
+          Location {
+            X: -20
+            Y: 5
+            Z: -15
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13932671251810042744
+        ChildIds: 12692111646078626525
+        ChildIds: 3322351980825554069
+        ChildIds: 2286250162510491101
+        ChildIds: 8308210517026847389
+        ChildIds: 1818977338977949698
+        ChildIds: 4247037779976095784
+        ChildIds: 14691363371668968726
+        ChildIds: 17585906787557324913
+        ChildIds: 4923724781125660420
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12692111646078626525
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: 67.8398438
+            Y: 113.013672
+            Z: 127.510254
+          }
+          Rotation {
+            Pitch: 11.415308
+            Yaw: 51.3632774
+            Roll: -3.25228977
+          }
+          Scale {
+            X: 0.208508804
+            Y: 0.424888849
+            Z: 1.64920378
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.358157426
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3322351980825554069
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: 118.611328
+            Y: -28.3789063
+            Z: 24.3251953
+          }
+          Rotation {
+            Pitch: -16.1270733
+            Yaw: 118.986725
+            Roll: -11.8407469
+          }
+          Scale {
+            X: 0.384806663
+            Y: 0.276012212
+            Z: 0.609436691
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.23989071
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2286250162510491101
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: 94.5
+            Y: -86.8203125
+            Z: 141.072754
+          }
+          Rotation {
+            Pitch: 17.7629299
+            Yaw: -47.2873344
+            Roll: -1.97683716
+          }
+          Scale {
+            X: 0.267996758
+            Y: 0.384726435
+            Z: 1.79670131
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.358157426
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8308210517026847389
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: 48.6074219
+            Y: -121.806641
+            Z: 24.3251953
+          }
+          Rotation {
+            Pitch: 12.950345
+            Yaw: 31.493433
+            Roll: -10.5277853
+          }
+          Scale {
+            X: 0.384744495
+            Y: 0.278438658
+            Z: 0.609433293
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.23989071
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1818977338977949698
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: 96.7148438
+            Y: 54.6855469
+            Z: 24.3251953
+          }
+          Rotation {
+            Pitch: 10.0696106
+            Yaw: -136.026855
+            Roll: 16.5418911
+          }
+          Scale {
+            X: 0.285764098
+            Y: 0.384774238
+            Z: 0.609432936
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.23989071
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4247037779976095784
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: -19.90625
+            Y: -96.8710938
+            Z: 24.3251953
+          }
+          Rotation {
+            Pitch: 7.76998854
+            Yaw: -29.8743305
+            Roll: -19.9960308
+          }
+          Scale {
+            X: 0.384744495
+            Y: 0.278438658
+            Z: 0.609433293
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.23989071
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14691363371668968726
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: -63.7207031
+            Y: -48.2578125
+            Z: 143.040039
+          }
+          Rotation {
+            Pitch: 2.79170299
+            Yaw: 118.216881
+            Roll: -12.6866322
+          }
+          Scale {
+            X: 0.38476792
+            Y: 0.278427273
+            Z: 1.90331411
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.584540725
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17585906787557324913
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: -64.1757813
+            Y: 22.640625
+            Z: 8.01269531
+          }
+          Rotation {
+            Pitch: -12.5567627
+            Yaw: 51.7995415
+            Roll: 10.6535349
+          }
+          Scale {
+            X: 0.384744495
+            Y: 0.278438658
+            Z: 0.609433293
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.23989071
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4923724781125660420
+        Name: "Stone Block Standard Broken"
+        Transform {
+          Location {
+            X: -6.578125
+            Y: 101.507813
+            Z: -1.14257813
+          }
+          Rotation {
+            Pitch: -6.13314772
+            Yaw: -138.355148
+            Roll: -18.3039284
+          }
+          Scale {
+            X: 0.384744495
+            Y: 0.278438658
+            Z: 0.609433293
+          }
+        }
+        ParentId: 7131395419582000828
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1007126261426868767
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.23989071
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableDistanceFieldLighting: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
         }
       }
       Objects {
@@ -156,9 +936,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 2.9
-            Y: 2.4
-            Z: 1.60000026
+            X: 1.9814142
+            Y: 1.63979089
+            Z: 1.09319389
           }
         }
         ParentId: 7742696503168086289
@@ -182,75 +962,6 @@ Assets {
         }
         Relevance {
           Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 3977295095965584279
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: 20
-            Y: -5
-            Z: 141.89502
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.905730426
-            Y: 1.1583271
-            Z: 1.57122171
-          }
-        }
-        ParentId: 7742696503168086289
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 926391387561774024
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.135662258
-              B: 0.241000012
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
         }
       }
       Objects {
@@ -1232,618 +1943,23 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 7131395419582000828
-        Name: "Stones"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7742696503168086289
-        ChildIds: 12692111646078626525
-        ChildIds: 3322351980825554069
-        ChildIds: 2286250162510491101
-        ChildIds: 8308210517026847389
-        ChildIds: 1818977338977949698
-        ChildIds: 4247037779976095784
-        ChildIds: 14691363371668968726
-        ChildIds: 17585906787557324913
-        ChildIds: 4923724781125660420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
+    }
+    Assets {
+      Id: 9377227685447941950
+      Name: "2D Basic Shapes Decal"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "dcl_basicShapes"
       }
-      Objects {
-        Id: 12692111646078626525
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: 67.8398438
-            Y: 113.013672
-            Z: 127.510254
-          }
-          Rotation {
-            Pitch: 11.415308
-            Yaw: 51.3632774
-            Roll: -3.25228977
-          }
-          Scale {
-            X: 0.208508804
-            Y: 0.424888849
-            Z: 1.64920378
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.358157426
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3322351980825554069
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: 118.611328
-            Y: -28.3789063
-            Z: 24.3251953
-          }
-          Rotation {
-            Pitch: -16.1270733
-            Yaw: 118.986725
-            Roll: -11.8407469
-          }
-          Scale {
-            X: 0.384806663
-            Y: 0.276012212
-            Z: 0.609436691
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2286250162510491101
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: 94.5
-            Y: -86.8203125
-            Z: 141.072754
-          }
-          Rotation {
-            Pitch: 17.7629299
-            Yaw: -47.2873344
-            Roll: -1.97683716
-          }
-          Scale {
-            X: 0.267996758
-            Y: 0.384726435
-            Z: 1.79670131
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.358157426
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8308210517026847389
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: 48.6074219
-            Y: -121.806641
-            Z: 24.3251953
-          }
-          Rotation {
-            Pitch: 12.950345
-            Yaw: 31.493433
-            Roll: -10.5277853
-          }
-          Scale {
-            X: 0.384744495
-            Y: 0.278438658
-            Z: 0.609433293
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1818977338977949698
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: 96.7148438
-            Y: 54.6855469
-            Z: 24.3251953
-          }
-          Rotation {
-            Pitch: 10.0696106
-            Yaw: -136.026855
-            Roll: 16.5418911
-          }
-          Scale {
-            X: 0.285764098
-            Y: 0.384774238
-            Z: 0.609432936
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4247037779976095784
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: -19.90625
-            Y: -96.8710938
-            Z: 24.3251953
-          }
-          Rotation {
-            Pitch: 7.76998854
-            Yaw: -29.8743305
-            Roll: -19.9960308
-          }
-          Scale {
-            X: 0.384744495
-            Y: 0.278438658
-            Z: 0.609433293
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14691363371668968726
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: -63.7207031
-            Y: -48.2578125
-            Z: 143.040039
-          }
-          Rotation {
-            Pitch: 2.79170299
-            Yaw: 118.216881
-            Roll: -12.6866322
-          }
-          Scale {
-            X: 0.38476792
-            Y: 0.278427273
-            Z: 1.90331411
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.584540725
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17585906787557324913
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: -64.1757813
-            Y: 22.640625
-            Z: 8.01269531
-          }
-          Rotation {
-            Pitch: -12.5567627
-            Yaw: 51.7995415
-            Roll: 10.6535349
-          }
-          Scale {
-            X: 0.384744495
-            Y: 0.278438658
-            Z: 0.609433293
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4923724781125660420
-        Name: "Stone Block Standard Broken"
-        Transform {
-          Location {
-            X: -6.578125
-            Y: 101.507813
-            Z: -1.14257813
-          }
-          Rotation {
-            Pitch: -6.13314772
-            Yaw: -138.355148
-            Roll: -18.3039284
-          }
-          Scale {
-            X: 0.384744495
-            Y: 0.278438658
-            Z: 0.609433293
-          }
-        }
-        ParentId: 7131395419582000828
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7185380311906960862
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
+    }
+    Assets {
+      Id: 7185380311906960862
+      Name: "Rock 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_003"
       }
     }
     Assets {
@@ -1871,15 +1987,6 @@ Assets {
       PrimaryAsset {
         AssetType: "DecalBlueprintAssetRef"
         AssetId: "bp_decal_snow_patch_001"
-      }
-    }
-    Assets {
-      Id: 7185380311906960862
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
       }
     }
     Assets {

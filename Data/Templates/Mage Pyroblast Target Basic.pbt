@@ -7,7 +7,7 @@ Assets {
       RootId: 11681989726196467244
       Objects {
         Id: 11681989726196467244
-        Name: "Pyroblast Homing Target"
+        Name: "Mage Pyroblast Target Basic"
         Transform {
           Scale {
             X: 1
@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
+        Lifespan: 15
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

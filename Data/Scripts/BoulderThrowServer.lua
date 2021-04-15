@@ -1,3 +1,8 @@
+-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
 -- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
@@ -31,7 +36,7 @@ function OnPickupCast(thisAbility)
 end
 
 function OnPickupExecute(thisAbility)
-	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
+	if thisAbility:GetCurrentPhase() ~= AbilityPhase.EXECUTE then 
 		return 
 	end
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
@@ -43,7 +48,7 @@ function OnPickupExecute(thisAbility)
 	local newScale = Vector3.New(META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale"))
 	PickupObject:SetWorldScale(newScale)
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
-	ThrowAbility.isEnabled = true
+	--ThrowAbility.isEnabled = true
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -59,7 +64,7 @@ function OnStunBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(other) or not Object.IsValid(PickupAbility) or not PickupAbility.owner or not Object.IsValid(PickupAbility.owner) or not other:IsA("Player")
 	or other == PickupAbility.owner or Teams.AreTeamsFriendly(other.team, PickupAbility.owner.team) or COMBAT().IsDead(other) then return end
 
-	API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, PickupAbility.owner, 3, 0, 0)
+	API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, PickupAbility.owner, 2, 0, 0)
 end
 
 function OnBoulderBeginOverlap(thisTrigger, other)
@@ -96,6 +101,10 @@ function OnThrowExecute(thisAbility)
 		PickupObject:Destroy()
 	end
     
+	if thisAbility:GetCurrentPhase() ~= AbilityPhase.EXECUTE then 
+		return 
+	end
+
     -- Get mod data
     local projectileScale = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale")
     local projectileSpeed = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod3", DEFAULT_ProjectileSpeed, PickupAbility.name..": Projectile Speed")
@@ -121,8 +130,9 @@ function OnThrowExecute(thisAbility)
     local ProjectileCollision = CurrentProjectile:GetCustomProperty("Collision"):WaitForObject()
     ProjectileCollision.team = Equipment.owner.team
 
-	for _, other in pairs(StunTrigger:GetOverlappingObjects()) do
-		OnStunBeginOverlap(StunTrigger, other)
+	for _, player in ipairs(Game.FindPlayersInSphere(spawnPosition, ProjectileRadius, {ignoreTeams=Equipment.owner.team})) do
+		OnStunBeginOverlap(StunTrigger, player)
+		OnBoulderBeginOverlap(_, player)
 	end
 
     CurrentProjectile:MoveContinuous(ProjectileVelocity)
@@ -130,14 +140,24 @@ function OnThrowExecute(thisAbility)
 end
 
 function OnThrowAbilityRecovery(thisAbility)
-	ThrowAbility.isEnabled = false
+	--ThrowAbility.isEnabled = false
 end
 
 function OnInterrupted(thisAbility)
+	print(thisAbility.name)
 	if Object.IsValid(PickupObject) then
 		--print("Interupted: "..thisAbility.name)
 		PickupObject:Destroy()
 		PickupObject = nil
+	end
+
+	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
+		CurrentProjectile:Destroy()
+		CurrentProjectile = nil
+	end
+
+	if thisAbility == PickupAbility then
+		ThrowAbility:Interrupt()
 	end
 end
 
@@ -158,10 +178,10 @@ Equipment.unequippedEvent:Connect(OnUnequip)
 PickupAbility.castEvent:Connect( OnPickupCast )
 PickupAbility.executeEvent:Connect(OnPickupExecute)
 PickupAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)
+PickupAbility.interruptedEvent:Connect(OnInterrupted)
 ThrowAbility.executeEvent:Connect(OnThrowExecute)
 ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
 ThrowAbility.interruptedEvent:Connect(OnInterrupted)
---PickupAbility.interruptedEvent:Connect(OnInterrupted)
 
 function Tick(dTime)
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then

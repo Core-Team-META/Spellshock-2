@@ -53,7 +53,7 @@ end
 for _, ability in pairs(EQUIPMENT:FindDescendantsByType("Ability")) do
 
     -- Automatically assumes an ability as part of chain if it doesn't have "IsAbilityChain" property set to false
-    if ability:GetCustomProperty("IsAbilityChain") == nil or ability:GetCustomProperty("IsAbilityChain") == true then
+    if ability:GetCustomProperty("IsAbilityChain") == true then
         table.insert(abilities, ability)
         ability.isEnabled = (#abilities == 1)
         ability.recoveryEvent:Connect(OnAbilityRecovery)

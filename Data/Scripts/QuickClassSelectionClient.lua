@@ -1,4 +1,9 @@
-﻿local Respawn_UI = script:GetCustomProperty("Respawn_UI"):WaitForObject()
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local Respawn_UI = script:GetCustomProperty("Respawn_UI"):WaitForObject()
 local QuickClassSelectionPanel = script:GetCustomProperty("QuickClassSelectionPanel"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local Audio = script:GetCustomProperty("Audio"):WaitForObject()
@@ -44,11 +49,12 @@ function OnMenuChanged(oldMenu, newMenu)
 		UI.SetCursorVisible(true)
 		UI.SetCanCursorInteractWithUI(true)
     elseif oldMenu == _G.MENU_TABLE["Respawn"] then -- hide
-        print(">> Hiding Respawn UI")
+        --print(">> Hiding Respawn UI")
         Respawn_UI.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
         UI.SetCanCursorInteractWithUI(false)
-        Events.BroadcastToServer("ClassChanged_SERVER", CurrentClassButton.clientUserData.classID) -- broadcast to server the player's selected class
+        local classId = CurrentClassButton and CurrentClassButton.clientUserData.classID or 1
+        Events.BroadcastToServer("ClassChanged_SERVER", classId) -- broadcast to server the player's selected class
 	end
 end
 

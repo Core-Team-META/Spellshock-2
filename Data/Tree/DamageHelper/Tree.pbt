@@ -154,13 +154,13 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 1130
+    Width: 1300
     Height: 580
     UIY: 95
     RenderTransformPivot {
@@ -207,13 +207,13 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 1130
+    Width: 1300
     Height: 580
     RenderTransformPivot {
       Anchor {
@@ -1206,6 +1206,12 @@ Objects {
       Name: "cs:ABGS"
       AssetReference {
         Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:PlayerTitles"
+      AssetReference {
+        Id: 15054746282440886363
       }
     }
   }

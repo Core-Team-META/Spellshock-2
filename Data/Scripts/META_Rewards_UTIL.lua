@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Rewards UTIL
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/10
--- Version 0.1.1
+-- Date: 2021/4/5
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -53,51 +53,74 @@ API.RARITY = {
     LEGENDARY = 4
 }
 
+API.GOLD_REFRESH = {
+    -- Daily Shop refresh cost in Gold
+    [1] = 500,
+    [2] = 750,
+    [3] = 1000,
+    [4] = 1500,
+    [5] = 2500,
+    [6] = 4000,
+    [7] = 7500,
+    [8] = 10000,
+    [9] = 15000,
+    [10] = 20000
+}
+
+API.PREMIUM_REFRESH = {
+    -- Daily Shop refresh cost in Premium currency
+    [1] = 10,
+    [2] = 12,
+    [3] = 15,
+    [4] = 18,
+    [5] = 20,
+    [6] = 30,
+    [7] = 35,
+    [8] = 40,
+    [9] = 45,
+    [10] = 50
+}
+
 local SKILL_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 5, max = 8},
-    [API.RARITY.RARE] =      {min = 10, max = 15},
-    [API.RARITY.EPIC] =      {min = 30, max = 35},
+    [API.RARITY.UNCOMMON] = {min = 5, max = 8},
+    [API.RARITY.RARE] = {min = 10, max = 15},
+    [API.RARITY.EPIC] = {min = 30, max = 35},
     [API.RARITY.LEGENDARY] = {min = 50, max = 75}
-    --[[ KB Test
-    [API.RARITY.UNCOMMON] =  {min = 500000, max = 800000},
-    [API.RARITY.RARE] =      {min = 1000000, max = 1500000},
-    [API.RARITY.EPIC] =      {min = 3000000, max = 3500000},
-    [API.RARITY.LEGENDARY] = {min = 5000000, max = 7500000}
-    ]]
 }
 
 local COSMETIC_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 2, max = 4},
-    [API.RARITY.RARE] =      {min = 4, max = 6},
-    [API.RARITY.EPIC] =      {min = 6, max = 8},
+    [API.RARITY.UNCOMMON] = {min = 2, max = 4},
+    [API.RARITY.RARE] = {min = 4, max = 6},
+    [API.RARITY.EPIC] = {min = 6, max = 8},
     [API.RARITY.LEGENDARY] = {min = 8, max = 10}
 }
 
 local GOLD_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 150, max = 250},
-    [API.RARITY.RARE] =      {min = 400, max = 500},
-    [API.RARITY.EPIC] =      {min = 800, max = 950},
+    [API.RARITY.UNCOMMON] = {min = 150, max = 250},
+    [API.RARITY.RARE] = {min = 400, max = 500},
+    [API.RARITY.EPIC] = {min = 800, max = 950},
     [API.RARITY.LEGENDARY] = {min = 1500, max = 1500}
 }
 
-local HEALING_POTION_AMOUNT = { -- these amounts are XP towards leveling up the healing potion
-    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
-    [API.RARITY.RARE] =      {min = 20, max = 30},
-    [API.RARITY.EPIC] =      {min = 30, max = 40},
+local HEALING_POTION_AMOUNT = {
+    -- these amounts are XP towards leveling up the healing potion
+    [API.RARITY.UNCOMMON] = {min = 10, max = 20},
+    [API.RARITY.RARE] = {min = 20, max = 30},
+    [API.RARITY.EPIC] = {min = 30, max = 40},
     [API.RARITY.LEGENDARY] = {min = 40, max = 50}
 }
 
 local MOUNT_SPEED_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
-    [API.RARITY.RARE] =      {min = 20, max = 30},
-    [API.RARITY.EPIC] =      {min = 30, max = 40},
+    [API.RARITY.UNCOMMON] = {min = 10, max = 20},
+    [API.RARITY.RARE] = {min = 20, max = 30},
+    [API.RARITY.EPIC] = {min = 30, max = 40},
     [API.RARITY.LEGENDARY] = {min = 40, max = 50}
 }
 
 local CLASS_XP_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 1000, max = 1200},
-    [API.RARITY.RARE] =      {min = 2000, max = 2400},
-    [API.RARITY.EPIC] =      {min = 4000, max = 4500},
+    [API.RARITY.UNCOMMON] = {min = 1000, max = 1200},
+    [API.RARITY.RARE] = {min = 2000, max = 2400},
+    [API.RARITY.EPIC] = {min = 4000, max = 4500},
     [API.RARITY.LEGENDARY] = {min = 9000, max = 9900}
 }
 
@@ -114,7 +137,7 @@ local function GetDefaultRarity(reward)
         reward.rarity = API.RARITY.EPIC
     elseif randomChance <= 70 and randomChance > 40 then
         reward.rarity = API.RARITY.RARE
-    else -- randomChance <= 40    
+    else -- randomChance <= 40
         reward.rarity = API.RARITY.UNCOMMON
     end
 end
@@ -124,7 +147,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 function API.GetSkillReward()
     local reward = {}
-    GetDefaultRarity(reward)    
+    GetDefaultRarity(reward)
 
     local amountsTable = SKILL_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
@@ -182,7 +205,7 @@ function API.GetLoserGoldAmmount()
     if randomChance > 80 then
         reward.rarity = API.RARITY.RARE
         reward.bind = 1
-    else -- randomChance <= 80    
+    else -- randomChance <= 80
         reward.rarity = API.RARITY.UNCOMMON
         reward.bind = 1
     end
@@ -201,7 +224,7 @@ function API.GetWinnerGoldAmmount()
     if randomChance > 80 then
         reward.rarity = API.RARITY.LEGENDARY
         reward.bind = 2
-    else -- randomChance <= 80 
+    else -- randomChance <= 80
         reward.rarity = API.RARITY.EPIC
         reward.bind = 2
     end
@@ -238,19 +261,19 @@ function API.GetMountSpeedReward()
 end
 
 function API.GetSkillSmallAmmount()
-    return math.random(4, 5)
+    return math.random(20, 25)
 end
 
 function API.GetSkillMediumAmmount()
-    return math.random(6, 7)
+    return math.random(30, 35)
 end
 
 function API.GetSkillLargeAmmount()
-    return math.random(7, 9)
+    return math.random(35, 45)
 end
 
 function API.GetCostumeTokenAmmount()
-    return math.random(1, 3)
+    return math.random(3, 9)
 end
 
 --#TODO Currently Turned off RMB and SHIFT
@@ -276,24 +299,36 @@ end
 
 --@param int value
 --@return int cost
-function API.CalculateRefreshCost(value)
-    if value == 0 then
-        return 500
-    else
-        return CoreMath.Round((2 ^ value) * 500)
+function API.CalculateGoldRefreshCost(value)
+    value = tonumber(value + 1)
+    if value > 10 then
+        value = 10
     end
+    return CoreMath.Round(API.GOLD_REFRESH[value])
 end
 
-function API.GetRewardCost(dailyRewards)
+--@param int value
+--@return int cost
+function API.CalculatePremiumRefreshCost(value)
+    value = tonumber(value + 1)
+    if value == 0 then
+        value = 1
+    elseif value > 10 then
+        value = 10
+    end
+    return CoreMath.Round(API.PREMIUM_REFRESH[value])
+end
+
+function API.GetRewardCost(dailyRewards, slot)
     local cost = 0
-    for key, value in pairs(dailyRewards) do
-        if type(key) == "number" then
-            cost = API.CalculateShardCost(value)
-        elseif key == "G" then
-            cost = API.CalculateCosmeticCost(value)
-        elseif key == "C" then
-            cost = API.CalculateCosmeticCost(value)
-        end
+    local rewardType = dailyRewards.type
+    local value = dailyRewards.amount
+    if rewardType == API.REWARD_TYPES.SKILLPOINTS then
+        cost = API.CalculateShardCost(value)
+    elseif rewardType == API.REWARD_TYPES.GOLD then
+        cost = API.CalculateCosmeticCost(value)
+    elseif rewardType == API.REWARD_TYPES.COSMETIC then
+        cost = API.CalculateCosmeticCost(value)
     end
     return cost
 end
@@ -343,8 +378,10 @@ function API.BuildRewardsTable(list, classData) -- #FIXME
     local tempTable = {}
     for _, rewardType in ipairs(list:GetChildren()) do
         local id = rewardType:GetCustomProperty("ID")
-        if id == API.REWARD_TYPES.GOLD or id == API.REWARD_TYPES.COSMETIC or 
-        id == API.REWARD_TYPES.CONSUMABLES or id == API.REWARD_TYPES.MOUNT_SPEED then
+        if
+            id == API.REWARD_TYPES.GOLD or id == API.REWARD_TYPES.COSMETIC or id == API.REWARD_TYPES.CONSUMABLES or
+                id == API.REWARD_TYPES.MOUNT_SPEED
+         then
             tempTable[id] = tempTable[id] or {}
             tempTable[id] = GetRewardInfo(tempTable[id], rewardType)
         end
@@ -355,13 +392,14 @@ function API.BuildRewardsTable(list, classData) -- #FIXME
         for _, class in ipairs(classData:GetChildren()) do
             local classId = CONST.CLASS[class:GetCustomProperty("ClassID")]
             tempTable[API.REWARD_TYPES.SKILLPOINTS][classId] = tempTable[API.REWARD_TYPES.SKILLPOINTS][classId] or {}
-            for _, bind in ipairs(class:GetChildren()) do 
+            for _, bind in ipairs(class:GetChildren()) do
                 local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
                 local icon = bind:GetCustomProperty("Icon")
                 local description = bind:GetCustomProperty("Description")
                 local classIcon = class:GetCustomProperty("Icon")
 
-                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] = tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] or {}
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] =
+                    tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] or {}
                 tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Name = bind.name
                 tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Image = icon
                 tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Description = description
@@ -382,17 +420,21 @@ function API.OnRewardSelect(player, slotID, tbl, bool)
     end
     -- Daily shop #FIXME
     if bool and tbl[player.id] and tbl[player.id][slotID] then
-        for key, value in pairs(tbl[player.id][slotID]) do
-            if type(key) == "number" then
-                local bindId = tostring(key)
-                local class = tonumber(bindId:sub(1, 1))
-                local bind = tonumber(bindId:sub(2, 2))
-                META_AP().AddBindXp(player, class, bind, value)
-            elseif key == "G" then
-                player:AddResource(CONST.GOLD, value)
-            elseif key == "C" then
-                player:AddResource(CONST.COSMETIC_TOKEN, value)
+        local reward = tbl[player.id][slotID]
+        if reward.type == API.REWARD_TYPES.SKILLPOINTS then
+            META_AP().AddBindXp(player, reward.class, reward.bind, reward.amount)
+        elseif reward.type == API.REWARD_TYPES.GOLD then
+            player:AddResource(CONST.GOLD, reward.amount)
+        elseif reward.type == API.REWARD_TYPES.COSMETIC then
+            player:AddResource(CONST.COSMETIC_TOKEN, reward.amount)
+        elseif reward.type == API.REWARD_TYPES.CONSUMABLES then
+            if reward.bind == CONST.CONSUMABLE_KEYS.HEALTH_POTION then
+                CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.HEALTH_POTION, reward.amount)
             end
+        elseif reward.type == API.REWARD_TYPES.MOUNT_SPEED then
+            CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.MOUNT_SPEED, reward.amount)
+        elseif reward.type == API.REWARD_TYPES.CLASS_XP then
+            META_CP().AddXP(player, reward.class, reward.amount)
         end
         tbl[player.id][slotID].P = 1
     elseif tbl[player.id] and tbl[player.id][slotID] then -- Rewards

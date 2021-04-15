@@ -44,14 +44,30 @@ end
 local function UpdateCombatAmmount(attackData)
     local target = attackData.object
     local source = attackData.source
-    local ammount = attackData.damage.amount
-    if ammount > 0 then
-        source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(ammount))
-        Events.Broadcast("AS.LifeTimeDamage", source, CoreMath.Round(ammount))
+    local amount = attackData.damage.amount
+    if amount > 0 then
+        source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(amount))
+        source:AddResource(CONST.ROUND_DAMAGE, CoreMath.Round(amount))
+        Events.Broadcast("AS.LifeTimeDamage", source, CoreMath.Round(amount))
+
+        local class = source:GetResource(CONST.CLASS_RES)
+        source.serverUserData.classDamage = source.serverUserData.classDamage or {}
+        local classDamage = source.serverUserData.classDamage[class] or 0
+        classDamage = classDamage and classDamage + amount or amount
+        source.serverUserData.classDamage[class] = classDamage
     else
-        ammount = ammount * -1
-        source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(ammount))
-        Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(ammount))
+        if attackData.tags.Type == "HealthPotion" then return end
+        amount = amount * -1
+        local afterHeal = target.hitPoints + amount
+        if afterHeal > target.maxHitPoints then
+            local overhealing = target.maxHitPoints - afterHeal
+            if overhealing < 0 then
+                amount = 0
+            end
+        end
+        source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(amount))
+        Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(amount))
+        source:AddResource(CONST.ROUND_HEALING, CoreMath.Round(amount))
     end
     Events.Broadcast("AS.PlayerDamaged", attackData)
 end
@@ -80,8 +96,6 @@ local function DevHelperFunction(attackData)
     end
 end
 
-
-
 local function ResetPlayers()
     for _, player in ipairs(Game.GetPlayers()) do
         for _, resName in pairs(CONST.COMBAT_STATS) do
@@ -105,7 +119,10 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 end
 
 function GoingToTakeDamage(attackData)
-    --local source = attackData.source
+    local object = attackData.object
+    if object.serverUserData.SpawnProtect and attackData.damage.amount > 0 then
+        attackData.damage.amount = 0
+    end
 end
 
 --#TODO Will need to check Gamestate for round in progress
@@ -122,9 +139,11 @@ function OnDied(attackData)
         if source then
             local sourceData = source.serverUserData
             sourceData.playersKilled = sourceData.playersKilled or {}
-            sourceData.playersKilled[target.id] = sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
+            sourceData.playersKilled[target.id] =
+                sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
+            source:AddResource(CONST.LIFE_TIME_KILLS, 1)
             Events.Broadcast("META_CH.OnDied", attackData)
         end
     end
@@ -143,7 +162,7 @@ function OnCapturePointChanged(playerId)
     end
 end
 
---Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
+Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
 Events.Connect("CombatWrapAPI.OnDamageTaken", OnDamageTaken)
 Events.Connect("CombatWrapAPI.ObjectHasDied", OnDied)
 Events.Connect("Stats.Helper.CapturePoint", OnCapturePointChanged)

@@ -6,67 +6,6 @@ local victimIndex = {}
 local nemesisList = {}
 local playerList = {}
 
-function PrintNemesisIndex(player)
-	
-	if not nemesisIndex then
-	
-		return
-		
-	end
-	
-	local nemesisString = ""
-	local fullString = "NEMESIS INDEX TABLE:"
-	local playerName = ""
-	local shortenedName = ""
-	
-	for victim, killerList in pairs(nemesisIndex) do
-	
-		playerName = GetPlayer(victim).name
-		
-		shortenedName = ""
-		
-		for x = 1, 4 do
-		
-			if string.sub(playerName, x, x) then
-			
-				shortenedName = shortenedName .. string.sub(playerName, x, x)
-				
-			end
-			
-		end
-	
-		nemesisString = " \n " .. shortenedName .. " KB: "
-
-	
-		for killer, killCount in pairs(killerList) do
-		
-			playerName = GetPlayer(killer).name
-			
-			shortenedName = ""
-		
-			for x = 1, 4 do
-			
-				if string.sub(playerName, x, x) then
-				
-					shortenedName = shortenedName .. string.sub(playerName, x, x)
-					
-				end
-				
-			end
-		
-			nemesisString = nemesisString .. shortenedName .. ": " .. killCount .. ", "
-		
-		end
-		
-		fullString = fullString .. nemesisString
-		
-	end
-	
-	Chat.BroadcastMessage(fullString, {players = {player}})
-
-end
-
-
 function GetPlayer(playerId)
 	
 	local playerList = Game.GetPlayers()
@@ -96,12 +35,6 @@ function TrackKill(victim, damage)
 	local killer = damage.sourcePlayer
 
 	if not killer or not victim or not killer:IsA("Player") or not victim:IsA("Player") then
-	
-		return
-		
-	end
-
-	if resetting then
 	
 		return
 		
@@ -300,7 +233,7 @@ function SetNemesis()
 
 	local nemesisString = ""
 
-	for i = 1, 12 do
+	for i = 1, 16 do
 	
 		if i <= #nemesisList then
 		
@@ -332,7 +265,7 @@ function OnGameStateChanged(oldState, newState, hasDuration, time)
 		
 		SetNemesis()
 	        
-    elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+    elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
     
     	script:SetNetworkedCustomProperty("ListSet", false)
         
@@ -345,4 +278,3 @@ Game.playerJoinedEvent:Connect(Setup)
 Game.playerLeftEvent:Connect(Remove)
 
 Events.Connect("GameStateChanged", OnGameStateChanged)
-Events.Connect("PrintNemesis", PrintNemesisIndex)

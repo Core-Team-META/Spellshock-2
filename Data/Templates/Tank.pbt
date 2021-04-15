@@ -70,6 +70,10 @@ Assets {
             Int: 0
           }
           Overrides {
+            Name: "cs:MT"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:OID:isrep"
             Bool: true
           }
@@ -88,6 +92,14 @@ Assets {
           Overrides {
             Name: "cs:RID:isrep"
             Bool: true
+          }
+          Overrides {
+            Name: "cs:MT:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:MT:tooltip"
+            String: "Mount Timer"
           }
         }
         WantsNetworking: true
@@ -361,6 +373,7 @@ Assets {
         ChildIds: 1059382485272021003
         ChildIds: 2626836070982711195
         ChildIds: 3688459431311766187
+        ChildIds: 3395704479817453357
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -900,6 +913,12 @@ Assets {
         }
         ParentId: 4159325021862714735
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -951,6 +970,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 3580804332177889778
+          }
+        }
+      }
+      Objects {
+        Id: 3395704479817453357
+        Name: "ReMount_Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4159325021862714735
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8824906113032024380
           }
         }
       }
@@ -1921,7 +1978,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -2138,7 +2195,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2156,6 +2213,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2167,6 +2225,7 @@ Assets {
             CanRotate: true
           }
           Animation: "2hand_melee_dig_shovel"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_14"
           }
@@ -2199,13 +2258,13 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2216,7 +2275,6 @@ Assets {
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2226,8 +2284,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2237,14 +2293,14 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           Animation: "unarmed_throw"
+          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_10"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2527,7 +2583,7 @@ Assets {
           }
           Overrides {
             Name: "cs:OwnerImpulse"
-            Int: 25000
+            Int: 35000
           }
           Overrides {
             Name: "cs:EnemyImpulse"
@@ -2616,6 +2672,7 @@ Assets {
             CanJump: true
             CanRotate: true
           }
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
           }
@@ -2662,8 +2719,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2672,7 +2727,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2681,14 +2735,13 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           Animation: "1hand_melee_shield_bash"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_10"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2704,7 +2757,7 @@ Assets {
           }
           Scale {
             X: 1.6
-            Y: 4.3
+            Y: 5.5
             Z: 3.3
           }
         }

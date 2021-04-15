@@ -50,9 +50,9 @@ end
 function OnExecuteAbility(ability)
     if ability.owner == LOCAL_PLAYER then
         if ability.clientUserData.chargeAmount < 1 then
-            if DAGGER_LEFT_ABILITY.owner and DAGGER_LEFT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
+            if DAGGER_LEFT_ABILITY.owner and DAGGER_LEFT_ABILITY.isEnabled and DAGGER_LEFT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
                 DAGGER_LEFT_ABILITY:Activate()
-            elseif DAGGER_RIGHT_ABILITY.owner and DAGGER_RIGHT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
+            elseif DAGGER_RIGHT_ABILITY.owner and DAGGER_RIGHT_ABILITY.isEnabled and DAGGER_RIGHT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
                 DAGGER_RIGHT_ABILITY:Activate()
             else
                 CHARGING_ABILITY:Interrupt()
@@ -100,7 +100,7 @@ listeners[#listeners+1] = CHARGING_ABILITY.interruptedEvent:Connect(OnInterruptA
 
 function OnBindingPressed(player, binding)
 	if binding == "ability_primary" and not ROOT_EQUIPMENT.clientUserData.isPreviewing then
-        if DAGGER_LEFT_ABILITY:GetCurrentPhase() == AbilityPhase.READY or DAGGER_RIGHT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
+        if Object.IsValid(DAGGER_LEFT_ABILITY) and DAGGER_LEFT_ABILITY:GetCurrentPhase() == AbilityPhase.READY or Object.IsValid(DAGGER_RIGHT_ABILITY) and DAGGER_RIGHT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
 		    if CHARGING_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
                 CHARGING_ABILITY:Activate()
             end

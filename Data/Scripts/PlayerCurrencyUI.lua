@@ -1,6 +1,9 @@
+local ABGS = require(script:GetCustomProperty("ABGS"))
+
 local GoldAmount = script:GetCustomProperty("GoldAmount"):WaitForObject()
 local GemsAmount = script:GetCustomProperty("GemsAmount"):WaitForObject()
-local ParentPanel = script:GetCustomProperty("ParentPanel"):WaitForObject()
+local BottomRightPanel = script:GetCustomProperty("BottomRightPanel"):WaitForObject()
+local BottomLeftPanel = script:GetCustomProperty("BottomLeftPanel"):WaitForObject()
 
 while not _G.CurrentMenu do Task.Wait() end
 
@@ -13,22 +16,20 @@ function FormatInt(number)
 end
 
 function OnMenuChanged(oldMenu, newMenu)
-    --local currentState = ABGS.GetGameState()
-    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Rewards"] or newMenu == _G.MENU_TABLE["Tutorial"] then
-		if newMenu == _G.MENU_TABLE["Rewards"] then
-            for _, panel in ipairs(script.parent:GetChildren()) do
-                if panel.name ~= "Currencies" then
-                    panel.visibility = Visibility.FORCE_OFF
-                end
-            end
+    Task.Wait()
+    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Tutorial"] then		
+        if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND_END then
+            BottomRightPanel.visibility = Visibility.FORCE_OFF
+        else
+            BottomRightPanel.visibility = Visibility.INHERIT
         end
-        ParentPanel.visibility = Visibility.INHERIT
-    elseif newMenu == "ShowIcons" then
-        for _, panel in ipairs(script.parent:GetChildren()) do
-            panel.visibility = Visibility.INHERIT
-        end
+        BottomLeftPanel.visibility = Visibility.INHERIT
+    elseif newMenu == _G.MENU_TABLE["ClassSelection"] or newMenu == _G.MENU_TABLE["ClassAbilities"] then
+        BottomLeftPanel.visibility = Visibility.INHERIT
+        BottomRightPanel.visibility = Visibility.FORCE_OFF
 	else -- hide
-		ParentPanel.visibility = Visibility.FORCE_OFF
+		BottomRightPanel.visibility = Visibility.FORCE_OFF
+        BottomLeftPanel.visibility = Visibility.FORCE_OFF
 	end
 end
 

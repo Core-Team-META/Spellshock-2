@@ -1,3 +1,9 @@
+-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Modified by: standardcombo (https://www.coregames.com/user/b4c6e32137e54571814b5e8f27aa2fcd)
+-- Date: 04/02/2021
+-- Version: 0.0.1
+--===========================================================================================
+
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
@@ -226,22 +232,40 @@ function CalculatePlacement()
 		)
 	end
 	--print("PlacementRange: "..PlacementRange)
-	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)
-	--MAX_PLACEMENT_RANGE)
+	local forwardVector = playerViewRotation * Vector3.FORWARD
+	
+	local edgeOfRange = playerViewPosition + forwardVector * PlacementRange
+	
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
-
+	
+	local resultPosition, resultNormal, resultIsVisibleInHierarchy
 	if hr ~= nil and hr.other ~= nil then
-		return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
+		resultPosition = hr:GetImpactPosition()
+		resultNormal = hr:GetImpactNormal()
+		resultIsVisibleInHierarchy = hr.other:IsVisibleInHierarchy()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
 		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
 		if hr ~= nil and hr.other ~= nil then
-			return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
+			resultPosition = hr:GetImpactPosition()
+			resultNormal = hr:GetImpactNormal()
+			resultIsVisibleInHierarchy = hr.other:IsVisibleInHierarchy()
 		else
 			return nil
 		end
 	end
+	-- Now, do a final raycast from the player to the target point, to check for walls
+	local secondHit = World.Raycast(playerPosition, resultPosition, {ignorePlayers = true})
+	if secondHit ~= nil 
+	and secondHit.other ~= hr.other 
+	and secondHit.other and not secondHit.other:IsVisibleInHierarchy() -- OR SOME OTHER METHOD OF DETERMINING IT'S A WALL
+	then
+		resultPosition = secondHit:GetImpactPosition()
+		resultNormal = secondHit:GetImpactNormal()
+		resultIsVisibleInHierarchy = secondHit.other:IsVisibleInHierarchy()
+	end
+	return resultPosition, resultNormal, resultIsVisibleInHierarchy
 end
 
 function OnPlayerLeft(player)

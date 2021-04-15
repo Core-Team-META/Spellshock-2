@@ -23,6 +23,7 @@ function EffectTick(player, source, damage)
 		tags = {id = "StatusEffect", name = "Burn"}
 	}
 	COMBAT().ApplyDamage(attackData)
+
 end
 
 local data = {}

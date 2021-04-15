@@ -61,6 +61,28 @@ local spamPrevent
 local refreshTime, refreshCount
 local closeButtonLisener = nil
 local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
+local shopItems = SHOP_ITEMS:GetChildren()
+local shouldRefresh = true
+
+
+local CardDescriptions = {
+    [REWARD_UTIL.REWARD_TYPES.GOLD] = "Gold can be used to upgrade abilities and purchase items at the Daily Shop.",
+    [REWARD_UTIL.REWARD_TYPES.COSMETIC] = "Use gems in the Cosmetic Shop to purchase different ability skins and costumes.",
+    [REWARD_UTIL.REWARD_TYPES.CONSUMABLES] = {
+        [CONST.CONSUMABLE_KEYS.HEALTH_POTION] = "Use a healing potion in the heat of battle to recover some health up to 75%."
+    },
+    [REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED] = "If you claim this reward, your mount speed will automatically be improved.",
+    [REWARD_UTIL.REWARD_TYPES.CLASS_XP] = "If you claim this reward, the XP of the class will be increased by the amount shown on the card."
+}
+
+local RarityColors = {
+    -- Hex sRGB
+    [REWARD_UTIL.RARITY.UNCOMMON] = Color.FromStandardHex("55F700FF"), -- Green
+    [REWARD_UTIL.RARITY.RARE] = Color.FromStandardHex("0099F0FF"), -- Blue
+    [REWARD_UTIL.RARITY.EPIC] = Color.FromStandardHex("C400F0FF"), -- Purple
+    [REWARD_UTIL.RARITY.LEGENDARY] = Color.FromStandardHex("F36900FF") -- Orange
+}
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -84,11 +106,7 @@ local function DisconnectButtonListener(listeners)
 end
 
 local function ToggleUi(bool)
-    UI.SetCursorVisible(bool)
-    UI.SetCanCursorInteractWithUI(bool)
-    UI.SetCursorLockedToViewport(bool)
     if bool then
-        Events.Broadcast("Changing Menu", _G.MENU_TABLE["DailyShop"])
         -- PARENT_UI.isEnabled = true
         PARENT_UI.visibility = Visibility.FORCE_ON
         ORC_DAILY_SHOP_TRIGGER.isInteractable = false
@@ -104,7 +122,19 @@ local function ToggleUi(bool)
         ORC_DAILY_SHOP_TRIGGER.isInteractable = true
         ELF_DAILY_SHOP_TRIGGER.isInteractable = true
         DisconnectButtonListener(listeners)
-        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    end
+    Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
+    UI.SetCursorVisible(bool)
+    UI.SetCanCursorInteractWithUI(bool)
+    UI.SetCursorLockedToViewport(bool)
+end
+
+local function SetRarityColor(CardRoot, rarity)
+    for _, object in ipairs(CardRoot:FindDescendantsByName("RARITY_COLOR")) do
+        local color = object:GetColor()
+        local newColor = RarityColors[rarity]
+        newColor.a = color.a
+        object:SetColor(newColor)
     end
 end
 
@@ -114,70 +144,25 @@ local function FormatInt(number)
     return minus .. int:reverse():gsub("^,", "") .. fraction
 end
 
-local function GetBindInfo(value)
-    local class, bind
-    for shardId, reward in pairs(value) do
-        if shardId ~= "P" then
-            shardId = tostring(shardId)
-            class = tonumber(shardId:sub(1, 1))
-            bind = tonumber(shardId:sub(2, 2))
-            return class, bind, reward
-        end
-    end
-end
-
-local function GetGoldInfo(value)
-    local bind
-    for key, reward in pairs(value) do
-        if key ~= "P" then
-            reward = tonumber(reward)
-            if reward > 800 then
-                bind = 2
-            else
-                bind = 1
-            end
-            return bind, reward
-        end
-    end
-end
-
-local function GetCosmeticInfo(value)
-    local bind
-    for key, reward in pairs(value) do
-        if key ~= "P" then
-            reward = tonumber(reward)
-            bind = 1
-            return bind, reward
-        end
-    end
-end
-
-local function BuildShopItems(slot, id, class, bind, reward)
-    -- TIME^R~0^T~1613694203
-    local table = SHOP_ITEMS:GetChildren()
-    local panel = table[slot]
+local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
+    local panel = SHOP_ITEMS:GetChildren()[slot]
     if panel.name ~= "Background" then
         local slotId = panel:GetCustomProperty("SLOT")
         local infoTable = nil
         local currentAmmount, requiredAmount = nil
         local cost = nil
+
         if slotId and slotId == slot then
-            if id == 1 then
+            if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
                 --Shard Cost
-                cost = REWARD_UTIL.CalculateShardCost(reward)
-                infoTable = rewardAssets[id][class][bind]
+                cost = REWARD_UTIL.CalculateShardCost(amount)
+                infoTable = rewardAssets[rewardType][class][bind]
                 --currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
                 currentAmmount = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetXpString(class, bind))
                 requiredAmount = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
-            else
-                if id == 2 then
-                    currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD)
-                elseif id == 3 then
-                    currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
-                end
-                --Cosmetic Token Cost
-                cost = REWARD_UTIL.CalculateCosmeticCost(reward)
-                infoTable = rewardAssets[id][bind]
+            elseif rewardType == REWARD_UTIL.REWARD_TYPES.COSMETIC then
+                infoTable = rewardAssets[rewardType][bind]
+                cost = REWARD_UTIL.CalculateCosmeticCost(amount)
             end
         end
         if infoTable and infoTable.Image then
@@ -190,18 +175,23 @@ local function BuildShopItems(slot, id, class, bind, reward)
             local soldPanel = panel:GetCustomProperty("SOLD_PANEL"):WaitForObject()
             local PROGRESS_BARS = panel:GetCustomProperty("PROGRESS_BARS"):WaitForObject()
             local RewardCurrencyIcon = panel:GetCustomProperty("RewardCurrencyIcon"):WaitForObject()
+            local OutterFrame = panel:GetCustomProperty("OUTTER_FRAME"):WaitForObject()
+            local OUTTER_FRAME2 = panel:GetCustomProperty("OUTTER_FRAME_1"):WaitForObject()
+            local ClassImage = panel:GetCustomProperty("ClassImage"):WaitForObject()
 
             Icon:SetImage(infoTable.Image)
-            Value.text = tostring(reward)
-            Value:GetChildren()[1].text = tostring(reward)
+            Value.text = tostring(amount)
+            Value:GetChildren()[1].text = tostring(amount)
             if class then
-                Name.text = CONST.CLASS_NAME[class] .. " " .. tostring(infoTable.Name)
+                -- Name.text = CONST.CLASS_NAME[class] .. " " .. tostring(infoTable.Name)
+                Name.text = tostring(infoTable.Name)
             else
                 Name.text = tostring(infoTable.Name)
             end
-
+            OutterFrame:SetColor(RarityColors[rarity])
+            OUTTER_FRAME2:SetColor(RarityColors[rarity])
             PROGRESS_BARS.visibility = Visibility.FORCE_OFF
-            if id == 1 then
+            if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
                 --Progress Bars
                 local REWARD_BAR = PROGRESS_BARS:GetCustomProperty("REWARD_BAR"):WaitForObject()
                 local CURRENT_BAR = PROGRESS_BARS:GetCustomProperty("CURRENT_BAR"):WaitForObject()
@@ -209,6 +199,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 local NextLevel = PROGRESS_BARS:GetCustomProperty("NextLevel"):WaitForObject()
 
                 local currentLevel = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetLevelString(class, bind))
+                ClassImage:SetImage(infoTable.ClassIcon)
                 LVL.text = tostring(currentLevel)
                 local nextLevel = currentLevel + 1
                 if nextLevel < 10 then
@@ -218,10 +209,12 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 end
                 RewardCurrencyIcon:SetImage(ShardIcon)
                 CURRENT_BAR.progress = currentAmmount / requiredAmount
-                REWARD_BAR.progress = (currentAmmount + reward) / requiredAmount
+                REWARD_BAR.progress = (currentAmmount + amount) / requiredAmount
+                ClassImage.visibility = Visibility.FORCE_ON
                 PROGRESS_BARS.visibility = Visibility.FORCE_ON
             else
                 RewardCurrencyIcon:SetImage(GemIcon)
+                ClassImage.visibility = Visibility.FORCE_OFF
             end
 
             -- Event Cost Reduction
@@ -262,33 +255,22 @@ local function BuildShopItems(slot, id, class, bind, reward)
         end
     end
 end
-
 --@param tabl tbl -- Nested table reward
 local function BuildRewardSlots(tbl)
-    for slot, value in pairs(tbl) do
-        local id, class, bind, reward
-        for rewardType, rewards in pairs(value) do
-            if type(rewardType) == "number" then
-                id = REWARD_UTIL.REWARD_TYPES.SKILLPOINTS
-                class, bind, reward = GetBindInfo(value)
-            elseif rewardType == "G" then
-                id = REWARD_UTIL.REWARD_TYPES.GOLD
-                bind, reward = GetGoldInfo(value)
-            elseif rewardType == "C" then
-                id = REWARD_UTIL.REWARD_TYPES.COSMETIC
-                bind, reward = GetCosmeticInfo(value)
-            elseif rewardType == "T" then --Refresh Timestamp
-                refreshTime = rewards
-            elseif rewardType == "R" then
-                refreshCount = rewards
-            end
-        end
-
-        if id and bind and reward then
-            BuildShopItems(slot, id, class, bind, reward)
-        end
+    refreshCount = tbl["TIME"].R
+    refreshTime = tbl["TIME"].T
+    for slot, reward in ipairs(tbl) do
+        BuildShopItems(
+            tonumber(slot),
+            tonumber(reward.type),
+            tonumber(reward.class),
+            tonumber(reward.bind),
+            tonumber(reward.rarity),
+            tonumber(reward.amount)
+        )
     end
-    local refreshCost = REWARD_UTIL.CalculateRefreshCost(refreshCount)
+    --warn("Refresh Count: " .. tostring(refreshCount))
+    local refreshCost = REWARD_UTIL.CalculateGoldRefreshCost(refreshCount)
     if refreshCost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
         AMOUNT.text = FormatInt(refreshCost)
         AMOUNT_SHADOW.text = FormatInt(refreshCost)
@@ -306,7 +288,7 @@ local function BuildRewardSlots(tbl)
 
         REFRESH_BUTTON.isInteractable = true
     end
-    refreshCost = CoreMath.Round(refreshCost / 500)
+    refreshCost = REWARD_UTIL.CalculatePremiumRefreshCost(refreshCount)
     if refreshCost > LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN) then
         REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
         REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
@@ -365,6 +347,28 @@ function OnDataObjectAdded(parent, object)
     end
 end
 
+function ToggleShop(bool)
+    local currentState = GAME_STATE_API.GetGameState()
+    if
+        bool and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and
+            (currentState == GAME_STATE_API.GAME_STATE_LOBBY or currentState == GAME_STATE_API.GAME_STATE_ROUND or
+                LOCAL_PLAYER.clientUserData.hasSkippedReward) and
+            not LOCAL_PLAYER.isDead
+     then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["DailyShop"])
+    elseif _G.CurrentMenu == _G.MENU_TABLE["DailyShop"] then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    end
+end
+
+function OnMenuChanged(oldMenu, newMenu)
+    if newMenu == _G.MENU_TABLE["DailyShop"] then
+        ToggleUi(true)
+    elseif oldMenu == _G.MENU_TABLE["DailyShop"] then
+        ToggleUi(false)
+    end
+end
+
 function OnGoldRefresh()
     if not isAllowed(0.2) then
         return
@@ -383,39 +387,29 @@ end
 
 function OnDailyShopOpen(player, keybind)
     if keybind == "ability_extra_33" and PARENT_UI:IsVisibleInHierarchy() and isAllowed(0.5) then
-        ToggleUi(false)
+        ToggleShop(false)
     end
 end
 
 function OnInteracted(trigger, player)
-    if
-        player == LOCAL_PLAYER and
-            (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and
-            not PARENT_UI:IsVisibleInHierarchy()
-     then
-        Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
-        ToggleUi(true)
+    if player == LOCAL_PLAYER and not PARENT_UI:IsVisibleInHierarchy() then
+        ToggleShop(true)
         isAllowed(0.5)
     end
 end
 
 function OnButtonInteracted(player, keybind)
-    if
-        player == LOCAL_PLAYER and keybind == "ability_extra_38" and
-            (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and
-            not PARENT_UI:IsVisibleInHierarchy()
-     then
-        Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
-        ToggleUi(true)
+    if player == LOCAL_PLAYER and keybind == "ability_extra_38" and not PARENT_UI:IsVisibleInHierarchy() then
+        ToggleShop(true)
         isAllowed(0.5)
     elseif player == LOCAL_PLAYER and keybind == "ability_extra_38" and PARENT_UI:IsVisibleInHierarchy() then
-        ToggleUi(false)
+        ToggleShop(false)
     end
 end
 
 function OnEndOverlap(trigger, player)
     if player == LOCAL_PLAYER and PARENT_UI:IsVisibleInHierarchy() then
-        ToggleUi(false)
+        ToggleShop(false)
     end
 end
 
@@ -443,11 +437,28 @@ function Tick()
             REFRESH_IN_TEXT.text = timeText
             REFRESH_IN_TEXT_HIGHLIGHT.text = timeText
             REFRESH_IN_TEXT_SHADOW.text = timeText
-        else
+            shouldRefresh = true
+        elseif shouldRefresh then
             local timeText = "Refresh Avaliable"
             REFRESH_IN_TEXT.text = timeText
             REFRESH_IN_TEXT_HIGHLIGHT.text = timeText
             REFRESH_IN_TEXT_SHADOW.text = timeText
+
+            REFRESH_AMOUNT_SHADOW_PREMIUM.text = "Free"
+            REFRESH_AMOUNT_PREMIUM.text = "Free"
+            REFRESH_AMOUNT_PREMIUM:SetColor(Color.BLACK)
+            REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.BLACK)
+
+            AMOUNT.text = "Free"
+            AMOUNT_SHADOW.text = "Free"
+
+            AMOUNT:SetColor(Color.BLACK)
+            AMOUNT_SHADOW:SetColor(Color.BLACK)
+
+            REFRESH_BUTTON.isInteractable = true
+
+            REFRESH_BUTTON_PREMIUM.isInteractable = true
+            shouldRefresh = false
         end
         -- UPDATE GOLD (Added by KonzZwodrei, better check this) -- checked
         GOLD_TXT.text = FormatInt(LOCAL_PLAYER:GetResource(CONST.GOLD))
@@ -475,8 +486,9 @@ playerListeners[#playerListeners + 1] = LOCAL_PLAYER.resourceChangedEvent:Connec
 
 CLOSE_BUTTON.clickedEvent:Connect(
     function()
-        ToggleUi(false)
+        ToggleShop(false)
     end
 )
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
+Events.Connect("Menu Changed", OnMenuChanged)

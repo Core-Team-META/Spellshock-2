@@ -78,6 +78,10 @@ Assets {
             Int: 0
           }
           Overrides {
+            Name: "cs:MT"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:T_isPreviewing:isrep"
             Bool: true
           }
@@ -103,6 +107,10 @@ Assets {
           }
           Overrides {
             Name: "cs:TID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:MT:isrep"
             Bool: true
           }
         }
@@ -426,6 +434,7 @@ Assets {
         ChildIds: 5124582396827107511
         ChildIds: 2489697862704505183
         ChildIds: 11411700836215041466
+        ChildIds: 11433321227896025717
         ChildIds: 18378548991232479363
         ChildIds: 1302420456206572084
         ChildIds: 8202727632896178477
@@ -665,6 +674,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 6553233916944605564
+          }
+        }
+      }
+      Objects {
+        Id: 11433321227896025717
+        Name: "ReMount_Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3557475336528325194
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8824906113032024380
           }
         }
       }
@@ -1151,6 +1198,12 @@ Assets {
         }
         ParentId: 3557475336528325194
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1236,6 +1289,7 @@ Assets {
         ChildIds: 14328014872396548696
         ChildIds: 8269407347384744348
         ChildIds: 5845621310675190650
+        ChildIds: 4326958157534787840
         ChildIds: 10078693908526600732
         WantsNetworking: true
         Collidable_v2 {
@@ -2392,6 +2446,16 @@ Assets {
               SubObjectId: 13263500662269639637
             }
           }
+          Overrides {
+            Name: "cs:BothHands"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:OtherHandVFX"
+            ObjectReference {
+              SubObjectId: 14691404772144920954
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2443,7 +2507,6 @@ Assets {
         Transform {
           Location {
             X: 3
-            Z: 57
           }
           Rotation {
           }
@@ -2512,7 +2575,113 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4326958157534787840
+        Name: "ChargeUpVFX2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 14691404772144920954
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14691404772144920954
+        Name: "Plasma Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 3
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4326958157534787840
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Arc Size"
+            Float: 0.443080842
+          }
+          Overrides {
+            Name: "bp:Arc Density"
+            Float: 1.30277085
+          }
+          Overrides {
+            Name: "bp:Arc Color"
+            Color {
+              R: 0.946
+              G: 0.986285746
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 18322083209027112941
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -3009,7 +3178,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -3019,7 +3188,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             PreventOtherAbilities: true
             Facing_V2 {
@@ -3140,7 +3309,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
-            Bool: true
+            Bool: false
           }
         }
         WantsNetworking: true

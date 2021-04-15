@@ -52,9 +52,11 @@ function Tick(deltaTime)
 					local statusEffectData = API_SE.STATUS_EFFECT_DEFINITIONS[effects[i].name]
 					effectObjects[player][i] = World.SpawnAsset(statusEffectData.effectTemplate)
 					effectObjects[player][i]:AttachToPlayer(player, "root")
+					effectObjects[player][i].clientUserData.owner = player -- added so a status template can know the player its attached to
+					effectObjects[player][i].clientUserData.source = effects[i].source
 
 					if effects[i].name == "Blind" and effects[i].source and player == LOCAL_PLAYER and effects[i].source ~= LOCAL_PLAYER.id then
-						local blind = effectObjects[player][i]:GetCustomProperty("Blind"):WaitForObject() 
+						local blind = effectObjects[player][i]:GetCustomProperty("Blind"):WaitForObject()
 						blind:SetSmartProperty("Hold Duration", effects[i].duration)
 						blind:Play()
 					end

@@ -133,4 +133,27 @@ function API.SetEnabled(id, enabled)
 	end
 end
 
+function API.GetTeamScoreRate(team)
+	local scoreRate
+	local ownedPoints = 0
+
+	-- Count how many flags the team holds
+	for id, functionTable in pairs(_G.APICapturePoints) do
+		local state = functionTable.GetState()
+		if team == state.owningTeam then
+			ownedPoints = ownedPoints + 1
+		end
+	end
+
+	-- Determine what the scoreRate should be
+	if ownedPoints == 5 then
+		scoreRate = 4
+	else
+		scoreRate = 3
+	end
+
+	--print("Scorerate: ", tostring(scoreRate))
+	return scoreRate
+end
+
 return API

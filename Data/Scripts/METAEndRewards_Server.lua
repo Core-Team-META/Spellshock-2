@@ -1,9 +1,9 @@
-﻿local NAMESPACE = "METAER."
+local NAMESPACE = "METAER."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/5/2021
--- Version 0.1.1
+-- Date: 2021/4/12
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -14,6 +14,10 @@ local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 
 local function META_CP()
     return _G["Class.Progression"]
+end
+
+while not _G.PROGRESS_MULTIPLIER do
+    Task.Wait()
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
@@ -52,12 +56,17 @@ local function IsTeamWinner(player)
 end
 
 local function IsFirstWinOfTheDay(player)
-    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
-    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
-        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
+    local currentTime = os.date("!*t").yday + 1
+    local storedDay = player:GetResource(CONST.WIN_OF_THE_DAY_TIME)
+    if storedDay < currentTime or storedDay == 2 or storedDay > 366 then -- Works leap years and Jan 1st
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, 1)
         return true
     end
     return false
+end
+
+local function ShouldClaimWinOfTheDay(player)
+    return player:GetResource(CONST.WIN_OF_THE_DAY_TIME) == 1
 end
 
 --@param object player
@@ -179,26 +188,28 @@ end
 function CalculateRewards()
     playerRewards = {}
     for _, player in ipairs(Game.GetPlayers()) do
-        if player.serverUserData.ClassesPlayed then
+        if player.serverUserData.ClassesPlayed and player.serverUserData.HasPlayedRound then
             playerRewards[player.id] = GetPlayerRewards(player)
             -- player.serverUserData.ClassesPlayed = nil
-            local isVip = player.serverUserData.IsVip
+            --local isVip = player.serverUserData.IsVip
             for _, reward in ipairs(playerRewards[player.id]) do
-                if isVip and reward.amount then
-                    reward.amount = CoreMath.Round(reward.amount * CONST.VIP_REWARD_MULTIPLIER)
-                end
-                if reward.amount then
-                    reward.amount = CoreMath.Round(reward.amount * CONST.EVENT_REWARD_MULTIPLIER)
-                end
+                reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
             end
         end
     end
     ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
 end
 
+--#TODO Create server side logic that checks how many cards player should be able to claim. Currently client validated
 function GivePlayerRewards(player, rewardList)
-    for _, slotID in pairs(rewardList) do
-        REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
+    if player.serverUserData.HasPlayedRound then
+        for _, slotID in pairs(rewardList) do
+            REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
+        end
+        if ShouldClaimWinOfTheDay(player) then
+            local currentDay = os.date("!*t").yday + 2
+            player:SetResource(CONST.WIN_OF_THE_DAY_TIME, currentDay)
+        end
     end
     playerRewards[player.id] = nil
 end
@@ -219,19 +230,4 @@ end
 GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "GivePlayerRewards", GivePlayerRewards)
 Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
-
--- FOR TESTING -----------------------
-function OnBindingPressed(whichPlayer, binding)
-    if (binding == "ability_extra_46") then
-        TEMP_CardCount = TEMP_CardCount + 1
-    end
-end
-
-function OnPlayerJoined(player)
-    -- hook up binding in player joined event here, move to more appropriate place if needed
-    player.bindingPressedEvent:Connect(OnBindingPressed)
-end
-
--- on player joined/left functions need to be defined before calling event:Connect()
---Game.playerJoinedEvent:Connect(OnPlayerJoined)
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------

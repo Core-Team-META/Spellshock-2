@@ -156,6 +156,14 @@ Assets {
             Name: "bp:Life"
             Float: 0.7
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 11
+              G: 3.05960512
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

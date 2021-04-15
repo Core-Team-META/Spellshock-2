@@ -18,11 +18,16 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- Fires an event for the client to add a line to the kill feed
 function OnPlayerDied(player, damage)
 	if damage.sourceAbility then
-		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name)
-		print(player.name .. " - " .. damage.sourceAbility.name)
+	local lastCapturePoint = player.serverUserData.lasterCapturePoint
+	if lastCapturePoint and (not lastCapturePoint.time or lastCapturePoint.time > time()) and lastCapturePoint.point > 0 then
+		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name, lastCapturePoint.point)
+	else
+		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name, nil)
+	end
+		--print(player.name .. " - " .. damage.sourceAbility.name)
 	elseif not player.serverUserData.killedByStatusEffect then
-		print(player.name .. "No source ability")
-		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, nil)
+		--print(player.name .. "No source ability")
+		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, nil, nil)
 	end
 end
 

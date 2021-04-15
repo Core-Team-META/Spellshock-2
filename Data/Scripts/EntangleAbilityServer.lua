@@ -1,4 +1,9 @@
-﻿local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
@@ -49,6 +54,8 @@ function OnAbilityExecute(thisAbility)
 	local targetPosition = thisAbility.owner:GetWorldPosition()
 	local targetRotation = Rotation.ZERO
 
+	AddImpulse(SpecialAbility.owner)
+
 	local hitResult = World.Raycast(targetPosition, targetPosition - Vector3.New(0, 0, 5000), {ignorePlayers = true})
 	if hitResult then
 		targetPosition = hitResult:GetImpactPosition()
@@ -78,8 +85,6 @@ function OnAbilityExecute(thisAbility)
 			status.multiplier
 		)
 	end
-
-	AddImpulse(SpecialAbility.owner)
 
 	local trapTrigger = newTrap:GetCustomProperty("Trigger"):WaitForObject()
 	if OverlapEvent then

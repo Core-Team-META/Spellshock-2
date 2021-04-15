@@ -1,5 +1,5 @@
 ﻿function RespawnPlayer(player, objectRef)
-	print(">> Respawning "..player.name)
+	--print(">> Respawning "..player.name)
 	
 	if objectRef then
 		local RespawnObject = objectRef:GetObject()
@@ -14,12 +14,12 @@
 		
 		player:SetVisibility(false)
 		player:Respawn({position=targetPosition, rotation=targetRotation})	
-		Task.Wait(1.8)
+		--Task.Wait(1.8)
 		player:SetVisibility(true)
 	else
 		player:SetVisibility(false)
 		player:Respawn()
-		Task.Wait(1.8)
+		--Task.Wait(1.8)
 		player:SetVisibility(true)
 	end
 end

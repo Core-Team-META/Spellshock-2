@@ -13,7 +13,9 @@ function CROSS_CONTEXT_CALLER()
 	return _G["standardcombo.Utils.CrossContextCaller"]
 end
 
-local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject(1) or script.parent
+local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject()
+local CHARGED_WEAPON = script:GetCustomProperty("ChargedWeapon"):WaitForObject()
+
 local SHOOT_ABILITY = script:GetCustomProperty("ShootAbility"):WaitForObject()
 local CHARGED_PROJECTILE_BOMB = script:GetCustomProperty("ChargedProjectileBomb")
 
@@ -27,10 +29,8 @@ local AbilityMod = script:GetCustomProperty("AbilityMod")
 
 local startChargingTime = 0
 
-local CHARGE_DELAY = 0.1
-local CHARGE_DURATION = 0.5
-
-
+local CHARGE_DELAY = SHOOT_ABILITY:GetCustomProperty("ChargeDelay") or 0.1
+local CHARGE_DURATION = SHOOT_ABILITY:GetCustomProperty("ChargeDuration") or 0.5
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount = DAMAGE_TO_OBJECTS
@@ -91,10 +91,6 @@ function OnTargetImpact(theWeapon, impactData)
 			status.multiplier
 		)
 	end
-
-	--COMBAT().ApplyDamage(impactData.targetObject, dmg, dmg.sourcePlayer)
-	
-	--BroadcastDamageFeedback(dmg.amount, pos)
 end
 
 WEAPON.targetImpactedEvent:Connect(OnTargetImpact)
@@ -174,7 +170,8 @@ end
 
 
 WEAPON.projectileSpawnedEvent:Connect(OnProjectileSpawned)
-WEAPON.destroyEvent:Connect(OnDestroyed)
+CHARGED_WEAPON.projectileSpawnedEvent:Connect(OnProjectileSpawned)
 
+WEAPON.destroyEvent:Connect(OnDestroyed)
 SHOOT_ABILITY.castEvent:Connect(OnCastAbility)
 

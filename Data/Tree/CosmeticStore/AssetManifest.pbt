@@ -80,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14060330023043759337
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
   Id: 13784467660178889007
   Name: "Human Gal 1"
   PlatformAssetType: 17
