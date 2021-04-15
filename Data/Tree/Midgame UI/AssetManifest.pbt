@@ -1,4 +1,13 @@
 Assets {
+  Id: 18334996790730598272
+  Name: "BG Highlighted 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_015"
+  }
+}
+Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -395,6 +404,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5074753616812184675
+  Name: "Frame Ring 1x 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameRing1x_004"
+  }
+}
+Assets {
   Id: 5000878413771410888
   Name: "Fantasy Anvil 001"
   PlatformAssetType: 9
@@ -458,6 +476,24 @@ Assets {
   }
 }
 Assets {
+  Id: 2286364455446697578
+  Name: "Frame Beveled 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px__015"
+  }
+}
+Assets {
+  Id: 1959355218031822315
+  Name: "Frame Highlighted 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameHighlighted_015"
+  }
+}
+Assets {
   Id: 1814707273787853473
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -491,6 +527,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Alert"
+  }
+}
+Assets {
+  Id: 180266187625907627
+  Name: "Fantasy Compass 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Compass_001"
   }
 }
 Assets {
