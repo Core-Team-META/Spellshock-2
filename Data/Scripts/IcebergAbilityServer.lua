@@ -96,7 +96,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	damageTimer = 0
 	Task.Wait(0.5)
-	if thisAbility.owner and Object.IsValid(thisAbility.owner) and not thisAbility.owner.isDead then
+	if thisAbility and Object.IsValid(thisAbility) and thisAbility.owner and Object.IsValid(thisAbility.owner) and not thisAbility.owner.isDead then
 		BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )	
 	end
 end

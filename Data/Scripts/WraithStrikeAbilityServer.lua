@@ -280,9 +280,9 @@ function GoOnShortCooldown()
 	while SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 			SpecialAbility:Activate()
-			Task.Wait()
 		end
 		SpecialAbility:AdvancePhase()
+		Task.Wait()
 	end
 	goingIntoShortCooldown = false
 end
