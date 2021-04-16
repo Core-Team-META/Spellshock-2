@@ -2436,6 +2436,10 @@ Assets {
               SubObjectId: 793349449599853437
             }
           }
+          Overrides {
+            Name: "cs:ChargeMod"
+            String: "mod2"
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
