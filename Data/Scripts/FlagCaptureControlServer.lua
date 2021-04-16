@@ -89,13 +89,14 @@ local lastTeamScoreAwardTime = time()
 local lastProgress = 0
 
 local BINDING_IGNORE = {
-    ability_extra_19 = true,
-    ability_extra_45 = true,
-    ability_extra_16 = true,
-    ability_extra_10 = true,
-    ability_extra_14 = true,
-    ability_extra_27 = true,
-    ability_extra_37 = true
+    ability_extra_19 = true, -- Tab
+    ability_extra_45 = true, -- UP
+    ability_extra_16 = true, -- Enter
+    ability_extra_10 = true, -- Left Ctrl
+    ability_extra_14 = true, -- Left Alt
+    ability_extra_27 = true, -- I (class selection)
+    ability_extra_37 = true, -- K
+    ability_extra_41 = true -- C (crouch)
 }
 
 -- nil Reset()
