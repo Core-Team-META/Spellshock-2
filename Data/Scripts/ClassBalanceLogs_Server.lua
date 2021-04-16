@@ -147,7 +147,7 @@ function OnDied(attackData)
         classData[deadClassId].deaths = classData[deadClassId].deaths + 1
     end
     if killClassId > 0 then
-        classData[deadClassId].kills = classData[deadClassId].kills + 1
+        classData[killClassId].kills = classData[killClassId].kills + 1
     end
 end
 
