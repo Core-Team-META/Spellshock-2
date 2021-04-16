@@ -55,7 +55,7 @@ function OnGoingToTakeDamage(attackData)
 end
 
 function OnSpecialAbilityExecute(thisAbility)
-	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY or thisAbility.owner.isDead then return end
 	
 	API_SE.RemoveAllStatusEffects(SpecialAbility.owner)
 	PlayerSettings.movementControlMode = thisAbility.owner.movementControlMode
