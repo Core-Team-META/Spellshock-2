@@ -6861,7 +6861,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack IV"
+      Label: "Gem Pack IV"
       Color {
         R: 1
         G: 1
@@ -8259,7 +8259,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack III"
+      Label: "Gem Pack III"
       Color {
         R: 1
         G: 1
@@ -10372,7 +10372,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack II"
+      Label: "Gem Pack II"
       Color {
         R: 1
         G: 1
@@ -11691,7 +11691,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack I"
+      Label: "Gem Pack I"
       Color {
         R: 1
         G: 1
