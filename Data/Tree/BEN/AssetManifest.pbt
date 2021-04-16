@@ -17,12 +17,12 @@ Assets {
   }
 }
 Assets {
-  Id: 8933537604162373856
-  Name: "Plane 1m - One Sided"
-  PlatformAssetType: 1
+  Id: 10431926636578901761
+  Name: "Ambience Underwater Bubbles Designed 01 SFX"
+  PlatformAssetType: 7
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_plane_1m_001"
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ambience_underwaterbubbles_designed_01_Cue_ref"
   }
 }
 Assets {
@@ -32,14 +32,5 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_ship_boat_bell_ring_01_Cue_ref"
-  }
-}
-Assets {
-  Id: 6747614045051753376
-  Name: "Cylinder - Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_001"
   }
 }
