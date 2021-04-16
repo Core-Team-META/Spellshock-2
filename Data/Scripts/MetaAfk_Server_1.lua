@@ -85,7 +85,7 @@ function OnGameStateChanged(oldState, newState, hasDuration, stateTime)
         shouldUpdate = false
         Task.Wait()
         for _, player in ipairs(Game.GetPlayers()) do
-            playersIdleTime[player.id] = {}
+            playersIdleTime[player.id] = playersIdleTime[player.id] or {}
             playersIdleTime[player.id].time = time() + AFK_TIME + ABGS.GetTimeRemainingInState()
             playersIdleTime[player.id].warning = false
         end
