@@ -1000,7 +1000,7 @@ Objects {
     }
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 1
+      Int: 9
     }
     Overrides {
       Name: "cs:SmallMapScore"
