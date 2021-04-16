@@ -86,14 +86,6 @@ function Int()
     end
 end
 
-function OnRoundStart()
-    for _, player in ipairs(Game.GetPlayers()) do
-        local classId = player:GetResource(CONST.CLASS_RES)
-        if classId > 0 then
-            classCountPerRound[classId] = classCountPerRound[classId] + 1
-        end
-    end
-end
 
 function OnRoundEnd() --
     local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
@@ -118,25 +110,6 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
     end
 end
 
-function OnPlayerRespawn(player)
-    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
-        local classId = player:GetResource(CONST.CLASS_RES)
-        if classId > 0 then
-            classCountPerRound[classId] = classCountPerRound[classId] + 1
-        end
-    end
-end
-
-function OnPlayerJoined(player)
-    listeners[player.id] = player.respawnedEvent:Connect(OnPlayerRespawn)
-end
-
-function OnPlayerLeft(player)
-    if listeners[player.id] then
-        listeners[player.id]:Disconnect()
-        listeners[player.id] = nil
-    end
-end
 
 function OnDied(attackData)
     local target = attackData.object
@@ -151,8 +124,6 @@ function OnDied(attackData)
     end
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Game.playerLeftEvent:Connect(OnPlayerLeft)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("META_CH.OnDied", OnDied)
 Int()

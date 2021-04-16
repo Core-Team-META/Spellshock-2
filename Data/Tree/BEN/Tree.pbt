@@ -1,8 +1,8 @@
 Name: "BEN"
 RootId: 12935185397369316502
 Objects {
-  Id: 574747825433494201
-  Name: "PreventOverHeal"
+  Id: 9301756161479620603
+  Name: "Swimming Sounds"
   Transform {
     Location {
     }
@@ -15,6 +15,84 @@ Objects {
     }
   }
   ParentId: 12935185397369316502
+  ChildIds: 5835562392321396269
+  ChildIds: 15636002095975581394
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 15636002095975581394
+  Name: "Ambience Underwater Bubbles Designed 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9301756161479620603
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 10431926636578901761
+    }
+    Volume: 0.8
+    Falloff: -1
+    Radius: -1
+    FadeInTime: 0.5
+    FadeOutTime: 0.5
+  }
+}
+Objects {
+  Id: 5835562392321396269
+  Name: "SwimmingAudioHandler"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9301756161479620603
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:WaterSplashVFX"
+      AssetReference {
+        Id: 16965134372838685175
+      }
+    }
+    Overrides {
+      Name: "cs:UnderwaterSFX"
+      ObjectReference {
+        SelfId: 15636002095975581394
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -26,7 +104,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 16259469879875819364
+      Id: 11204381079391085941
     }
   }
 }
@@ -81,6 +159,7 @@ Objects {
     }
   }
   ParentId: 16416131498132746793
+  ChildIds: 14260631545271025912
   ChildIds: 16092321819556394275
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -99,6 +178,9 @@ Objects {
   Name: "Ship Boat Bell Ring 01 SFX"
   Transform {
     Location {
+      X: -3317.59253
+      Y: -3609.09814
+      Z: 5223.72412
     }
     Rotation {
     }
@@ -123,11 +205,57 @@ Objects {
       Id: 8383064983738244106
     }
     Volume: 1
-    Falloff: -1
+    Falloff: 7000
     Radius: -1
-    EnableOcclusion: true
     IsSpatializationEnabled: true
     IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 14260631545271025912
+  Name: "BellAudioFeedback"
+  Transform {
+    Location {
+      X: -3297.33545
+      Y: -3607.31177
+      Z: 5236.98584
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14996873474237789481
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 10203455416443750590
+      }
+    }
+    Overrides {
+      Name: "cs:RingSFX"
+      ObjectReference {
+        SelfId: 16092321819556394275
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17205657525544299071
+    }
   }
 }
 Objects {
@@ -140,9 +268,9 @@ Objects {
       Yaw: 24.9922886
     }
     Scale {
-      X: 3.31168652
-      Y: 3.31168652
-      Z: 3.31168652
+      X: 5
+      Y: 5
+      Z: 5
     }
   }
   ParentId: 16416131498132746793
@@ -334,1015 +462,6 @@ Objects {
   }
 }
 Objects {
-  Id: 14067136948649209529
-  Name: "Base Collision"
-  Transform {
-    Location {
-      X: -4030
-      Y: -7050
-      Z: 6775
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  ChildIds: 4879254931009550151
-  ChildIds: 4598412272264715444
-  ChildIds: 16223040169054749634
-  ChildIds: 9832731735981833309
-  ChildIds: 3886707144223941666
-  ChildIds: 354285136108517247
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:1"
-      ObjectReference {
-        SelfId: 16223040169054749634
-      }
-    }
-    Overrides {
-      Name: "cs:2"
-      ObjectReference {
-        SelfId: 9832731735981833309
-      }
-    }
-    Overrides {
-      Name: "cs:4"
-      ObjectReference {
-        SelfId: 3886707144223941666
-      }
-    }
-    Overrides {
-      Name: "cs:5"
-      ObjectReference {
-        SelfId: 354285136108517247
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 354285136108517247
-  Name: "Temple Glade Collider"
-  Transform {
-    Location {
-      X: 15535
-      Y: 17000
-      Z: -6575
-    }
-    Rotation {
-      Yaw: 40
-    }
-    Scale {
-      X: 206.1
-      Y: 231.600021
-      Z: 149.5
-    }
-  }
-  ParentId: 14067136948649209529
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsBaseCollider"
-      Bool: true
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6747614045051753376
-    }
-    Teams {
-      TeamInt: 2
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 3886707144223941666
-  Name: "Old Mines Collider"
-  Transform {
-    Location {
-      X: -13720
-      Y: 14805
-      Z: -6575
-    }
-    Rotation {
-      Yaw: -40
-    }
-    Scale {
-      X: 170.3
-      Y: 246.699951
-      Z: 149.5
-    }
-  }
-  ParentId: 14067136948649209529
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsBaseCollider"
-      Bool: true
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6747614045051753376
-    }
-    Teams {
-      TeamInt: 1
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 9832731735981833309
-  Name: "Overlook Collider"
-  Transform {
-    Location {
-      X: 13410
-      Y: -10875
-      Z: -6575
-    }
-    Rotation {
-      Yaw: -50
-    }
-    Scale {
-      X: 170.3
-      Y: 259.100037
-      Z: 149.5
-    }
-  }
-  ParentId: 14067136948649209529
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsBaseCollider"
-      Bool: true
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6747614045051753376
-    }
-    Teams {
-      TeamInt: 2
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 16223040169054749634
-  Name: "War Camp Collider"
-  Transform {
-    Location {
-      X: -13505
-      Y: -11790
-      Z: -6574.99805
-    }
-    Rotation {
-      Yaw: 70
-    }
-    Scale {
-      X: 170.3
-      Y: 206.700027
-      Z: 149.5
-    }
-  }
-  ParentId: 14067136948649209529
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsBaseCollider"
-      Bool: true
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6747614045051753376
-    }
-    Teams {
-      TeamInt: 1
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 4598412272264715444
-  Name: "Elf Base Collider"
-  Transform {
-    Location {
-      X: 17270
-      Y: 19075
-    }
-    Rotation {
-      Yaw: 135
-      Roll: 90.0000076
-    }
-    Scale {
-      X: 212.799988
-      Y: 109.400017
-      Z: 102.4
-    }
-  }
-  ParentId: 14067136948649209529
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsBaseCollider"
-      Bool: true
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8933537604162373856
-    }
-    Teams {
-      TeamInt: 2
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 4879254931009550151
-  Name: "Orc Base Collider"
-  Transform {
-    Location {
-      X: -17270
-      Y: -19075
-      Z: 1345
-    }
-    Rotation {
-      Yaw: -19.9999886
-      Roll: 89.9999924
-    }
-    Scale {
-      X: 130.5
-      Y: 77.7000046
-      Z: 102.4
-    }
-  }
-  ParentId: 14067136948649209529
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsBaseCollider"
-      Bool: true
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8933537604162373856
-    }
-    Teams {
-      TeamInt: 1
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 940592713003572108
-  Name: "Roaming Camera"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  ChildIds: 2572246382832432662
-  ChildIds: 17831208623215707757
-  ChildIds: 13238891751194819102
-  ChildIds: 17251940112720987379
-  ChildIds: 6839999286716825128
-  ChildIds: 6565731216401089623
-  ChildIds: 15144288855782290618
-  ChildIds: 6054435928925745047
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:PlayerName"
-      String: ""
-    }
-    Overrides {
-      Name: "cs:PlayerName:tooltip"
-      String: "Restrict the roaming ability to a specific player."
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6054435928925745047
-  Name: "Roaming Camera"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  ChildIds: 16699683458760335694
-  ChildIds: 10986672402119935023
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 10986672402119935023
-  Name: "Roaming Camera"
-  Transform {
-    Location {
-      Z: 500
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6054435928925745047
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Camera {
-    AttachToLocalPlayer: true
-    IsDistanceAdjustable: true
-    MaxDistance: 10000
-    PositionOffset {
-    }
-    RotationOffset {
-    }
-    FieldOfView: 90
-    ViewWidth: 1200
-    RotationMode {
-      Value: "mc:erotationmode:lookangle"
-    }
-    MinPitch: -89
-    MaxPitch: 89
-  }
-}
-Objects {
-  Id: 16699683458760335694
-  Name: "RoamingCameraClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6054435928925745047
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Camera"
-      ObjectReference {
-        SelfId: 10986672402119935023
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 16644364290894614253
-    }
-  }
-}
-Objects {
-  Id: 15144288855782290618
-  Name: "(very fast) Roaming Player Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    PlayerMovementSettings {
-      WalkSpeed: 640
-      MaxAcceleration: 1800
-      WalkableFloorAngle: 44
-      JumpMaxCount: 1
-      JumpVelocity: 900
-      GroundFriction: 8
-      MaxSwimSpeed: 420
-      Buoyancy: 1
-      TouchForceFactor: 1
-      BrakingDecelerationFlying: 600
-      MaxFlightSpeed: 1800
-      MovementControlMode {
-        Value: "mc:emovementcontrolmode:lookrelative"
-      }
-      LookControlMode {
-        Value: "mc:elookcontrolmode:relative"
-      }
-      FacingMode {
-        Value: "mc:efacingmode:faceaimwhenactive"
-      }
-      DefaultRotationRate: 540
-      SlideRotationRate: 20
-      LookAtCursorProjectionPlane {
-        Value: "mc:eprojectionplane:xy"
-      }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 960
-      MountedJumpMaxCount: 1
-      MountedJumpVelocity: 900
-      HeadVisibleToSelf: true
-      IsSlideEnabled: true
-      IsCrouchEnabled: true
-      CanMoveForward: true
-      CanMoveBackward: true
-      CanMoveLeft: true
-      CanMoveRight: true
-      AbilityAimMode {
-        Value: "mc:eabilityaimmode:viewrelative"
-      }
-      AppearanceChannelingTime: 2
-      MountChannelingTime: 2
-      FlipOnMultiJump: true
-      CanMoveUp: true
-      CanMoveDown: true
-      IsMountEnabled: true
-      MaxHitpoints: 100
-    }
-  }
-}
-Objects {
-  Id: 6565731216401089623
-  Name: "(fast) Roaming Player Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    PlayerMovementSettings {
-      WalkSpeed: 640
-      MaxAcceleration: 1800
-      WalkableFloorAngle: 44
-      JumpMaxCount: 1
-      JumpVelocity: 900
-      GroundFriction: 8
-      MaxSwimSpeed: 420
-      Buoyancy: 1
-      TouchForceFactor: 1
-      BrakingDecelerationFlying: 600
-      MaxFlightSpeed: 1200
-      MovementControlMode {
-        Value: "mc:emovementcontrolmode:lookrelative"
-      }
-      LookControlMode {
-        Value: "mc:elookcontrolmode:relative"
-      }
-      FacingMode {
-        Value: "mc:efacingmode:faceaimwhenactive"
-      }
-      DefaultRotationRate: 540
-      SlideRotationRate: 20
-      LookAtCursorProjectionPlane {
-        Value: "mc:eprojectionplane:xy"
-      }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 960
-      MountedJumpMaxCount: 1
-      MountedJumpVelocity: 900
-      HeadVisibleToSelf: true
-      IsSlideEnabled: true
-      IsCrouchEnabled: true
-      CanMoveForward: true
-      CanMoveBackward: true
-      CanMoveLeft: true
-      CanMoveRight: true
-      AbilityAimMode {
-        Value: "mc:eabilityaimmode:viewrelative"
-      }
-      AppearanceChannelingTime: 2
-      MountChannelingTime: 2
-      FlipOnMultiJump: true
-      CanMoveUp: true
-      CanMoveDown: true
-      IsMountEnabled: true
-      MaxHitpoints: 100
-    }
-  }
-}
-Objects {
-  Id: 6839999286716825128
-  Name: "(normal) Roaming Player Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    PlayerMovementSettings {
-      WalkSpeed: 640
-      MaxAcceleration: 1800
-      WalkableFloorAngle: 44
-      JumpMaxCount: 1
-      JumpVelocity: 900
-      GroundFriction: 8
-      MaxSwimSpeed: 420
-      Buoyancy: 1
-      TouchForceFactor: 1
-      BrakingDecelerationFlying: 600
-      MaxFlightSpeed: 600
-      MovementControlMode {
-        Value: "mc:emovementcontrolmode:lookrelative"
-      }
-      LookControlMode {
-        Value: "mc:elookcontrolmode:relative"
-      }
-      FacingMode {
-        Value: "mc:efacingmode:faceaimwhenactive"
-      }
-      DefaultRotationRate: 540
-      SlideRotationRate: 20
-      LookAtCursorProjectionPlane {
-        Value: "mc:eprojectionplane:xy"
-      }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 960
-      MountedJumpMaxCount: 1
-      MountedJumpVelocity: 900
-      HeadVisibleToSelf: true
-      IsSlideEnabled: true
-      IsCrouchEnabled: true
-      CanMoveForward: true
-      CanMoveBackward: true
-      CanMoveLeft: true
-      CanMoveRight: true
-      AbilityAimMode {
-        Value: "mc:eabilityaimmode:viewrelative"
-      }
-      AppearanceChannelingTime: 2
-      MountChannelingTime: 2
-      FlipOnMultiJump: true
-      CanMoveUp: true
-      CanMoveDown: true
-      IsMountEnabled: true
-      MaxHitpoints: 100
-    }
-  }
-}
-Objects {
-  Id: 17251940112720987379
-  Name: "(slow) Roaming Player Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    PlayerMovementSettings {
-      WalkSpeed: 640
-      MaxAcceleration: 1800
-      WalkableFloorAngle: 44
-      JumpMaxCount: 1
-      JumpVelocity: 900
-      GroundFriction: 8
-      MaxSwimSpeed: 420
-      Buoyancy: 1
-      TouchForceFactor: 1
-      BrakingDecelerationFlying: 600
-      MaxFlightSpeed: 300
-      MovementControlMode {
-        Value: "mc:emovementcontrolmode:lookrelative"
-      }
-      LookControlMode {
-        Value: "mc:elookcontrolmode:relative"
-      }
-      FacingMode {
-        Value: "mc:efacingmode:faceaimwhenactive"
-      }
-      DefaultRotationRate: 540
-      SlideRotationRate: 20
-      LookAtCursorProjectionPlane {
-        Value: "mc:eprojectionplane:xy"
-      }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 960
-      MountedJumpMaxCount: 1
-      MountedJumpVelocity: 900
-      HeadVisibleToSelf: true
-      IsSlideEnabled: true
-      IsCrouchEnabled: true
-      CanMoveForward: true
-      CanMoveBackward: true
-      CanMoveLeft: true
-      CanMoveRight: true
-      AbilityAimMode {
-        Value: "mc:eabilityaimmode:viewrelative"
-      }
-      AppearanceChannelingTime: 2
-      MountChannelingTime: 2
-      FlipOnMultiJump: true
-      CanMoveUp: true
-      CanMoveDown: true
-      IsMountEnabled: true
-      MaxHitpoints: 100
-    }
-  }
-}
-Objects {
-  Id: 13238891751194819102
-  Name: "(very slow) Roaming Player Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    PlayerMovementSettings {
-      WalkSpeed: 640
-      MaxAcceleration: 1800
-      WalkableFloorAngle: 44
-      JumpMaxCount: 1
-      JumpVelocity: 900
-      GroundFriction: 8
-      MaxSwimSpeed: 420
-      Buoyancy: 1
-      TouchForceFactor: 1
-      BrakingDecelerationFlying: 600
-      MaxFlightSpeed: 100
-      MovementControlMode {
-        Value: "mc:emovementcontrolmode:lookrelative"
-      }
-      LookControlMode {
-        Value: "mc:elookcontrolmode:relative"
-      }
-      FacingMode {
-        Value: "mc:efacingmode:faceaimwhenactive"
-      }
-      DefaultRotationRate: 540
-      SlideRotationRate: 20
-      LookAtCursorProjectionPlane {
-        Value: "mc:eprojectionplane:xy"
-      }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 960
-      MountedJumpMaxCount: 1
-      MountedJumpVelocity: 900
-      HeadVisibleToSelf: true
-      IsSlideEnabled: true
-      IsCrouchEnabled: true
-      CanMoveForward: true
-      CanMoveBackward: true
-      CanMoveLeft: true
-      CanMoveRight: true
-      AbilityAimMode {
-        Value: "mc:eabilityaimmode:viewrelative"
-      }
-      AppearanceChannelingTime: 2
-      MountChannelingTime: 2
-      FlipOnMultiJump: true
-      CanMoveUp: true
-      CanMoveDown: true
-      IsMountEnabled: true
-      MaxHitpoints: 100
-    }
-  }
-}
-Objects {
-  Id: 17831208623215707757
-  Name: "RoamingCameraServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:DefaultSettings"
-      ObjectReference {
-      }
-    }
-    Overrides {
-      Name: "cs:OverrideSettings"
-      ObjectReference {
-        SelfId: 6839999286716825128
-      }
-    }
-    Overrides {
-      Name: "cs:FastSettings"
-      ObjectReference {
-        SelfId: 6565731216401089623
-      }
-    }
-    Overrides {
-      Name: "cs:SlowSettings"
-      ObjectReference {
-        SelfId: 17251940112720987379
-      }
-    }
-    Overrides {
-      Name: "cs:VerySlowSettings"
-      ObjectReference {
-        SelfId: 13238891751194819102
-      }
-    }
-    Overrides {
-      Name: "cs:NormalSettings"
-      ObjectReference {
-        SelfId: 6839999286716825128
-      }
-    }
-    Overrides {
-      Name: "cs:VeryFastSettings"
-      ObjectReference {
-        SelfId: 15144288855782290618
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 14875292155265819093
-    }
-  }
-}
-Objects {
-  Id: 2572246382832432662
-  Name: "README_RoamingCamera"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 940592713003572108
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7441133929379149030
-    }
-  }
-}
-Objects {
   Id: 14627895278568143676
   Name: "Team Colors"
   Transform {
@@ -1500,80 +619,6 @@ Objects {
   Script {
     ScriptAsset {
       Id: 11088639787073807518
-    }
-  }
-}
-Objects {
-  Id: 2644148728258825907
-  Name: "RespawnPlayerServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 13105738520187544040
-    }
-  }
-}
-Objects {
-  Id: 12481345003269002044
-  Name: "ClassSelectionServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ABGS"
-      AssetReference {
-        Id: 11974742996071064388
-      }
-    }
-    Overrides {
-      Name: "cs:Costume_Equipment"
-      AssetReference {
-        Id: 268472779935127967
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 1585716437870996774
     }
   }
 }
@@ -1780,6 +825,110 @@ Objects {
   }
 }
 Objects {
+  Id: 574747825433494201
+  Name: "PreventOverHeal"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16259469879875819364
+    }
+  }
+}
+Objects {
+  Id: 2644148728258825907
+  Name: "RespawnPlayerServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13105738520187544040
+    }
+  }
+}
+Objects {
+  Id: 12481345003269002044
+  Name: "ClassSelectionServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:Costume_Equipment"
+      AssetReference {
+        Id: 268472779935127967
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1585716437870996774
+    }
+  }
+}
+Objects {
   Id: 2172740764341022870
   Name: "TeamHasNoPlayers"
   Transform {
@@ -1846,7 +995,7 @@ Objects {
     Overrides {
       Name: "cs:BaseCollision"
       ObjectReference {
-        SelfId: 14067136948649209529
+        SelfId: 841534158063459245
       }
     }
     Overrides {

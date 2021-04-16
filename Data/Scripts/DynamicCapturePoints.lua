@@ -4,8 +4,6 @@
 --===========================================================================================
 
 local ABCP = require(script:GetCustomProperty("ABCP"))
-local BaseCollision = script:GetCustomProperty("BaseCollision"):WaitForObject()
-local CapturePointColliders = BaseCollision:GetCustomProperties()
 local RequiredPlayers = script:GetCustomProperty("RequiredPlayers")
 local SmallMapScore = script:GetCustomProperty("SmallMapScore")
 local BigMapScore = script:GetCustomProperty("BigMapScore")
@@ -17,13 +15,6 @@ local A_Bases = {1, 5} -- first index is Orc, second is Elf
 local B_Bases = {4, 2}
 local configTable = {Configuration_A, Configuration_B}
 local basesTable = {A_Bases, B_Bases}
-
-function DisableAllColliders()
-    for _, objRef in pairs(CapturePointColliders) do
-        local collider = objRef:WaitForObject()
-        collider.collision = Collision.FORCE_OFF
-    end
-end
 
 function OnRoundStart()
     local AllPlayers = Game.GetPlayers()
@@ -50,9 +41,6 @@ function OnRoundStart()
     end
 
     if NewBases then
-        --CapturePointColliders[tostring(NewBases[1])]:WaitForObject().collision = Collision.INHERIT
-        --CapturePointColliders[tostring(NewBases[2])]:WaitForObject().collision = Collision.INHERIT
-
         Task.Wait(1)
         Events.Broadcast("ToggleLoadScreen", true)
         Task.Wait(2)
@@ -70,7 +58,6 @@ function OnRoundStart()
         end
 
         Events.Broadcast("ToggleLoadScreen", false)
-        Events.Broadcast("Teleport")
     else
         for _, player in ipairs(AllPlayers) do
             if Object.IsValid(player) then
@@ -78,13 +65,7 @@ function OnRoundStart()
             end
         end
     end
+    Events.Broadcast("Teleport")
 end
-
-function OnRoundEnd()
-    DisableAllColliders()
-end
-
-DisableAllColliders()
 
 Game.roundStartEvent:Connect(OnRoundStart)
-Game.roundEndEvent:Connect(OnRoundEnd)

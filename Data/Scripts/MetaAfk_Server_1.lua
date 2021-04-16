@@ -85,9 +85,10 @@ function OnGameStateChanged(oldState, newState, hasDuration, stateTime)
         shouldUpdate = false
         Task.Wait()
         for _, player in ipairs(Game.GetPlayers()) do
-            playersIdleTime[player.id] = {}
-            playersIdleTime[player.id].time = time() + AFK_TIME + ABGS.GetTimeRemainingInState()
-            playersIdleTime[player.id].warning = false
+            if SHOULD_USE_PLAYER_WHITELIST and not KEYBINDS.IsTeamMember(player) then
+                playersIdleTime[player.id].time = time() + AFK_TIME + ABGS.GetTimeRemainingInState()
+                playersIdleTime[player.id].warning = false
+            end
         end
     end
     if newState ~= ABGS.GAME_STATE_ROUND_END then

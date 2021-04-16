@@ -422,14 +422,12 @@ function OnSavePlayerData(player)
     local progressDataSize = Storage.SizeOfData(progressData)
     local currencyDataSize = Storage.SizeOfData(currencyData)
     local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
-
+    
+    print("-------------------------------")
+    print(player.name .. " Shared Storage Size:")
     print(
-        "\n--------------------------------\n" ..
-            player.name ..
-                " Shared Storage Size: " ..
-                    "\nProgress Data Size: " ..
-                        tostring(progressDataSize) ..
-                            " (" .. tostring(CoreMath.Round((progressDataSize / 16000) * 100, 2)) .. "%)"
+        "\nProgress Data Size: " ..
+            tostring(progressDataSize) .. " (" .. tostring(CoreMath.Round((progressDataSize / 16000) * 100, 2)) .. "%)"
     )
     print(
         "Currency Data Size: " ..
@@ -437,11 +435,9 @@ function OnSavePlayerData(player)
     )
     print(
         "Cosmetic Data Size: " ..
-            tostring(cosmeticDataSize) ..
-                " (" ..
-                    tostring(CoreMath.Round((cosmeticDataSize / 16000) * 100, 2)) ..
-                        "%)" .. "\n--------------------------------"
+            tostring(cosmeticDataSize) .. " (" .. tostring(CoreMath.Round((cosmeticDataSize / 16000) * 100, 2)) .. "%)"
     )
+    print("--------------------------------")
 end
 
 ------------------------------------------------------------------------------------------------------------------------
