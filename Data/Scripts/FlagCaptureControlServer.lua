@@ -423,8 +423,6 @@ function Tick(deltaTime)
     if newOwner ~= owningTeam then
         Events.Broadcast("CapturePointOwnerChanged", ORDER, owningTeam, newOwner)
         owningTeam = newOwner
-        CAPTURE_TRIGGER.team = owningTeam
-        CAPTURE_TRIGGER.isTeamCollisionEnabled = false
         -- Give cap assist to friendlies
         for _, friendly in ipairs(friendlies) do
             friendly:AddResource("CAPASSISTS", 1)
@@ -440,11 +438,13 @@ function Tick(deltaTime)
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then
             SetEnabled(false)
         end
+    end
 
-        -- release the capture player
-        if GetCaptureProgress() == 1.0 then
-            ResetCapturePlayer()
-        end
+    -- release the capture player
+    if GetCaptureProgress() == 1.0 then
+        ResetCapturePlayer()
+        CAPTURE_TRIGGER.team = owningTeam
+        CAPTURE_TRIGGER.isTeamCollisionEnabled = false
     end
 
     -- Award teamscore every five seconds
