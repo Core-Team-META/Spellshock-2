@@ -993,12 +993,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:BaseCollision"
-      ObjectReference {
-        SelfId: 841534158063459245
-      }
-    }
-    Overrides {
       Name: "cs:RequiredPlayers"
       Int: 9
     }

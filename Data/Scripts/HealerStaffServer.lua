@@ -93,7 +93,7 @@ function HealPlayerFromHealProjectile()
         return
     end
     local dmg = Damage.New()
-    dmg.amount = -20
+    dmg.amount = -META_AP().GetAbilityMod(WEAPON.owner, META_AP().LMB, "mod2", 20, WEAPON.name .. ": Heal Amount")
     dmg.reason = DamageReason.COMBAT
     dmg.sourcePlayer = SHOOT_ABILITY.owner
     dmg.sourceAbility = SHOOT_ABILITY
@@ -123,7 +123,7 @@ function HealAllPlayersInRadius(healTrigger)
         if Object.IsValid(thisObject) and thisObject:IsA("Player") and not thisObject.isDead then
             local dmg = Damage.New()
 
-            local healAmount = 20
+            local healAmount = META_AP().GetAbilityMod(WEAPON.owner, META_AP().LMB, "mod2", 20, WEAPON.name .. ": Heal Amount")
             if thisObject.team == ability.owner.team then
                 dmg.amount = -healAmount
             else

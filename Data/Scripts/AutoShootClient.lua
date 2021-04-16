@@ -43,7 +43,7 @@ end
 
 function OnShootReady(thisAbility)
     Task.Wait()
-    if isShooting and ShootAbility.isEnabled then
+    if isShooting and ShootAbility.isEnabled and thisAbility:GetCurrentPhase() == AbilityPhase.READY then
         ShootAbility:Activate()
     end
 end

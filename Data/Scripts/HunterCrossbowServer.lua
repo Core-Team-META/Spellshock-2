@@ -145,8 +145,7 @@ end
 function OnChargedProjectileImpacted(projectile, other, hitResult)
 	--print ("We hit ... something")
 
-	local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
-	local damageRange = Vector2.New(rangeTable.min, rangeTable.max)
+	local bombDamage = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], "mod2", 30, "Hunter Bow: Bomb Damage")
 	local sourcePlayer = WEAPON.owner
 	local sourceAbility = SHOOT_ABILITY
 
@@ -157,7 +156,7 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 	if Object.IsValid(other) then
 		if other:IsA("Player") then
 			local bomb = META_AP().SpawnAsset(CHARGED_PROJECTILE_BOMB, {position = position, rotation = rotation})
-			bomb.serverUserData.damageRange = damageRange
+			bomb.serverUserData.damage = bombDamage
 			bomb.serverUserData.sourcePlayer = sourcePlayer
 			bomb.serverUserData.sourceAbility = sourceAbility
 			bomb.serverUserData.sourceTeam = sourcePlayer.team

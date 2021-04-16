@@ -16,7 +16,7 @@ local EXPLOSION_SOURCE = script:GetCustomProperty("ExplosionSource"):WaitForObje
 
 Task.Wait(2)
 
-local damageRange = ROOT.serverUserData.damageRange
+local damageAmount = ROOT.serverUserData.damage
 local sourcePlayer = ROOT.serverUserData.sourcePlayer
 local sourceAbility = ROOT.serverUserData.sourceAbility
 local sourceTeam = ROOT.serverUserData.sourceTeam
@@ -37,8 +37,7 @@ local enemiesInRange =
 
 for _, enemy in pairs(enemiesInRange) do
     if Object.IsValid(enemy) then
-        local amount = math.random(damageRange.x, damageRange.y) * 2
-        local dmg = Damage.New(amount)
+        local dmg = Damage.New(damageAmount)
 
         dmg.reason = DamageReason.COMBAT
         dmg.sourcePlayer = sourcePlayer
