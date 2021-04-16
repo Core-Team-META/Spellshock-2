@@ -19,7 +19,8 @@ local chickenSuits = {
     [3] = script:GetCustomProperty("ChickenSuit3"),
     [4] = script:GetCustomProperty("ChickenSuit4"),
     [5] = script:GetCustomProperty("ChickenSuit5"),
-    [6] = script:GetCustomProperty("ChickenSuit6")
+    [6] = script:GetCustomProperty("ChickenSuit6"),
+    [7] = script:GetCustomProperty("ChickenSuit7")
 }
 
 local function ReturnPlayerByName(Name)
@@ -321,6 +322,7 @@ commands = {
             local split = {CoreString.Split(message)}
             local target = split[2] or nil
             local duration = tonumber(split[3]) or 5
+            local skinNumber = tonumber(split[4]) or nil
 
             if duration > 30 then duration = 30 end
 
@@ -333,6 +335,11 @@ commands = {
                 print("[Admin] " .. player.name .. " chickened " .. tostring(target.name))
 				target.serverUserData.isAnimorphed = true
                 local randomChicken = math.random(1, #chickenSuits)
+                if (skinNumber) then
+                    if (skinNumber <= #chickenSuits) then
+                        randomChicken = skinNumber
+                    end
+                end
                 local chickenSuit = chickenSuits[randomChicken]
 				local newCostume = META_AP().SpawnAsset(chickenSuit)
                 if not newCostume then return end

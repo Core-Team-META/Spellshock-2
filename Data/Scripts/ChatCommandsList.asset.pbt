@@ -52,6 +52,12 @@ Assets {
           Id: 15426111961811520274
         }
       }
+      Overrides {
+        Name: "cs:ChickenSuit7"
+        AssetReference {
+          Id: 6065719875674253663
+        }
+      }
     }
   }
   SerializationVersion: 81
