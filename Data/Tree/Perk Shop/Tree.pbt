@@ -14583,7 +14583,7 @@ Objects {
       }
     }
     Text {
-      Label: "+25%"
+      Label: "+50%"
       Color {
         R: 0.965761542
         G: 1
@@ -14651,7 +14651,7 @@ Objects {
       }
     }
     Text {
-      Label: "+25%"
+      Label: "+50%"
       Color {
         A: 1
       }
@@ -15484,7 +15484,7 @@ Objects {
       }
     }
     Text {
-      Label: "25000"
+      Label: "30000"
       Color {
         A: 0.493000031
       }
@@ -15544,7 +15544,7 @@ Objects {
       }
     }
     Text {
-      Label: "25000"
+      Label: "30000"
       Color {
         R: 1
         G: 0.584635735

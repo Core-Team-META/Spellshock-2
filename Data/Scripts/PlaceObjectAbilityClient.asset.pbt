@@ -16,6 +16,12 @@ Assets {
           Id: 18349665107832834494
         }
       }
+      Overrides {
+        Name: "cs:API_Spectator"
+        AssetReference {
+          Id: 13062533657555781867
+        }
+      }
     }
   }
   SerializationVersion: 81
