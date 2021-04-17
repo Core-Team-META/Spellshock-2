@@ -116,7 +116,10 @@ end
 --@param object player
 --@param table data
 function OnLoadPlayerDailyShop(player, data)
-    if data and data["TIME"] and data["TIME"].T and tonumber(data["TIME"].V) == 1 and not Has24HoursPassed(data["TIME"].T) then
+    if
+        data and data["TIME"] and data["TIME"].T and tonumber(data["TIME"].V) == 1 and
+            not Has24HoursPassed(data["TIME"].T)
+     then
         dailyRewards[player.id] = data
         player.serverUserData.DS_REFRESH = data["TIME"].R or 0
         player:SetResource("DS_REFRESHTIME", CoreMath.Round(data["TIME"].T - os.time(os.date("!*t")) + time()))
@@ -133,7 +136,7 @@ function OnPlayerLeft(player)
 end
 
 function OnPurchase(player, id, slot)
-    local cost = REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id], slot)
+    local cost = REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id])
 
     -- Event Daily Cost Reduction
     cost = CoreMath.Round(cost * CONST.EVENT_DAILY_SHOP_DISCOUNT)
