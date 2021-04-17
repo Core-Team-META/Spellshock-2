@@ -66,12 +66,12 @@ local function CalculateRewardSlot(player)
     local randomChance = math.random(1, 100)
     if randomChance < 98 then
         local skillReward = REWARD_UTIL.GetSkillReward()
-        skillReward.amount = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, skillReward.amount)
+        skillReward.amount = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, tonumber(skillReward.amount))
         skillReward.P = 0
         tbl = skillReward
     else
         local cosmeticToken = REWARD_UTIL.GetCosmeticReward()
-        cosmeticToken.amount = _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player, cosmeticToken.amount)
+        cosmeticToken.amount = _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player,  tonumber(cosmeticToken.amount))
         cosmeticToken.P = 0
         tbl = cosmeticToken
     end
@@ -129,8 +129,11 @@ function OnLoadPlayerDailyShop(player, data)
             not Has24HoursPassed(data["TIME"].T)
      then
         dailyRewards[player.id] = data
-        player.serverUserData.DS_REFRESH = data["TIME"].R or 0
-        player:SetResource("DS_REFRESHTIME", CoreMath.Round(data["TIME"].T - os.time(os.date("!*t")) + time()))
+        player.serverUserData.DS_REFRESH = tonumber(data["TIME"].R) or 0
+        player:SetResource(
+            "DS_REFRESHTIME",
+            CoreMath.Round(tonumber(data["TIME"].T) - os.time(os.date("!*t")) + time())
+        )
     else
         GenerateShopItems(player, false)
     end
