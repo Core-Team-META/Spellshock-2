@@ -36,7 +36,15 @@ local function isAllowed(time)
     return true
 end
 
-local function OnDeletePlayerDataObject(player)
+local function OnDeletePlayerDataObject(player, objectId)
+    for _, object in ipairs(NETWORKED:GetChildren()) do
+        if Object.IsValid(object) and object.id == objectId then
+            object:Destroy()
+        end
+    end
+end
+
+local function OnDeleteAllPlayerData(player)
     for _, object in ipairs(NETWORKED:GetChildren()) do
         if Object.IsValid(object) and object.name == player.id then
             object:Destroy()
@@ -130,7 +138,7 @@ end
 
 --@param object player
 function OnPlayerLeft(player)
-    OnDeletePlayerDataObject(player)
+    OnDeleteAllPlayerData(player)
     --UTIL.TablePrint(dailyRewards[player.id])
     dailyRewards[player.id] = nil
 end

@@ -342,7 +342,7 @@ function OnDataObjectAdded(parent, object)
         dailyRewards = UTIL.DailyShopConvertToTable(dataStr)
         DisconnectButtonListener(listeners)
         BuildRewardSlots(dailyRewards)
-        Events.BroadcastToServer(NAMESPACE .. "DESTROY")
+        Events.BroadcastToServer(NAMESPACE .. "DESTROY", object.id)
         World.SpawnAsset(SFX_REFRESH)
     end
 end
