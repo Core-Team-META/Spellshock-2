@@ -71,7 +71,8 @@ local function CalculateRewardSlot(player)
         tbl = skillReward
     else
         local cosmeticToken = REWARD_UTIL.GetCosmeticReward()
-        cosmeticToken.amount = _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player,  tonumber(cosmeticToken.amount))
+        cosmeticToken.amount =
+            _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player, tonumber(cosmeticToken.amount))
         cosmeticToken.P = 0
         tbl = cosmeticToken
     end
@@ -89,7 +90,6 @@ end
 --@params object player
 --@params bool forced | Should count as refresh
 local function GenerateShopItems(player, forced)
-    dailyRewards[player.id] = {}
     local tempTbl = {}
     for i = 1, 6 do
         tempTbl[i] = CalculateRewardSlot(player)
@@ -102,7 +102,9 @@ local function GenerateShopItems(player, forced)
 
     if forced then
         player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1
-        refreshTime = player:GetResource("DS_REFRESHTIME")
+        if dailyRewards[player.id] and dailyRewards[player.id]["TIME"] and dailyRewards[player.id]["TIME"].T then
+            refreshTime = dailyRewards[player.id]["TIME"].T
+        end
     else
         local resourceTime = CoreMath.Round(refreshTime - os.time(os.date("!*t")))
         player:SetResource("DS_REFRESHTIME", CoreMath.Round(resourceTime + time()))
