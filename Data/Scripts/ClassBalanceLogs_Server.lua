@@ -18,26 +18,32 @@ local function PrintClassWin()
     print("Class Win Rates")
     print("---------------------------------------------------")
     for className, classId in pairs(CONST.CLASS) do
-      local winPercentage = CoreMath.Round((classData[classId].win / classData[classId].total) * 100)
-      if winPercentage < 0 then
-        winPercentage = 0
-      end
-        
-        print(className .. "- Picked: " .. tostring(classData[classId].total) .. " Wins: " .. tostring(classData[classId].win) .. " (" .. tostring(winPercentage) .. "%)")
+        local winPercentage = CoreMath.Round((classData[classId].win / classData[classId].total) * 100)
+        if winPercentage < 0 then
+            winPercentage = "-"
+        end
+
+        print(
+            className ..
+                " - Picked: " ..
+                    tostring(classData[classId].total) ..
+                        " | Wins: " .. tostring(classData[classId].win) .. " (" .. tostring(winPercentage) .. "%)"
+        )
     end
 end
-
 
 local function PrintClassKillDeath()
     print("---------------------------------------------------")
     print("Class Kill / Death")
     print("---------------------------------------------------")
     for className, classId in pairs(CONST.CLASS) do
-     -- local classData = CoreMath.Round((classData[classId].win / classData[classId].total) * 100)
-        print(className .. "- Kills: " .. tostring(classData[classId].kills) .. " Deaths: " .. tostring(classData[classId].deaths))
+        -- local classData = CoreMath.Round((classData[classId].win / classData[classId].total) * 100)
+        print(
+            className ..
+                " - Kills: " .. tostring(classData[classId].kills) .. " | Deaths: " .. tostring(classData[classId].deaths)
+        )
     end
 end
-
 
 local function PrintTeamWin()
     print("---------------------------------------------------")
@@ -45,9 +51,20 @@ local function PrintTeamWin()
     print("---------------------------------------------------")
     for name, team in pairs(CONST.TEAM) do
         local teamWin = CoreMath.Round((teamWinCount[team] / totalRounds) * 100, 2)
-        print(name .. "- " .. tostring(teamWin)  .. "%")
+        print(name .. " - " .. tostring(teamWin) .. "%" .. " | Total Wins: " .. tostring(teamWinCount[team]))
     end
+    -- print("---------------------------------------------------")
+end
+
+local function PrintCurrentRoundInfo()
     print("---------------------------------------------------")
+    print("Current Round Info")
+    print("---------------------------------------------------")
+    for name, team in pairs(CONST.TEAM) do
+        local teamSize = Game.GetPlayers({includeTeams = team})
+        local teamScore = Game.GetTeamScore(team)
+        print(name .. " - " .. " Total Score: " .. tostring(teamScore) .. " | Team Size: " .. tostring(#teamSize))
+    end
 end
 
 local function CalculateGamePlayStats(isOrcWin)
@@ -86,7 +103,6 @@ function Int()
     end
 end
 
-
 function OnRoundEnd() --
     local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
     local elfScore = Game.GetTeamScore(CONST.TEAM.ELF)
@@ -97,6 +113,7 @@ function OnRoundEnd() --
     PrintClassWin()
     PrintClassKillDeath()
     PrintTeamWin()
+    PrintCurrentRoundInfo()
     print("---------------------------------------------------")
     print("Total Rounds: " .. tostring(totalRounds))
     print("---------------------------------------------------")
@@ -106,10 +123,9 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
     if newState == ABGS.GAME_STATE_ROUND_END then
         OnRoundEnd()
     elseif newState == ABGS.GAME_STATE_ROUND then
-       -- OnRoundStart()
+    -- OnRoundStart()
     end
 end
-
 
 function OnDied(attackData)
     local target = attackData.object

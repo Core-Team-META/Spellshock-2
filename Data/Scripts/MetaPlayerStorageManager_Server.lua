@@ -426,7 +426,7 @@ function OnSavePlayerData(player)
     print("-------------------------------")
     print(player.name .. " Shared Storage Size:")
     print(
-        "\nProgress Data Size: " ..
+        "Progress Data Size: " ..
             tostring(progressDataSize) .. " (" .. tostring(CoreMath.Round((progressDataSize / 16000) * 100, 2)) .. "%)"
     )
     print(
