@@ -2077,7 +2077,7 @@ Assets {
             CanRotate: true
             PreventOtherAbilities: true
           }
-          Animation: "1hand_melee_rm_combo_closer_uppercut"
+          Animation: "unarmed_stomp"
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_30"
           }
@@ -2224,7 +2224,7 @@ Assets {
             CanJump: true
             CanRotate: true
           }
-          Animation: "2hand_melee_dig_shovel"
+          Animation: "unarmed_pickup"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_14"
