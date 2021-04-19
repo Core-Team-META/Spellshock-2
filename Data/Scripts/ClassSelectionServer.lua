@@ -56,6 +56,7 @@ local function EquipPlayer(player, classID)
 end
 
 local function UnequipPlayer(player)
+    if not Object.IsValid(player) then return end
     for _, equipment in pairs(player:GetEquipment()) do
         if Object.IsValid(equipment) then
             equipment:Unequip()
