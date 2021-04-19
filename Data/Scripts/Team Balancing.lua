@@ -2,8 +2,8 @@ local ABGS = require( script:GetCustomProperty("GameStateAPI") )
 local PROGRESSION = require( script:GetCustomProperty("ProgressionAPI") )
 local DEBUG_SAME_TEAM = script:GetCustomProperty("DebugSameTeam")
 
-local BASE_VALUE_PER_PLAYER = 100
-local TOTAL_CLASS_VALUE_EXPONENT = 0.5 -- Higher value means that ability leveling is ever-more powerful
+local BASE_VALUE_PER_PLAYER = 1
+local TOTAL_CLASS_VALUE_EXPONENT = 0.6 -- Higher value means that ability leveling is ever-more powerful
 local TOTAL_CLASS_VALUE_COEFFICIENT = 6 -- Higher value means players with progression are considered much more powerful
 local WIN_RATE_MIN = 0.2
 local WIN_RATE_MAX = 0.8
@@ -26,7 +26,9 @@ function ComputePlayerValue(player)
 	totalClassValue = totalClassValue ^ TOTAL_CLASS_VALUE_EXPONENT
 	totalClassValue = totalClassValue * TOTAL_CLASS_VALUE_COEFFICIENT
 	value = value + totalClassValue
-	
+
+--[[
+
 	while not player.serverUserData.weightedWinRate do
 		Task.Wait()
 	end
@@ -40,13 +42,15 @@ function ComputePlayerValue(player)
 		winRateValue = winRateValue * WIN_RATE_COEFFICIENT
 		value = value + winRateValue
 	end
+
+]]--
 	player.serverUserData.balanceValue = value
-	--[[
+
 	print("[Balance] Player " .. player.name .. 
 		", classValue = " .. tostring(accountLevel) .. "->" .. tostring(totalClassValue) .. 
-		", winRateValue = " .. tostring(weightedWinRate) .. "->" .. tostring(winRateValue) .. 
+		--", winRateValue = " .. tostring(weightedWinRate) .. "->" .. tostring(winRateValue) .. 
 		", totalValue = " .. tostring(value))
-	--]]
+
 	return value
 end
 
@@ -149,8 +153,15 @@ function DoRebalance(playerToIgnore)
 	local value1 = ComputeTeamValue(team1)
 	local value2 = ComputeTeamValue(team2)
 	
-	local bestDelta = math.abs(value1 - value2)
-	
+
+	if #team1 > #team2 then
+		value1 = value1 + (100/#team1)
+	elseif #team2 > #team1 then
+		value2 = value2 + (100/#team2)
+	end
+
+	local bestDelta = math.abs(value1/#team1 - value2/#team2)
+
 	local i = 0
 	while i < 64 do
 		i = i + 1
@@ -169,15 +180,16 @@ function DoRebalance(playerToIgnore)
 		table.insert(team2, player1)
 		
 		-- Recalculate value to see if this is better
-		local v1 = value1 - player1.serverUserData.balanceValue
-		local v2 = value2 - player2.serverUserData.balanceValue
+		local v1 = value1 - player1.serverUserData.balanceValue + player2.serverUserData.balanceValue
+		local v2 = value2 - player2.serverUserData.balanceValue + player1.serverUserData.balanceValue
 		
-		local newDelta = math.abs(v1 - v2)
-		
+		local newDelta = math.abs(v1/#team1 - v2/#team2)
+
 		if bestDelta > newDelta then
 			bestDelta = newDelta
 			value1 = v1
 			value2 = v2
+
 		else
 			-- Revert the swap
 			table.remove(team1, #team1)
@@ -186,7 +198,7 @@ function DoRebalance(playerToIgnore)
 			table.insert(team2, player2)
 		end
 	end
-	
+
 	-- Apply any team switching
 	ApplyTeamChanges(team1, team2)
 end

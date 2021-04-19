@@ -7,7 +7,7 @@ Assets {
       RootId: 5330159067398666666
       Objects {
         Id: 5330159067398666666
-        Name: "Assassin Orc Blink Preview Basic"
+        Name: "Assassin Elf Blade Dash Preview Basic"
         Transform {
           Scale {
             X: 1
@@ -39,8 +39,8 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.4
-            Y: 0.4
+            X: 0.39
+            Y: 0.39
             Z: 1
           }
         }

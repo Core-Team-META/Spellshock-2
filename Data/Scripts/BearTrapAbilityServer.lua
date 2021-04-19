@@ -39,6 +39,9 @@ function PlaceObject(thisAbility)
 	table.insert(ActiveTraps, newTrap)
 	Task.Wait()
 	Task.Wait()
+	if not Object.IsValid(SpecialAbility) or not Object.IsValid(SpecialAbility.owner) then
+		newTrap:Destroy()
+	end
 	newTrap:SetNetworkedCustomProperty("OwnerID", SpecialAbility.owner.id)	
 end
 

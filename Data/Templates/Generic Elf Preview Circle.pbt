@@ -38,8 +38,8 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.4
-            Y: 0.4
+            X: 0.39
+            Y: 0.39
             Z: 2.5
           }
         }

@@ -354,7 +354,9 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 	end
 
 	-- Knock one off?
-	warn(string.format("Failed to apply status effect id: %d to player %s because they already had max", id, player.name))
+	if id and type(id) == "number" and player and Object.IsValid(player) then
+		warn(string.format("Failed to apply status effect id: %d to player %s because they already had max", id, player.name))
+	end
 end
 
 -- Server only
@@ -390,6 +392,11 @@ function API.DoesPlayerHaveStatusEffect(player, name)
 		return false
 	end
 	local tracker = API.GetStateTracker(player)
+
+	if not tracker or not Object.IsValid(tracker) then
+		return false
+	end
+	
 	for i = 1, API.MAX_STATUS_EFFECTS do
 		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 		if trackerTbl and trackerTbl[ID_KEY] ~= 0 then

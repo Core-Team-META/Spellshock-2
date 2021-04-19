@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Rewards UTIL
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/5
--- Version 0.1.2
+-- Date: 2021/4/16
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -319,10 +319,10 @@ function API.CalculatePremiumRefreshCost(value)
     return CoreMath.Round(API.PREMIUM_REFRESH[value])
 end
 
-function API.GetRewardCost(dailyRewards, slot)
+function API.GetRewardCost(dailyRewards)
     local cost = 0
-    local rewardType = dailyRewards.type
-    local value = dailyRewards.amount
+    local rewardType = tonumber(dailyRewards.type)
+    local value = tonumber(dailyRewards.amount)
     if rewardType == API.REWARD_TYPES.SKILLPOINTS then
         cost = API.CalculateShardCost(value)
     elseif rewardType == API.REWARD_TYPES.GOLD then
@@ -421,20 +421,25 @@ function API.OnRewardSelect(player, slotID, tbl, bool)
     -- Daily shop #FIXME
     if bool and tbl[player.id] and tbl[player.id][slotID] then
         local reward = tbl[player.id][slotID]
-        if reward.type == API.REWARD_TYPES.SKILLPOINTS then
-            META_AP().AddBindXp(player, reward.class, reward.bind, reward.amount)
-        elseif reward.type == API.REWARD_TYPES.GOLD then
-            player:AddResource(CONST.GOLD, reward.amount)
-        elseif reward.type == API.REWARD_TYPES.COSMETIC then
-            player:AddResource(CONST.COSMETIC_TOKEN, reward.amount)
-        elseif reward.type == API.REWARD_TYPES.CONSUMABLES then
-            if reward.bind == CONST.CONSUMABLE_KEYS.HEALTH_POTION then
-                CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.HEALTH_POTION, reward.amount)
+        local class = tonumber(reward.class)
+        local bind = tonumber(reward.bind)
+        local amount = tonumber(reward.amount)
+        local rewardType = tonumber(reward.type)
+
+        if rewardType == API.REWARD_TYPES.SKILLPOINTS then
+            META_AP().AddBindXp(player, class, bind, amount)
+        elseif rewardType == API.REWARD_TYPES.GOLD then
+            player:AddResource(CONST.GOLD, amount)
+        elseif rewardType == API.REWARD_TYPES.COSMETIC then
+            player:AddResource(CONST.COSMETIC_TOKEN, amount)
+        elseif rewardType == API.REWARD_TYPES.CONSUMABLES then
+            if bind == CONST.CONSUMABLE_KEYS.HEALTH_POTION then
+                CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.HEALTH_POTION, amount)
             end
-        elseif reward.type == API.REWARD_TYPES.MOUNT_SPEED then
-            CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.MOUNT_SPEED, reward.amount)
-        elseif reward.type == API.REWARD_TYPES.CLASS_XP then
-            META_CP().AddXP(player, reward.class, reward.amount)
+        elseif rewardType == API.REWARD_TYPES.MOUNT_SPEED then
+            CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.MOUNT_SPEED, amount)
+        elseif rewardType == API.REWARD_TYPES.CLASS_XP then
+            META_CP().AddXP(player, class, amount)
         end
         tbl[player.id][slotID].P = 1
     elseif tbl[player.id] and tbl[player.id][slotID] then -- Rewards

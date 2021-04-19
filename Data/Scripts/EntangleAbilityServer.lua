@@ -73,7 +73,7 @@ function OnAbilityExecute(thisAbility)
 	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
 
 	local nearbyEnemies =
-		Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
+		Game.FindPlayersInCylinder(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 	for _, enemy in pairs(nearbyEnemies) do
 		API_SE.ApplyStatusEffect(

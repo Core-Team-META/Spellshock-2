@@ -126,6 +126,10 @@ local function GetNumberOfCards(player)
     for _, classID in pairs(CONST.CLASS) do
         local classRank = META_CP().GetClassLevel(player, classID)
         if classRank > topRanks[1] then
+            if topRanks[1] > topRanks[2] then
+                -- bump to second slot
+                topRanks[2] = topRanks[1]
+            end
             topRanks[1] = classRank
         elseif classRank > topRanks[2] then
             topRanks[2] = classRank
@@ -135,20 +139,25 @@ local function GetNumberOfCards(player)
 
     -- Any class rank 50 and one other other class rank 25
     if (topRanks[1] >= 50 and topRanks[2] >= 25) or (topRanks[2] >= 50 and topRanks[1] >= 25) then
-        -- At least 2 classes rank 25
         cardCount = 10
+
+    -- At least 2 classes rank 25
     elseif topRanks[1] >= 25 and topRanks[2] >= 25 then
-        -- Any class rank 25
         cardCount = 9
+
+    -- Any class rank 25
     elseif topRanks[1] >= 25 or topRanks[2] >= 25 then
-        -- Any two classes rank 10
         cardCount = 8
+
+    -- Any two classes rank 10
     elseif topRanks[1] >= 10 and topRanks[2] >= 10 then
-        -- Any class rank 10
         cardCount = 7
+    
+    -- Any class rank 10
     elseif topRanks[1] >= 10 or topRanks[2] >= 10 then
-        -- Any class rank 5
         cardCount = 6
+
+    -- Any class rank 5
     elseif topRanks[1] >= 5 or topRanks[2] >= 5 then
         cardCount = 5
     end

@@ -4744,7 +4744,7 @@ Objects {
       }
     }
     Text {
-      Label: "+37%"
+      Label: "+60%"
       Color {
         R: 0.965761542
         G: 1
@@ -4812,7 +4812,7 @@ Objects {
       }
     }
     Text {
-      Label: "+37%"
+      Label: "+60%"
       Color {
         A: 1
       }
@@ -6861,7 +6861,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack IV"
+      Label: "Gem Pack IV"
       Color {
         R: 1
         G: 1
@@ -7830,7 +7830,7 @@ Objects {
       }
     }
     Text {
-      Label: "25%"
+      Label: "33%"
       Color {
         R: 0.965761542
         G: 1
@@ -7898,7 +7898,7 @@ Objects {
       }
     }
     Text {
-      Label: "25%"
+      Label: "33%"
       Color {
         A: 1
       }
@@ -8259,7 +8259,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack III"
+      Label: "Gem Pack III"
       Color {
         R: 1
         G: 1
@@ -9943,7 +9943,7 @@ Objects {
       }
     }
     Text {
-      Label: "10%"
+      Label: "12%"
       Color {
         R: 0.965761542
         G: 1
@@ -10011,7 +10011,7 @@ Objects {
       }
     }
     Text {
-      Label: "10%"
+      Label: "12%"
       Color {
         A: 1
       }
@@ -10372,7 +10372,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack II"
+      Label: "Gem Pack II"
       Color {
         R: 1
         G: 1
@@ -11691,7 +11691,7 @@ Objects {
       }
     }
     Text {
-      Label: "Jewel Pack I"
+      Label: "Gem Pack I"
       Color {
         R: 1
         G: 1
@@ -12774,7 +12774,7 @@ Objects {
       }
     }
     Text {
-      Label: "+56%"
+      Label: "+67%"
       Color {
         R: 0.965761542
         G: 1
@@ -12842,7 +12842,7 @@ Objects {
       }
     }
     Text {
-      Label: "+56%"
+      Label: "+67%"
       Color {
         A: 1
       }
@@ -14583,7 +14583,7 @@ Objects {
       }
     }
     Text {
-      Label: "+42%"
+      Label: "+50%"
       Color {
         R: 0.965761542
         G: 1
@@ -14651,7 +14651,7 @@ Objects {
       }
     }
     Text {
-      Label: "+42%"
+      Label: "+50%"
       Color {
         A: 1
       }
@@ -15484,7 +15484,7 @@ Objects {
       }
     }
     Text {
-      Label: "25000"
+      Label: "30000"
       Color {
         A: 0.493000031
       }
@@ -15544,7 +15544,7 @@ Objects {
       }
     }
     Text {
-      Label: "25000"
+      Label: "30000"
       Color {
         R: 1
         G: 0.584635735

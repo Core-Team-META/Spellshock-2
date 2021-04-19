@@ -36,7 +36,15 @@ local function isAllowed(time)
     return true
 end
 
-local function OnDeletePlayerDataObject(player)
+local function OnDeletePlayerDataObject(player, objectId)
+    for _, object in ipairs(NETWORKED:GetChildren()) do
+        if Object.IsValid(object) and object.id == objectId then
+            object:Destroy()
+        end
+    end
+end
+
+local function OnDeleteAllPlayerData(player)
     for _, object in ipairs(NETWORKED:GetChildren()) do
         if Object.IsValid(object) and object.name == player.id then
             object:Destroy()
@@ -58,12 +66,13 @@ local function CalculateRewardSlot(player)
     local randomChance = math.random(1, 100)
     if randomChance < 98 then
         local skillReward = REWARD_UTIL.GetSkillReward()
-        skillReward.amount = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, skillReward.amount)
+        skillReward.amount = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, tonumber(skillReward.amount))
         skillReward.P = 0
         tbl = skillReward
     else
         local cosmeticToken = REWARD_UTIL.GetCosmeticReward()
-        cosmeticToken.amount = _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player, cosmeticToken.amount)
+        cosmeticToken.amount =
+            _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player, tonumber(cosmeticToken.amount))
         cosmeticToken.P = 0
         tbl = cosmeticToken
     end
@@ -81,19 +90,21 @@ end
 --@params object player
 --@params bool forced | Should count as refresh
 local function GenerateShopItems(player, forced)
-    dailyRewards[player.id] = {}
     local tempTbl = {}
     for i = 1, 6 do
         tempTbl[i] = CalculateRewardSlot(player)
         tempTbl[i].amount = tempTbl[i].amount * 2
     end
-    local currentTime = os.time(os.date("!*t"))
     player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH or 0
+
+    local currentTime = os.time(os.date("!*t"))
     local refreshTime = currentTime + (24 * 60 * 60)
-    --(24 * 60 * 60)
+
     if forced then
         player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1
-        refreshTime = player:GetResource("DS_REFRESHTIME")
+        if dailyRewards[player.id] and dailyRewards[player.id]["TIME"] and dailyRewards[player.id]["TIME"].T then
+            refreshTime = dailyRewards[player.id]["TIME"].T
+        end
     else
         local resourceTime = CoreMath.Round(refreshTime - os.time(os.date("!*t")))
         player:SetResource("DS_REFRESHTIME", CoreMath.Round(resourceTime + time()))
@@ -115,10 +126,16 @@ end
 --@param object player
 --@param table data
 function OnLoadPlayerDailyShop(player, data)
-    if data and data["TIME"] and data["TIME"].T and data["TIME"].V == 1 and not Has24HoursPassed(data["TIME"].T) then
+    if
+        data and data["TIME"] and data["TIME"].T and tonumber(data["TIME"].V) == 1 and
+            not Has24HoursPassed(data["TIME"].T)
+     then
         dailyRewards[player.id] = data
-        player.serverUserData.DS_REFRESH = data["TIME"].R or 0
-        player:SetResource("DS_REFRESHTIME", CoreMath.Round(data["TIME"].T - os.time(os.date("!*t")) + time()))
+        player.serverUserData.DS_REFRESH = tonumber(data["TIME"].R) or 0
+        player:SetResource(
+            "DS_REFRESHTIME",
+            CoreMath.Round(tonumber(data["TIME"].T) - os.time(os.date("!*t")) + time())
+        )
     else
         GenerateShopItems(player, false)
     end
@@ -126,12 +143,13 @@ end
 
 --@param object player
 function OnPlayerLeft(player)
-    OnDeletePlayerDataObject(player)
+    OnDeleteAllPlayerData(player)
+    --UTIL.TablePrint(dailyRewards[player.id])
     dailyRewards[player.id] = nil
 end
 
 function OnPurchase(player, id, slot)
-    local cost = REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id], slot)
+    local cost = REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id])
 
     -- Event Daily Cost Reduction
     cost = CoreMath.Round(cost * CONST.EVENT_DAILY_SHOP_DISCOUNT)

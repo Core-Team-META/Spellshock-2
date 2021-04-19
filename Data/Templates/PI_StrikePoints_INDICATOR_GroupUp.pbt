@@ -72,7 +72,7 @@ Assets {
       }
       Objects {
         Id: 4097778601125969878
-        Name: "UI Image"
+        Name: "SolidCircle"
         Transform {
           Location {
           }

@@ -52,9 +52,14 @@ function OnAbilityExecute(thisAbility)
 
 	Task.Wait()
 	Task.Wait()
+	if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then
+		CurrentHawk:Destroy()
+		return
+	end
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
+
 	Task.Wait(1)
-	if Object.IsValid(SpecialAbility) then
+	if Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) then
 		Timer =
 			META_AP().GetAbilityMod(
 			SpecialAbility.owner,
@@ -64,6 +69,8 @@ function OnAbilityExecute(thisAbility)
 			SpecialAbility.name .. ": LifeSpan"
 		)
 		CurrentHawk.lifeSpan = Timer + 5
+	else
+		CurrentHawk:Destroy()
 	end
 end
 

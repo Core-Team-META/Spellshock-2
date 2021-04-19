@@ -72,8 +72,10 @@ function OnBindingPressed(whichPlayer, binding)
 		--print(">> TUTORIAL MENU")
 		local newState
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+			LOCAL_PLAYER.clientUserData.tutorialActive = true
 			newState = _G.MENU_TABLE["Tutorial"]
 		elseif _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] then
+			LOCAL_PLAYER.clientUserData.tutorialActive = nil
 			newState = _G.MENU_TABLE["NONE"]
 		else
 			return
@@ -124,7 +126,7 @@ function OnBindingPressed(whichPlayer, binding)
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
 		end
-	elseif (binding == "ability_extra_51" and SpamPrevent()) then -- O and CurrentGameState == ABGS.GAME_STATE_LOBBY
+--[[	elseif (binding == "ability_extra_51" and SpamPrevent()) then -- F2 and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		if LOCAL_PLAYER.clientUserData.hasSkippedReward or ((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) 
 		and not LOCAL_PLAYER.isDead then
 			--print(">> COSMETIC SHOP")
@@ -133,7 +135,7 @@ function OnBindingPressed(whichPlayer, binding)
 			elseif _G.CurrentMenu == _G.MENU_TABLE["Tutorial_Slides"] then
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
-		end
+		end]]--
 	end
 end
 

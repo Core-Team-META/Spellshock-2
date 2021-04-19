@@ -15,10 +15,12 @@ end
 -- CUSTOM Chicken Suit
 local chickenSuits = {
     [1] = script:GetCustomProperty("ChickenSuit1"),
-    [2] =script:GetCustomProperty("ChickenSuit2"),
-    [3] =script:GetCustomProperty("ChickenSuit3"),
-    [4] =script:GetCustomProperty("ChickenSuit4"),
-    [5] =script:GetCustomProperty("ChickenSuit5")
+    [2] = script:GetCustomProperty("ChickenSuit2"),
+    [3] = script:GetCustomProperty("ChickenSuit3"),
+    [4] = script:GetCustomProperty("ChickenSuit4"),
+    [5] = script:GetCustomProperty("ChickenSuit5"),
+    [6] = script:GetCustomProperty("ChickenSuit6"),
+    [7] = script:GetCustomProperty("ChickenSuit7")
 }
 
 local function ReturnPlayerByName(Name)
@@ -128,6 +130,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.HigherAdmin,
     },
+    
 --[[ 
     ["/kill"] = {
         OnCommandCalledClient = function (player, message)
@@ -273,6 +276,57 @@ commands = {
         adminRank = AdminData.AdminRanks.HigherAdmin,
     },
 
+    ["/happygold"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            Events.Broadcast("CHATHOOK_GOLD_BOOST", player)
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Give all players on server Gold Boost",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/happyxp"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            Events.Broadcast("CHATHOOK_XP_BOOST", player)
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Give all players on server XP Boost",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/happyvip"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            local split = {CoreString.Split(message)}
+            local target = split[2] or nil
+            if (target) then
+                target = ReturnPlayerByName(target)
+            end
+             target:SetResource(API_Constants.VIP_MEMBERSHIP_KEY, 1)
+            _G.PerPlayerDictionary.Set(target, API_Constants.VIP_MEMBERSHIP_KEY, 1)
+            target.serverUserData.ADMIN_VIP = true
+
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Give a player VIP Boost",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.HigherAdmin,
+    },
+
+
 --[[     ["/changeteam"] = {
         OnCommandCalledClient = function (player, message)
         end,
@@ -320,6 +374,7 @@ commands = {
             local split = {CoreString.Split(message)}
             local target = split[2] or nil
             local duration = tonumber(split[3]) or 5
+            local skinNumber = tonumber(split[4]) or nil
 
             if duration > 30 then duration = 30 end
 
@@ -331,7 +386,13 @@ commands = {
 			if target and not target.isDead and not target.serverUserData.isAnimorphed then
                 print("[Admin] " .. player.name .. " chickened " .. tostring(target.name))
 				target.serverUserData.isAnimorphed = true
-                local chickenSuit = chickenSuits[math.random(1, #chickenSuits-1)]
+                local randomChicken = math.random(1, #chickenSuits)
+                if (skinNumber) then
+                    if (skinNumber <= #chickenSuits) then
+                        randomChicken = skinNumber
+                    end
+                end
+                local chickenSuit = chickenSuits[randomChicken]
 				local newCostume = META_AP().SpawnAsset(chickenSuit)
                 if not newCostume then return end
 				newCostume:SetScale(newCostume:GetScale() * 1.5)
@@ -348,7 +409,7 @@ commands = {
         adminRank = AdminData.AdminRanks.Admin,
     },
 
---[[ 
+
     ["/addscore"] = {
         OnCommandCalledClient = function (player, message)
         end,
@@ -385,7 +446,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.Admin,
     },
- ]]
+
 }
 
 return commands

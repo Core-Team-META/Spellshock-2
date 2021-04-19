@@ -73,14 +73,14 @@ function OnTargetImpact(theWeapon, impactData)
 	
 	-- Apply the slowdown thing on the heavy attack
 	if  impactData.targetObject:IsA("Player") then
-		--local status = META_AP().GetAbilityMod(theWeapon.owner, META_AP().LMB, "mod5", {}, WEAPON.name .. ": Status")
+		local status = META_AP().GetAbilityMod(theWeapon.owner, META_AP().LMB, "mod2", {}, WEAPON.name .. ": Electric Status")
 		API_SE.ApplyStatusEffect(
 			impactData.targetObject,
 			API_SE.STATUS_EFFECT_DEFINITIONS["Electric"].id,
 			theWeapon.owner,
-			3, -- duration
-			15, -- damage
-			1 -- multiplier
+			status.duration, -- duration
+			status.damage, -- damage
+			status.multiplier -- multiplier
 		)
 	end
 end

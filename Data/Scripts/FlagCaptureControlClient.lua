@@ -303,9 +303,9 @@ function OnNetworkedPropertyChanged(thisObject, name)
             end
         end
 
-        if not capturePlayer or capturePlayer.team ~= progressedTeam then
+        --[[if not capturePlayer or capturePlayer.team ~= progressedTeam then
             return
-        end
+        end]]
 
         local progressLeft
         --print("Capture progress: "..GetCaptureProgress())

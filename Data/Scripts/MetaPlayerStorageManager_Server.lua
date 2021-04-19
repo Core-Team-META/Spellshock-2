@@ -117,6 +117,10 @@ local function AddAllCosmetics(player)
     end
 end
 
+local function DataWarning(player, name)
+    warn("[Storage Warning]: " .. name .." Failed To Store For " .. player.name)
+end
+
 --@param object player
 --@param table data
 local function OnLoadProgressionData(player, data)
@@ -132,14 +136,19 @@ end
 --@param table data
 local function OnSaveProgressionData(player, data)
     local playerProgression = META_AP.context.GetPlayerProgression(player)
-    data[CONST.STORAGE.ABILITY_PROGRESSION] = UTIL.AbilityConvertToString(playerProgression)
+    if playerProgression and next(playerProgression) ~= nil then
+        data[CONST.STORAGE.ABILITY_PROGRESSION] = UTIL.AbilityConvertToString(playerProgression)
+    elseif data[CONST.STORAGE.ABILITY_PROGRESSION] then
+        DataWarning(player, "Ability Progression")
+        data[CONST.STORAGE.ABILITY_PROGRESSION] = data[CONST.STORAGE.ABILITY_PROGRESSION]
+    end
 end
 
 --@param object player
 --@param table data
 local function OnLoadCostumeData(player, data)
     local cosmetics
-    if data[CONST.STORAGE.COSMETIC] then
+    if data[CONST.STORAGE.COSMETIC] and data[CONST.STORAGE.COSMETIC] ~= "" then
         cosmetics = UTIL.CosmeticConvertToTable(data[CONST.STORAGE.COSMETIC])
         META_COSMETIC.context.BuildCosmeticStringTable(player, data[CONST.STORAGE.COSMETIC])
     end
@@ -150,7 +159,12 @@ end
 --@param table data
 local function OnSaveCostumeData(player, data)
     local playerCosmetics = META_COSMETIC.context.GetPlayerCosmetic(player)
-    data[CONST.STORAGE.COSMETIC] = next(playerCosmetics) ~= nil and UTIL.CosmeticConvertToString(playerCosmetics) or ""
+    if playerCosmetics and next(playerCosmetics) ~= nil then
+        data[CONST.STORAGE.COSMETIC] = UTIL.CosmeticConvertToString(playerCosmetics)
+    elseif data[CONST.STORAGE.COSMETIC] then -- Something failed in the game, so if they have storage, use it.
+        DataWarning(player, "Costume")
+        data[CONST.STORAGE.COSMETIC] = data[CONST.STORAGE.COSMETIC]
+    end
 end
 
 --@param object player
@@ -164,14 +178,8 @@ local function OnLoadCurrencyData(player, data)
                 player:SetResource(CONST.CURRENCY[key], value)
             end
         end
-    else --
-        --[[for k, name in ipairs(CONST.CURRENCY) do
-            player:SetResource(name, 0) -- Needs to add to player resource as 0 to store properly
-            --warn(tostring(player:GetResource(name)))
-        end]] player:SetResource(
-            CONST.GOLD,
-            1000
-        )
+    else
+        player:SetResource(CONST.GOLD, 1000)
         player:SetResource(CONST.COSMETIC_TOKEN, 50)
     end
 end
@@ -183,11 +191,13 @@ local function OnSaveCurrencyData(player, data)
     for index, resName in ipairs(CONST.CURRENCY) do
         playerCurrency[index] = player:GetResource(resName)
     end
-
-    data[CONST.STORAGE.CURRENCY] =
-        next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
+    if playerCurrency and next(playerCurrency) ~= nil then
+        data[CONST.STORAGE.CURRENCY] = UTIL.ConvertTableToString(playerCurrency, ",", "=")
+    elseif data[CONST.STORAGE.CURRENCY] then
+        DataWarning(player, "Currency")
+        data[CONST.STORAGE.CURRENCY] = data[CONST.STORAGE.CURRENCY]
+    end
 end
-
 --@param object player
 --@param table data
 local function OnLoadGamePlayStatsData(player, data)
@@ -221,9 +231,12 @@ local function OnSaveGamePlayStatsData(player, data)
             playerGameStats[index] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]
         end
     end
-
-    data[CONST.STORAGE.GAME_PLAYER_STATS] =
-        next(playerGameStats) ~= nil and UTIL.ConvertTableToString(playerGameStats, ",", "=") or ""
+    if playerGameStats and next(playerGameStats) ~= nil then
+        data[CONST.STORAGE.GAME_PLAYER_STATS] = UTIL.ConvertTableToString(playerGameStats, ",", "=")
+    elseif data[CONST.STORAGE.GAME_PLAYER_STATS] then
+        DataWarning(player, "Game Player Stats")
+        data[CONST.STORAGE.GAME_PLAYER_STATS] = data[CONST.STORAGE.GAME_PLAYER_STATS]
+    end
 end
 
 --@param object player
@@ -240,8 +253,12 @@ end
 --@param table data
 local function OnSaveEquippedCosmetic(player, data)
     local playerCosmetics = META_COSMETIC.context.GetPlayerEquippedCosmetic(player)
-    data[CONST.STORAGE.EQUIPPED_COSMETIC] =
-        next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
+    if playerCosmetics and next(playerCosmetics) ~= nil then
+        data[CONST.STORAGE.EQUIPPED_COSMETIC] = UTIL.EquippedCosmeticConvertToString(playerCosmetics)
+    elseif data[CONST.STORAGE.EQUIPPED_COSMETIC] then
+        DataWarning(player, "Equipped Cosmetic")
+        data[CONST.STORAGE.EQUIPPED_COSMETIC] = data[CONST.STORAGE.EQUIPPED_COSMETIC]
+    end
 end
 
 --@param object player
@@ -258,7 +275,12 @@ end
 --@param table data
 local function OnSaveDailyShopData(player, data)
     local dailyShopItems = DAILY_SHOP.context.GetDailyRewards(player)
-    data[CONST.STORAGE.DAILY_SHOP] = next(dailyShopItems) ~= nil and UTIL.DailyShopConvertToString(dailyShopItems) or ""
+    if dailyShopItems and next(dailyShopItems) ~= nil then
+        data[CONST.STORAGE.DAILY_SHOP] = UTIL.DailyShopConvertToString(dailyShopItems)
+    elseif data[CONST.STORAGE.DAILY_SHOP] then
+        DataWarning(player, "Daily Shop")
+        data[CONST.STORAGE.DAILY_SHOP] = data[CONST.STORAGE.DAILY_SHOP]
+    end
 end
 
 --@param object player
@@ -275,8 +297,12 @@ end
 --@param table data
 local function OnSaveClassLeveData(player, data)
     local playerProgression = CLASS_PROGRESSION.context.GetClassProgression(player)
-    data[CONST.STORAGE.CLASS_PROGRESSION] =
-        next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+    if playerProgression and next(playerProgression) ~= nil then
+        data[CONST.STORAGE.CLASS_PROGRESSION] = UTIL.DailyShopConvertToString(playerProgression, ",", "=")
+    elseif data[CONST.STORAGE.CLASS_PROGRESSION] then
+        DataWarning(player, "Class Level")
+        data[CONST.STORAGE.CLASS_PROGRESSION] = data[CONST.STORAGE.CLASS_PROGRESSION]
+    end
 end
 
 --@param object player
@@ -293,8 +319,12 @@ end
 --@param table data
 local function OnSaveConsumableData(player, data)
     local playerProgression = CONSUMABLES.context.GetConsumables(player)
-    data[CONST.STORAGE.CONSUMABLE] =
-        next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+    if playerProgression and next(playerProgression) ~= nil then
+        data[CONST.STORAGE.CONSUMABLE] = UTIL.DailyShopConvertToString(playerProgression, ",", "=")
+    elseif data[CONST.STORAGE.CONSUMABLE] then
+        DataWarning(player, "Consumable")
+        data[CONST.STORAGE.CONSUMABLE] = data[CONST.STORAGE.CONSUMABLE]
+    end
 end
 
 --@param object player
@@ -331,8 +361,12 @@ local function OnSaveMultiplierData(player, data)
         end
         multiplierTimes[index] = timestamp
     end
-    data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] =
-        next(multiplierTimes) ~= nil and UTIL.ConvertTableToString(multiplierTimes, ",", "=") or ""
+    if multiplierTimes and next(multiplierTimes) ~= nil then
+        data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] = UTIL.ConvertTableToString(multiplierTimes, ",", "=")
+    elseif data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] then
+        DataWarning(player, "Progression Multiplier")
+        data[CONST.STORAGE.PROGRESSION_MULTIPLIERS] = data[CONST.STORAGE.PROGRESSION_MULTIPLIERS]
+    end
 end
 
 --@param object player
@@ -353,6 +387,10 @@ local function OnPlayerJoined(player)
     OnLoadGamePlayStatsData(player, currencyData)
     OnLoadMultiplierData(player, currencyData)
 
+    if currencyData[CONST.STORAGE.ADMIN_PERKS] then
+        player.serverUserData.ADMIN_VIP = true
+    end
+
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
     OnLoadCostumeData(player, cosmeticData)
     OnLoadEquippedCosmetic(player, cosmeticData)
@@ -362,7 +400,8 @@ local function OnPlayerJoined(player)
     else
         AddDefaultCosmetics(player)
     end
-    local classId = cosmeticData[CONST.STORAGE.CLASS_FAVORITE] or 1
+    
+    local classId = cosmeticData[CONST.STORAGE.CLASS_FAVORITE] or math.random(5)
     CLASS_SELECTION.context.OnPlayerJoined(player, classId)
     --end
     CONSUMABLES.context.OnPlayerJoined(player)
@@ -411,6 +450,11 @@ function OnSavePlayerData(player)
     OnSaveGamePlayStatsData(player, currencyData)
     OnSaveDailyShopData(player, currencyData)
     OnSaveMultiplierData(player, currencyData)
+
+    if player.serverUserData.ADMIN_VIP then
+        currencyData[CONST.STORAGE.ADMIN_PERKS] = true
+    end
+
     Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, currencyData)
 
     --data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
@@ -423,13 +467,11 @@ function OnSavePlayerData(player)
     local currencyDataSize = Storage.SizeOfData(currencyData)
     local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
 
+    print("-------------------------------")
+    print(player.name .. " Shared Storage Size:")
     print(
-        "\n--------------------------------\n" ..
-            player.name ..
-                " Shared Storage Size: " ..
-                    "\nProgress Data Size: " ..
-                        tostring(progressDataSize) ..
-                            " (" .. tostring(CoreMath.Round((progressDataSize / 16000) * 100, 2)) .. "%)"
+        "Progress Data Size: " ..
+            tostring(progressDataSize) .. " (" .. tostring(CoreMath.Round((progressDataSize / 16000) * 100, 2)) .. "%)"
     )
     print(
         "Currency Data Size: " ..
@@ -437,11 +479,9 @@ function OnSavePlayerData(player)
     )
     print(
         "Cosmetic Data Size: " ..
-            tostring(cosmeticDataSize) ..
-                " (" ..
-                    tostring(CoreMath.Round((cosmeticDataSize / 16000) * 100, 2)) ..
-                        "%)" .. "\n--------------------------------"
+            tostring(cosmeticDataSize) .. " (" .. tostring(CoreMath.Round((cosmeticDataSize / 16000) * 100, 2)) .. "%)"
     )
+    print("--------------------------------")
 end
 
 ------------------------------------------------------------------------------------------------------------------------

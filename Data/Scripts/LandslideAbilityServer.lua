@@ -111,9 +111,7 @@ function ToggleDash(mode)
 	end
 
 	if mode then --
-		--[[originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
-		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction]] originalPlayerSettings.BrakingDecelerationWalking =
-		SpecialAbility.owner.brakingDecelerationWalking
+		originalPlayerSettings.BrakingDecelerationWalking = SpecialAbility.owner.brakingDecelerationWalking
 		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
 
 		SpecialAbility.owner.movementControlMode = MovementMode.NONE
@@ -139,14 +137,12 @@ function ToggleDash(mode)
 		if TriggerEventConnection then
 			TriggerEventConnection:Disconnect()
 		end
+		
 		if Object.IsValid(AttachedFX) then
 			AttachedFX:Destroy()
 		end
-		 --
-		--[[SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
-		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction]] if
-			SpecialAbility and Object.IsValid(SpecialAbility)
-		 then
+		
+		if SpecialAbility and Object.IsValid(SpecialAbility) and originalPlayerSettings ~= {} then
 			SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
 			SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
 			_G["Consumables"].SetMovement(Equipment.owner)
@@ -162,16 +158,7 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	
-	--if isAllowed(1) then
-		ToggleDash(true)
-		--[[Task.Spawn(
-			function()
-				ToggleDash(false)
-			end,
-			6
-		)
-	end]]
+	ToggleDash(true)
 end
 
 function OnInterrupted(thisAbility)
@@ -221,12 +208,6 @@ function OnUnequip(equipment, player)
 		AttachedFX:Destroy()
 	end
 
-	--[[if originalPlayerSettings.MovementMode then
-		player.movementControlMode = originalPlayerSettings.MovementMode
-		player.animationStance = originalPlayerSettings.AnimationStance
-		player.groundFriction = originalPlayerSettings.GroundFriction
-		player.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
-	end]]
 	player.movementControlMode = MovementControlMode.LOOK_RELATIVE
 	player.groundFriction = 8
 	player.brakingDecelerationWalking = 1000

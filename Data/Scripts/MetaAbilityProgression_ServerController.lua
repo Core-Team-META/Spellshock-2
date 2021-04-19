@@ -109,7 +109,7 @@ local function SetAccountLevel(player)
             accountLevel = accountLevel + playerProgression[player][class][bind][API.LEVEL]
         end
     end
-    player:SetResource(CONST.ACCOUNT_LEVEL, accountLevel)
+    player:SetResource(CONST.ACCOUNT_LEVEL, accountLevel - 34)
 end
 
 --@param object player

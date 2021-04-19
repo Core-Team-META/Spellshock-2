@@ -15,7 +15,7 @@ local PointOM = script:GetCustomProperty("PointOM"):WaitForObject()
 local PointTG = script:GetCustomProperty("PointTG"):WaitForObject()
 
 function GroupUp(player)
-	SendTeamMessage(player.team, "[System]: Group up with your teammates!")
+	SendTeamMessage(player.team, player.name .. ": Group up with your teammates!")
 	CloseComms(player)
 end
 
@@ -29,31 +29,31 @@ function Goto(player, location)
 		point:SetWorldPosition(PointAS:GetWorldPosition())
 		point:SetNetworkedCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
-		SendTeamMessage(player.team, "[System]: Head for the Airship!")
+		SendTeamMessage(player.team, player.name .. ": Head for AS!")
 	elseif(location == "OM") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointOM:GetWorldPosition())
 		point:SetNetworkedCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
-		SendTeamMessage(player.team, "[System]: Head for the Old Mine!")
+		SendTeamMessage(player.team, player.name .. ": Head for OM!")
 	elseif(location == "WC") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointWC:GetWorldPosition())
 		point:SetNetworkedCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
-		SendTeamMessage(player.team, "[System]: Head for the War Camp!")
+		SendTeamMessage(player.team, player.name .. ": Head for WC!")
 	elseif(location == "MK") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointMK:GetWorldPosition())
 		point:SetNetworkedCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
-		SendTeamMessage(player.team, "[System]: Head for the Marketplace!")
+		SendTeamMessage(player.team, player.name .. ": Head for MK!")
 	elseif(location == "TG") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointTG:GetWorldPosition())
 		point:SetNetworkedCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
-		SendTeamMessage(player.team, "[System]: Head for The Glade!")
+		SendTeamMessage(player.team, player.name .. ": Head for TG!")
 	end
 	CloseComms(player)
 end

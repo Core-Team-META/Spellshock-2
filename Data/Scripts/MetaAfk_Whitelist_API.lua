@@ -34,7 +34,7 @@ local teamMembers = {
     "a136c0d1d9454d539c9932354198fc29", -- Ooccoo
     "0b63f4ffba9c4518b50e4f815a9ec51a", -- Datonare
     "eea739085f20445392c0ab999ab87bb6", -- Aj
-    "0ea6612ceab7456a8a3a963a94808295", -- Blaking
+    --"0ea6612ceab7456a8a3a963a94808295", -- Blaking
     "557d4f1ae17646579646dfd20dcb7b66", -- AwkwardGameDev
     "d5daea732ee3422fbe85aecb900e73ec", -- Coderz
     "1f0588bf88d14c258d7384902f71f132", -- Daddio

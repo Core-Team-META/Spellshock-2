@@ -56,6 +56,7 @@ local function EquipPlayer(player, classID)
 end
 
 local function UnequipPlayer(player)
+    if not Object.IsValid(player) then return end
     for _, equipment in pairs(player:GetEquipment()) do
         if Object.IsValid(equipment) then
             equipment:Unequip()
@@ -155,9 +156,9 @@ function OnGameStateChanged(oldState, newState)
     end
 end
 
--- Context called from Meta Player Storage Manager
+-- NOTE: Context called from Meta Player Storage Manager
 function OnPlayerJoined(player, classId)
-    classId = classId or 1
+    classId = classId or math.random(5)
     --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", classId)
     player.animationStance = Class_Stances[classId]
@@ -190,7 +191,6 @@ if Environment.IsSinglePlayerPreview() then
     OnPlayerJoined(Game.GetPlayers()[1])
 end
 
---Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Events.ConnectForPlayer("ClassChanged_SERVER", OnClassChanged)
 Events.Connect("CH_ClassChanged_SERVER", OnClassChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)

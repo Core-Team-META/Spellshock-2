@@ -122,6 +122,8 @@ function GoingToTakeDamage(attackData)
     local object = attackData.object
     if object.serverUserData.SpawnProtect and attackData.damage.amount > 0 then
         attackData.damage.amount = 0
+    elseif ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then
+        attackData.damage.amount = 0
     end
 end
 

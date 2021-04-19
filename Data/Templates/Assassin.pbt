@@ -1155,7 +1155,7 @@ Assets {
           }
           Overrides {
             Name: "cs:AbilityMod"
-            String: "mod1"
+            String: "mod2"
           }
           Overrides {
             Name: "cs:Equipment"

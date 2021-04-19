@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/4/6
@@ -93,7 +93,7 @@ bundles[#bundles + 1] = {
     perk = GoldPack3,
     storageId = CONST.PERK_STORAGE_KEYS.GOLD_PACK3,
     resourceName = CONST.GOLD,
-    reward = 25000
+    reward = 30000
 }
 bundles[#bundles + 1] = {
     perk = GoldPack4,
@@ -205,7 +205,7 @@ function CheckPerkCountWithStorage(player, data)
                 player:AddResource(bundle.resourceName, reward)
             end
             -- VIP Bonus
-            if bundle.storageId == CONST.PERK_STORAGE_KEYS.VIP_MEMBER and player:HasPerk(bundle.perk) then
+            if (bundle.storageId == CONST.PERK_STORAGE_KEYS.VIP_MEMBER and player:HasPerk(bundle.perk)) or player.serverUserData.ADMIN_VIP then
                 player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
             end
@@ -268,6 +268,13 @@ function OnPlayerJoined(player)
             end
         end
     end
+
+    if data[CONST.STORAGE.ADMIN_PERKS] then
+        player.serverUserData.ADMIN_VIP = true
+        player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
+        _G.PerPlayerDictionary.Set(player, CONST.VIP_MEMBERSHIP_KEY, 1)
+    end
+
     OnSavePerkData(player, data, perks)
     CheckPerkCountWithStorage(player, data)
     -- Connect events that updates currency balance for player
@@ -275,7 +282,19 @@ function OnPlayerJoined(player)
     player.perkChangedEvent:Connect(OnPerksChanged)
 end
 
+function OnGiveGoldBoost(player)
+    AddTimeToPlayersMultiplier(CONST.SELF_GOLD_BOOST_KEY, CONST.GOLD_SERVER_BOOST_DURATION)
+    Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min Gold boost!", 5, 3)
+end
+
+function OnGiveXpBoost(player)
+    AddTimeToPlayersMultiplier(CONST.SELF_XP_BOOST_KEY, CONST.XP_SERVER_BOOST_DURATION)
+    Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min XP boost!", 5, 3)
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Events.Connect("CHATHOOK_GOLD_BOOST", OnGiveGoldBoost)
+Events.Connect("CHATHOOK_XP_BOOST", OnGiveXpBoost)

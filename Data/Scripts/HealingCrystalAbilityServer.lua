@@ -79,9 +79,14 @@ function Tick(dTime)
 		isPlacing = false
 	end
 
-	if HealTrigger and Object.IsValid(HealTrigger) and Timer < 0 then
+	if HealTrigger and Object.IsValid(HealTrigger) and Object.IsValid(SpecialAbility) and SpecialAbility.owner 
+	and Object.IsValid(SpecialAbility.owner) and Timer < 0 then
 		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
 		for _, thisObject in pairs(OverlappingObjects) do
+			if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then 
+				break
+			end 
+			
 			if Object.IsValid(thisObject) and thisObject:IsA("Player") and not thisObject.isDead then
 				local dmg = Damage.New()
 				local HealAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_HealAmount, SpecialAbility.name..": Heal Amount")

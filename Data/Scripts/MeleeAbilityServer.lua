@@ -39,6 +39,7 @@ local bindingReleasedEvent
 local MIN_CHARGE = EQUIPMENT:GetCustomProperty("MinCharge")
 local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
 local HOLD_LIMIT = EQUIPMENT:GetCustomProperty("HoldLimit")
+local ChargeMod = EQUIPMENT:GetCustomProperty("ChargeMod")
 local isCharging = 0 -- 0: not charging  1: charging  2: full charge
 local chargeStart = 1 
 local holdTimer = 0
@@ -111,7 +112,7 @@ function MeleeAttack(other)
 		if IS_CHARGE_ATTACK then
 			local totalChargeTime = time() - chargeStart
 			if totalChargeTime > MAX_CHARGE then
-				dmgMultiplier = 2
+				dmgMultiplier = META_AP().GetAbilityMod(ABILITY.owner, META_AP()[BindingName], ChargeMod, 2, ABILITY.name..": Charge Damage Multiplier")
 			elseif totalChargeTime > MIN_CHARGE then
 				local chargeAmount = totalChargeTime - MIN_CHARGE
 				dmgMultiplier = (chargeAmount / (MAX_CHARGE-MIN_CHARGE)) * 0.5 + 1
