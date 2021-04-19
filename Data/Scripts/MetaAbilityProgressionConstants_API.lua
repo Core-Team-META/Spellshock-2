@@ -24,7 +24,8 @@ API.STORAGE = {
     CONSUMABLE = 10,
     ACHIEVEMENTS = 11,
     PROGRESSION_MULTIPLIERS = 12,
-    CLASS_FAVORITE = 13
+    CLASS_FAVORITE = 13,
+    ADMIN_PERKS = 14
     --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 

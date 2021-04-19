@@ -130,6 +130,7 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.HigherAdmin,
     },
+    
 --[[ 
     ["/kill"] = {
         OnCommandCalledClient = function (player, message)
@@ -274,6 +275,57 @@ commands = {
         adminOnly = true,
         adminRank = AdminData.AdminRanks.HigherAdmin,
     },
+
+    ["/happygold"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            Events.Broadcast("CHATHOOK_GOLD_BOOST", player)
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Give all players on server Gold Boost",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/happyxp"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            Events.Broadcast("CHATHOOK_XP_BOOST", player)
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Give all players on server XP Boost",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.Admin,
+    },
+
+    ["/happyvip"] = {
+        OnCommandCalledClient = function (player, message)
+        end,
+        OnCommandCalledServer = function (player, message)
+            local split = {CoreString.Split(message)}
+            local target = split[2] or nil
+            if (target) then
+                target = ReturnPlayerByName(target)
+            end
+             target:SetResource(API_Constants.VIP_MEMBERSHIP_KEY, 1)
+            _G.PerPlayerDictionary.Set(target, API_Constants.VIP_MEMBERSHIP_KEY, 1)
+            target.serverUserData.ADMIN_VIP = true
+
+        end,
+        OnCommandReceivedClient = function (player, message)
+        end,
+        description = "Give a player VIP Boost",
+        requireMessage = false,
+        adminOnly = true,
+        adminRank = AdminData.AdminRanks.HigherAdmin,
+    },
+
 
 --[[     ["/changeteam"] = {
         OnCommandCalledClient = function (player, message)

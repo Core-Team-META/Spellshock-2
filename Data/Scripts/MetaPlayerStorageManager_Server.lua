@@ -353,6 +353,13 @@ local function OnPlayerJoined(player)
     OnLoadGamePlayStatsData(player, currencyData)
     OnLoadMultiplierData(player, currencyData)
 
+    if currencyData[CONST.STORAGE.ADMIN_PERKS] then
+        local adminPerks = currencyData[CONST.STORAGE.ADMIN_PERKS]
+        if adminPerks then
+            player.serverUserData.ADMIN_VIP = true
+        end
+    end
+
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
     OnLoadCostumeData(player, cosmeticData)
     OnLoadEquippedCosmetic(player, cosmeticData)
@@ -411,6 +418,11 @@ function OnSavePlayerData(player)
     OnSaveGamePlayStatsData(player, currencyData)
     OnSaveDailyShopData(player, currencyData)
     OnSaveMultiplierData(player, currencyData)
+
+    if player.serverUserData.ADMIN_VIP then
+        currencyData[CONST.STORAGE.ADMIN_PERKS] = true
+    end
+
     Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, currencyData)
 
     --data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
@@ -422,7 +434,7 @@ function OnSavePlayerData(player)
     local progressDataSize = Storage.SizeOfData(progressData)
     local currencyDataSize = Storage.SizeOfData(currencyData)
     local cosmeticDataSize = Storage.SizeOfData(cosmeticData)
-    
+
     print("-------------------------------")
     print(player.name .. " Shared Storage Size:")
     print(

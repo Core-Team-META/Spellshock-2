@@ -68,12 +68,9 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
-function OnGameStateChanged(object, string)
-    if string == "State" then
-        local state = object:GetCustomProperty(string)
-        if state == ABGS.GAME_STATE_ROUND_END then
-            CalculateGamePlayStats()
-        end
+function OnGameStateChanged(oldState, newState)
+    if newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
+        CalculateGamePlayStats()
     end
 end
 
@@ -88,5 +85,5 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
+Events.Connect("GameStateChanged", OnGameStateChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
