@@ -26,8 +26,7 @@ function ComputePlayerValue(player)
 	totalClassValue = totalClassValue ^ TOTAL_CLASS_VALUE_EXPONENT
 	totalClassValue = totalClassValue * TOTAL_CLASS_VALUE_COEFFICIENT
 	value = value + totalClassValue
-	print(player.name .. " Account Level: " .. tostring(accountLevel))
-	print(player.name .. " Account Level Value: " .. tostring(value))
+
 --[[
 
 	while not player.serverUserData.weightedWinRate do
@@ -154,8 +153,6 @@ function DoRebalance(playerToIgnore)
 	local value1 = ComputeTeamValue(team1)
 	local value2 = ComputeTeamValue(team2)
 	
-	print("Orc Team Value Pre-Calc: " .. tostring(value1))
-	print("Elf Team Value Pre-Calc: " .. tostring(value2))
 
 	if #team1 > #team2 then
 		value1 = value1 + (100/#team1)
@@ -164,8 +161,6 @@ function DoRebalance(playerToIgnore)
 	end
 
 	local bestDelta = math.abs(value1/#team1 - value2/#team2)
-	
-	print("Best Delta Pre-Calc: " .. tostring(bestDelta))
 
 	local i = 0
 	while i < 64 do
@@ -189,21 +184,13 @@ function DoRebalance(playerToIgnore)
 		local v2 = value2 - player2.serverUserData.balanceValue + player1.serverUserData.balanceValue
 		
 		local newDelta = math.abs(v1/#team1 - v2/#team2)
-		print("New Delta Count: " .. tostring(i) .. " Value: " .. tostring(newDelta))
-		print("Team1 Average: " .. tostring(v1/#team1))
-		print("Team2 Average: " .. tostring(v2/#team2))
+
 		if bestDelta > newDelta then
 			bestDelta = newDelta
-			print("Swap Made")
-			print("Value1: (Before bestDelta)" .. tostring(value1))
-			print("Value2: (Before bestDelta)" .. tostring(value2))
 			value1 = v1
 			value2 = v2
 
-			print("Value1: (After bestDelta)" .. tostring(value1))
-			print("Value2: (After bestDelta)" .. tostring(value2))
 		else
-			print("Revert Swap")
 			-- Revert the swap
 			table.remove(team1, #team1)
 			table.remove(team2, #team2)
@@ -211,9 +198,6 @@ function DoRebalance(playerToIgnore)
 			table.insert(team2, player2)
 		end
 	end
-	
-	print("Orc Team Value: " .. tostring(value1))
-	print("Elf Team Value: " .. tostring(value2))
 
 	-- Apply any team switching
 	ApplyTeamChanges(team1, team2)
