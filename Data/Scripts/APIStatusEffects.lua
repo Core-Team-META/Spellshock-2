@@ -392,6 +392,11 @@ function API.DoesPlayerHaveStatusEffect(player, name)
 		return false
 	end
 	local tracker = API.GetStateTracker(player)
+
+	if not tracker or not Object.IsValid(tracker) then
+		return false
+	end
+	
 	for i = 1, API.MAX_STATUS_EFFECTS do
 		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 		if trackerTbl and trackerTbl[ID_KEY] ~= 0 then
