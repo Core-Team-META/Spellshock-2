@@ -49,7 +49,7 @@ function OnTargetImpact(theWeapon, impactData)
 
     local chargeAmount = CoreMath.Clamp((chargeTime - CHARGE_DELAY) / CHARGE_DURATION)
     local lastShotChargedAmount = chargeAmount
---    print ("We hit ... something" .. (chargeAmount+CHARGE_DELAY))
+    --print("ChargeAmount: " .. tostring(chargeAmount))
 	if chargeAmount >= 0.97 then
 		charge_super = 0--30
 	end	
@@ -95,7 +95,6 @@ end
 
 WEAPON.targetImpactedEvent:Connect(OnTargetImpact)
 
-
 function OnObjectDamaged(id, prevHealth, dmgAmount, impactPosition, impactRotation, sourceObject)
 	if sourceObject == WEAPON.owner then
 		--BroadcastDamageFeedback(dmgAmount, impactPosition)
@@ -122,10 +121,6 @@ function OnDestroyed(obj)
 	Cleanup()
 end
 
-
-
-
-
 function OnCastAbility(ability)
     startChargingTime = time()
 end
@@ -143,7 +138,29 @@ function OnProjectileSpawned(weapon, projectile)
 end
 
 function OnChargedProjectileImpacted(projectile, other, hitResult)
-	--print ("We hit ... something")
+	if not Object.IsValid(WEAPON) or not WEAPON.owner or not Object.IsValid(WEAPON.owner) or not other:IsA("Player") then return end
+
+	local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
+	local amount = math.random(rangeTable.min, rangeTable.max)
+
+	local charge_bonus = (2+CHARGE_DELAY)^1.3
+	amount = charge_bonus*amount
+
+	local dmg = Damage.New(amount)
+	dmg:SetHitResult(hitResult)
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = WEAPON.owner
+	dmg.sourceAbility = WEAPON:GetAbilities()[1]
+
+	local attackData = {
+		object = other,
+		damage = dmg,
+		source = dmg.sourcePlayer,
+		position = nil,
+		rotation = nil,
+		tags = {id = "BasicAttack", weapon = WEAPON}
+	}
+	COMBAT().ApplyDamage(attackData)
 
 	local bombDamage = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], "mod2", 30, "Hunter Bow: Bomb Damage")
 	local sourcePlayer = WEAPON.owner
