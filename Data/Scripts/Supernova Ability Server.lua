@@ -69,7 +69,7 @@ function SupernovaEnding()
 
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 
-    local playersInRange = Game.FindPlayersInSphere(dmgPosition, EffectRadius, {ignoreDead = true})
+    local playersInRange = Game.FindPlayersInCylinder(dmgPosition, EffectRadius, {ignoreDead = true})
     for _, otherPlayer in ipairs(playersInRange) do
 		if otherPlayer.team == SpecialAbility.owner.team then
 			local dmg = Damage.New() 
