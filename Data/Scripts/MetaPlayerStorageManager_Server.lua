@@ -369,7 +369,7 @@ local function OnPlayerJoined(player)
     else
         AddDefaultCosmetics(player)
     end
-    local classId = cosmeticData[CONST.STORAGE.CLASS_FAVORITE] or 1
+    local classId = cosmeticData[CONST.STORAGE.CLASS_FAVORITE] or math.random(5)
     CLASS_SELECTION.context.OnPlayerJoined(player, classId)
     --end
     CONSUMABLES.context.OnPlayerJoined(player)
