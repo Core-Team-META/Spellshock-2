@@ -197,11 +197,11 @@ function Tick()
 
 
 	if PLAYER_SPEED.size == 0 then
-		DURATION = .5
-	elseif PLAYER_SPEED.size > 100 and PLAYER_SPEED.size < 400 then
-		DURATION = .4
-	elseif PLAYER_SPEED.size > 400 and PLAYER_SPEED.size < 600 then
 		DURATION = .3
+	elseif PLAYER_SPEED.size > 100 and PLAYER_SPEED.size < 400 then
+		DURATION = .3
+	elseif PLAYER_SPEED.size > 400 and PLAYER_SPEED.size < 600 then
+		DURATION = .2
 	elseif PLAYER_SPEED.size > 600 then
 		DURATION = .2
 	end
@@ -229,6 +229,3 @@ function Tick()
 		end
 	--end
 end
-
---Events.Connect("MountReady", DisplayMountUI)
---Events.Connect("MountNotReady", HideMountUI)
