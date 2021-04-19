@@ -354,7 +354,9 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 	end
 
 	-- Knock one off?
-	warn(string.format("Failed to apply status effect id: %d to player %s because they already had max", id, player.name))
+	if id and type(id) == "number" and player and Object.IsValid(player) then
+		warn(string.format("Failed to apply status effect id: %d to player %s because they already had max", id, player.name))
+	end
 end
 
 -- Server only
