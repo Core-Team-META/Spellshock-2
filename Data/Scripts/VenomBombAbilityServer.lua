@@ -20,10 +20,14 @@ local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
 local DEFAULT_ProjectileGravity = script:GetCustomProperty("ProjectileGravity")
 local DEFAULT_DamageRadius = script:GetCustomProperty("Radius")
 
+local ProjectileImpactEvent = nil
 local PlayerVFX = nil
 
 function OnProjectileImpacted(projectile, other, hitResult)
-    if other and SpecialAbility.owner then
+    if other and Object.IsValid(SpecialAbility) and SpecialAbility.owner and ProjectileImpactEvent then
+		ProjectileImpactEvent:Disconnect()
+		ProjectileImpactEvent = nil
+
 		local dmg = Damage.New()
 		dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
         dmg:SetHitResult(hitResult)
@@ -78,7 +82,7 @@ function OnAbilityExecute(thisAbility)
     grenadeProjectile.speed = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_ProjectileSpeed, SpecialAbility.name..": Projectile Speed")
     grenadeProjectile.gravityScale = 1.5
     grenadeProjectile.shouldDieOnImpact = true
-    grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
+    ProjectileImpactEvent = grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -96,13 +100,13 @@ function OnEquip(equipment, player)
 end
 
 function OnUnequip(equipment, player)
-	--[[for _, listener in ipairs(EventListeners) do
-		listener:Disconnect()
-	end]]
-	
+	if ProjectileImpactEvent then
+		ProjectileImpactEvent:Disconnect()
+		ProjectileImpactEvent = nil
+	end
 end
 
 Equipment.equippedEvent:Connect(OnEquip)
---Equipment.unequippedEvent:Connect(OnUnequip)
+Equipment.unequippedEvent:Connect(OnUnequip)
 SpecialAbility.executeEvent:Connect( OnAbilityExecute )
 SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown )
