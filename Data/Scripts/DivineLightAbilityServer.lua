@@ -34,7 +34,7 @@ function OnAbilityExecute(thisAbility)
 	local newObject = META_AP().SpawnAsset(PlayerVFX.Active, {position = SpecialAbility.owner:GetWorldPosition()})
 	
 	local StunRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_StunRadius, SpecialAbility.name..": Radius")
-	local nearbyEnemies = Game.FindPlayersInSphere(SpecialAbility.owner:GetWorldPosition(), StunRadius, {ignoreTeams = SpecialAbility.owner.team})
+	local nearbyEnemies = Game.FindPlayersInCylinder(SpecialAbility.owner:GetWorldPosition(), StunRadius, {ignoreTeams = SpecialAbility.owner.team})
 	--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), StunRadius, {duration = 5})
 	
 	ImpulseAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_ImpulseAmount, SpecialAbility.name..": Impulse Amount")

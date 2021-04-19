@@ -195,7 +195,7 @@ function Tick(deltaTime)
 		if damageTimer < 0 then
 			-- Damage enemies
 			local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
-			local nearbyEnemies = Game.FindPlayersInSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
+			local nearbyEnemies = Game.FindPlayersInCylinder(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 			--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {duration = 1})
 			for _, enemy in pairs(nearbyEnemies) do
 				local dmg = Damage.New()
