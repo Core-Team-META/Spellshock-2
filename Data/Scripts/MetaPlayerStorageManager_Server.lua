@@ -354,10 +354,7 @@ local function OnPlayerJoined(player)
     OnLoadMultiplierData(player, currencyData)
 
     if currencyData[CONST.STORAGE.ADMIN_PERKS] then
-        local adminPerks = currencyData[CONST.STORAGE.ADMIN_PERKS]
-        if adminPerks then
-            player.serverUserData.ADMIN_VIP = true
-        end
+        player.serverUserData.ADMIN_VIP = true
     end
 
     local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)

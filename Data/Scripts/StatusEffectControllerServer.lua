@@ -23,7 +23,10 @@ function OnPlayerJoined(player)
 end
 
 function OnPlayerLeft(player)
-	API_SE.GetStateTracker(player):Destroy()
+	local playerTracker = API_SE.GetStateTracker(player)
+	if playerTracker and Object.IsValid(playerTracker) then
+		playerTracker:Destroy()
+	end
 end
 
 function Tick(deltaTime)
