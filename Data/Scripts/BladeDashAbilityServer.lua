@@ -52,6 +52,21 @@ function Teleport(thisAbility)
 	dmg.sourcePlayer = SpecialAbility.owner
 	dmg.sourceAbility = SpecialAbility
 
+	local selfHeal = Damage.New()
+	selfHeal.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_DamageRange, SpecialAbility.name..": Heal Amount")
+	selfHeal.reason = DamageReason.COMBAT
+	selfHeal.sourcePlayer = SpecialAbility.owner
+	selfHeal.sourceAbility = SpecialAbility
+
+	local healData = {
+		object = SpecialAbility.owner,
+		damage = selfHeal,
+		source = SpecialAbility.owner,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Assassin_Q"}
+	}
+
 	for _, enemy in ipairs(enemiesInRange) do
 		local attackData = {
 			object = enemy,
@@ -61,8 +76,11 @@ function Teleport(thisAbility)
 			rotation = nil,
 			tags = {id = "Assassin_Q"}
 		}
-		COMBAT().ApplyDamage(attackData)
+		COMBAT().ApplyDamage(attackData) -- damage enemy
+		COMBAT().ApplyDamage(healData) -- heal caster
 	end
+
+	
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
