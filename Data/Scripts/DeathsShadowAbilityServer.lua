@@ -43,19 +43,21 @@ end
 function Attack()
 	if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner then return end
 	
+	META_AP().SpawnAsset(PlayerVFX.Attack, {position = SpecialAbility.owner:GetWorldPosition()})
+
 	local playerFacingDirection = SpecialAbility.owner:GetWorldRotation() * Vector3.FORWARD
 	local spherePosition = SpecialAbility.owner:GetWorldPosition() + (playerFacingDirection * 100)
 	local AttackRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_AttackRadius, SpecialAbility.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(spherePosition, AttackRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	--CoreDebug.DrawSphere(spherePosition, AttackRadius, {duration = 5})
-	
+	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
+	local dmg = Damage.New()
+	dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = SpecialAbility.owner
+	dmg.sourceAbility = SpecialAbility
+
 	for _, enemy in pairs(nearbyEnemies) do
-		local dmg = Damage.New()
-		dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
-		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = SpecialAbility.owner
-		dmg.sourceAbility = SpecialAbility
-				
 		local attackData = {
 			object = enemy,
 			damage = dmg,
@@ -63,13 +65,11 @@ function Attack()
 			position = nil,
 			rotation = nil,
 			tags = {id = "Assassin_E"}
-			}
+		}
 		COMBAT().ApplyDamage(attackData)
-		local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
-		return
+		--return
 	end	
-	META_AP().SpawnAsset(PlayerVFX.Attack, {position = SpecialAbility.owner:GetWorldPosition()})
 end	
 
 function OnBindingPressed(player, binding)
