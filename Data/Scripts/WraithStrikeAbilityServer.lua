@@ -212,7 +212,7 @@ function DamageInArea()
     local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
 
 	local selfHeal = Damage.New()
-	selfHeal.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRange, SpecialAbility.name..": Heal Amount")
+	selfHeal.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_DamageRange, SpecialAbility.name..": Heal Amount")
 	selfHeal.reason = DamageReason.COMBAT
 	selfHeal.sourcePlayer = SpecialAbility.owner
 	selfHeal.sourceAbility = SpecialAbility
