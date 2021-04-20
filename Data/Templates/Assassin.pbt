@@ -1270,7 +1270,6 @@ Assets {
         ChildIds: 12637696742421662481
         ChildIds: 15505641406647177733
         ChildIds: 2240986400692986383
-        ChildIds: 14328014872396548696
         ChildIds: 8269407347384744348
         ChildIds: 5845621310675190650
         ChildIds: 4326958157534787840
@@ -2323,71 +2322,6 @@ Assets {
         }
       }
       Objects {
-        Id: 14328014872396548696
-        Name: "VenomAimLine"
-        Transform {
-          Location {
-            X: -161.095703
-            Y: 108.384766
-            Z: 6.64794922
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12390733973333184270
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Aim"
-            ObjectReference {
-              SubObjectId: 8184323746341847196
-            }
-          }
-          Overrides {
-            Name: "cs:Throw"
-            ObjectReference {
-              SelfId: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "cs:AimLineTemplate"
-            AssetReference {
-              Id: 2532691792263391124
-            }
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "ASSASSIN"
-          }
-          Overrides {
-            Name: "cs:Bind"
-            String: "R"
-          }
-          Overrides {
-            Name: "cs:SpeedMod"
-            String: "mod3"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6342549352078680519
-          }
-        }
-      }
-      Objects {
         Id: 8269407347384744348
         Name: "ChargeUpBarClient"
         Transform {
@@ -3000,7 +2934,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -3034,7 +2968,7 @@ Assets {
             CanRotate: true
             PreventOtherAbilities: true
           }
-          Animation: "unarmed_throw"
+          Animation: "1hand_melee_slash_left"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"

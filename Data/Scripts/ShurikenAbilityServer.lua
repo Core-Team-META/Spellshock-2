@@ -15,8 +15,11 @@ local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
+local NoImpactVFX = "DABD0A88C179ADD9:Assassin Deaths Shadow Beginning Basic"
+
 local DEFAULT_DamageAmount = 30
-local rotationOffset = 20
+local rotationOffset = 10
+local attackRange = 3000
 
 local ProjectileImpactEvent = nil
 local PlayerVFX = nil
@@ -58,6 +61,10 @@ function OnProjectileImpacted(projectile, other, hitResult)
     end
 end
 
+function OnLifespanEnded(projectile)
+    World.SpawnAsset(NoImpactVFX, {position=projectile:GetWorldPosition(), scale = Vector3.New(0.3)})
+end
+
 function OnAbilityExecute(thisAbility)
     if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
 		return 
@@ -88,6 +95,8 @@ function OnAbilityExecute(thisAbility)
         throwingStar.gravityScale = 0
         throwingStar.shouldDieOnImpact = true
         throwingStar.impactEvent:Connect(OnProjectileImpacted)
+        throwingStar.lifeSpanEndedEvent:Connect(OnLifespanEnded)
+        throwingStar.lifeSpan = attackRange / throwingStar.speed
     end
 end
 
