@@ -250,13 +250,13 @@ Assets {
           Overrides {
             Name: "cs:FrontTopROT_MIN"
             Rotator {
-              Pitch: -20
+              Pitch: -15
             }
           }
           Overrides {
             Name: "cs:FrontTopROT_MAX"
             Rotator {
-              Pitch: 45
+              Pitch: 40
             }
           }
           Overrides {
@@ -268,7 +268,7 @@ Assets {
           Overrides {
             Name: "cs:FrontMidROT_MAX"
             Rotator {
-              Pitch: -50
+              Pitch: -45
             }
           }
           Overrides {
@@ -280,7 +280,7 @@ Assets {
           Overrides {
             Name: "cs:FrontBotROT_MAX"
             Rotator {
-              Pitch: -65
+              Pitch: -60
             }
           }
           Overrides {
@@ -323,7 +323,7 @@ Assets {
             Name: "cs:FrontTopPOS_MIN"
             Vector {
               X: -5
-              Z: -10
+              Z: -5
             }
           }
           Overrides {
@@ -336,14 +336,14 @@ Assets {
             Name: "cs:BackTopPOS_MIN"
             Vector {
               X: 5
-              Z: 15
+              Z: 10
             }
           }
           Overrides {
             Name: "cs:BackTopPOS_MAX"
             Vector {
               X: -5
-              Z: -10
+              Z: -5
             }
           }
           Overrides {
@@ -959,7 +959,7 @@ Assets {
           Location {
             X: -47.4589043
             Y: -22.4488735
-            Z: -27.290575
+            Z: -44.682251
           }
           Rotation {
             Pitch: -42.2240295
@@ -1430,8 +1430,8 @@ Assets {
         Transform {
           Location {
             X: -47.4589043
-            Y: 22.449
-            Z: -27.290575
+            Y: 22.4488735
+            Z: -44.682251
           }
           Rotation {
             Pitch: -42.224
@@ -3281,7 +3281,7 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 34.8639679
+            X: 52.5316048
             Z: 31.2485847
           }
           Rotation {
@@ -3289,9 +3289,9 @@ Assets {
             Roll: 90
           }
           Scale {
-            X: 2.45210695
-            Y: 3.08851504
-            Z: 5.13504839
+            X: 2.45210028
+            Y: 2.68039918
+            Z: 5.13504887
           }
         }
         ParentId: 5134177231585358834
@@ -4175,18 +4175,18 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 2.83381748
-            Z: 5.69679642
+            X: 2.83199191
+            Z: 5.69646263
           }
           Rotation {
-            Pitch: -63.5279808
+            Pitch: -63.5279846
             Yaw: -179.999985
-            Roll: -89.9999466
+            Roll: -89.999939
           }
           Scale {
-            X: 1.49999928
+            X: 1.49999917
             Y: 1.86791444
-            Z: 3
+            Z: 3.18671942
           }
         }
         ParentId: 12264827001123851630
