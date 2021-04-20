@@ -74,6 +74,10 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Fade Time"
+            Float: 1
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

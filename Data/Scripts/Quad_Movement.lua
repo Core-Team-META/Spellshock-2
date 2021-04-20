@@ -193,7 +193,7 @@ function Tick()
 	end
 	
 	local PLAYER_SPEED = Equipment.owner:GetVelocity()
-	print(PLAYER_SPEED.size)
+	--print(PLAYER_SPEED.size)
 
 
 	if PLAYER_SPEED.size == 0 then
