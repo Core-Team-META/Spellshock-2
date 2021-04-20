@@ -197,13 +197,13 @@ function Tick()
 
 
 	if PLAYER_SPEED.size == 0 then
-		DURATION = .3
+		DURATION = .35
 	elseif PLAYER_SPEED.size > 100 and PLAYER_SPEED.size < 400 then
-		DURATION = .3
+		DURATION = .35
 	elseif PLAYER_SPEED.size > 400 and PLAYER_SPEED.size < 600 then
-		DURATION = .2
+		DURATION = .25
 	elseif PLAYER_SPEED.size > 600 then
-		DURATION = .2
+		DURATION = .25
 	end
 		
 	--if LOCAL_PLAYER and Equipment and LOCAL_PLAYER == Equipment.owner then
