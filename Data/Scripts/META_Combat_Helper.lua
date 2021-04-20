@@ -56,7 +56,9 @@ local function UpdateCombatAmmount(attackData)
         classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
     else
-        if attackData.tags.Type == "HealthPotion" then return end
+        if attackData.tags.Type == "HealthPotion" then
+            return
+        end
         amount = amount * -1
         local afterHeal = target.hitPoints + amount
         if afterHeal > target.maxHitPoints then
@@ -119,11 +121,17 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 end
 
 function GoingToTakeDamage(attackData)
-    local object = attackData.object
-    if object.serverUserData.SpawnProtect and attackData.damage.amount > 0 then
+    local target = attackData.object
+    local source = attackData.source
+
+    if target.serverUserData.SpawnProtect and attackData.damage.amount > 0 then
         attackData.damage.amount = 0
     elseif ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then
         attackData.damage.amount = 0
+    end
+    -- Assassin Shurikin Life Steal
+    if target.serverUserData.shuriken and target.serverUserData.shuriken[source.id] > time() then
+        source.hitPoints = CoreMath.Clamp(source.hitPoints + 30, source.maxHitPoints)
     end
 end
 

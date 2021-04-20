@@ -152,6 +152,7 @@ Assets {
         ChildIds: 15817725685703269186
         ChildIds: 12028678257515034993
         ChildIds: 17515797633147736346
+        ChildIds: 12734152446224874458
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -398,6 +399,65 @@ Assets {
           Overrides {
             Name: "cs:BindingName"
             String: "T"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 12734152446224874458
+        Name: "Shuriken Settings"
+        Transform {
+          Location {
+            X: -22050
+            Y: -30750
+            Z: 6300
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7204248853923322945
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 8184323746341847196
+            }
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod2"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "ASSASSIN"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "R"
           }
         }
         Collidable_v2 {
@@ -756,6 +816,12 @@ Assets {
             Name: "cs:Ability"
             ObjectReference {
               SubObjectId: 8184323746341847196
+            }
+          }
+          Overrides {
+            Name: "cs:MetaAbilityProgressionUTIL_API"
+            AssetReference {
+              Id: 2269572116006940077
             }
           }
         }
@@ -1270,7 +1336,9 @@ Assets {
         ChildIds: 12637696742421662481
         ChildIds: 15505641406647177733
         ChildIds: 2240986400692986383
+        ChildIds: 14328014872396548696
         ChildIds: 8269407347384744348
+        ChildIds: 3599499722942786146
         ChildIds: 5845621310675190650
         ChildIds: 4326958157534787840
         ChildIds: 10078693908526600732
@@ -2322,6 +2390,71 @@ Assets {
         }
       }
       Objects {
+        Id: 14328014872396548696
+        Name: "VenomAimLine"
+        Transform {
+          Location {
+            X: -161.095703
+            Y: 108.384766
+            Z: 6.64794922
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Aim"
+            ObjectReference {
+              SubObjectId: 8184323746341847196
+            }
+          }
+          Overrides {
+            Name: "cs:Throw"
+            ObjectReference {
+              SelfId: 841534158063459245
+            }
+          }
+          Overrides {
+            Name: "cs:AimLineTemplate"
+            AssetReference {
+              Id: 2532691792263391124
+            }
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "ASSASSIN"
+          }
+          Overrides {
+            Name: "cs:Bind"
+            String: "R"
+          }
+          Overrides {
+            Name: "cs:SpeedMod"
+            String: "mod3"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 6342549352078680519
+          }
+        }
+      }
+      Objects {
         Id: 8269407347384744348
         Name: "ChargeUpBarClient"
         Transform {
@@ -2387,6 +2520,56 @@ Assets {
         Script {
           ScriptAsset {
             Id: 1799007856612243505
+          }
+        }
+      }
+      Objects {
+        Id: 3599499722942786146
+        Name: "ShurikenAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 12734152446224874458
+            }
+          }
+          Overrides {
+            Name: "cs:MetaAbilityProgressionUTIL_API"
+            AssetReference {
+              Id: 2269572116006940077
+            }
+          }
+          Overrides {
+            Name: "cs:Helper_MarkedForDeathEffect"
+            AssetReference {
+              Id: 10716834913758769200
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 12422962616066863946
           }
         }
       }
@@ -2919,6 +3102,30 @@ Assets {
         }
         ParentId: 15969373231472315619
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:HT"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:PID"
+            String: ""
+          }
+          Overrides {
+            Name: "cs:HT:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:HT:tooltip"
+            String: "HitTime"
+          }
+          Overrides {
+            Name: "cs:PID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:PID:tooltip"
+            String: "Player IDs Hit"
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -2934,7 +3141,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2968,7 +3175,7 @@ Assets {
             CanRotate: true
             PreventOtherAbilities: true
           }
-          Animation: "1hand_melee_slash_left"
+          Animation: "unarmed_throw"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"

@@ -11,6 +11,7 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
@@ -37,6 +38,23 @@ function OnProjectileImpacted(projectile, other, hitResult)
         dmg.reason = DamageReason.COMBAT
         dmg.sourcePlayer = SpecialAbility.owner
 		dmg.sourceAbility = SpecialAbility
+
+        local playerTbl = {}
+        local hitTime = SpecialAbility:GetCustomProperty("HT") or time()
+        local str = SpecialAbility:GetCustomProperty("PID") or ""
+        
+        if str ~= "" and time() <= hitTime then
+            playerTbl = UTIL.ConvertStringToTable(str)
+        end
+
+        playerTbl[#playerTbl + 1] = other.id
+        other.serverUserData.shuriken = other.serverUserData.shuriken or {}
+        other.serverUserData.shuriken[SpecialAbility.owner.id] = time() + 5
+        local playersStr = UTIL.ConvertTableToString(playerTbl)
+
+        SpecialAbility:SetNetworkedCustomProperty("PID", playersStr)
+        SpecialAbility:SetNetworkedCustomProperty("HT", time() + 5)
+      
 
         local attackData = {
             object = other,
