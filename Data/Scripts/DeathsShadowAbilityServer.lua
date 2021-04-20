@@ -58,6 +58,7 @@ function Attack()
 	dmg.sourceAbility = SpecialAbility
 
 	for _, enemy in pairs(nearbyEnemies) do
+		META_AP().SpawnAsset(PlayerVFX.Target, {position=enemy:GetWorldPosition()})
 		local attackData = {
 			object = enemy,
 			damage = dmg,
@@ -68,7 +69,6 @@ function Attack()
 		}
 		COMBAT().ApplyDamage(attackData)
 		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
-		--return
 	end	
 end	
 

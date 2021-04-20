@@ -196,6 +196,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -312,6 +318,12 @@ Objects {
     }
     Overrides {
       Name: "cs:04_WraithStrike_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
       AssetReference {
         Id: 841534158063459245
       }
@@ -436,6 +448,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -556,6 +574,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -672,6 +696,12 @@ Objects {
     }
     Overrides {
       Name: "cs:04_WraithStrike_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
       AssetReference {
         Id: 841534158063459245
       }
@@ -892,6 +922,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1012,6 +1048,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1128,6 +1170,12 @@ Objects {
     }
     Overrides {
       Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
       AssetReference {
         Id: 841534158063459245
       }
@@ -1394,6 +1442,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1510,6 +1564,12 @@ Objects {
     }
     Overrides {
       Name: "cs:04_WraithStrike_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
       AssetReference {
         Id: 841534158063459245
       }
@@ -1634,6 +1694,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1754,6 +1820,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1870,6 +1942,12 @@ Objects {
     }
     Overrides {
       Name: "cs:04_WraithStrike_Impact"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
       AssetReference {
         Id: 841534158063459245
       }
@@ -2090,6 +2168,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2210,6 +2294,12 @@ Objects {
         Id: 841534158063459245
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2326,6 +2416,12 @@ Objects {
     }
     Overrides {
       Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Target"
       AssetReference {
         Id: 841534158063459245
       }

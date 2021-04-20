@@ -1614,7 +1614,7 @@ Objects {
 }
 Objects {
   Id: 15882469756563991493
-  Name: "Venom Bomb"
+  Name: "Shuriken"
   Transform {
     Location {
     }
@@ -1635,7 +1635,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 6375726263607251280
+        Id: 17753357011527774418
       }
     }
     Overrides {

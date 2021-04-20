@@ -37,8 +37,10 @@ Assets {
         Name: "Plasma Muzzleflash VFX"
         Transform {
           Location {
+            Z: 259.999512
           }
           Rotation {
+            Pitch: 180
           }
           Scale {
             X: 2
@@ -87,7 +89,6 @@ Assets {
           TeamSettings {
           }
           Vfx {
-            AutoPlay: true
           }
         }
         Relevance {
@@ -137,7 +138,7 @@ Assets {
         Name: "Ground Explosion VFX"
         Transform {
           Location {
-            Z: -25
+            Z: -96
           }
           Rotation {
           }
