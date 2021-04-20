@@ -418,6 +418,9 @@ end
 --@param table tbl -- playerRewards from networked property
 local function GetPlayerRewards(tbl)
     for playerId, rewards in pairs(tbl) do
+
+        local player = FindPlayerById(playerId)
+        
         -- Find the rewards that belong to LOCAL_PLAYER
         if playerId == LOCAL_PLAYER.id then
             BuildRewardSlots(rewards)
@@ -431,7 +434,6 @@ local function GetPlayerRewards(tbl)
 
                 if tonumber(reward.rarity) == REWARD_UTIL.RARITY.LEGENDARY then
                     if tonumber(reward.type) ~= REWARD_UTIL.REWARD_TYPES.LOCKED then
-                        local player = FindPlayerById(playerId)
                         if Object.IsValid(player) then
                             local infoTable
                             local str = ""
