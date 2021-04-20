@@ -66,6 +66,15 @@ local function IsCosmeticUnlocked(player, skin, bind)
 end
 
 --@param object player
+--@param int skin
+--@param int bind => id of bind (API.Q, API.E)
+--@param bool => true/false
+local function IsCosmeticValid(class, team, skin, bind)
+    return cosmeticTable[class] ~= nil and cosmeticTable[class][team] ~= nil and cosmeticTable[class][team][skin] ~= nil and
+        cosmeticTable[class][team][skin][bind]
+end
+
+--@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
@@ -75,7 +84,6 @@ local function UnlockCosmetic(player, class, team, skin, bind)
     CreateNewCosmeticTable(player, class, team, skin, bind)
     playerCosmetic[player][class][team][skin][bind] = 1
 end
-
 
 --@param object player
 --@param int skinId
@@ -88,7 +96,6 @@ local function SetCurrentCosmetic(player, skinId)
     _G.PerPlayerDictionary.Set(player, key, skinId)
     --print("SetCurrentCosmetic: " .. key)
 end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
@@ -105,7 +112,6 @@ local function SetBindCosmetic(player, class, team, bind, skin)
     --print("SetBindCosmetic: " .. key)
 end
 
-
 --@param object player
 local function OnDeletePlayerDataObject(player, objectId)
     for _, object in ipairs(DATA_TRANSFER:GetChildren()) do
@@ -114,7 +120,6 @@ local function OnDeletePlayerDataObject(player, objectId)
         end
     end
 end
-
 
 --@param object player
 --@param table playerCosmetic
@@ -143,7 +148,7 @@ function BuildCosmeticStringTable(player, str)
     dataObject:SetNetworkedCustomProperty("data", str)
     Task.Wait()
     dataObject.parent = DATA_TRANSFER
-    
+
     --print("Spawned 1 cosmetic string table")
 end
 
@@ -179,7 +184,8 @@ function BuildCosmeticDataTable(player, data)
                 end
             end
         end
-    end]]--
+    end]]
+ --
 end
 
 --@param object player
@@ -275,7 +281,9 @@ end
 function API.GetCurrentCosmeticId(player, class, bind)
     --return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     --local key = UTIL.GetSkinString(class, player.team, bind)
-    while not playerEquippedCosmetic[player] do Task.Wait() end
+    while not playerEquippedCosmetic[player] do
+        Task.Wait()
+    end
 
     return playerEquippedCosmetic[player][class][bind][player.team]
 end
@@ -291,7 +299,6 @@ function API.GetCurrentCosmetic(player, bind, class)
     end
     return cosmeticTable[class][player.team][skinId][bind]
 end
-
 
 function API.BuildCosmeticStringTable(player, str)
     BuildCosmeticStringTable(player, str)
@@ -318,6 +325,10 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCosmeticMuid(player, class, team, skin, bind)
     return cosmeticTable[class][team][skin][bind]
+end
+
+function API.IsCosmeticValid(class, team, skin, bind)
+    return IsCosmeticValid(class, team, skin, bind)
 end
 
 Int()

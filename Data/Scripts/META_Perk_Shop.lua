@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/6
--- Version 0.1.4
+-- Date: 2021/4/20
+-- Version 0.1.5
 local isEnabled = true
 if not isEnabled then
     return
@@ -194,8 +194,6 @@ function CheckPerkCountWithStorage(player, data)
         local perkCount = player:GetPerkCount(bundle.perk)
         local storageCount = perks[bundle.storageId]
         if perkCount ~= storageCount then
-            perks[bundle.storageId] = perkCount
-
             if bundle.resourceName and perkCount > storageCount then
                 local countDifference = perkCount - storageCount
                 local reward = bundle.reward
@@ -203,11 +201,16 @@ function CheckPerkCountWithStorage(player, data)
                     reward = bundle.reward * countDifference
                 end
                 player:AddResource(bundle.resourceName, reward)
+                perks[bundle.storageId] = perkCount
             end
             -- VIP Bonus
-            if (bundle.storageId == CONST.PERK_STORAGE_KEYS.VIP_MEMBER and player:HasPerk(bundle.perk)) or player.serverUserData.ADMIN_VIP then
+            if
+                (bundle.storageId == CONST.PERK_STORAGE_KEYS.VIP_MEMBER and player:HasPerk(bundle.perk)) or
+                    (bundle.storageId == CONST.PERK_STORAGE_KEYS.VIP_MEMBER and player.serverUserData.ADMIN_VIP)
+             then
                 player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
+                perks[bundle.storageId] = perkCount
             end
             if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
@@ -217,6 +220,7 @@ function CheckPerkCountWithStorage(player, data)
                 if perkCount > storageCount then
                     player:AddResource(CONST.COSMETIC_TOKEN, CONST.STARTER_PACK_PREMIUM_BONUS)
                     player:AddResource(CONST.GOLD, CONST.STARTER_PACK_GOLD_BONUS)
+                    perks[bundle.storageId] = perkCount
                 end
             end
 
@@ -224,13 +228,17 @@ function CheckPerkCountWithStorage(player, data)
             if bundle.perk == SERVERXPBOOST and perkCount > storageCount then
                 AddTimeToPlayersMultiplier(CONST.SELF_XP_BOOST_KEY, CONST.XP_SERVER_BOOST_DURATION)
                 Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min XP boost!", 5, 3)
+                perks[bundle.storageId] = perkCount
             elseif bundle.perk == SERVERGOLDBOOST and perkCount > storageCount then
                 AddTimeToPlayersMultiplier(CONST.SELF_GOLD_BOOST_KEY, CONST.GOLD_SERVER_BOOST_DURATION)
                 Events.BroadcastToAllPlayers("BannerMessage", player.name .. " gifted you a 30 min Gold boost!", 5, 3)
+                perks[bundle.storageId] = perkCount
             elseif bundle.perk == SELFXPBOOST and perkCount > storageCount then
                 AddTimeToMultiplier(player, CONST.SELF_XP_BOOST_KEY, CONST.XP_SELF_BOOST_DURATION)
+                perks[bundle.storageId] = perkCount
             elseif bundle.perk == SELFGOLDBOOST and perkCount > storageCount then
                 AddTimeToMultiplier(player, CONST.SELF_GOLD_BOOST_KEY, CONST.GOLD_SELF_BOOST_DURATION)
+                perks[bundle.storageId] = perkCount
             end
         end
     end
