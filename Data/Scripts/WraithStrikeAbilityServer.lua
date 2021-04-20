@@ -207,9 +207,24 @@ function DamageInArea()
     or not Object.IsValid(SpecialAbility.owner) then return end
     
     -- Get mods
-	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_DamageRadius, SpecialAbility.name .. ": Radius")
+	local DamageRadius = 950 --META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_DamageRadius, SpecialAbility.name .. ": Radius")
 	local damageTable = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_DamageRange, SpecialAbility.name .. ": Damage Range")
     local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
+
+	local selfHeal = Damage.New()
+	selfHeal.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRange, SpecialAbility.name..": Heal Amount")
+	selfHeal.reason = DamageReason.COMBAT
+	selfHeal.sourcePlayer = SpecialAbility.owner
+	selfHeal.sourceAbility = SpecialAbility
+
+	local healData = {
+		object = SpecialAbility.owner,
+		damage = selfHeal,
+		source = SpecialAbility.owner,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Assassin_Q"}
+	}
 
     -- Get enemies in a sphere
     local enemiesInRange = COMBAT().FindInSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius,
@@ -242,7 +257,8 @@ function DamageInArea()
 			rotation = nil,
 			tags = {id = "Assassin_T"}
 		}
-		COMBAT().ApplyDamage(attackData)
+		COMBAT().ApplyDamage(attackData) -- damage enemy
+		COMBAT().ApplyDamage(healData) -- heal caster
 	end
 end
 
