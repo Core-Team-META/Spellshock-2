@@ -16,6 +16,10 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 8335461421732291655
+        ChildIds: 7722131682643831066
+        ChildIds: 13491075948760930415
+        ChildIds: 11025650306942962052
         ChildIds: 13388359896138618811
         ChildIds: 11633502993970766080
         Lifespan: 1.5
@@ -30,6 +34,262 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 8335461421732291655
+        Name: "Crunchy Armor Hit Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380482949772686091
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 318180868669722774
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: 2000
+          Radius: 1500
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 7722131682643831066
+        Name: "Electricity  Power Blast  Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380482949772686091
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 12757306321911618897
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: 2300
+          Radius: -1
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 13491075948760930415
+        Name: "Cast Burst Ring VFX"
+        Transform {
+          Location {
+            Z: 70
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380482949772686091
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Count"
+            Int: 3
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.98
+              G: 0.292053
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Edge Color"
+            Color {
+              R: 0.98
+              G: 0.292053
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 55
+          }
+          Overrides {
+            Name: "bp:Appearance"
+            Enum {
+              Value: "mc:ecastringappearance:9"
+            }
+          }
+          Overrides {
+            Name: "bp:U Tiles"
+            Int: 2
+          }
+          Overrides {
+            Name: "bp:V Tiles"
+            Int: 1
+          }
+          Overrides {
+            Name: "bp:Size"
+            Vector {
+              X: 1.3
+              Y: 1.3
+              Z: 1.3
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 5188278867866707632
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 11025650306942962052
+        Name: "Plasma Muzzleflash VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 12380482949772686091
+        ChildIds: 9510843463063810356
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.98
+              G: 0.292053
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Enable Ring"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Particle Size Multiplier"
+            Float: 2.8
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17189152410452932534
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 9510843463063810356
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            Z: -12.5
+          }
+          Rotation {
+            Yaw: 1.96367855e-05
+          }
+          Scale {
+            X: 0.785197377
+            Y: 0.785197377
+            Z: 0.785197377
+          }
+        }
+        ParentId: 11025650306942962052
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
         }
       }
       Objects {
@@ -136,6 +396,7 @@ Assets {
         Name: "Ground Explosion VFX"
         Transform {
           Location {
+            Z: -25
           }
           Rotation {
           }
@@ -182,7 +443,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Enable Ground Spikes"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "bp:Shockwave Color"
@@ -219,6 +480,10 @@ Assets {
           Overrides {
             Name: "bp:Life"
             Float: 1.5
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 30
           }
         }
         Collidable_v2 {
@@ -280,6 +545,42 @@ Assets {
             Id: 4511050349143547769
           }
         }
+      }
+    }
+    Assets {
+      Id: 318180868669722774
+      Name: "Crunchy Armor Hit Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_crunchy_armor_hit_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 12757306321911618897
+      Name: "Electricity  Power Blast  Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_electricity_power_blast_impact_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 5188278867866707632
+      Name: "Cast Burst Ring VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_cast_circle_generic"
+      }
+    }
+    Assets {
+      Id: 17189152410452932534
+      Name: "Plasma Muzzleflash VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_plasma_muzzleflash"
       }
     }
     Assets {
