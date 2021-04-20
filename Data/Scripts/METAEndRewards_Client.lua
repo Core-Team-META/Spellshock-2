@@ -180,6 +180,41 @@ local function FindPlayerById(playerId)
     end
 end
 
+local function LootCallOut(player, rewards)
+    for slot, reward in ipairs(rewards) do
+        local amount = tonumber(reward.amount)
+        local rewardType = tonumber(reward.type)
+        local rewardRarity = tonumber(reward.rarity)
+        local class = tonumber(reward.class)
+        local bind = tonumber(reward.bind)
+
+        if tonumber(reward.rarity) == REWARD_UTIL.RARITY.LEGENDARY then
+            if tonumber(reward.type) ~= REWARD_UTIL.REWARD_TYPES.LOCKED then
+                if Object.IsValid(player) then
+                    local infoTable
+                    local str = ""
+                    if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
+                        infoTable = rewardAssets[rewardType][class][bind]
+                        str =
+                            player.name ..
+                            " revealed a [Legendary][" .. infoTable.ClassName .. " " .. infoTable.Name .. "] card!"
+                    elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
+                        infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
+                        str = player.name .. " revealed a [Legendary][" .. infoTable.ClassName .. " XP] card!"
+                    else
+                        infoTable = rewardAssets[rewardType][bind]
+                        str = player.name .. " revealed a [Legendary][" .. infoTable.Name .. "] card!"
+                    end
+                    if str ~= "" then
+                        Chat.LocalMessage(str)
+                        print(player.name .. " Got A Legendary! ID: " .. reward.rarity)
+                    end
+                end
+            end
+        end
+    end
+end
+
 function SetRarityColor(CardRoot, rarity)
     for _, object in ipairs(CardRoot:FindDescendantsByName("RARITY_COLOR")) do
         local color = object:GetColor()
@@ -418,48 +453,13 @@ end
 --@param table tbl -- playerRewards from networked property
 local function GetPlayerRewards(tbl)
     for playerId, rewards in pairs(tbl) do
-
         local player = FindPlayerById(playerId)
-        
+
         -- Find the rewards that belong to LOCAL_PLAYER
         if playerId == LOCAL_PLAYER.id then
             BuildRewardSlots(rewards)
-        else -- Broadcast other players rewards
-            for slot, reward in ipairs(rewards) do
-                local amount = tonumber(reward.amount)
-                local rewardType = tonumber(reward.type)
-                local rewardRarity = tonumber(reward.rarity)
-                local class = tonumber(reward.class)
-                local bind = tonumber(reward.bind)
-
-                if tonumber(reward.rarity) == REWARD_UTIL.RARITY.LEGENDARY then
-                    if tonumber(reward.type) ~= REWARD_UTIL.REWARD_TYPES.LOCKED then
-                        if Object.IsValid(player) then
-                            local infoTable
-                            local str = ""
-                            if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
-                                infoTable = rewardAssets[rewardType][class][bind]
-                                str =
-                                    player.name ..
-                                    " revealed a Legendary " .. infoTable.ClassName .. " " .. infoTable.Name .. " card!"
-                            elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
-                                infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
-                                str =
-                                    player.name ..
-                                    " revealed a Legendary " ..
-                                        infoTable.ClassName .. " xp card!"
-                            else
-                                infoTable = rewardAssets[rewardType][bind]
-                                str = player.name .. " revealed a Legendary " .. infoTable.Name .. " card!"
-                            end
-                            if str ~= "" then
-                                Chat.LocalMessage(str)
-                                print(player.name .. " Got A Legendary! ID: " .. reward.rarity)
-                            end
-                        end
-                    end
-                end
-            end
+        else -- Chathook other players rewards
+            LootCallOut(player, rewards)
         end
     end
 end
