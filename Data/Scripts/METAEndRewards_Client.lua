@@ -2,8 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/10
--- Version 0.1.5
+-- Date: 2021/4/20
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -56,6 +56,7 @@ local SelectionCountMax = 0
 local SelectedCards = {} -- stores all the cards the player has chosen
 local CardPanels = {}
 local CardButtons = {}
+local isRewardsLoaded = false
 
 -- #TODO need to implement this in a different way
 --[[while not LOCAL_PLAYER.clientUserData.HasPlayedRound do
@@ -168,6 +169,14 @@ local function GetCosmeticInfo(value)
         reward = tonumber(reward)
         bind = 1
         return bind, reward
+    end
+end
+
+local function FindPlayerById(playerId)
+    for _, player in ipairs(Game.GetPlayers()) do
+        if player.id == playerId then
+            return player
+        end
     end
 end
 
@@ -409,9 +418,48 @@ end
 --@param table tbl -- playerRewards from networked property
 local function GetPlayerRewards(tbl)
     for playerId, rewards in pairs(tbl) do
+
+        local player = FindPlayerById(playerId)
+        
         -- Find the rewards that belong to LOCAL_PLAYER
         if playerId == LOCAL_PLAYER.id then
             BuildRewardSlots(rewards)
+        else -- Broadcast other players rewards
+            for slot, reward in ipairs(rewards) do
+                local amount = tonumber(reward.amount)
+                local rewardType = tonumber(reward.type)
+                local rewardRarity = tonumber(reward.rarity)
+                local class = tonumber(reward.class)
+                local bind = tonumber(reward.bind)
+
+                if tonumber(reward.rarity) == REWARD_UTIL.RARITY.LEGENDARY then
+                    if tonumber(reward.type) ~= REWARD_UTIL.REWARD_TYPES.LOCKED then
+                        if Object.IsValid(player) then
+                            local infoTable
+                            local str = ""
+                            if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
+                                infoTable = rewardAssets[rewardType][class][bind]
+                                str =
+                                    player.name ..
+                                    " revealed a Legendary " .. infoTable.ClassName .. " " .. infoTable.Name .. " card!"
+                            elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
+                                infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
+                                str =
+                                    player.name ..
+                                    " revealed a Legendary " ..
+                                        infoTable.ClassName .. " xp card!"
+                            else
+                                infoTable = rewardAssets[rewardType][bind]
+                                str = player.name .. " revealed a Legendary " .. infoTable.Name .. " card!"
+                            end
+                            if str ~= "" then
+                                Chat.LocalMessage(str)
+                                print(player.name .. " Got A Legendary! ID: " .. reward.rarity)
+                            end
+                        end
+                    end
+                end
+            end
         end
     end
 end
@@ -530,6 +578,7 @@ function OnRewardsChanged(object, string)
     if string == "rewards" then
         local str = object:GetCustomProperty(string)
         GetPlayerRewards(UTIL.RewardConvertToTable(str))
+        isRewardsLoaded = true
     end
 end
 
@@ -554,10 +603,17 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         ChooseRewardText.fontSize = 34
         ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCountMax)
         CalculateSelectionCount()
-        Task.Wait(2)
+        local timeOut = time() + 5
+        while timeOut > time() do
+            if isRewardsLoaded then
+                break
+            end
+            Task.Wait()
+        end
         ToggleUI(true)
         canSelect = true
         ANIMATION.context.OnRewardShow(CardPanels)
+        isRewardsLoaded = false
     elseif newState == ABGS.GAME_STATE_REWARDS_END and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
         AutoSelectRewards()
         local playerRewards = {}

@@ -19,9 +19,9 @@ Assets {
         ChildIds: 8335461421732291655
         ChildIds: 7722131682643831066
         ChildIds: 13491075948760930415
-        ChildIds: 11025650306942962052
         ChildIds: 13388359896138618811
         ChildIds: 11633502993970766080
+        ChildIds: 5336204907209969127
         Lifespan: 1.5
         WantsNetworking: true
         Collidable_v2 {
@@ -191,105 +191,6 @@ Assets {
         }
         Relevance {
           Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 11025650306942962052
-        Name: "Plasma Muzzleflash VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 2
-            Y: 2
-            Z: 2
-          }
-        }
-        ParentId: 12380482949772686091
-        ChildIds: 9510843463063810356
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.98
-              G: 0.292053
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Enable Ring"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Particle Size Multiplier"
-            Float: 2.8
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 17189152410452932534
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 9510843463063810356
-        Name: "AudioDelay"
-        Transform {
-          Location {
-            Z: -12.5
-          }
-          Rotation {
-            Yaw: 1.96367855e-05
-          }
-          Scale {
-            X: 0.785197377
-            Y: 0.785197377
-            Z: 0.785197377
-          }
-        }
-        ParentId: 11025650306942962052
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:DURATION"
-            Float: 0.2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 4511050349143547769
-          }
         }
       }
       Objects {
@@ -546,6 +447,70 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 5336204907209969127
+        Name: "Decal Soil Cracks Big 01"
+        Transform {
+          Location {
+            Z: -100
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1.89999974
+          }
+        }
+        ParentId: 12380482949772686091
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.0299999714
+              B: 0.0184767973
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 55
+          }
+          Overrides {
+            Name: "bp:Color Emissive"
+            Color {
+              R: 0.119791664
+              G: 0.0356995128
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Fade Time"
+            Float: 1.5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6433548446612999816
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
     }
     Assets {
       Id: 318180868669722774
@@ -575,15 +540,6 @@ Assets {
       }
     }
     Assets {
-      Id: 17189152410452932534
-      Name: "Plasma Muzzleflash VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_plasma_muzzleflash"
-      }
-    }
-    Assets {
       Id: 5588725286865802105
       Name: "Sword & Blade - Swings Swipes Air Swooshes Set 01 SFX"
       PlatformAssetType: 10
@@ -599,6 +555,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_mil_explosion_ground"
+      }
+    }
+    Assets {
+      Id: 6433548446612999816
+      Name: "Decal Soil Cracks Big 01"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "bp_decal_soil_cracks_001"
       }
     }
     PrimaryAssetId {
