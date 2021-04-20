@@ -1191,7 +1191,7 @@ Objects {
     Overrides {
       Name: "cs:03_VenomBomb_Projectile"
       AssetReference {
-        Id: 987687575125277230
+        Id: 7440180090514768907
       }
     }
     Overrides {
@@ -2389,7 +2389,7 @@ Objects {
     Overrides {
       Name: "cs:03_VenomBomb_Projectile"
       AssetReference {
-        Id: 5468743982221731542
+        Id: 7440180090514768907
       }
     }
     Overrides {
