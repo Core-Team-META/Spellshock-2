@@ -41,7 +41,7 @@ local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
 local HOLD_LIMIT = EQUIPMENT:GetCustomProperty("HoldLimit")
 local ChargeMod = EQUIPMENT:GetCustomProperty("ChargeMod")
 local isCharging = 0 -- 0: not charging  1: charging  2: full charge
-local chargeStart = 1 
+local chargeStart = 1
 local holdTimer = 0
 
 if IS_CHARGE_ATTACK then
@@ -187,13 +187,16 @@ function OnReady()
 	HitBoxTrigger:SetWorldScale(hitBoxScale)
 end
 
-function OnInterrupted()
+local desiredFacingMode = nil
+
+function OnInterrupted(ability)
 	isCharging = 0
 	HitBoxTrigger:SetWorldScale(hitBoxScale)
 	if bindingReleasedEvent then
 		bindingReleasedEvent:Disconnect()
 		bindingReleasedEvent = nil
 	end
+	--ability.owner.desiredFacingMode = desiredFacingMode
 end
 
 function OnCast(thisAbility)
@@ -201,6 +204,10 @@ function OnCast(thisAbility)
 	isCharging = 1
 	holdTimer = 0
 	bindingReleasedEvent = thisAbility.owner.bindingReleasedEvent:Connect(OnBindingReleased)
+
+	if IS_CHARGE_ATTACK then
+		--thisAbility.owner.desiredFacingMode = FacingMode.FACE_AIM_ALWAYS
+	end
 end
 
 function OnExecute(ability)
@@ -210,6 +217,36 @@ function OnExecute(ability)
 	-- Impulse
 	local v = ability:GetTargetData():GetAimDirection()
 	ability.owner:AddImpulse(Vector3.New(v.x * ATTACK_IMPULSE, v.y * ATTACK_IMPULSE, VERTICAL_IMPULSE))
+	
+	if IS_CHARGE_ATTACK then
+		desiredFacingMode = ability.owner.desiredFacingMode
+		ability.owner.desiredFacingMode = FacingMode.FACE_MOVEMENT
+
+		local totalChargeTime = time() - chargeStart
+		if totalChargeTime > MAX_CHARGE then
+			local v = ability.owner:GetLookWorldRotation() * Vector3.FORWARD --ability:GetTargetData():GetAimDirection()
+			v.z = 0
+			if v.z > 0 then v.z = 0 end
+			v = v:GetNormalized()
+			local player = ABILITY.owner
+			player:SetWorldRotation(Rotation.New(v, Vector3.UP))
+			if player.isGrounded then
+				player:AddImpulse( (v* 4000 + Vector3.UP * 350) * ABILITY.owner.mass)
+			else
+				player:AddImpulse( (v* 4000 - Vector3.UP * 200) * ABILITY.owner.mass)
+			end
+
+			local brakingDecelerationFalling = player.brakingDecelerationFalling
+			player.brakingDecelerationFalling = 4000
+
+			Task.Wait(1)
+
+			if Object.IsValid(player) then
+				player.desiredFacingMode = desiredFacingMode
+				player.brakingDecelerationFalling = brakingDecelerationFalling
+			end
+		end
+	end
 end
 
 -- Fired on Recovery and Unequip
