@@ -717,7 +717,7 @@ Assets {
       }
       Objects {
         Id: 18378548991232479363
-        Name: "VenomBombAbilityServer"
+        Name: "ShurikenAbilityServer"
         Transform {
           Location {
             X: -8716.59375
@@ -753,22 +753,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Damage"
-            Float: 20
-          }
-          Overrides {
-            Name: "cs:Radius"
-            Int: 500
-          }
-          Overrides {
-            Name: "cs:ProjectileSpeed"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:ProjectileGravity"
-            Float: 1.5
-          }
-          Overrides {
             Name: "cs:Ability"
             ObjectReference {
               SubObjectId: 8184323746341847196
@@ -786,7 +770,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 10868725130796666737
+            Id: 12772807797514424754
           }
         }
       }
@@ -2366,7 +2350,7 @@ Assets {
           Overrides {
             Name: "cs:Throw"
             ObjectReference {
-              SubObjectId: 12546585821368565360
+              SelfId: 841534158063459245
             }
           }
           Overrides {
@@ -2984,7 +2968,7 @@ Assets {
       }
       Objects {
         Id: 8184323746341847196
-        Name: "Venom Bomb"
+        Name: "Shuriken"
         Transform {
           Location {
             X: -8716.59375
@@ -3000,7 +2984,6 @@ Assets {
           }
         }
         ParentId: 15969373231472315619
-        ChildIds: 12546585821368565360
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -3017,7 +3000,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 20
+            Duration: 1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -3055,83 +3038,6 @@ Assets {
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
-          }
-        }
-      }
-      Objects {
-        Id: 12546585821368565360
-        Name: "Throw"
-        Transform {
-          Location {
-            X: 10611.4063
-            Y: 10428.9922
-            Z: 3412.854
-          }
-          Rotation {
-            Yaw: 28.208149
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8184323746341847196
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Ability {
-          IsEnabled: true
-          CastPhaseSettings {
-            Duration: 0.15
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          Animation: "unarmed_throw"
-          CanBePrevented: true
-          KeyBinding_v2 {
-            Value: "mc:egameaction:invalid"
           }
         }
       }
