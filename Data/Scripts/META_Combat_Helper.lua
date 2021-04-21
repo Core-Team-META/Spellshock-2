@@ -130,12 +130,13 @@ function GoingToTakeDamage(attackData)
         attackData.damage.amount = 0
     end
     -- Assassin Shurikin Life Steal
-    if attackData.tags and attackData.tags.id and attackData.tags.id ~= "StatusEffect" then
+    if attackData.tags and attackData.tags.id and attackData.tags.id ~= "StatusEffect" and attackData.tags.id ~= "Assassin_R" then
         if
             target.serverUserData.shuriken and target.serverUserData.shuriken[source.id] and
                 target.serverUserData.shuriken[source.id] > time()
          then
-            source.hitPoints = CoreMath.Clamp(source.hitPoints + attackData.damage.amount, source.maxHitPoints)
+            local lifestealHeal = CoreMath.Round(attackData.damage.amount / 2)
+            source.hitPoints = CoreMath.Clamp(source.hitPoints + lifestealHeal, source.maxHitPoints)
         end
     end
 end
