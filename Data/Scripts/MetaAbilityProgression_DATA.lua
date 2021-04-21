@@ -512,12 +512,12 @@ classTable = {
             [2] = {mod1 = 50, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 3.0, damage = 1, multiplier = 0}, mod6 = 10},
             [3] = {mod1 = 50, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 4.0, damage = 1, multiplier = 0}, mod6 = 10},
             [4] = {mod1 = 55, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 4.0, damage = 1, multiplier = 0}, mod6 = 10},
-            [5] = {mod1 = 55, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 5.0, damage = 2, multiplier = 0}, mod6 = 10},
-            [6] = {mod1 = 60, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 5.0, damage = 2, multiplier = 0}, mod6 = 10},
-            [7] = {mod1 = 60, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 5.0, damage = 2, multiplier = 0}, mod6 = 10},
-            [8] = {mod1 = 70, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 6.0, damage = 3, multiplier = 0}, mod6 = 10},
-            [9] = {mod1 = 70, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 6.0, damage = 3, multiplier = 0}, mod6 = 10},
-           [10] = {mod1 = 75, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 6.0, damage = 3, multiplier = 0}, mod6 = 10}
+            [5] = {mod1 = 55, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 5.0, damage = 1, multiplier = 0}, mod6 = 10},
+            [6] = {mod1 = 60, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 5.0, damage = 1, multiplier = 0}, mod6 = 10},
+            [7] = {mod1 = 60, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 5.0, damage = 1, multiplier = 0}, mod6 = 10},
+            [8] = {mod1 = 70, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 6.0, damage = 1, multiplier = 0}, mod6 = 10},
+            [9] = {mod1 = 70, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 6.0, damage = 1, multiplier = 0}, mod6 = 10},
+           [10] = {mod1 = 75, mod2 = 5, mod3 = 0, mod4 = {duration = 4, damage = 0, multiplier = 0.3}, mod5 = {duration = 6.0, damage = 1, multiplier = 0}, mod6 = 10}
         },
         --Wraith Strike
         [CONST.BIND.T] = {
