@@ -159,7 +159,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 1.5297997
+            Float: 6.2784152
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -179,11 +179,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 2.21001291
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 4.05130339
           }
           Overrides {
             Name: "bp:color"
@@ -251,7 +251,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 0.756317675
+            Float: 6.2784152
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -271,11 +271,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 2.21001291
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 4.05130339
           }
           Overrides {
             Name: "bp:color"
@@ -343,7 +343,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 2.32995343
+            Float: 6.2784152
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -363,11 +363,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 2.21001291
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 4.05130339
           }
           Overrides {
             Name: "bp:color"
@@ -435,7 +435,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 0.88967663
+            Float: 6.2784152
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -455,11 +455,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 2.21001291
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 4.05130339
           }
           Overrides {
             Name: "bp:color"

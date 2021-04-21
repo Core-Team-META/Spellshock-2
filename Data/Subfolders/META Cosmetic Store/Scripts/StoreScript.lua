@@ -295,18 +295,22 @@ end
 
 -- this function listens to events from the server, so no verification needed (used by lootbox and daily reward shop).
 function GetCosmeticFromServer(player, cosmeticId)
-	--player:SetResource("S" .. cosmeticId, 1)
-	META_VFX().BuildCosmeticStringTable(player, cosmeticId)
-	if playerOwnedCosmetics[player.id] == nil then
-		playerOwnedCosmetics[player.id] = {}
-	end
-	playerOwnedCosmetics[player.id][cosmeticId] = true
+	if not cosmeticId then return end
 	local class = tonumber(cosmeticId:sub(1, 1))
 	local team = tonumber(cosmeticId:sub(2, 2))
 	local skin = tonumber(cosmeticId:sub(3, 4))
-	local bind = tonumber(cosmeticId:sub(5, 5))
-	COSMETIC_API.UnlockCosmetic(player, class, team, skin, bind)
-	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
+	local bind = tonumber(cosmeticId:sub(5, 5)) or 8
+
+	if META_VFX().IsCosmeticValid(class, team, skin, bind) then
+		--player:SetResource("S" .. cosmeticId, 1)
+		META_VFX().BuildCosmeticStringTable(player, cosmeticId)
+		if playerOwnedCosmetics[player.id] == nil then
+			playerOwnedCosmetics[player.id] = {}
+		end
+		playerOwnedCosmetics[player.id][cosmeticId] = true
+		COSMETIC_API.UnlockCosmetic(player, class, team, skin, bind)
+		ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
+	end
 end
 
 function IsCosmeticName(rscName)
