@@ -16,9 +16,9 @@ local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
-local NoImpactVFX = "DABD0A88C179ADD9:Assassin Deaths Shadow Beginning Basic"
-local NormalImpactVFX = "F9C75D0B7844A1BD:Shuriken Basic Impact"
-local PlayerImpactVFX = "3C9D51C0BB357CE1:Shuriken Player Impact"
+local NoImpactVFX = script:GetCustomProperty("NoImpactVFX")
+local NormalImpactVFX = script:GetCustomProperty("NormalImpactVFX")
+local PlayerImpactVFX = script:GetCustomProperty("PlayerImpactVFX")
 
 local DEFAULT_DamageAmount = 30
 local rotationOffset = 5
@@ -49,13 +49,15 @@ function OnProjectileImpacted(projectile, other, hitResult)
             playerTbl = UTIL.ConvertStringToTable(str)
         end
 
+        local lifeStealDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_DamageAmount, SpecialAbility.name..": Life Steal Duration")
+
         playerTbl[#playerTbl + 1] = other.id
         other.serverUserData.shuriken = other.serverUserData.shuriken or {}
-        other.serverUserData.shuriken[SpecialAbility.owner.id] = time() + 5
+        other.serverUserData.shuriken[SpecialAbility.owner.id] = time() + lifeStealDuration
         local playersStr = UTIL.ConvertTableToString(playerTbl)
 
         SpecialAbility:SetNetworkedCustomProperty("PID", playersStr)
-        SpecialAbility:SetNetworkedCustomProperty("HT", time() + 5)
+        SpecialAbility:SetNetworkedCustomProperty("HT", time() + lifeStealDuration)
       
 
         local attackData = {
@@ -112,9 +114,8 @@ function OnAbilityExecute(thisAbility)
     local rightRotation = aimRotation + Rotation.New(0, 0, rotationOffset)
     local rightVector = rightRotation * Vector3.FORWARD
 
+    --[[
     CoreDebug.DrawLine(startPosition, startPosition + (forwardVector*200), {duration=5})
-    --CoreDebug.DrawLine(worldPosition, worldPosition + (upVector*200), {duration=5, color=Color.BLUE})
-
     CoreDebug.DrawLine(startPosition, startPosition + (leftVector*200), {duration=5, color=Color.GREEN})
     CoreDebug.DrawLine(startPosition, startPosition + (rightVector*200), {duration=5, color=Color.GREEN})
     --]]

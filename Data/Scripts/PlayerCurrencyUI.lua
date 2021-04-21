@@ -4,6 +4,7 @@ local GoldAmount = script:GetCustomProperty("GoldAmount"):WaitForObject()
 local GemsAmount = script:GetCustomProperty("GemsAmount"):WaitForObject()
 local BottomRightPanel = script:GetCustomProperty("BottomRightPanel"):WaitForObject()
 local BottomLeftPanel = script:GetCustomProperty("BottomLeftPanel"):WaitForObject()
+local Currencies = script:GetCustomProperty("Currencies"):WaitForObject()
 
 while not _G.CurrentMenu do Task.Wait() end
 
@@ -25,7 +26,9 @@ function OnMenuChanged(oldMenu, newMenu)
         end
         BottomLeftPanel.visibility = Visibility.INHERIT
     elseif newMenu == _G.MENU_TABLE["ClassSelection"] or newMenu == _G.MENU_TABLE["ClassAbilities"] then
+        Task.Wait()
         BottomLeftPanel.visibility = Visibility.INHERIT
+        Currencies.visibility = Visibility.INHERIT
         BottomRightPanel.visibility = Visibility.FORCE_OFF
 	else -- hide
 		BottomRightPanel.visibility = Visibility.FORCE_OFF
