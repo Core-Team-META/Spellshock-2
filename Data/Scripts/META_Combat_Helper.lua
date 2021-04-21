@@ -130,7 +130,7 @@ function GoingToTakeDamage(attackData)
         attackData.damage.amount = 0
     end
     -- Assassin Shurikin Life Steal
-    if target.serverUserData.shuriken and target.serverUserData.shuriken[source.id] > time() then
+    if target.serverUserData.shuriken and target.serverUserData.shuriken[source.id] and target.serverUserData.shuriken[source.id] > time() then
         source.hitPoints = CoreMath.Clamp(source.hitPoints + 30, source.maxHitPoints)
     end
 end
