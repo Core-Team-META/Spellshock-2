@@ -34,6 +34,7 @@ local function UpdateKillStreak(attackData)
     local largestKillStreak = source:GetResource(CONST.COMBAT_STATS.LARGEST_KILL_STREAK)
     currentKillStreak = currentKillStreak + 1
     source:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, currentKillStreak)
+    currentKillStreak = currentKillStreak <= source.kills and currentKillStreak or source.kills
     if currentKillStreak >= largestKillStreak then
         source:SetResource(CONST.COMBAT_STATS.LARGEST_KILL_STREAK, currentKillStreak)
     end
