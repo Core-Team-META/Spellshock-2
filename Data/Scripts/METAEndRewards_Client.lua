@@ -459,7 +459,7 @@ local function GetPlayerRewards(tbl)
         if playerId == LOCAL_PLAYER.id then
             BuildRewardSlots(rewards)
         else -- Chathook other players rewards
-            LootCallOut(player, rewards)
+            --LootCallOut(player, rewards)
         end
     end
 end
