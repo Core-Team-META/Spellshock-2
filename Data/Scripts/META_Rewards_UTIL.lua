@@ -72,13 +72,13 @@ API.PREMIUM_REFRESH = {
     [1] = 10,
     [2] = 12,
     [3] = 15,
-    [4] = 18,
-    [5] = 20,
-    [6] = 30,
-    [7] = 35,
-    [8] = 40,
-    [9] = 45,
-    [10] = 50
+    [4] = 20,
+    [5] = 25,
+    [6] = 35,
+    [7] = 45,
+    [8] = 50,
+    [9] = 65,
+    [10] = 75
 }
 
 local SKILL_AMOUNT = {
@@ -91,15 +91,15 @@ local SKILL_AMOUNT = {
 local COSMETIC_AMOUNT = {
     [API.RARITY.UNCOMMON] = {min = 2, max = 4},
     [API.RARITY.RARE] = {min = 4, max = 6},
-    [API.RARITY.EPIC] = {min = 6, max = 8},
-    [API.RARITY.LEGENDARY] = {min = 8, max = 10}
+    [API.RARITY.EPIC] = {min = 7, max = 9},
+    [API.RARITY.LEGENDARY] = {min = 10, max = 15}
 }
 
 local GOLD_AMOUNT = {
     [API.RARITY.UNCOMMON] = {min = 150, max = 250},
     [API.RARITY.RARE] = {min = 400, max = 500},
     [API.RARITY.EPIC] = {min = 800, max = 950},
-    [API.RARITY.LEGENDARY] = {min = 1500, max = 1500}
+    [API.RARITY.LEGENDARY] = {min = 2500, max = 3200}
 }
 
 local HEALING_POTION_AMOUNT = {
@@ -121,7 +121,7 @@ local CLASS_XP_AMOUNT = {
     [API.RARITY.UNCOMMON] = {min = 1000, max = 1200},
     [API.RARITY.RARE] = {min = 2000, max = 2400},
     [API.RARITY.EPIC] = {min = 4000, max = 4500},
-    [API.RARITY.LEGENDARY] = {min = 9000, max = 9900}
+    [API.RARITY.LEGENDARY] = {min = 12000, max = 14900}
 }
 
 ------------------------------------------------------------------------------------------------------------------------
