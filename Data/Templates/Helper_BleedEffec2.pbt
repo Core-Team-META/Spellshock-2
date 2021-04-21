@@ -103,7 +103,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            Z: 179.999985
+            Z: 146.970566
           }
           Rotation {
             Yaw: 89.9999847
@@ -167,11 +167,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 1.14369929
           }
           Overrides {
             Name: "bp:Velocity Max"
@@ -259,11 +259,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 1.14369929
           }
           Overrides {
             Name: "bp:Velocity Max"
@@ -351,11 +351,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 1.14369929
           }
           Overrides {
             Name: "bp:Velocity Max"
@@ -443,11 +443,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 1.14369929
           }
           Overrides {
             Name: "bp:Velocity Max"
