@@ -219,11 +219,13 @@ function OnExecute(ability)
 	ability.owner:AddImpulse(Vector3.New(v.x * ATTACK_IMPULSE, v.y * ATTACK_IMPULSE, VERTICAL_IMPULSE))
 	
 	if IS_CHARGE_ATTACK then
-		desiredFacingMode = ability.owner.desiredFacingMode
-		ability.owner.desiredFacingMode = FacingMode.FACE_MOVEMENT
+
 
 		local totalChargeTime = time() - chargeStart
 		if totalChargeTime > MAX_CHARGE then
+			desiredFacingMode = ability.owner.desiredFacingMode
+			ability.owner.desiredFacingMode = FacingMode.FACE_MOVEMENT
+			
 			local v = ability.owner:GetLookWorldRotation() * Vector3.FORWARD --ability:GetTargetData():GetAimDirection()
 			v.z = 0
 			if v.z > 0 then v.z = 0 end
