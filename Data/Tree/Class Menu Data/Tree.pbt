@@ -1450,6 +1450,7 @@ Objects {
   ParentId: 837517277244744736
   ChildIds: 8380954081570957251
   ChildIds: 11021992287971171432
+  ChildIds: 11305002239989607421
   ChildIds: 2770197239029822294
   UnregisteredParameters {
     Overrides {
@@ -1460,7 +1461,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press 4 to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact. Placement Range = 6000. Damage Radius = 750. Stun Duration = 4s."
+      String: "Placement \342\200\223 Press 4 to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact and healing yourself. Placement Range = 6000. Damage Radius = 750. Stun Duration = 2s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1509,6 +1510,50 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod4"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11305002239989607421
+  Name: "Heal Amount"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17507077983078006761
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Amount healed per target hit with the Wraith Strike"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
     }
   }
   Collidable_v2 {
@@ -1629,8 +1674,8 @@ Objects {
   ParentId: 837517277244744736
   ChildIds: 16037613412710680742
   ChildIds: 11489993345626439756
-  ChildIds: 3074752349398664074
   ChildIds: 14441027740739943
+  ChildIds: 3074752349398664074
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1640,7 +1685,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press and hold R to preview where the venom bomb will go.  Release R to throw a small bottle of poison that shatters when it lands; poisoning nearby enemies. Slow Effect = 70%. Slow Duration = 4s."
+      String: "Instant \342\200\223 Press  R to throw 3 deadly shurikens forward.  Marks the target, healing for 50% of damage done while the target is marked. Max Range = 3000."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1661,8 +1706,8 @@ Objects {
   }
 }
 Objects {
-  Id: 14441027740739943
-  Name: "Poison"
+  Id: 3074752349398664074
+  Name: "Lifesteal Effect"
   Transform {
     Location {
     }
@@ -1678,21 +1723,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Poison DOT that is applied to enemies"
+      String: "Duration of Lifesteal Mark"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 8151890660996388781
+        Id: 18347049815900412195
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod5"
-    }
-    Overrides {
-      Name: "cs:IsStatusEffect"
-      Bool: true
+      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -1709,8 +1750,8 @@ Objects {
   }
 }
 Objects {
-  Id: 3074752349398664074
-  Name: "Venom Radius"
+  Id: 14441027740739943
+  Name: "Bleed"
   Transform {
     Location {
     }
@@ -1726,17 +1767,21 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Radius of the damage area"
+      String: "Bleed effect applies to enemies hit with the shuriken"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 8194221724979934971
+        Id: 7227656168876650477
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod5"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -1867,7 +1912,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to disappear to the shadow realm for a short duration. Attacking while invisible will deal extra damage and end the effect. Attack Damage Radius = 450."
+      String: "Instant \342\200\223 Press E to disappear to the shadow realm for a short duration. Attacking while invisible will deal area damage and end the effect. Attack Damage Radius = 650."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2046,7 +2091,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Teleports you forward to a blade and damages enemies near the impact point. Placement Range = 2500."
+      String: "Instant \342\200\223 Teleports you forward to a blade and damages enemies near the impact point. Placement Range = 2400."
     }
     Overrides {
       Name: "cs:Bind"

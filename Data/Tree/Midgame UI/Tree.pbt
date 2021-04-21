@@ -15675,6 +15675,12 @@ Objects {
         Id: 11974742996071064388
       }
     }
+    Overrides {
+      Name: "cs:Currencies"
+      ObjectReference {
+        SelfId: 1601471984127660079
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
