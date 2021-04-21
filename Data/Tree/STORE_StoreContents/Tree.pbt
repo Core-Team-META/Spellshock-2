@@ -14289,7 +14289,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 120
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -14386,7 +14386,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 120
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -14863,7 +14863,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 0
     }
     Overrides {
       Name: "cs:Tags"
@@ -14956,7 +14956,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 0
     }
     Overrides {
       Name: "cs:Tags"
