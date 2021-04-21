@@ -824,6 +824,24 @@ Assets {
               Id: 2269572116006940077
             }
           }
+          Overrides {
+            Name: "cs:NoImpactVFX"
+            AssetReference {
+              Id: 15761765853344411097
+            }
+          }
+          Overrides {
+            Name: "cs:NormalImpactVFX"
+            AssetReference {
+              Id: 17998456739653263805
+            }
+          }
+          Overrides {
+            Name: "cs:PlayerImpactVFX"
+            AssetReference {
+              Id: 4367737101835664609
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

@@ -16,9 +16,9 @@ local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
-local NoImpactVFX = "DABD0A88C179ADD9:Assassin Deaths Shadow Beginning Basic"
-local NormalImpactVFX = "F9C75D0B7844A1BD:Shuriken Basic Impact"
-local PlayerImpactVFX = "3C9D51C0BB357CE1:Shuriken Player Impact"
+local NoImpactVFX = script:GetCustomProperty("NoImpactVFX")
+local NormalImpactVFX = script:GetCustomProperty("NormalImpactVFX")
+local PlayerImpactVFX = script:GetCustomProperty("PlayerImpactVFX")
 
 local DEFAULT_DamageAmount = 30
 local rotationOffset = 5
