@@ -802,6 +802,12 @@ Objects {
         Id: 445660835511654315
       }
     }
+    Overrides {
+      Name: "cs:03_Shuriken_Projectile"
+      AssetReference {
+        Id: 7440180090514768907
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1270,6 +1276,12 @@ Objects {
       Name: "cs:02_DeathsShadow_Ending"
       AssetReference {
         Id: 1429104248892819753
+      }
+    }
+    Overrides {
+      Name: "cs:03_Shuriken_Projectile"
+      AssetReference {
+        Id: 7440180090514768907
       }
     }
   }
@@ -2048,6 +2060,12 @@ Objects {
         Id: 1798522335355902466
       }
     }
+    Overrides {
+      Name: "cs:03_Shuriken_Projectile"
+      AssetReference {
+        Id: 7440180090514768907
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2516,6 +2534,12 @@ Objects {
       Name: "cs:02_DeathsShadow_Ending"
       AssetReference {
         Id: 1429104248892819753
+      }
+    }
+    Overrides {
+      Name: "cs:03_Shuriken_Projectile"
+      AssetReference {
+        Id: 7440180090514768907
       }
     }
   }

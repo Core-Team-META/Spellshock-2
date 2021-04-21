@@ -17,6 +17,8 @@ local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local NoImpactVFX = "DABD0A88C179ADD9:Assassin Deaths Shadow Beginning Basic"
+local NormalImpactVFX = "F9C75D0B7844A1BD:Shuriken Basic Impact"
+local PlayerImpactVFX = "3C9D51C0BB357CE1:Shuriken Player Impact"
 
 local DEFAULT_DamageAmount = 30
 local rotationOffset = 10
@@ -30,7 +32,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
     and other:IsA("Player") and other.team ~= SpecialAbility.team then
         --Play ImpactFX
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
-		META_AP().SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
+		META_AP().SpawnAsset(PlayerImpactVFX, {position = projectile:GetWorldPosition()})
 
 		local dmg = Damage.New()
 		dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
@@ -66,7 +68,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
             }
         COMBAT().ApplyDamage(attackData)	
 
-        local slowStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", {}, SpecialAbility.name .. ": Slow Status")
+        --[[local slowStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", {}, SpecialAbility.name .. ": Slow Status")
         API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, slowStatus.duration, slowStatus.damage, slowStatus.multiplier)
 
 		--[[local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
@@ -76,6 +78,8 @@ function OnProjectileImpacted(projectile, other, hitResult)
         --[[local poisonStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", {}, SpecialAbility.name .. ": Poison Status")
         API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id, SpecialAbility.owner, poisonStatus.duration, poisonStatus.damage, poisonStatus.multiplier)
 		]]
+    else
+        META_AP().SpawnAsset(NormalImpactVFX, {position = projectile:GetWorldPosition()})
     end
 end
 
@@ -97,11 +101,12 @@ function OnAbilityExecute(thisAbility)
     local rightRotation = lookRotation + Rotation.New(0, 0, rotationOffset)
     local rightVector = rightRotation * Vector3.FORWARD
 
-    CoreDebug.DrawLine(worldPosition, worldPosition + (forwardVector*200), {duration=5})
+    --[[CoreDebug.DrawLine(worldPosition, worldPosition + (forwardVector*200), {duration=5})
     CoreDebug.DrawLine(worldPosition, worldPosition + (upVector*200), {duration=5, color=Color.BLUE})
 
     CoreDebug.DrawLine(worldPosition, worldPosition + (leftVector*200), {duration=5, color=Color.GREEN})
     CoreDebug.DrawLine(worldPosition, worldPosition + (rightVector*200), {duration=5, color=Color.GREEN})
+    ]]
 
     local directionVectors = {leftVector, forwardVector, rightVector}
 
@@ -111,6 +116,8 @@ function OnAbilityExecute(thisAbility)
         throwingStar.sourceAbility = SpecialAbility
         throwingStar.speed = 4000
         throwingStar.gravityScale = 0
+        throwingStar.capsuleLength = 150
+        throwingStar.capsuleRadius = 100
         throwingStar.shouldDieOnImpact = true
         throwingStar.impactEvent:Connect(OnProjectileImpacted)
         throwingStar.lifeSpanEndedEvent:Connect(OnLifespanEnded)
