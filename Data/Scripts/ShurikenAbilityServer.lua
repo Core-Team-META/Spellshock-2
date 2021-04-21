@@ -21,7 +21,7 @@ local NormalImpactVFX = "F9C75D0B7844A1BD:Shuriken Basic Impact"
 local PlayerImpactVFX = "3C9D51C0BB357CE1:Shuriken Player Impact"
 
 local DEFAULT_DamageAmount = 30
-local rotationOffset = 10
+local rotationOffset = 5
 local attackRange = 3000
 
 local ProjectileImpactEvent = nil
@@ -68,16 +68,11 @@ function OnProjectileImpacted(projectile, other, hitResult)
             }
         COMBAT().ApplyDamage(attackData)	
 
-        --[[local slowStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", {}, SpecialAbility.name .. ": Slow Status")
-        API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, slowStatus.duration, slowStatus.damage, slowStatus.multiplier)
+        local slowStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", {}, SpecialAbility.name .. ": Slow Status")
+        API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, slowStatus.duration, slowStatus.damage, slowStatus.multiplier)
 
-		--[[local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
-        local enemiesInRange = Game.FindPlayersInSphere(projectile:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team})
-        --CoreDebug.DrawSphere(projectile:GetWorldPosition(), radius, {duration = 5})
-
-        --[[local poisonStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", {}, SpecialAbility.name .. ": Poison Status")
-        API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id, SpecialAbility.owner, poisonStatus.duration, poisonStatus.damage, poisonStatus.multiplier)
-		]]
+        local poisonStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", {}, SpecialAbility.name .. ": Poison Status")
+        API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, SpecialAbility.owner, poisonStatus.duration, poisonStatus.damage, poisonStatus.multiplier)
     else
         META_AP().SpawnAsset(NormalImpactVFX, {position = projectile:GetWorldPosition()})
     end
@@ -91,32 +86,48 @@ function OnAbilityExecute(thisAbility)
     if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
 		return 
 	end
-	local lookRotation = thisAbility.owner:GetViewWorldRotation()
-    local forwardVector = lookRotation * Vector3.FORWARD
-    local upVector = lookRotation * Vector3.UP
-	local worldPosition = thisAbility.owner:GetWorldPosition() + Vector3.New(0, 0, 50) + (forwardVector*50)
-	
-    local leftRotation = lookRotation - Rotation.New(0, 0, rotationOffset)
+
+    local playerViewRotation = thisAbility.owner:GetViewWorldRotation()
+    local playerViewPosition = thisAbility.owner:GetViewWorldPosition()
+	local playerViewDirection = playerViewRotation * Vector3.FORWARD
+	local playerPosition = thisAbility.owner:GetWorldPosition()
+	local AP = playerPosition - playerViewPosition
+	local AB = playerViewDirection
+	playerViewPosition = playerViewPosition + (AP .. AB) / (AB .. AB) * AB
+
+    local targetPosition = playerViewPosition + (playerViewDirection * attackRange)
+    local hr = World.Raycast(playerViewPosition, targetPosition)
+    if hr then
+        targetPosition = hr:GetImpactPosition()
+    end
+
+	local startPosition = thisAbility.owner:GetWorldPosition() + Vector3.New(0, 0, 100)
+    local forwardVector = targetPosition - startPosition
+    forwardVector = forwardVector:GetNormalized()
+	local aimRotation = Rotation.New(forwardVector, Vector3.UP)
+    startPosition = startPosition + (forwardVector*30)
+
+    local leftRotation = aimRotation - Rotation.New(0, 0, rotationOffset)
     local leftVector = leftRotation * Vector3.FORWARD
-    local rightRotation = lookRotation + Rotation.New(0, 0, rotationOffset)
+    local rightRotation = aimRotation + Rotation.New(0, 0, rotationOffset)
     local rightVector = rightRotation * Vector3.FORWARD
 
-    --[[CoreDebug.DrawLine(worldPosition, worldPosition + (forwardVector*200), {duration=5})
-    CoreDebug.DrawLine(worldPosition, worldPosition + (upVector*200), {duration=5, color=Color.BLUE})
+    CoreDebug.DrawLine(startPosition, startPosition + (forwardVector*200), {duration=5})
+    --CoreDebug.DrawLine(worldPosition, worldPosition + (upVector*200), {duration=5, color=Color.BLUE})
 
-    CoreDebug.DrawLine(worldPosition, worldPosition + (leftVector*200), {duration=5, color=Color.GREEN})
-    CoreDebug.DrawLine(worldPosition, worldPosition + (rightVector*200), {duration=5, color=Color.GREEN})
-    ]]
+    CoreDebug.DrawLine(startPosition, startPosition + (leftVector*200), {duration=5, color=Color.GREEN})
+    CoreDebug.DrawLine(startPosition, startPosition + (rightVector*200), {duration=5, color=Color.GREEN})
+    --]]
 
     local directionVectors = {leftVector, forwardVector, rightVector}
 
     for i=1, 3 do
-        local throwingStar = Projectile.Spawn(PlayerVFX.Projectile, worldPosition, directionVectors[i])
+        local throwingStar = Projectile.Spawn(PlayerVFX.Projectile, startPosition, directionVectors[i])
         throwingStar.owner = SpecialAbility.owner
         throwingStar.sourceAbility = SpecialAbility
-        throwingStar.speed = 4000
+        throwingStar.speed = 7000
         throwingStar.gravityScale = 0
-        throwingStar.capsuleLength = 150
+        throwingStar.capsuleLength = 110
         throwingStar.capsuleRadius = 100
         throwingStar.shouldDieOnImpact = true
         throwingStar.impactEvent:Connect(OnProjectileImpacted)

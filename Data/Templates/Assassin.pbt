@@ -1328,6 +1328,7 @@ Assets {
         ParentId: 4569115510025570718
         ChildIds: 3657339729496937378
         ChildIds: 1286326275560935440
+        ChildIds: 1322647521854480462
         ChildIds: 4051678230221737164
         ChildIds: 7355506324767663929
         ChildIds: 14326137833624201234
@@ -1439,6 +1440,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 10109220941690346490
+          }
+        }
+      }
+      Objects {
+        Id: 1322647521854480462
+        Name: "AddReticle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1774529140029345986
           }
         }
       }
