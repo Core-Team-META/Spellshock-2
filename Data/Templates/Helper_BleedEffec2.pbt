@@ -159,7 +159,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 6.2784152
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -171,19 +171,19 @@ Assets {
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 1.14369929
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 2.21001291
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 4.05130339
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"
@@ -251,7 +251,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 6.2784152
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -263,19 +263,19 @@ Assets {
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 1.14369929
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 2.21001291
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 4.05130339
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"
@@ -343,7 +343,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 6.2784152
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -355,19 +355,19 @@ Assets {
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 1.14369929
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 2.21001291
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 4.05130339
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"
@@ -435,7 +435,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 6.2784152
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -447,19 +447,19 @@ Assets {
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 1.14369929
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 2.21001291
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 4.05130339
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"
