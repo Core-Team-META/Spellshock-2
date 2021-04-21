@@ -127,8 +127,8 @@ function OnAbilityExecute(thisAbility)
         throwingStar.sourceAbility = SpecialAbility
         throwingStar.speed = 7000
         throwingStar.gravityScale = 0
-        throwingStar.capsuleLength = 110
-        throwingStar.capsuleRadius = 100
+        throwingStar.capsuleLength = 80
+        throwingStar.capsuleRadius = 50
         throwingStar.shouldDieOnImpact = true
         throwingStar.impactEvent:Connect(OnProjectileImpacted)
         throwingStar.lifeSpanEndedEvent:Connect(OnLifespanEnded)
