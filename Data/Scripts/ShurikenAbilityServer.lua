@@ -21,7 +21,7 @@ local NormalImpactVFX = script:GetCustomProperty("NormalImpactVFX")
 local PlayerImpactVFX = script:GetCustomProperty("PlayerImpactVFX")
 
 local DEFAULT_DamageAmount = 30
-local rotationOffset = 5
+local rotationOffset = 7
 local attackRange = 3000
 
 local ProjectileImpactEvent = nil
