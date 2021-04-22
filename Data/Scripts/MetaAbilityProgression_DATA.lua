@@ -224,16 +224,16 @@ classTable = {
         --Iceberg
         [CONST.BIND.T] = {
             -- mod1 = Damage Radius, mod2 = DOT, mod3 = Duration, mod4 = Block Percentage, mod5 = Heal Ammount
-            [1] = {mod1 = 1200, mod2 = 30, mod3 = 5, mod4 = 1, mod5 = 150, mod6 = 56},
-            [2] = {mod1 = 1200, mod2 = 32, mod3 = 5, mod4 = 1, mod5 = 155, mod6 = 55},
-            [3] = {mod1 = 1200, mod2 = 34, mod3 = 5, mod4 = 1, mod5 = 160, mod6 = 55},
-            [4] = {mod1 = 1200, mod2 = 36, mod3 = 5, mod4 = 1, mod5 = 165, mod6 = 54},
-            [5] = {mod1 = 1200, mod2 = 38, mod3 = 5, mod4 = 1, mod5 = 170, mod6 = 54},
-            [6] = {mod1 = 1200, mod2 = 40, mod3 = 5, mod4 = 1, mod5 = 175, mod6 = 53},
-            [7] = {mod1 = 1200, mod2 = 43, mod3 = 5, mod4 = 1, mod5 = 180, mod6 = 53},
-            [8] = {mod1 = 1200, mod2 = 46, mod3 = 5, mod4 = 1, mod5 = 185, mod6 = 52},
-            [9] = {mod1 = 1200, mod2 = 49, mod3 = 5, mod4 = 1, mod5 = 190, mod6 = 52},
-           [10] = {mod1 = 1200, mod2 = 50, mod3 = 5, mod4 = 1, mod5 = 195, mod6 = 51}
+            [1] = {mod1 = 1200, mod2 = 30, mod3 = 4, mod4 = 1, mod5 = 150, mod6 = 56},
+            [2] = {mod1 = 1200, mod2 = 32, mod3 = 4, mod4 = 1, mod5 = 155, mod6 = 55},
+            [3] = {mod1 = 1200, mod2 = 34, mod3 = 4, mod4 = 1, mod5 = 160, mod6 = 55},
+            [4] = {mod1 = 1200, mod2 = 36, mod3 = 4, mod4 = 1, mod5 = 165, mod6 = 54},
+            [5] = {mod1 = 1200, mod2 = 38, mod3 = 4, mod4 = 1, mod5 = 170, mod6 = 54},
+            [6] = {mod1 = 1200, mod2 = 40, mod3 = 4, mod4 = 1, mod5 = 175, mod6 = 53},
+            [7] = {mod1 = 1200, mod2 = 43, mod3 = 4, mod4 = 1, mod5 = 180, mod6 = 53},
+            [8] = {mod1 = 1200, mod2 = 46, mod3 = 4, mod4 = 1, mod5 = 185, mod6 = 52},
+            [9] = {mod1 = 1200, mod2 = 49, mod3 = 4, mod4 = 1, mod5 = 190, mod6 = 52},
+           [10] = {mod1 = 1200, mod2 = 50, mod3 = 4, mod4 = 1, mod5 = 195, mod6 = 51}
         },
         --Teleport
         [CONST.BIND.SHIFT] = {
