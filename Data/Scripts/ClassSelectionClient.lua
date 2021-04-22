@@ -471,7 +471,7 @@ function UpdateClassInfo(thisButton)
 	ClassLevel.text = tostring(classLevel)
 
 	local currentXP = META_CP().GetClassXp(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
-	local reqXP = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
+	local reqXP = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, #CONST.ReqXp)]
 	XP_Progress.progress = currentXP / reqXP
 	ClassXP.text = UTIL.FormatInt(currentXP) .. "/" .. UTIL.FormatInt(reqXP)
 
