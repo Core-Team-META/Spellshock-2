@@ -32704,6 +32704,7 @@ Objects {
   ChildIds: 2600567068246883668
   ChildIds: 2964087029191983419
   ChildIds: 12968276903644762035
+  ChildIds: 8139850732955230119
   UnregisteredParameters {
     Overrides {
       Name: "cs:UpgradeButton"
@@ -32715,6 +32716,18 @@ Objects {
       Name: "cs:GoldCost"
       ObjectReference {
         SelfId: 17221355791892231518
+      }
+    }
+    Overrides {
+      Name: "cs:NotEnoughXP"
+      ObjectReference {
+        SelfId: 8139850732955230119
+      }
+    }
+    Overrides {
+      Name: "cs:GoldCostPanel"
+      ObjectReference {
+        SelfId: 2600567068246883668
       }
     }
   }
@@ -32747,6 +32760,131 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8139850732955230119
+  Name: "Not Enough XP"
+  Transform {
+    Location {
+      X: -40391.2656
+      Y: -10887.8477
+      Z: -1445
+    }
+    Rotation {
+      Yaw: -95.0001221
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5143458204539947072
+  ChildIds: 3264478188149798432
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 156
+    Height: 20
+    UIX: -179.645874
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3264478188149798432
+  Name: "Gold Cost"
+  Transform {
+    Location {
+      X: -9.70810652e-05
+      Y: 0.0235185511
+    }
+    Rotation {
+      Yaw: -3.07358569e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8139850732955230119
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Height: 10
+    UIX: 10.5
+    UIY: 11
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Text {
+      Label: "Not Enough XP"
+      Color {
+        R: 0.930000067
+        A: 1
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2990917165450855258
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:baseline"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleleft"
         }
       }
     }
@@ -32968,7 +33106,7 @@ Objects {
 }
 Objects {
   Id: 2600567068246883668
-  Name: "VALUE"
+  Name: "Gold Cost Panel"
   Transform {
     Location {
       X: -40391.2656
@@ -33303,7 +33441,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"

@@ -863,6 +863,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2990917165450855258
+  Name: "Oswald Italic"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "OswaldItalic_ref"
+  }
+}
+Assets {
   Id: 2764905514123890102
   Name: "Frame Outlined 001"
   PlatformAssetType: 9

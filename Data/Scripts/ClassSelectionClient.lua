@@ -35,11 +35,9 @@ local RightPanel_GlobalStats = RightPanel:GetCustomProperty("GlobalStats"):WaitF
 local RightPanel_AbilitiesLabel = RightPanel:GetCustomProperty("AbilitiesLabel"):WaitForObject()
 local RightPanel_ClassLevelPanel = RightPanel:GetCustomProperty("ClassLevelPanel"):WaitForObject()
 
-local RightPanel_UpgradeButtonPanel =
-	RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeButtonPanel"):WaitForObject()
+local RightPanel_UpgradeButtonPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeButtonPanel"):WaitForObject()
 local RightPanel_UpgradeButton = RightPanel_UpgradeButtonPanel:GetCustomProperty("UpgradeButton"):WaitForObject()
-local RightPanel_AbilityStatsPanel =
-	RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityStatsPanel"):WaitForObject()
+local RightPanel_AbilityStatsPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityStatsPanel"):WaitForObject()
 
 local ConfirmChoiceSpinner = ConfirmChoicePanel:GetCustomProperty("Spinner"):WaitForObject()
 local ConfirmChoiceButton = ConfirmChoicePanel:GetCustomProperty("ConfirmButton"):WaitForObject()
@@ -571,6 +569,11 @@ function UpdateAbilityInfo(thisButton)
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
 	local UpgradeLabel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeLabel"):WaitForObject()
 	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
+	local NotEnoughXP = RightPanel_UpgradeButtonPanel:GetCustomProperty("NotEnoughXP"):WaitForObject()
+	local GoldCostPanel = RightPanel_UpgradeButtonPanel:GetCustomProperty("GoldCostPanel"):WaitForObject()
+
+	GoldCostPanel.visibility = Visibility.INHERIT
+	NotEnoughXP.visibility = Visibility.FORCE_OFF
 
 	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
 	local LevelNextText = LevelInfoPanel:GetCustomProperty("LevelNextText"):WaitForObject()
@@ -626,6 +629,10 @@ function UpdateAbilityInfo(thisButton)
 
 	if currentGold >= goldCost then
 		GoldCost:SetColor(Color.FromStandardHex("FFC200FF"))
+		if currentXP < reqXP then
+			NotEnoughXP.visibility = Visibility.INHERIT
+			GoldCostPanel.visibility = Visibility.FORCE_OFF
+		end
 	else
 		GoldCost:SetColor(Color.FromStandardHex("F81818FF"))
 	end
