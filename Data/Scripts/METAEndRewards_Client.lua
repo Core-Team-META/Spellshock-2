@@ -180,35 +180,33 @@ local function FindPlayerById(playerId)
     end
 end
 
-local function LootCallOut(player, rewards)
-    for slot, reward in ipairs(rewards) do
-        local amount = tonumber(reward.amount)
-        local rewardType = tonumber(reward.type)
-        local rewardRarity = tonumber(reward.rarity)
-        local class = tonumber(reward.class)
-        local bind = tonumber(reward.bind)
+local function LootCallOut(player, reward)
+    if not Object.IsValid(player) then return end
+    local amount = tonumber(reward.amount)
+    local rewardType = tonumber(reward.type)
+    local rewardRarity = tonumber(reward.rarity)
+    local class = tonumber(reward.class)
+    local bind = tonumber(reward.bind)
 
-        if tonumber(reward.rarity) == REWARD_UTIL.RARITY.LEGENDARY then
-            if tonumber(reward.type) ~= REWARD_UTIL.REWARD_TYPES.LOCKED then
-                if Object.IsValid(player) then
-                    local infoTable
-                    local str = ""
-                    if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
-                        infoTable = rewardAssets[rewardType][class][bind]
-                        str =
-                            player.name ..
-                            " revealed a [Legendary][" .. infoTable.ClassName .. " " .. infoTable.Name .. "] card!"
-                    elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
-                        infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
-                        str = player.name .. " revealed a [Legendary][" .. infoTable.ClassName .. " XP] card!"
-                    else
-                        infoTable = rewardAssets[rewardType][bind]
-                        str = player.name .. " revealed a [Legendary][" .. infoTable.Name .. "] card!"
-                    end
-                    if str ~= "" then
-                        Chat.LocalMessage(str)
-                        print(player.name .. " Got A Legendary! ID: " .. reward.rarity)
-                    end
+    if tonumber(reward.rarity) == REWARD_UTIL.RARITY.LEGENDARY then
+        if tonumber(reward.type) ~= REWARD_UTIL.REWARD_TYPES.LOCKED then
+            if Object.IsValid(player) then
+                local infoTable
+                local str = ""
+                if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
+                    infoTable = rewardAssets[rewardType][class][bind]
+                    str =
+                        player.name ..
+                        " claimed a [Legendary][" .. infoTable.ClassName .. " " .. infoTable.Name .. "] card!"
+                elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
+                    infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
+                    str = player.name .. " claimed a [Legendary][" .. infoTable.ClassName .. " XP] card!"
+                else
+                    infoTable = rewardAssets[rewardType][bind]
+                    str = player.name .. " claimed a [Legendary][" .. infoTable.Name .. "] card!"
+                end
+                if str ~= "" then
+                    Chat.LocalMessage(str)
                 end
             end
         end
@@ -632,3 +630,4 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("ERCLAM", LootCallOut)

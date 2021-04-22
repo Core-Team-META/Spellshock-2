@@ -459,6 +459,9 @@ function API.OnRewardSelect(player, slotID, tbl, bool)
         elseif reward.type == API.REWARD_TYPES.CLASS_XP then
             META_CP().AddXP(player, reward.class, reward.amount)
         end
+        if tonumber(reward.rarity) == API.RARITY.LEGENDARY then
+            Events.BroadcastToAllPlayers("ERCLAM", player, reward)
+        end
     end
 end
 

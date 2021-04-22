@@ -441,7 +441,7 @@ function UpdateClassInfo(thisButton)
 		local shardCost = SHARD_COSTS[level].reqXP
 		local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 		local goldCost = SHARD_COSTS[level].reqGold
-	
+
 		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 			UpgradePanel.visibility = Visibility.INHERIT
@@ -523,10 +523,11 @@ function OnClassClicked(thisButton)
 	else
 		ConfirmChoicePanel.visibility = Visibility.FORCE_OFF
 	end
-
-	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
-	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility =
-		Visibility.INHERIT
+	if Object.IsValid(CurrentClassButton) then
+		CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
+		CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility =
+			Visibility.INHERIT
+	end
 	UpdateClassInfo(thisButton)
 	--end
 end
