@@ -46,9 +46,9 @@ function Attack()
 	META_AP().SpawnAsset(PlayerVFX.Attack, {position = SpecialAbility.owner:GetWorldPosition()})
 
 	local playerFacingDirection = SpecialAbility.owner:GetWorldRotation() * Vector3.FORWARD
-	local spherePosition = SpecialAbility.owner:GetWorldPosition() + (playerFacingDirection * 100)
+	local spherePosition = SpecialAbility.owner:GetWorldPosition() --+ (playerFacingDirection * 100)
 	local AttackRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_AttackRadius, SpecialAbility.name..": Radius")
-	local nearbyEnemies = Game.FindPlayersInSphere(spherePosition, AttackRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
+	local nearbyEnemies = Game.FindPlayersInCylinder(spherePosition, AttackRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	--CoreDebug.DrawSphere(spherePosition, AttackRadius, {duration = 5})
 	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 	local dmg = Damage.New()
