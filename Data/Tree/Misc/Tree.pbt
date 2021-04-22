@@ -1,44 +1,413 @@
-Name: "For BEN"
-RootId: 16227534043720893935
+Name: "Misc"
+RootId: 11951527557497682472
 Objects {
-  Id: 9896629859156238266
-  Name: "STORE_Entry Overlay KONZ"
+  Id: 16416131498132746793
+  Name: "Bell Feedback"
   Transform {
+    Location {
+      X: -3297.33545
+      Y: -3607.31177
+      Z: 5236.98584
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 16227534043720893935
+  ParentId: 11951527557497682472
+  ChildIds: 10203455416443750590
+  ChildIds: 14996873474237789481
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 15017360723897601218
-      value {
-        Overrides {
-          Name: "Name"
-          String: "STORE_Entry Overlay KONZ"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14996873474237789481
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 3297.33545
+      Y: 3607.31177
+      Z: -5236.98584
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16416131498132746793
+  ChildIds: 14260631545271025912
+  ChildIds: 16092321819556394275
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 16092321819556394275
+  Name: "Ship Boat Bell Ring 01 SFX"
+  Transform {
+    Location {
+      X: -3317.59253
+      Y: -3609.09814
+      Z: 5223.72412
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14996873474237789481
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 8383064983738244106
+    }
+    Volume: 1
+    Falloff: 7000
+    Radius: -1
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 14260631545271025912
+  Name: "BellAudioFeedback"
+  Transform {
+    Location {
+      X: -3297.33545
+      Y: -3607.31177
+      Z: 5236.98584
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14996873474237789481
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 10203455416443750590
       }
     }
-    TemplateAsset {
-      Id: 4066051561278959340
+    Overrides {
+      Name: "cs:RingSFX"
+      ObjectReference {
+        SelfId: 16092321819556394275
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17205657525544299071
+    }
+  }
+}
+Objects {
+  Id: 10203455416443750590
+  Name: "Trigger"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 24.9922886
+    }
+    Scale {
+      X: 5
+      Y: 5
+      Z: 5
+    }
+  }
+  ParentId: 16416131498132746793
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+}
+Objects {
+  Id: 14291644262325182723
+  Name: "Heart Beat"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11951527557497682472
+  ChildIds: 5236111476486582131
+  ChildIds: 14340600663168930898
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 14340600663168930898
+  Name: "HeartBeatHandler"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14291644262325182723
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:HeartbeatSFX"
+      ObjectReference {
+        SelfId: 5236111476486582131
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:DynamicCapturePoints"
+      ObjectReference {
+        SelfId: 14570647703378092628
+      }
+    }
+    Overrides {
+      Name: "cs:AlternateSFX"
+      ObjectReference {
+        SelfId: 5236111476486582131
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16329543708675641342
+    }
+  }
+}
+Objects {
+  Id: 5236111476486582131
+  Name: "Meta Heartbeat Single 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14291644262325182723
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16215335743376183929
+    }
+    Volume: 2
+    Falloff: -1
+    Radius: -1
+  }
+}
+Objects {
+  Id: 9301756161479620603
+  Name: "Swimming Sounds"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11951527557497682472
+  ChildIds: 5835562392321396269
+  ChildIds: 15636002095975581394
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 15636002095975581394
+  Name: "Ambience Underwater Bubbles Designed 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9301756161479620603
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 10431926636578901761
+    }
+    Volume: 0.8
+    Falloff: -1
+    Radius: -1
+    FadeInTime: 0.5
+    FadeOutTime: 0.5
+  }
+}
+Objects {
+  Id: 5835562392321396269
+  Name: "SwimmingAudioHandler"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9301756161479620603
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:WaterSplashVFX"
+      AssetReference {
+        Id: 16965134372838685175
+      }
+    }
+    Overrides {
+      Name: "cs:UnderwaterSFX"
+      ObjectReference {
+        SelfId: 15636002095975581394
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11204381079391085941
     }
   }
 }
@@ -58,7 +427,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16227534043720893935
+  ParentId: 11951527557497682472
   ChildIds: 17644292196257017936
   ChildIds: 10505394200489241392
   ChildIds: 8217724171443529518

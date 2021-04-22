@@ -16,6 +16,7 @@ Objects {
   }
   ChildIds: 11064051587082207804
   ChildIds: 6139923059512821780
+  ChildIds: 11951527557497682472
   ChildIds: 13334626079586580612
   ChildIds: 728687643111351772
   ChildIds: 7942565228071284537
@@ -24,11 +25,8 @@ Objects {
   ChildIds: 1551213308783341965
   ChildIds: 16625053971837530583
   ChildIds: 12935185397369316502
-  ChildIds: 10661356697076551539
   ChildIds: 14162296025304194376
   ChildIds: 12626000991766525324
-  ChildIds: 16227534043720893935
-  ChildIds: 8983380287600545020
   ChildIds: 6356897330857931981
   ChildIds: 5874015840417789592
   ChildIds: 3612684566017260609
@@ -347,64 +345,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8983380287600545020
-  Name: "KONZ"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "KONZ"
-  }
-}
-Objects {
-  Id: 16227534043720893935
-  Name: "For BEN"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "For BEN"
-  }
-}
-Objects {
   Id: 12626000991766525324
   Name: "Terrain"
   Transform {
@@ -468,40 +408,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Witcher"
-  }
-}
-Objects {
-  Id: 10661356697076551539
-  Name: "Julieta_Props"
-  Transform {
-    Location {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Julieta_Props"
-  }
-  InstanceHistory {
-    SelfId: 10661356697076551539
-    SubobjectId: 2005880449096804415
-    InstanceId: 1056700272226791114
-    TemplateId: 3016561015879885400
-    WasRoot: true
   }
 }
 Objects {
@@ -1844,6 +1750,35 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "UI_1"
+  }
+}
+Objects {
+  Id: 11951527557497682472
+  Name: "Misc"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Misc"
   }
 }
 Objects {

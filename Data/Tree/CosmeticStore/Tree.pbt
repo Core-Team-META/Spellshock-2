@@ -2,7 +2,7 @@ Name: "CosmeticStore"
 RootId: 5763622543987818276
 Objects {
   Id: 2393098310708211399
-  Name: "CosmeticStore KONZ"
+  Name: "CosmeticStore"
   Transform {
     Location {
     }

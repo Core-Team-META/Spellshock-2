@@ -278,6 +278,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10577491396371571795
+  Name: "Depth of Field Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_DOF"
+  }
+}
+Assets {
   Id: 10313519700874090434
   Name: "Metal Basic 01"
   PlatformAssetType: 2

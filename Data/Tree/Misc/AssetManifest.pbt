@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16215335743376183929
+  Name: "Meta Heartbeat Single 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_meta_heartbeat_single_01_Cue_ref"
+  }
+}
+Assets {
   Id: 15240646233324917545
   Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
   PlatformAssetType: 1
@@ -134,6 +143,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10431926636578901761
+  Name: "Ambience Underwater Bubbles Designed 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ambience_underwaterbubbles_designed_01_Cue_ref"
+  }
+}
+Assets {
   Id: 10378479423839914021
   Name: "Metal Iron 01"
   PlatformAssetType: 2
@@ -167,6 +185,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_grass_generic_001"
+  }
+}
+Assets {
+  Id: 8383064983738244106
+  Name: "Ship Boat Bell Ring 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ship_boat_bell_ring_01_Cue_ref"
   }
 }
 Assets {
