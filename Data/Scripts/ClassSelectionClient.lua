@@ -34,6 +34,7 @@ local RightPanel_AbilityOverviewPanel = RightPanel:GetCustomProperty("AbilityOve
 local RightPanel_GlobalStats = RightPanel:GetCustomProperty("GlobalStats"):WaitForObject()
 local RightPanel_AbilitiesLabel = RightPanel:GetCustomProperty("AbilitiesLabel"):WaitForObject()
 local RightPanel_ClassLevelPanel = RightPanel:GetCustomProperty("ClassLevelPanel"):WaitForObject()
+local RightPanel_CloseButton = RightPanel:GetCustomProperty("CloseButton"):WaitForObject()
 
 local RightPanel_UpgradeButtonPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeButtonPanel"):WaitForObject()
 local RightPanel_UpgradeButton = RightPanel_UpgradeButtonPanel:GetCustomProperty("UpgradeButton"):WaitForObject()
@@ -150,6 +151,10 @@ function OnMenuChanged(oldMenu, newMenu)
 		end
 		isUpgrading = false
 	end
+end
+
+function OnCloseButtonClicked(thisButton)
+	Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 end
 
 function EquipCostumeToAnimatedMesh(AnimMesh, CostumeTemplate, Stance, Animation)
@@ -1111,6 +1116,7 @@ end
 Events.Connect("Menu Changed", OnMenuChanged)
 --Events.Connect("GameStateChanged", OnGameStateChanged)
 GlobalStatsButton.clickedEvent:Connect(OnGlobalStatsClicked)
+RightPanel_CloseButton.clickedEvent:Connect(OnCloseButtonClicked)
 --Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

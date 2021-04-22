@@ -143,6 +143,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15450196944859968109
+  Name: "Crosshair 021"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Crosshair_021"
+  }
+}
+Assets {
   Id: 15204381781527651531
   Name: "Line Full 003"
   PlatformAssetType: 9
