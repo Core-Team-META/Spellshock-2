@@ -63,6 +63,8 @@ local function ClaimButtonPressed()
 
     LOCAL_PLAYER.clientUserData.hasSkippedReward = true
     Events.Broadcast("RestoreFromPodium")
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE.NONE)
+    Task.Wait()
     Events.Broadcast("Changing Menu", "ShowIcons")
     Events.Broadcast("Changing Menu", _G.MENU_TABLE.ClassSelection)
 end
