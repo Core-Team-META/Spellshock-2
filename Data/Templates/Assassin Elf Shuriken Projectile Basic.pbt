@@ -1,6 +1,6 @@
 Assets {
   Id: 7440180090514768907
-  Name: "Shuriken Projectile"
+  Name: "Assassin Elf Shuriken Projectile Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
