@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.12
+-- Date: 2021/4/22
+-- Version 0.2.0
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -102,6 +102,21 @@ local function GetReqCurrency(player, class, bind)
 end
 
 --@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@return int reqXP, int reqGold
+local function GetRemainingReqCurrency(player, class, bind)
+    local currentLevel = GetBindLevel(player, class, bind)
+    local totalReqXp = 0
+    local totalReqGold = 0
+    for i = currentLevel, #COST_TABLE do
+        totalReqXp = totalReqXp + COST_TABLE[i].reqXP
+        totalReqGold = totalReqGold + COST_TABLE[i].reqGold
+    end
+    return totalReqXp, totalReqGold
+end
+
+--@param object player
 local function SetAccountLevel(player)
     local accountLevel = 0
     for class = 1, 5 do
@@ -128,7 +143,6 @@ end
 
 --#DEV TOOLS
 if DEV_TOOLS then
-
     --@param object player
     --@param int class => id of class (API.TANK, API.MAGE)
     --@param int bind => id of bind (API.Q, API.E)
@@ -145,7 +159,6 @@ if DEV_TOOLS then
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
 
-   
     --@param object player
     --@param int class => id of class (API.TANK, API.MAGE)
     --@param int bind => id of bind (API.Q, API.E)
@@ -274,6 +287,21 @@ function API.BindLevelUp(player, class, bind)
     BindLevelUp(player, class, bind)
 end
 
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@return bool 
+function API.StillNeedsMoreXp(player, class, bind)
+  local totalReqXp, totalReqGold = GetRemainingReqCurrency(player, class, bind)
+  local currentXp = GetBindXp(player, class, bind)
+    if totalReqXp > currentXp then
+          return true
+    else
+        return false
+    end
+end
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.ChangeClass(player, class)
@@ -330,6 +358,7 @@ function API.SpawnAsset(template, optionalTable)
     resultTable = nil
     return newObject
 end
+
 
 function API.ProjectileSpawn(projectileTemplate, worldPosition, forwardVector, resultTable)
     local resultTable = {}
