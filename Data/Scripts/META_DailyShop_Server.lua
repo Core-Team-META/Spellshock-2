@@ -11,6 +11,24 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
+local function META_CP()
+    return _G["Class.Progression"]
+end
+
+local function META_CO()
+    return _G["Consumables"]
+end
+
+while not _G.PROGRESS_MULTIPLIER do
+    Task.Wait()
+end
+
+
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -52,6 +70,35 @@ local function OnDeleteAllPlayerData(player)
     end
 end
 
+
+--@params object player
+--@params table rewards
+--@params int mostPlayedClass
+local function GiveNoneCappedAbilityCard(player, reward, class)
+    local binds = {1, 2, 3, 4, 5}
+    class = class or REWARD_UTIL.GetRandomClass()
+    if not META_AP().StillNeedsMoreXp(player, class, reward.bind) then
+        table.remove(binds, reward.bind)
+        local bindIndex = math.random(1, #binds)
+        local randomBind = binds[bindIndex]
+        while not META_AP().StillNeedsMoreXp(player, class, randomBind) and #binds > 0 do
+            table.remove(binds, bindIndex)
+            if #binds > 0 then
+                bindIndex = math.random(1, #binds)
+                randomBind = binds[bindIndex]
+            end
+        end
+        if #binds > 0 then
+            reward.bind = randomBind
+            return reward
+        else -- Give up and give gold
+            return REWARD_UTIL.GetCosmeticReward()
+        end
+    end
+    return reward
+end
+
+
 --@param timestamp time
 --@return bool
 --(24 * 60 * 60)
@@ -66,6 +113,7 @@ local function CalculateRewardSlot(player)
     local randomChance = math.random(1, 100)
     if randomChance < 98 then
         local skillReward = REWARD_UTIL.GetSkillReward()
+        skillReward = GiveNoneCappedAbilityCard(player, skillReward, skillReward.class)
         skillReward.amount = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, tonumber(skillReward.amount))
         skillReward.P = 0
         tbl = skillReward
