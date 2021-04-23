@@ -202,6 +202,7 @@ Objects {
   ParentId: 11951527557497682472
   ChildIds: 5236111476486582131
   ChildIds: 14340600663168930898
+  ChildIds: 16274504631121882860
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -212,6 +213,39 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 16274504631121882860
+  Name: "Grandfather Clock Tick Tock Single 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14291644262325182723
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 3949834070363475541
+    }
+    Volume: 2
+    Falloff: -1
+    Radius: -1
   }
 }
 Objects {
@@ -251,7 +285,7 @@ Objects {
     Overrides {
       Name: "cs:AlternateSFX"
       ObjectReference {
-        SelfId: 5236111476486582131
+        SelfId: 16274504631121882860
       }
     }
   }

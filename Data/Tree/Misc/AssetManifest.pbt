@@ -233,6 +233,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3949834070363475541
+  Name: "Grandfather Clock Tick Tock Single 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_grandfather_clock_ticktock_single_01a_Cue_ref"
+  }
+}
+Assets {
   Id: 2536231208558228393
   Name: "Fantasy Castle Stairs Spiral Trim 01 - Large"
   PlatformAssetType: 1

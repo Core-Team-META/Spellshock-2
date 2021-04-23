@@ -7,7 +7,9 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local interval = 1.5
 local loopTask = nil
 
-local alternateAudio = {}
+local alternateAudio = {
+    ["9b1e28cbd1d74f5fb4c2ddea6d81fd39"] = true -- Sobchak
+}
 local noAudio = {}
 
 function OnGameStateChanged(oldState, newState)
