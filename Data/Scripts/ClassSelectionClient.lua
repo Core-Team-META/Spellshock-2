@@ -496,7 +496,7 @@ function UpdateClassInfo(thisButton)
 end
 
 function OnClassClicked(thisButton)
-	if not isAllowed(0.5) or isUpgrading then
+	if not isAllowed(0.2) or isUpgrading then
 		return
 	end
 	--if thisButton ~= CurrentClassButton then
@@ -562,7 +562,7 @@ local function UpdateText(parent, newText, extra)
 end
 
 function UpdateAbilityInfo(thisButton)
-	Task.Wait(0.3)
+	Task.Wait(0.1)
 	if not Object.IsValid(LOCAL_PLAYER) then
 		return
 	end
@@ -799,8 +799,13 @@ function OnUpgradeButtonClicked(thisButton)
 
 	preUpgradeGold = LOCAL_PLAYER:GetResource("GOLD")
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
+
+	while ResourceChangedEventListener and ResourceChangedEventListener.isConnected do
+		Task.Wait()
+	end
+
 	ResourceChangedEventListener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
-	Task.Wait(0.2)
+	Task.Wait()
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 
 	-- Make the animated mesh do an animation
