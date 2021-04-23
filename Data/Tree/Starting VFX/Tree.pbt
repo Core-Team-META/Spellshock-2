@@ -763,7 +763,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Preview"
       AssetReference {
-        Id: 4883165977894045775
+        Id: 1365417561647704522
       }
     }
     Overrides {
@@ -805,7 +805,7 @@ Objects {
     Overrides {
       Name: "cs:03_Shuriken_Projectile"
       AssetReference {
-        Id: 7440180090514768907
+        Id: 3729936422712249669
       }
     }
   }
@@ -2063,7 +2063,7 @@ Objects {
     Overrides {
       Name: "cs:03_Shuriken_Projectile"
       AssetReference {
-        Id: 7440180090514768907
+        Id: 145102434176499565
       }
     }
   }
@@ -2539,7 +2539,7 @@ Objects {
     Overrides {
       Name: "cs:03_Shuriken_Projectile"
       AssetReference {
-        Id: 7440180090514768907
+        Id: 647366899210104021
       }
     }
   }

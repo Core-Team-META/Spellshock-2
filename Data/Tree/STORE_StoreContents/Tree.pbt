@@ -4274,7 +4274,7 @@ Objects {
 }
 Objects {
   Id: 8269854931179384057
-  Name: "STORE_AssassinElfVenomBombFrost"
+  Name: "STORE_AssassinElfShurikenFrost"
   Transform {
     Location {
       X: -12835.8828
@@ -4293,7 +4293,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Venom Bomb"
+      String: "Frost Shuriken"
     }
     Overrides {
       Name: "cs:ID"
@@ -4346,7 +4346,7 @@ Objects {
     Overrides {
       Name: "cs:TypeIcon"
       AssetReference {
-        Id: 6375726263607251280
+        Id: 17753357011527774418
       }
     }
     Overrides {
@@ -4371,7 +4371,7 @@ Objects {
 }
 Objects {
   Id: 6443390205166605684
-  Name: "STORE_AssassinOrcVenomBombFire"
+  Name: "STORE_AssassinOrcShurikenFire"
   Transform {
     Location {
       X: -12835.8828
@@ -4390,7 +4390,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Venom Bomb"
+      String: "Fire Shuriken"
     }
     Overrides {
       Name: "cs:ID"
@@ -4443,7 +4443,7 @@ Objects {
     Overrides {
       Name: "cs:TypeIcon"
       AssetReference {
-        Id: 6375726263607251280
+        Id: 17753357011527774418
       }
     }
     Overrides {
@@ -4468,7 +4468,7 @@ Objects {
 }
 Objects {
   Id: 2554035532820962755
-  Name: "STORE_AssassinElfVenomBombBasic"
+  Name: "STORE_AssassinElfShurikenBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -4487,7 +4487,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Venom Bomb"
+      String: "Common Shuriken"
     }
     Overrides {
       Name: "cs:ID"
@@ -4540,7 +4540,7 @@ Objects {
     Overrides {
       Name: "cs:TypeIcon"
       AssetReference {
-        Id: 6375726263607251280
+        Id: 17753357011527774418
       }
     }
   }
@@ -4561,7 +4561,7 @@ Objects {
 }
 Objects {
   Id: 7526206056502814933
-  Name: "STORE_AssassinOrcVenomBombBasic"
+  Name: "STORE_AssassinOrcShurikenBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -4580,7 +4580,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Venom Bomb"
+      String: "Common Shuriken"
     }
     Overrides {
       Name: "cs:ID"
@@ -4633,7 +4633,7 @@ Objects {
     Overrides {
       Name: "cs:TypeIcon"
       AssetReference {
-        Id: 6375726263607251280
+        Id: 17753357011527774418
       }
     }
   }
