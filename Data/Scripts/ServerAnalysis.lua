@@ -187,7 +187,7 @@ function RecordPlayerWeapons()
 		
 		for _,equipment in ipairs(player:GetEquipment()) do
 			local key = equipment.name
-			if key == "Tank" 
+			if key == "Warrior" 
 			or key == "Hunter" 
 			or key == "Mage" 
 			or key == "Assassin"

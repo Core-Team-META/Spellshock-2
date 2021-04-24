@@ -217,7 +217,7 @@ function CalculatePlacement()
 	local AB = playerViewDirection
 	playerViewPosition = playerViewPosition + (AP .. AB) / (AB .. AB) * AB
 
-	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
+	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().WARRIOR, META_AP().E)
 	local PlacementRange
 	if AbilityMod == "NONE" then
 		PlacementRange = DEFAULT_Range

@@ -4529,7 +4529,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ClassID"
-      String: "TANK"
+      String: "WARRIOR"
     }
     Overrides {
       Name: "cs:OrcDescription"

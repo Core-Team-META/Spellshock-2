@@ -89,7 +89,7 @@ local function SetChildrenFontSize(uiObj, _size) -- <-- generic children text fu
 end
 
 local function GetTitle(class, level)
-    if class == MPC_API.CLASS.TANK then
+    if class == MPC_API.CLASS.WARRIOR then
         if level < 5 then
             return 'Trainee'
         elseif level < 10 then

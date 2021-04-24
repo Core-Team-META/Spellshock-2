@@ -21,7 +21,7 @@ end
 
 function OnClassIconSet(name, icon)
     ClassName.text = name
-    if name == "Tank" then
+    if name == "Warrior" then
         ClassName.text = "Warrior"
     end
     ClassName:GetChildren()[1].text  = ClassName.text

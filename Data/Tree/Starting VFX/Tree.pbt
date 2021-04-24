@@ -8124,7 +8124,7 @@ Objects {
 }
 Objects {
   Id: 4048957817673989693
-  Name: "Tank"
+  Name: "Warrior"
   Transform {
     Location {
     }
@@ -8216,7 +8216,7 @@ Objects {
 }
 Objects {
   Id: 14779216997093971490
-  Name: "Tank_Elf_Military"
+  Name: "Warrior_Elf_Military"
   Transform {
     Location {
     }
@@ -8306,7 +8306,7 @@ Objects {
 }
 Objects {
   Id: 12357765767423278140
-  Name: "Tank_Elf_Afterlife"
+  Name: "Warrior_Elf_Afterlife"
   Transform {
     Location {
     }
@@ -8396,7 +8396,7 @@ Objects {
 }
 Objects {
   Id: 5451145470384665415
-  Name: "Tank_Elf_Justice"
+  Name: "Warrior_Elf_Justice"
   Transform {
     Location {
     }
@@ -8486,7 +8486,7 @@ Objects {
 }
 Objects {
   Id: 15505660901637873497
-  Name: "Tank_Elf_Punk"
+  Name: "Warrior_Elf_Punk"
   Transform {
     Location {
     }
@@ -8576,7 +8576,7 @@ Objects {
 }
 Objects {
   Id: 4230043731780213105
-  Name: "Tank_Elf_Royal"
+  Name: "Warrior_Elf_Royal"
   Transform {
     Location {
     }
@@ -8666,7 +8666,7 @@ Objects {
 }
 Objects {
   Id: 1885444752405246680
-  Name: "Tank_Elf_Elemental"
+  Name: "Warrior_Elf_Elemental"
   Transform {
     Location {
     }
@@ -8750,7 +8750,7 @@ Objects {
 }
 Objects {
   Id: 2038842352105928810
-  Name: "Tank_Elf_Epic"
+  Name: "Warrior_Elf_Epic"
   Transform {
     Location {
     }
@@ -8840,7 +8840,7 @@ Objects {
 }
 Objects {
   Id: 3840518523172045225
-  Name: "Tank_Elf_Legendary"
+  Name: "Warrior_Elf_Legendary"
   Transform {
     Location {
     }
@@ -8930,7 +8930,7 @@ Objects {
 }
 Objects {
   Id: 11886591524820250549
-  Name: "Tank_Elf_Rare"
+  Name: "Warrior_Elf_Rare"
   Transform {
     Location {
     }
@@ -9020,7 +9020,7 @@ Objects {
 }
 Objects {
   Id: 15023700050194966386
-  Name: "Tank_Elf_Default"
+  Name: "Warrior_Elf_Default"
   Transform {
     Location {
     }
@@ -9142,7 +9142,7 @@ Objects {
 }
 Objects {
   Id: 11323875036475714633
-  Name: "Tank_Orc_Military"
+  Name: "Warrior_Orc_Military"
   Transform {
     Location {
     }
@@ -9232,7 +9232,7 @@ Objects {
 }
 Objects {
   Id: 10350562740622549657
-  Name: "Tank_Orc_Afterlife"
+  Name: "Warrior_Orc_Afterlife"
   Transform {
     Location {
     }
@@ -9322,7 +9322,7 @@ Objects {
 }
 Objects {
   Id: 5961630843074848889
-  Name: "Tank_Orc_Justice"
+  Name: "Warrior_Orc_Justice"
   Transform {
     Location {
     }
@@ -9412,7 +9412,7 @@ Objects {
 }
 Objects {
   Id: 17015824175176787298
-  Name: "Tank_Orc_Punk"
+  Name: "Warrior_Orc_Punk"
   Transform {
     Location {
     }
@@ -9502,7 +9502,7 @@ Objects {
 }
 Objects {
   Id: 14713392221952514279
-  Name: "Tank_Orc_Royal"
+  Name: "Warrior_Orc_Royal"
   Transform {
     Location {
     }
@@ -9592,7 +9592,7 @@ Objects {
 }
 Objects {
   Id: 5338862989750955679
-  Name: "Tank_Orc_Elemental"
+  Name: "Warrior_Orc_Elemental"
   Transform {
     Location {
     }
@@ -9676,7 +9676,7 @@ Objects {
 }
 Objects {
   Id: 16891150067628845163
-  Name: "Tank_Orc_Epic"
+  Name: "Warrior_Orc_Epic"
   Transform {
     Location {
     }
@@ -9766,7 +9766,7 @@ Objects {
 }
 Objects {
   Id: 16439944504910166303
-  Name: "Tank_Orc_Legendary"
+  Name: "Warrior_Orc_Legendary"
   Transform {
     Location {
     }
@@ -9856,7 +9856,7 @@ Objects {
 }
 Objects {
   Id: 150079195641429251
-  Name: "Tank_Orc_Rare"
+  Name: "Warrior_Orc_Rare"
   Transform {
     Location {
     }
@@ -9946,7 +9946,7 @@ Objects {
 }
 Objects {
   Id: 11511678337778933379
-  Name: "Tank_Orc_Default"
+  Name: "Warrior_Orc_Default"
   Transform {
     Location {
     }

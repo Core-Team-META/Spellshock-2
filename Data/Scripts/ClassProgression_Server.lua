@@ -26,7 +26,7 @@ API.CLASS_LEVEL = CONST.CLASS_LEVEL
 API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
 -- Builds class keys into the global table for easy access
--- EX => API.TANK = 1
+-- EX => API.WARRIOR = 1
 for class, key in pairs(CONST.CLASS) do
     API[class] = key
 end
@@ -50,7 +50,7 @@ local function SetClassLevelResources(player, tbl)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 local function SetClassLevel(player, class, level)
     classProgression[player.id][class][API.LEVEL] = level
     SetClassLevelResources(player, classProgression[player.id])
@@ -60,7 +60,7 @@ local function SetClassLevel(player, class, level)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 local function SetClassXp(player, class, xp)
     classProgression[player.id][class][API.XP] = xp
     player:SetResource("CLASS_XP", xp)
@@ -103,7 +103,7 @@ function BuildDataTable(player, data)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function ClassLevelUp(player, class)
     local level = API.GetClassLevel(player, class)
     local reqXp = GetReqXp(level)
@@ -140,7 +140,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetClassLevel(player, class)
     if
         not classProgression[player.id] or not classProgression[player.id][class] or
@@ -155,13 +155,13 @@ function API.GetClassLevel(player, class)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetClassXP(player, class)
     return tonumber(classProgression[player.id][class][CONST.PROGRESS.XP])
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.AddXP(player, class, xp)
     if classProgression[player.id][class][CONST.PROGRESS.LEVEL] == CONST.MAX_CLASS_LEVEL then
         return
@@ -174,7 +174,7 @@ function API.AddXP(player, class, xp)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.SetClassLevel(player, class)
     local classLevel = API.GetClassLevel(player, class)
     player:SetResource(CONST.CLASS_LEVEL, classLevel)

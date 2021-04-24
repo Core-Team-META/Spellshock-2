@@ -28,7 +28,7 @@ API.CLASS_LEVEL = CONST.CLASS_LEVEL
 API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
 -- Builds class keys into the global table for easy access
--- EX => API.TANK = 1
+-- EX => API.WARRIOR = 1
 for class, key in pairs(CONST.CLASS) do
     API[class] = key
 end
@@ -85,20 +85,20 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentClassLevel(player)
     return LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetClassLevel(player, class)
     return player:GetResource(UTIL.GetClassLevelString(class))
 end
 
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetClassXp(player, class)
     return player:GetResource(UTIL.GetClassXPString(class))
 end

@@ -876,7 +876,7 @@ end
 	if not player.clientUserData.CurrentClass then
 		player.clientUserData.CurrentClass = player:GetResource("CLASS_MAP")
 		if player.clientUserData.CurrentClass == 0 then
-			player.clientUserData.CurrentClass = META_AP().TANK
+			player.clientUserData.CurrentClass = META_AP().WARRIOR
 		end
 	end
 

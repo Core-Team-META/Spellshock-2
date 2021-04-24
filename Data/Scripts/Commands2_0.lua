@@ -1,4 +1,4 @@
-Commands = {}
+--[[Commands = {}
 
 function ReturnPlayerByName(string)
     if not string then
@@ -68,7 +68,7 @@ function Commands.changeteam(player, message)
     return "Player new team " .. tostring(player.team)
 end
 
-function Commands.tank(player, message)
+function Commands.warrior(player, message)
     Events.Broadcast("CH_ClassChanged_SERVER", player, 1)
 end
 
@@ -142,12 +142,7 @@ function Commands.speed(player, message)
 end
 
 function Commands.win(player, message) --
-    --[[ lastTeam = player.team or 1
-    _G["GameWinner"] = lastTeam
-    Events.Broadcast("TeamVictory", lastTeam)
-    if _G["ABGS"] then
-        _G["ABGS"].SetGameState(_G["ABGS"].GAME_STATE_ROUND_END)
-    end]]
+
 end
 
 function Commands.god(player, message)
@@ -202,3 +197,4 @@ if (Environment.IsClient()) then
 end
 
 return Commands
+--]]

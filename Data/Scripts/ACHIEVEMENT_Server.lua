@@ -65,7 +65,7 @@ local function OnResourceChanged(player, resName, resAmt)
     if resName == CONST.ROUND_DAMAGE then
         local class = player:GetResource(CONST.CLASS_RES)
         -- Class Based Damage Achievements
-        if class == CONST.CLASS.TANK then
+        if class == CONST.CLASS.WARRIOR then
             CheckClassDamageAchievements(player, "ASWARDMG", class)
         elseif class == CONST.CLASS.MAGE then
             CheckClassDamageAchievements(player, "ASMAGDMG", class)

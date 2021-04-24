@@ -91,7 +91,7 @@ function OnBoulderBeginOverlap(thisTrigger, other)
 		source = PickupAbility.owner,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Tank_T"}
+		tags = {id = "Warrior_T"}
 	}
 	COMBAT().ApplyDamage(attackData)
 end
@@ -163,7 +163,7 @@ end
 
 function OnEquip(equipment, player)
 	local skin = Equipment:GetCustomProperty("TID") or 1
-	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().T)
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().WARRIOR, player.team, skin, META_AP().T)
 end
 
 function OnUnequip(equipment, player)

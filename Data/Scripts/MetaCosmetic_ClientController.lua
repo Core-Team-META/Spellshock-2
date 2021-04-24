@@ -94,7 +94,7 @@ function API.ConvertSkinStringToId(str)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind, team)
     while not _G.COSMETIC_TABLE_BUILT do
@@ -110,7 +110,7 @@ end
 
 --@param object player
 --@param int bind => id of bind (API.Q, API.E)
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
     while not _G.COSMETIC_TABLE_BUILT do
         Task.Wait()
@@ -125,7 +125,7 @@ end
 
 --@param object player
 --@param int bind => id of bind (API.Q, API.E)
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCosmeticMuid(player, class, team, skin, bind)
     while not _G.COSMETIC_TABLE_BUILT do
         Task.Wait()
@@ -137,7 +137,7 @@ function API.GetCosmeticMuid(player, class, team, skin, bind)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentCostume(player, class)
     while not _G.COSMETIC_TABLE_BUILT do
         Task.Wait()

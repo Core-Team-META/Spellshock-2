@@ -22,7 +22,7 @@ local ABGS = require(script:GetCustomProperty("ABGS"))
 local COSTUME_EQUIPMENT_TEMPLATE = script:GetCustomProperty("Costume_Equipment")
 
 local ClassTemplates = {
-    [META_AP().TANK] = "EC351247C6D7EC9F:Tank",
+    [META_AP().WARRIOR] = "EC351247C6D7EC9F:Warrior",
     [META_AP().HUNTER] = "EF4AB61158655526:Hunter",
     [META_AP().MAGE] = "012C2D0B7C71C263:Mage",
     [META_AP().ASSASSIN] = "F70F7C3FD947F9E6:Assassin",
@@ -30,7 +30,7 @@ local ClassTemplates = {
 }
 
 local Class_Stances = {
-    [META_AP().TANK] = "2hand_melee_stance",
+    [META_AP().WARRIOR] = "2hand_melee_stance",
     [META_AP().HUNTER] = "2hand_rifle_aim_shoulder",
     [META_AP().MAGE] = "2hand_staff_ready",
     [META_AP().ASSASSIN] = "unarmed_ready",
@@ -105,7 +105,7 @@ end
 function OnRewardSelected(player)
     local classID = player:GetResource("CLASS_MAP")
     if classID == 0 then
-        classID = META_AP().TANK
+        classID = META_AP().WARRIOR
     end
     UnequipPlayer(player)
     EquipPlayer(player, classID)
@@ -123,7 +123,7 @@ function OnGameStateChanged(oldState, newState)
 
             local classID = player:GetResource("CLASS_MAP")
             if classID == 0 then
-                classID = META_AP().TANK
+                classID = META_AP().WARRIOR
             end
 
             EquipPlayer(player, classID)
@@ -141,7 +141,7 @@ function OnGameStateChanged(oldState, newState)
 
             local classID = player:GetResource("CLASS_MAP")
             if classID == 0 then
-                classID = META_AP().TANK
+                classID = META_AP().WARRIOR
             end
 
             local newOutfit = World.SpawnAsset(COSTUME_EQUIPMENT_TEMPLATE)
@@ -159,7 +159,7 @@ end
 -- NOTE: Context called from Meta Player Storage Manager
 function OnPlayerJoined(player, classId)
     classId = classId or math.random(5)
-    --player.serverUserData.CurrentClass = META_AP().TANK
+    --player.serverUserData.CurrentClass = META_AP().WARRIOR
     player:SetResource("CLASS_MAP", classId)
     player.animationStance = Class_Stances[classId]
     local currentState = ABGS.GetGameState()
@@ -170,7 +170,7 @@ function OnPlayerJoined(player, classId)
         end
         EquipPlayer(player, classId)
     elseif currentState == ABGS.GAME_STATE_ROUND then
-        --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
+        --local newClass = World.SpawnAsset(ClassTemplates[META_AP().WARRIOR])
         --newClass:Equip(player)
         player:SetVisibility(false)
     elseif
