@@ -98,7 +98,9 @@ local function GiveNoneCappedAbilityCard(player, reward, class)
             reward.bind = randomBind
             return reward
         elseif META_CP().GetClassLevel(player, class) < CONST.MAX_CLASS_LEVEL then -- All abilities capped, give class XP
-            return REWARD_UTIL.GetClassXPReward()
+            local reward = REWARD_UTIL.GetClassXPReward()
+            reward.class = class
+            return reward
         else -- Give up and give gold
             return REWARD_UTIL.GetGoldReward()
         end
