@@ -7,7 +7,7 @@ Assets {
       RootId: 11399389448864574312
       Objects {
         Id: 11399389448864574312
-        Name: "Assassin Wraith Strike Preview Basic 2"
+        Name: "Assassin Wraith Strike Preview Basic"
         Transform {
           Scale {
             X: 1
@@ -15,10 +15,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 5545808356861426943
         ChildIds: 8714446392893039297
         ChildIds: 15916360627119849109
+        ChildIds: 3383031621996934304
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -245,6 +246,138 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
+      Objects {
+        Id: 3383031621996934304
+        Name: "Generic Orc Preview Circle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 19
+            Y: 19
+            Z: 19
+          }
+        }
+        ParentId: 11399389448864574312
+        ChildIds: 14174371378790790714
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 14174371378790790714
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.39
+            Y: 0.39
+            Z: 2.5
+          }
+        }
+        ParentId: 3383031621996934304
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Sides"
+            Int: 3
+          }
+          Overrides {
+            Name: "bp:Stroke Width"
+            Float: 0.0188326165
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Volume Display Color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              R: 0.3
+              B: 0.269999743
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Indent"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Corner Rounding"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Blur"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Fade Delay"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Fade Time"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.14492546
+              B: 0.18
+              A: 0.2
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 9377227685447941950
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
     }
     Assets {
       Id: 8183955935867624386
@@ -271,6 +404,15 @@ Assets {
       PrimaryAsset {
         AssetType: "DecalBlueprintAssetRef"
         AssetId: "bp_decal_scorchmark"
+      }
+    }
+    Assets {
+      Id: 9377227685447941950
+      Name: "2D Basic Shapes Decal"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "dcl_basicShapes"
       }
     }
     PrimaryAssetId {
