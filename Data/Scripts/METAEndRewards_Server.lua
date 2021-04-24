@@ -131,6 +131,7 @@ local function CalculateSlot1(player)
         reward = REWARD_UTIL.GetSkillReward()
         reward = GiveNoneCappedAbilityCard(player, reward, class)
     end
+    reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
     return reward
 end
 
@@ -162,7 +163,7 @@ local function CalculateRegularSlot(player)
         reward = REWARD_UTIL.GetSkillReward()
         reward = GiveNoneCappedAbilityCard(player, reward, reward.class)
     end
-
+    reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
     return reward
 end
 

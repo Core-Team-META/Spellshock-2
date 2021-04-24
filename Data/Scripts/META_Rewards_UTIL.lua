@@ -156,7 +156,6 @@ function API.GetSkillReward()
     reward.type = API.REWARD_TYPES.SKILLPOINTS
     reward.bind = API.GetRandomBind()
     reward.class = API.GetRandomClass()
-
     return reward
 end
 
