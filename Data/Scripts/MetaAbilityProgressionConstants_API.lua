@@ -42,7 +42,7 @@ API.TEAM = {
 ------------------------------------------------------------------------------------------------------------------------
 -- CLASS KEYS
 API.CLASS = {
-    TANK = 1,
+    WARRIOR = 1,
     MAGE = 2,
     HUNTER = 3,
     HEALER = 4,
@@ -81,7 +81,7 @@ API.MAX_LEVEL = 10
 API.MAX_CLASS_LEVEL = 50
 
 API.CLASS_NAME = {
-    [API.CLASS.TANK] = "Warrior",
+    [API.CLASS.WARRIOR] = "Warrior",
     [API.CLASS.MAGE] = "Mage",
     [API.CLASS.HUNTER] = "Hunter",
     [API.CLASS.HEALER] = "Healer",
@@ -89,7 +89,7 @@ API.CLASS_NAME = {
 }
 
 API.CLASS_HEALTH = {
-    [API.CLASS.TANK] = 400,
+    [API.CLASS.WARRIOR] = 400,
     [API.CLASS.MAGE] = 300,
     [API.CLASS.HUNTER] = 350,
     [API.CLASS.HEALER] = 300,
@@ -97,7 +97,7 @@ API.CLASS_HEALTH = {
 }
 
 API.CLASS_REGEN = {
-    [API.CLASS.TANK] = 16.0,
+    [API.CLASS.WARRIOR] = 16.0,
     [API.CLASS.MAGE] = 4.0,
     [API.CLASS.HUNTER] = 6.0,
     [API.CLASS.HEALER] = 2.0,

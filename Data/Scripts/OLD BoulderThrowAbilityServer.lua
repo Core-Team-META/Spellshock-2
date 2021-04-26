@@ -75,7 +75,7 @@ function OnBeginOverlap(thisTrigger, other)
 		source = PickupAbility.owner,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Tank_T"}
+		tags = {id = "Warrior_T"}
 	}
 	COMBAT().ApplyDamage(attackData)
 
@@ -119,7 +119,7 @@ function OnInterrupted(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T,  META_AP().TANK)
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T,  META_AP().WARRIOR)
 end
 
 function OnUnequip(equipment, player)

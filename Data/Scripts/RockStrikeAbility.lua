@@ -52,7 +52,7 @@ function OnBeginOverlap(thisTrigger, other)
 		source = SpecialAbility.owner,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Tank_T"}
+		tags = {id = "Warrior_T"}
 	}
 	COMBAT().ApplyDamage(attackData)
 	
@@ -151,7 +151,7 @@ end
 
 function OnEquip(equipment, player)
 	local skin = equipment:GetCustomProperty("QID") or 1
-	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().Q)
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().WARRIOR, player.team, skin, META_AP().Q)
 end
 
 function Tick(deltaTime)

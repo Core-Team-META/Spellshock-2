@@ -30,7 +30,7 @@ end
 -- PUBLIC API
 ------------------------------------------------------------------------------------------------------------------------
 
---@param String or Int | id => "TANK", "MAGE" or Index
+--@param String or Int | id => "WARRIOR", "MAGE" or Index
 --@return classTable
 function API.GetClassTable(id)
     if API[id] == nil then
@@ -77,8 +77,8 @@ cosumableTable = {
 
 --Class Ability Values
 classTable = {
-    -- Tank
-    [CONST.CLASS.TANK] = {
+    -- Warrior
+    [CONST.CLASS.WARRIOR] = {
         --Rock Strike
         [CONST.BIND.Q] = {
             --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount

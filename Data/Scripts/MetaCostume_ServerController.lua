@@ -42,7 +42,7 @@ local function Split(s, delimiter)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
 local function CreateNewCosmeticTable(player, class, team, skin, bind)
@@ -75,7 +75,7 @@ local function IsCosmeticValid(class, team, skin, bind)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
 local function UnlockCosmetic(player, class, team, skin, bind)
@@ -98,7 +98,7 @@ local function SetCurrentCosmetic(player, skinId)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int team
 --@param int bind => id of bind (API.Q, API.E)
 --@param int skin
@@ -252,7 +252,7 @@ function API.ConvertSkinStringToId(str)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
 function API.UnlockCosmetic(player, class, team, skin, bind)
@@ -260,7 +260,7 @@ function API.UnlockCosmetic(player, class, team, skin, bind)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param int skinId
 function API.SetCurrentCosmetic(player, class, bind, skinId)
@@ -268,7 +268,7 @@ function API.SetCurrentCosmetic(player, class, bind, skinId)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param int skinId
 function API.SetBindCosmetic(player, class, team, bind, skinId)
@@ -276,7 +276,7 @@ function API.SetBindCosmetic(player, class, team, bind, skinId)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind)
     --return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
@@ -290,7 +290,7 @@ end
 
 --@param object player
 --@param int bind => id of bind (API.Q, API.E)
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     local skinId = API.GetCurrentCosmeticId(player, class, bind)
@@ -305,7 +305,7 @@ function API.BuildCosmeticStringTable(player, str)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentCostume(player, class)
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
     local skinId = API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
@@ -322,7 +322,7 @@ end
 
 --@param object player
 --@param int bind => id of bind (API.Q, API.E)
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCosmeticMuid(player, class, team, skin, bind)
     return cosmeticTable[class][team][skin][bind]
 end

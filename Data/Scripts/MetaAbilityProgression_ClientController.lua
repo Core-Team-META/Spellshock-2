@@ -28,7 +28,7 @@ API.GOLD_RES = CONST.GOLD
 API.COSMETIC_TOKEN_RES = CONST.COSMETIC_TOKEN
 
 -- Builds class keys into the global table for easy access
--- EX => API.TANK = 1
+-- EX => API.WARRIOR = 1
 for class, key in pairs(CONST.CLASS) do
     API[class] = key
 end
@@ -51,7 +51,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@return int reqXP, int reqGold
 local function GetReqCurrency(player, class, bind, level)
@@ -71,7 +71,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetBindLevel(player, bind, class)
     if not class then
@@ -84,7 +84,7 @@ function API.GetBindLevel(player, bind, class)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@return bool
 function API.IsMaxLevel(player, class, bind)
@@ -94,7 +94,7 @@ function API.IsMaxLevel(player, class, bind)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@return int => XP of Class Bind
 function API.GetAbilityShards(player, class, bind)
@@ -105,7 +105,7 @@ function API.GetAbilityShards(player, class, bind)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param int ammount => amount of XP to add
 function API.AddBindXp(player, class, bind, ammount)
@@ -113,7 +113,7 @@ function API.AddBindXp(player, class, bind, ammount)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param int ammount => amount of XP to add
 function API.ChangeBindLevel(player, class, bind, ammount)
@@ -122,14 +122,14 @@ end
 
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.BindLevelUp(player, class, bind)
     Events.BroadcastToServer("META_AP.BindLevelUp", player, class, bind)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param bool plus => true adds + 1 level
 --@return table bindLevel table
@@ -143,7 +143,7 @@ end
 
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@return int reqXP, int reqGold
 function API.GetReqCurrency(player, class, bind)

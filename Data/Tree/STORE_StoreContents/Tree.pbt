@@ -13814,7 +13814,7 @@ Objects {
 }
 Objects {
   Id: 6411471204784472395
-  Name: "Tank"
+  Name: "Warrior"
   Transform {
     Location {
       X: -16801.8594
@@ -13882,7 +13882,7 @@ Objects {
 }
 Objects {
   Id: 13562251019008157523
-  Name: "STORE_TankElfBoulderThrowFrost"
+  Name: "STORE_WarriorElfBoulderThrowFrost"
   Transform {
     Location {
       X: -12835.8828
@@ -13905,7 +13905,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Elemental_T"
+      String: "Warrior_Elf_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -13979,7 +13979,7 @@ Objects {
 }
 Objects {
   Id: 2031435076255499022
-  Name: "STORE_TankOrcBoulderThrowFire"
+  Name: "STORE_WarriorOrcBoulderThrowFire"
   Transform {
     Location {
       X: -12835.8828
@@ -14002,7 +14002,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_T"
+      String: "Warrior_Orc_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14076,7 +14076,7 @@ Objects {
 }
 Objects {
   Id: 13661502856320192871
-  Name: "STORE_TankElfBoulderThrowBasic"
+  Name: "STORE_WarriorElfBoulderThrowBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -14099,7 +14099,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Common_T"
+      String: "Warrior_Elf_Common_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14169,7 +14169,7 @@ Objects {
 }
 Objects {
   Id: 5414143562083384281
-  Name: "STORE_TankOrcBoulderThrowBasic"
+  Name: "STORE_WarriorOrcBoulderThrowBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -14192,7 +14192,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Common_T"
+      String: "Warrior_Orc_Common_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14262,7 +14262,7 @@ Objects {
 }
 Objects {
   Id: 17618655501180603730
-  Name: "STORE_TankElfShieldDashFrost"
+  Name: "STORE_WarriorElfShieldDashFrost"
   Transform {
     Location {
       X: -12835.8828
@@ -14285,7 +14285,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Elemental_R"
+      String: "Warrior_Elf_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14359,7 +14359,7 @@ Objects {
 }
 Objects {
   Id: 2066783242318707754
-  Name: "STORE_TankOrcShieldDashFire"
+  Name: "STORE_WarriorOrcShieldDashFire"
   Transform {
     Location {
       X: -12835.8828
@@ -14382,7 +14382,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_R"
+      String: "Warrior_Orc_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14456,7 +14456,7 @@ Objects {
 }
 Objects {
   Id: 4364690750672654805
-  Name: "STORE_TankElfShieldDashBasic"
+  Name: "STORE_WarriorElfShieldDashBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -14479,7 +14479,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Common_R"
+      String: "Warrior_Elf_Common_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14549,7 +14549,7 @@ Objects {
 }
 Objects {
   Id: 17668864227279624800
-  Name: "STORE_TankOrcShieldDashBasic"
+  Name: "STORE_WarriorOrcShieldDashBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -14572,7 +14572,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Common_R"
+      String: "Warrior_Orc_Common_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14642,7 +14642,7 @@ Objects {
 }
 Objects {
   Id: 12477078923106131111
-  Name: "STORE_TankElfStoneWallFrost"
+  Name: "STORE_WarriorElfStoneWallFrost"
   Transform {
     Location {
       X: -12835.8828
@@ -14665,7 +14665,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Elemental_E"
+      String: "Warrior_Elf_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14739,7 +14739,7 @@ Objects {
 }
 Objects {
   Id: 15119124504491317958
-  Name: "STORE_TankOrcStoneWallFire"
+  Name: "STORE_WarriorOrcStoneWallFire"
   Transform {
     Location {
       X: -12835.8828
@@ -14762,7 +14762,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_E"
+      String: "Warrior_Orc_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14836,7 +14836,7 @@ Objects {
 }
 Objects {
   Id: 920003657516602780
-  Name: "STORE_TankElfStoneWallBasic"
+  Name: "STORE_WarriorElfStoneWallBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -14859,7 +14859,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Common_E"
+      String: "Warrior_Elf_Common_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -14929,7 +14929,7 @@ Objects {
 }
 Objects {
   Id: 8652970605773719260
-  Name: "STORE_TankOrcStoneWallBasic"
+  Name: "STORE_WarriorOrcStoneWallBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -14952,7 +14952,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Common_E"
+      String: "Warrior_Orc_Common_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15022,7 +15022,7 @@ Objects {
 }
 Objects {
   Id: 1297464973745287994
-  Name: "STORE_TankElfRockStrikeFrost"
+  Name: "STORE_WarriorElfRockStrikeFrost"
   Transform {
     Location {
       X: -12835.8828
@@ -15045,7 +15045,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Elemental_Q"
+      String: "Warrior_Elf_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15119,7 +15119,7 @@ Objects {
 }
 Objects {
   Id: 12647329218218582882
-  Name: "STORE_TankOrcRockStrikeFire"
+  Name: "STORE_WarriorOrcRockStrikeFire"
   Transform {
     Location {
       X: -12835.8828
@@ -15142,7 +15142,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_Q"
+      String: "Warrior_Orc_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15216,7 +15216,7 @@ Objects {
 }
 Objects {
   Id: 15012338187201026628
-  Name: "STORE_TankElfRockStrikeBasic"
+  Name: "STORE_WarriorElfRockStrikeBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -15239,7 +15239,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Common_Q"
+      String: "Warrior_Elf_Common_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15309,7 +15309,7 @@ Objects {
 }
 Objects {
   Id: 2075351885057384382
-  Name: "STORE_TankOrcRockStrikeBasic"
+  Name: "STORE_WarriorOrcRockStrikeBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -15332,7 +15332,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Common_Q"
+      String: "Warrior_Orc_Common_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15402,7 +15402,7 @@ Objects {
 }
 Objects {
   Id: 13149701031558610285
-  Name: "STORE_TankElfCostumeAfterlife"
+  Name: "STORE_WarriorElfCostumeAfterlife"
   Transform {
     Location {
       X: -12835.8809
@@ -15425,7 +15425,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Afterlife_Outfit"
+      String: "Warrior_Elf_Afterlife_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15499,7 +15499,7 @@ Objects {
 }
 Objects {
   Id: 7268588817221443355
-  Name: "STORE_TankOrcCostumeAfterlife"
+  Name: "STORE_WarriorkOrcCostumeAfterlife"
   Transform {
     Location {
       X: -12835.8809
@@ -15522,7 +15522,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Afterlife_Outfit"
+      String: "Warrior_Orc_Afterlife_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15596,7 +15596,7 @@ Objects {
 }
 Objects {
   Id: 284906943835425740
-  Name: "STORE_TankElfCostumePunk"
+  Name: "STORE_WarriorElfCostumePunk"
   Transform {
     Location {
       X: -12835.8809
@@ -15619,7 +15619,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Punk_Outfit"
+      String: "Warrior_Elf_Punk_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15693,7 +15693,7 @@ Objects {
 }
 Objects {
   Id: 179713294667721768
-  Name: "STORE_TankOrcCostumePunk"
+  Name: "STORE_WarriorOrcCostumePunk"
   Transform {
     Location {
       X: -12835.8809
@@ -15716,7 +15716,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Punk_Outfit"
+      String: "Warrior_Orc_Punk_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15790,7 +15790,7 @@ Objects {
 }
 Objects {
   Id: 14185998502530551114
-  Name: "STORE_TankElfCostumeFrost"
+  Name: "STORE_WarriorElfCostumeFrost"
   Transform {
     Location {
       X: -12835.8828
@@ -15813,7 +15813,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Elemental_Outfit"
+      String: "Warrior_Elf_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15887,7 +15887,7 @@ Objects {
 }
 Objects {
   Id: 1735279658689446259
-  Name: "STORE_TankOrcCostumeFire"
+  Name: "STORE_WarriorOrcCostumeFire"
   Transform {
     Location {
       X: -12835.8828
@@ -15910,7 +15910,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_Outfit"
+      String: "Warrior_Orc_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -15984,7 +15984,7 @@ Objects {
 }
 Objects {
   Id: 7966648441631401621
-  Name: "STORE_TankElfCostumeJustice"
+  Name: "STORE_WarriorElfCostumeJustice"
   Transform {
     Location {
       X: -12835.8809
@@ -16007,7 +16007,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Justice_Outfit"
+      String: "Warrior_Elf_Justice_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16081,7 +16081,7 @@ Objects {
 }
 Objects {
   Id: 17932258122087720108
-  Name: "STORE_TankOrcCostumeJustice"
+  Name: "STORE_WarriorOrcCostumeJustice"
   Transform {
     Location {
       X: -12835.8809
@@ -16104,7 +16104,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Justice_Outfit"
+      String: "Warrior_Orc_Justice_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16178,7 +16178,7 @@ Objects {
 }
 Objects {
   Id: 14179344688564034578
-  Name: "STORE_TankElfCostumeLegendary"
+  Name: "STORE_WarriorElfCostumeLegendary"
   Transform {
     Location {
       X: -12835.8828
@@ -16201,7 +16201,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Legendary_Outfit"
+      String: "Warrior_Elf_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16267,7 +16267,7 @@ Objects {
 }
 Objects {
   Id: 10877531935183384179
-  Name: "STORE_TankOrcCostumeLegendary"
+  Name: "STORE_WarriorOrcCostumeLegendary"
   Transform {
     Location {
       X: -12835.8828
@@ -16290,7 +16290,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Legendary_Outfit"
+      String: "Warrior_Orc_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16356,7 +16356,7 @@ Objects {
 }
 Objects {
   Id: 1762933990454238221
-  Name: "STORE_TankElfCostumeMilitary"
+  Name: "STORE_WarriorElfCostumeMilitary"
   Transform {
     Location {
       X: -12835.8809
@@ -16379,7 +16379,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Military_Outfit"
+      String: "Warrior_Elf_Military_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16453,7 +16453,7 @@ Objects {
 }
 Objects {
   Id: 15498096351310748496
-  Name: "STORE_TankOrcCostumeMilitary"
+  Name: "STORE_WarriorOrcCostumeMilitary"
   Transform {
     Location {
       X: -12835.8809
@@ -16476,7 +16476,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Military_Outfit"
+      String: "Warrior_Orc_Military_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16550,7 +16550,7 @@ Objects {
 }
 Objects {
   Id: 320425414000174337
-  Name: "STORE_TankElfCostumeRare"
+  Name: "STORE_WarriorElfCostumeRare"
   Transform {
     Location {
       X: -12835.8828
@@ -16573,7 +16573,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Rare_Outfit"
+      String: "Warrior_Elf_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16647,7 +16647,7 @@ Objects {
 }
 Objects {
   Id: 1431299859093935326
-  Name: "STORE_TankOrcCostumeRare"
+  Name: "STORE_WarriorOrcCostumeRare"
   Transform {
     Location {
       X: -12835.8828
@@ -16670,7 +16670,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Rare_Outfit"
+      String: "Warrior_Orc_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16744,7 +16744,7 @@ Objects {
 }
 Objects {
   Id: 16678230273821699169
-  Name: "STORE_TankElfCostumeRoyal"
+  Name: "STORE_WarriorElfCostumeRoyal"
   Transform {
     Location {
       X: -12835.8809
@@ -16767,7 +16767,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Royal_Outfit"
+      String: "Warrior_Elf_Royal_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16833,7 +16833,7 @@ Objects {
 }
 Objects {
   Id: 18067121141781984630
-  Name: "STORE_TankOrcCostumeRoyal"
+  Name: "STORE_WarriorOrcCostumeRoyal"
   Transform {
     Location {
       X: -12835.8809
@@ -16856,7 +16856,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Royal_Outfit"
+      String: "Warrior_Orc_Royal_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -16922,7 +16922,7 @@ Objects {
 }
 Objects {
   Id: 14707987883636114781
-  Name: "STORE_TankElfCostumeUncommon"
+  Name: "STORE_WarriorElfCostumeUncommon"
   Transform {
     Location {
       X: -12835.8828
@@ -16945,7 +16945,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Uncommon_Outfit"
+      String: "Warrior_Elf_Uncommon_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -17011,7 +17011,7 @@ Objects {
 }
 Objects {
   Id: 1376916143577622124
-  Name: "STORE_TankOrcCostumeUncommon"
+  Name: "STORE_WarriorOrcCostumeUncommon"
   Transform {
     Location {
       X: -12835.8828
@@ -17034,7 +17034,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Uncommon_Outfit"
+      String: "Warrior_Orc_Uncommon_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -17100,7 +17100,7 @@ Objects {
 }
 Objects {
   Id: 11083520247889548544
-  Name: "STORE_TankElfCostumeCommon"
+  Name: "STORE_WarriorElfCostumeCommon"
   Transform {
     Location {
       X: -12835.8828
@@ -17123,7 +17123,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Common_Outfit"
+      String: "Warrior_Elf_Common_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -17185,7 +17185,7 @@ Objects {
 }
 Objects {
   Id: 10392045704310245780
-  Name: "STORE_TankOrcCostumeCommon"
+  Name: "STORE_WarriorOrcCostumeCommon"
   Transform {
     Location {
       X: -12835.8828
@@ -17208,7 +17208,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Common_Outfit"
+      String: "Warrior_Orc_Common_Outfit"
     }
     Overrides {
       Name: "cs:Cost"

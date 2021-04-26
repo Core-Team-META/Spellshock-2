@@ -458,7 +458,7 @@ function API.BuildOutfitNameTable(list)
     return tempTable
 end
 
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int team
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)

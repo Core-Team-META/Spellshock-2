@@ -77,7 +77,7 @@ local function META_VFX()
 	return _G["Meta.Ability.Progression"]["VFX"]
 end
 
-function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Orc_Rare_Outfit
+function ID_Converter(id, returnString, hierarchyName) -- Example input: Warrior_Orc_Rare_Outfit
 	if returnString then
 		local infoTable = StringSplit(id, "_")
 		if
@@ -116,7 +116,7 @@ function CheckIfLocked(player, class, requiredLvl)
 	local selectedClass = 0
 
 	if class == "Warrior" then
-		selectedClass = CP_API.TANK
+		selectedClass = CP_API.WARRIOR
 	elseif class == "Hunter" then
 		selectedClass = CP_API.HUNTER
 	elseif class == "Mage" then
