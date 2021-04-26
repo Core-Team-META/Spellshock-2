@@ -31,7 +31,7 @@ local BaseButton = nil
 
 local Alt_Bases = {1, 5}
 local BASE_BUTTONS = {}
-local ALT_BASE_POSITION
+local ALT_BASE_POSITION = {}
 --RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
 
 -- Wait for team colors
@@ -101,12 +101,13 @@ end
 function OnRoundStart()
 	Task.Wait(1)
 	local scoreLimit = DynamicCapturePoints:GetCustomProperty("ScoreLimit")
-	local capturePointState = ABCP.GetCapturePointState(Alt_Bases[LOCAL_PLAYER.team])
+	local orcPointState = ABCP.GetCapturePointState(Alt_Bases[1])
+	local elfPointState = ABCP.GetCapturePointState(Alt_Bases[2])
 
 	if scoreLimit == 300 then
-		ALT_BASE_POSITION = capturePointState.worldPosition
-		BASE_BUTTONS[1].clientUserData.stateID = capturePointState.id
-		BASE_BUTTONS[2].clientUserData.stateID = capturePointState.id
+		ALT_BASE_POSITION = {orcPointState.worldPosition, elfPointState.worldPosition}
+		BASE_BUTTONS[1].clientUserData.stateID = orcPointState.id
+		BASE_BUTTONS[2].clientUserData.stateID = elfPointState.id
 	else
 		ALT_BASE_POSITION = nil
 		BASE_BUTTONS[1].clientUserData.stateID = nil
@@ -202,7 +203,7 @@ function UpdateBaseIndicators()
 		-- Set position	
 		local screenPos 
 		if ALT_BASE_POSITION then
-			screenPos = UI.GetScreenPosition(ALT_BASE_POSITION)
+			screenPos = UI.GetScreenPosition(ALT_BASE_POSITION[i])
 		else
 			screenPos = UI.GetScreenPosition(baseIndicator.clientUserData.worldPosition)
 		end
@@ -293,12 +294,13 @@ for _, id in pairs(capturePointIds) do
 end
 
 local scoreLimit = DynamicCapturePoints:GetCustomProperty("ScoreLimit")
-local capturePointState = ABCP.GetCapturePointState(Alt_Bases[LOCAL_PLAYER.team])
+local orcPointState = ABCP.GetCapturePointState(Alt_Bases[1])
+local elfPointState = ABCP.GetCapturePointState(Alt_Bases[2])
 
 if scoreLimit == 300 then
-	ALT_BASE_POSITION = capturePointState.worldPosition
-	BASE_BUTTONS[1].clientUserData.stateID = capturePointState.id
-	BASE_BUTTONS[2].clientUserData.stateID = capturePointState.id
+	ALT_BASE_POSITION = {orcPointState.worldPosition, elfPointState.worldPosition}
+	BASE_BUTTONS[1].clientUserData.stateID = orcPointState.id
+	BASE_BUTTONS[2].clientUserData.stateID = elfPointState.id
 end
 
 Game.roundStartEvent:Connect(OnRoundStart)

@@ -159,9 +159,9 @@ local function CalculateRegularSlot(player)
     elseif random <= 80 and random > 75 then
         reward = REWARD_UTIL.GetClassXPReward()
         local class = reward.class
-        local classRank = META_CP().GetClassLevel(player, reward.class)
+        local classRank = META_CP().GetClassLevel(player, class)
         if classRank >= CONST.MAX_CLASS_LEVEL then
-            reward = GiveNoneCappedAbilityCard(player, reward, reward.class)
+            reward = GiveNoneCappedAbilityCard(player, reward, class)
             reward.class = class
         end
     else

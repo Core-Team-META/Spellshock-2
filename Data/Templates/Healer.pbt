@@ -2478,7 +2478,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2507,7 +2507,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 100
+            Duration: 120
             CanMove: true
             CanJump: true
             CanRotate: true

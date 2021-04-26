@@ -268,7 +268,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Class"
-            String: "TANK"
+            String: "WARRIOR"
           }
           Overrides {
             Name: "cs:BindingName"
