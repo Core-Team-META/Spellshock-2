@@ -123,7 +123,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
-            Float: 0.8
+            Float: 0.3
           }
         }
         Collidable_v2 {
