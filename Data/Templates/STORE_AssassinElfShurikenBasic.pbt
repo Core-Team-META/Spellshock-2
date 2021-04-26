@@ -239,8 +239,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 2
-              B: 0.8
+              G: 3
+              B: 1.2
               A: 1
             }
           }
@@ -288,15 +288,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 18007932134064521969
+              Id: 14629909211943041809
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.305
-              G: 0.305
-              B: 0.305
+              R: 0.535
+              G: 0.535
+              B: 0.535
               A: 1
             }
           }
@@ -363,12 +363,12 @@ Assets {
       }
     }
     Assets {
-      Id: 18007932134064521969
-      Name: "Metal Basic Steel"
+      Id: 14629909211943041809
+      Name: "Metal Gold 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
+        AssetId: "mi_metal_gold_001"
       }
     }
     PrimaryAssetId {

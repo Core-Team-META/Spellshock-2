@@ -7,7 +7,7 @@ Assets {
       RootId: 15145003620194182807
       Objects {
         Id: 15145003620194182807
-        Name: "Shuriken Projectile"
+        Name: "Assassin Elf Shuriken Projectile Basic"
         Transform {
           Scale {
             X: 1
@@ -118,8 +118,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 2
-              B: 0.8
+              G: 3
+              B: 1.2
               A: 1
             }
           }
@@ -167,15 +167,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 18007932134064521969
+              Id: 14629909211943041809
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.305
-              G: 0.305
-              B: 0.305
+              R: 0.535
+              G: 0.535
+              B: 0.535
               A: 1
             }
           }
@@ -299,6 +299,30 @@ Assets {
             Name: "bp:Trail Scale Multiplier"
             Float: 0.880441129
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 3
+              B: 1.2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Wake Color"
+            Color {
+              G: 3
+              B: 1.2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Ripple Color"
+            Color {
+              G: 3
+              B: 1.2
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -409,12 +433,12 @@ Assets {
       }
     }
     Assets {
-      Id: 18007932134064521969
-      Name: "Metal Basic Steel"
+      Id: 14629909211943041809
+      Name: "Metal Gold 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
+        AssetId: "mi_metal_gold_001"
       }
     }
     Assets {
