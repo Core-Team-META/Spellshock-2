@@ -1,13 +1,13 @@
 Assets {
-  Id: 6760933949847819494
-  Name: "Mage Animorph Potion Attachment Cow"
+  Id: 7589711991430116307
+  Name: "Mage Animorph Potion Attachment Goat"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11935317124661965506
+      RootId: 11174510238015794552
       Objects {
-        Id: 11935317124661965506
-        Name: "Mage Animorph Potion Attachment Cow"
+        Id: 11174510238015794552
+        Name: "Mage Animorph Potion Attachment Goat"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,8 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 18327129607792694460
-        ChildIds: 12547187246264566155
+        ChildIds: 17835510873105428233
+        ChildIds: 11986026659321664005
         UnregisteredParameters {
           Overrides {
             Name: "cs:FX_Template"
@@ -51,7 +51,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18327129607792694460
+        Id: 17835510873105428233
         Name: "Animal Costume Server"
         Transform {
           Location {
@@ -64,12 +64,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11935317124661965506
+        ParentId: 11174510238015794552
         UnregisteredParameters {
           Overrides {
             Name: "cs:Equipment"
             ObjectReference {
-              SubObjectId: 11935317124661965506
+              SubObjectId: 11174510238015794552
             }
           }
         }
@@ -90,7 +90,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12547187246264566155
+        Id: 11986026659321664005
         Name: "ClientContext"
         Transform {
           Location {
@@ -103,9 +103,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11935317124661965506
-        ChildIds: 17624972886764587937
-        ChildIds: 5134177231585358834
+        ParentId: 11174510238015794552
+        ChildIds: 5187003715903946975
+        ChildIds: 313575219957438925
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -120,7 +120,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17624972886764587937
+        Id: 5187003715903946975
         Name: "Quad_Movement"
         Transform {
           Location {
@@ -133,7 +133,7 @@ Assets {
             Z: 0.5625
           }
         }
-        ParentId: 12547187246264566155
+        ParentId: 11986026659321664005
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ease3D"
@@ -144,7 +144,7 @@ Assets {
           Overrides {
             Name: "cs:Equipment"
             ObjectReference {
-              SubObjectId: 11935317124661965506
+              SubObjectId: 11174510238015794552
             }
           }
           Overrides {
@@ -154,97 +154,97 @@ Assets {
           Overrides {
             Name: "cs:Body"
             ObjectReference {
-              SubObjectId: 5134177231585358834
+              SubObjectId: 313575219957438925
             }
           }
           Overrides {
             Name: "cs:Front"
             ObjectReference {
-              SubObjectId: 15485730986441413930
+              SubObjectId: 10752308891650806132
             }
           }
           Overrides {
             Name: "cs:Back"
             ObjectReference {
-              SubObjectId: 12809364297246686347
+              SubObjectId: 16056503477713686481
             }
           }
           Overrides {
             Name: "cs:Seat"
             ObjectReference {
-              SubObjectId: 13256800216391713353
+              SubObjectId: 2509028363764477600
             }
           }
           Overrides {
             Name: "cs:FrontLeftTop"
             ObjectReference {
-              SubObjectId: 3668921838586130418
+              SubObjectId: 13675968948274775156
             }
           }
           Overrides {
             Name: "cs:FrontLeftMid"
             ObjectReference {
-              SubObjectId: 3215647389820936196
+              SubObjectId: 13923474250959397594
             }
           }
           Overrides {
             Name: "cs:FrontLeftBot"
             ObjectReference {
-              SubObjectId: 10340500578316509158
+              SubObjectId: 15265944958863371992
             }
           }
           Overrides {
             Name: "cs:FrontRightTop"
             ObjectReference {
-              SubObjectId: 1299980538231126042
+              SubObjectId: 1224634504135093840
             }
           }
           Overrides {
             Name: "cs:FrontRightMid"
             ObjectReference {
-              SubObjectId: 8579976445180118946
+              SubObjectId: 11540957614262196211
             }
           }
           Overrides {
             Name: "cs:FrontRightBot"
             ObjectReference {
-              SubObjectId: 14984541807856694015
+              SubObjectId: 7673249869998678233
             }
           }
           Overrides {
             Name: "cs:BackLeftTop"
             ObjectReference {
-              SubObjectId: 3100985528838134094
+              SubObjectId: 10694780750712985225
             }
           }
           Overrides {
             Name: "cs:BackLeftMid"
             ObjectReference {
-              SubObjectId: 743740508321312436
+              SubObjectId: 11075797693790480746
             }
           }
           Overrides {
             Name: "cs:BackLeftBot"
             ObjectReference {
-              SubObjectId: 12040838743239462549
+              SubObjectId: 7705301488829305381
             }
           }
           Overrides {
             Name: "cs:BackRightTop"
             ObjectReference {
-              SubObjectId: 735849861054205191
+              SubObjectId: 18277505288735110944
             }
           }
           Overrides {
             Name: "cs:BackRightMid"
             ObjectReference {
-              SubObjectId: 16251592771453909173
+              SubObjectId: 296991425206865713
             }
           }
           Overrides {
             Name: "cs:BackRightBot"
             ObjectReference {
-              SubObjectId: 10570969293687568923
+              SubObjectId: 5702772743716602269
             }
           }
           Overrides {
@@ -268,7 +268,7 @@ Assets {
           Overrides {
             Name: "cs:FrontMidROT_MAX"
             Rotator {
-              Pitch: -45
+              Pitch: -50
             }
           }
           Overrides {
@@ -286,13 +286,12 @@ Assets {
           Overrides {
             Name: "cs:BackTopROT_MIN"
             Rotator {
-              Pitch: 5
             }
           }
           Overrides {
             Name: "cs:BackTopROT_MAX"
             Rotator {
-              Pitch: -15
+              Pitch: -10
             }
           }
           Overrides {
@@ -323,7 +322,7 @@ Assets {
             Name: "cs:FrontTopPOS_MIN"
             Vector {
               X: -5
-              Z: -5
+              Z: -10
             }
           }
           Overrides {
@@ -343,20 +342,18 @@ Assets {
             Name: "cs:BackTopPOS_MAX"
             Vector {
               X: -5
-              Z: -5
+              Z: -10
             }
           }
           Overrides {
             Name: "cs:FrontPOS_MIN"
             Vector {
-              X: 30
               Z: -15
             }
           }
           Overrides {
             Name: "cs:FrontPOS_MAX"
             Vector {
-              X: 30
               Z: 5
             }
           }
@@ -378,14 +375,14 @@ Assets {
             Name: "cs:BodyPOS_MIN"
             Vector {
               X: 36
-              Z: 105
+              Z: 94.5
             }
           }
           Overrides {
             Name: "cs:BodyPOS_MAX"
             Vector {
               X: 36
-              Z: 110
+              Z: 100
             }
           }
           Overrides {
@@ -402,7 +399,7 @@ Assets {
           Overrides {
             Name: "cs:Start_SFX"
             AssetReference {
-              Id: 606087860665369392
+              Id: 298924059206640825
             }
           }
           Overrides {
@@ -434,28 +431,34 @@ Assets {
         }
       }
       Objects {
-        Id: 5134177231585358834
+        Id: 313575219957438925
         Name: "Body"
         Transform {
           Location {
             X: 36
-            Z: 105
+            Z: 94.5
           }
           Rotation {
           }
           Scale {
-            X: 0.314951777
-            Y: 0.314951777
-            Z: 0.314951777
+            X: 0.284648061
+            Y: 0.284648061
+            Z: 0.284648061
           }
         }
-        ParentId: 12547187246264566155
-        ChildIds: 13256800216391713353
-        ChildIds: 15485730986441413930
-        ChildIds: 12809364297246686347
-        ChildIds: 17239719610558752516
-        ChildIds: 13094037182979153876
-        ChildIds: 12264827001123851630
+        ParentId: 11986026659321664005
+        ChildIds: 2509028363764477600
+        ChildIds: 10752308891650806132
+        ChildIds: 16056503477713686481
+        ChildIds: 6386307197386807291
+        ChildIds: 4065911281846744647
+        ChildIds: 655127772340216820
+        ChildIds: 5098390834383814378
+        ChildIds: 7524906343650026600
+        ChildIds: 6977453852825221784
+        ChildIds: 6743593060935977523
+        ChildIds: 5777810880512891236
+        ChildIds: 5145807804025816027
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -470,35 +473,37 @@ Assets {
         }
       }
       Objects {
-        Id: 13256800216391713353
+        Id: 2509028363764477600
         Name: "Seat"
         Transform {
           Location {
-            X: -88.3227921
-            Z: 8.88686562
+            X: -88.321785
+            Z: -65.7490234
           }
           Rotation {
+            Pitch: -7.90197754
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.09421849
+            Y: 1.09421849
+            Z: 1.09421849
           }
         }
-        ParentId: 5134177231585358834
-        ChildIds: 8514713193955097324
-        ChildIds: 3736184144320717338
-        ChildIds: 17600780433813869030
-        ChildIds: 8690031727487173125
-        ChildIds: 11242270600953168099
-        ChildIds: 7127884779407175570
-        ChildIds: 15878330224652209022
-        ChildIds: 2192236553959240434
-        ChildIds: 14062376463188546130
-        ChildIds: 9912003612156921907
-        ChildIds: 3155075426997685030
-        ChildIds: 1042294581833444454
-        ChildIds: 12280284704965650754
+        ParentId: 313575219957438925
+        ChildIds: 8220099460277537345
+        ChildIds: 11382671390590211544
+        ChildIds: 8037040007012732770
+        ChildIds: 2855727419957316827
+        ChildIds: 7615533886497369886
+        ChildIds: 13571080452908190745
+        ChildIds: 8707784588039523953
+        ChildIds: 9058857809675483561
+        ChildIds: 2362277114613876686
+        ChildIds: 5717391849502186279
+        ChildIds: 18410195934294142428
+        ChildIds: 18284051668265604127
+        ChildIds: 13263257537496493518
+        ChildIds: 5837316751834428430
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -513,25 +518,24 @@ Assets {
         }
       }
       Objects {
-        Id: 8514713193955097324
+        Id: 8220099460277537345
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 69.3620605
-            Y: 7.46642113
-            Z: 6.72225952
+            X: -240.563812
+            Z: 18.7798233
           }
           Rotation {
-            Pitch: -115.516113
-            Roll: 90
+            Yaw: 90
+            Roll: 171.467896
           }
           Scale {
-            X: 1.82182503
-            Y: 2.81291032
-            Z: 3.86103559
+            X: 0.941105723
+            Y: 1.35351253
+            Z: 2.33722901
           }
         }
-        ParentId: 13256800216391713353
+        ParentId: 2509028363764477600
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -542,7 +546,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12143894629036006249
+              Id: 10184847056121543272
             }
           }
           Overrides {
@@ -555,14 +559,14 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.26378632
+            Float: 8.97748661
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.139000013
+              G: 0.0797304064
+              B: 0.047816
               A: 1
             }
           }
@@ -578,7 +582,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2810379255825890868
+            Id: 16825643228001246048
           }
           Teams {
           }
@@ -591,24 +595,26 @@ Assets {
         }
       }
       Objects {
-        Id: 3736184144320717338
+        Id: 11382671390590211544
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 61.1266708
-            Z: 21.4489059
+            X: -55.0285
+            Y: 48.4915199
+            Z: -17.235323
           }
           Rotation {
-            Pitch: 81.528717
-            Roll: 90
+            Pitch: 1.08496869
+            Yaw: 2.18857861
+            Roll: 61.4622459
           }
           Scale {
-            X: 2.4159174
-            Y: 3.97349119
-            Z: 4.8056035
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
           }
         }
-        ParentId: 13256800216391713353
+        ParentId: 2509028363764477600
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -634,6 +640,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 8.97748661
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -646,7 +661,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16825643228001246048
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -659,26 +674,26 @@ Assets {
         }
       }
       Objects {
-        Id: 17600780433813869030
+        Id: 8037040007012732770
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -167.504562
-            Y: 29.958704
-            Z: 13.6631165
+            X: 10.1955757
+            Y: 50.1407204
+            Z: 2.89811063
           }
           Rotation {
-            Pitch: 86.8609314
-            Yaw: 118.913177
-            Roll: 39.2665977
+            Pitch: 22.0559082
+            Yaw: -9.94711304
+            Roll: 70.5810623
           }
           Scale {
-            X: 2.41453457
-            Y: 2.55504894
-            Z: 4.50626898
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
           }
         }
-        ParentId: 13256800216391713353
+        ParentId: 2509028363764477600
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -704,6 +719,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 8.97748661
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -716,7 +740,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16825643228001246048
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -729,26 +753,26 @@ Assets {
         }
       }
       Objects {
-        Id: 8690031727487173125
+        Id: 2855727419957316827
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -167.504562
-            Y: -29.958704
-            Z: 13.7328815
+            X: 17.1334686
+            Y: -50.2222404
+            Z: 3.86106658
           }
           Rotation {
-            Pitch: -93.1393127
-            Yaw: -118.911285
-            Roll: -140.734985
+            Pitch: 22.0558681
+            Yaw: -9.94732666
+            Roll: 90.7281952
           }
           Scale {
-            X: 2.41453457
-            Y: 2.55504894
-            Z: 4.50626898
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
           }
         }
-        ParentId: 13256800216391713353
+        ParentId: 2509028363764477600
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -774,6 +798,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 8.97748661
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -786,7 +819,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16825643228001246048
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -799,101 +832,103 @@ Assets {
         }
       }
       Objects {
-        Id: 11242270600953168099
+        Id: 7615533886497369886
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -145.286316
-            Z: 37.2581787
+            X: -55.0285
+            Y: -45.795105
+            Z: -17.235323
           }
           Rotation {
-            Pitch: 92.6356735
+            Pitch: -0.913513184
+            Yaw: 13.1429653
+            Roll: 100.316299
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
+          }
+        }
+        ParentId: 2509028363764477600
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13571080452908190745
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -25.4271126
+            Y: 28.7387333
+            Z: -46.8717041
+          }
+          Rotation {
             Roll: -90
           }
           Scale {
-            X: 1.92058814
-            Y: 2.83259988
-            Z: 4.24786329
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
           }
         }
-        ParentId: 13256800216391713353
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7127884779407175570
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: -103.080963
-            Z: -101.446205
-          }
-          Rotation {
-            Yaw: -90
-            Roll: 123.462273
-          }
-          Scale {
-            X: 1.94855177
-            Y: 1.94441354
-            Z: 4.39931822
-          }
-        }
-        ParentId: 13256800216391713353
+        ParentId: 2509028363764477600
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -922,9 +957,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.791
-              G: 0.304535
-              B: 0.304535
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -940,7 +975,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16825643228001246048
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -953,26 +988,26 @@ Assets {
         }
       }
       Objects {
-        Id: 15878330224652209022
+        Id: 8707784588039523953
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -47.4589043
-            Y: -22.4488735
-            Z: -44.682251
+            X: -175.858871
+            Y: -18.241539
+            Z: 27.9664021
           }
           Rotation {
-            Pitch: -42.2240295
-            Yaw: -107.277863
-            Roll: -155.163834
+            Pitch: 16.0401802
+            Yaw: -11.1968994
+            Roll: -47.4743652
           }
           Scale {
-            X: 2.41120982
-            Y: 3.43714118
-            Z: 7.46487522
+            X: 1.12174344
+            Y: 1.12174344
+            Z: 2.58408546
           }
         }
-        ParentId: 13256800216391713353
+        ParentId: 2509028363764477600
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -1001,9 +1036,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.76000005
-              G: 0.76000005
-              B: 0.76000005
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -1019,7 +1054,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16825643228001246048
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -1032,419 +1067,26 @@ Assets {
         }
       }
       Objects {
-        Id: 2192236553959240434
+        Id: 9058857809675483561
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -262.728485
-            Y: -0.0137230866
-            Z: -23.4476089
+            X: -175.539688
+            Y: 13.4381647
+            Z: 25.6667137
           }
           Rotation {
-            Pitch: -21.5562134
-            Yaw: 0.00173498108
-            Roll: -90
+            Pitch: 3.8958509
+            Yaw: 24.8960056
+            Roll: 38.5254021
           }
           Scale {
-            X: 0.251848191
-            Y: 1.93329883
-            Z: 1.31570542
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
           }
         }
-        ParentId: 13256800216391713353
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2810379255825890868
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14062376463188546130
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: -292.871246
-            Z: -118.071724
-          }
-          Rotation {
-            Yaw: -89.9980774
-            Roll: -76.9514771
-          }
-          Scale {
-            X: 0.697250605
-            Y: 0.89735955
-            Z: 1.5421474
-          }
-        }
-        ParentId: 13256800216391713353
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.14
-              G: 0.124597669
-              B: 0.11746
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9912003612156921907
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: -45.8775597
-            Y: 8.08035469
-            Z: -0.451147944
-          }
-          Rotation {
-            Pitch: 67.060463
-            Yaw: -27.6404114
-            Roll: -115.74649
-          }
-          Scale {
-            X: 2.78923416
-            Y: 3.65981102
-            Z: 6.83199358
-          }
-        }
-        ParentId: 13256800216391713353
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3155075426997685030
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: -180.763046
-            Y: -20.0675564
-            Z: 36.1895065
-          }
-          Rotation {
-            Pitch: 87.3635788
-            Yaw: 179.999954
-            Roll: 89.9992523
-          }
-          Scale {
-            X: 1.92059457
-            Y: 2.34254956
-            Z: 4.2478714
-          }
-        }
-        ParentId: 13256800216391713353
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1042294581833444454
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: -180.763046
-            Y: 37.2204819
-            Z: 21.1869
-          }
-          Rotation {
-            Pitch: 87.3632126
-            Yaw: 180
-            Roll: 78.0249634
-          }
-          Scale {
-            X: 1.92059469
-            Y: 2.3425498
-            Z: 4.2478714
-          }
-        }
-        ParentId: 13256800216391713353
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12280284704965650754
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: -47.4589043
-            Y: 22.4488735
-            Z: -44.682251
-          }
-          Rotation {
-            Pitch: -42.224
-            Yaw: 107.278
-            Roll: 155.164
-          }
-          Scale {
-            X: 2.41120982
-            Y: 3.43714118
-            Z: 7.46487522
-          }
-        }
-        ParentId: 13256800216391713353
+        ParentId: 2509028363764477600
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -1473,9 +1115,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.76000005
-              G: 0.76000005
-              B: 0.76000005
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -1491,7 +1133,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16825643228001246048
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -1504,11 +1146,483 @@ Assets {
         }
       }
       Objects {
-        Id: 15485730986441413930
+        Id: 2362277114613876686
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -207.299606
+            Y: -54.0964088
+            Z: -27.8528919
+          }
+          Rotation {
+            Pitch: -2.01904297
+            Yaw: -31.8713074
+            Roll: -72.4403687
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
+          }
+        }
+        ParentId: 2509028363764477600
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5717391849502186279
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -207.299606
+            Y: 54.096
+            Z: -27.8528919
+          }
+          Rotation {
+            Pitch: -2.01904297
+            Yaw: 31.871
+            Roll: 72.44
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
+          }
+        }
+        ParentId: 2509028363764477600
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18410195934294142428
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -229.786423
+            Z: -34.1014671
+          }
+          Rotation {
+            Pitch: -0.676483154
+            Yaw: 93.1551
+            Roll: 76.1330719
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
+          }
+        }
+        ParentId: 2509028363764477600
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18284051668265604127
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -101.242645
+            Y: 23.0825405
+            Z: 43.3764763
+          }
+          Rotation {
+            Pitch: 1.08496869
+            Yaw: 2.18857527
+            Roll: 32.849823
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
+          }
+        }
+        ParentId: 2509028363764477600
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13263257537496493518
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -93.4863281
+            Y: -8.93578339
+            Z: 58.5122337
+          }
+          Rotation {
+            Pitch: 1.08496869
+            Yaw: 2.18857312
+            Roll: -24.0537109
+          }
+          Scale {
+            X: 1.10400212
+            Y: 1.10400212
+            Z: 2.54321623
+          }
+        }
+        ParentId: 2509028363764477600
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5837316751834428430
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -25.4271126
+            Y: -28.739
+            Z: -46.8717041
+          }
+          Rotation {
+            Pitch: 6.83018879e-06
+            Yaw: -3.05333233e-13
+            Roll: -90.0000229
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892829
+          }
+        }
+        ParentId: 2509028363764477600
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10752308891650806132
         Name: "Front"
         Transform {
           Location {
-            X: 30
           }
           Rotation {
           }
@@ -1518,9 +1632,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5134177231585358834
-        ChildIds: 1018767353977701601
-        ChildIds: 8356111846742121145
+        ParentId: 313575219957438925
+        ChildIds: 7682960423566057427
+        ChildIds: 6954168369601399234
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1535,7 +1649,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1018767353977701601
+        Id: 7682960423566057427
         Name: "FrontLeft"
         Transform {
           Location {
@@ -1552,8 +1666,8 @@ Assets {
             Z: 0.999999821
           }
         }
-        ParentId: 15485730986441413930
-        ChildIds: 3668921838586130418
+        ParentId: 10752308891650806132
+        ChildIds: 13675968948274775156
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1568,7 +1682,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3668921838586130418
+        Id: 13675968948274775156
         Name: "FrontLeftTop"
         Transform {
           Location {
@@ -1581,9 +1695,11 @@ Assets {
             Z: 1.00000024
           }
         }
-        ParentId: 1018767353977701601
-        ChildIds: 3215647389820936196
-        ChildIds: 15528762293750298010
+        ParentId: 7682960423566057427
+        ChildIds: 13923474250959397594
+        ChildIds: 16582923401196485000
+        ChildIds: 8034822171102650025
+        ChildIds: 5426738949088852961
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1598,7 +1714,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3215647389820936196
+        Id: 13923474250959397594
         Name: "FrontLeftMid"
         Transform {
           Location {
@@ -1613,9 +1729,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3668921838586130418
-        ChildIds: 10340500578316509158
-        ChildIds: 16477741159956287712
+        ParentId: 13675968948274775156
+        ChildIds: 15265944958863371992
+        ChildIds: 18187853202136367441
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1630,7 +1746,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10340500578316509158
+        Id: 15265944958863371992
         Name: "FrontLeftBot"
         Transform {
           Location {
@@ -1645,9 +1761,9 @@ Assets {
             Z: 0.999999821
           }
         }
-        ParentId: 3215647389820936196
-        ChildIds: 9925895085479982585
-        ChildIds: 5371078363820254058
+        ParentId: 13923474250959397594
+        ChildIds: 963720172185489617
+        ChildIds: 5403920128252760442
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1662,7 +1778,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9925895085479982585
+        Id: 963720172185489617
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -1681,7 +1797,7 @@ Assets {
             Z: 1.1750747
           }
         }
-        ParentId: 10340500578316509158
+        ParentId: 15265944958863371992
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1741,7 +1857,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5371078363820254058
+        Id: 5403920128252760442
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -1760,7 +1876,7 @@ Assets {
             Z: 1.1750747
           }
         }
-        ParentId: 10340500578316509158
+        ParentId: 15265944958863371992
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1820,11 +1936,11 @@ Assets {
         }
       }
       Objects {
-        Id: 16477741159956287712
+        Id: 18187853202136367441
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            X: -11.3490028
+            X: -10.7314634
             Z: -41.8090935
           }
           Rotation {
@@ -1832,12 +1948,12 @@ Assets {
             Roll: -90
           }
           Scale {
-            X: 0.661465049
-            Y: 1.8254534
-            Z: 1.44988656
+            X: 0.964192092
+            Y: 1.88698292
+            Z: 1.71259165
           }
         }
-        ParentId: 3215647389820936196
+        ParentId: 13923474250959397594
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1860,9 +1976,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
               A: 1
             }
           }
@@ -1891,7 +2007,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15528762293750298010
+        Id: 16582923401196485000
         Name: "Gem - Heart Polished"
         Transform {
           Location {
@@ -1904,17 +2020,17 @@ Assets {
             Roll: -90
           }
           Scale {
-            X: 1.00517654
-            Y: 2.21121597
-            Z: 1.91411221
+            X: 1.55986059
+            Y: 2.16863298
+            Z: 2.57378936
           }
         }
-        ParentId: 3668921838586130418
+        ParentId: 13675968948274775156
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12143894629036006249
+              Id: 10184847056121543272
             }
           }
           Overrides {
@@ -1932,9 +2048,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -1963,7 +2079,161 @@ Assets {
         }
       }
       Objects {
-        Id: 8356111846742121145
+        Id: 8034822171102650025
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 1.13215756
+            Y: 8.72788334
+            Z: 12.1878166
+          }
+          Rotation {
+            Roll: -74.793
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892638
+          }
+        }
+        ParentId: 13675968948274775156
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5426738949088852961
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 23.1371136
+            Y: 4.08261824
+            Z: -43.2002831
+          }
+          Rotation {
+            Roll: -74.7929688
+          }
+          Scale {
+            X: 1.36014712
+            Y: 1.36014712
+            Z: 3.13327885
+          }
+        }
+        ParentId: 13675968948274775156
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6954168369601399234
         Name: "FrontRight"
         Transform {
           Location {
@@ -1979,8 +2249,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15485730986441413930
-        ChildIds: 1299980538231126042
+        ParentId: 10752308891650806132
+        ChildIds: 1224634504135093840
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1995,7 +2265,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1299980538231126042
+        Id: 1224634504135093840
         Name: "FrontRightTop"
         Transform {
           Location {
@@ -2008,9 +2278,11 @@ Assets {
             Z: 0.99999994
           }
         }
-        ParentId: 8356111846742121145
-        ChildIds: 8579976445180118946
-        ChildIds: 16702509306770448821
+        ParentId: 6954168369601399234
+        ChildIds: 11540957614262196211
+        ChildIds: 11339864128744432766
+        ChildIds: 8644887696868751797
+        ChildIds: 857957693512207797
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2025,7 +2297,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8579976445180118946
+        Id: 11540957614262196211
         Name: "FrontRightMid"
         Transform {
           Location {
@@ -2040,9 +2312,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1299980538231126042
-        ChildIds: 14984541807856694015
-        ChildIds: 2140180378446443891
+        ParentId: 1224634504135093840
+        ChildIds: 7673249869998678233
+        ChildIds: 7896885111867121138
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2057,7 +2329,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14984541807856694015
+        Id: 7673249869998678233
         Name: "FrontRightBot"
         Transform {
           Location {
@@ -2072,9 +2344,9 @@ Assets {
             Z: 0.999999821
           }
         }
-        ParentId: 8579976445180118946
-        ChildIds: 18326352816557612926
-        ChildIds: 3807231711205448370
+        ParentId: 11540957614262196211
+        ChildIds: 6674609145423796007
+        ChildIds: 4371993647822706749
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2089,7 +2361,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18326352816557612926
+        Id: 6674609145423796007
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -2108,7 +2380,7 @@ Assets {
             Z: 1.1750747
           }
         }
-        ParentId: 14984541807856694015
+        ParentId: 7673249869998678233
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2168,7 +2440,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3807231711205448370
+        Id: 4371993647822706749
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -2187,7 +2459,7 @@ Assets {
             Z: 1.1750747
           }
         }
-        ParentId: 14984541807856694015
+        ParentId: 7673249869998678233
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2247,11 +2519,11 @@ Assets {
         }
       }
       Objects {
-        Id: 2140180378446443891
+        Id: 7896885111867121138
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            X: -11.3489933
+            X: -10.7314548
             Z: -41.8091
           }
           Rotation {
@@ -2259,12 +2531,12 @@ Assets {
             Roll: -90
           }
           Scale {
-            X: 0.661465049
-            Y: 1.8254534
-            Z: 1.44988656
+            X: 0.964192092
+            Y: 1.88698292
+            Z: 1.71259165
           }
         }
-        ParentId: 8579976445180118946
+        ParentId: 11540957614262196211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2287,9 +2559,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
               A: 1
             }
           }
@@ -2318,7 +2590,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16702509306770448821
+        Id: 11339864128744432766
         Name: "Gem - Heart Polished"
         Transform {
           Location {
@@ -2331,17 +2603,17 @@ Assets {
             Roll: 90
           }
           Scale {
-            X: 1.00517654
-            Y: 2.21121597
-            Z: 1.91411221
+            X: 1.55986059
+            Y: 2.16863298
+            Z: 2.57378936
           }
         }
-        ParentId: 1299980538231126042
+        ParentId: 1224634504135093840
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12143894629036006249
+              Id: 10184847056121543272
             }
           }
           Overrides {
@@ -2359,9 +2631,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -2390,7 +2662,161 @@ Assets {
         }
       }
       Objects {
-        Id: 12809364297246686347
+        Id: 8644887696868751797
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 1.1321547
+            Y: -12.8242254
+            Z: 12.1878166
+          }
+          Rotation {
+            Roll: 74.7929306
+          }
+          Scale {
+            X: 1.20198309
+            Y: 1.20198309
+            Z: 2.76892686
+          }
+        }
+        ParentId: 1224634504135093840
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 857957693512207797
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 23.137125
+            Y: -7.52025175
+            Z: -43.2002792
+          }
+          Rotation {
+            Roll: 74.7928848
+          }
+          Scale {
+            X: 1.36014724
+            Y: 1.36014724
+            Z: 3.13327909
+          }
+        }
+        ParentId: 1224634504135093840
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16056503477713686481
         Name: "Back"
         Transform {
           Location {
@@ -2405,9 +2831,9 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 5134177231585358834
-        ChildIds: 14189024679593030848
-        ChildIds: 14985510097720559700
+        ParentId: 313575219957438925
+        ChildIds: 927145208708369449
+        ChildIds: 4843250496078513425
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2422,7 +2848,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14189024679593030848
+        Id: 927145208708369449
         Name: "BackLeft"
         Transform {
           Location {
@@ -2438,8 +2864,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12809364297246686347
-        ChildIds: 3100985528838134094
+        ParentId: 16056503477713686481
+        ChildIds: 10694780750712985225
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2454,7 +2880,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3100985528838134094
+        Id: 10694780750712985225
         Name: "BackLeftTop"
         Transform {
           Location {
@@ -2467,9 +2893,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14189024679593030848
-        ChildIds: 743740508321312436
-        ChildIds: 14405872965231265668
+        ParentId: 927145208708369449
+        ChildIds: 11075797693790480746
+        ChildIds: 10143199818345049093
+        ChildIds: 6692618506319755994
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2484,13 +2911,13 @@ Assets {
         }
       }
       Objects {
-        Id: 743740508321312436
+        Id: 11075797693790480746
         Name: "BackLeftMid"
         Transform {
           Location {
-            X: -19.9998569
-            Y: 10.0001049
-            Z: -125.000015
+            X: -20.0013962
+            Y: 15
+            Z: -125.000153
           }
           Rotation {
           }
@@ -2500,9 +2927,9 @@ Assets {
             Z: 0.869565189
           }
         }
-        ParentId: 3100985528838134094
-        ChildIds: 12040838743239462549
-        ChildIds: 5950741173998472800
+        ParentId: 10694780750712985225
+        ChildIds: 7705301488829305381
+        ChildIds: 16713902469886756515
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2517,7 +2944,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12040838743239462549
+        Id: 7705301488829305381
         Name: "BackLeftBot"
         Transform {
           Location {
@@ -2533,9 +2960,9 @@ Assets {
             Z: 0.999999881
           }
         }
-        ParentId: 743740508321312436
-        ChildIds: 15047623386679400964
-        ChildIds: 2209768388722625822
+        ParentId: 11075797693790480746
+        ChildIds: 2823449728583333982
+        ChildIds: 14679638519020666702
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2550,7 +2977,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15047623386679400964
+        Id: 2823449728583333982
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -2569,7 +2996,7 @@ Assets {
             Z: 1.34189081
           }
         }
-        ParentId: 12040838743239462549
+        ParentId: 7705301488829305381
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2629,7 +3056,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2209768388722625822
+        Id: 14679638519020666702
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -2648,7 +3075,7 @@ Assets {
             Z: 1.34189081
           }
         }
-        ParentId: 12040838743239462549
+        ParentId: 7705301488829305381
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2708,23 +3135,23 @@ Assets {
         }
       }
       Objects {
-        Id: 5950741173998472800
+        Id: 16713902469886756515
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            X: -21.7653885
-            Z: -54.8260918
+            X: -21.7673607
+            Z: -54.8257
           }
           Rotation {
             Roll: -90
           }
           Scale {
-            X: 0.648098409
-            Y: 1.85161805
-            Z: 1.42057681
+            X: 1.0018394
+            Y: 1.96066093
+            Z: 1.77946079
           }
         }
-        ParentId: 743740508321312436
+        ParentId: 11075797693790480746
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2747,9 +3174,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
               A: 1
             }
           }
@@ -2778,30 +3205,30 @@ Assets {
         }
       }
       Objects {
-        Id: 14405872965231265668
+        Id: 10143199818345049093
         Name: "Gem - Heart Polished"
         Transform {
           Location {
-            X: 15.6786251
-            Y: 10.0006981
-            Z: -47.0373039
+            X: 26.0910168
+            Y: 18.6691151
+            Z: -87.2087784
           }
           Rotation {
-            Pitch: 171.783234
+            Pitch: 126.783279
             Roll: -90
           }
           Scale {
-            X: 1.28497696
-            Y: 1.98329616
-            Z: 1.89198804
+            X: 1.17838681
+            Y: 1.7729435
+            Z: 2.27707696
           }
         }
-        ParentId: 3100985528838134094
+        ParentId: 10694780750712985225
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12143894629036006249
+              Id: 10184847056121543272
             }
           }
           Overrides {
@@ -2819,9 +3246,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -2850,7 +3277,83 @@ Assets {
         }
       }
       Objects {
-        Id: 14985510097720559700
+        Id: 6692618506319755994
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -2.16710401
+            Z: -81.5994644
+          }
+          Rotation {
+            Roll: -74.7926
+          }
+          Scale {
+            X: 1.00165248
+            Y: 1.00165248
+            Z: 2.30743957
+          }
+        }
+        ParentId: 10694780750712985225
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4843250496078513425
         Name: "BackRight"
         Transform {
           Location {
@@ -2866,8 +3369,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12809364297246686347
-        ChildIds: 735849861054205191
+        ParentId: 16056503477713686481
+        ChildIds: 18277505288735110944
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2882,7 +3385,7 @@ Assets {
         }
       }
       Objects {
-        Id: 735849861054205191
+        Id: 18277505288735110944
         Name: "BackRightTop"
         Transform {
           Location {
@@ -2895,9 +3398,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14985510097720559700
-        ChildIds: 16251592771453909173
-        ChildIds: 1588236007932499513
+        ParentId: 4843250496078513425
+        ChildIds: 296991425206865713
+        ChildIds: 4676245979649626311
+        ChildIds: 14898255495211220359
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2912,13 +3416,13 @@ Assets {
         }
       }
       Objects {
-        Id: 16251592771453909173
+        Id: 296991425206865713
         Name: "BackRightMid"
         Transform {
           Location {
-            X: -19.9999981
-            Y: -9.99999905
-            Z: -124.999985
+            X: -20.0013962
+            Y: -15
+            Z: -125.000153
           }
           Rotation {
           }
@@ -2928,9 +3432,9 @@ Assets {
             Z: 0.869565189
           }
         }
-        ParentId: 735849861054205191
-        ChildIds: 10570969293687568923
-        ChildIds: 10674411008898892582
+        ParentId: 18277505288735110944
+        ChildIds: 5702772743716602269
+        ChildIds: 5653149813525871378
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2945,7 +3449,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10570969293687568923
+        Id: 5702772743716602269
         Name: "BackRightBot"
         Transform {
           Location {
@@ -2960,9 +3464,9 @@ Assets {
             Z: 0.999999881
           }
         }
-        ParentId: 16251592771453909173
-        ChildIds: 2569281448367497906
-        ChildIds: 14309403929071820098
+        ParentId: 296991425206865713
+        ChildIds: 13110749901753582620
+        ChildIds: 15464638330167490446
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2977,7 +3481,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2569281448367497906
+        Id: 13110749901753582620
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -2996,7 +3500,7 @@ Assets {
             Z: 1.34189081
           }
         }
-        ParentId: 10570969293687568923
+        ParentId: 5702772743716602269
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3056,7 +3560,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14309403929071820098
+        Id: 15464638330167490446
         Name: "Cube - Polished"
         Transform {
           Location {
@@ -3075,7 +3579,7 @@ Assets {
             Z: 1.34189081
           }
         }
-        ParentId: 10570969293687568923
+        ParentId: 5702772743716602269
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3135,23 +3639,23 @@ Assets {
         }
       }
       Objects {
-        Id: 10674411008898892582
+        Id: 5653149813525871378
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            X: -21.7653885
-            Z: -54.8260918
+            X: -21.7673607
+            Z: -54.8257
           }
           Rotation {
             Roll: -90
           }
           Scale {
-            X: 0.648098707
-            Y: 1.85161805
-            Z: 1.42057681
+            X: 1.00183952
+            Y: 1.96066093
+            Z: 1.77946079
           }
         }
-        ParentId: 16251592771453909173
+        ParentId: 296991425206865713
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3174,9 +3678,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
               A: 1
             }
           }
@@ -3205,30 +3709,30 @@ Assets {
         }
       }
       Objects {
-        Id: 1588236007932499513
+        Id: 4676245979649626311
         Name: "Gem - Heart Polished"
         Transform {
           Location {
-            X: 15.6786251
-            Y: -10.0006981
-            Z: -47.0373039
+            X: 26.0910168
+            Y: -16.7764721
+            Z: -87.2087784
           }
           Rotation {
-            Pitch: 171.783234
+            Pitch: 126.78331
             Roll: 90
           }
           Scale {
-            X: 1.28497696
-            Y: 1.98329616
-            Z: 1.89198804
+            X: 1.17838681
+            Y: 1.7729435
+            Z: 2.27707696
           }
         }
-        ParentId: 735849861054205191
+        ParentId: 18277505288735110944
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12143894629036006249
+              Id: 10184847056121543272
             }
           }
           Overrides {
@@ -3246,9 +3750,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -3277,24 +3781,149 @@ Assets {
         }
       }
       Objects {
-        Id: 17239719610558752516
+        Id: 14898255495211220359
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 52.5316048
-            Z: 31.2485847
+            X: -2.16710401
+            Z: -81.5994644
           }
           Rotation {
-            Pitch: -78.8068848
-            Roll: 90
+            Roll: 74.7929535
           }
           Scale {
-            X: 2.45210028
-            Y: 2.68039918
-            Z: 5.13504887
+            X: 1.00165248
+            Y: 1.00165248
+            Z: 2.30743885
           }
         }
-        ParentId: 5134177231585358834
+        ParentId: 18277505288735110944
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6386307197386807291
+        Name: "Group"
+        Transform {
+          Location {
+            X: 129.02446
+            Z: -50.3757362
+          }
+          Rotation {
+            Pitch: -12.1264038
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 313575219957438925
+        ChildIds: 8287122775200038529
+        ChildIds: 9199983409899995822
+        ChildIds: 7630774349444412808
+        ChildIds: 923001253411172935
+        ChildIds: 12360376594520772835
+        ChildIds: 14360377502841323289
+        ChildIds: 671133421866269285
+        ChildIds: 9215723864184278734
+        ChildIds: 11036052526377750035
+        ChildIds: 11216141938136679702
+        ChildIds: 9998444664737393861
+        ChildIds: 12963233358145570231
+        ChildIds: 12046711476731770255
+        ChildIds: 12134496507115882367
+        ChildIds: 1243814812137589039
+        ChildIds: 5076871012088090726
+        ChildIds: 15675436402159753052
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8287122775200038529
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -38.7146454
+            Z: 66.7102356
+          }
+          Rotation {
+            Pitch: -51.9119873
+            Yaw: 180
+            Roll: -90
+          }
+          Scale {
+            X: 1.49999964
+            Y: 1.86791456
+            Z: 4.02988577
+          }
+        }
+        ParentId: 6386307197386807291
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -3323,9 +3952,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
               A: 1
             }
           }
@@ -3354,24 +3983,103 @@ Assets {
         }
       }
       Objects {
-        Id: 13094037182979153876
+        Id: 9199983409899995822
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 6.79047441
-            Z: -44.7055054
+            X: -53.4305725
+            Y: 59.9973335
+            Z: 113.546318
           }
           Rotation {
-            Pitch: -60.6529236
-            Roll: 90
+            Pitch: -85.0065613
+            Yaw: -49.4450378
+            Roll: -106.217163
           }
           Scale {
-            X: 2.86088514
-            Y: 3.43974257
-            Z: 3.58747673
+            X: 0.770005643
+            Y: 0.879068
+            Z: 1.18690205
           }
         }
-        ParentId: 5134177231585358834
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12143894629036006249
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16825643228001246048
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7630774349444412808
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 37.0282
+            Z: 36.4525909
+          }
+          Rotation {
+            Yaw: 90
+            Roll: -72.8235474
+          }
+          Scale {
+            X: 0.715729535
+            Y: 0.411311597
+            Z: 1.21177936
+          }
+        }
+        ParentId: 6386307197386807291
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -3400,9 +4108,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.76000005
-              G: 0.76000005
-              B: 0.76000005
               A: 1
             }
           }
@@ -3431,15 +4136,481 @@ Assets {
         }
       }
       Objects {
-        Id: 12264827001123851630
-        Name: "Head"
+        Id: 923001253411172935
+        Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 180.967697
-            Z: 10.8833628
+            X: -10.3377018
+            Y: -43.7217522
+            Z: 93.0516357
           }
           Rotation {
-            Pitch: -18.3781738
+            Pitch: -28.8094177
+            Yaw: -144.273621
+            Roll: -109.116394
+          }
+          Scale {
+            X: 0.393121243
+            Y: 0.393120974
+            Z: 0.811794639
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12360376594520772835
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -10.3377018
+            Y: 43.7217522
+            Z: 93.0516357
+          }
+          Rotation {
+            Pitch: 28.8094845
+            Yaw: -35.7261963
+            Roll: 70.883316
+          }
+          Scale {
+            X: 0.393121243
+            Y: 0.393120974
+            Z: 0.811794639
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14360377502841323289
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -1.87570739
+            Y: -50.6656342
+            Z: 94.3326416
+          }
+          Rotation {
+            Pitch: -28.8093872
+            Yaw: -144.273361
+            Roll: -96.9119568
+          }
+          Scale {
+            X: 0.170789227
+            Y: 0.170788825
+            Z: 0.379094213
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 671133421866269285
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -1.87570739
+            Y: 50.6656342
+            Z: 94.3326416
+          }
+          Rotation {
+            Pitch: 28.8092861
+            Yaw: -35.7263794
+            Roll: 83.0876465
+          }
+          Scale {
+            X: 0.170789227
+            Y: 0.170788825
+            Z: 0.379094213
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9215723864184278734
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -53.4305725
+            Y: -59.9973335
+            Z: 113.546318
+          }
+          Rotation {
+            Pitch: 85.0065918
+            Yaw: -130.553818
+            Roll: -106.215576
+          }
+          Scale {
+            X: 0.770005584
+            Y: 0.879068
+            Z: 1.18690205
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12143894629036006249
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16825643228001246048
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11036052526377750035
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -41.3583412
+            Z: 57.1081352
+          }
+          Rotation {
+            Yaw: 90
+            Roll: -30.7738647
+          }
+          Scale {
+            X: 1.97109473
+            Y: 1.35164773
+            Z: 2.90107536
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12143894629036006249
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.457000017
+              G: 0.240450561
+              B: 0.123846993
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16825643228001246048
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11216141938136679702
+        Name: "Eyelids"
+        Transform {
+          Location {
+            X: -15.2615948
+            Y: -7.2479248e-05
+            Z: 84.3996124
+          }
+          Rotation {
           }
           Scale {
             X: 1
@@ -3447,20 +4618,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5134177231585358834
-        ChildIds: 13479032108907632501
-        ChildIds: 3508944364677825269
-        ChildIds: 2061924861521773778
-        ChildIds: 7757328688843560523
-        ChildIds: 12716503690825885837
-        ChildIds: 15779007806221088739
-        ChildIds: 17739536646402136301
-        ChildIds: 11616335619737079809
-        ChildIds: 14554521126044681059
-        ChildIds: 6753604188330391736
-        ChildIds: 13419958530254727552
-        ChildIds: 7259742891393674210
-        ChildIds: 16779507418749151888
+        ParentId: 6386307197386807291
+        ChildIds: 6341281100095846631
+        ChildIds: 7292134857560008260
+        ChildIds: 8831418599496131599
+        ChildIds: 11919558564620218794
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3475,61 +4637,26 @@ Assets {
         }
       }
       Objects {
-        Id: 13479032108907632501
-        Name: "Eyelids"
-        Transform {
-          Location {
-            X: 28.9389763
-            Z: 19.7170258
-          }
-          Rotation {
-            Pitch: 24.3742733
-          }
-          Scale {
-            X: 0.903783
-            Y: 0.903783
-            Z: 0.903783
-          }
-        }
-        ParentId: 12264827001123851630
-        ChildIds: 10374804112744489467
-        ChildIds: 10254784403229106540
-        ChildIds: 9546780769232897158
-        ChildIds: 11738127195915637366
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 10374804112744489467
+        Id: 6341281100095846631
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 5.4420867
-            Y: 30.7671604
-            Z: 3.66455197
+            X: 1.2487632
+            Y: 37.4708862
+            Z: -7.80039118e-05
           }
           Rotation {
-            Pitch: 7.06669092
-            Yaw: -47.0353088
-            Roll: 40.5923958
+            Pitch: 17.2404613
+            Yaw: -48.5958061
+            Roll: 19.4076118
           }
           Scale {
-            X: 0.459210813
-            Y: 0.459181517
-            Z: 0.521937132
+            X: 0.443952084
+            Y: 0.443929166
+            Z: 0.753374398
           }
         }
-        ParentId: 13479032108907632501
+        ParentId: 11216141938136679702
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -3558,9 +4685,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0420000032
-              G: 0.0420000032
-              B: 0.0420000032
+              R: 0.157
+              G: 0.0999226645
+              B: 0.053223
               A: 1
             }
           }
@@ -3589,26 +4716,26 @@ Assets {
         }
       }
       Objects {
-        Id: 10254784403229106540
+        Id: 7292134857560008260
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 3.22552347
-            Y: 30.149622
-            Z: 15.1414862
+            X: -1.24825716
+            Y: 36.4828262
+            Z: 10.5145416
           }
           Rotation {
-            Pitch: 29.4300613
-            Yaw: -52.3826599
-            Roll: -37.3566284
+            Pitch: 17.2405167
+            Yaw: -48.5952911
+            Roll: -68.4793396
           }
           Scale {
-            X: 0.505902886
-            Y: 0.505928755
-            Z: 0.688633263
+            X: 0.443944514
+            Y: 0.443940848
+            Z: 0.949396968
           }
         }
-        ParentId: 13479032108907632501
+        ParentId: 11216141938136679702
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -3637,9 +4764,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0420000032
-              G: 0.0420000032
-              B: 0.0420000032
+              R: 0.157
+              G: 0.0999226645
+              B: 0.053223
               A: 1
             }
           }
@@ -3668,26 +4795,26 @@ Assets {
         }
       }
       Objects {
-        Id: 9546780769232897158
+        Id: 8831418599496131599
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 3.22552347
-            Y: -30.149622
-            Z: 15.1414862
+            X: -1.24825716
+            Y: -36.4828262
+            Z: 10.5145416
           }
           Rotation {
-            Pitch: 29.4299583
-            Yaw: 52.3831902
-            Roll: 37.3570862
+            Pitch: 17.2405033
+            Yaw: 48.5949821
+            Roll: 68.4790115
           }
           Scale {
-            X: 0.505902886
-            Y: 0.505928755
-            Z: 0.688633263
+            X: 0.443944514
+            Y: 0.443940848
+            Z: 0.949396968
           }
         }
-        ParentId: 13479032108907632501
+        ParentId: 11216141938136679702
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -3716,9 +4843,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0420000032
-              G: 0.0420000032
-              B: 0.0420000032
+              R: 0.157
+              G: 0.0999226645
+              B: 0.053223
               A: 1
             }
           }
@@ -3747,26 +4874,26 @@ Assets {
         }
       }
       Objects {
-        Id: 11738127195915637366
+        Id: 11919558564620218794
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 5.4420867
-            Y: -30.7671604
-            Z: 3.66455197
+            X: 1.2487632
+            Y: -37.4708862
+            Z: -7.80039118e-05
           }
           Rotation {
-            Pitch: 7.06668425
-            Yaw: 47.035
-            Roll: -40.5920105
+            Pitch: 17.2404556
+            Yaw: 48.5959854
+            Roll: -19.4079876
           }
           Scale {
-            X: 0.459210783
-            Y: 0.459181517
-            Z: 0.521937132
+            X: 0.443952084
+            Y: 0.443929166
+            Z: 0.753374398
           }
         }
-        ParentId: 13479032108907632501
+        ParentId: 11216141938136679702
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -3795,9 +4922,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0420000032
-              G: 0.0420000032
-              B: 0.0420000032
+              R: 0.157
+              G: 0.0999226645
+              B: 0.053223
               A: 1
             }
           }
@@ -3826,25 +4953,25 @@ Assets {
         }
       }
       Objects {
-        Id: 3508944364677825269
+        Id: 9998444664737393861
         Name: "Eyebrows"
         Transform {
           Location {
-            X: 50.7895432
-            Z: 55.0264282
+            X: 11.2363329
+            Z: 106.976494
           }
           Rotation {
-            Pitch: 18.3781872
+            Pitch: -5.99609375
           }
           Scale {
-            X: 0.964838088
-            Y: 0.964838088
-            Z: 0.964838088
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 12264827001123851630
-        ChildIds: 1679725609235953470
-        ChildIds: 8726169989991792070
+        ParentId: 6386307197386807291
+        ChildIds: 9825745841501356958
+        ChildIds: 16417500191601673772
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3859,26 +4986,24 @@ Assets {
         }
       }
       Objects {
-        Id: 1679725609235953470
+        Id: 9825745841501356958
         Name: "eye"
         Transform {
           Location {
-            X: -15.800766
-            Y: 16.8104038
-            Z: 20.7774277
+            Y: 12.7830553
           }
           Rotation {
-            Pitch: 9.54340649
-            Yaw: 21.7232876
-            Roll: 105.441025
+            Pitch: 1.5690378
+            Yaw: 41.1844673
+            Roll: 71.2431412
           }
           Scale {
-            X: 0.101969309
-            Y: 0.148212388
-            Z: 0.101989642
+            X: 0.101972677
+            Y: 0.227795437
+            Z: 0.101970993
           }
         }
-        ParentId: 3508944364677825269
+        ParentId: 9998444664737393861
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3932,26 +5057,24 @@ Assets {
         }
       }
       Objects {
-        Id: 8726169989991792070
+        Id: 16417500191601673772
         Name: "eye"
         Transform {
           Location {
-            X: -15.800766
-            Y: -16.8104038
-            Z: 20.7774277
+            Y: -12.7830553
           }
           Rotation {
-            Pitch: 9.54340649
-            Yaw: -21.7229919
-            Roll: -105.44101
+            Pitch: 1.5690378
+            Yaw: -41.184
+            Roll: -71.2429733
           }
           Scale {
-            X: 0.101969309
-            Y: 0.148212403
-            Z: 0.101989649
+            X: 0.101972677
+            Y: 0.227795437
+            Z: 0.101970993
           }
         }
-        ParentId: 3508944364677825269
+        ParentId: 9998444664737393861
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4005,103 +5128,104 @@ Assets {
         }
       }
       Objects {
-        Id: 2061924861521773778
+        Id: 12963233358145570231
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -21.0237694
-            Z: 40.7901611
+            X: -69.7636566
+            Y: -28.9831581
+            Z: 1.22400236
           }
           Rotation {
-            Pitch: -63.5279236
+            Pitch: -15.0334778
+            Yaw: 180
+            Roll: -81.2857361
+          }
+          Scale {
+            X: 1.55582297
+            Y: 1.70742178
+            Z: 2.98319221
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16825643228001246048
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12046711476731770255
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -11.7742662
+            Z: -12.3876553
+          }
+          Rotation {
+            Pitch: -10.006134
             Yaw: 180
             Roll: -90
           }
           Scale {
-            X: 1.65538955
-            Y: 1.56205106
-            Z: 3.77918649
+            X: 1.19892287
+            Y: 1.31574547
+            Z: 2.29885888
           }
         }
-        ParentId: 12264827001123851630
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7757328688843560523
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: 84.3009186
-            Z: -16.7730427
-          }
-          Rotation {
-            Pitch: 88.8921585
-            Yaw: 0.0526498482
-            Roll: 90.0523
-          }
-          Scale {
-            X: 0.602446616
-            Y: 0.440061122
-            Z: 2.06802392
-          }
-        }
-        ParentId: 12264827001123851630
+        ParentId: 6386307197386807291
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -4130,6 +5254,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -4158,103 +5285,25 @@ Assets {
         }
       }
       Objects {
-        Id: 12716503690825885837
+        Id: 12134496507115882367
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 70.619
-            Z: -29.8991756
+            X: 24.4338989
+            Z: -16.1907978
           }
           Rotation {
-            Pitch: 74.0261688
-            Roll: 90
+            Pitch: -30.440155
+            Yaw: 180
+            Roll: -90
           }
           Scale {
-            X: 0.915679157
-            Y: 0.801596582
-            Z: 2.64293671
+            X: 0.79416889
+            Y: 0.871552467
+            Z: 1.52276874
           }
         }
-        ParentId: 12264827001123851630
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15779007806221088739
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: 30.7812195
-            Y: -30.9447193
-            Z: 32.4246941
-          }
-          Rotation {
-            Pitch: -50.2743225
-            Yaw: -126.817413
-            Roll: -135.775162
-          }
-          Scale {
-            X: 0.393121243
-            Y: 0.393120974
-            Z: 0.811794639
-          }
-        }
-        ParentId: 12264827001123851630
+        ParentId: 6386307197386807291
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -4283,9 +5332,707 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16825643228001246048
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1243814812137589039
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -69.7611389
+            Y: 28.9831581
+            Z: 1.2249763
+          }
+          Rotation {
+            Pitch: -15.0335083
+            Yaw: 180
+            Roll: -98.7141113
+          }
+          Scale {
+            X: 1.55582297
+            Y: 1.70742178
+            Z: 2.98319221
+          }
+        }
+        ParentId: 6386307197386807291
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16825643228001246048
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5076871012088090726
+        Name: "RightAntler"
+        Transform {
+          Location {
+            X: -28.8007927
+            Y: 29.9986668
+            Z: 119.057358
+          }
+          Rotation {
+            Pitch: -28.0028076
+            Yaw: 165.541763
+            Roll: -51.600708
+          }
+          Scale {
+            X: 0.8436324
+            Y: 0.8436324
+            Z: 0.8436324
+          }
+        }
+        ParentId: 6386307197386807291
+        ChildIds: 6700732145127306127
+        ChildIds: 2895961893883116156
+        ChildIds: 17389300228162515568
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6700732145127306127
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 22.5827026
+            Y: 65.1459122
+            Z: 63.1315231
+          }
+          Rotation {
+            Pitch: -6.34634399
+            Yaw: -42.8300171
+            Roll: 150.412979
+          }
+          Scale {
+            X: 0.331715494
+            Y: 1.20870137
+            Z: 1.3839767
+          }
+        }
+        ParentId: 5076871012088090726
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.132
+              G: 0.0770989954
+              B: 0.0378839858
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2895961893883116156
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 77.6496124
+            Y: 90.8877563
+            Z: 92.7539368
+          }
+          Rotation {
+            Pitch: -25.3734741
+            Yaw: -86.3909912
+            Roll: 163.047989
+          }
+          Scale {
+            X: 0.25
+            Y: 0.75
+            Z: 1
+          }
+        }
+        ParentId: 5076871012088090726
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.132
+              G: 0.0770989954
+              B: 0.0378839858
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17389300228162515568
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -8.07931519
+            Yaw: 18.99
+            Roll: 132.365021
+          }
+          Scale {
+            X: 0.534821391
+            Y: 1.42954791
+            Z: 1.45287299
+          }
+        }
+        ParentId: 5076871012088090726
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.132
+              G: 0.0770989954
+              B: 0.0378839858
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15675436402159753052
+        Name: "LeftAntler"
+        Transform {
+          Location {
+            X: -28.7939663
+            Y: -29.9986668
+            Z: 119.056633
+          }
+          Rotation {
+            Pitch: -28.0027771
+            Yaw: -165.543091
+            Roll: 51.6003761
+          }
+          Scale {
+            X: 0.8436324
+            Y: 0.8436324
+            Z: 0.8436324
+          }
+        }
+        ParentId: 6386307197386807291
+        ChildIds: 406000614642970481
+        ChildIds: 14821839601836329481
+        ChildIds: 11877483151771663121
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 406000614642970481
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -8.07931519
+            Yaw: -18.9895935
+            Roll: -132.365189
+          }
+          Scale {
+            X: 0.534821451
+            Y: 1.42954791
+            Z: 1.45287299
+          }
+        }
+        ParentId: 15675436402159753052
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.132
+              G: 0.0770989954
+              B: 0.0378839858
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14821839601836329481
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 22.5827217
+            Y: -65.145874
+            Z: 63.1315575
+          }
+          Rotation {
+            Pitch: -6.34634399
+            Yaw: 42.8304787
+            Roll: -150.412949
+          }
+          Scale {
+            X: 0.331715494
+            Y: 1.20870137
+            Z: 1.3839767
+          }
+        }
+        ParentId: 15675436402159753052
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.132
+              G: 0.0770989954
+              B: 0.0378839858
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11877483151771663121
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 77.6496277
+            Y: -90.8876114
+            Z: 92.7540588
+          }
+          Rotation {
+            Pitch: -25.3734741
+            Yaw: 86.3907242
+            Roll: -163.04834
+          }
+          Scale {
+            X: 0.25
+            Y: 0.75
+            Z: 1
+          }
+        }
+        ParentId: 15675436402159753052
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.132
+              G: 0.0770989954
+              B: 0.0378839858
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4065911281846744647
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -23.4390316
+            Y: -42.6101837
+            Z: 20.6824074
+          }
+          Rotation {
+            Roll: -29.5663147
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 2.30363274
+          }
+        }
+        ParentId: 313575219957438925
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -4314,105 +6061,26 @@ Assets {
         }
       }
       Objects {
-        Id: 17739536646402136301
+        Id: 655127772340216820
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -26.0807266
-            Y: -59.9973335
-            Z: 59.0161324
+            X: 41.3476601
+            Y: -8.44656
+            Z: 32.5082779
           }
           Rotation {
-            Pitch: -62.6405029
-            Yaw: -163.68103
-            Roll: -15.5572815
+            Pitch: -20.352417
+            Yaw: 12.1486778
+            Roll: -9.89828491
           }
           Scale {
-            X: 0.770005584
-            Y: 0.879068
-            Z: 1.18690205
+            X: 1
+            Y: 1
+            Z: 2.30363274
           }
         }
-        ParentId: 12264827001123851630
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11616335619737079809
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: 30.7812195
-            Y: 30.9447193
-            Z: 32.4246941
-          }
-          Rotation {
-            Pitch: 50.2742195
-            Yaw: -53.1830139
-            Roll: 44.2248459
-          }
-          Scale {
-            X: 0.393121243
-            Y: 0.393120974
-            Z: 0.811794639
-          }
-        }
-        ParentId: 12264827001123851630
+        ParentId: 313575219957438925
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -4441,9 +6109,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -4472,26 +6140,26 @@ Assets {
         }
       }
       Objects {
-        Id: 14554521126044681059
+        Id: 5098390834383814378
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 43.4657745
-            Y: -35.0004
-            Z: 36.9460449
+            X: 4.10320282
+            Y: 20.8865376
+            Z: 33.6678772
           }
           Rotation {
-            Pitch: -50.2741089
-            Yaw: -126.817123
-            Roll: -123.570129
+            Pitch: 10.720562
+            Yaw: 6.90432119
+            Roll: 27.6883926
           }
           Scale {
-            X: 0.128727481
-            Y: 0.128727138
-            Z: 0.285731167
+            X: 1
+            Y: 1
+            Z: 2.30363274
           }
         }
-        ParentId: 12264827001123851630
+        ParentId: 313575219957438925
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -4520,6 +6188,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -4548,105 +6219,26 @@ Assets {
         }
       }
       Objects {
-        Id: 6753604188330391736
+        Id: 7524906343650026600
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -26.0807266
-            Y: 59.9973335
-            Z: 59.0161324
+            X: -54.1856079
+            Y: 11.7469625
+            Z: 31.9953766
           }
           Rotation {
-            Pitch: 62.6400032
-            Yaw: -16.3178711
-            Roll: -15.5561218
+            Pitch: -11.6336975
+            Yaw: -4.7350769
+            Roll: 27.7828541
           }
           Scale {
-            X: 0.770005643
-            Y: 0.879068
-            Z: 1.18690205
+            X: 1
+            Y: 1
+            Z: 2.30363274
           }
         }
-        ParentId: 12264827001123851630
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13419958530254727552
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: 43.4657745
-            Y: 35.0004
-            Z: 36.9460449
-          }
-          Rotation {
-            Pitch: 50.2740479
-            Yaw: -53.1829834
-            Roll: 56.4299431
-          }
-          Scale {
-            X: 0.128727481
-            Y: 0.128727138
-            Z: 0.285731167
-          }
-        }
-        ParentId: 12264827001123851630
+        ParentId: 313575219957438925
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -4675,6 +6267,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
               A: 1
             }
           }
@@ -4703,104 +6298,26 @@ Assets {
         }
       }
       Objects {
-        Id: 7259742891393674210
+        Id: 6977453852825221784
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 2.83199191
-            Z: 5.69646263
+            X: 33.1343918
+            Y: 43.1316605
+            Z: -12.7813396
           }
           Rotation {
-            Pitch: -63.5279846
-            Yaw: -179.999985
-            Roll: -89.999939
+            Pitch: -24.821228
+            Yaw: -3.97055054
+            Roll: -114.707703
           }
           Scale {
-            X: 1.49999917
-            Y: 1.86791539
-            Z: 2.89035225
+            X: 1
+            Y: 1
+            Z: 2.30363274
           }
         }
-        ParentId: 12264827001123851630
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 9556992436786527470
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12143894629036006249
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0310000014
-              G: 0.0310000014
-              B: 0.0310000014
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16779507418749151888
-        Name: "Pyramid - 4-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: -25.9748611
-            Y: 0.266657889
-            Z: 56.979702
-          }
-          Rotation {
-            Pitch: -78.2628784
-            Yaw: -110.25882
-            Roll: -159.784134
-          }
-          Scale {
-            X: 1.29277813
-            Y: 1.22325957
-            Z: 2.97555614
-          }
-        }
-        ParentId: 12264827001123851630
+        ParentId: 313575219957438925
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -4826,6 +6343,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 8.97748661
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -4838,7 +6364,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16825643228001246048
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -4850,14 +6376,242 @@ Assets {
           }
         }
       }
-    }
-    Assets {
-      Id: 2810379255825890868
-      Name: "Gem - Heart Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_heart_polished_001"
+      Objects {
+        Id: 6743593060935977523
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: 20.2895832
+            Y: -52.7584076
+            Z: -13.047225
+          }
+          Rotation {
+            Pitch: -16.5364685
+            Yaw: 16.3911419
+            Roll: 135.480743
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 2.30363274
+          }
+        }
+        ParentId: 313575219957438925
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5777810880512891236
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -100.370659
+            Y: -12.8242245
+            Z: 9.44663
+          }
+          Rotation {
+            Pitch: 7.28697824
+            Yaw: -4.16000366
+            Roll: -29.831543
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
+          }
+        }
+        ParentId: 313575219957438925
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5145807804025816027
+        Name: "Pyramid - 4-Sided Truncated Polished"
+        Transform {
+          Location {
+            X: -118.807625
+            Y: 19.644598
+            Z: 6.71402025
+          }
+          Rotation {
+            Pitch: 7.28697824
+            Yaw: -4.16000366
+            Roll: 30.0170536
+          }
+          Scale {
+            X: 1.20198298
+            Y: 1.20198298
+            Z: 2.76892805
+          }
+        }
+        ParentId: 313575219957438925
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 9556992436786527470
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8.97748661
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.382000029
+              G: 0.236400709
+              B: 0.117274
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
       }
     }
     Assets {
@@ -4885,6 +6639,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_gem_round_polished_001"
+      }
+    }
+    Assets {
+      Id: 2810379255825890868
+      Name: "Gem - Heart Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_gem_heart_polished_001"
       }
     }
     Assets {

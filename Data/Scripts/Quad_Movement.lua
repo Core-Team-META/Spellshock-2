@@ -208,7 +208,7 @@ function Tick()
 		
 	--if LOCAL_PLAYER and Equipment and LOCAL_PLAYER == Equipment.owner then
 		if not isActive then
-			--World.SpawnAsset(Start_SFX, {position = Equipment:GetWorldPosition()})
+			World.SpawnAsset(Start_SFX, {position = Equipment:GetWorldPosition()})
 			Task.Wait()
 			isActive = true
 			isMoving = false

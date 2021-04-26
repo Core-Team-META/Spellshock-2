@@ -118,7 +118,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
+              R: 5
+              G: 0.1
               A: 1
             }
           }
@@ -166,17 +167,25 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 18007932134064521969
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.305
-              G: 0.305
-              B: 0.305
+              R: 0.0800000057
+              G: 0.0800000057
+              B: 0.0800000057
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 3
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 3
           }
         }
         Collidable_v2 {
@@ -298,6 +307,30 @@ Assets {
             Name: "bp:Trail Scale Multiplier"
             Float: 0.880441129
           }
+          Overrides {
+            Name: "bp:Wake Color"
+            Color {
+              R: 4
+              G: 0.2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 4
+              G: 0.2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Ripple Color"
+            Color {
+              R: 4
+              G: 0.2
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -405,15 +438,6 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "fxma_opaque_emissive"
-      }
-    }
-    Assets {
-      Id: 18007932134064521969
-      Name: "Metal Basic Steel"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
       }
     }
     Assets {

@@ -118,8 +118,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.666667
-              B: 2
+              R: 1.5
+              B: 4
               A: 1
             }
           }
@@ -298,6 +298,30 @@ Assets {
           Overrides {
             Name: "bp:Trail Scale Multiplier"
             Float: 0.880441129
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1.5
+              B: 4
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Wake Color"
+            Color {
+              R: 1.5
+              B: 4
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Ripple Color"
+            Color {
+              R: 1.5
+              B: 4
+              A: 1
+            }
           }
         }
         Collidable_v2 {
