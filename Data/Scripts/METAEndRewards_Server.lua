@@ -83,15 +83,13 @@ end
 local function GiveNoneCappedAbilityCard(player, reward, class)
     local binds = {1, 2, 3, 4, 5}
     class = class or REWARD_UTIL.GetRandomClass()
-    if
-        META_AP().IsMaxBindLevel(player, class, reward.bind) 
-     then
+    --META_AP().IsMaxBindLevel(player, class, reward.bind) and
+    if not META_AP().StillNeedsMoreXp(player, class, reward.bind) then
         table.remove(binds, reward.bind)
         local bindIndex = math.random(1, #binds)
         local randomBind = binds[bindIndex]
-        -- not META_AP().StillNeedsMoreXp(player, class, randomBind)
-        while META_AP().IsMaxBindLevel(player, class, randomBind) and
-            #binds > 0 do
+        --META_AP().IsMaxBindLevel(player, class, randomBind) and
+        while not META_AP().StillNeedsMoreXp(player, class, randomBind) and #binds > 0 do
             table.remove(binds, bindIndex)
             if #binds > 0 then
                 bindIndex = math.random(1, #binds)
