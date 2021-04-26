@@ -203,6 +203,7 @@ Objects {
   ChildIds: 5236111476486582131
   ChildIds: 14340600663168930898
   ChildIds: 16274504631121882860
+  ChildIds: 15967601790726745993
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -213,6 +214,54 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 15967601790726745993
+  Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+  Transform {
+    Location {
+      X: -22631.3418
+      Y: -30642.5566
+      Z: 6259.16748
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14291644262325182723
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_cinematic_boomy_impacts_01:10"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 1316376324599490360
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+    }
   }
 }
 Objects {
@@ -285,7 +334,7 @@ Objects {
     Overrides {
       Name: "cs:AlternateSFX"
       ObjectReference {
-        SelfId: 16274504631121882860
+        SelfId: 15967601790726745993
       }
     }
   }
