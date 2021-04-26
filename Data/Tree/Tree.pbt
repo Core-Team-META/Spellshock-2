@@ -37,7 +37,6 @@ Objects {
   ChildIds: 7894618171110748117
   ChildIds: 18439257393742900714
   ChildIds: 13701375997520260708
-  ChildIds: 2325056755632489670
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -50,49 +49,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 2325056755632489670
-  Name: "Healer"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1551665899132109167
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Healer"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 10891347061023344361
-    }
   }
 }
 Objects {
