@@ -113,7 +113,7 @@ local function GetRemainingReqCurrency(player, class, bind)
         totalReqXp = totalReqXp + COST_TABLE[i].reqXP
         totalReqGold = totalReqGold + COST_TABLE[i].reqGold
     end
-    return totalReqXp, totalReqGold
+    return totalReqXp, totalReqGold, currentLevel
 end
 
 --@param object player
@@ -293,13 +293,21 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@return bool 
 function API.StillNeedsMoreXp(player, class, bind)
-  local totalReqXp, totalReqGold = GetRemainingReqCurrency(player, class, bind)
+  local totalReqXp, totalReqGold, currentLevel = GetRemainingReqCurrency(player, class, bind)
   local currentXp = GetBindXp(player, class, bind)
-    if totalReqXp > currentXp then
+    if totalReqXp > currentXp and currentLevel < CONST.MAX_LEVEL then
           return true
     else
         return false
     end
+end
+
+--@param object player
+--@param int class => id of class (API.WARRIOR, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@return bool
+function API.IsMaxBindLevel(player, class, bind)
+    return GetBindLevel(player, class, bind) >= CONST.MAX_LEVEL
 end
 
 --@param object player
