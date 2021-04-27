@@ -24,7 +24,7 @@ function OnTeamScoreChanged(team)
     local scoreLimit = DynamicCapturePoints:GetCustomProperty("ScoreLimit")
     if teamScore >= (scoreLimit-30) and not loopTask and ABGS.GAME_STATE_ROUND == ABGS.GetGameState() then
         loopTask = Task.Spawn(function ()
-            if alternateAudio[LOCAL_PLAYER.name] then
+            if alternateAudio[LOCAL_PLAYER.id] then
                 AlternateSFX:Play()
             else
                 HeartbeatSFX:Play()

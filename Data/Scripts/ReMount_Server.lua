@@ -1,4 +1,4 @@
---local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 -------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ local function PlayerDamageTaken(attackData)
         return
     end
     if Object.IsValid(object) and object:IsA("Player") and object == Equipment.owner and object.isMounted then
-        UpdateMountPreventTime(time() + 1.5)
+        UpdateMountPreventTime(time() + CONST.MOUNT_COOLDOWN_TIME)
         Equipment.owner.canMount = false
     end
 end

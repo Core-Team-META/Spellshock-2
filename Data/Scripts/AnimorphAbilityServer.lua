@@ -57,31 +57,33 @@ function OnProjectileImpacted(projectile, other, hitResult)
 		for _, enemy in ipairs(enemiesInRange) do
 			-- apply status effect
 			--API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id)
-			enemy.serverUserData.NotAdjustHp = true
-			-- Damage
-			if DamageAmount ~= 0 then
-				local attackData = {
-					object = enemy,
-					damage = dmg,
-					source = SpecialAbility.owner,
-					position = nil,
-					rotation = nil,
-					tags = {id = "Mage_E"}
-				}
-				COMBAT().ApplyDamage(attackData)
-				Task.Wait()
-			end
+			if not enemy.serverUserData.DamageImmunity then
+				enemy.serverUserData.NotAdjustHp = true
+				-- Damage
+				if DamageAmount ~= 0 then
+					local attackData = {
+						object = enemy,
+						damage = dmg,
+						source = SpecialAbility.owner,
+						position = nil,
+						rotation = nil,
+						tags = {id = "Mage_E"}
+					}
+					COMBAT().ApplyDamage(attackData)
+					Task.Wait()
+				end
 
-			-- equip animal costume
-			if not enemy.isDead and not enemy.serverUserData.isAnimorphed then
-				enemy.serverUserData.isAnimorphed = true
-				local costumeTemplate = PlayerVFX.Attachment
-				local newCostume = META_AP().SpawnAsset(costumeTemplate)
-				newCostume:SetScale(newCostume:GetScale() * 1.5)
-				local Duration =
-					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Duration, SpecialAbility.name .. ": Duration")
-				newCostume:SetNetworkedCustomProperty("Duration", Duration)
-				newCostume:Equip(enemy)
+				-- equip animal costume
+				if not enemy.isDead and not enemy.serverUserData.isAnimorphed then
+					enemy.serverUserData.isAnimorphed = true
+					local costumeTemplate = PlayerVFX.Attachment
+					local newCostume = META_AP().SpawnAsset(costumeTemplate)
+					newCostume:SetScale(newCostume:GetScale() * 1.5)
+					local Duration =
+						META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Duration, SpecialAbility.name .. ": Duration")
+					newCostume:SetNetworkedCustomProperty("Duration", Duration)
+					newCostume:Equip(enemy)
+				end
 			end
 		end
 	end

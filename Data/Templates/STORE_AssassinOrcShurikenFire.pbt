@@ -239,7 +239,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
+              R: 5
+              G: 0.1
               A: 1
             }
           }
@@ -287,7 +288,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 18007932134064521969
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -298,6 +299,14 @@ Assets {
               B: 0.305
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 3
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 3
           }
         }
         Collidable_v2 {
@@ -359,15 +368,6 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "fxma_opaque_emissive"
-      }
-    }
-    Assets {
-      Id: 18007932134064521969
-      Name: "Metal Basic Steel"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
       }
     }
     PrimaryAssetId {

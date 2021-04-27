@@ -268,6 +268,11 @@ local function OnLoadDailyShopData(player, data)
     if data[CONST.STORAGE.DAILY_SHOP] then
         dailyShopItems = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.DAILY_SHOP])
     end
+   
+        while not DAILY_SHOP.context.OnLoadPlayerDailyShop do
+            Task.Wait()
+        end
+   
     DAILY_SHOP.context.OnLoadPlayerDailyShop(player, dailyShopItems)
 end
 
