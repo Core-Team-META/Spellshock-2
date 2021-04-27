@@ -53,7 +53,9 @@ function OnAbilityExecute(thisAbility)
 	Task.Wait()
 	Task.Wait()
 	if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then
-		CurrentHawk:Destroy()
+		if CurrentHawk and Object.IsValid(CurrentHawk) then
+			CurrentHawk:Destroy()
+		end
 		return
 	end
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
@@ -69,7 +71,7 @@ function OnAbilityExecute(thisAbility)
 			SpecialAbility.name .. ": LifeSpan"
 		)
 		CurrentHawk.lifeSpan = Timer + 5
-	else
+	elseif CurrentHawk and Object.IsValid(CurrentHawk) then
 		CurrentHawk:Destroy()
 	end
 end
@@ -78,7 +80,7 @@ function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 20, thisAbility.name .. ": Cooldown")
 	Task.Spawn(
 		function()
-			if Object.IsValid(thisAbility) then
+			if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() ~= AbilityPhase.READY then
 				thisAbility:AdvancePhase()
 			end
 		end,

@@ -139,19 +139,21 @@ function OnGameStateChanged(oldState, newState)
             -- unequip everything
             UnequipPlayer(player)
 
-            local classID = player:GetResource("CLASS_MAP")
-            if classID == 0 then
-                classID = META_AP().WARRIOR
+            if Object.IsValid(player) then
+                local classID = player:GetResource("CLASS_MAP")
+                if classID == 0 then
+                    classID = META_AP().WARRIOR
+                end
+
+                local newOutfit = World.SpawnAsset(COSTUME_EQUIPMENT_TEMPLATE)
+                local skinId = GetCurrentCosmeticId(player, classID, 8)
+                newOutfit:SetNetworkedCustomProperty("OID", skinId)
+                newOutfit:SetNetworkedCustomProperty("ClassID", classID)
+                newOutfit:Equip(player)
+
+                player:SetVisibility(true)
+                player.animationStance = Class_Stances[classID]
             end
-
-            local newOutfit = World.SpawnAsset(COSTUME_EQUIPMENT_TEMPLATE)
-            local skinId = GetCurrentCosmeticId(player, classID, 8)
-            newOutfit:SetNetworkedCustomProperty("OID", skinId)
-            newOutfit:SetNetworkedCustomProperty("ClassID", classID)
-            newOutfit:Equip(player)
-
-            player:SetVisibility(true)
-            player.animationStance = Class_Stances[classID]
         end
     end
 end
