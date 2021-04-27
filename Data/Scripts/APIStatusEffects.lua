@@ -320,36 +320,38 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 
 	local tracker = API.GetStateTracker(player)
 	for i = 1, API.MAX_STATUS_EFFECTS do
-		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
+		if tracker then
+			local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 
-		if not trackerTbl then
-			--tracker:SetNetworkedCustomProperty(GetIdPropertyName(i), id)
-			--tracker:SetNetworkedCustomProperty(GetStartTimePropertyName(i), time())
-			if source or duration or damage or multiplier then
-				local tempTbl = {
-					[ID_KEY] = id,
-					[TIME_KEY] = CoreMath.Round(time(), 2),
-					[SOURCE_KEY] = source.id,
-					[DURATION_KEY] = duration,
-					[DAMAGE_KEY] = damage,
-					[MULTIPLIER_KEY] = multiplier
-				}
+			if not trackerTbl then
+				--tracker:SetNetworkedCustomProperty(GetIdPropertyName(i), id)
+				--tracker:SetNetworkedCustomProperty(GetStartTimePropertyName(i), time())
+				if source or duration or damage or multiplier then
+					local tempTbl = {
+						[ID_KEY] = id,
+						[TIME_KEY] = CoreMath.Round(time(), 2),
+						[SOURCE_KEY] = source.id,
+						[DURATION_KEY] = duration,
+						[DAMAGE_KEY] = damage,
+						[MULTIPLIER_KEY] = multiplier
+					}
 
-				tracker:SetNetworkedCustomProperty(API.GetSourceProperty(i), ConvertTableToString(tempTbl))
-			end
-			tickCounts[player][i] = 0
-
-			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
-
-			if statusEffectData.type == API.STATUS_EFFECT_TYPE_CUSTOM then
-				if statusEffectData.startFunction then
-					statusEffectData.startFunction(player)
+					tracker:SetNetworkedCustomProperty(API.GetSourceProperty(i), ConvertTableToString(tempTbl))
 				end
-			else
-				UpdatePlayerEffectState(player, statusEffectData.type)
-			end
+				tickCounts[player][i] = 0
 
-			return
+				local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
+
+				if statusEffectData.type == API.STATUS_EFFECT_TYPE_CUSTOM then
+					if statusEffectData.startFunction then
+						statusEffectData.startFunction(player)
+					end
+				else
+					UpdatePlayerEffectState(player, statusEffectData.type)
+				end
+
+				return
+			end
 		end
 	end
 
@@ -396,7 +398,7 @@ function API.DoesPlayerHaveStatusEffect(player, name)
 	if not tracker or not Object.IsValid(tracker) then
 		return false
 	end
-	
+
 	for i = 1, API.MAX_STATUS_EFFECTS do
 		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 		if trackerTbl and trackerTbl[ID_KEY] ~= 0 then
