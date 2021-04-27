@@ -169,35 +169,7 @@ Assets {
           }
         }
         ParentId: 15430246303664563359
-        ChildIds: 3244129443141626538
-        ChildIds: 4375014992683743324
-        ChildIds: 12024833743654608042
-        ChildIds: 3207458482187303874
-        ChildIds: 6091303609903222974
-        ChildIds: 887104749032370364
-        ChildIds: 13567774050049494119
-        ChildIds: 4139765944537545396
-        ChildIds: 8953395653601388581
-        ChildIds: 4155112135245106520
-        ChildIds: 12445492100418391217
-        ChildIds: 15830757069407681795
-        ChildIds: 12356845383369022302
-        ChildIds: 17972993885224296197
-        ChildIds: 13562368459369432958
-        ChildIds: 2228247641940280893
-        ChildIds: 8562556255984929346
-        ChildIds: 143608229133762042
-        ChildIds: 9349555431379096588
-        ChildIds: 14341392905490187583
-        ChildIds: 8818333696330107443
-        ChildIds: 5870895259503672782
-        ChildIds: 4013208311955393197
-        ChildIds: 18438142816267456846
-        ChildIds: 138585696717334004
-        ChildIds: 15523615208557252852
-        ChildIds: 14358711039184464680
-        ChildIds: 4125558197937503381
-        ChildIds: 6143275265863862245
+        ChildIds: 1618783071386369331
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -212,26 +184,83 @@ Assets {
         }
       }
       Objects {
-        Id: 3244129443141626538
+        Id: 1618783071386369331
+        Name: "pelvis_target"
+        Transform {
+          Location {
+            X: -81.3497238
+            Y: -0.0139289014
+            Z: 412.753143
+          }
+          Rotation {
+            Pitch: -77.254982
+            Yaw: -179.999
+            Roll: 179.997971
+          }
+          Scale {
+            X: 9.20640659
+            Y: 9.20640659
+            Z: 9.20640659
+          }
+        }
+        ParentId: 1896962750512047213
+        ChildIds: 7259044329404689667
+        ChildIds: 14468523742670146693
+        ChildIds: 10000125795286496383
+        ChildIds: 5931002483935503372
+        ChildIds: 8517499866058544823
+        ChildIds: 5269329993209938856
+        ChildIds: 1367755991478407253
+        ChildIds: 14566327357514943172
+        ChildIds: 14853877217851306393
+        ChildIds: 16761663074525779306
+        ChildIds: 8906740985854240281
+        ChildIds: 8315939374747466437
+        ChildIds: 3757608610049460926
+        ChildIds: 17520767254731066697
+        ChildIds: 3338982649469882587
+        ChildIds: 6232371930858621592
+        ChildIds: 5837467870933200792
+        ChildIds: 5961352422875621941
+        ChildIds: 17620307889123503981
+        ChildIds: 10639644139734269973
+        ChildIds: 13149703999818172682
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7259044329404689667
         Name: "bodyBottom_GEO"
         Transform {
           Location {
-            X: -39.4726563
-            Y: -0.01953125
-            Z: 367.514648
+            X: 3.37373185
+            Y: 0.000136950606
+            Z: 6.81637621
           }
           Rotation {
-            Pitch: 69.3169556
-            Yaw: 179.997894
-            Roll: -90.0010834
+            Pitch: -33.427887
+            Yaw: 180
+            Roll: -90
           }
           Scale {
-            X: 5.47036886
-            Y: 6.97499514
-            Z: 12.6135597
+            X: 0.58453548
+            Y: 0.745312035
+            Z: 1.34781992
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1618783071386369331
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -275,26 +304,24 @@ Assets {
         }
       }
       Objects {
-        Id: 4375014992683743324
+        Id: 14468523742670146693
         Name: "tailFeathers_01_GEO"
         Transform {
           Location {
-            X: -342.140625
-            Y: 0.40625
-            Z: 561.992188
+            X: -9.75952148
+            Y: 0.0625
+            Z: -29.3085938
           }
           Rotation {
-            Pitch: -18.721117
-            Yaw: 179.999176
-            Roll: 179.999496
+            Pitch: -58.5339355
           }
           Scale {
-            X: -0.652982116
-            Y: 2.1253233
-            Z: 8.0429287
+            X: -0.0697743
+            Y: 0.227101088
+            Z: 0.859425902
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1618783071386369331
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -338,26 +365,26 @@ Assets {
         }
       }
       Objects {
-        Id: 12024833743654608042
+        Id: 10000125795286496383
         Name: "tailFeathers_01_GEO"
         Transform {
           Location {
-            X: -371.933594
-            Y: 58.0859375
-            Z: 479.165039
+            X: -0.425489932
+            Y: 6.20725203
+            Z: -30.4655075
           }
           Rotation {
-            Pitch: 16.5998592
-            Yaw: 36.9019966
-            Roll: -134.213745
+            Pitch: 43.18993
+            Yaw: 127.884438
+            Roll: -7.65911865
           }
           Scale {
-            X: 0.268678337
-            Y: 1.66477454
-            Z: 8.04293442
+            X: 0.028709583
+            Y: 0.177889243
+            Z: 0.859426498
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1618783071386369331
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -401,26 +428,26 @@ Assets {
         }
       }
       Objects {
-        Id: 3207458482187303874
+        Id: 5931002483935503372
         Name: "tailFeathers_01_GEO"
         Transform {
           Location {
-            X: -355.058594
-            Y: 43.0859375
-            Z: 523.422852
+            X: -5.43618202
+            Y: 4.60442305
+            Z: -29.7500954
           }
           Rotation {
-            Pitch: 18.5564899
-            Yaw: 30.6591969
-            Roll: -149.63
+            Pitch: 133.515762
+            Yaw: -44.5953064
+            Roll: 164.120544
           }
           Scale {
-            X: 0.268678486
-            Y: 2.14558363
-            Z: 8.04293537
+            X: 0.0287096016
+            Y: 0.229266
+            Z: 0.859426558
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1618783071386369331
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -464,26 +491,26 @@ Assets {
         }
       }
       Objects {
-        Id: 6091303609903222974
+        Id: 8517499866058544823
         Name: "tailFeathers_01_GEO"
         Transform {
           Location {
-            X: -371.953125
-            Y: -58.125
-            Z: 479.18457
+            X: -0.427039921
+            Y: -6.20836353
+            Z: -30.4688511
           }
           Rotation {
-            Pitch: 16.6009712
-            Yaw: -36.9020348
-            Roll: 134.215088
+            Pitch: 43.190834
+            Yaw: -127.886383
+            Roll: 7.65790081
           }
           Scale {
-            X: 0.268678337
-            Y: 1.66720271
-            Z: 8.04293442
+            X: 0.028709583
+            Y: 0.178148702
+            Z: 0.859426498
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1618783071386369331
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -527,26 +554,26 @@ Assets {
         }
       }
       Objects {
-        Id: 887104749032370364
+        Id: 5269329993209938856
         Name: "tailFeathers_01_GEO"
         Transform {
           Location {
-            X: -355.058594
-            Y: -43.0859375
-            Z: 523.427734
+            X: -5.4361515
+            Y: -4.60241652
+            Z: -29.7499237
           }
           Rotation {
-            Pitch: 18.5574455
-            Yaw: -30.6587162
-            Roll: 149.632248
+            Pitch: 46.4853859
+            Yaw: -135.407227
+            Roll: 15.8783026
           }
           Scale {
-            X: 0.268678486
-            Y: 2.14171457
-            Z: 8.04293537
+            X: 0.0287096016
+            Y: 0.22885257
+            Z: 0.859426558
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1618783071386369331
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -590,26 +617,101 @@ Assets {
         }
       }
       Objects {
-        Id: 13567774050049494119
+        Id: 1367755991478407253
+        Name: "left_hip_target"
+        Transform {
+          Location {
+            X: -1.49723899
+            Y: -18
+            Z: 3.96595597
+          }
+          Rotation {
+            Pitch: 67.8086243
+            Yaw: 174.281067
+            Roll: -172.423096
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1618783071386369331
+        ChildIds: 10581366040746016372
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10581366040746016372
+        Name: "left_knee_target"
+        Transform {
+          Location {
+            X: 3.60061979
+            Y: -1.71766913
+            Z: -24.7181072
+          }
+          Rotation {
+            Pitch: -73.9964
+            Yaw: 125.021347
+            Roll: -135.256531
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.99999994
+          }
+        }
+        ParentId: 1367755991478407253
+        ChildIds: 1985088286509513644
+        ChildIds: 74473733587723630
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1985088286509513644
         Name: "Gem - Heart Polished"
         Transform {
           Location {
-            X: -30.9679604
-            Y: -210.445053
-            Z: 202.804901
+            X: 1.13095403
+            Y: 1.73466849
+            Z: -5.41593742
           }
           Rotation {
-            Pitch: 42.0049286
-            Yaw: -179.685089
-            Roll: -98.9014587
+            Pitch: -46.9129639
+            Yaw: -169.774811
+            Roll: -112.769989
           }
           Scale {
-            X: 2.6697197
-            Y: 4.35888481
-            Z: 3.98383355
+            X: 0.285272509
+            Y: 0.46576798
+            Z: 0.425691932
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 10581366040746016372
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -653,26 +755,67 @@ Assets {
         }
       }
       Objects {
-        Id: 4139765944537545396
+        Id: 74473733587723630
+        Name: "left_ankle_target"
+        Transform {
+          Location {
+            X: 12.7791815
+            Y: -2.998
+            Z: -20.6774559
+          }
+          Rotation {
+            Pitch: 57.5201759
+            Yaw: 165.41597
+            Roll: 174.045715
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1.00000012
+          }
+        }
+        ParentId: 10581366040746016372
+        ChildIds: 12603171243210605027
+        ChildIds: 14986535337741093922
+        ChildIds: 2929826880322891683
+        ChildIds: 1525256001530081055
+        ChildIds: 4663605542054045802
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12603171243210605027
         Name: "left_ankle_GEO"
         Transform {
           Location {
-            X: -136.887802
-            Y: -247.341553
-            Z: 24.8917637
+            X: 0.00121172681
+            Y: 0.0021586048
+            Z: -8.73756695
           }
           Rotation {
-            Pitch: 31.5491409
-            Yaw: 0.000199369402
-            Roll: 11.1910076
+            Pitch: 0.000519094348
+            Yaw: 0.000816635496
+            Roll: 0.000282976194
           }
           Scale {
-            X: 0.41227
-            Y: 0.411597222
-            Z: 1.72839952
+            X: 0.0440530516
+            Y: 0.043981161
+            Z: 0.184687883
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 74473733587723630
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -724,26 +867,26 @@ Assets {
         }
       }
       Objects {
-        Id: 8953395653601388581
+        Id: 14986535337741093922
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: -113.118248
-            Y: -259.359619
-            Z: -39.3070145
+            X: -1.41821086
+            Y: 0.123447821
+            Z: -16.0288143
           }
           Rotation {
-            Pitch: 89.4101563
-            Yaw: 168.303497
-            Roll: 169.277054
+            Pitch: 57.2947273
+            Yaw: -17.7097473
+            Roll: -19.8806458
           }
           Scale {
-            X: 0.162307605
-            Y: 0.159005374
-            Z: 0.530912936
+            X: 0.0173433516
+            Y: 0.0169904958
+            Z: 0.0567306206
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 74473733587723630
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -795,26 +938,26 @@ Assets {
         }
       }
       Objects {
-        Id: 4155112135245106520
+        Id: 2929826880322891683
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: -36.5933495
-            Y: -260.72049
-            Z: -38.556778
+            X: 5.55800533
+            Y: 0.801132143
+            Z: -20.1636105
           }
           Rotation {
-            Pitch: 89.3967056
-            Yaw: 168.289124
-            Roll: 169.262817
+            Pitch: 57.2913933
+            Yaw: -17.7085571
+            Roll: -19.8798828
           }
           Scale {
-            X: 0.262433887
-            Y: 0.261891246
-            Z: 1.23158908
+            X: 0.0280423313
+            Y: 0.0279843491
+            Z: 0.131601259
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 74473733587723630
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -866,26 +1009,26 @@ Assets {
         }
       }
       Objects {
-        Id: 12445492100418391217
+        Id: 1525256001530081055
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: -48.3970566
-            Y: -284.861328
-            Z: -38.449604
+            X: 4.51286697
+            Y: -1.85227251
+            Z: -20.0269108
           }
           Rotation {
-            Pitch: 89.3941193
-            Yaw: 147.025543
-            Roll: 169.462311
+            Pitch: 57.2920647
+            Yaw: -17.3105469
+            Roll: 1.91012061
           }
           Scale {
-            X: 0.254682571
-            Y: 0.252537936
-            Z: 1.09637845
+            X: 0.0272140652
+            Y: 0.026984904
+            Z: 0.117153354
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 74473733587723630
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -937,26 +1080,26 @@ Assets {
         }
       }
       Objects {
-        Id: 15830757069407681795
+        Id: 4663605542054045802
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: -40.0886841
-            Y: -228.086594
-            Z: -38.556778
+            X: 5.26615286
+            Y: 4.19211864
+            Z: -19.3185482
           }
           Rotation {
-            Pitch: 89.4101563
-            Yaw: -172.936722
-            Roll: 169.318298
+            Pitch: 57.2306442
+            Yaw: -18.0391235
+            Roll: -38.8713379
           }
           Scale {
-            X: 0.207190797
-            Y: 0.205771625
-            Z: 1.15199232
+            X: 0.0221393369
+            Y: 0.0219876971
+            Z: 0.123095967
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 74473733587723630
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1008,26 +1151,101 @@ Assets {
         }
       }
       Objects {
-        Id: 12356845383369022302
+        Id: 14566327357514943172
+        Name: "right_hip_target"
+        Transform {
+          Location {
+            X: -1.49723601
+            Y: 18
+            Z: 3.96595478
+          }
+          Rotation {
+            Pitch: 67.8084564
+            Yaw: -174.285934
+            Roll: 172.417236
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1618783071386369331
+        ChildIds: 17830436115171379915
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 17830436115171379915
+        Name: "right_knee_target"
+        Transform {
+          Location {
+            X: 4.4350009
+            Y: 2.87950802
+            Z: -19.7728119
+          }
+          Rotation {
+            Pitch: -73.9931946
+            Yaw: -125.018005
+            Roll: 135.25325
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.999999881
+          }
+        }
+        ParentId: 14566327357514943172
+        ChildIds: 3017109049911953753
+        ChildIds: 1937676310416645528
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3017109049911953753
         Name: "Gem - Heart Polished"
         Transform {
           Location {
-            X: -31.2455673
-            Y: 210.16803
-            Z: 288.88916
+            X: 1.13192821
+            Y: -1.73720729
+            Z: -5.4195056
           }
           Rotation {
-            Pitch: 42.0057564
-            Yaw: 179.682663
-            Roll: 98.8978806
+            Pitch: -46.9129333
+            Yaw: 169.775116
+            Roll: 112.769943
           }
           Scale {
-            X: 2.6697197
-            Y: 4.35888481
-            Z: 3.98383284
+            X: 0.285272509
+            Y: 0.46576798
+            Z: 0.425691932
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 17830436115171379915
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1071,26 +1289,64 @@ Assets {
         }
       }
       Objects {
-        Id: 17972993885224296197
+        Id: 1937676310416645528
+        Name: "right_ankle_target"
+        Transform {
+          Location {
+            X: 8.62779331
+            Y: 2.9944768
+            Z: -20.659544
+          }
+          Rotation {
+            Pitch: 57.5183868
+            Yaw: -165.412186
+            Roll: -174.045334
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.999999881
+          }
+        }
+        ParentId: 17830436115171379915
+        ChildIds: 3819768658163866064
+        ChildIds: 11870081639317939470
+        ChildIds: 16476584127745504535
+        ChildIds: 16406315162711548079
+        ChildIds: 7361440978955849140
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3819768658163866064
         Name: "right_ankle_GEO"
         Transform {
           Location {
-            X: -136.803497
-            Y: 247.239563
-            Z: 110.976006
+            X: 0.00112765539
+            Y: 0.000875620346
+            Z: -8.7381773
           }
           Rotation {
-            Pitch: 31.5492096
-            Yaw: -0.000213623047
-            Roll: -11.190979
           }
           Scale {
-            X: 0.41227
-            Y: 0.41197148
-            Z: 1.7283994
+            X: 0.0440530516
+            Y: 0.0440211482
+            Z: 0.184687927
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1937676310416645528
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1142,26 +1398,26 @@ Assets {
         }
       }
       Objects {
-        Id: 13562368459369432958
+        Id: 11870081639317939470
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: -36.5747147
-            Y: 260.554199
-            Z: 47.5274582
+            X: 5.55515528
+            Y: -0.800819635
+            Z: -20.1620636
           }
           Rotation {
-            Pitch: 89.4078369
-            Yaw: -168.289886
-            Roll: -169.263
+            Pitch: 57.2913
+            Yaw: 17.7095585
+            Roll: 19.8801212
           }
           Scale {
-            X: 0.262433887
-            Y: 0.262323886
-            Z: 1.23158884
+            X: 0.0280423313
+            Y: 0.0280305799
+            Z: 0.131601289
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1937676310416645528
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1213,26 +1469,26 @@ Assets {
         }
       }
       Objects {
-        Id: 2228247641940280893
+        Id: 16476584127745504535
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: -113.141663
-            Y: 259.415649
-            Z: 46.7772255
+            X: -1.41836488
+            Y: -0.123535663
+            Z: -16.0288067
           }
           Rotation {
-            Pitch: 89.3999557
-            Yaw: -168.296021
-            Roll: -169.269379
+            Pitch: 57.2954102
+            Yaw: 17.710968
+            Roll: 19.8811169
           }
           Scale {
-            X: 0.162307605
-            Y: 0.162239209
-            Z: 0.530912817
+            X: 0.0173433516
+            Y: 0.0173360445
+            Z: 0.0567306317
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1937676310416645528
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1284,26 +1540,26 @@ Assets {
         }
       }
       Objects {
-        Id: 8562556255984929346
+        Id: 16406315162711548079
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: -39.9920044
-            Y: 227.889542
-            Z: 47.4202843
+            X: 5.26602602
+            Y: -4.18905449
+            Z: -19.3191967
           }
           Rotation {
-            Pitch: 89.3807068
-            Yaw: 172.933151
-            Roll: -169.312546
+            Pitch: 57.2341614
+            Yaw: 18.0440731
+            Roll: 38.876194
           }
           Scale {
-            X: 0.207190797
-            Y: 0.207103878
-            Z: 1.1519922
+            X: 0.0221393369
+            Y: 0.0221300554
+            Z: 0.123096
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1937676310416645528
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1355,26 +1611,26 @@ Assets {
         }
       }
       Objects {
-        Id: 143608229133762042
+        Id: 7361440978955849140
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: -48.2226219
-            Y: 285.016022
-            Z: 47.6346359
+            X: 4.51264763
+            Y: 1.85225248
+            Z: -20.0269699
           }
           Rotation {
-            Pitch: 89.4104919
-            Yaw: -147.033615
-            Roll: -169.463654
+            Pitch: 57.2923775
+            Yaw: 17.3110352
+            Roll: -1.91085815
           }
           Scale {
-            X: 0.254682571
-            Y: 0.254575849
-            Z: 1.09637821
+            X: 0.0272140652
+            Y: 0.0272026602
+            Z: 0.117153376
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 1937676310416645528
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1426,26 +1682,69 @@ Assets {
         }
       }
       Objects {
-        Id: 9349555431379096588
+        Id: 14853877217851306393
+        Name: "head_target"
+        Transform {
+          Location {
+            X: -26.2568932
+            Y: 0.00048978749
+            Z: 23.9787636
+          }
+          Rotation {
+            Pitch: 76.1332092
+            Yaw: 0.00466513401
+            Roll: 0.00455881655
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1618783071386369331
+        ChildIds: 13691798810693235572
+        ChildIds: 15864723974502342538
+        ChildIds: 5300882761891305919
+        ChildIds: 5264236703546653201
+        ChildIds: 16217205708686399607
+        ChildIds: 5477141631130976776
+        ChildIds: 17388798935110895212
+        ChildIds: 10294146033138079534
+        ChildIds: 6753031503051910558
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13691798810693235572
         Name: "head_GEO"
         Transform {
           Location {
-            X: 148.828125
-            Y: -0.01953125
-            Z: 654.179688
+            X: -5.29245043
+            Y: 5.34088713e-06
+            Z: 3.51880765
           }
           Rotation {
-            Pitch: -3.4150944e-05
-            Yaw: 1.97896457
-            Roll: -89.9999619
+            Pitch: 26.5946045
+            Yaw: 2.2131834
+            Roll: -89.0087891
           }
           Scale {
-            X: 3.42783
-            Y: 5.38081408
-            Z: 6.65090275
+            X: 0.366280228
+            Y: 0.574966
+            Z: 0.71068114
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 14853877217851306393
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1489,26 +1788,26 @@ Assets {
         }
       }
       Objects {
-        Id: 14341392905490187583
+        Id: 15864723974502342538
         Name: "beak_GEO"
         Transform {
           Location {
-            X: 283.222656
-            Y: -0.01953125
-            Z: 792.714844
+            X: 0.914907515
+            Y: 1.80362156e-06
+            Z: 23.1862869
           }
           Rotation {
-            Pitch: 82.135
-            Yaw: -0.000267237192
-            Roll: -0.00031105752
+            Pitch: 71.253067
+            Yaw: -179.999985
+            Roll: -179.999985
           }
           Scale {
-            X: 1.39347374
-            Y: 0.783920527
-            Z: 2.46417809
+            X: 0.148899436
+            Y: 0.0837657
+            Z: 0.26330936
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 14853877217851306393
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -1548,31 +1847,29 @@ Assets {
         }
       }
       Objects {
-        Id: 8818333696330107443
+        Id: 5300882761891305919
         Name: "eye"
         Transform {
           Location {
-            X: 266.191406
-            Y: 44.53125
-            Z: 846.635742
+            X: -3.29214931
+            Y: 4.76256037
+            Z: 27.5228844
           }
           Rotation {
-            Pitch: -26.6117268
-            Yaw: 5.97882718e-05
-            Roll: -3.33479038e-05
+            Roll: 45
           }
           Scale {
-            X: 0.675237775
-            Y: 0.675237775
-            Z: 0.675237775
+            X: 0.102725983
+            Y: 0.102733284
+            Z: 0.247737318
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 14853877217851306393
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 10184847056121543272
             }
           }
           Overrides {
@@ -1582,8 +1879,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
+              R: 1
               G: 1
-              B: 6
+              B: 1
               A: 1
             }
           }
@@ -1599,7 +1897,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12235551212621628069
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -1610,31 +1908,29 @@ Assets {
         }
       }
       Objects {
-        Id: 5870895259503672782
+        Id: 5264236703546653201
         Name: "eye"
         Transform {
           Location {
-            X: 266.191406
-            Y: -44.5703125
-            Z: 846.635742
+            X: -3.29215717
+            Y: -4.76254845
+            Z: 27.5228863
           }
           Rotation {
-            Pitch: -26.6117268
-            Yaw: 5.97882718e-05
-            Roll: -3.33479038e-05
+            Roll: -45
           }
           Scale {
-            X: 0.675237775
-            Y: 0.675237775
-            Z: 0.675237775
+            X: 0.102725983
+            Y: 0.102733284
+            Z: 0.247737318
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 14853877217851306393
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 10184847056121543272
             }
           }
           Overrides {
@@ -1644,8 +1940,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
+              R: 1
               G: 1
-              B: 6
+              B: 1
               A: 1
             }
           }
@@ -1661,7 +1958,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12235551212621628069
+            Id: 15590791169563939070
           }
           Teams {
           }
@@ -1672,26 +1969,24 @@ Assets {
         }
       }
       Objects {
-        Id: 4013208311955393197
+        Id: 16217205708686399607
         Name: "hair"
         Transform {
           Location {
-            X: 282.246094
-            Y: -0.01953125
-            Z: 915.581055
+            X: -10.5243807
+            Y: 1.3680562e-05
+            Z: 33.6973267
           }
           Rotation {
-            Pitch: 14.2141628
-            Yaw: -179.999893
-            Roll: -179.999908
+            Pitch: -147.688721
           }
           Scale {
-            X: 0.795424223
-            Y: 0.273521215
-            Z: 1.75920951
+            X: 0.0930379108
+            Y: 0.0356647298
+            Z: 0.235522896
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 14853877217851306393
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1733,26 +2028,26 @@ Assets {
         }
       }
       Objects {
-        Id: 18438142816267456846
+        Id: 5477141631130976776
         Name: "hair"
         Transform {
           Location {
-            X: 231.5625
-            Y: -0.01953125
-            Z: 928.613281
+            X: -15.4081106
+            Y: 1.80612915e-05
+            Z: 32.1652374
           }
           Rotation {
-            Pitch: -5.69952631
-            Yaw: -179.999939
-            Roll: -179.999939
+            Pitch: -65.4537659
+            Yaw: 180
+            Roll: 180
           }
           Scale {
-            X: 0.87069428
-            Y: 0.333768
-            Z: 2.20413852
+            X: 0.119028479
+            Y: 0.0525822826
+            Z: 0.243985444
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 14853877217851306393
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1794,87 +2089,62 @@ Assets {
         }
       }
       Objects {
-        Id: 138585696717334004
-        Name: "hair"
+        Id: 17388798935110895212
+        Name: "Helmet"
         Transform {
           Location {
-            X: 184.277344
-            Y: -0.01953125
-            Z: 936.269531
+            X: -11.1693535
+            Y: 1.31884117e-05
+            Z: 24.1522446
           }
           Rotation {
-            Pitch: -38.8419495
-            Yaw: -179.999954
-            Roll: -179.999893
+            Pitch: 20.6651192
           }
           Scale {
-            X: 1.11392689
-            Y: 0.492090732
-            Z: 2.28333521
+            X: 1.11939609
+            Y: 1.11939609
+            Z: 1.11939609
           }
         }
-        ParentId: 1896962750512047213
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 244066850900665391
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.78
-              A: 1
-            }
-          }
-        }
+        ParentId: 14853877217851306393
+        ChildIds: 15341333582814776694
+        ChildIds: 2325815837367066679
+        ChildIds: 8792472012012455587
+        ChildIds: 15030649936007531943
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
-        CoreMesh {
-          MeshAsset {
-            Id: 2635330027741249494
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
-        Id: 15523615208557252852
+        Id: 15341333582814776694
         Name: "Modern Weapon - Bullet 01"
         Transform {
           Location {
-            X: 205.507813
-            Y: -0.01953125
-            Z: 852.954102
+            X: -0.0652842671
+            Y: 9.07579718e-08
+            Z: 0.129490644
           }
           Rotation {
-            Pitch: 8.71455574
-            Yaw: 4.02802943e-05
-            Roll: -3.016339e-05
+            Pitch: 27.3399677
+            Yaw: 2.03082908e-14
+            Roll: 8.34979872e-14
           }
           Scale {
-            X: 2.7112782
-            Y: 2.7112782
-            Z: 0.890447855
+            X: 0.2588121
+            Y: 0.2588121
+            Z: 0.085
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 17388798935110895212
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1917,26 +2187,22 @@ Assets {
         }
       }
       Objects {
-        Id: 14358711039184464680
+        Id: 2325815837367066679
         Name: "Modern Weapon - Bullet 01"
         Transform {
           Location {
-            X: 205.722656
-            Y: -0.01953125
-            Z: 851.450195
           }
           Rotation {
-            Pitch: -4.09811328e-05
-            Yaw: -89.9998856
-            Roll: -8.71452332
+            Yaw: -89.9999695
+            Roll: -27.3399067
           }
           Scale {
-            X: 0.625349402
-            Y: 0.922698438
-            Z: 1.06815362
+            X: 0.0596943498
+            Y: 0.0880785733
+            Z: 0.101963371
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 17388798935110895212
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1983,26 +2249,23 @@ Assets {
         }
       }
       Objects {
-        Id: 4125558197937503381
+        Id: 8792472012012455587
         Name: "Modern Weapon - Bullet 01"
         Transform {
           Location {
-            X: 205.722656
-            Y: -0.01953125
-            Z: 851.450195
           }
           Rotation {
-            Pitch: 8.71455574
-            Yaw: 4.02802943e-05
-            Roll: -3.016339e-05
+            Pitch: 27.3399677
+            Yaw: -3.89428247e-12
+            Roll: -2.23028692e-12
           }
           Scale {
-            X: 2.46080089
-            Y: 2.46092868
-            Z: 2.4143908
+            X: 0.234902129
+            Y: 0.234914333
+            Z: 0.230471924
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 17388798935110895212
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2067,26 +2330,25 @@ Assets {
         }
       }
       Objects {
-        Id: 6143275265863862245
+        Id: 15030649936007531943
         Name: "Gem - Baguette Polished"
         Transform {
           Location {
-            X: 367.5
-            Y: -0.01953125
-            Z: 842.128906
+            X: 14.9183388
+            Y: -1.25516117e-05
+            Z: 4.08873
           }
           Rotation {
-            Pitch: 4.09811328e-05
-            Yaw: 89.9999924
-            Roll: 125.721756
+            Yaw: 90
+            Roll: 144.347198
           }
           Scale {
-            X: 0.817072153
-            Y: 1.77334118
-            Z: 1.12229943
+            X: 0.0779957324
+            Y: 0.16927886
+            Z: 0.107132
           }
         }
-        ParentId: 1896962750512047213
+        ParentId: 17388798935110895212
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2119,6 +2381,878 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 16825643228001246048
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10294146033138079534
+        Name: "eye"
+        Transform {
+          Location {
+            X: -1.54870355
+            Y: -7.32331
+            Z: 29.2659187
+          }
+          Rotation {
+            Pitch: -22.9111023
+            Yaw: -8.98999
+            Roll: -58.803009
+          }
+          Scale {
+            X: 0.0453913286
+            Y: 0.0454170741
+            Z: 0.0981288478
+          }
+        }
+        ParentId: 14853877217851306393
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6753031503051910558
+        Name: "eye"
+        Transform {
+          Location {
+            X: -1.5486902
+            Y: 7.32331896
+            Z: 29.2659168
+          }
+          Rotation {
+            Pitch: -22.9111023
+            Yaw: 8.98986912
+            Roll: 58.8027954
+          }
+          Scale {
+            X: 0.0453913286
+            Y: 0.0454170741
+            Z: 0.0981288478
+          }
+        }
+        ParentId: 14853877217851306393
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16761663074525779306
+        Name: "tailFeathers_01_GEO"
+        Transform {
+          Location {
+            X: 8.58044052
+            Y: -6.20829201
+            Z: -28.4315014
+          }
+          Rotation {
+            Pitch: 53.0829277
+            Yaw: -125.678604
+            Roll: -13.1916504
+          }
+          Scale {
+            X: 0.0247741137
+            Y: 0.153728336
+            Z: 0.74161762
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.110839993
+              G: 0.240505859
+              B: 0.326
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8906740985854240281
+        Name: "tailFeathers_01_GEO"
+        Transform {
+          Location {
+            X: 8.58198738
+            Y: 6.20732355
+            Z: -28.428154
+          }
+          Rotation {
+            Pitch: 53.0821152
+            Yaw: 125.676392
+            Roll: 13.1901979
+          }
+          Scale {
+            X: 0.0247741137
+            Y: 0.153504446
+            Z: 0.74161762
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.110839993
+              G: 0.240505859
+              B: 0.326
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8315939374747466437
+        Name: "bodyBottom_GEO"
+        Transform {
+          Location {
+            X: 3.37382746
+            Y: -25.0001411
+            Z: 6.81683111
+          }
+          Rotation {
+            Pitch: -29.3625183
+            Yaw: 142.142212
+            Roll: -80.0811768
+          }
+          Scale {
+            X: 0.37195453
+            Y: 0.559124708
+            Z: 0.451148957
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.56
+              G: 0.816423655
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3757608610049460926
+        Name: "bodyBottom_GEO"
+        Transform {
+          Location {
+            X: 3.3744
+            Y: 25.0004158
+            Z: 6.81609488
+          }
+          Rotation {
+            Pitch: -29.3627625
+            Yaw: -142.142166
+            Roll: -99.9183655
+          }
+          Scale {
+            X: 0.37195453
+            Y: 0.559124708
+            Z: 0.451148957
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.56
+              G: 0.816423655
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17520767254731066697
+        Name: "bodyBottom_GEO"
+        Transform {
+          Location {
+            X: 10.3560123
+            Y: -29.9996738
+            Z: -0.202317819
+          }
+          Rotation {
+            Pitch: -18.2658081
+            Yaw: 144.169952
+            Roll: 4.09642267
+          }
+          Scale {
+            X: 0.254393905
+            Y: 0.0641954094
+            Z: 0.707913697
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.339999974
+              G: 0.737748146
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3338982649469882587
+        Name: "bodyBottom_GEO"
+        Transform {
+          Location {
+            X: 10.3565445
+            Y: 29.9997425
+            Z: -0.20323649
+          }
+          Rotation {
+            Pitch: -18.2662354
+            Yaw: -144.169968
+            Roll: -4.09564209
+          }
+          Scale {
+            X: 0.254393905
+            Y: 0.0641954094
+            Z: 0.707913697
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.339999974
+              G: 0.737748146
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6232371930858621592
+        Name: "bodyBottom_GEO"
+        Transform {
+          Location {
+            X: 6.61602736
+            Y: 25.998827
+            Z: -6.21023798
+          }
+          Rotation {
+            Pitch: -8.29049683
+            Yaw: -144.888092
+            Roll: -3.93005371
+          }
+          Scale {
+            X: 0.220216215
+            Y: 0.0555708
+            Z: 0.612805665
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.339999974
+              G: 0.737748146
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5837467870933200792
+        Name: "bodyBottom_GEO"
+        Transform {
+          Location {
+            X: 6.61546373
+            Y: -25.9989986
+            Z: -6.20946455
+          }
+          Rotation {
+            Pitch: -8.29013062
+            Yaw: 144.888107
+            Roll: 3.93075919
+          }
+          Scale {
+            X: 0.220216215
+            Y: 0.0555708
+            Z: 0.612805665
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.339999974
+              G: 0.737748146
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5961352422875621941
+        Name: "tailFeathers_01_GEO"
+        Transform {
+          Location {
+            X: -6.81809568
+            Y: -5
+            Z: -23.6401
+          }
+          Rotation {
+            Pitch: 61.1638145
+            Yaw: -130.520203
+            Roll: 9.78042
+          }
+          Scale {
+            X: 0.0246658251
+            Y: 0.196618468
+            Z: 0.738375485
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.23154
+              G: 0.502406418
+              B: 0.681000054
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17620307889123503981
+        Name: "tailFeathers_01_GEO"
+        Transform {
+          Location {
+            X: -6.81812954
+            Y: 5
+            Z: -23.6402836
+          }
+          Rotation {
+            Pitch: 61.1627846
+            Yaw: 130.517365
+            Roll: -9.78186
+          }
+          Scale {
+            X: 0.0246658251
+            Y: 0.196973667
+            Z: 0.738375485
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.23154
+              G: 0.502406418
+              B: 0.681000054
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10639644139734269973
+        Name: "tailFeathers_01_GEO"
+        Transform {
+          Location {
+            X: -11.3227129
+            Z: -22.4059277
+          }
+          Rotation {
+            Pitch: 63.5338554
+            Yaw: 180
+          }
+          Scale {
+            X: 0.0226248708
+            Y: 0.169466823
+            Z: 0.641327143
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.23154
+              G: 0.502406418
+              B: 0.681000054
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13149703999818172682
+        Name: "tailFeathers_01_GEO"
+        Transform {
+          Location {
+            X: 5.72387695
+            Y: 0.05078125
+            Z: -35.4921875
+          }
+          Rotation {
+            Pitch: -53.5338745
+          }
+          Scale {
+            X: -0.0589484535
+            Y: 0.191865146
+            Z: 0.726081431
+          }
+        }
+        ParentId: 1618783071386369331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1781535275264321496
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.110839993
+              G: 0.240505859
+              B: 0.326
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
           }
           Teams {
           }
@@ -2211,21 +3345,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12235551212621628069
-      Name: "Dodecahedron"
+      Id: 15590791169563939070
+      Name: "Gem - Round Polished"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_dodecahedron_001"
-      }
-    }
-    Assets {
-      Id: 5351428073291024820
-      Name: "Emissive Glow Opaque"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_opaque_emissive"
+        AssetId: "sm_gem_round_polished_001"
       }
     }
     Assets {
