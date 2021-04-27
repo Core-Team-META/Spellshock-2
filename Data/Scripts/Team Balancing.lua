@@ -3,7 +3,7 @@ local PROGRESSION = require( script:GetCustomProperty("ProgressionAPI") )
 local DEBUG_SAME_TEAM = script:GetCustomProperty("DebugSameTeam")
 
 local BASE_VALUE_PER_PLAYER = 1
-local TOTAL_CLASS_VALUE_EXPONENT = 0.6 -- Higher value means that ability leveling is ever-more powerful
+local TOTAL_CLASS_VALUE_EXPONENT = 0.45 -- Higher value means that ability leveling is ever-more powerful
 local TOTAL_CLASS_VALUE_COEFFICIENT = 6 -- Higher value means players with progression are considered much more powerful
 local WIN_RATE_MIN = 0.2
 local WIN_RATE_MAX = 0.8
