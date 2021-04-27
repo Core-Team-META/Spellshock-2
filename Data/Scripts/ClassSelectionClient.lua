@@ -409,6 +409,7 @@ function OnGlobalStatsClicked(thisButton)
 end
 
 function UpdateClassInfo(thisButton)
+	if not thisButton then return end
 	local dataTable = thisButton.clientUserData.dataTable
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
