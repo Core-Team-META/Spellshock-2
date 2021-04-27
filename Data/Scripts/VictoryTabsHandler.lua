@@ -29,7 +29,7 @@ local winningTeam
 
 function OnPlayerShowCase()
     -- Set VictoryDefeat
-    if Game.GetTeamScore(LOCAL_PLAYER.team) > Game.GetTeamScore(3-LOCAL_PLAYER.team) then
+    if Game.GetTeamScore(LOCAL_PLAYER.team) > Game.GetTeamScore(3 - LOCAL_PLAYER.team) then
         VictoryDefeat.text = "VICTORY"
     else
         VictoryDefeat.text = "DEFEAT"
@@ -47,11 +47,12 @@ function OnPlayerShowCase()
     end
     YourTeam.text = teamName
     YourTeam:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
-
-    -- Set battle time
-    local minutes = math.floor(roundTime) // 60 % 60
-    local seconds = math.floor(roundTime) % 60
-    RoundTime.text = "BATTLE TIME: " .. string.format("%02d:%02d", minutes, seconds)
+    if roundTime then
+        -- Set battle time
+        local minutes = math.floor(roundTime) // 60 % 60
+        local seconds = math.floor(roundTime) % 60
+        RoundTime.text = "BATTLE TIME: " .. string.format("%02d:%02d", minutes, seconds)
+    end
 
     -- Set TimerPanel info
     WaitText.text = "REWARDS IN"
@@ -62,12 +63,12 @@ function OnPlayerShowCase()
     VictoryTabs.visibility = Visibility.INHERIT
     VictoryHeader.visibility = Visibility.INHERIT
     UI.SetCursorVisible(true)
-	UI.SetCanCursorInteractWithUI(true)
+    UI.SetCanCursorInteractWithUI(true)
 end
 
 function OnRewards()
     Events.Broadcast("HideVictoryPanels")
-    
+
     -- Hide tabs
     OnTabClicked(victoryButton)
     VictoryTabs.visibility = Visibility.FORCE_OFF
@@ -80,7 +81,6 @@ function OnRewards()
     VictoryHeader.visibility = Visibility.INHERIT
     RewardsTitle.visibility = Visibility.INHERIT
 
-    
     --WaitIcon:SetImage()
 end
 
@@ -116,9 +116,11 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 end
 
 function OnTabClicked(thisButton)
-    if thisButton == CurrentTab then return end
+    if thisButton == CurrentTab then
+        return
+    end
 
-    -- Reset CurrentTab 
+    -- Reset CurrentTab
     CurrentTab.clientUserData.selected.visibility = Visibility.FORCE_OFF
 
     if CurrentTab.clientUserData.panel then
