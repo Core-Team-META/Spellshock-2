@@ -58,6 +58,48 @@ Assets {
           Id: 6065719875674253663
         }
       }
+      Overrides {
+        Name: "cs:ChickenSuit8"
+        AssetReference {
+          Id: 6931475105875884327
+        }
+      }
+      Overrides {
+        Name: "cs:ChickenSuit9"
+        AssetReference {
+          Id: 1383873235647942791
+        }
+      }
+      Overrides {
+        Name: "cs:ChickenSuit10"
+        AssetReference {
+          Id: 6760933949847819494
+        }
+      }
+      Overrides {
+        Name: "cs:ChickenSuit11"
+        AssetReference {
+          Id: 7589711991430116307
+        }
+      }
+      Overrides {
+        Name: "cs:ChickenSuit12"
+        AssetReference {
+          Id: 1471350923560697156
+        }
+      }
+      Overrides {
+        Name: "cs:ChickenSuit13"
+        AssetReference {
+          Id: 4119439656748146432
+        }
+      }
+      Overrides {
+        Name: "cs:ChickenSuit14"
+        AssetReference {
+          Id: 3816311377343263656
+        }
+      }
     }
   }
   SerializationVersion: 81
