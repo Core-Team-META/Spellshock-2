@@ -225,7 +225,7 @@ function Tick(DeltaTime)
 	if AS.IsRespawning() or AS.IsViewingMap() or AS.IsJoiningMidgame() then
 		UpdateCapturePointIndicators()
 		UpdateBaseIndicators()
-		PANEL.visibility = Visibility.INHERIT
+		PANEL.visibility = Visibility.FORCE_OFF
 		
 		if (AS.IsRespawning() or AS.IsJoiningMidgame()) and RespawnTimer == -1 then
 			RespawnTimer = RespawnDelay -- activate timer
