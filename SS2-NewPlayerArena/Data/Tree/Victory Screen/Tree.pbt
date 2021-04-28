@@ -123,10 +123,12 @@ Objects {
   Name: "Spawns"
   Transform {
     Location {
-      Z: 208.167969
+      X: 18711.8359
+      Y: 3881.01709
+      Z: -6728.375
     }
     Rotation {
-      Yaw: -179.999985
+      Yaw: -179.999969
     }
     Scale {
       X: 1

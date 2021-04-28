@@ -111,7 +111,7 @@ Objects {
     Overrides {
       Name: "cs:ClassSelectionServer"
       ObjectReference {
-        SelfId: 841534158063459245
+        SelfId: 15786676336141340274
       }
     }
   }
