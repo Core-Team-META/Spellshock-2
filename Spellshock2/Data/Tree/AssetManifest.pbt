@@ -34,19 +34,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16070869092351677475
-  Name: "ss2_live_cosmetic"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "c333b186a0784c47af674b7704808501"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 15969669977645369301
   Name: "SERVERXPBOOST"
   PlatformAssetType: 24
@@ -68,19 +55,6 @@ Assets {
       Key: "294eece8d73a49f0a56c278792698f35"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 15499488441472625293
-  Name: "ss2_live_currency"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "d5d513aebe8a4907862c98637c1f7b6f"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -166,6 +140,19 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rocks_small_001"
+  }
+}
+Assets {
+  Id: 14120106793287193701
+  Name: "SS2_ZS_PROD_PROGRESSION"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "efb8cc776c454a7faa0ae8a959d38706"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
   }
 }
 Assets {
@@ -365,6 +352,19 @@ Assets {
   }
 }
 Assets {
+  Id: 8993538532088866557
+  Name: "SS2_ZS_PROD_CURRENCY"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "62a4022574c249e9a7c4f5227e02bf61"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 8892646755837011518
   Name: "Starter Pack"
   PlatformAssetType: 24
@@ -483,6 +483,19 @@ Assets {
   }
 }
 Assets {
+  Id: 6078765718293111990
+  Name: "SS2_ZS_PROD_COSMETICS"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "89c321e4f4904b25afd9c8acb39a446d"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 5903239611249009820
   Name: "GoldPack2"
   PlatformAssetType: 24
@@ -591,19 +604,6 @@ Assets {
       Key: "7faf80a1c1fb4e3ea5ec9333a5128889"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 3160041052331178319
-  Name: "ss2_live_progression"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "fda12f8c98b648b0a612628d288062a6"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

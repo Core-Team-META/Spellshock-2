@@ -6139,13 +6139,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6241,13 +6241,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6343,13 +6343,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6445,13 +6445,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6535,7 +6535,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16785452133198136383
       }
     }
     Overrides {
@@ -6547,13 +6547,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7179,13 +7179,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7281,13 +7281,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7383,13 +7383,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7485,13 +7485,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7575,7 +7575,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6931475105875884327
       }
     }
     Overrides {
@@ -7587,13 +7587,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
