@@ -1072,7 +1072,6 @@ Objects {
   ChildIds: 7252227073803151227
   ChildIds: 4633881829025849806
   ChildIds: 16643093799238046162
-  ChildIds: 17922781236047648154
   ChildIds: 3367562001934764205
   ChildIds: 8267290888505706248
   UnregisteredParameters {
@@ -1095,11 +1094,11 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 640.543152
-      Y: 270.363708
+      X: -2508.64771
+      Y: 1838.62561
     }
     Rotation {
-      Yaw: -173.581619
+      Yaw: -147.869019
     }
     Scale {
       X: 1
@@ -1129,45 +1128,11 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 406.400482
-      Y: 27.0095329
+      X: -2372.57275
+      Y: -206.144119
     }
     Rotation {
       Yaw: -177.334717
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 525202158589170673
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  PlayerSpawnPoint {
-    TeamInt: 2
-    PlayerScaleMultiplier: 1
-  }
-}
-Objects {
-  Id: 17922781236047648154
-  Name: "Player Start"
-  Transform {
-    Location {
-      X: -339.821
-      Y: 278.818573
-    }
-    Rotation {
-      Yaw: -178.489334
     }
     Scale {
       X: 1
@@ -1197,11 +1162,11 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 64.052269
-      Y: 201.484146
+      X: -4088.53906
+      Y: 2747.77441
     }
     Rotation {
-      Yaw: -178.155716
+      Yaw: -103.836517
     }
     Scale {
       X: 1
@@ -1231,12 +1196,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 601.919312
-      Y: -223.054581
+      X: -3641.18
+      Y: -3056.15918
       Z: -0.000122070313
     }
     Rotation {
-      Yaw: -172.370407
+      Yaw: 118.89045
     }
     Scale {
       X: 1
@@ -1266,12 +1231,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -632.251831
-      Y: 230.573761
+      X: -5863.51855
+      Y: 3259.82446
       Z: 22.7720947
     }
     Rotation {
-      Yaw: -175.468323
+      Yaw: -100.794678
     }
     Scale {
       X: 1
@@ -1301,11 +1266,11 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 64.1779251
-      Y: -206.400665
+      X: -5367.99414
+      Y: -4051.97339
     }
     Rotation {
-      Yaw: -176.42865
+      Yaw: 106.814194
     }
     Scale {
       X: 1
@@ -1335,12 +1300,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -386.576263
-      Y: -349.037018
+      X: -2440.7793
+      Y: -1846.6355
       Z: 22.7723389
     }
     Rotation {
-      Yaw: -167.384171
+      Yaw: 165.59227
     }
     Scale {
       X: 1
@@ -1370,11 +1335,11 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -228.245041
-      Y: -12.5286484
+      X: -6517.5459
+      Y: -4203.28564
     }
     Rotation {
-      Yaw: -174.714523
+      Yaw: 97.939949
     }
     Scale {
       X: 1
@@ -1446,12 +1411,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -303.125336
-      Y: -488.739716
+      X: -5090.69629
+      Y: -4720.94141
       Z: -74.9597168
     }
     Rotation {
-      Yaw: -119.255859
+      Yaw: -40.1955261
     }
     Scale {
       X: 1
@@ -1481,12 +1446,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -148.467102
-      Y: -77.3674164
+      X: 2016.42529
+      Y: -6540.67383
       Z: -113.175781
     }
     Rotation {
-      Yaw: -113.700867
+      Yaw: -164.721832
     }
     Scale {
       X: 1
@@ -1516,12 +1481,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 163.969421
-      Y: -412.096741
+      X: 2011.96924
+      Y: -4598.90381
       Z: -92.5732422
     }
     Rotation {
-      Yaw: -109.556778
+      Yaw: -163.986191
     }
     Scale {
       X: 1
@@ -1551,12 +1516,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 255.184967
-      Y: 208.667679
+      X: -2582.82031
+      Y: -2154.1355
       Z: -95.6962891
     }
     Rotation {
-      Yaw: -118.724548
+      Yaw: -70.9412537
     }
     Scale {
       X: 1
@@ -1586,12 +1551,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -144.15329
-      Y: 296.455414
+      X: 1806.07813
+      Y: -7620.65283
       Z: -104.444336
     }
     Rotation {
-      Yaw: -121.783081
+      Yaw: 164.192139
     }
     Scale {
       X: 1
@@ -1621,8 +1586,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -179.540588
-      Y: 673.521484
+      X: -666.451172
+      Y: -2523.17041
       Z: -83.3989258
     }
     Rotation {
@@ -1656,12 +1621,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 172.005798
-      Y: 832.987244
+      X: -3777.62085
+      Y: -3060.83105
       Z: -88.0888672
     }
     Rotation {
-      Yaw: -110.719269
+      Yaw: 11.8355141
     }
     Scale {
       X: 1
@@ -1691,12 +1656,12 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 434.898682
-      Y: 520.158569
+      X: 1270.00635
+      Y: -3104.94507
       Z: -71.3769531
     }
     Rotation {
-      Yaw: -114.148651
+      Yaw: -141.083145
     }
     Scale {
       X: 1
@@ -34721,7 +34686,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "cs:CountdownTime"
