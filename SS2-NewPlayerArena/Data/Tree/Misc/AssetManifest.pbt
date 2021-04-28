@@ -188,15 +188,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8383064983738244106
-  Name: "Ship Boat Bell Ring 01 SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_ship_boat_bell_ring_01_Cue_ref"
-  }
-}
-Assets {
   Id: 8329339828071933523
   Name: "Concrete Basic 01"
   PlatformAssetType: 2

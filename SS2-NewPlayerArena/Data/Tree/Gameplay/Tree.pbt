@@ -1094,8 +1094,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -301.822418
-      Y: 168.926498
+      X: -411.911774
+      Y: 274.830353
     }
     Rotation {
       Yaw: 180
@@ -1128,8 +1128,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -481.496674
-      Y: 1.00658464
+      X: -875.536377
+      Y: 36.5772858
     }
     Rotation {
       Yaw: 180
@@ -1162,8 +1162,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -420.059448
-      Y: -114.401283
+      X: -466.36264
+      Y: -253.715714
+      Z: 0.000122070313
     }
     Rotation {
       Yaw: 180
@@ -1196,8 +1197,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -435.244659
-      Y: 137.802673
+      X: -562.549561
+      Y: -16.9106884
       Z: -0.000122070313
     }
     Rotation {
@@ -1231,8 +1232,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -395.156952
-      Y: -261.853271
+      X: -723.862122
+      Y: -286.005157
       Z: 22.7720947
     }
     Rotation {
@@ -1266,8 +1267,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -210.302887
-      Y: 29.3347416
+      X: -108.898254
+      Y: 186.671646
     }
     Rotation {
       Yaw: 180
@@ -1300,8 +1301,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -291.457764
-      Y: -101.908348
+      X: -304.761
+      Y: -23.2219315
       Z: 22.7723389
     }
     Rotation {
@@ -1411,8 +1412,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -137.56076
-      Y: -169.66864
+      X: -151.905243
+      Y: -368.101166
       Z: -74.9597168
     }
     Rotation {
@@ -1446,8 +1447,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -286.250549
-      Y: -110.335388
+      X: -169.444458
+      Y: -139.789246
       Z: -113.175781
     }
     Rotation {
@@ -1551,8 +1552,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 24.9363556
-      Y: -130.832825
+      X: 66.6500092
+      Y: 34.5924683
       Z: -104.444336
     }
     Rotation {
@@ -1586,8 +1587,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -106.329712
-      Y: -384.590912
+      X: -269.628693
+      Y: -553.241089
       Z: -83.3989258
     }
     Rotation {
@@ -1656,8 +1657,8 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 64.7858
-      Y: -417.552246
+      X: -8.89373779
+      Y: -709.745728
       Z: -71.3769531
     }
     Rotation {
@@ -34686,7 +34687,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 1
+      Int: 2
     }
     Overrides {
       Name: "cs:CountdownTime"

@@ -619,6 +619,8 @@ Objects {
   Name: "Song Triggers"
   Transform {
     Location {
+      X: -16939.5293
+      Z: 2686.9248
     }
     Rotation {
     }
@@ -652,9 +654,6 @@ Objects {
   Name: "War Camp"
   Transform {
     Location {
-      X: -10067.0332
-      Y: -12920.4111
-      Z: 2951.04395
     }
     Rotation {
     }
@@ -697,9 +696,6 @@ Objects {
   Name: "Template Glade"
   Transform {
     Location {
-      X: 10155.6729
-      Y: 13290.3174
-      Z: 3016.6145
     }
     Rotation {
     }
@@ -742,9 +738,6 @@ Objects {
   Name: "Airship"
   Transform {
     Location {
-      X: 11412.9932
-      Y: -9042.37598
-      Z: 5525.53271
     }
     Rotation {
     }
@@ -787,9 +780,6 @@ Objects {
   Name: "Marketplace"
   Transform {
     Location {
-      X: -1091.18286
-      Y: 1531.16699
-      Z: 2928.10498
     }
     Rotation {
     }
@@ -832,9 +822,6 @@ Objects {
   Name: "Old Mine"
   Transform {
     Location {
-      X: -11590.7295
-      Y: 10172.8164
-      Z: 434.750793
     }
     Rotation {
     }
