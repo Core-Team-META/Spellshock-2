@@ -274,7 +274,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -333,7 +333,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -517,7 +517,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -576,7 +576,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -759,7 +759,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -818,7 +818,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -972,7 +972,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14629909211943041809
+      Id: 11337413471323694429
       Name: "Metal Gold 01"
       PlatformAssetType: 2
       PrimaryAsset {

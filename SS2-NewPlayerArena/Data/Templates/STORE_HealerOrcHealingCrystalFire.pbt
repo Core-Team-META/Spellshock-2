@@ -1808,7 +1808,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -1831,7 +1831,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -3378,7 +3378,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -3401,7 +3401,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -4948,7 +4948,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -4971,7 +4971,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -5093,7 +5093,7 @@ Assets {
       }
     }
     Assets {
-      Id: 15339827692159902109
+      Id: 11236189850874066005
       Name: "Heart - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5102,7 +5102,7 @@ Assets {
       }
     }
     Assets {
-      Id: 17567893295837774896
+      Id: 675563715440209277
       Name: "Emissive Glow Transparent"
       PlatformAssetType: 2
       PrimaryAsset {

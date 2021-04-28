@@ -1,7 +1,7 @@
 Name: "DataCompression"
-RootId: 15057716785033630782
+RootId: 11705074836057870736
 Objects {
-  Id: 1716975878147083837
+  Id: 17481880569126807299
   Name: "MetaPlayerStorageHelper_Server"
   Transform {
     Location {
@@ -14,12 +14,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15057716785033630782
+  ParentId: 11705074836057870736
   UnregisteredParameters {
     Overrides {
       Name: "cs:StorageManager"
       ObjectReference {
-        SelfId: 6952690835358040343
+        SelfId: 17602744235186115876
       }
     }
     Overrides {
@@ -45,7 +45,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6952690835358040343
+  Id: 17602744235186115876
   Name: "MetaPlayerStorageManager_Server"
   Transform {
     Location {
@@ -58,12 +58,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15057716785033630782
+  ParentId: 11705074836057870736
   UnregisteredParameters {
     Overrides {
       Name: "cs:VFX_LIST"
       ObjectReference {
-        SelfId: 5874015840417789592
+        SelfId: 13102736215143988302
       }
     }
     Overrides {
@@ -75,7 +75,7 @@ Objects {
     Overrides {
       Name: "cs:DataTransfer"
       ObjectReference {
-        SelfId: 14155398648855669178
+        SelfId: 2942750325816283722
       }
     }
     Overrides {
@@ -87,19 +87,19 @@ Objects {
     Overrides {
       Name: "cs:ClassProgression_Server"
       ObjectReference {
-        SelfId: 8996996195043722014
+        SelfId: 13710518046081579361
       }
     }
     Overrides {
       Name: "cs:ConsumableProgression_Server"
       ObjectReference {
-        SelfId: 10094054520663354760
+        SelfId: 5193331286758985739
       }
     }
     Overrides {
       Name: "cs:MountManager_Server"
       ObjectReference {
-        SelfId: 5659926504011352444
+        SelfId: 3298401174486519792
       }
     }
     Overrides {
@@ -111,7 +111,7 @@ Objects {
     Overrides {
       Name: "cs:ClassSelectionServer"
       ObjectReference {
-        SelfId: 12481345003269002044
+        SelfId: 841534158063459245
       }
     }
   }
@@ -131,7 +131,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14155398648855669178
+  Id: 2942750325816283722
   Name: "DataTransfer"
   Transform {
     Location {
@@ -144,7 +144,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15057716785033630782
+  ParentId: 11705074836057870736
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

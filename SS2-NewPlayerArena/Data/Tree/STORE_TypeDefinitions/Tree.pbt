@@ -1,7 +1,7 @@
 Name: "STORE_TypeDefinitions"
-RootId: 1216974658812176625
+RootId: 15495034856112571258
 Objects {
-  Id: 11200952152838182516
+  Id: 6732241896571850497
   Name: "Outfit"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1216974658812176625
+  ParentId: 15495034856112571258
   UnregisteredParameters {
     Overrides {
       Name: "cs:TypeColor"
@@ -45,7 +45,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17845565622137171158
+  Id: 3511361690342321429
   Name: "Ability"
   Transform {
     Location {
@@ -58,7 +58,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1216974658812176625
+  ParentId: 15495034856112571258
   UnregisteredParameters {
     Overrides {
       Name: "cs:TypeColor"

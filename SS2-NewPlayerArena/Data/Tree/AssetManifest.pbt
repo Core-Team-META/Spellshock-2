@@ -204,6 +204,19 @@ Assets {
   }
 }
 Assets {
+  Id: 12468353192930553913
+  Name: "SS2_BE_PROD_PROGRESSION"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "06aa8a5ccba94efe82095b881462eab5"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 11738101196508092081
   Name: "Server Gold"
   PlatformAssetType: 24
@@ -365,6 +378,19 @@ Assets {
   }
 }
 Assets {
+  Id: 8845614076972316242
+  Name: "SS2_BE_PROD_CURRENCY"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "627fd490885c4745bc44c7d55a8fb5db"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
@@ -396,19 +422,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7912285022654161605
-  Name: "SS_Kate1"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "061199f264e04cbca3d11137d8c91a49"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 7683608552441739235
   Name: "JewelPack2"
   PlatformAssetType: 24
@@ -417,6 +430,19 @@ Assets {
       Key: "a6ce54693101494f951fb3cfc42a0f3c"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 7612318090407833903
+  Name: "SS2_BE_PROD_COSMETICS"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "5de58cc9214344bca1a53c803d5d9292"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -596,19 +622,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1644423124935478169
-  Name: "SS_Kate2"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "6fc2a23079934301ba1e244cb7903c4e"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 1082298521074732115
   Name: "SERVERGOLDBOOST"
   PlatformAssetType: 24
@@ -639,19 +652,6 @@ Assets {
       Key: "062eacbe6ab349fa819ec6135d8b456b"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 717809666782401141
-  Name: "SS_Kate3"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "ff1e7d94eee542f48ff9e2bc6efe4b54"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

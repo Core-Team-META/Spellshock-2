@@ -257,7 +257,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -288,7 +288,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 4438523867532045845
+            Id: 20822462296563132
           }
           Teams {
           }
@@ -1636,7 +1636,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4438523867532045845
+      Id: 20822462296563132
       Name: "Fantasy Shield 01"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -1654,7 +1654,7 @@ Assets {
       }
     }
     Assets {
-      Id: 17567893295837774896
+      Id: 675563715440209277
       Name: "Emissive Glow Transparent"
       PlatformAssetType: 2
       PrimaryAsset {

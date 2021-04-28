@@ -222,9 +222,9 @@ headerLine:GetCustomProperty("Healing"):WaitForObject().text = "Healing"
 headerLine:GetCustomProperty("Killstreak"):WaitForObject().text = "Kill Streak"
 
 
-for _, player in ipairs(Game.GetPlayers()) do
+--[[for _, player in ipairs(Game.GetPlayers()) do
     OnPlayerJoined(player)
-end
+end]]--
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

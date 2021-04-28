@@ -325,7 +325,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 413457027974115672
+            Id: 2494920176024075778
           }
           TeamSettings {
           }
@@ -592,7 +592,7 @@ Assets {
       }
     }
     Assets {
-      Id: 413457027974115672
+      Id: 2494920176024075778
       Name: "Fire Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {

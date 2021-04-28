@@ -136,7 +136,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -210,7 +210,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1982661357157207299
+            Id: 12120942983386243548
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -586,7 +586,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -595,7 +595,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1982661357157207299
+      Id: 12120942983386243548
       Name: "Ring - Quarter Thin"
       PlatformAssetType: 1
       PrimaryAsset {

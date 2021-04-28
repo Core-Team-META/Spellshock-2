@@ -65,7 +65,7 @@ local function OnResourceChanged(player, resName, resAmt)
     if resName == CONST.ROUND_DAMAGE then
         local class = player:GetResource(CONST.CLASS_RES)
         -- Class Based Damage Achievements
-        if class == CONST.CLASS.TANK then
+        if class == CONST.CLASS.WARRIOR then
             CheckClassDamageAchievements(player, "ASWARDMG", class)
         elseif class == CONST.CLASS.MAGE then
             CheckClassDamageAchievements(player, "ASMAGDMG", class)
@@ -120,39 +120,38 @@ local function OnRoundEnd()
     local elfScore = Game.GetTeamScore(CONST.TEAM.ELF)
 
     for _, player in ipairs(Game.GetPlayers()) do --
-        if
-            (orcScore > elfScore and player.team == CONST.TEAM.ORC) or
-                (orcScore < elfScore and player.team == CONST.TEAM.ELF)
-         then
-            ACH_API.AddProgress(player, "AS_100WINS", 1)
-        end
+        if Object.IsValid(player) then
+            if
+                (orcScore > elfScore and player.team == CONST.TEAM.ORC) or
+                    (orcScore < elfScore and player.team == CONST.TEAM.ELF)
+             then
+                ACH_API.AddProgress(player, "AS_100WINS", 1)
+            end
 
-        ACH_API.AddProgress(player, "AS_500MATCHES", 1)
-        if
-            player.serverUserData.ACH_killCount and player.serverUserData.ACH_killCount >= 1 and
-                not player.serverUserData.ACH_diedInRound
-         then
-            ACH_API.AddProgress(player, "AS_UNKILLABLE", 1)
-        end
+            ACH_API.AddProgress(player, "AS_500MATCHES", 1)
+            if
+                player.serverUserData.ACH_killCount and player.serverUserData.ACH_killCount >= 1 and
+                    not player.serverUserData.ACH_diedInRound
+             then
+                ACH_API.AddProgress(player, "AS_UNKILLABLE", 1)
+            end
 
-        if not Object.IsValid(player) then
-            return
+            player.serverUserData.ACH_killCount = 0
+            player.serverUserData.ACH_diedInRound = false
         end
-        player.serverUserData.ACH_killCount = 0
-        player.serverUserData.ACH_diedInRound = false
         Task.Wait()
         if Object.IsValid(player) then
             ACH_API.GiveAllRewards(player)
         end
-        Task.Spawn(
-            function()
-                for _, player in ipairs(Game.GetPlayers()) do
-                    ACH_API.ResetRepeatable(player)
-                end
-            end,
-            10
-        )
     end
+    Task.Spawn(
+        function()
+            for _, player in ipairs(Game.GetPlayers()) do
+                ACH_API.ResetRepeatable(player)
+            end
+        end,
+        10
+    )
 end
 
 local function OnPlayerRespawn(player)

@@ -291,7 +291,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 8747548866599712479
+            Id: 16693287233971223649
           }
           TeamSettings {
             TeamInt: 2
@@ -403,7 +403,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 14678969413949532768
+            Id: 5188278867866707632
           }
           TeamSettings {
           }
@@ -632,7 +632,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 14678969413949532768
+            Id: 5188278867866707632
           }
           TeamSettings {
             TeamInt: 2
@@ -1643,7 +1643,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 1165672060587372127
+            Id: 2590787292447476024
           }
           TeamSettings {
           }
@@ -1666,7 +1666,7 @@ Assets {
       }
     }
     Assets {
-      Id: 8747548866599712479
+      Id: 16693287233971223649
       Name: "Resurrection VFX"
       PlatformAssetType: 8
       PrimaryAsset {
@@ -1675,7 +1675,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14678969413949532768
+      Id: 5188278867866707632
       Name: "Cast Burst Ring VFX"
       PlatformAssetType: 8
       PrimaryAsset {
@@ -1756,7 +1756,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1165672060587372127
+      Id: 2590787292447476024
       Name: "Snow Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {

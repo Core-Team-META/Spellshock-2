@@ -94,7 +94,7 @@ function AddImpulseToPlayer(player)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Tank_E"}
+		tags = {id = "Warrior_E"}
 	}
 	COMBAT().ApplyDamage(attackData)
 end
@@ -197,7 +197,7 @@ end
 
 function OnEquip(equipment, player)
 	local skin = equipment:GetCustomProperty("RID") or 1
-	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().R)
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().WARRIOR, player.team, skin, META_AP().R)
 end
 
 function OnUnequip(equipment, player)

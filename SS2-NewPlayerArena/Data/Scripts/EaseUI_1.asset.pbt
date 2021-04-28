@@ -1,6 +1,6 @@
 Assets {
   Id: 12045507068401926921
-  Name: "EaseUI"
+  Name: "EaseUI_1"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,9 +11,6 @@ Assets {
         }
       }
     }
-  }
-  Marketplace {
-    Description: "EaseUI is a utility that allows for both simple and advanced UI animations! Full customizability to you, the creator!\r\n\r\nRead the script for more information."
   }
   SerializationVersion: 81
 }

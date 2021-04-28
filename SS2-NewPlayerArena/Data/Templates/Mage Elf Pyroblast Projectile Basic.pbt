@@ -301,7 +301,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -353,7 +353,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {

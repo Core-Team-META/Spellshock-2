@@ -1,7 +1,7 @@
 Name: "UI_1"
-RootId: 13334626079586580612
+RootId: 18118910128564520673
 Objects {
-  Id: 4197521803680757974
+  Id: 6074680472044671425
   Name: "Top Players"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4362092203162598167
+  Id: 16225525317582596976
   Name: "Daily Shop"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59,7 +59,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5763622543987818276
+  Id: 1769119982603393101
   Name: "CosmeticStore"
   Transform {
     Location {
@@ -75,7 +75,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -91,7 +91,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1204198035822590699
+  Id: 906060671220907547
   Name: "Tutorial Overlay"
   Transform {
     Location {
@@ -107,7 +107,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -123,7 +123,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4683464414535277849
+  Id: 7699305047933170229
   Name: "Combat Stats Scoreboard"
   Transform {
     Location {
@@ -136,7 +136,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -152,7 +152,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14360836664874170818
+  Id: 8458420444491767833
   Name: "Map Mode"
   Transform {
     Location {
@@ -165,7 +165,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   UnregisteredParameters {
     Overrides {
       Name: "cs:MapBinding"
@@ -233,7 +233,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10701854205104381264
+  Id: 7410984034837904480
   Name: "Respawn & Quick Class Selection"
   Transform {
     Location {
@@ -246,7 +246,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -262,7 +262,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14536167750502055599
+  Id: 5126108899418490255
   Name: "Midgame UI"
   Transform {
     Location {
@@ -275,7 +275,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -291,7 +291,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3281734247870618909
+  Id: 5269136214174580617
   Name: "Class Selection"
   Transform {
     Location {
@@ -304,7 +304,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -320,7 +320,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15766608560554198711
+  Id: 3450201459582497154
   Name: "RewardSystem"
   Transform {
     Location {
@@ -333,7 +333,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -349,7 +349,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1802783527496580588
+  Id: 7266082474893476804
   Name: "Victory Screen"
   Transform {
     Location {
@@ -365,7 +365,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -383,7 +383,7 @@ Objects {
   }
 }
 Objects {
-  Id: 527033524674069522
+  Id: 1703859290358381962
   Name: "Capture Point UI"
   Transform {
     Location {
@@ -396,7 +396,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -414,7 +414,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7371117519618108034
+  Id: 15386129119996868614
   Name: "Minimap"
   Transform {
     Location {
@@ -427,7 +427,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -443,7 +443,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1202107626836939879
+  Id: 10113068544749473898
   Name: "Player UI"
   Transform {
     Location {
@@ -456,7 +456,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13334626079586580612
+  ParentId: 18118910128564520673
   UnregisteredParameters {
   }
   Collidable_v2 {

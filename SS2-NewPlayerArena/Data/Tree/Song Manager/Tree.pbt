@@ -1,7 +1,7 @@
 Name: "Song Manager"
-RootId: 15681536267438714432
+RootId: 7011827950543834523
 Objects {
-  Id: 7699960455379020988
+  Id: 6702661586177327503
   Name: "ClientContext"
   Transform {
     Location {
@@ -16,12 +16,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15681536267438714432
-  ChildIds: 12652278405279320986
-  ChildIds: 3395137385791868017
-  ChildIds: 8625504559866801273
-  ChildIds: 14874357977701351238
-  ChildIds: 15558592490157347513
+  ParentId: 7011827950543834523
+  ChildIds: 13094830928495477928
+  ChildIds: 15801567975516192703
+  ChildIds: 3867476949950143094
+  ChildIds: 10094864786946707822
+  ChildIds: 9926891303638752544
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -35,7 +35,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15558592490157347513
+  Id: 9926891303638752544
   Name: "Song_Manager_Client"
   Transform {
     Location {
@@ -48,7 +48,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7699960455379020988
+  ParentId: 6702661586177327503
   UnregisteredParameters {
     Overrides {
       Name: "cs:MetaAbilityProgressionConstants_API"
@@ -59,19 +59,19 @@ Objects {
     Overrides {
       Name: "cs:ElfSongs"
       ObjectReference {
-        SelfId: 14874357977701351238
+        SelfId: 10094864786946707822
       }
     }
     Overrides {
       Name: "cs:OrcSongs"
       ObjectReference {
-        SelfId: 8625504559866801273
+        SelfId: 3867476949950143094
       }
     }
     Overrides {
       Name: "cs:RewardsSFX"
       ObjectReference {
-        SelfId: 3157584536586350236
+        SelfId: 11378516578040789632
       }
     }
   }
@@ -91,7 +91,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14874357977701351238
+  Id: 10094864786946707822
   Name: "ElfSongs"
   Transform {
     Location {
@@ -104,13 +104,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7699960455379020988
-  ChildIds: 15388158343451086821
-  ChildIds: 7968011078272738388
-  ChildIds: 15689220480337951964
-  ChildIds: 2650796006863474876
-  ChildIds: 3273537084234371144
-  ChildIds: 16930035066363036695
+  ParentId: 6702661586177327503
+  ChildIds: 8232583152100148569
+  ChildIds: 354582581011892726
+  ChildIds: 3214639897608757123
+  ChildIds: 3122060564948780905
+  ChildIds: 7419168601677338710
+  ChildIds: 4241185991467053681
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -125,7 +125,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16930035066363036695
+  Id: 4241185991467053681
   Name: "Rewards End"
   Transform {
     Location {
@@ -138,12 +138,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14874357977701351238
+  ParentId: 10094864786946707822
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 2382138765438154874
+        SelfId: 13500358728781527214
       }
     }
   }
@@ -163,7 +163,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3273537084234371144
+  Id: 7419168601677338710
   Name: "Rewards"
   Transform {
     Location {
@@ -176,12 +176,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14874357977701351238
+  ParentId: 10094864786946707822
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 935252118520641425
+        SelfId: 12524011714351998057
       }
     }
   }
@@ -201,7 +201,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2650796006863474876
+  Id: 3122060564948780905
   Name: "PlayerShowcase"
   Transform {
     Location {
@@ -214,12 +214,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14874357977701351238
+  ParentId: 10094864786946707822
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 14478094395057186831
+        SelfId: 17061571991748673222
       }
     }
   }
@@ -239,7 +239,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15689220480337951964
+  Id: 3214639897608757123
   Name: "RoundEnd"
   Transform {
     Location {
@@ -252,12 +252,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14874357977701351238
+  ParentId: 10094864786946707822
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 6993845471095540870
+        SelfId: 17648059761496203051
       }
     }
   }
@@ -277,7 +277,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7968011078272738388
+  Id: 354582581011892726
   Name: "Round"
   Transform {
     Location {
@@ -290,12 +290,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14874357977701351238
+  ParentId: 10094864786946707822
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 17601287680247368645
+        SelfId: 13867947694374596387
       }
     }
   }
@@ -315,7 +315,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15388158343451086821
+  Id: 8232583152100148569
   Name: "Lobby"
   Transform {
     Location {
@@ -328,12 +328,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14874357977701351238
+  ParentId: 10094864786946707822
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 1778773841650752877
+        SelfId: 176034213987361252
       }
     }
   }
@@ -353,7 +353,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8625504559866801273
+  Id: 3867476949950143094
   Name: "OrcSongs"
   Transform {
     Location {
@@ -366,13 +366,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7699960455379020988
-  ChildIds: 9519070195028333978
-  ChildIds: 9138659101811640313
-  ChildIds: 15835756206661839636
-  ChildIds: 4989067313359477920
-  ChildIds: 670640835919610410
-  ChildIds: 9992087328077118893
+  ParentId: 6702661586177327503
+  ChildIds: 12871018550233156290
+  ChildIds: 4327265582266089959
+  ChildIds: 12450820380776086947
+  ChildIds: 5338440878407048784
+  ChildIds: 5981136626889181696
+  ChildIds: 17207473360443527067
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -387,7 +387,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9992087328077118893
+  Id: 17207473360443527067
   Name: "Rewards End"
   Transform {
     Location {
@@ -400,12 +400,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8625504559866801273
+  ParentId: 3867476949950143094
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 13291684878578525064
+        SelfId: 7865792248625513830
       }
     }
   }
@@ -425,7 +425,7 @@ Objects {
   }
 }
 Objects {
-  Id: 670640835919610410
+  Id: 5981136626889181696
   Name: "Rewards"
   Transform {
     Location {
@@ -438,12 +438,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8625504559866801273
+  ParentId: 3867476949950143094
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 935252118520641425
+        SelfId: 12524011714351998057
       }
     }
   }
@@ -463,7 +463,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4989067313359477920
+  Id: 5338440878407048784
   Name: "PlayerShowcase"
   Transform {
     Location {
@@ -476,12 +476,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8625504559866801273
+  ParentId: 3867476949950143094
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 14478094395057186831
+        SelfId: 17061571991748673222
       }
     }
   }
@@ -501,7 +501,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15835756206661839636
+  Id: 12450820380776086947
   Name: "RoundEnd"
   Transform {
     Location {
@@ -514,12 +514,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8625504559866801273
+  ParentId: 3867476949950143094
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 6993845471095540870
+        SelfId: 17648059761496203051
       }
     }
   }
@@ -539,7 +539,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9138659101811640313
+  Id: 4327265582266089959
   Name: "Round"
   Transform {
     Location {
@@ -552,12 +552,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8625504559866801273
+  ParentId: 3867476949950143094
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 18164879183528294552
       }
     }
   }
@@ -577,7 +577,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9519070195028333978
+  Id: 12871018550233156290
   Name: "Lobby"
   Transform {
     Location {
@@ -590,12 +590,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8625504559866801273
+  ParentId: 3867476949950143094
   UnregisteredParameters {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 945024203867131124
+        SelfId: 11601350452120136461
       }
     }
   }
@@ -615,7 +615,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3395137385791868017
+  Id: 15801567975516192703
   Name: "Song Triggers"
   Transform {
     Location {
@@ -628,12 +628,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7699960455379020988
-  ChildIds: 3567473911097368876
-  ChildIds: 17930212626320936948
-  ChildIds: 1111324371193178376
-  ChildIds: 10174524806202731056
-  ChildIds: 10132135645300084462
+  ParentId: 6702661586177327503
+  ChildIds: 667770173066666240
+  ChildIds: 9644254300254476052
+  ChildIds: 17240256909185065518
+  ChildIds: 2965707909477765441
+  ChildIds: 18360840974803208164
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -648,7 +648,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10132135645300084462
+  Id: 18360840974803208164
   Name: "War Camp"
   Transform {
     Location {
@@ -664,12 +664,12 @@ Objects {
       Z: 74.3477783
     }
   }
-  ParentId: 3395137385791868017
+  ParentId: 15801567975516192703
   UnregisteredParameters {
     Overrides {
       Name: "cs:SONG"
       ObjectReference {
-        SelfId: 945024203867131124
+        SelfId: 11601350452120136461
       }
     }
   }
@@ -693,7 +693,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10174524806202731056
+  Id: 2965707909477765441
   Name: "Template Glade"
   Transform {
     Location {
@@ -709,12 +709,12 @@ Objects {
       Z: 74.3477783
     }
   }
-  ParentId: 3395137385791868017
+  ParentId: 15801567975516192703
   UnregisteredParameters {
     Overrides {
       Name: "cs:SONG"
       ObjectReference {
-        SelfId: 7533910292317192694
+        SelfId: 11320770415246534901
       }
     }
   }
@@ -738,7 +738,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1111324371193178376
+  Id: 17240256909185065518
   Name: "Airship"
   Transform {
     Location {
@@ -754,12 +754,12 @@ Objects {
       Z: 74.3477783
     }
   }
-  ParentId: 3395137385791868017
+  ParentId: 15801567975516192703
   UnregisteredParameters {
     Overrides {
       Name: "cs:SONG"
       ObjectReference {
-        SelfId: 16757649131517114632
+        SelfId: 17470880613760394587
       }
     }
   }
@@ -783,7 +783,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17930212626320936948
+  Id: 9644254300254476052
   Name: "Marketplace"
   Transform {
     Location {
@@ -799,12 +799,12 @@ Objects {
       Z: 91.6100235
     }
   }
-  ParentId: 3395137385791868017
+  ParentId: 15801567975516192703
   UnregisteredParameters {
     Overrides {
       Name: "cs:SONG"
       ObjectReference {
-        SelfId: 12407423805149081047
+        SelfId: 5679009072646695811
       }
     }
   }
@@ -828,7 +828,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3567473911097368876
+  Id: 667770173066666240
   Name: "Old Mine"
   Transform {
     Location {
@@ -844,12 +844,12 @@ Objects {
       Z: 91.6100235
     }
   }
-  ParentId: 3395137385791868017
+  ParentId: 15801567975516192703
   UnregisteredParameters {
     Overrides {
       Name: "cs:SONG"
       ObjectReference {
-        SelfId: 4023576004789637134
+        SelfId: 16332109652609267310
       }
     }
   }
@@ -873,7 +873,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12652278405279320986
+  Id: 13094830928495477928
   Name: "Songs"
   Transform {
     Location {
@@ -886,25 +886,25 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7699960455379020988
-  ChildIds: 1778773841650752877
-  ChildIds: 12407423805149081047
-  ChildIds: 8159300865285051927
-  ChildIds: 16757649131517114632
-  ChildIds: 4023576004789637134
-  ChildIds: 945024203867131124
-  ChildIds: 7533910292317192694
-  ChildIds: 17601287680247368645
-  ChildIds: 6737949795334203683
-  ChildIds: 6993845471095540870
-  ChildIds: 935252118520641425
-  ChildIds: 12204854251400153961
-  ChildIds: 13291684878578525064
-  ChildIds: 14478094395057186831
-  ChildIds: 2382138765438154874
-  ChildIds: 5898451590886041447
-  ChildIds: 3157584536586350236
-  ChildIds: 8688153027707487342
+  ParentId: 6702661586177327503
+  ChildIds: 176034213987361252
+  ChildIds: 5679009072646695811
+  ChildIds: 18164879183528294552
+  ChildIds: 17470880613760394587
+  ChildIds: 16332109652609267310
+  ChildIds: 11601350452120136461
+  ChildIds: 11320770415246534901
+  ChildIds: 13867947694374596387
+  ChildIds: 4340544935258821296
+  ChildIds: 17648059761496203051
+  ChildIds: 12524011714351998057
+  ChildIds: 2386449801429593430
+  ChildIds: 7865792248625513830
+  ChildIds: 17061571991748673222
+  ChildIds: 13500358728781527214
+  ChildIds: 8135648104798028522
+  ChildIds: 11378516578040789632
+  ChildIds: 8308786723228005725
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -919,7 +919,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8688153027707487342
+  Id: 8308786723228005725
   Name: "\"Heroic Fantasy Battle\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -932,7 +932,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -966,7 +966,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3157584536586350236
+  Id: 11378516578040789632
   Name: "Meta Fantasy Treasure 01 SFX"
   Transform {
     Location {
@@ -979,7 +979,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1001,7 +1001,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5898451590886041447
+  Id: 8135648104798028522
   Name: "\"Legendary Dragons\" Music Construction Kit (Layers) 01_Drums"
   Transform {
     Location {
@@ -1014,7 +1014,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   UnregisteredParameters {
     Overrides {
       Name: "bp:Timpani Swell Middle Volume"
@@ -1095,7 +1095,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2382138765438154874
+  Id: 13500358728781527214
   Name: "Fantasy Music Score Set 01_11"
   Transform {
     Location {
@@ -1108,7 +1108,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -1143,7 +1143,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14478094395057186831
+  Id: 17061571991748673222
   Name: "Fantasy Music Score Set 01_07"
   Transform {
     Location {
@@ -1156,7 +1156,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -1191,7 +1191,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13291684878578525064
+  Id: 7865792248625513830
   Name: "\"Epic Fantasy Jungle Adventure\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1204,7 +1204,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1230,7 +1230,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12204854251400153961
+  Id: 2386449801429593430
   Name: "\"Woodland Fantasy\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1243,7 +1243,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -1277,7 +1277,7 @@ Objects {
   }
 }
 Objects {
-  Id: 935252118520641425
+  Id: 12524011714351998057
   Name: "Orchestral Adventurous: Meadow Town Loop"
   Transform {
     Location {
@@ -1290,7 +1290,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -1325,7 +1325,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6993845471095540870
+  Id: 17648059761496203051
   Name: "Orchestral Adventurous Victory Fanfare Music Stinger Set 01"
   Transform {
     Location {
@@ -1338,7 +1338,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1364,7 +1364,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6737949795334203683
+  Id: 4340544935258821296
   Name: "\"Legendary Dragons\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1377,7 +1377,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1403,7 +1403,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17601287680247368645
+  Id: 13867947694374596387
   Name: "\"Legendary Dragons\" Music Construction Kit (Layers) 01"
   Transform {
     Location {
@@ -1416,7 +1416,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
+  ParentId: 13094830928495477928
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1441,7 +1441,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7533910292317192694
+  Id: 11320770415246534901
   Name: "\"Heroic Adventurer\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1456,8 +1456,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
-  ChildIds: 8256310877877543944
+  ParentId: 13094830928495477928
+  ChildIds: 15019741134333121992
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1484,7 +1484,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8256310877877543944
+  Id: 15019741134333121992
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
@@ -1497,7 +1497,7 @@ Objects {
       Z: 105.568161
     }
   }
-  ParentId: 7533910292317192694
+  ParentId: 11320770415246534901
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1509,7 +1509,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5106178074541799398
+      Id: 198353679974341757
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1524,7 +1524,7 @@ Objects {
   }
 }
 Objects {
-  Id: 945024203867131124
+  Id: 11601350452120136461
   Name: "\"Heroic Adventurer\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1539,8 +1539,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
-  ChildIds: 6650680645498372994
+  ParentId: 13094830928495477928
+  ChildIds: 1952346912920914231
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1567,7 +1567,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6650680645498372994
+  Id: 1952346912920914231
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
@@ -1580,7 +1580,7 @@ Objects {
       Z: 105.568161
     }
   }
-  ParentId: 945024203867131124
+  ParentId: 11601350452120136461
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1592,7 +1592,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5106178074541799398
+      Id: 198353679974341757
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1607,7 +1607,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4023576004789637134
+  Id: 16332109652609267310
   Name: "\"Heroic Fantasy Adventure\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1622,8 +1622,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
-  ChildIds: 1829259565732981802
+  ParentId: 13094830928495477928
+  ChildIds: 2232234440172148184
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -1658,7 +1658,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1829259565732981802
+  Id: 2232234440172148184
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
@@ -1671,7 +1671,7 @@ Objects {
       Z: 105.568161
     }
   }
-  ParentId: 4023576004789637134
+  ParentId: 16332109652609267310
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1683,7 +1683,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5106178074541799398
+      Id: 198353679974341757
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1698,7 +1698,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16757649131517114632
+  Id: 17470880613760394587
   Name: "\"Heroic Fantasy Adventure\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1713,8 +1713,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
-  ChildIds: 9540562548590456299
+  ParentId: 13094830928495477928
+  ChildIds: 14445698466244933885
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -1749,7 +1749,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9540562548590456299
+  Id: 14445698466244933885
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
@@ -1762,7 +1762,7 @@ Objects {
       Z: 105.568161
     }
   }
-  ParentId: 16757649131517114632
+  ParentId: 17470880613760394587
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1774,7 +1774,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5106178074541799398
+      Id: 198353679974341757
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1789,7 +1789,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8159300865285051927
+  Id: 18164879183528294552
   Name: "\"The Dark Spiritwatcher\" Music Construction Kit (Layers) 01"
   Transform {
     Location {
@@ -1805,8 +1805,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
-  ChildIds: 4522482355251314432
+  ParentId: 13094830928495477928
+  ChildIds: 10475947588849529050
   UnregisteredParameters {
     Overrides {
       Name: "bp:Tonal Instruments Volume"
@@ -1837,7 +1837,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4522482355251314432
+  Id: 10475947588849529050
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
@@ -1850,7 +1850,7 @@ Objects {
       Z: 105.568161
     }
   }
-  ParentId: 8159300865285051927
+  ParentId: 18164879183528294552
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1862,7 +1862,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5106178074541799398
+      Id: 198353679974341757
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1877,7 +1877,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12407423805149081047
+  Id: 5679009072646695811
   Name: "\"Heroic Fantasy Adventure\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1892,8 +1892,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
-  ChildIds: 7968420179918950941
+  ParentId: 13094830928495477928
+  ChildIds: 16793317341423611269
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1919,7 +1919,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7968420179918950941
+  Id: 16793317341423611269
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
@@ -1932,7 +1932,7 @@ Objects {
       Z: 105.568161
     }
   }
-  ParentId: 12407423805149081047
+  ParentId: 5679009072646695811
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1944,7 +1944,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5106178074541799398
+      Id: 198353679974341757
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1959,7 +1959,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1778773841650752877
+  Id: 176034213987361252
   Name: "\"Woodland Fantasy\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
@@ -1975,8 +1975,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12652278405279320986
-  ChildIds: 8127058240496531260
+  ParentId: 13094830928495477928
+  ChildIds: 18291547756472019572
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -2011,7 +2011,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8127058240496531260
+  Id: 18291547756472019572
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
@@ -2024,7 +2024,7 @@ Objects {
       Z: 105.568161
     }
   }
-  ParentId: 1778773841650752877
+  ParentId: 176034213987361252
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -2036,7 +2036,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5106178074541799398
+      Id: 198353679974341757
     }
     Teams {
       IsTeamCollisionEnabled: true

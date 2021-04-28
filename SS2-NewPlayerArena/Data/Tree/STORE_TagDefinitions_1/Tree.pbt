@@ -1,7 +1,7 @@
 Name: "STORE_TagDefinitions_1"
-RootId: 13894713750631482667
+RootId: 17648277860386511027
 Objects {
-  Id: 12162855144757605937
+  Id: 10230225027866036545
   Name: "Healer"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13894713750631482667
+  ParentId: 17648277860386511027
   UnregisteredParameters {
     Overrides {
       Name: "cs:Number"
@@ -43,7 +43,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16891950996993402920
+  Id: 8553761479585419732
   Name: "Assassin"
   Transform {
     Location {
@@ -56,7 +56,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13894713750631482667
+  ParentId: 17648277860386511027
   UnregisteredParameters {
     Overrides {
       Name: "cs:Number"
@@ -85,7 +85,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3218161671595262254
+  Id: 8021435035552711772
   Name: "Mage"
   Transform {
     Location {
@@ -98,7 +98,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13894713750631482667
+  ParentId: 17648277860386511027
   UnregisteredParameters {
     Overrides {
       Name: "cs:Number"
@@ -127,7 +127,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5657773594819613437
+  Id: 8876176763260680739
   Name: "Hunter"
   Transform {
     Location {
@@ -140,7 +140,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13894713750631482667
+  ParentId: 17648277860386511027
   UnregisteredParameters {
     Overrides {
       Name: "cs:TagName"
@@ -173,7 +173,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8708515630698603364
+  Id: 13905205667338919104
   Name: "Warrior"
   Transform {
     Location {
@@ -186,7 +186,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13894713750631482667
+  ParentId: 17648277860386511027
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"

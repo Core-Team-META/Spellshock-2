@@ -1,3 +1,8 @@
+while not _G["Class.Progression"] do
+	Task.Wait()
+end
+local CLASS_PROGRESSION = _G["Class.Progression"]
+
 
 local report = {}
 local roundCount = 0
@@ -36,6 +41,7 @@ function GetEntryForPlayer(player)
 		entry.deaths = 0
 		entry.totalWeaponTime = 0
 		entry.weapons = {}
+		entry.classes = {}
 	end
 	return entry
 end
@@ -113,6 +119,18 @@ function PrintReport()
 			end
 			str = str .. "\"" .. tostring(weaponName) .. "\":" .. tostring(weaponTime)
 		end
+		str = str .. "}"
+
+		-- Classes
+		str = str .. ",\"classLevels\":{"
+		local classesWritten = 0
+		for className, classLevel in pairs(entry.classes) do
+			classesWritten = classesWritten + 1
+			if classesWritten > 1 then
+				str = str .. ","
+			end
+			str = str .. "\"" .. tostring(className) .. "\":" .. tostring(classLevel)
+		end
 		str = str .. "}}"
 	end
 	str = str .. "]"
@@ -187,7 +205,8 @@ function RecordPlayerWeapons()
 		
 		for _,equipment in ipairs(player:GetEquipment()) do
 			local key = equipment.name
-			if key == "Tank" 
+			local classId = equipment:GetCustomProperty("ClassID")
+			if key == "Warrior" 
 			or key == "Hunter" 
 			or key == "Mage" 
 			or key == "Assassin"
@@ -196,6 +215,9 @@ function RecordPlayerWeapons()
 					entry.weapons[key] = 0
 				end
 				entry.weapons[key] = entry.weapons[key] + WEAPON_RECORDING_INTERVAL
+				if classId and classId > 0 then
+					entry.classes[key] = CLASS_PROGRESSION.GetClassLevel(player, classId)
+				end
 			end
 		end
 	end

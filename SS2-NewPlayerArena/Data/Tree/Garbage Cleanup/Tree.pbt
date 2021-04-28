@@ -1,7 +1,7 @@
 Name: "Garbage Cleanup"
-RootId: 1133890144562814122
+RootId: 4710096140353869676
 Objects {
-  Id: 6073972883839081802
+  Id: 13930345388219021932
   Name: "GarbageCleanup_Server"
   Transform {
     Location {
@@ -14,12 +14,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1133890144562814122
+  ParentId: 4710096140353869676
   UnregisteredParameters {
     Overrides {
       Name: "cs:GarbageCollection"
       ObjectReference {
-        SelfId: 12421538004512198785
+        SelfId: 17375365745852366583
       }
     }
   }
@@ -39,7 +39,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12421538004512198785
+  Id: 17375365745852366583
   Name: "Garbage Collection"
   Transform {
     Location {
@@ -52,7 +52,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1133890144562814122
+  ParentId: 4710096140353869676
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

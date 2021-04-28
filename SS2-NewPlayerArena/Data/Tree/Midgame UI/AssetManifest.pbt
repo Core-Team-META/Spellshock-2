@@ -62,16 +62,7 @@ Assets {
   }
 }
 Assets {
-  Id: 15775978992330089425
-  Name: "BG Flat 015"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_32"
-  }
-}
-Assets {
-  Id: 15575092074641359796
+  Id: 16272829598190271809
   Name: "Frame Outlined 016"
   PlatformAssetType: 9
   PrimaryAsset {
@@ -89,30 +80,12 @@ Assets {
   }
 }
 Assets {
-  Id: 14509317390755952210
-  Name: "Frame Outlined 015"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameSolid4px_032"
-  }
-}
-Assets {
   Id: 14100456703306476565
   Name: "Baloo 2 Extra Bold"
   PlatformAssetType: 28
   PrimaryAsset {
     AssetType: "FontAssetRef"
     AssetId: "Baloo2ExtraBold_ref"
-  }
-}
-Assets {
-  Id: 14060330023043759337
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {
@@ -188,6 +161,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12119737414116979884
+  Name: "BG Flat 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_32"
+  }
+}
+Assets {
   Id: 12086971798166130178
   Name: "BG Flat 010"
   PlatformAssetType: 9
@@ -221,15 +203,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ingredient_030"
-  }
-}
-Assets {
-  Id: 10681891877591482545
-  Name: "Fantasy Spell Potion 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Potion_004"
   }
 }
 Assets {
@@ -296,12 +269,12 @@ Assets {
   }
 }
 Assets {
-  Id: 7809958927931360774
-  Name: "BG Flat 016"
+  Id: 8145212310378148328
+  Name: "Frame Outlined 015"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_33"
+    AssetId: "FrameSolid4px_032"
   }
 }
 Assets {
@@ -341,12 +314,30 @@ Assets {
   }
 }
 Assets {
+  Id: 6494160000227737456
+  Name: "Fantasy Spell Potion 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Potion_004"
+  }
+}
+Assets {
   Id: 6173243591385665392
   Name: "Frame Outlined 008"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameSolid4px_025"
+  }
+}
+Assets {
+  Id: 5992778860505362279
+  Name: "BG Flat 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_33"
   }
 }
 Assets {

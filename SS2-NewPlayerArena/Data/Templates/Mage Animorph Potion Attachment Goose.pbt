@@ -1710,7 +1710,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -1773,7 +1773,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -1887,7 +1887,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -1947,7 +1947,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -3276,7 +3276,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3973623883385786958
+            Id: 3438912523759796853
           }
           Teams {
           }
@@ -3413,7 +3413,7 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 4832317491132024529
+            Id: 14614446586465896214
           }
           Volume: 1
           Falloff: -1
@@ -3479,7 +3479,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -3506,7 +3506,7 @@ Assets {
       }
     }
     Assets {
-      Id: 3973623883385786958
+      Id: 3438912523759796853
       Name: "Raptor Mob"
       PlatformAssetType: 17
       PrimaryAsset {
@@ -3524,7 +3524,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4832317491132024529
+      Id: 14614446586465896214
       Name: "Creature Bird Chicken Cluck 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {

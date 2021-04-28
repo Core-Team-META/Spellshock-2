@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14060330023043759337
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
   Id: 13297191547870213432
   Name: "Evil Failure Low Brass Music Loop/Stinger Kit 01 "
   PlatformAssetType: 10
@@ -86,6 +77,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioBlueprintAssetRef"
     AssetId: "abp_stinger_japanese_taiko_quick_accent_01_ref"
+  }
+}
+Assets {
+  Id: 1814707273787853473
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {

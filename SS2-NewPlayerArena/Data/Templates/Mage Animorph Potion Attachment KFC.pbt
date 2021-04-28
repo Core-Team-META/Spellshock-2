@@ -580,7 +580,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 14868655637861176575
+            Id: 14125111047322222726
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -733,7 +733,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12806717230968640779
+            Id: 9176145884981181688
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -824,7 +824,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12806717230968640779
+            Id: 9176145884981181688
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -915,7 +915,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12806717230968640779
+            Id: 9176145884981181688
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1006,7 +1006,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12806717230968640779
+            Id: 9176145884981181688
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1097,7 +1097,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12806717230968640779
+            Id: 9176145884981181688
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1804,7 +1804,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7516257627012008757
+            Id: 2615820326670724915
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1863,7 +1863,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7516257627012008757
+            Id: 2615820326670724915
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1922,7 +1922,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7516257627012008757
+            Id: 2615820326670724915
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1981,7 +1981,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7516257627012008757
+            Id: 2615820326670724915
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2039,7 +2039,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7516257627012008757
+            Id: 2615820326670724915
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3950,7 +3950,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -4013,7 +4013,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -4073,7 +4073,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -4133,7 +4133,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -5114,7 +5114,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3973623883385786958
+            Id: 3438912523759796853
           }
           Teams {
           }
@@ -5251,7 +5251,7 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 4832317491132024529
+            Id: 14614446586465896214
           }
           Volume: 1
           Falloff: -1
@@ -5281,7 +5281,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14868655637861176575
+      Id: 14125111047322222726
       Name: "Ring - Thin"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5299,7 +5299,7 @@ Assets {
       }
     }
     Assets {
-      Id: 12806717230968640779
+      Id: 9176145884981181688
       Name: "Pipe - Half Thin"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5335,7 +5335,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7516257627012008757
+      Id: 2615820326670724915
       Name: "Pipe - Half"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5398,7 +5398,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5425,7 +5425,7 @@ Assets {
       }
     }
     Assets {
-      Id: 3973623883385786958
+      Id: 3438912523759796853
       Name: "Raptor Mob"
       PlatformAssetType: 17
       PrimaryAsset {
@@ -5443,7 +5443,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4832317491132024529
+      Id: 14614446586465896214
       Name: "Creature Bird Chicken Cluck 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {

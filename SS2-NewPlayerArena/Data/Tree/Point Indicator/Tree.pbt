@@ -1,7 +1,7 @@
 Name: "Point Indicator"
-RootId: 6986240750482757127
+RootId: 4646537809066659077
 Objects {
-  Id: 704311766577255629
+  Id: 7179963237249094217
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,9 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6986240750482757127
-  ChildIds: 15354994149150661546
-  ChildIds: 12305440222570937533
+  ParentId: 4646537809066659077
+  ChildIds: 18122055718651912531
+  ChildIds: 7389372258574838030
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12305440222570937533
+  Id: 7389372258574838030
   Name: "GAMEMODE_PointManager_Client"
   Transform {
     Location {
@@ -43,18 +43,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 704311766577255629
+  ParentId: 7179963237249094217
   UnregisteredParameters {
     Overrides {
       Name: "cs:Spawned_Objects"
       ObjectReference {
-        SelfId: 10485670115877785080
+        SelfId: 8093015977749877878
       }
     }
     Overrides {
       Name: "cs:UIContainer"
       ObjectReference {
-        SelfId: 4441977267850864147
+        SelfId: 11373523415061225076
       }
     }
   }
@@ -74,7 +74,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15354994149150661546
+  Id: 18122055718651912531
   Name: "UI Container"
   Transform {
     Location {
@@ -87,8 +87,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 704311766577255629
-  ChildIds: 4441977267850864147
+  ParentId: 7179963237249094217
+  ChildIds: 11373523415061225076
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -121,7 +121,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4441977267850864147
+  Id: 11373523415061225076
   Name: "UI Panel"
   Transform {
     Location {
@@ -134,7 +134,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15354994149150661546
+  ParentId: 18122055718651912531
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

@@ -140,7 +140,7 @@ Assets {
               A: 1
             }
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             IsButtonEnabled: true
             ClickMode {
@@ -415,7 +415,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14060330023043759337
+      Id: 1814707273787853473
       Name: "BG Flat 001"
       PlatformAssetType: 9
       PrimaryAsset {

@@ -1,7 +1,7 @@
 Name: "Status Effect System"
-RootId: 3202946136614365771
+RootId: 18421900067736178117
 Objects {
-  Id: 12789809754890541052
+  Id: 9827287702469037870
   Name: "Status Effect Controller"
   Transform {
     Location {
@@ -14,10 +14,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3202946136614365771
-  ChildIds: 192196767897936600
-  ChildIds: 1413418345763159432
-  ChildIds: 6792929514908446286
+  ParentId: 18421900067736178117
+  ChildIds: 13767381218602001185
+  ChildIds: 14783511820824303705
+  ChildIds: 14689780960014320071
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -32,7 +32,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6792929514908446286
+  Id: 14689780960014320071
   Name: "StatusEffectPlayerStateTrackers"
   Transform {
     Location {
@@ -45,7 +45,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12789809754890541052
+  ParentId: 9827287702469037870
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -60,7 +60,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1413418345763159432
+  Id: 14783511820824303705
   Name: "ClientContext"
   Transform {
     Location {
@@ -73,8 +73,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12789809754890541052
-  ChildIds: 14085680401254643592
+  ParentId: 9827287702469037870
+  ChildIds: 951901056579735693
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -88,7 +88,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14085680401254643592
+  Id: 951901056579735693
   Name: "StatusEffectControllerClient"
   Transform {
     Location {
@@ -101,7 +101,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1413418345763159432
+  ParentId: 14783511820824303705
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIStatusEffects"
@@ -112,7 +112,7 @@ Objects {
     Overrides {
       Name: "cs:StateTrackerGroup"
       ObjectReference {
-        SelfId: 6792929514908446286
+        SelfId: 14689780960014320071
       }
     }
   }
@@ -132,7 +132,7 @@ Objects {
   }
 }
 Objects {
-  Id: 192196767897936600
+  Id: 13767381218602001185
   Name: "StatusEffectControllerServer"
   Transform {
     Location {
@@ -145,7 +145,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12789809754890541052
+  ParentId: 9827287702469037870
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIStatusEffects"
@@ -156,7 +156,7 @@ Objects {
     Overrides {
       Name: "cs:StateTrackerGroup"
       ObjectReference {
-        SelfId: 6792929514908446286
+        SelfId: 14689780960014320071
       }
     }
     Overrides {
@@ -182,7 +182,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1071398161754346909
+  Id: 17283189738515845760
   Name: "Nameplates"
   Transform {
     Location {
@@ -195,8 +195,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3202946136614365771
-  ChildIds: 2195017189704816958
+  ParentId: 18421900067736178117
+  ChildIds: 5096267332589482329
   UnregisteredParameters {
     Overrides {
       Name: "cs:ShowNames"
@@ -418,7 +418,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2195017189704816958
+  Id: 5096267332589482329
   Name: "ClientContext"
   Transform {
     Location {
@@ -431,8 +431,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1071398161754346909
-  ChildIds: 12823223322670409995
+  ParentId: 17283189738515845760
+  ChildIds: 1510829858947196975
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -448,7 +448,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12823223322670409995
+  Id: 1510829858947196975
   Name: "NameplateControllerClient"
   Transform {
     Location {
@@ -461,7 +461,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2195017189704816958
+  ParentId: 5096267332589482329
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -472,7 +472,7 @@ Objects {
     Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
-        SelfId: 1071398161754346909
+        SelfId: 17283189738515845760
       }
     }
     Overrides {
@@ -522,7 +522,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15362819445114274588
+  Id: 808009202993416815
   Name: "Local Status Effect Display"
   Transform {
     Location {
@@ -535,9 +535,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3202946136614365771
-  ChildIds: 1833301302411918937
-  ChildIds: 5319309866093205519
+  ParentId: 18421900067736178117
+  ChildIds: 7443628145616746328
+  ChildIds: 12560682626184533057
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsRightAligned"
@@ -557,7 +557,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5319309866093205519
+  Id: 12560682626184533057
   Name: "UI Container"
   Transform {
     Location {
@@ -570,8 +570,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15362819445114274588
-  ChildIds: 9191393688373419175
+  ParentId: 808009202993416815
+  ChildIds: 15967022065557020598
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -604,7 +604,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9191393688373419175
+  Id: 15967022065557020598
   Name: "UI Panel"
   Transform {
     Location {
@@ -617,7 +617,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5319309866093205519
+  ParentId: 12560682626184533057
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -653,7 +653,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1833301302411918937
+  Id: 7443628145616746328
   Name: "LocalStatusEffectDisplayClient"
   Transform {
     Location {
@@ -666,7 +666,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15362819445114274588
+  ParentId: 808009202993416815
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIStatusEffects"
@@ -677,13 +677,13 @@ Objects {
     Overrides {
       Name: "cs:Root"
       ObjectReference {
-        SelfId: 15362819445114274588
+        SelfId: 808009202993416815
       }
     }
     Overrides {
       Name: "cs:Panel"
       ObjectReference {
-        SelfId: 9191393688373419175
+        SelfId: 15967022065557020598
       }
     }
     Overrides {
@@ -709,7 +709,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18140035493979906422
+  Id: 1807565729856007469
   Name: "Status Effects Definitions"
   Transform {
     Location {
@@ -722,9 +722,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3202946136614365771
-  ChildIds: 4042260062498603935
-  ChildIds: 388783345485890869
+  ParentId: 18421900067736178117
+  ChildIds: 9807432951213587072
+  ChildIds: 13466481919866803050
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -739,7 +739,7 @@ Objects {
   }
 }
 Objects {
-  Id: 388783345485890869
+  Id: 13466481919866803050
   Name: "ClientContext"
   Transform {
     Location {
@@ -752,15 +752,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18140035493979906422
-  ChildIds: 13885651060197227332
-  ChildIds: 1465536709555459876
-  ChildIds: 5109252050924176065
-  ChildIds: 14498778836163098257
-  ChildIds: 15940961261362330534
-  ChildIds: 4423950474415881218
-  ChildIds: 5853737910244577816
-  ChildIds: 16018582516280022432
+  ParentId: 1807565729856007469
+  ChildIds: 18443483269495372586
+  ChildIds: 9437573627333628742
+  ChildIds: 560457699946640165
+  ChildIds: 1808615048249164182
+  ChildIds: 17589393570579911736
+  ChildIds: 15650227507521172538
+  ChildIds: 12531934546924097243
+  ChildIds: 17934550862322426281
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -774,7 +774,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16018582516280022432
+  Id: 17934550862322426281
   Name: "StatusEffectsDefinition_Electric"
   Transform {
     Location {
@@ -787,7 +787,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -806,7 +806,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5853737910244577816
+  Id: 12531934546924097243
   Name: "StatusEffectsDefinition_Blind"
   Transform {
     Location {
@@ -819,12 +819,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   UnregisteredParameters {
     Overrides {
       Name: "cs:EffectIcon"
       AssetReference {
-        Id: 10955959331911207443
+        Id: 7229736252332333801
       }
     }
     Overrides {
@@ -850,7 +850,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4423950474415881218
+  Id: 15650227507521172538
   Name: "StatusEffectsDefinition_SpeedBoost"
   Transform {
     Location {
@@ -863,7 +863,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -880,7 +880,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15940961261362330534
+  Id: 17589393570579911736
   Name: "StatusEffectsDefinition_Bleed"
   Transform {
     Location {
@@ -893,7 +893,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   UnregisteredParameters {
     Overrides {
       Name: "cs:DPS"
@@ -934,7 +934,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14498778836163098257
+  Id: 1808615048249164182
   Name: "StatusEffectsDefinition_Slow"
   Transform {
     Location {
@@ -947,7 +947,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -964,7 +964,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5109252050924176065
+  Id: 560457699946640165
   Name: "StatusEffectsDefinition_Poison"
   Transform {
     Location {
@@ -977,7 +977,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   UnregisteredParameters {
     Overrides {
       Name: "cs:DPS"
@@ -1012,7 +1012,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1465536709555459876
+  Id: 9437573627333628742
   Name: "StatusEffectsDefinition_Burn"
   Transform {
     Location {
@@ -1025,7 +1025,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIStatusEffects"
@@ -1072,7 +1072,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13885651060197227332
+  Id: 18443483269495372586
   Name: "StatusEffectsDefinition_Stun"
   Transform {
     Location {
@@ -1085,7 +1085,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 388783345485890869
+  ParentId: 13466481919866803050
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIStatusEffects"
@@ -1122,7 +1122,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4042260062498603935
+  Id: 9807432951213587072
   Name: "ServerContext"
   Transform {
     Location {
@@ -1135,15 +1135,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18140035493979906422
-  ChildIds: 11541192997425032273
-  ChildIds: 16108867292070137837
-  ChildIds: 10730203095163565780
-  ChildIds: 15625049143942954705
-  ChildIds: 6127590355833688739
-  ChildIds: 12694298116994829951
-  ChildIds: 11872582013329450630
-  ChildIds: 15530579309059873086
+  ParentId: 1807565729856007469
+  ChildIds: 9619952387738044307
+  ChildIds: 10907014670468414863
+  ChildIds: 6781259411895173578
+  ChildIds: 12182929507793740412
+  ChildIds: 15303861825075478169
+  ChildIds: 423860037497516275
+  ChildIds: 17220712436285750883
+  ChildIds: 2044495306785443508
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1158,7 +1158,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15530579309059873086
+  Id: 2044495306785443508
   Name: "StatusEffectsDefinition_Electric"
   Transform {
     Location {
@@ -1171,7 +1171,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1190,7 +1190,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11872582013329450630
+  Id: 17220712436285750883
   Name: "StatusEffectsDefinition_Blind"
   Transform {
     Location {
@@ -1203,12 +1203,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   UnregisteredParameters {
     Overrides {
       Name: "cs:EffectIcon"
       AssetReference {
-        Id: 10955959331911207443
+        Id: 7229736252332333801
       }
     }
     Overrides {
@@ -1234,7 +1234,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12694298116994829951
+  Id: 423860037497516275
   Name: "StatusEffectsDefinition_SpeedBoost"
   Transform {
     Location {
@@ -1247,7 +1247,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1264,7 +1264,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6127590355833688739
+  Id: 15303861825075478169
   Name: "StatusEffectsDefinition_Bleed"
   Transform {
     Location {
@@ -1277,7 +1277,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   UnregisteredParameters {
     Overrides {
       Name: "cs:DPS"
@@ -1318,7 +1318,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15625049143942954705
+  Id: 12182929507793740412
   Name: "StatusEffectsDefinition_Slow"
   Transform {
     Location {
@@ -1331,7 +1331,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1348,7 +1348,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10730203095163565780
+  Id: 6781259411895173578
   Name: "StatusEffectsDefinition_Poison"
   Transform {
     Location {
@@ -1361,7 +1361,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   UnregisteredParameters {
     Overrides {
       Name: "cs:DPS"
@@ -1396,7 +1396,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16108867292070137837
+  Id: 10907014670468414863
   Name: "StatusEffectsDefinition_Burn"
   Transform {
     Location {
@@ -1409,7 +1409,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIStatusEffects"
@@ -1456,7 +1456,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11541192997425032273
+  Id: 9619952387738044307
   Name: "StatusEffectsDefinition_Stun"
   Transform {
     Location {
@@ -1469,7 +1469,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4042260062498603935
+  ParentId: 9807432951213587072
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIStatusEffects"

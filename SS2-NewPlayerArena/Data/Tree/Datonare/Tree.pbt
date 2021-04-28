@@ -1,7 +1,7 @@
 Name: "Datonare"
-RootId: 13701375997520260708
+RootId: 925551224970841487
 Objects {
-  Id: 10501900357211508208
+  Id: 17581400098099403196
   Name: "Radial Comms"
   Transform {
     Scale {
@@ -10,11 +10,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13701375997520260708
-  ChildIds: 4727192058642246515
-  ChildIds: 10485670115877785080
-  ChildIds: 6986240750482757127
-  ChildIds: 7404178895180279910
+  ParentId: 925551224970841487
+  ChildIds: 14693665265325219813
+  ChildIds: 8093015977749877878
+  ChildIds: 4646537809066659077
+  ChildIds: 11376627783861159096
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -29,7 +29,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7404178895180279910
+  Id: 11376627783861159096
   Name: "Radial Comms Server"
   Transform {
     Location {
@@ -42,12 +42,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10501900357211508208
+  ParentId: 17581400098099403196
   UnregisteredParameters {
     Overrides {
       Name: "cs:PointsOfInterest"
       ObjectReference {
-        SelfId: 10485670115877785080
+        SelfId: 8093015977749877878
       }
     }
     Overrides {
@@ -59,31 +59,31 @@ Objects {
     Overrides {
       Name: "cs:PointWC"
       ObjectReference {
-        SelfId: 13392592636105101133
+        SelfId: 15329386982630193940
       }
     }
     Overrides {
       Name: "cs:PointAS"
       ObjectReference {
-        SelfId: 16321515820500395030
+        SelfId: 6432332872901930689
       }
     }
     Overrides {
       Name: "cs:PointMK"
       ObjectReference {
-        SelfId: 17910728817571265557
+        SelfId: 13060069298058033100
       }
     }
     Overrides {
       Name: "cs:PointOM"
       ObjectReference {
-        SelfId: 16313267587009276285
+        SelfId: 4109731878368785561
       }
     }
     Overrides {
       Name: "cs:PointTG"
       ObjectReference {
-        SelfId: 4559935034785672696
+        SelfId: 13634866095632684462
       }
     }
   }
@@ -103,7 +103,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6986240750482757127
+  Id: 4646537809066659077
   Name: "Point Indicator"
   Transform {
     Location {
@@ -116,7 +116,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10501900357211508208
+  ParentId: 17581400098099403196
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -132,7 +132,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10485670115877785080
+  Id: 8093015977749877878
   Name: "Points of Interest"
   Transform {
     Location {
@@ -145,7 +145,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10501900357211508208
+  ParentId: 17581400098099403196
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -160,7 +160,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4727192058642246515
+  Id: 14693665265325219813
   Name: "ClientContext"
   Transform {
     Location {
@@ -173,9 +173,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10501900357211508208
-  ChildIds: 1252045471737945394
-  ChildIds: 17871388921886971880
+  ParentId: 17581400098099403196
+  ChildIds: 17751821906253577713
+  ChildIds: 4809361075490916169
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -189,7 +189,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17871388921886971880
+  Id: 4809361075490916169
   Name: "Radial Controller Client"
   Transform {
     Location {
@@ -202,7 +202,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4727192058642246515
+  ParentId: 14693665265325219813
   UnregisteredParameters {
     Overrides {
       Name: "cs:OpenRadialKeybind"
@@ -225,7 +225,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1252045471737945394
+  Id: 17751821906253577713
   Name: "RadialMainMenu"
   Transform {
     Location {
@@ -238,9 +238,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4727192058642246515
-  ChildIds: 9614222007564886776
-  ChildIds: 7170039341170893608
+  ParentId: 14693665265325219813
+  ChildIds: 17897291950857397969
+  ChildIds: 567994397713743309
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -273,7 +273,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7170039341170893608
+  Id: 567994397713743309
   Name: "Main"
   Transform {
     Location {
@@ -286,7 +286,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1252045471737945394
+  ParentId: 17751821906253577713
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -328,7 +328,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9614222007564886776
+  Id: 17897291950857397969
   Name: "Radial_MainView"
   Transform {
     Location {
@@ -341,14 +341,14 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1252045471737945394
-  ChildIds: 8729322646067135448
-  ChildIds: 8269325526331056550
+  ParentId: 17751821906253577713
+  ChildIds: 62604167180097333
+  ChildIds: 12485408043177816584
   UnregisteredParameters {
     Overrides {
       Name: "cs:Menu"
       ObjectReference {
-        SelfId: 7170039341170893608
+        SelfId: 567994397713743309
       }
     }
     Overrides {
@@ -360,19 +360,19 @@ Objects {
     Overrides {
       Name: "cs:Segments"
       ObjectReference {
-        SelfId: 8729322646067135448
+        SelfId: 62604167180097333
       }
     }
     Overrides {
       Name: "cs:PartialSegments"
       ObjectReference {
-        SelfId: 8269325526331056550
+        SelfId: 12485408043177816584
       }
     }
     Overrides {
       Name: "cs:DynamicCapturePoints"
       ObjectReference {
-        SelfId: 14570647703378092628
+        SelfId: 16574378757957422449
       }
     }
   }
@@ -392,7 +392,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8269325526331056550
+  Id: 12485408043177816584
   Name: "PartialSegments"
   Transform {
     Location {
@@ -405,7 +405,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9614222007564886776
+  ParentId: 17897291950857397969
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -421,7 +421,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8729322646067135448
+  Id: 62604167180097333
   Name: "Segments"
   Transform {
     Location {
@@ -434,7 +434,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9614222007564886776
+  ParentId: 17897291950857397969
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

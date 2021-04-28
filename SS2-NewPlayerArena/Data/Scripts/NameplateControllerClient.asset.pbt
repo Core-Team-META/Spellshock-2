@@ -1,5 +1,5 @@
 Assets {
-  Id: 14278482860986951316
+  Id: 16521617699612367596
   Name: "NameplateControllerClient"
   PlatformAssetType: 3
   TextAsset {

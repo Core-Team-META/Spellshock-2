@@ -68,7 +68,8 @@ end
 function OnBindingPressed(whichPlayer, binding)
 	local CurrentGameState = ABGS.GetGameState()
 
-	if (binding == "ability_extra_50") and CurrentGameState == ABGS.GAME_STATE_ROUND and SpamPrevent() then --F1
+	if (binding == "ability_extra_50") and SpamPrevent() and not LOCAL_PLAYER.isDead and
+	(CurrentGameState == ABGS.GAME_STATE_ROUND or CurrentGameState == ABGS.GAME_STATE_LOBBY) then --F1
 		--print(">> TUTORIAL MENU")
 		local newState
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then

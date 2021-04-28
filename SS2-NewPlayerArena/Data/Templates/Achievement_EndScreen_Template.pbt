@@ -113,7 +113,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17289448223043935888
+              Id: 48307754774318265
             }
             Color {
               R: 0.610495746
@@ -510,7 +510,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 622433789355555801
+              Id: 1814707273787853473
             }
             Color {
               G: 0.00121854211
@@ -740,7 +740,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 10043949526674053130
+              Id: 2764905514123890102
             }
             Color {
               G: 0.601222575
@@ -811,7 +811,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 1641512795081380093
+              Id: 13707030425558109407
             }
           }
           AnchorLayout {
@@ -1099,7 +1099,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 10043949526674053130
+              Id: 2764905514123890102
             }
             Color {
               G: 0.601222575
@@ -1171,7 +1171,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 1641512795081380093
+              Id: 13707030425558109407
             }
           }
           AnchorLayout {
@@ -1237,7 +1237,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 1641512795081380093
+              Id: 13707030425558109407
             }
           }
           AnchorLayout {
@@ -1467,7 +1467,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 10043949526674053130
+              Id: 2764905514123890102
             }
             Color {
               G: 0.601222575
@@ -1539,7 +1539,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 1641512795081380093
+              Id: 13707030425558109407
             }
           }
           AnchorLayout {
@@ -1891,7 +1891,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 1641512795081380093
+              Id: 13707030425558109407
             }
           }
           AnchorLayout {
@@ -2287,7 +2287,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 7887978635932231235
+              Id: 16881924154795479640
             }
             Color {
               R: 1
@@ -2401,7 +2401,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 13575128885289472533
+              Id: 16806313330175629846
             }
             Color {
               R: 0.00114999944
@@ -2515,7 +2515,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 622433789355555801
+              Id: 1814707273787853473
             }
             Color {
               G: 0.00121854211
@@ -2577,7 +2577,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 622433789355555801
+              Id: 1814707273787853473
             }
             Color {
               R: 0.115010642
@@ -2649,7 +2649,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 1641512795081380093
+              Id: 13707030425558109407
             }
           }
           AnchorLayout {
@@ -3736,7 +3736,7 @@ Assets {
       }
     }
     Assets {
-      Id: 17289448223043935888
+      Id: 48307754774318265
       Name: "UI Gradient Rectangular 001"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -3754,16 +3754,7 @@ Assets {
       }
     }
     Assets {
-      Id: 622433789355555801
-      Name: "BG Flat 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundNoOutline_020"
-      }
-    }
-    Assets {
-      Id: 10043949526674053130
+      Id: 2764905514123890102
       Name: "Frame Outlined 001"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -3772,7 +3763,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1641512795081380093
+      Id: 13707030425558109407
       Name: "Oswald"
       PlatformAssetType: 28
       PrimaryAsset {
@@ -3808,7 +3799,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7887978635932231235
+      Id: 16881924154795479640
       Name: "Fantasy Ability Blue 006"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -3817,7 +3808,7 @@ Assets {
       }
     }
     Assets {
-      Id: 13575128885289472533
+      Id: 16806313330175629846
       Name: "Frame Outlined Thick 001"
       PlatformAssetType: 9
       PrimaryAsset {

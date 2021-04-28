@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17510990711282048484
+  Name: "Icon Gender Female"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_GenderFemale"
+  }
+}
+Assets {
   Id: 17406561005581240947
   Name: "Frame Ring 024 Wedge"
   PlatformAssetType: 9
@@ -35,21 +44,21 @@ Assets {
   }
 }
 Assets {
-  Id: 15511698475834043894
-  Name: "Icon Gender Male"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_GenderMale"
-  }
-}
-Assets {
   Id: 15450196944859968109
   Name: "Crosshair 021"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Crosshair_021"
+  }
+}
+Assets {
+  Id: 15397555520082071853
+  Name: "Center Arrow 008 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_008Wedge"
   }
 }
 Assets {
@@ -68,33 +77,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameSolid4px_015"
-  }
-}
-Assets {
-  Id: 14435918643864210506
-  Name: "Grid Glow Topographical"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_grid_topographical_001_wa"
-  }
-}
-Assets {
-  Id: 14060330023043759337
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 13784467660178889007
-  Name: "Human Gal 1"
-  PlatformAssetType: 17
-  PrimaryAsset {
-    AssetType: "AnimatedMeshAssetRef"
-    AssetId: "npc_human_gal_basic_001_ref"
   }
 }
 Assets {
@@ -143,12 +125,12 @@ Assets {
   }
 }
 Assets {
-  Id: 12804716500201279526
-  Name: "BG Highlighted 001"
-  PlatformAssetType: 9
+  Id: 12816420060555199698
+  Name: "Grid Glow Topographical"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_020"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_grid_topographical_001_wa"
   }
 }
 Assets {
@@ -179,15 +161,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11142210224783054821
-  Name: "Center Arrow 008 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_008Wedge"
-  }
-}
-Assets {
   Id: 10901942278299474248
   Name: "Fantasy Corners 003"
   PlatformAssetType: 9
@@ -197,12 +170,12 @@ Assets {
   }
 }
 Assets {
-  Id: 9933879321394361768
-  Name: "BG Highlighted 015"
+  Id: 10455265711366698821
+  Name: "Icon Gender Male"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_032"
+    AssetId: "Icon_GenderMale"
   }
 }
 Assets {
@@ -233,30 +206,21 @@ Assets {
   }
 }
 Assets {
-  Id: 8539898514552953847
-  Name: "Icon Gender Female"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_GenderFemale"
-  }
-}
-Assets {
-  Id: 8250221790891313171
-  Name: "Fantasy Shape 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Shape_003"
-  }
-}
-Assets {
   Id: 8197503148267063602
   Name: "Fantasy Castle Wall 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_002"
+  }
+}
+Assets {
+  Id: 7760905743578958754
+  Name: "Human Guy 2"
+  PlatformAssetType: 17
+  PrimaryAsset {
+    AssetType: "AnimatedMeshAssetRef"
+    AssetId: "npc_human_guy_basic_002_ref"
   }
 }
 Assets {
@@ -287,24 +251,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5985956015751324126
-  Name: "Human Guy 2"
-  PlatformAssetType: 17
-  PrimaryAsset {
-    AssetType: "AnimatedMeshAssetRef"
-    AssetId: "npc_human_guy_basic_002_ref"
-  }
-}
-Assets {
-  Id: 5760915064523727563
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
   Id: 5483050497813228660
   Name: "BG Highlighted 007"
   PlatformAssetType: 9
@@ -323,15 +269,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5106178074541799398
-  Name: "Cube - Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_001"
-  }
-}
-Assets {
   Id: 4569484101736324280
   Name: "BG Gradient 006"
   PlatformAssetType: 9
@@ -341,12 +278,39 @@ Assets {
   }
 }
 Assets {
+  Id: 3483798833601977176
+  Name: "Fantasy Shape 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Shape_003"
+  }
+}
+Assets {
   Id: 3436198721449977543
   Name: "Fantasy Craft Crystal 009"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_009"
+  }
+}
+Assets {
+  Id: 3179843506183788979
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
+  }
+}
+Assets {
+  Id: 2959039619234878292
+  Name: "Human Gal 1"
+  PlatformAssetType: 17
+  PrimaryAsset {
+    AssetType: "AnimatedMeshAssetRef"
+    AssetId: "npc_human_gal_basic_001_ref"
   }
 }
 Assets {
@@ -377,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2119156170354876210
+  Name: "BG Highlighted 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_032"
+  }
+}
+Assets {
   Id: 1814707273787853473
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -401,6 +374,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_018"
+  }
+}
+Assets {
+  Id: 198353679974341757
+  Name: "Cube - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_001"
   }
 }
 Assets {

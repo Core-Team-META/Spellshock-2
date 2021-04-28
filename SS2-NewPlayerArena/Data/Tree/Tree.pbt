@@ -14,30 +14,30 @@ Objects {
       Z: 1
     }
   }
-  ChildIds: 11064051587082207804
-  ChildIds: 6139923059512821780
-  ChildIds: 13334626079586580612
-  ChildIds: 728687643111351772
+  ChildIds: 413814734876378917
   ChildIds: 7942565228071284537
-  ChildIds: 15519234200537269827
   ChildIds: 12626000991766525324
   ChildIds: 12972668395554498279
   ChildIds: 880106829888079510
   ChildIds: 18005697627958196623
-  ChildIds: 16625053971837530583
-  ChildIds: 12935185397369316502
-  ChildIds: 10661356697076551539
-  ChildIds: 16227534043720893935
-  ChildIds: 6356897330857931981
-  ChildIds: 5874015840417789592
-  ChildIds: 3612684566017260609
-  ChildIds: 783937512602456512
-  ChildIds: 15804942893272727399
-  ChildIds: 7134391544964931455
-  ChildIds: 1672145936829432866
-  ChildIds: 7894618171110748117
-  ChildIds: 18439257393742900714
-  ChildIds: 13701375997520260708
+  ChildIds: 7572032517956595822
+  ChildIds: 14554224046482982059
+  ChildIds: 18118910128564520673
+  ChildIds: 2377475547809045370
+  ChildIds: 15357149140345430934
+  ChildIds: 11446972478227664463
+  ChildIds: 10784299909865591368
+  ChildIds: 11986624471851691882
+  ChildIds: 16694363300888013628
+  ChildIds: 13102736215143988302
+  ChildIds: 3175943422500344162
+  ChildIds: 2970271822782500865
+  ChildIds: 11844393470231477537
+  ChildIds: 4989627459043568843
+  ChildIds: 2018022746730053715
+  ChildIds: 8165810180434056474
+  ChildIds: 7402664568116664363
+  ChildIds: 925551224970841487
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -53,7 +53,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13701375997520260708
+  Id: 925551224970841487
   Name: "Datonare"
   Transform {
     Location {
@@ -82,7 +82,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18439257393742900714
+  Id: 7402664568116664363
   Name: "Front UI"
   Transform {
     Location {
@@ -111,7 +111,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7894618171110748117
+  Id: 8165810180434056474
   Name: "Blake"
   Transform {
     Location {
@@ -140,7 +140,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1672145936829432866
+  Id: 2018022746730053715
   Name: "estlogic"
   Transform {
     Location {
@@ -169,7 +169,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7134391544964931455
+  Id: 4989627459043568843
   Name: "Roland"
   Transform {
     Location {
@@ -198,13 +198,10 @@ Objects {
   }
 }
 Objects {
-  Id: 15804942893272727399
+  Id: 11844393470231477537
   Name: "Bigglebuns"
   Transform {
     Location {
-      X: -52400.1953
-      Y: 4658.32617
-      Z: 5793.34375
     }
     Rotation {
     }
@@ -230,7 +227,7 @@ Objects {
   }
 }
 Objects {
-  Id: 783937512602456512
+  Id: 2970271822782500865
   Name: "Gabe"
   Transform {
     Location {
@@ -259,7 +256,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3612684566017260609
+  Id: 3175943422500344162
   Name: "Brent"
   Transform {
     Location {
@@ -288,7 +285,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5874015840417789592
+  Id: 13102736215143988302
   Name: "Starting VFX"
   Transform {
     Location {
@@ -317,7 +314,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6356897330857931981
+  Id: 16694363300888013628
   Name: "NPC"
   Transform {
     Location {
@@ -349,10 +346,13 @@ Objects {
   }
 }
 Objects {
-  Id: 16227534043720893935
-  Name: "For BEN"
+  Id: 11986624471851691882
+  Name: "Witcher"
   Transform {
     Location {
+      X: -22944.1172
+      Y: -31676.127
+      Z: 6397.41357
     }
     Rotation {
     }
@@ -374,45 +374,11 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "For BEN"
+    FilePartitionName: "Witcher"
   }
 }
 Objects {
-  Id: 10661356697076551539
-  Name: "Julieta_Props"
-  Transform {
-    Location {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Julieta_Props"
-  }
-  InstanceHistory {
-    SelfId: 10661356697076551539
-    SubobjectId: 2005880449096804415
-    InstanceId: 1056700272226791114
-    TemplateId: 3016561015879885400
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 12935185397369316502
+  Id: 10784299909865591368
   Name: "BEN"
   Transform {
     Location {
@@ -441,7 +407,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16625053971837530583
+  Id: 11446972478227664463
   Name: "Kurtis"
   Transform {
     Location {
@@ -467,6 +433,173 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Kurtis"
+  }
+}
+Objects {
+  Id: 15357149140345430934
+  Name: "README"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2907560550017105870
+    }
+  }
+}
+Objects {
+  Id: 2377475547809045370
+  Name: "Fall Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7840478093453456171
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Fall Damage"
+        }
+        Overrides {
+          Name: "cs:LethalSpeed"
+          Float: 4000
+        }
+        Overrides {
+          Name: "cs:MaximumSafeSpeed"
+          Float: 2500
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5929315923558538615
+    }
+  }
+}
+Objects {
+  Id: 18118910128564520673
+  Name: "UI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "UI_1"
+  }
+}
+Objects {
+  Id: 14554224046482982059
+  Name: "Misc"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Misc"
+  }
+}
+Objects {
+  Id: 7572032517956595822
+  Name: "Gameplay"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Gameplay"
   }
 }
 Objects {
@@ -1627,36 +1760,6 @@ Objects {
   }
 }
 Objects {
-  Id: 15519234200537269827
-  Name: "README"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 2907560550017105870
-    }
-  }
-}
-Objects {
   Id: 7942565228071284537
   Name: "Environment_v12"
   Transform {
@@ -1720,115 +1823,7 @@ Objects {
   }
 }
 Objects {
-  Id: 728687643111351772
-  Name: "Fall Damage"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7840478093453456171
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Fall Damage"
-        }
-        Overrides {
-          Name: "cs:LethalSpeed"
-          Float: 4000
-        }
-        Overrides {
-          Name: "cs:MaximumSafeSpeed"
-          Float: 2500
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5929315923558538615
-    }
-  }
-}
-Objects {
-  Id: 13334626079586580612
-  Name: "UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI_1"
-  }
-}
-Objects {
-  Id: 6139923059512821780
-  Name: "Gameplay"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Gameplay"
-  }
-}
-Objects {
-  Id: 11064051587082207804
+  Id: 413814734876378917
   Name: "Storage & Refrences"
   Transform {
     Location {

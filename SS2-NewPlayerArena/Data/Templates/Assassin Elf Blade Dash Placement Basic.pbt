@@ -184,7 +184,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -217,7 +217,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -332,7 +332,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -405,7 +405,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -428,7 +428,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -483,7 +483,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14629909211943041809
+      Id: 11337413471323694429
       Name: "Metal Gold 01"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -528,7 +528,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4247430867898109902
+      Id: 1626097446304398136
       Name: "Stucco Tintable"
       PlatformAssetType: 2
       PrimaryAsset {

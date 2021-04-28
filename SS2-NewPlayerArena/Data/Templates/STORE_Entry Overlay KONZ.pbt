@@ -264,7 +264,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 12804716500201279526
+              Id: 2604353830693238371
             }
             Color {
               R: 0.0193823576
@@ -324,7 +324,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 12804716500201279526
+              Id: 2604353830693238371
             }
             Color {
               R: 0.0193823576
@@ -383,7 +383,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 12804716500201279526
+              Id: 2604353830693238371
             }
             Color {
               R: 0.0193823576
@@ -442,7 +442,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 12804716500201279526
+              Id: 2604353830693238371
             }
             Color {
               R: 0.0193823576
@@ -795,7 +795,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 12804716500201279526
+              Id: 2604353830693238371
             }
             Color {
               R: 0.0599999428
@@ -914,7 +914,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 7809958927931360774
+              Id: 5992778860505362279
             }
             Color {
               R: 0.867439508
@@ -1316,7 +1316,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 15775978992330089425
+              Id: 12119737414116979884
             }
             Color {
               R: 0.651405811
@@ -1851,7 +1851,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 10043949526674053130
+              Id: 2764905514123890102
             }
             Color {
               R: 0.651405811
@@ -2886,7 +2886,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 15775978992330089425
+              Id: 12119737414116979884
             }
             Color {
               A: 0.765000045
@@ -3311,7 +3311,7 @@ Assets {
       }
     }
     Assets {
-      Id: 12804716500201279526
+      Id: 2604353830693238371
       Name: "BG Highlighted 001"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -3347,7 +3347,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7809958927931360774
+      Id: 5992778860505362279
       Name: "BG Flat 016"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -3365,7 +3365,7 @@ Assets {
       }
     }
     Assets {
-      Id: 15775978992330089425
+      Id: 12119737414116979884
       Name: "BG Flat 015"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -3392,7 +3392,7 @@ Assets {
       }
     }
     Assets {
-      Id: 10043949526674053130
+      Id: 2764905514123890102
       Name: "Frame Outlined 001"
       PlatformAssetType: 9
       PrimaryAsset {

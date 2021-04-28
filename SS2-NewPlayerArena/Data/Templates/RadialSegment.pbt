@@ -57,7 +57,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 530269680346551100
+              Id: 13435556322344654088
             }
             Color {
               A: 0.295000017
@@ -330,7 +330,7 @@ Assets {
       }
     }
     Assets {
-      Id: 530269680346551100
+      Id: 13435556322344654088
       Name: "UI Basic Shape Triangle"
       PlatformAssetType: 9
       PrimaryAsset {

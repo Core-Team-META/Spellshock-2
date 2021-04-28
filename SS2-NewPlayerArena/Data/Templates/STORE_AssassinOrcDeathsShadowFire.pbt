@@ -1902,7 +1902,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3512586152265937754
+            Id: 16372496464315477095
           }
           Teams {
           }
@@ -1967,7 +1967,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2032,7 +2032,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2097,7 +2097,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2162,7 +2162,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -4392,7 +4392,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -4642,7 +4642,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -4711,7 +4711,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -5811,7 +5811,7 @@ Assets {
       }
     }
     Assets {
-      Id: 3512586152265937754
+      Id: 16372496464315477095
       Name: "Ring - Beveled Thick"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5829,7 +5829,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7647569689338897125
+      Id: 6641170506571814994
       Name: "Pyramid - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5901,7 +5901,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5919,7 +5919,7 @@ Assets {
       }
     }
     Assets {
-      Id: 15339827692159902109
+      Id: 11236189850874066005
       Name: "Heart - Polished"
       PlatformAssetType: 1
       PrimaryAsset {

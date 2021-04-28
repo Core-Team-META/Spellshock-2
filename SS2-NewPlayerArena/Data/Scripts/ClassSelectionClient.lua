@@ -34,12 +34,11 @@ local RightPanel_AbilityOverviewPanel = RightPanel:GetCustomProperty("AbilityOve
 local RightPanel_GlobalStats = RightPanel:GetCustomProperty("GlobalStats"):WaitForObject()
 local RightPanel_AbilitiesLabel = RightPanel:GetCustomProperty("AbilitiesLabel"):WaitForObject()
 local RightPanel_ClassLevelPanel = RightPanel:GetCustomProperty("ClassLevelPanel"):WaitForObject()
+local RightPanel_CloseButton = RightPanel:GetCustomProperty("CloseButton"):WaitForObject()
 
-local RightPanel_UpgradeButtonPanel =
-	RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeButtonPanel"):WaitForObject()
+local RightPanel_UpgradeButtonPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeButtonPanel"):WaitForObject()
 local RightPanel_UpgradeButton = RightPanel_UpgradeButtonPanel:GetCustomProperty("UpgradeButton"):WaitForObject()
-local RightPanel_AbilityStatsPanel =
-	RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityStatsPanel"):WaitForObject()
+local RightPanel_AbilityStatsPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityStatsPanel"):WaitForObject()
 
 local ConfirmChoiceSpinner = ConfirmChoicePanel:GetCustomProperty("Spinner"):WaitForObject()
 local ConfirmChoiceButton = ConfirmChoicePanel:GetCustomProperty("ConfirmButton"):WaitForObject()
@@ -152,6 +151,10 @@ function OnMenuChanged(oldMenu, newMenu)
 		end
 		isUpgrading = false
 	end
+end
+
+function OnCloseButtonClicked(thisButton)
+	Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 end
 
 function EquipCostumeToAnimatedMesh(AnimMesh, CostumeTemplate, Stance, Animation)
@@ -406,6 +409,7 @@ function OnGlobalStatsClicked(thisButton)
 end
 
 function UpdateClassInfo(thisButton)
+	if not thisButton then return end
 	local dataTable = thisButton.clientUserData.dataTable
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
@@ -443,7 +447,7 @@ function UpdateClassInfo(thisButton)
 		local shardCost = SHARD_COSTS[level].reqXP
 		local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 		local goldCost = SHARD_COSTS[level].reqGold
-	
+
 		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 			UpgradePanel.visibility = Visibility.INHERIT
@@ -471,7 +475,7 @@ function UpdateClassInfo(thisButton)
 	ClassLevel.text = tostring(classLevel)
 
 	local currentXP = META_CP().GetClassXp(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
-	local reqXP = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
+	local reqXP = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, #CONST.ReqXp)]
 	XP_Progress.progress = currentXP / reqXP
 	ClassXP.text = UTIL.FormatInt(currentXP) .. "/" .. UTIL.FormatInt(reqXP)
 
@@ -493,7 +497,7 @@ function UpdateClassInfo(thisButton)
 end
 
 function OnClassClicked(thisButton)
-	if not isAllowed(0.5) or isUpgrading then
+	if not isAllowed(0.2) or isUpgrading then
 		return
 	end
 	--if thisButton ~= CurrentClassButton then
@@ -525,10 +529,11 @@ function OnClassClicked(thisButton)
 	else
 		ConfirmChoicePanel.visibility = Visibility.FORCE_OFF
 	end
-
-	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
-	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility =
-		Visibility.INHERIT
+	if Object.IsValid(CurrentClassButton) then
+		CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
+		CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility =
+			Visibility.INHERIT
+	end
 	UpdateClassInfo(thisButton)
 	--end
 end
@@ -558,7 +563,7 @@ local function UpdateText(parent, newText, extra)
 end
 
 function UpdateAbilityInfo(thisButton)
-	Task.Wait(0.3)
+	Task.Wait(0.1)
 	if not Object.IsValid(LOCAL_PLAYER) then
 		return
 	end
@@ -571,6 +576,11 @@ function UpdateAbilityInfo(thisButton)
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
 	local UpgradeLabel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeLabel"):WaitForObject()
 	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
+	local NotEnoughXP = RightPanel_UpgradeButtonPanel:GetCustomProperty("NotEnoughXP"):WaitForObject()
+	local GoldCostPanel = RightPanel_UpgradeButtonPanel:GetCustomProperty("GoldCostPanel"):WaitForObject()
+
+	GoldCostPanel.visibility = Visibility.INHERIT
+	NotEnoughXP.visibility = Visibility.FORCE_OFF
 
 	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
 	local LevelNextText = LevelInfoPanel:GetCustomProperty("LevelNextText"):WaitForObject()
@@ -626,6 +636,10 @@ function UpdateAbilityInfo(thisButton)
 
 	if currentGold >= goldCost then
 		GoldCost:SetColor(Color.FromStandardHex("FFC200FF"))
+		if currentXP < reqXP then
+			NotEnoughXP.visibility = Visibility.INHERIT
+			GoldCostPanel.visibility = Visibility.FORCE_OFF
+		end
 	else
 		GoldCost:SetColor(Color.FromStandardHex("F81818FF"))
 	end
@@ -786,8 +800,13 @@ function OnUpgradeButtonClicked(thisButton)
 
 	preUpgradeGold = LOCAL_PLAYER:GetResource("GOLD")
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
+
+	while ResourceChangedEventListener and ResourceChangedEventListener.isConnected do
+		Task.Wait()
+	end
+
 	ResourceChangedEventListener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
-	Task.Wait(0.2)
+	Task.Wait()
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 
 	-- Make the animated mesh do an animation
@@ -858,7 +877,7 @@ end
 	if not player.clientUserData.CurrentClass then
 		player.clientUserData.CurrentClass = player:GetResource("CLASS_MAP")
 		if player.clientUserData.CurrentClass == 0 then
-			player.clientUserData.CurrentClass = META_AP().TANK
+			player.clientUserData.CurrentClass = META_AP().WARRIOR
 		end
 	end
 
@@ -1103,6 +1122,7 @@ end
 Events.Connect("Menu Changed", OnMenuChanged)
 --Events.Connect("GameStateChanged", OnGameStateChanged)
 GlobalStatsButton.clickedEvent:Connect(OnGlobalStatsClicked)
+RightPanel_CloseButton.clickedEvent:Connect(OnCloseButtonClicked)
 --Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

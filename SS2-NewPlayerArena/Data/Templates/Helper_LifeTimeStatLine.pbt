@@ -275,7 +275,7 @@ Assets {
           Overrides {
             Name: "cs:Shadow"
             ObjectReference {
-              SelfId: 18387379240439724332
+              SelfId: 11361601834531724312
             }
           }
         }
@@ -356,7 +356,7 @@ Assets {
           Overrides {
             Name: "cs:Shadow"
             ObjectReference {
-              SelfId: 18387379240439724332
+              SelfId: 11361601834531724312
             }
           }
         }

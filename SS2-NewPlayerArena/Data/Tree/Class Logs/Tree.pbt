@@ -1,7 +1,7 @@
 Name: "Class Logs"
-RootId: 13085888925442478091
+RootId: 7723627352085677843
 Objects {
-  Id: 17668145189154711509
+  Id: 6812577965384391214
   Name: "ServerContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13085888925442478091
-  ChildIds: 9429260732457308816
+  ParentId: 7723627352085677843
+  ChildIds: 7907246271460828408
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9429260732457308816
+  Id: 7907246271460828408
   Name: "ClassBalanceLogs_Server"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17668145189154711509
+  ParentId: 6812577965384391214
   UnregisteredParameters {
     Overrides {
       Name: "cs:MetaAbilityProgressionUTIL_API"

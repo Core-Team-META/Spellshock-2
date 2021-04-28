@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17696531540460943644
-  Name: "Fantasy Trophy 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Trophy_003"
-  }
-}
-Assets {
   Id: 17035392173279706359
   Name: "Fantasy Banner 004"
   PlatformAssetType: 9
@@ -212,6 +203,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
+  }
+}
+Assets {
+  Id: 4903553541480386741
+  Name: "Fantasy Trophy 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_003"
   }
 }
 Assets {

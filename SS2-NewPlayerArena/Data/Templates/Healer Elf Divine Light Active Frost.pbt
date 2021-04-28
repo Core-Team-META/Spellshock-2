@@ -260,7 +260,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 1165672060587372127
+            Id: 2590787292447476024
           }
           TeamSettings {
           }
@@ -1118,7 +1118,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1165672060587372127
+      Id: 2590787292447476024
       Name: "Snow Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {

@@ -1,7 +1,7 @@
 Name: "Kurtis"
-RootId: 16625053971837530583
+RootId: 11446972478227664463
 Objects {
-  Id: 10263716687303919574
+  Id: 15921913937285799095
   Name: "META_AFK_Component"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16625053971837530583
+  ParentId: 11446972478227664463
   UnregisteredParameters {
     Overrides {
       Name: "cs:Enabled"
@@ -88,7 +88,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14710332786633172429
+  Id: 7904783452297971716
   Name: "UI Container"
   Transform {
     Location {
@@ -101,8 +101,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16625053971837530583
-  ChildIds: 8589364593371973335
+  ParentId: 11446972478227664463
+  ChildIds: 4522749386921534056
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -138,7 +138,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8589364593371973335
+  Id: 4522749386921534056
   Name: "RadialSegment"
   Transform {
     Scale {
@@ -147,7 +147,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14710332786633172429
+  ParentId: 7904783452297971716
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -180,7 +180,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14541656455381757485
+  Id: 16292537564618666264
   Name: "Kill Feedback UI"
   Transform {
     Location {
@@ -193,9 +193,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16625053971837530583
-  ChildIds: 14105507317021559705
-  ChildIds: 16476105942277245885
+  ParentId: 11446972478227664463
+  ChildIds: 10250284186613240351
+  ChildIds: 16026407902281607827
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -210,7 +210,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16476105942277245885
+  Id: 16026407902281607827
   Name: "ClientContext"
   Transform {
     Location {
@@ -223,9 +223,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14541656455381757485
-  ChildIds: 14935036007355624442
-  ChildIds: 3374047120827989440
+  ParentId: 16292537564618666264
+  ChildIds: 1130093958920747947
+  ChildIds: 17431469248610410506
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -239,7 +239,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3374047120827989440
+  Id: 17431469248610410506
   Name: "UI Container"
   Transform {
     Location {
@@ -252,9 +252,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16476105942277245885
-  ChildIds: 15006532874926711837
-  ChildIds: 8786036690889975196
+  ParentId: 16026407902281607827
+  ChildIds: 6031457416775127243
+  ChildIds: 1876680530673342144
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -287,7 +287,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8786036690889975196
+  Id: 1876680530673342144
   Name: "Kill Spree Panel"
   Transform {
     Location {
@@ -300,12 +300,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3374047120827989440
-  ChildIds: 7845840676955206389
-  ChildIds: 9725599438005143824
-  ChildIds: 3537997247454566755
-  ChildIds: 8786786469687243173
-  ChildIds: 7643925040016103470
+  ParentId: 17431469248610410506
+  ChildIds: 6509010808891291443
+  ChildIds: 14489083737193045202
+  ChildIds: 11650016441347176695
+  ChildIds: 11595032599333044783
+  ChildIds: 10341356578117226998
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -341,7 +341,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7643925040016103470
+  Id: 10341356578117226998
   Name: "Kill Spree"
   Transform {
     Location {
@@ -354,7 +354,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8786036690889975196
+  ParentId: 1876680530673342144
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -401,7 +401,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8786786469687243173
+  Id: 11595032599333044783
   Name: "Shadow"
   Transform {
     Location {
@@ -414,7 +414,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8786036690889975196
+  ParentId: 1876680530673342144
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -465,7 +465,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3537997247454566755
+  Id: 11650016441347176695
   Name: "Shadow"
   Transform {
     Location {
@@ -478,7 +478,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8786036690889975196
+  ParentId: 1876680530673342144
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -529,7 +529,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9725599438005143824
+  Id: 14489083737193045202
   Name: "Shadow"
   Transform {
     Location {
@@ -542,7 +542,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8786036690889975196
+  ParentId: 1876680530673342144
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -593,7 +593,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7845840676955206389
+  Id: 6509010808891291443
   Name: "Shadow"
   Transform {
     Location {
@@ -606,7 +606,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8786036690889975196
+  ParentId: 1876680530673342144
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -657,7 +657,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15006532874926711837
+  Id: 6031457416775127243
   Name: "Skull Panel"
   Transform {
     Location {
@@ -670,10 +670,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3374047120827989440
-  ChildIds: 14788435109298352745
-  ChildIds: 380611265749813396
-  ChildIds: 3163552178957875452
+  ParentId: 17431469248610410506
+  ChildIds: 6742615325082896772
+  ChildIds: 1474857975779464394
+  ChildIds: 7946336118842821800
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -709,7 +709,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3163552178957875452
+  Id: 7946336118842821800
   Name: "Dark Red Outline"
   Transform {
     Location {
@@ -722,7 +722,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15006532874926711837
+  ParentId: 6031457416775127243
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -771,7 +771,7 @@ Objects {
   }
 }
 Objects {
-  Id: 380611265749813396
+  Id: 1474857975779464394
   Name: "Dark Red Outline"
   Transform {
     Location {
@@ -784,7 +784,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15006532874926711837
+  ParentId: 6031457416775127243
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -831,7 +831,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14788435109298352745
+  Id: 6742615325082896772
   Name: "Dark Red Outline"
   Transform {
     Location {
@@ -844,7 +844,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15006532874926711837
+  ParentId: 6031457416775127243
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -892,7 +892,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14935036007355624442
+  Id: 1130093958920747947
   Name: "KillFeedbackClient"
   Transform {
     Location {
@@ -905,18 +905,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16476105942277245885
+  ParentId: 16026407902281607827
   UnregisteredParameters {
     Overrides {
       Name: "cs:SkullPanel"
       ObjectReference {
-        SelfId: 15006532874926711837
+        SelfId: 6031457416775127243
       }
     }
     Overrides {
       Name: "cs:KillSpreePanel"
       ObjectReference {
-        SelfId: 8786036690889975196
+        SelfId: 1876680530673342144
       }
     }
     Overrides {
@@ -940,7 +940,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14105507317021559705
+  Id: 10250284186613240351
   Name: "KillFeedbackServer"
   Transform {
     Location {
@@ -953,7 +953,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14541656455381757485
+  ParentId: 16292537564618666264
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

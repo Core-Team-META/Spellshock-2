@@ -1,7 +1,7 @@
 Name: "Brent"
-RootId: 3612684566017260609
+RootId: 3175943422500344162
 Objects {
-  Id: 13085888925442478091
+  Id: 7723627352085677843
   Name: "Class Logs"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1133890144562814122
+  Id: 4710096140353869676
   Name: "Garbage Cleanup"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59,7 +59,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4646961424574862806
+  Id: 14097266287084369017
   Name: "Tutorial"
   Transform {
     Location {
@@ -75,7 +75,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -91,7 +91,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3457668934632133835
+  Id: 4987441904325432029
   Name: "Progression Mutlipliers"
   Transform {
     Location {
@@ -104,7 +104,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -120,7 +120,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5611420104663390633
+  Id: 7217052675186069452
   Name: "Perk Shop"
   Transform {
     Location {
@@ -133,7 +133,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -149,7 +149,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13143194677747676118
+  Id: 12146404963937762687
   Name: "Mount Manager"
   Transform {
     Location {
@@ -162,7 +162,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -178,7 +178,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12049178633078129119
+  Id: 13561960662722926391
   Name: "Consumable Progression"
   Transform {
     Location {
@@ -191,7 +191,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -207,7 +207,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2948169366293580591
+  Id: 14731701829750393844
   Name: "Class Progress System"
   Transform {
     Location {
@@ -220,7 +220,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -236,7 +236,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15445562359925381868
+  Id: 5650632402835768133
   Name: "PlayerJoinedManager"
   Transform {
     Location {
@@ -249,7 +249,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -265,7 +265,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14181934291677398887
+  Id: 6207261555353812140
   Name: "Misc Objects"
   Transform {
     Location {
@@ -278,7 +278,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -294,7 +294,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12502215343179190632
+  Id: 13295683258629139444
   Name: "Spawn Protect"
   Transform {
     Location {
@@ -307,7 +307,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -323,7 +323,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4287960005776040561
+  Id: 14133830245741828686
   Name: "Game Play Stats"
   Transform {
     Location {
@@ -336,7 +336,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -352,7 +352,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15158778296469342239
+  Id: 786317127004730444
   Name: "Chat Hook Commands"
   Transform {
     Location {
@@ -365,7 +365,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -381,7 +381,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10393850260092772171
+  Id: 3037484024939341884
   Name: "Networked Events Manager"
   Transform {
     Location {
@@ -394,7 +394,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -410,7 +410,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15057716785033630782
+  Id: 11705074836057870736
   Name: "Storage Manager"
   Transform {
     Scale {
@@ -419,7 +419,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -435,7 +435,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3202946136614365771
+  Id: 18421900067736178117
   Name: "Status Effect System"
   Transform {
     Location {
@@ -448,7 +448,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -464,7 +464,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11490187644604034792
+  Id: 2046087843992533383
   Name: "Cosmetics Data"
   Transform {
     Location {
@@ -477,7 +477,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -493,7 +493,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17296953895266496212
+  Id: 5360057208631974129
   Name: "Achievement System"
   Transform {
     Location {
@@ -506,7 +506,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   UnregisteredParameters {
     Overrides {
       Name: "cs:Enabled"
@@ -528,7 +528,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16629351977808918313
+  Id: 2827606302958691100
   Name: "Ability Progression"
   Transform {
     Location {
@@ -541,7 +541,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 3175943422500344162
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

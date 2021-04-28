@@ -294,7 +294,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.00972121768
@@ -1454,7 +1454,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 16020038083592938182
+              Id: 8920303130610469272
             }
             Color {
               R: 0.830000043
@@ -3500,7 +3500,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.00972121768
@@ -3566,7 +3566,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.00972121768
@@ -4242,7 +4242,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.0499999523
@@ -4547,7 +4547,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -4747,7 +4747,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               A: 0.311000019
@@ -6438,7 +6438,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.0086755
@@ -7186,7 +7186,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -8442,7 +8442,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -13012,7 +13012,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.0199999809
@@ -13255,7 +13255,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.904661477
@@ -14103,7 +14103,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.00972121768
@@ -14279,7 +14279,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.00972121768
@@ -14340,7 +14340,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -15543,7 +15543,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -15661,7 +15661,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -15722,7 +15722,7 @@ Assets {
           UseParentWidth: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -15783,7 +15783,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -15844,7 +15844,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.651405811
@@ -16429,7 +16429,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.104166664
@@ -16673,7 +16673,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.200000048
@@ -16914,7 +16914,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.89
@@ -17156,7 +17156,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.34375
@@ -17933,7 +17933,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.34375
@@ -18177,7 +18177,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.882
@@ -18418,7 +18418,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 1
@@ -18660,7 +18660,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.578125
@@ -19640,7 +19640,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14060330023043759337
+      Id: 1814707273787853473
       Name: "BG Flat 001"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -19694,7 +19694,7 @@ Assets {
       }
     }
     Assets {
-      Id: 16020038083592938182
+      Id: 8920303130610469272
       Name: "BG Highlighted 016"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -19781,15 +19781,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Scifi_Corners_001"
-      }
-    }
-    Assets {
-      Id: 1814707273787853473
-      Name: "BG Flat 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundNoOutline_020"
       }
     }
     Assets {

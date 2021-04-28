@@ -4,6 +4,11 @@
 --===========================================================================================
 
 local GarbageCollection = script:GetCustomProperty("GarbageCollection"):WaitForObject()
+local Warrior = script:GetCustomProperty("Warrior")
+local Hunter = script:GetCustomProperty("Hunter")
+local Mage = script:GetCustomProperty("Mage")
+local Assassin = script:GetCustomProperty("Assassin")
+local Healer = script:GetCustomProperty("Healer")
 
 local function META_AP()
     while not _G["Meta.Ability.Progression"] do
@@ -22,15 +27,15 @@ local ABGS = require(script:GetCustomProperty("ABGS"))
 local COSTUME_EQUIPMENT_TEMPLATE = script:GetCustomProperty("Costume_Equipment")
 
 local ClassTemplates = {
-    [META_AP().TANK] = "EC351247C6D7EC9F:Tank",
-    [META_AP().HUNTER] = "EF4AB61158655526:Hunter",
-    [META_AP().MAGE] = "012C2D0B7C71C263:Mage",
-    [META_AP().ASSASSIN] = "F70F7C3FD947F9E6:Assassin",
-    [META_AP().HEALER] = "9725D67279CA86E9:Healer"
+    [META_AP().WARRIOR] = Warrior,
+    [META_AP().HUNTER] = Hunter,
+    [META_AP().MAGE] = Mage,
+    [META_AP().ASSASSIN] = Assassin,
+    [META_AP().HEALER] = Healer
 }
 
 local Class_Stances = {
-    [META_AP().TANK] = "2hand_melee_stance",
+    [META_AP().WARRIOR] = "2hand_melee_stance",
     [META_AP().HUNTER] = "2hand_rifle_aim_shoulder",
     [META_AP().MAGE] = "2hand_staff_ready",
     [META_AP().ASSASSIN] = "unarmed_ready",
@@ -105,7 +110,7 @@ end
 function OnRewardSelected(player)
     local classID = player:GetResource("CLASS_MAP")
     if classID == 0 then
-        classID = META_AP().TANK
+        classID = META_AP().WARRIOR
     end
     UnequipPlayer(player)
     EquipPlayer(player, classID)
@@ -123,7 +128,7 @@ function OnGameStateChanged(oldState, newState)
 
             local classID = player:GetResource("CLASS_MAP")
             if classID == 0 then
-                classID = META_AP().TANK
+                classID = META_AP().WARRIOR
             end
 
             EquipPlayer(player, classID)
@@ -139,19 +144,21 @@ function OnGameStateChanged(oldState, newState)
             -- unequip everything
             UnequipPlayer(player)
 
-            local classID = player:GetResource("CLASS_MAP")
-            if classID == 0 then
-                classID = META_AP().TANK
+            if Object.IsValid(player) then
+                local classID = player:GetResource("CLASS_MAP")
+                if classID == 0 then
+                    classID = META_AP().WARRIOR
+                end
+
+                local newOutfit = World.SpawnAsset(COSTUME_EQUIPMENT_TEMPLATE)
+                local skinId = GetCurrentCosmeticId(player, classID, 8)
+                newOutfit:SetNetworkedCustomProperty("OID", skinId)
+                newOutfit:SetNetworkedCustomProperty("ClassID", classID)
+                newOutfit:Equip(player)
+
+                player:SetVisibility(true)
+                player.animationStance = Class_Stances[classID]
             end
-
-            local newOutfit = World.SpawnAsset(COSTUME_EQUIPMENT_TEMPLATE)
-            local skinId = GetCurrentCosmeticId(player, classID, 8)
-            newOutfit:SetNetworkedCustomProperty("OID", skinId)
-            newOutfit:SetNetworkedCustomProperty("ClassID", classID)
-            newOutfit:Equip(player)
-
-            player:SetVisibility(true)
-            player.animationStance = Class_Stances[classID]
         end
     end
 end
@@ -159,7 +166,7 @@ end
 -- NOTE: Context called from Meta Player Storage Manager
 function OnPlayerJoined(player, classId)
     classId = classId or math.random(5)
-    --player.serverUserData.CurrentClass = META_AP().TANK
+    --player.serverUserData.CurrentClass = META_AP().WARRIOR
     player:SetResource("CLASS_MAP", classId)
     player.animationStance = Class_Stances[classId]
     local currentState = ABGS.GetGameState()
@@ -170,7 +177,7 @@ function OnPlayerJoined(player, classId)
         end
         EquipPlayer(player, classId)
     elseif currentState == ABGS.GAME_STATE_ROUND then
-        --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
+        --local newClass = World.SpawnAsset(ClassTemplates[META_AP().WARRIOR])
         --newClass:Equip(player)
         player:SetVisibility(false)
     elseif

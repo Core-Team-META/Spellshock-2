@@ -62,15 +62,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5106178074541799398
-  Name: "Cube - Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_001"
-  }
-}
-Assets {
   Id: 1218285282438840969
   Name: "\"Legendary Dragons\" Music Construction Kit (Sections) 01"
   PlatformAssetType: 10
@@ -95,6 +86,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioBlueprintAssetRef"
     AssetId: "abp_legendary_dragons_LayersKit_ref"
+  }
+}
+Assets {
+  Id: 198353679974341757
+  Name: "Cube - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_001"
   }
 }
 Assets {

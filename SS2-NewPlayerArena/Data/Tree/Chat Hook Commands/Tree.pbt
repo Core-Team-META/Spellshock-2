@@ -1,7 +1,7 @@
 Name: "Chat Hook Commands"
-RootId: 15158778296469342239
+RootId: 786317127004730444
 Objects {
-  Id: 62691240593059202
+  Id: 13544562050275497671
   Name: "Commands"
   Transform {
     Location {
@@ -14,9 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15158778296469342239
-  ChildIds: 12624318090808764183
-  ChildIds: 5037669453944058864
+  ParentId: 786317127004730444
+  ChildIds: 2875604977931530908
+  ChildIds: 970037840186056275
   UnregisteredParameters {
     Overrides {
       Name: "cs:Enabled"
@@ -44,7 +44,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5037669453944058864
+  Id: 970037840186056275
   Name: "ChatHooks"
   Transform {
     Location {
@@ -57,7 +57,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 62691240593059202
+  ParentId: 13544562050275497671
   UnregisteredParameters {
     Overrides {
       Name: "cs:Commands"
@@ -68,7 +68,7 @@ Objects {
     Overrides {
       Name: "cs:Root"
       ObjectReference {
-        SelfId: 62691240593059202
+        SelfId: 13544562050275497671
       }
     }
   }
@@ -94,7 +94,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12624318090808764183
+  Id: 2875604977931530908
   Name: "ClientContext"
   Transform {
     Location {
@@ -107,8 +107,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 62691240593059202
-  ChildIds: 115638652867527578
+  ParentId: 13544562050275497671
+  ChildIds: 1236711440815564704
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -128,7 +128,7 @@ Objects {
   }
 }
 Objects {
-  Id: 115638652867527578
+  Id: 1236711440815564704
   Name: "Commands2.0"
   Transform {
     Location {
@@ -141,12 +141,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12624318090808764183
+  ParentId: 2875604977931530908
   UnregisteredParameters {
     Overrides {
       Name: "cs:Root"
       ObjectReference {
-        SelfId: 62691240593059202
+        SelfId: 13544562050275497671
       }
     }
   }

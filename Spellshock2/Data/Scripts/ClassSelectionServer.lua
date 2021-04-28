@@ -4,6 +4,11 @@
 --===========================================================================================
 
 local GarbageCollection = script:GetCustomProperty("GarbageCollection"):WaitForObject()
+local Warrior = script:GetCustomProperty("Warrior")
+local Hunter = script:GetCustomProperty("Hunter")
+local Mage = script:GetCustomProperty("Mage")
+local Assassin = script:GetCustomProperty("Assassin")
+local Healer = script:GetCustomProperty("Healer")
 
 local function META_AP()
     while not _G["Meta.Ability.Progression"] do
@@ -22,11 +27,11 @@ local ABGS = require(script:GetCustomProperty("ABGS"))
 local COSTUME_EQUIPMENT_TEMPLATE = script:GetCustomProperty("Costume_Equipment")
 
 local ClassTemplates = {
-    [META_AP().WARRIOR] = "EC351247C6D7EC9F:Warrior",
-    [META_AP().HUNTER] = "EF4AB61158655526:Hunter",
-    [META_AP().MAGE] = "012C2D0B7C71C263:Mage",
-    [META_AP().ASSASSIN] = "F70F7C3FD947F9E6:Assassin",
-    [META_AP().HEALER] = "9725D67279CA86E9:Healer"
+    [META_AP().WARRIOR] = Warrior,
+    [META_AP().HUNTER] = Hunter,
+    [META_AP().MAGE] = Mage,
+    [META_AP().ASSASSIN] = Assassin,
+    [META_AP().HEALER] = Healer
 }
 
 local Class_Stances = {

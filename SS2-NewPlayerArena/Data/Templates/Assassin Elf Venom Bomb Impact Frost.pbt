@@ -232,7 +232,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 1119929589678254417
+            Id: 11206819003363878022
           }
           TeamSettings {
           }
@@ -462,7 +462,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1119929589678254417
+      Id: 11206819003363878022
       Name: "Glass Explosion Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {

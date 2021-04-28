@@ -1,5 +1,5 @@
 Assets {
-  Id: 5049470299132475441
+  Id: 1115867339901359224
   Name: "Helper_Nameplate"
   PlatformAssetType: 5
   TemplateAsset {
@@ -9,17 +9,13 @@ Assets {
         Id: 822988238011075349
         Name: "Helper_Nameplate"
         Transform {
-          Location {
-          }
-          Rotation {
-          }
           Scale {
             X: 1
             Y: 1
             Z: 1
           }
         }
-        ParentId: 12650245047976557178
+        ParentId: 4781671109827199097
         ChildIds: 666315683374029523
         ChildIds: 18018371900924901114
         ChildIds: 6811297547396028375
@@ -68,7 +64,7 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:forceoff"
@@ -126,6 +122,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -181,6 +179,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -236,6 +236,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -291,6 +293,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -326,6 +330,7 @@ Assets {
         Text {
           Text: "HELLO WORLD"
           FontAsset {
+            Id: 16670222695632479546
           }
           Color {
             R: 1
@@ -346,7 +351,7 @@ Assets {
         Name: "NameText"
         Transform {
           Location {
-            Z: 20
+            Z: 45
           }
           Rotation {
           }
@@ -371,6 +376,7 @@ Assets {
         Text {
           Text: "HELLO WORLD"
           FontAsset {
+            Id: 16670222695632479546
           }
           Color {
             R: 1
@@ -403,6 +409,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "fxma_opaque_emissive"
+      }
+    }
+    Assets {
+      Id: 16670222695632479546
+      Name: "Play Bold"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "PlayBold_ref"
       }
     }
     PrimaryAssetId {

@@ -284,7 +284,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 17032158412963574692
+            Id: 784760632288801666
           }
           TeamSettings {
           }
@@ -410,7 +410,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 17032158412963574692
+            Id: 784760632288801666
           }
           TeamSettings {
           }
@@ -536,7 +536,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 17032158412963574692
+            Id: 784760632288801666
           }
           TeamSettings {
           }
@@ -662,7 +662,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 17032158412963574692
+            Id: 784760632288801666
           }
           TeamSettings {
           }
@@ -788,7 +788,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 17032158412963574692
+            Id: 784760632288801666
           }
           TeamSettings {
           }
@@ -914,7 +914,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 17032158412963574692
+            Id: 784760632288801666
           }
           TeamSettings {
           }
@@ -1035,7 +1035,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1088,7 +1088,7 @@ Assets {
       }
     }
     Assets {
-      Id: 17032158412963574692
+      Id: 784760632288801666
       Name: "Electrical Arc Volume"
       PlatformAssetType: 8
       PrimaryAsset {
@@ -1106,7 +1106,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {

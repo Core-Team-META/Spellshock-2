@@ -187,7 +187,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 6100814957947705535
+            Id: 18322083209027112941
           }
           TeamSettings {
           }
@@ -252,7 +252,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -330,7 +330,7 @@ Assets {
       }
     }
     Assets {
-      Id: 6100814957947705535
+      Id: 18322083209027112941
       Name: "Plasma Charge Up Hold VFX"
       PlatformAssetType: 8
       PrimaryAsset {
@@ -339,7 +339,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {

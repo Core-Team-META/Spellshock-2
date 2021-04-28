@@ -34,6 +34,7 @@ local function UpdateKillStreak(attackData)
     local largestKillStreak = source:GetResource(CONST.COMBAT_STATS.LARGEST_KILL_STREAK)
     currentKillStreak = currentKillStreak + 1
     source:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, currentKillStreak)
+    currentKillStreak = currentKillStreak <= source.kills and currentKillStreak or source.kills
     if currentKillStreak >= largestKillStreak then
         source:SetResource(CONST.COMBAT_STATS.LARGEST_KILL_STREAK, currentKillStreak)
     end
@@ -56,7 +57,9 @@ local function UpdateCombatAmmount(attackData)
         classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
     else
-        if attackData.tags.Type == "HealthPotion" then return end
+        if attackData.tags.Type == "HealthPotion" then
+            return
+        end
         amount = amount * -1
         local afterHeal = target.hitPoints + amount
         if afterHeal > target.maxHitPoints then
@@ -119,11 +122,23 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 end
 
 function GoingToTakeDamage(attackData)
-    local object = attackData.object
-    if object.serverUserData.SpawnProtect and attackData.damage.amount > 0 then
+    local target = attackData.object
+    local source = attackData.source
+
+    if target.serverUserData.SpawnProtect and attackData.damage.amount > 0 then
         attackData.damage.amount = 0
     elseif ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then
         attackData.damage.amount = 0
+    end
+    -- Assassin Shurikin Life Steal
+    if attackData.tags and attackData.tags.id and attackData.tags.id ~= "StatusEffect" and attackData.tags.id ~= "Assassin_R" then
+        if
+            target.serverUserData.shuriken and target.serverUserData.shuriken[source.id] and
+                target.serverUserData.shuriken[source.id] > time()
+         then
+            local lifestealHeal = CoreMath.Round(attackData.damage.amount / 2)
+            source.hitPoints = CoreMath.Clamp(source.hitPoints + lifestealHeal, source.maxHitPoints)
+        end
     end
 end
 

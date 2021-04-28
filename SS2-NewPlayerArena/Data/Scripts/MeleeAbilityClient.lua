@@ -212,6 +212,9 @@ function OnExecute(ability)
 
 	if IS_CHARGE_ATTACK and chargeAmount > MAX_CHARGE then
 		currentSwipe = World.SpawnAsset(ChargeReleaseEffect, {position = pos, rotation = rot})
+		currentSwipe:AttachToPlayer(EQUIPMENT.owner, "root")
+		currentSwipe:SetWorldPosition(pos)
+		currentSwipe:SetWorldRotation(rot)
 	else
 		currentSwipe = World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot, scale = Vector3.New(scale)})
 	end

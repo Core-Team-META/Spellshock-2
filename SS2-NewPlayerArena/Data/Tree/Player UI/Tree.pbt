@@ -1,7 +1,7 @@
 Name: "Player UI"
-RootId: 1202107626836939879
+RootId: 10113068544749473898
 Objects {
-  Id: 4017997456599387055
+  Id: 17708705111202797068
   Name: "DeadPlayerIndicator"
   Transform {
     Scale {
@@ -10,7 +10,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1202107626836939879
+  ParentId: 10113068544749473898
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -56,7 +56,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14000329110031235423
+  Id: 15759767502638403771
   Name: "Kill Feed"
   Transform {
     Location {
@@ -69,9 +69,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1202107626836939879
-  ChildIds: 14997044921869455195
-  ChildIds: 9629930665190024697
+  ParentId: 10113068544749473898
+  ChildIds: 13956455563386228718
+  ChildIds: 9618297030841224326
   UnregisteredParameters {
     Overrides {
       Name: "cs:ShowJoinAndLeave"
@@ -138,7 +138,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9629930665190024697
+  Id: 9618297030841224326
   Name: "ClientContext"
   Transform {
     Location {
@@ -151,8 +151,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14000329110031235423
-  ChildIds: 7502293449954955911
+  ParentId: 15759767502638403771
+  ChildIds: 17402097310151527806
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -168,7 +168,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7502293449954955911
+  Id: 17402097310151527806
   Name: "meta_cc_ActivityFeedControllerClient"
   Transform {
     Location {
@@ -181,13 +181,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9629930665190024697
-  ChildIds: 4178886808888992170
+  ParentId: 9618297030841224326
+  ChildIds: 4955466300168860661
   UnregisteredParameters {
     Overrides {
       Name: "cs:ActivityFeedPanel"
       ObjectReference {
-        SelfId: 2506200861640494431
+        SelfId: 7765298757497452091
       }
     }
     Overrides {
@@ -223,13 +223,13 @@ Objects {
     Overrides {
       Name: "cs:KillFeedSettings"
       ObjectReference {
-        SelfId: 4178886808888992170
+        SelfId: 4955466300168860661
       }
     }
     Overrides {
       Name: "cs:ClassData"
       ObjectReference {
-        SelfId: 14151859424388630810
+        SelfId: 10556274225325759828
       }
     }
     Overrides {
@@ -255,7 +255,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4178886808888992170
+  Id: 4955466300168860661
   Name: "Kill Feed Settings"
   Transform {
     Location {
@@ -268,8 +268,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7502293449954955911
-  ChildIds: 16166118706044272613
+  ParentId: 17402097310151527806
+  ChildIds: 5347737500421825714
   UnregisteredParameters {
     Overrides {
       Name: "cs:NumLines"
@@ -450,7 +450,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16166118706044272613
+  Id: 5347737500421825714
   Name: "Activity Feed Container"
   Transform {
     Location {
@@ -463,8 +463,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4178886808888992170
-  ChildIds: 2506200861640494431
+  ParentId: 4955466300168860661
+  ChildIds: 7765298757497452091
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -499,7 +499,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2506200861640494431
+  Id: 7765298757497452091
   Name: "META Activity Feed Panel"
   Transform {
     Location {
@@ -512,7 +512,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16166118706044272613
+  ParentId: 5347737500421825714
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -550,7 +550,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14997044921869455195
+  Id: 13956455563386228718
   Name: "KillFeedControllerServer"
   Transform {
     Location {
@@ -563,7 +563,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14000329110031235423
+  ParentId: 15759767502638403771
   UnregisteredParameters {
   }
   Collidable_v2 {

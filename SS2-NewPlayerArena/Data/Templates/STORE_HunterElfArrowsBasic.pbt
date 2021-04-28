@@ -296,7 +296,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -503,7 +503,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -710,7 +710,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -917,7 +917,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1124,7 +1124,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1331,7 +1331,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1538,7 +1538,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1745,7 +1745,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1952,7 +1952,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2159,7 +2159,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2436,7 +2436,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2643,7 +2643,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2850,7 +2850,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3057,7 +3057,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3264,7 +3264,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3471,7 +3471,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3672,7 +3672,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 2724245702032559252
+            Id: 2541893805997923436
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3766,7 +3766,7 @@ Assets {
       }
     }
     Assets {
-      Id: 2724245702032559252
+      Id: 2541893805997923436
       Name: "Pyramid - 4-Sided"
       PlatformAssetType: 1
       PrimaryAsset {

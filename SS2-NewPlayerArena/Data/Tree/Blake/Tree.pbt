@@ -1,7 +1,7 @@
 Name: "Blake"
-RootId: 7894618171110748117
+RootId: 8165810180434056474
 Objects {
-  Id: 12160355809059312028
+  Id: 12145678419559850517
   Name: "Chat"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7894618171110748117
+  ParentId: 8165810180434056474
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

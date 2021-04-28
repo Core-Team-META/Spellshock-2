@@ -417,7 +417,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             Color {
               R: 0.0700000525
@@ -718,7 +718,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14060330023043759337
+      Id: 1814707273787853473
       Name: "BG Flat 001"
       PlatformAssetType: 9
       PrimaryAsset {

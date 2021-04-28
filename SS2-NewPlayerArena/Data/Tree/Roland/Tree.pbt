@@ -1,7 +1,7 @@
 Name: "Roland"
-RootId: 7134391544964931455
+RootId: 4989627459043568843
 Objects {
-  Id: 12860113762782093770
+  Id: 10556898058357370154
   Name: "FPSMeter"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7134391544964931455
+  ParentId: 4989627459043568843
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

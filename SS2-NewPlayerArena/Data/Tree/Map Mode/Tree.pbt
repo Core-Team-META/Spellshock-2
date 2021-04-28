@@ -1,7 +1,7 @@
 Name: "Map Mode"
-RootId: 14360836664874170818
+RootId: 8458420444491767833
 Objects {
-  Id: 6148191999456879294
+  Id: 8985288463483172900
   Name: "Client Context"
   Transform {
     Location {
@@ -14,15 +14,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14360836664874170818
-  ChildIds: 5704180686201635491
-  ChildIds: 11283773306815625991
-  ChildIds: 12096524729153628677
-  ChildIds: 4779429178120955225
-  ChildIds: 14534063837544988851
-  ChildIds: 10082428241932679056
-  ChildIds: 9924191688709884587
-  ChildIds: 18250062291252346559
+  ParentId: 8458420444491767833
+  ChildIds: 1028786127448654899
+  ChildIds: 16305270223937670699
+  ChildIds: 2805695311512151236
+  ChildIds: 7148228873527186880
+  ChildIds: 3379982876524540476
+  ChildIds: 1530334152808818169
+  ChildIds: 16182714660986480854
+  ChildIds: 17333288985945345012
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -38,7 +38,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18250062291252346559
+  Id: 17333288985945345012
   Name: "BaseLocations"
   Transform {
     Location {
@@ -51,9 +51,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
-  ChildIds: 4623992937141191935
-  ChildIds: 1530259350057247115
+  ParentId: 8985288463483172900
+  ChildIds: 11221393004945477181
+  ChildIds: 10032595324750948971
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -68,7 +68,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1530259350057247115
+  Id: 10032595324750948971
   Name: "Elf"
   Transform {
     Location {
@@ -84,7 +84,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18250062291252346559
+  ParentId: 17333288985945345012
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -101,7 +101,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4623992937141191935
+  Id: 11221393004945477181
   Name: "Orc"
   Transform {
     Location {
@@ -117,7 +117,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18250062291252346559
+  ParentId: 17333288985945345012
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -134,7 +134,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9924191688709884587
+  Id: 16182714660986480854
   Name: "Audio"
   Transform {
     Location {
@@ -147,10 +147,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
-  ChildIds: 16876453173366929200
-  ChildIds: 17192106309769407465
-  ChildIds: 3791886473208191826
+  ParentId: 8985288463483172900
+  ChildIds: 2611789103032183026
+  ChildIds: 14074910269223819509
+  ChildIds: 14015782420188820238
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -165,7 +165,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3791886473208191826
+  Id: 14015782420188820238
   Name: "Sci-fi Wind Whoosh Flyby 01 SFX"
   Transform {
     Location {
@@ -178,7 +178,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9924191688709884587
+  ParentId: 16182714660986480854
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -198,7 +198,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17192106309769407465
+  Id: 14074910269223819509
   Name: "\"The Dark Spiritwatcher\" Music Construction Kit (Layers) 01"
   Transform {
     Location {
@@ -211,7 +211,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9924191688709884587
+  ParentId: 16182714660986480854
   UnregisteredParameters {
     Overrides {
       Name: "bp:Tonal Instruments Volume"
@@ -246,7 +246,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16876453173366929200
+  Id: 2611789103032183026
   Name: "Score Tick Tally Single 01 SFX"
   Transform {
     Location {
@@ -259,7 +259,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9924191688709884587
+  ParentId: 16182714660986480854
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -279,7 +279,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10082428241932679056
+  Id: 1530334152808818169
   Name: "Map Camera"
   Transform {
     Location {
@@ -288,8 +288,8 @@ Objects {
       Z: 36532.3086
     }
     Rotation {
-      Pitch: -53.2585144
-      Yaw: -36.7458191
+      Pitch: -53.2585258
+      Yaw: -36.7458267
       Roll: 4.28167505e-06
     }
     Scale {
@@ -298,7 +298,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
+  ParentId: 8985288463483172900
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -329,7 +329,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14534063837544988851
+  Id: 3379982876524540476
   Name: "Map Master Container"
   Transform {
     Location {
@@ -342,9 +342,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
-  ChildIds: 17480208498618862632
-  ChildIds: 16319242293770468097
+  ParentId: 8985288463483172900
+  ChildIds: 15040574348860974801
+  ChildIds: 5213830409256959219
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -377,7 +377,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16319242293770468097
+  Id: 5213830409256959219
   Name: "MapContainer"
   Transform {
     Location {
@@ -393,7 +393,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14534063837544988851
+  ParentId: 3379982876524540476
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -416,7 +416,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17480208498618862632
+  Id: 15040574348860974801
   Name: "CapturePointsContainer"
   Transform {
     Location {
@@ -432,7 +432,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14534063837544988851
+  ParentId: 3379982876524540476
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -455,7 +455,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4779429178120955225
+  Id: 7148228873527186880
   Name: "MapCapturePointsDisplayClient"
   Transform {
     Location {
@@ -468,12 +468,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
+  ParentId: 8985288463483172900
   UnregisteredParameters {
     Overrides {
       Name: "cs:Panel"
       ObjectReference {
-        SelfId: 17480208498618862632
+        SelfId: 15040574348860974801
       }
     }
     Overrides {
@@ -517,13 +517,13 @@ Objects {
     Overrides {
       Name: "cs:RespawnTimerPanel"
       ObjectReference {
-        SelfId: 16688439179931159396
+        SelfId: 11166488834315503302
       }
     }
     Overrides {
       Name: "cs:TimerTickSFX"
       ObjectReference {
-        SelfId: 16876453173366929200
+        SelfId: 2611789103032183026
       }
     }
     Overrides {
@@ -535,13 +535,13 @@ Objects {
     Overrides {
       Name: "cs:DynamicCapturePoints"
       ObjectReference {
-        SelfId: 14570647703378092628
+        SelfId: 16574378757957422449
       }
     }
     Overrides {
       Name: "cs:BaseLocations"
       ObjectReference {
-        SelfId: 18250062291252346559
+        SelfId: 17333288985945345012
       }
     }
   }
@@ -561,7 +561,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12096524729153628677
+  Id: 2805695311512151236
   Name: "MapPlayerDisplayClient"
   Transform {
     Location {
@@ -577,7 +577,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
+  ParentId: 8985288463483172900
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -594,13 +594,13 @@ Objects {
     Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
-        SelfId: 14360836664874170818
+        SelfId: 8458420444491767833
       }
     }
     Overrides {
       Name: "cs:MapContainer"
       ObjectReference {
-        SelfId: 16319242293770468097
+        SelfId: 5213830409256959219
       }
     }
   }
@@ -620,7 +620,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11283773306815625991
+  Id: 16305270223937670699
   Name: "RespawnModeClient"
   Transform {
     Location {
@@ -633,7 +633,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
+  ParentId: 8985288463483172900
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -644,13 +644,13 @@ Objects {
     Overrides {
       Name: "cs:Camera"
       ObjectReference {
-        SelfId: 10082428241932679056
+        SelfId: 1530334152808818169
       }
     }
     Overrides {
       Name: "cs:RespawnMusic"
       ObjectReference {
-        SelfId: 17192106309769407465
+        SelfId: 14074910269223819509
       }
     }
     Overrides {
@@ -676,7 +676,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5704180686201635491
+  Id: 1028786127448654899
   Name: "MapModeClient"
   Transform {
     Location {
@@ -694,7 +694,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6148191999456879294
+  ParentId: 8985288463483172900
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -705,13 +705,13 @@ Objects {
     Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
-        SelfId: 14360836664874170818
+        SelfId: 8458420444491767833
       }
     }
     Overrides {
       Name: "cs:Camera"
       ObjectReference {
-        SelfId: 10082428241932679056
+        SelfId: 1530334152808818169
       }
     }
     Overrides {
@@ -721,7 +721,7 @@ Objects {
     Overrides {
       Name: "cs:MapOpenSFX"
       ObjectReference {
-        SelfId: 3791886473208191826
+        SelfId: 14015782420188820238
       }
     }
     Overrides {

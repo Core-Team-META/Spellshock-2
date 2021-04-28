@@ -109,7 +109,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 6594027019490984840
+              Id: 4853784479175644327
             }
             Color {
               G: 0.480000019
@@ -329,7 +329,7 @@ Assets {
       }
     }
     Assets {
-      Id: 6594027019490984840
+      Id: 4853784479175644327
       Name: "Center Circle 001"
       PlatformAssetType: 9
       PrimaryAsset {

@@ -117,7 +117,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -249,7 +249,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -381,7 +381,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -503,7 +503,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -637,7 +637,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -808,7 +808,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -905,7 +905,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -1047,7 +1047,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -1189,7 +1189,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -1605,7 +1605,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 8089726053725741651
+            Id: 7147607578013694397
           }
           Teams {
           }
@@ -2003,7 +2003,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 13437820019952597126
+            Id: 12371872750459640945
           }
           Teams {
           }
@@ -2149,7 +2149,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7516257627012008757
+            Id: 2615820326670724915
           }
           Teams {
           }
@@ -2279,7 +2279,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 13437820019952597126
+            Id: 12371872750459640945
           }
           Teams {
           }
@@ -2475,7 +2475,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -2507,7 +2507,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1562276358413043561
+            Id: 6139386554215852665
           }
           Teams {
           }
@@ -2550,7 +2550,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -2582,7 +2582,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1562276358413043561
+            Id: 6139386554215852665
           }
           Teams {
           }
@@ -3687,7 +3687,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 9451276671655092339
+            Id: 9889561244489589632
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3747,7 +3747,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 9587142875035991904
+            Id: 11892494746123028781
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -3950,7 +3950,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 13437820019952597126
+            Id: 12371872750459640945
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -4074,7 +4074,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 9451276671655092339
+            Id: 9889561244489589632
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -4533,7 +4533,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -4675,7 +4675,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -5901,7 +5901,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -7952,7 +7952,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -8075,7 +8075,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -8340,7 +8340,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 4438523867532045845
+            Id: 20822462296563132
           }
           Teams {
           }
@@ -8377,7 +8377,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -8500,7 +8500,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 11337413471323694429
             }
           }
           Overrides {
@@ -8729,7 +8729,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14629909211943041809
+      Id: 11337413471323694429
       Name: "Metal Gold 01"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -8756,7 +8756,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4247430867898109902
+      Id: 1626097446304398136
       Name: "Stucco Tintable"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -8774,7 +8774,7 @@ Assets {
       }
     }
     Assets {
-      Id: 8089726053725741651
+      Id: 7147607578013694397
       Name: "Sphere - Half Thin"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8792,7 +8792,7 @@ Assets {
       }
     }
     Assets {
-      Id: 13437820019952597126
+      Id: 12371872750459640945
       Name: "Pipe"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8801,7 +8801,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7516257627012008757
+      Id: 2615820326670724915
       Name: "Pipe - Half"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8819,7 +8819,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1562276358413043561
+      Id: 6139386554215852665
       Name: "Fantasy Shield Strap 01"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8864,7 +8864,7 @@ Assets {
       }
     }
     Assets {
-      Id: 9451276671655092339
+      Id: 9889561244489589632
       Name: "Cone - Truncated Concave"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8882,7 +8882,7 @@ Assets {
       }
     }
     Assets {
-      Id: 9587142875035991904
+      Id: 11892494746123028781
       Name: "Cylinder - Chamfered Polished"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -9080,7 +9080,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4438523867532045845
+      Id: 20822462296563132
       Name: "Fantasy Shield 01"
       PlatformAssetType: 1
       PrimaryAsset {

@@ -36,7 +36,7 @@ local localPlayer = Game.GetLocalPlayer()
 
 
 local playerClassXP = {
-	CP_API.GetClassLevel(localPlayer, CP_API.TANK),
+	CP_API.GetClassLevel(localPlayer, CP_API.WARRIOR),
 	CP_API.GetClassLevel(localPlayer, CP_API.MAGE),
 	CP_API.GetClassLevel(localPlayer, CP_API.HUNTER),
 	CP_API.GetClassLevel(localPlayer, CP_API.HEALER),

@@ -1,4 +1,13 @@
 Assets {
+  Id: 18347049815900412195
+  Name: "Fantasy Ability Purple 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_008"
+  }
+}
+Assets {
   Id: 18132479792113096322
   Name: "Fantasy Ability Purple 032"
   PlatformAssetType: 9
@@ -14,6 +23,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Purple_011"
+  }
+}
+Assets {
+  Id: 17753357011527774418
+  Name: "Fantasy Ability Green 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Green_004"
   }
 }
 Assets {
@@ -251,24 +269,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8194221724979934971
-  Name: "Fantasy Ability Green 017"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Green_017"
-  }
-}
-Assets {
-  Id: 8151890660996388781
-  Name: "Fantasy Ability Green 042"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Green_042"
-  }
-}
-Assets {
   Id: 8134115028302896138
   Name: "Icon Clock"
   PlatformAssetType: 9
@@ -302,15 +302,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Blue_041"
-  }
-}
-Assets {
-  Id: 6375726263607251280
-  Name: "Fantasy Ability Green 043"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Green_043"
   }
 }
 Assets {

@@ -165,7 +165,7 @@ local classIcons = {}
 local skillIcons = {}
 
 local ClassIDs = Enum{
-	"TANK",
+	"WARRIOR",
 	"MAGE",
 	"HUNTER",
 	"HEALER",
@@ -190,7 +190,7 @@ for _, class in ipairs(propClassData:GetChildren()) do
 end
 
 --[[ local playerClassLevels = {
-	API.GetClassLevel(LOCAL_PLAYER, API.TANK),
+	API.GetClassLevel(LOCAL_PLAYER, API.WARRIOR),
 	API.GetClassLevel(LOCAL_PLAYER, API.MAGE),
 	API.GetClassLevel(LOCAL_PLAYER, API.HUNTER),
 	API.GetClassLevel(LOCAL_PLAYER, API.HEALER),

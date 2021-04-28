@@ -772,7 +772,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 1165672060587372127
+            Id: 2590787292447476024
           }
           TeamSettings {
           }
@@ -849,7 +849,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 4438523867532045845
+            Id: 20822462296563132
           }
           Teams {
           }
@@ -1563,7 +1563,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1165672060587372127
+      Id: 2590787292447476024
       Name: "Snow Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {
@@ -1572,7 +1572,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4438523867532045845
+      Id: 20822462296563132
       Name: "Fantasy Shield 01"
       PlatformAssetType: 1
       PrimaryAsset {

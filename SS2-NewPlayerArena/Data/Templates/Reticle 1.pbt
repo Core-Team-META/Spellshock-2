@@ -7,7 +7,7 @@ Assets {
       RootId: 12536579366909273378
       Objects {
         Id: 12536579366909273378
-        Name: "Recticle 1"
+        Name: "Reticle 1"
         Transform {
           Scale {
             X: 1
@@ -125,8 +125,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 50
-          Height: 50
+          Width: 30
+          Height: 30
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -134,7 +134,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 8274321332368694435
+              Id: 3647298551988930213
             }
             Color {
               R: 1
@@ -161,12 +161,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8274321332368694435
-      Name: "Frame Ring 007"
+      Id: 3647298551988930213
+      Name: "Frame Line 004"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameRing_007"
+        AssetId: "FrameLine_004"
       }
     }
     PrimaryAssetId {

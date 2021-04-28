@@ -1,7 +1,7 @@
 Name: "Skills"
-RootId: 16629351977808918313
+RootId: 2827606302958691100
 Objects {
-  Id: 11452141803278496636
+  Id: 14867669876171547858
   Name: "System"
   Transform {
     Location {
@@ -14,10 +14,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16629351977808918313
-  ChildIds: 9767354080694964109
-  ChildIds: 6739354859151800629
-  ChildIds: 1753034225089732829
+  ParentId: 2827606302958691100
+  ChildIds: 17226010788012338509
+  ChildIds: 17227528278491390314
+  ChildIds: 11365058383566034341
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -32,7 +32,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1753034225089732829
+  Id: 11365058383566034341
   Name: "MetaAbilityProgression_Spawner"
   Transform {
     Location {
@@ -45,7 +45,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11452141803278496636
+  ParentId: 14867669876171547858
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -62,7 +62,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6739354859151800629
+  Id: 17227528278491390314
   Name: "ClientContext"
   Transform {
     Location {
@@ -75,8 +75,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11452141803278496636
-  ChildIds: 9759415146145953269
+  ParentId: 14867669876171547858
+  ChildIds: 17594941021054749235
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -90,7 +90,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9759415146145953269
+  Id: 17594941021054749235
   Name: "MetaAbilityProgression_ClientController"
   Transform {
     Location {
@@ -103,7 +103,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6739354859151800629
+  ParentId: 17227528278491390314
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -120,7 +120,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9767354080694964109
+  Id: 17226010788012338509
   Name: "ServerContext"
   Transform {
     Location {
@@ -133,9 +133,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11452141803278496636
-  ChildIds: 721227566397514987
-  ChildIds: 2530536913188181770
+  ParentId: 14867669876171547858
+  ChildIds: 17978692071338933775
+  ChildIds: 8989945450952877497
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -150,7 +150,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2530536913188181770
+  Id: 8989945450952877497
   Name: "MetaAbilityProgression_Adaptor"
   Transform {
     Location {
@@ -163,7 +163,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9767354080694964109
+  ParentId: 17226010788012338509
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -180,7 +180,7 @@ Objects {
   }
 }
 Objects {
-  Id: 721227566397514987
+  Id: 17978692071338933775
   Name: "MetaAbilityProgression_ServerController"
   Transform {
     Location {
@@ -193,12 +193,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9767354080694964109
+  ParentId: 17226010788012338509
   UnregisteredParameters {
     Overrides {
       Name: "cs:Adaptor"
       ObjectReference {
-        SelfId: 2530536913188181770
+        SelfId: 8989945450952877497
       }
     }
   }

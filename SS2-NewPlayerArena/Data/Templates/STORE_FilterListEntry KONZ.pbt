@@ -2001,7 +2001,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 12804716500201279526
+              Id: 2604353830693238371
             }
             Color {
               R: 1
@@ -2075,7 +2075,7 @@ Assets {
             DisabledColor {
             }
             Brush {
-              Id: 2704989702499929423
+              Id: 5223287246289902870
             }
             IsButtonEnabled: true
             Font {
@@ -2219,7 +2219,7 @@ Assets {
       }
     }
     Assets {
-      Id: 12804716500201279526
+      Id: 2604353830693238371
       Name: "BG Highlighted 001"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -2228,7 +2228,7 @@ Assets {
       }
     }
     Assets {
-      Id: 2704989702499929423
+      Id: 5223287246289902870
       Name: "Frame Outline Thin 001"
       PlatformAssetType: 9
       PrimaryAsset {

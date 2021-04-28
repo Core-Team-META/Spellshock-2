@@ -107,15 +107,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14868655637861176575
-  Name: "Ring - Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_torus_003"
-  }
-}
-Assets {
   Id: 14834300160033285312
   Name: "Long Banner Manticore"
   PlatformAssetType: 1
@@ -134,21 +125,21 @@ Assets {
   }
 }
 Assets {
-  Id: 14629909211943041809
-  Name: "Metal Gold 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_gold_001"
-  }
-}
-Assets {
   Id: 14287349269321119691
   Name: "Ring"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_004"
+  }
+}
+Assets {
+  Id: 14125111047322222726
+  Name: "Ring - Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_003"
   }
 }
 Assets {
@@ -206,15 +197,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12806717230968640779
-  Name: "Pipe - Half Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_half-pipe_002"
-  }
-}
-Assets {
   Id: 12610149741243116648
   Name: "Urban Pipe Wrap 01"
   PlatformAssetType: 1
@@ -224,30 +206,12 @@ Assets {
   }
 }
 Assets {
-  Id: 12395428038630206210
-  Name: "Thorn - Wide"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_tooth_001"
-  }
-}
-Assets {
   Id: 12377676071953128633
   Name: "Pipe - Thick"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_004"
-  }
-}
-Assets {
-  Id: 12324597429549854992
-  Name: "Teardrop - Truncated"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_truncated_teardrop_001"
   }
 }
 Assets {
@@ -332,6 +296,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9176145884981181688
+  Name: "Pipe - Half Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half-pipe_002"
+  }
+}
+Assets {
   Id: 8619830679695120720
   Name: "Prism - 6-Sided"
   PlatformAssetType: 1
@@ -404,30 +377,21 @@ Assets {
   }
 }
 Assets {
-  Id: 7363477334452929865
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
-  Id: 7185380311906960862
-  Name: "Rock 03"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_003"
-  }
-}
-Assets {
   Id: 7147607578013694397
   Name: "Sphere - Half Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_002"
+  }
+}
+Assets {
+  Id: 6981536508008379085
+  Name: "Rock 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_003"
   }
 }
 Assets {
@@ -458,6 +422,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6139386554215852665
+  Name: "Fantasy Shield Strap 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_strap_001"
+  }
+}
+Assets {
   Id: 6010285296167592853
   Name: "Decal Military Symbols 01"
   PlatformAssetType: 14
@@ -473,15 +446,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_quarter_pipe_wedge_002"
-  }
-}
-Assets {
-  Id: 5836430349218932838
-  Name: "Pipe - Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_003"
   }
 }
 Assets {
@@ -521,12 +485,12 @@ Assets {
   }
 }
 Assets {
-  Id: 4438523867532045845
-  Name: "Fantasy Shield 01"
+  Id: 4529571859172462821
+  Name: "Thorn - Wide"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_weap_fan_shield_001"
+    AssetId: "sm_tooth_001"
   }
 }
 Assets {
@@ -539,21 +503,21 @@ Assets {
   }
 }
 Assets {
-  Id: 4247430867898109902
-  Name: "Stucco Tintable"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_stucco_tint_001_uv"
-  }
-}
-Assets {
   Id: 3937103910117390938
   Name: "Bottle 05"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fantasy_bottle_005"
+  }
+}
+Assets {
+  Id: 3702365963781758101
+  Name: "Teardrop - Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_truncated_teardrop_001"
   }
 }
 Assets {
@@ -584,12 +548,30 @@ Assets {
   }
 }
 Assets {
+  Id: 3179843506183788979
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
+  }
+}
+Assets {
   Id: 3090596827184957478
   Name: "Rope"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_rope_001"
+  }
+}
+Assets {
+  Id: 2954037056948186721
+  Name: "Pipe - Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_003"
   }
 }
 Assets {
@@ -611,12 +593,12 @@ Assets {
   }
 }
 Assets {
-  Id: 1562276358413043561
-  Name: "Fantasy Shield Strap 01"
-  PlatformAssetType: 1
+  Id: 1626097446304398136
+  Name: "Stucco Tintable"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_weap_fan_shield_strap_001"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_stucco_tint_001_uv"
   }
 }
 Assets {
@@ -635,5 +617,14 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_guard_mace_001"
+  }
+}
+Assets {
+  Id: 20822462296563132
+  Name: "Fantasy Shield 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_001"
   }
 }

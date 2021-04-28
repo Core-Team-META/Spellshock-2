@@ -1,7 +1,7 @@
 Name: "Consumable Progression"
-RootId: 12049178633078129119
+RootId: 13561960662722926391
 Objects {
-  Id: 4054527219883452004
+  Id: 6958038798415398643
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12049178633078129119
-  ChildIds: 6942622945518142130
+  ParentId: 13561960662722926391
+  ChildIds: 9164679718581907093
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -29,7 +29,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6942622945518142130
+  Id: 9164679718581907093
   Name: "ConsumableProgression_Client"
   Transform {
     Location {
@@ -42,7 +42,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4054527219883452004
+  ParentId: 6958038798415398643
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59,7 +59,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14798374780867381676
+  Id: 970273106771160553
   Name: "ServerContext"
   Transform {
     Location {
@@ -72,8 +72,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12049178633078129119
-  ChildIds: 10094054520663354760
+  ParentId: 13561960662722926391
+  ChildIds: 5193331286758985739
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -88,7 +88,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10094054520663354760
+  Id: 5193331286758985739
   Name: "ConsumableProgression_Server"
   Transform {
     Location {
@@ -101,12 +101,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14798374780867381676
+  ParentId: 970273106771160553
   UnregisteredParameters {
     Overrides {
       Name: "cs:MountLevels"
       ObjectReference {
-        SelfId: 17424699769896010276
+        SelfId: 11105033228809926041
       }
     }
   }

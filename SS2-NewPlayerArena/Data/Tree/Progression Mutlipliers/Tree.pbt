@@ -1,7 +1,7 @@
 Name: "Progression Mutlipliers"
-RootId: 3457668934632133835
+RootId: 4987441904325432029
 Objects {
-  Id: 6194484735456252769
+  Id: 6768265937003958035
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,9 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3457668934632133835
-  ChildIds: 3503256766343789882
-  ChildIds: 9661589470263851086
+  ParentId: 4987441904325432029
+  ChildIds: 10578501206739511775
+  ChildIds: 7709169787207386703
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9661589470263851086
+  Id: 7709169787207386703
   Name: "MultiplierTest_Client"
   Transform {
     Location {
@@ -43,24 +43,24 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6194484735456252769
+  ParentId: 6768265937003958035
   UnregisteredParameters {
     Overrides {
       Name: "cs:VIP_MULTIPLIER"
       ObjectReference {
-        SelfId: 1027512486822066385
+        SelfId: 3583553968524532726
       }
     }
     Overrides {
       Name: "cs:SERVER_MULTIPLIER"
       ObjectReference {
-        SelfId: 3694148340311371207
+        SelfId: 6913982334286668434
       }
     }
     Overrides {
       Name: "cs:EVENT_BONUS"
       ObjectReference {
-        SelfId: 6521262727734405367
+        SelfId: 824381793281046610
       }
     }
     Overrides {
@@ -72,13 +72,13 @@ Objects {
     Overrides {
       Name: "cs:METARewards_Networked"
       ObjectReference {
-        SelfId: 9019563002044163780
+        SelfId: 13745907363622928462
       }
     }
     Overrides {
       Name: "cs:Perks"
       ObjectReference {
-        SelfId: 19076367533069996
+        SelfId: 7701299495670009643
       }
     }
   }
@@ -98,7 +98,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3503256766343789882
+  Id: 10578501206739511775
   Name: "UI Container"
   Transform {
     Location {
@@ -111,8 +111,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6194484735456252769
-  ChildIds: 17256405008983985634
+  ParentId: 6768265937003958035
+  ChildIds: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -148,7 +148,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17256405008983985634
+  Id: 11708617996465055852
   Name: "UI Panel"
   Transform {
     Location {
@@ -161,14 +161,14 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3503256766343789882
-  ChildIds: 18284278170443954128
-  ChildIds: 10911569176986945843
-  ChildIds: 1027512486822066385
-  ChildIds: 16567183483782832409
-  ChildIds: 3694148340311371207
-  ChildIds: 5648370382365656513
-  ChildIds: 6521262727734405367
+  ParentId: 10578501206739511775
+  ChildIds: 225785778696619360
+  ChildIds: 6658816311232559493
+  ChildIds: 3583553968524532726
+  ChildIds: 15841205580229731839
+  ChildIds: 6913982334286668434
+  ChildIds: 16318074298618754634
+  ChildIds: 824381793281046610
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -205,7 +205,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6521262727734405367
+  Id: 824381793281046610
   Name: "EVENT_BONUS"
   Transform {
     Location {
@@ -218,7 +218,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17256405008983985634
+  ParentId: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -273,7 +273,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5648370382365656513
+  Id: 16318074298618754634
   Name: "EVENT BONUS"
   Transform {
     Location {
@@ -286,7 +286,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17256405008983985634
+  ParentId: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -341,7 +341,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3694148340311371207
+  Id: 6913982334286668434
   Name: "SERVER_MULTIPLIER"
   Transform {
     Location {
@@ -354,7 +354,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17256405008983985634
+  ParentId: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -409,7 +409,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16567183483782832409
+  Id: 15841205580229731839
   Name: "SERVER"
   Transform {
     Location {
@@ -422,7 +422,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17256405008983985634
+  ParentId: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -477,7 +477,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1027512486822066385
+  Id: 3583553968524532726
   Name: "VIP_MULTIPLIER"
   Transform {
     Location {
@@ -490,7 +490,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17256405008983985634
+  ParentId: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -544,7 +544,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10911569176986945843
+  Id: 6658816311232559493
   Name: "VIP"
   Transform {
     Location {
@@ -557,7 +557,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17256405008983985634
+  ParentId: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -611,7 +611,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18284278170443954128
+  Id: 225785778696619360
   Name: "UI Image"
   Transform {
     Location {
@@ -624,7 +624,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17256405008983985634
+  ParentId: 11708617996465055852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -668,7 +668,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15069903221819661843
+  Id: 9516190873777748389
   Name: "ServerContext"
   Transform {
     Location {
@@ -681,8 +681,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3457668934632133835
-  ChildIds: 6667025593545593057
+  ParentId: 4987441904325432029
+  ChildIds: 11861273632200922364
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -697,7 +697,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6667025593545593057
+  Id: 11861273632200922364
   Name: "ProgressionMutliplier_Server"
   Transform {
     Location {
@@ -710,12 +710,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15069903221819661843
+  ParentId: 9516190873777748389
   UnregisteredParameters {
     Overrides {
       Name: "cs:METARewards_Networked"
       ObjectReference {
-        SelfId: 9019563002044163780
+        SelfId: 13745907363622928462
       }
     }
   }

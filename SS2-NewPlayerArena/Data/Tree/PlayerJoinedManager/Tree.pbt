@@ -1,7 +1,7 @@
 Name: "PlayerJoinedManager"
-RootId: 15445562359925381868
+RootId: 5650632402835768133
 Objects {
-  Id: 16618427041158957779
+  Id: 5423190735148972400
   Name: "ServerContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15445562359925381868
-  ChildIds: 5568881676092580047
+  ParentId: 5650632402835768133
+  ChildIds: 7274886394027970062
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5568881676092580047
+  Id: 7274886394027970062
   Name: "PlayerJoined_Manager_Server"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16618427041158957779
+  ParentId: 5423190735148972400
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIBasicGameState"
@@ -68,7 +68,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17996631238810723272
+  Id: 2482813456077865366
   Name: "ClientContext"
   Transform {
     Location {
@@ -81,8 +81,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15445562359925381868
-  ChildIds: 7025218017486486053
+  ParentId: 5650632402835768133
+  ChildIds: 15883018832021777776
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -96,7 +96,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7025218017486486053
+  Id: 15883018832021777776
   Name: "PlayerJoined_Manager_Client"
   Transform {
     Location {
@@ -109,7 +109,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17996631238810723272
+  ParentId: 2482813456077865366
   UnregisteredParameters {
     Overrides {
       Name: "cs:APIBasicGameState"

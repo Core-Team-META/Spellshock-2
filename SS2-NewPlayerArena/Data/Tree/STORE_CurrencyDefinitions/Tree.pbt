@@ -1,7 +1,7 @@
 Name: "STORE_CurrencyDefinitions"
-RootId: 9660937491283183047
+RootId: 4466979322143189777
 Objects {
-  Id: 90279139116526447
+  Id: 5314113337970731552
   Name: "Tokens"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9660937491283183047
+  ParentId: 4466979322143189777
   UnregisteredParameters {
     Overrides {
       Name: "cs:CurrencyName"

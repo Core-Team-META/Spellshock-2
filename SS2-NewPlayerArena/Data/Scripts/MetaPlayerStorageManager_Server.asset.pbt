@@ -18,19 +18,19 @@ Assets {
       Overrides {
         Name: "cs:MetaAbilityProgression_Adaptor"
         ObjectReference {
-          SelfId: 2530536913188181770
+          SelfId: 8989945450952877497
         }
       }
       Overrides {
         Name: "cs:MetaAbilityProgression_ServerController"
         ObjectReference {
-          SelfId: 721227566397514987
+          SelfId: 17978692071338933775
         }
       }
       Overrides {
         Name: "cs:MetaCostume_ServerController"
         ObjectReference {
-          SelfId: 1497945562687454520
+          SelfId: 7248136423628571583
         }
       }
       Overrides {
@@ -48,7 +48,7 @@ Assets {
       Overrides {
         Name: "cs:META_DailyShop_Server"
         ObjectReference {
-          SelfId: 13450014505785450251
+          SelfId: 11907494513726658283
         }
       }
     }

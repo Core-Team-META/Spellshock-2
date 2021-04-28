@@ -1,7 +1,7 @@
 Name: "Front UI"
-RootId: 18439257393742900714
+RootId: 7402664568116664363
 Objects {
-  Id: 4351061755930196403
+  Id: 7632902851864343976
   Name: "Loading Screen"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18439257393742900714
+  ParentId: 7402664568116664363
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1898078422538986234
+  Id: 17404666479396011427
   Name: "Message Banner"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18439257393742900714
+  ParentId: 7402664568116664363
   UnregisteredParameters {
   }
   Collidable_v2 {

@@ -1,7 +1,7 @@
 Name: "Misc Objects"
-RootId: 14181934291677398887
+RootId: 6207261555353812140
 Objects {
-  Id: 5186187592674502771
+  Id: 8309113533545230830
   Name: "NPC Triggers"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14181934291677398887
-  ChildIds: 16765011581879931807
+  ParentId: 6207261555353812140
+  ChildIds: 10817780455360149142
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16765011581879931807
+  Id: 10817780455360149142
   Name: "ClientContext"
   Transform {
     Location {
@@ -46,11 +46,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5186187592674502771
-  ChildIds: 8179034407157657116
-  ChildIds: 11170131055330862764
-  ChildIds: 7697366252771648917
-  ChildIds: 1344518710125391134
+  ParentId: 8309113533545230830
+  ChildIds: 138809615502095689
+  ChildIds: 10291574296598176270
+  ChildIds: 14368413916702411919
+  ChildIds: 12168918437376588406
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -64,7 +64,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1344518710125391134
+  Id: 12168918437376588406
   Name: "ELF_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
@@ -81,7 +81,7 @@ Objects {
       Z: 4.60918236
     }
   }
-  ParentId: 16765011581879931807
+  ParentId: 10817780455360149142
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -104,7 +104,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7697366252771648917
+  Id: 14368413916702411919
   Name: "ELF_PERK_SHOP_TRIGGER"
   Transform {
     Location {
@@ -121,7 +121,7 @@ Objects {
       Z: 3.26704121
     }
   }
-  ParentId: 16765011581879931807
+  ParentId: 10817780455360149142
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -146,7 +146,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11170131055330862764
+  Id: 10291574296598176270
   Name: "ORC_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
@@ -162,7 +162,7 @@ Objects {
       Z: 4.60918236
     }
   }
-  ParentId: 16765011581879931807
+  ParentId: 10817780455360149142
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -185,7 +185,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8179034407157657116
+  Id: 138809615502095689
   Name: "ORC_PERK_SHOP_TRIGGER"
   Transform {
     Location {
@@ -201,7 +201,7 @@ Objects {
       Z: 3.26704121
     }
   }
-  ParentId: 16765011581879931807
+  ParentId: 10817780455360149142
   UnregisteredParameters {
   }
   Collidable_v2 {

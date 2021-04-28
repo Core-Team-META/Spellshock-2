@@ -19,7 +19,7 @@ Assets {
       Overrides {
         Name: "cs:StartingVFX"
         ObjectReference {
-          SelfId: 5874015840417789592
+          SelfId: 13102736215143988302
         }
       }
     }

@@ -1,7 +1,7 @@
 Name: "Mount Manager"
-RootId: 13143194677747676118
+RootId: 12146404963937762687
 Objects {
-  Id: 17424699769896010276
+  Id: 11105033228809926041
   Name: "Mount Levels"
   Transform {
     Location {
@@ -14,17 +14,17 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13143194677747676118
-  ChildIds: 16976669824693433572
-  ChildIds: 16638255195955293314
-  ChildIds: 10245659407554228148
-  ChildIds: 6101004619410367977
-  ChildIds: 15212611683052497331
-  ChildIds: 4271167669003534650
-  ChildIds: 9215402769644143910
-  ChildIds: 13184572075201831758
-  ChildIds: 2174714351500395253
-  ChildIds: 2609416207844223435
+  ParentId: 12146404963937762687
+  ChildIds: 11825402674680137393
+  ChildIds: 10123162396797782446
+  ChildIds: 13485595245730455331
+  ChildIds: 2072705044685468058
+  ChildIds: 5778910747102975849
+  ChildIds: 10505087714449163207
+  ChildIds: 13587540951463717719
+  ChildIds: 2099052007542702274
+  ChildIds: 2407866160960248724
+  ChildIds: 12662488347679841356
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -39,7 +39,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2609416207844223435
+  Id: 12662488347679841356
   Name: "Mount Level 10"
   Transform {
     Location {
@@ -52,7 +52,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -124,7 +124,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2174714351500395253
+  Id: 2407866160960248724
   Name: "Mount Level 9"
   Transform {
     Location {
@@ -137,7 +137,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -209,7 +209,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13184572075201831758
+  Id: 2099052007542702274
   Name: "Mount Level 8"
   Transform {
     Location {
@@ -222,7 +222,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -294,7 +294,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9215402769644143910
+  Id: 13587540951463717719
   Name: "Mount Level 7"
   Transform {
     Location {
@@ -307,7 +307,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -379,7 +379,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4271167669003534650
+  Id: 10505087714449163207
   Name: "Mount Level 6"
   Transform {
     Location {
@@ -392,7 +392,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -464,7 +464,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15212611683052497331
+  Id: 5778910747102975849
   Name: "Mount Level 5"
   Transform {
     Location {
@@ -477,7 +477,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -549,7 +549,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6101004619410367977
+  Id: 2072705044685468058
   Name: "Mount Level 4"
   Transform {
     Location {
@@ -562,7 +562,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -634,7 +634,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10245659407554228148
+  Id: 13485595245730455331
   Name: "Mount Level 3"
   Transform {
     Location {
@@ -647,7 +647,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -719,7 +719,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16638255195955293314
+  Id: 10123162396797782446
   Name: "Mount Level 2"
   Transform {
     Location {
@@ -732,7 +732,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -804,7 +804,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16976669824693433572
+  Id: 11825402674680137393
   Name: "Mount Level 1"
   Transform {
     Location {
@@ -817,7 +817,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17424699769896010276
+  ParentId: 11105033228809926041
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -889,7 +889,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5405321737155082974
+  Id: 14132875970833174213
   Name: "ClientContext"
   Transform {
     Location {
@@ -902,8 +902,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13143194677747676118
-  ChildIds: 274762826458352469
+  ParentId: 12146404963937762687
+  ChildIds: 10026853482041454068
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -917,7 +917,7 @@ Objects {
   }
 }
 Objects {
-  Id: 274762826458352469
+  Id: 10026853482041454068
   Name: "MountManager_Client"
   Transform {
     Location {
@@ -930,12 +930,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5405321737155082974
+  ParentId: 14132875970833174213
   UnregisteredParameters {
     Overrides {
       Name: "cs:MountLevels"
       ObjectReference {
-        SelfId: 17424699769896010276
+        SelfId: 11105033228809926041
       }
     }
   }
@@ -955,7 +955,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7181858312778661679
+  Id: 407255590878162159
   Name: "ServerContext"
   Transform {
     Location {
@@ -968,8 +968,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13143194677747676118
-  ChildIds: 5659926504011352444
+  ParentId: 12146404963937762687
+  ChildIds: 3298401174486519792
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -984,7 +984,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5659926504011352444
+  Id: 3298401174486519792
   Name: "MountManager_Server"
   Transform {
     Location {
@@ -997,18 +997,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7181858312778661679
+  ParentId: 407255590878162159
   UnregisteredParameters {
     Overrides {
       Name: "cs:MountLevels"
       ObjectReference {
-        SelfId: 17424699769896010276
+        SelfId: 11105033228809926041
       }
     }
     Overrides {
       Name: "cs:ConsumableProgression_Server"
       ObjectReference {
-        SelfId: 10094054520663354760
+        SelfId: 5193331286758985739
       }
     }
   }

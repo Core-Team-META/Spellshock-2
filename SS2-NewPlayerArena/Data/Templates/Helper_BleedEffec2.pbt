@@ -103,7 +103,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            Z: 179.999985
+            Z: 146.970566
           }
           Rotation {
             Yaw: 89.9999847
@@ -159,7 +159,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 1.5297997
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -167,23 +167,23 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"
@@ -251,7 +251,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 0.756317675
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -259,23 +259,23 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"
@@ -343,7 +343,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 2.32995343
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -351,23 +351,23 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"
@@ -435,7 +435,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 0.88967663
+            Float: 1.56376135
           }
           Overrides {
             Name: "bp:Angle Min"
@@ -443,23 +443,23 @@ Assets {
           }
           Overrides {
             Name: "bp:Angle Max"
-            Float: 180
+            Float: 104.298492
           }
           Overrides {
             Name: "bp:Velocity Min"
-            Float: 0.0244809166
+            Float: 0.436798811
           }
           Overrides {
             Name: "bp:Velocity Max"
-            Float: 0.547317803
+            Float: 0.548414648
           }
           Overrides {
             Name: "bp:Life"
-            Float: 1.12739778
+            Float: 0.915641
           }
           Overrides {
             Name: "bp:Density"
-            Float: 0.147619054
+            Float: 0.623951495
           }
           Overrides {
             Name: "bp:color"

@@ -260,7 +260,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -372,7 +372,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -445,7 +445,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -518,7 +518,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -591,7 +591,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -664,7 +664,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -737,7 +737,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -810,7 +810,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -883,7 +883,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -956,7 +956,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7185380311906960862
+            Id: 6981536508008379085
           }
           Teams {
           }
@@ -988,7 +988,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7185380311906960862
+      Id: 6981536508008379085
       Name: "Rock 03"
       PlatformAssetType: 1
       PrimaryAsset {

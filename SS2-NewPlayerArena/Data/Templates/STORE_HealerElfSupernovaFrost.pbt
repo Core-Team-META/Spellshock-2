@@ -283,7 +283,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 4438523867532045845
+            Id: 20822462296563132
           }
           Teams {
           }
@@ -955,7 +955,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4438523867532045845
+      Id: 20822462296563132
       Name: "Fantasy Shield 01"
       PlatformAssetType: 1
       PrimaryAsset {

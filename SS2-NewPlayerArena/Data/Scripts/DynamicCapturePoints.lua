@@ -2,7 +2,7 @@
 -- Date: 04/02/2021
 -- Version 0.0.1
 --===========================================================================================
-
+if true then return end
 local ABCP = require(script:GetCustomProperty("ABCP"))
 local RequiredPlayers = script:GetCustomProperty("RequiredPlayers")
 local SmallMapScore = script:GetCustomProperty("SmallMapScore")
@@ -68,4 +68,4 @@ function OnRoundStart()
     Events.Broadcast("Teleport")
 end
 
---Game.roundStartEvent:Connect(OnRoundStart)
+Game.roundStartEvent:Connect(OnRoundStart)

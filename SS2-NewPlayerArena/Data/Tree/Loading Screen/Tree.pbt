@@ -1,7 +1,7 @@
 Name: "Loading Screen"
-RootId: 4351061755930196403
+RootId: 7632902851864343976
 Objects {
-  Id: 6190427721399209780
+  Id: 17420706665188594148
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4351061755930196403
-  ChildIds: 8909625047588018725
+  ParentId: 7632902851864343976
+  ChildIds: 9297240201615885737
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -29,7 +29,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8909625047588018725
+  Id: 9297240201615885737
   Name: "Load Screen"
   Transform {
     Location {
@@ -46,9 +46,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6190427721399209780
-  ChildIds: 7908503854706131672
-  ChildIds: 5750044622214638845
+  ParentId: 17420706665188594148
+  ChildIds: 5689836664652254024
+  ChildIds: 13815172234514525036
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -81,7 +81,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5750044622214638845
+  Id: 13815172234514525036
   Name: "Black screen"
   Transform {
     Location {
@@ -94,7 +94,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8909625047588018725
+  ParentId: 9297240201615885737
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -140,7 +140,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7908503854706131672
+  Id: 5689836664652254024
   Name: "LoadScreenClient"
   Transform {
     Location {
@@ -157,12 +157,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8909625047588018725
+  ParentId: 9297240201615885737
   UnregisteredParameters {
     Overrides {
       Name: "cs:BlackScreen"
       ObjectReference {
-        SelfId: 5750044622214638845
+        SelfId: 13815172234514525036
       }
     }
     Overrides {

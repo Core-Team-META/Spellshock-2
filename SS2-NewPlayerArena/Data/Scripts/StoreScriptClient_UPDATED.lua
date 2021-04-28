@@ -304,7 +304,7 @@ local function META_VFX()
 	return _G["Meta.Ability.Progression"]["VFX"]
 end
 
-function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Orc_Rare_Outfit
+function ID_Converter(id, returnString, hierarchyName) -- Example input: Warrior_Orc_Rare_Outfit
 	local infoTable = StringSplit(id, "_")
 
 	if
@@ -336,7 +336,7 @@ function CheckIfLocked(class, requiredLvl, id)
 	local selectedClass = 0
 
 	if class == "Warrior" then
-		selectedClass = CP_API.TANK
+		selectedClass = CP_API.WARRIOR
 	elseif class == "Hunter" then
 		selectedClass = CP_API.HUNTER
 	elseif class == "Mage" then
@@ -1718,7 +1718,7 @@ function SpawnCollapsibleFilterButton(displayName, section, position, defList, c
 
 		if displayName == "CLASS" then
 			if data.name == "Warrior" then
-				classID_TO_filterButton[CONST.CLASS.TANK] = propButton
+				classID_TO_filterButton[CONST.CLASS.WARRIOR] = propButton
 			else
 				classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
 			end
@@ -1771,7 +1771,7 @@ function SpawnFilterButtonRow(holder, defList, clickFunction, color)
 		}
 
 		if data.name == "Warrior" then
-			classID_TO_filterButton[CONST.CLASS.TANK] = propButton
+			classID_TO_filterButton[CONST.CLASS.WARRIOR] = propButton
 		else
 			classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
 		end
@@ -2011,7 +2011,7 @@ function FilterStoreItems()
 	CurrentStoreElements = {}
 	local filterFunctions = {}
 
-	-- Add tag filter | Tank, Hunter, Mage, Assassin, Healer
+	-- Add tag filter | Warrior, Hunter, Mage, Assassin, Healer
 	if currentClass.tag then
 		--print("Adding class filter")
 		table.insert(

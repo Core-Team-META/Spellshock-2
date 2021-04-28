@@ -152,7 +152,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 10258515349694145501
+              Id: 16532880832873788683
             }
             Color {
               R: 0.0437350273
@@ -274,7 +274,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 11074002944006108218
+              Id: 8583752597932582461
             }
             Color {
               R: 1
@@ -886,7 +886,7 @@ Assets {
       }
     }
     Assets {
-      Id: 10258515349694145501
+      Id: 16532880832873788683
       Name: "BG Flat 002"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -904,7 +904,7 @@ Assets {
       }
     }
     Assets {
-      Id: 11074002944006108218
+      Id: 8583752597932582461
       Name: "Fantasy Ability Red 020"
       PlatformAssetType: 9
       PrimaryAsset {

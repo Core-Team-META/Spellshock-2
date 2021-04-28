@@ -1,7 +1,7 @@
 Name: "Chat"
-RootId: 12160355809059312028
+RootId: 12145678419559850517
 Objects {
-  Id: 14201883003497899253
+  Id: 54680808344403015
   Name: "ServerContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12160355809059312028
-  ChildIds: 12244432712077886637
+  ParentId: 12145678419559850517
+  ChildIds: 7483422875041250625
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12244432712077886637
+  Id: 7483422875041250625
   Name: "ChatControllerServer"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14201883003497899253
+  ParentId: 54680808344403015
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -60,7 +60,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15708152169372598200
+  Id: 2628120343575592301
   Name: "ClientContext"
   Transform {
     Location {
@@ -73,8 +73,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12160355809059312028
-  ChildIds: 8905861245725435695
+  ParentId: 12145678419559850517
+  ChildIds: 4197652340943523762
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -88,7 +88,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8905861245725435695
+  Id: 4197652340943523762
   Name: "ChatControllerClient"
   Transform {
     Location {
@@ -101,7 +101,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15708152169372598200
+  ParentId: 2628120343575592301
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

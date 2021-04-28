@@ -1,7 +1,7 @@
 Name: "Cosmetics"
-RootId: 11490187644604034792
+RootId: 2046087843992533383
 Objects {
-  Id: 11860357414841839945
+  Id: 9476408196113611380
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11490187644604034792
-  ChildIds: 8599267564884256347
+  ParentId: 2046087843992533383
+  ChildIds: 7643569150869756702
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -29,7 +29,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8599267564884256347
+  Id: 7643569150869756702
   Name: "MetaCosmetic_ClientController"
   Transform {
     Location {
@@ -42,12 +42,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11860357414841839945
+  ParentId: 9476408196113611380
   UnregisteredParameters {
     Overrides {
       Name: "cs:DataTransfer"
       ObjectReference {
-        SelfId: 14155398648855669178
+        SelfId: 2942750325816283722
       }
     }
     Overrides {
@@ -59,7 +59,7 @@ Objects {
     Overrides {
       Name: "cs:StoreScriptClient"
       ObjectReference {
-        SelfId: 3133517331089498449
+        SelfId: 4526579862383261040
       }
     }
   }
@@ -79,7 +79,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1973935721345784015
+  Id: 18317858202768182978
   Name: "ServerContext"
   Transform {
     Location {
@@ -92,8 +92,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11490187644604034792
-  ChildIds: 1497945562687454520
+  ParentId: 2046087843992533383
+  ChildIds: 7248136423628571583
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -108,7 +108,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1497945562687454520
+  Id: 7248136423628571583
   Name: "MetaCostume_ServerController"
   Transform {
     Location {
@@ -121,18 +121,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1973935721345784015
+  ParentId: 18317858202768182978
   UnregisteredParameters {
     Overrides {
       Name: "cs:VFX_LIST"
       ObjectReference {
-        SelfId: 5874015840417789592
+        SelfId: 13102736215143988302
       }
     }
     Overrides {
       Name: "cs:DataTransfer"
       ObjectReference {
-        SelfId: 14155398648855669178
+        SelfId: 2942750325816283722
       }
     }
   }

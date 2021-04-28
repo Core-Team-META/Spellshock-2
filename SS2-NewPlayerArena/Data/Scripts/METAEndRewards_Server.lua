@@ -2,8 +2,8 @@ local NAMESPACE = "METAER."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/12
--- Version 0.1.3
+-- Date: 2021/4/22
+-- Version 0.2.0
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -12,8 +12,16 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local function META_CP()
     return _G["Class.Progression"]
+end
+
+local function META_CO()
+    return _G["Consumables"]
 end
 
 while not _G.PROGRESS_MULTIPLIER do
@@ -69,34 +77,71 @@ local function ShouldClaimWinOfTheDay(player)
     return player:GetResource(CONST.WIN_OF_THE_DAY_TIME) == 1
 end
 
+--@params object player
+--@params table rewards
+--@params int mostPlayedClass
+local function GiveNoneCappedAbilityCard(player, reward, class)
+    local binds = {1, 2, 3, 4, 5}
+    class = class or REWARD_UTIL.GetRandomClass()
+    --META_AP().IsMaxBindLevel(player, class, reward.bind) and
+    if not META_AP().StillNeedsMoreXp(player, class, reward.bind) then
+        table.remove(binds, reward.bind)
+        local bindIndex = math.random(1, #binds)
+        local randomBind = binds[bindIndex]
+        --META_AP().IsMaxBindLevel(player, class, randomBind) and
+        while not META_AP().StillNeedsMoreXp(player, class, randomBind) and #binds > 0 do
+            table.remove(binds, bindIndex)
+            if #binds > 0 then
+                bindIndex = math.random(1, #binds)
+                randomBind = binds[bindIndex]
+            end
+        end
+        if #binds > 0 then
+            reward.bind = randomBind
+            return reward
+        elseif META_CP().GetClassLevel(player, class) < CONST.MAX_CLASS_LEVEL then -- All abilities capped, give class XP
+            local reward = REWARD_UTIL.GetClassXPReward()
+            reward.class = class
+            return reward
+        else -- Give up and give gold
+            return REWARD_UTIL.GetGoldReward()
+        end
+    end
+    return reward
+end
+
 --@param object player
 --@return table tempTbl
 local function CalculateSlot1(player)
     local reward = {}
-    local mostPlayedClass = REWARD_UTIL.GetRandomClass()
+    local class = REWARD_UTIL.GetRandomClass()
     local randomChance = math.random(1, 100)
-
+    local isClassCard = true
     if player.serverUserData.ClassesPlayed then
         local mostPlays = 0
         for classId, count in pairs(player.serverUserData.ClassesPlayed) do
             if count > mostPlays then
                 mostPlays = count
-                mostPlayedClass = classId
+                class = classId
             --print("Most played: "..tostring(classId))
             end
         end
     end
 
-    if randomChance > 85 then
+    local classRank = META_CP().GetClassLevel(player, class)
+    if randomChance > 85 and classRank < CONST.MAX_CLASS_LEVEL then
         reward = REWARD_UTIL.GetClassXPReward()
+        reward.class = class
     else
         reward = REWARD_UTIL.GetSkillReward()
+        reward = GiveNoneCappedAbilityCard(player, reward, class)
     end
-    reward.class = mostPlayedClass
+    reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
     return reward
 end
 
-local function CalculateRegularSlot()
+--@param object player
+local function CalculateRegularSlot(player)
     local reward
     local random = math.random(1, 100)
 
@@ -104,16 +149,28 @@ local function CalculateRegularSlot()
         reward = REWARD_UTIL.GetCosmeticReward()
     elseif random <= 95 and random > 90 then
         reward = REWARD_UTIL.GetGoldReward()
-    elseif random <= 90 and random > 85 then
+    elseif
+        random <= 90 and random > 85 and
+            META_CO().GetLevel(player, META_CO().HEALTH_POTION) < CONST.MAX_CONSUMABLE_LEVEL
+     then
         reward = REWARD_UTIL.GetHealingPotionReward()
-    elseif random <= 85 and random > 80 then
+    elseif
+        random <= 85 and random > 80 and META_CO().GetLevel(player, META_CO().MOUNT_SPEED) < CONST.MAX_CONSUMABLE_LEVEL
+     then
         reward = REWARD_UTIL.GetMountSpeedReward()
     elseif random <= 80 and random > 75 then
         reward = REWARD_UTIL.GetClassXPReward()
+        local class = reward.class
+        local classRank = META_CP().GetClassLevel(player, class)
+        if classRank >= CONST.MAX_CLASS_LEVEL then
+            reward = GiveNoneCappedAbilityCard(player, reward, class)
+            reward.class = class
+        end
     else
         reward = REWARD_UTIL.GetSkillReward()
+        reward = GiveNoneCappedAbilityCard(player, reward, reward.class)
     end
-
+    reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
     return reward
 end
 
@@ -139,25 +196,20 @@ local function GetNumberOfCards(player)
 
     -- Any class rank 50 and one other other class rank 25
     if (topRanks[1] >= 50 and topRanks[2] >= 25) or (topRanks[2] >= 50 and topRanks[1] >= 25) then
+        -- At least 2 classes rank 25
         cardCount = 10
-
-    -- At least 2 classes rank 25
     elseif topRanks[1] >= 25 and topRanks[2] >= 25 then
+        -- Any class rank 25
         cardCount = 9
-
-    -- Any class rank 25
     elseif topRanks[1] >= 25 or topRanks[2] >= 25 then
+        -- Any two classes rank 10
         cardCount = 8
-
-    -- Any two classes rank 10
     elseif topRanks[1] >= 10 and topRanks[2] >= 10 then
+        -- Any class rank 10
         cardCount = 7
-    
-    -- Any class rank 10
     elseif topRanks[1] >= 10 or topRanks[2] >= 10 then
+        -- Any class rank 5
         cardCount = 6
-
-    -- Any class rank 5
     elseif topRanks[1] >= 5 or topRanks[2] >= 5 then
         cardCount = 5
     end
@@ -184,7 +236,7 @@ local function GetPlayerRewards(player)
     end
 
     for slot = 3, numberOfCards, 1 do
-        tempTable[slot] = CalculateRegularSlot()
+        tempTable[slot] = CalculateRegularSlot(player)
     end
 
     return tempTable

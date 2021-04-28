@@ -2020,7 +2020,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5944393796542654307
+            Id: 15683169359350375517
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2666,7 +2666,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12806717230968640779
+            Id: 9176145884981181688
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2971,7 +2971,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -3034,7 +3034,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -3147,7 +3147,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -3207,7 +3207,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7363477334452929865
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -3565,7 +3565,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5106178074541799398
+            Id: 198353679974341757
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -4844,7 +4844,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3973623883385786958
+            Id: 3438912523759796853
           }
           Teams {
           }
@@ -4981,7 +4981,7 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 4832317491132024529
+            Id: 14614446586465896214
           }
           Volume: 1
           Falloff: -1
@@ -5056,7 +5056,7 @@ Assets {
       }
     }
     Assets {
-      Id: 5944393796542654307
+      Id: 15683169359350375517
       Name: "Capsule"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5137,7 +5137,7 @@ Assets {
       }
     }
     Assets {
-      Id: 12806717230968640779
+      Id: 9176145884981181688
       Name: "Pipe - Half Thin"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5155,7 +5155,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7363477334452929865
+      Id: 3179843506183788979
       Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5182,7 +5182,7 @@ Assets {
       }
     }
     Assets {
-      Id: 5106178074541799398
+      Id: 198353679974341757
       Name: "Cube - Bottom-Aligned"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5209,7 +5209,7 @@ Assets {
       }
     }
     Assets {
-      Id: 3973623883385786958
+      Id: 3438912523759796853
       Name: "Raptor Mob"
       PlatformAssetType: 17
       PrimaryAsset {
@@ -5227,7 +5227,7 @@ Assets {
       }
     }
     Assets {
-      Id: 4832317491132024529
+      Id: 14614446586465896214
       Name: "Creature Bird Chicken Cluck 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {

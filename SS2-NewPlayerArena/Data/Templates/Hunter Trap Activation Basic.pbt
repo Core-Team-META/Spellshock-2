@@ -203,7 +203,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1982661357157207299
+            Id: 12120942983386243548
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -266,7 +266,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -328,7 +328,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -390,7 +390,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -452,7 +452,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -514,7 +514,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -576,7 +576,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -643,7 +643,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1982661357157207299
+            Id: 12120942983386243548
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -706,7 +706,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -768,7 +768,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -830,7 +830,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -892,7 +892,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -954,7 +954,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1016,7 +1016,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1126,7 +1126,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1982661357157207299
+            Id: 12120942983386243548
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1189,7 +1189,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1251,7 +1251,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1313,7 +1313,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1375,7 +1375,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1437,7 +1437,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1499,7 +1499,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1561,7 +1561,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1623,7 +1623,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1685,7 +1685,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1747,7 +1747,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1809,7 +1809,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1876,7 +1876,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1982661357157207299
+            Id: 12120942983386243548
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2729,7 +2729,7 @@ Assets {
       }
     }
     Assets {
-      Id: 1982661357157207299
+      Id: 12120942983386243548
       Name: "Ring - Quarter Thin"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -2747,7 +2747,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7647569689338897125
+      Id: 6641170506571814994
       Name: "Pyramid - Polished"
       PlatformAssetType: 1
       PrimaryAsset {

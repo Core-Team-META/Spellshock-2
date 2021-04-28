@@ -1,7 +1,7 @@
 Name: "Game Play Stats"
-RootId: 4287960005776040561
+RootId: 14133830245741828686
 Objects {
-  Id: 11495245969031660835
+  Id: 18408715932228713560
   Name: "ServerContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4287960005776040561
-  ChildIds: 9261984473443468680
+  ParentId: 14133830245741828686
+  ChildIds: 12941644543154095149
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9261984473443468680
+  Id: 12941644543154095149
   Name: "META_GamePlayStats_Server"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11495245969031660835
+  ParentId: 18408715932228713560
   UnregisteredParameters {
     Overrides {
       Name: "cs:CONST"
@@ -54,7 +54,7 @@ Objects {
     Overrides {
       Name: "cs:BasicGameStateManagerServer"
       ObjectReference {
-        SelfId: 8656291602532955231
+        SelfId: 12201004868543433113
       }
     }
     Overrides {

@@ -380,7 +380,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -1860,7 +1860,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5874345424980290303
+            Id: 12371872750459640945
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2498,7 +2498,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 46061843978868412
+            Id: 14287349269321119691
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2960,7 +2960,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 10696576532019313521
+            Id: 15601518032554125788
           }
           Teams {
           }
@@ -4289,7 +4289,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 10696576532019313521
+            Id: 15601518032554125788
           }
           Teams {
           }
@@ -4649,7 +4649,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -4718,7 +4718,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -4787,7 +4787,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -4856,7 +4856,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -5190,7 +5190,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 6004600651541798525
+            Id: 9199751096616988864
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -5252,7 +5252,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 6004600651541798525
+            Id: 9199751096616988864
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -8052,7 +8052,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 10696576532019313521
+            Id: 15601518032554125788
           }
           Teams {
           }
@@ -8259,7 +8259,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -8328,7 +8328,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -8397,7 +8397,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -8466,7 +8466,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3575562120921027951
+            Id: 10743705362862236791
           }
           Teams {
           }
@@ -8782,7 +8782,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 6004600651541798525
+            Id: 9199751096616988864
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -8842,7 +8842,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 6004600651541798525
+            Id: 9199751096616988864
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -10821,7 +10821,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 8269588534607695232
+            Id: 4489563712437375651
           }
           Teams {
           }
@@ -10885,7 +10885,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 8269588534607695232
+            Id: 4489563712437375651
           }
           Teams {
           }
@@ -11339,7 +11339,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5874345424980290303
+            Id: 12371872750459640945
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -11983,7 +11983,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5874345424980290303
+            Id: 12371872750459640945
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -12576,7 +12576,7 @@ Assets {
       }
     }
     Assets {
-      Id: 15339827692159902109
+      Id: 11236189850874066005
       Name: "Heart - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -12657,7 +12657,7 @@ Assets {
       }
     }
     Assets {
-      Id: 5874345424980290303
+      Id: 12371872750459640945
       Name: "Pipe"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -12675,7 +12675,7 @@ Assets {
       }
     }
     Assets {
-      Id: 46061843978868412
+      Id: 14287349269321119691
       Name: "Ring"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -12693,7 +12693,7 @@ Assets {
       }
     }
     Assets {
-      Id: 10696576532019313521
+      Id: 15601518032554125788
       Name: "Fantasy Shield 03"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -12711,7 +12711,7 @@ Assets {
       }
     }
     Assets {
-      Id: 3575562120921027951
+      Id: 10743705362862236791
       Name: "Bone Human Scapula 01"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -12720,7 +12720,7 @@ Assets {
       }
     }
     Assets {
-      Id: 6004600651541798525
+      Id: 9199751096616988864
       Name: "Candle Flame VFX"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -12756,7 +12756,7 @@ Assets {
       }
     }
     Assets {
-      Id: 8269588534607695232
+      Id: 4489563712437375651
       Name: "Bone Human Ulna 01"
       PlatformAssetType: 1
       PrimaryAsset {

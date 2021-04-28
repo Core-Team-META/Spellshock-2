@@ -156,7 +156,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 10613197358825148101
+            Id: 10477657774098762667
           }
           TeamSettings {
           }
@@ -387,7 +387,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 17289448223043935888
+              Id: 48307754774318265
             }
             Color {
               R: 0.0412528701
@@ -447,7 +447,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 17289448223043935888
+              Id: 48307754774318265
             }
             Color {
               R: 0.0203125011
@@ -642,7 +642,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 10311933122092283196
+              Id: 13298271364458101774
             }
             Color {
               G: 0.0206951797
@@ -1193,7 +1193,7 @@ Assets {
       }
     }
     Assets {
-      Id: 10613197358825148101
+      Id: 10477657774098762667
       Name: "Orchestral Victory Achievement Music Stinger Set 01"
       PlatformAssetType: 10
       PrimaryAsset {
@@ -1220,7 +1220,7 @@ Assets {
       }
     }
     Assets {
-      Id: 17289448223043935888
+      Id: 48307754774318265
       Name: "UI Gradient Rectangular 001"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -1229,7 +1229,7 @@ Assets {
       }
     }
     Assets {
-      Id: 10311933122092283196
+      Id: 13298271364458101774
       Name: "Fantasy Ability Teal 005"
       PlatformAssetType: 9
       PrimaryAsset {

@@ -205,7 +205,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 14678969413949532768
+            Id: 5188278867866707632
           }
           TeamSettings {
           }
@@ -258,7 +258,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14678969413949532768
+      Id: 5188278867866707632
       Name: "Cast Burst Ring VFX"
       PlatformAssetType: 8
       PrimaryAsset {

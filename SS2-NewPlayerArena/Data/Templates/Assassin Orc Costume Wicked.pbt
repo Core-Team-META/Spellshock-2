@@ -428,7 +428,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -473,7 +473,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -495,7 +495,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -1775,7 +1775,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5874345424980290303
+            Id: 12371872750459640945
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2142,7 +2142,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 46061843978868412
+            Id: 14287349269321119691
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2616,7 +2616,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 10696576532019313521
+            Id: 15601518032554125788
           }
           Teams {
           }
@@ -5218,7 +5218,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3512586152265937754
+            Id: 16372496464315477095
           }
           Teams {
           }
@@ -5283,7 +5283,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -5348,7 +5348,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -5413,7 +5413,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -5478,7 +5478,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -6657,7 +6657,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3512586152265937754
+            Id: 16372496464315477095
           }
           Teams {
           }
@@ -6722,7 +6722,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -6787,7 +6787,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -6852,7 +6852,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -6917,7 +6917,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 7647569689338897125
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -7965,7 +7965,7 @@ Assets {
       }
     }
     Assets {
-      Id: 15339827692159902109
+      Id: 11236189850874066005
       Name: "Heart - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -7974,7 +7974,7 @@ Assets {
       }
     }
     Assets {
-      Id: 17567893295837774896
+      Id: 675563715440209277
       Name: "Emissive Glow Transparent"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -8010,7 +8010,7 @@ Assets {
       }
     }
     Assets {
-      Id: 5874345424980290303
+      Id: 12371872750459640945
       Name: "Pipe"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8028,7 +8028,7 @@ Assets {
       }
     }
     Assets {
-      Id: 46061843978868412
+      Id: 14287349269321119691
       Name: "Ring"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8046,7 +8046,7 @@ Assets {
       }
     }
     Assets {
-      Id: 10696576532019313521
+      Id: 15601518032554125788
       Name: "Fantasy Shield 03"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8109,7 +8109,7 @@ Assets {
       }
     }
     Assets {
-      Id: 3512586152265937754
+      Id: 16372496464315477095
       Name: "Ring - Beveled Thick"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -8118,7 +8118,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7647569689338897125
+      Id: 6641170506571814994
       Name: "Pyramid - Polished"
       PlatformAssetType: 1
       PrimaryAsset {

@@ -8,24 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17696531540460943644
-  Name: "Fantasy Trophy 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Trophy_003"
-  }
-}
-Assets {
-  Id: 17289448223043935888
-  Name: "UI Gradient Rectangular 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Basic_Shape_002"
-  }
-}
-Assets {
   Id: 16759978556497479664
   Name: "Center Arrow 005 Wedge"
   PlatformAssetType: 9
@@ -59,15 +41,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_006"
-  }
-}
-Assets {
-  Id: 14060330023043759337
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {
@@ -287,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4903553541480386741
+  Name: "Fantasy Trophy 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_003"
+  }
+}
+Assets {
   Id: 4727080213227783003
   Name: "Fantasy Craft Crystal 007"
   PlatformAssetType: 9
@@ -356,6 +338,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_015"
+  }
+}
+Assets {
+  Id: 1814707273787853473
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {

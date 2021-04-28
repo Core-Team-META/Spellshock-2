@@ -1,7 +1,7 @@
 Name: "Gabe"
-RootId: 783937512602456512
+RootId: 2970271822782500865
 Objects {
-  Id: 5713586346248692501
+  Id: 15625385963539588976
   Name: "Tournament"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 783937512602456512
+  ParentId: 2970271822782500865
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10371575606117460542
+  Id: 8465574280040051426
   Name: "Leaderboard"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 783937512602456512
+  ParentId: 2970271822782500865
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59,7 +59,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4484498410314588185
+  Id: 10137299563970406603
   Name: "Per Player Dictionary"
   Transform {
     Location {
@@ -72,7 +72,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 783937512602456512
+  ParentId: 2970271822782500865
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -113,7 +113,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5892343681043908828
+  Id: 6342921762614476205
   Name: "ServerAnalysis"
   Transform {
     Location {
@@ -126,7 +126,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 783937512602456512
+  ParentId: 2970271822782500865
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -143,7 +143,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11075572209613369341
+  Id: 14135257788104118256
   Name: "Team Balancing"
   Transform {
     Location {
@@ -156,7 +156,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 783937512602456512
+  ParentId: 2970271822782500865
   UnregisteredParameters {
     Overrides {
       Name: "cs:DebugSameTeam"

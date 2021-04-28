@@ -1,7 +1,7 @@
 Name: "Networked Events"
-RootId: 10393850260092772171
+RootId: 3037484024939341884
 Objects {
-  Id: 11635041670005193750
+  Id: 17875719959873889
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10393850260092772171
-  ChildIds: 3395338387349651465
+  ParentId: 3037484024939341884
+  ChildIds: 16491336774124409216
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -29,7 +29,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3395338387349651465
+  Id: 16491336774124409216
   Name: "NetworkEvents_Client"
   Transform {
     Location {
@@ -42,12 +42,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11635041670005193750
+  ParentId: 17875719959873889
   UnregisteredParameters {
     Overrides {
       Name: "cs:NETWORK"
       ObjectReference {
-        SelfId: 17469115394147067917
+        SelfId: 2358676723162115643
       }
     }
   }
@@ -67,7 +67,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17469115394147067917
+  Id: 2358676723162115643
   Name: "NetworkEvents_API"
   Transform {
     Location {
@@ -80,7 +80,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10393850260092772171
+  ParentId: 3037484024939341884
   UnregisteredParameters {
     Overrides {
       Name: "cs:TLS"

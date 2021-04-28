@@ -1,7 +1,7 @@
 Name: "Class Progress System"
-RootId: 2948169366293580591
+RootId: 14731701829750393844
 Objects {
-  Id: 885930072396546612
+  Id: 7604840429784536498
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,9 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2948169366293580591
-  ChildIds: 15550870232289179471
-  ChildIds: 6819631343740195084
+  ParentId: 14731701829750393844
+  ChildIds: 2296865025842663490
+  ChildIds: 11707243358144212995
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6819631343740195084
+  Id: 11707243358144212995
   Name: "UI Container"
   Transform {
     Location {
@@ -43,8 +43,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 885930072396546612
-  ChildIds: 9421353506653861763
+  ParentId: 7604840429784536498
+  ChildIds: 12558249842742911163
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -80,7 +80,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9421353506653861763
+  Id: 12558249842742911163
   Name: "XP_PANEL"
   Transform {
     Location {
@@ -93,8 +93,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6819631343740195084
-  ChildIds: 12149670111115542750
+  ParentId: 11707243358144212995
+  ChildIds: 1686592713786178600
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -130,7 +130,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12149670111115542750
+  Id: 1686592713786178600
   Name: "PROGRESS_BAR"
   Transform {
     Location {
@@ -143,8 +143,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9421353506653861763
-  ChildIds: 17875766681530684094
+  ParentId: 12558249842742911163
+  ChildIds: 2920151096586559158
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -192,7 +192,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17875766681530684094
+  Id: 2920151096586559158
   Name: "UI Text Box"
   Transform {
     Location {
@@ -205,7 +205,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12149670111115542750
+  ParentId: 1686592713786178600
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -261,7 +261,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15550870232289179471
+  Id: 2296865025842663490
   Name: "ClassProgress_Client"
   Transform {
     Location {
@@ -274,7 +274,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 885930072396546612
+  ParentId: 7604840429784536498
   UnregisteredParameters {
     Overrides {
       Name: "cs:LevelUpVFX"
@@ -285,19 +285,19 @@ Objects {
     Overrides {
       Name: "cs:UIProgressBar"
       ObjectReference {
-        SelfId: 13381229710661008783
+        SelfId: 4131794597401997781
       }
     }
     Overrides {
       Name: "cs:UITextBox"
       ObjectReference {
-        SelfId: 2915153448914057604
+        SelfId: 11634934603410772384
       }
     }
     Overrides {
       Name: "cs:HM_AMOUNT"
       ObjectReference {
-        SelfId: 15745190213404701848
+        SelfId: 10182226832617747920
       }
     }
   }
@@ -317,7 +317,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9417738684401199277
+  Id: 1654848841137856958
   Name: "ServerContext"
   Transform {
     Location {
@@ -330,8 +330,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2948169366293580591
-  ChildIds: 8996996195043722014
+  ParentId: 14731701829750393844
+  ChildIds: 13710518046081579361
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -346,7 +346,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8996996195043722014
+  Id: 13710518046081579361
   Name: "ClassProgression_Server"
   Transform {
     Location {
@@ -359,7 +359,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9417738684401199277
+  ParentId: 1654848841137856958
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

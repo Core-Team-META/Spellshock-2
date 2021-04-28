@@ -1,7 +1,7 @@
 Name: "Storage _ Refrences"
-RootId: 11064051587082207804
+RootId: 413814734876378917
 Objects {
-  Id: 9940421920727960232
+  Id: 16972268230034387723
   Name: "GameLinks"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11064051587082207804
+  ParentId: 413814734876378917
   UnregisteredParameters {
     Overrides {
       Name: "cs:AfkGameID"
@@ -37,7 +37,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3306084329147392987
+  Id: 6568389405947908851
   Name: "PerksData"
   Transform {
     Location {
@@ -50,7 +50,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11064051587082207804
+  ParentId: 413814734876378917
   UnregisteredParameters {
     Overrides {
       Name: "cs:GoldPack1"
@@ -195,7 +195,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1239155287608710259
+  Id: 2463724689912110544
   Name: "StorageKeys"
   Transform {
     Location {
@@ -208,21 +208,21 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11064051587082207804
+  ParentId: 413814734876378917
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Progression"
+      Name: "cs:Cosmetics"
       NetReference {
-        Key: "ff1e7d94eee542f48ff9e2bc6efe4b54"
+        Key: "5de58cc9214344bca1a53c803d5d9292"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
       }
     }
     Overrides {
-      Name: "cs:Cosmetics"
+      Name: "cs:Progression"
       NetReference {
-        Key: "061199f264e04cbca3d11137d8c91a49"
+        Key: "06aa8a5ccba94efe82095b881462eab5"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -231,7 +231,7 @@ Objects {
     Overrides {
       Name: "cs:Currency"
       NetReference {
-        Key: "6fc2a23079934301ba1e244cb7903c4e"
+        Key: "627fd490885c4745bc44c7d55a8fb5db"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }

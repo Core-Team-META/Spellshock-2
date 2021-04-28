@@ -1,5 +1,14 @@
 Assets {
-  Id: 17148134919989353994
+  Id: 17413793273080869839
+  Name: "Game Portal"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_webportal"
+  }
+}
+Assets {
+  Id: 13462854128336502995
   Name: "Center Circle 001 Outline"
   PlatformAssetType: 9
   PrimaryAsset {
@@ -8,21 +17,12 @@ Assets {
   }
 }
 Assets {
-  Id: 8127922795650460075
+  Id: 6740841731187914198
   Name: "Center Arrow 002 Wedge"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "CenterArrow_002Wedge"
-  }
-}
-Assets {
-  Id: 5824672626938115818
-  Name: "Game Portal"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_webportal"
   }
 }
 Assets {

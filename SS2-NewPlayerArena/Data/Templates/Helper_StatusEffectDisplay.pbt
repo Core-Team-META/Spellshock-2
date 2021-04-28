@@ -176,7 +176,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 7446390700290884681
+              Id: 17066449609679557524
             }
             Color {
               R: 1
@@ -394,7 +394,7 @@ Assets {
       }
     }
     Assets {
-      Id: 7446390700290884681
+      Id: 17066449609679557524
       Name: "Frame Outline Thin 002"
       PlatformAssetType: 9
       PrimaryAsset {

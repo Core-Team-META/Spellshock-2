@@ -542,7 +542,7 @@ Assets {
             DisabledColor {
             }
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             IsButtonEnabled: true
             OnlyUseMainColor: true
@@ -614,7 +614,7 @@ Assets {
             DisabledColor {
             }
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             IsButtonEnabled: true
             OnlyUseMainColor: true
@@ -689,7 +689,7 @@ Assets {
             DisabledColor {
             }
             Brush {
-              Id: 14060330023043759337
+              Id: 1814707273787853473
             }
             IsButtonEnabled: true
             OnlyUseMainColor: true
@@ -2625,7 +2625,7 @@ Assets {
             DisabledColor {
             }
             Brush {
-              Id: 2704989702499929423
+              Id: 5223287246289902870
             }
             IsButtonEnabled: true
             Font {
@@ -2665,7 +2665,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14060330023043759337
+      Id: 1814707273787853473
       Name: "BG Flat 001"
       PlatformAssetType: 9
       PrimaryAsset {
@@ -2746,7 +2746,7 @@ Assets {
       }
     }
     Assets {
-      Id: 2704989702499929423
+      Id: 5223287246289902870
       Name: "Frame Outline Thin 001"
       PlatformAssetType: 9
       PrimaryAsset {

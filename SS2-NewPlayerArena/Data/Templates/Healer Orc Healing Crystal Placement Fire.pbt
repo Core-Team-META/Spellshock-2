@@ -299,7 +299,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 8747548866599712479
+            Id: 16693287233971223649
           }
           TeamSettings {
             TeamInt: 1
@@ -411,7 +411,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 14678969413949532768
+            Id: 5188278867866707632
           }
           TeamSettings {
           }
@@ -640,7 +640,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 14678969413949532768
+            Id: 5188278867866707632
           }
           TeamSettings {
             TeamInt: 1
@@ -2285,7 +2285,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -2308,7 +2308,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -3847,7 +3847,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -3870,7 +3870,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -5409,7 +5409,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -5432,7 +5432,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15339827692159902109
+            Id: 11236189850874066005
           }
           Teams {
           }
@@ -5505,7 +5505,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 16699070101455136403
+            Id: 13633382478652610944
           }
           TeamSettings {
           }
@@ -5575,7 +5575,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 413457027974115672
+            Id: 2494920176024075778
           }
           TeamSettings {
           }
@@ -5598,7 +5598,7 @@ Assets {
       }
     }
     Assets {
-      Id: 8747548866599712479
+      Id: 16693287233971223649
       Name: "Resurrection VFX"
       PlatformAssetType: 8
       PrimaryAsset {
@@ -5607,7 +5607,7 @@ Assets {
       }
     }
     Assets {
-      Id: 14678969413949532768
+      Id: 5188278867866707632
       Name: "Cast Burst Ring VFX"
       PlatformAssetType: 8
       PrimaryAsset {
@@ -5724,7 +5724,7 @@ Assets {
       }
     }
     Assets {
-      Id: 15339827692159902109
+      Id: 11236189850874066005
       Name: "Heart - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
@@ -5733,7 +5733,7 @@ Assets {
       }
     }
     Assets {
-      Id: 17567893295837774896
+      Id: 675563715440209277
       Name: "Emissive Glow Transparent"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -5742,7 +5742,7 @@ Assets {
       }
     }
     Assets {
-      Id: 16699070101455136403
+      Id: 13633382478652610944
       Name: "Decal Stone Cracks Variants 01"
       PlatformAssetType: 14
       PrimaryAsset {
@@ -5751,7 +5751,7 @@ Assets {
       }
     }
     Assets {
-      Id: 413457027974115672
+      Id: 2494920176024075778
       Name: "Fire Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {

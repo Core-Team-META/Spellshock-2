@@ -2025,7 +2025,7 @@ Assets {
             DisabledColor {
             }
             Brush {
-              Id: 2704989702499929423
+              Id: 5223287246289902870
             }
             IsButtonEnabled: true
             Font {
@@ -2178,7 +2178,7 @@ Assets {
       }
     }
     Assets {
-      Id: 2704989702499929423
+      Id: 5223287246289902870
       Name: "Frame Outline Thin 001"
       PlatformAssetType: 9
       PrimaryAsset {

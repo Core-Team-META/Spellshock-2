@@ -13,7 +13,7 @@ Assets {
       Overrides {
         Name: "cs:BasicGameStateManagerServer"
         ObjectReference {
-          SelfId: 8656291602532955231
+          SelfId: 12201004868543433113
         }
       }
       Overrides {

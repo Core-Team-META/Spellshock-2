@@ -1,7 +1,7 @@
 Name: "Settings"
-RootId: 1430082256893166478
+RootId: 8838130682930056557
 Objects {
-  Id: 17554272077537473916
+  Id: 1076755662877178495
   Name: "Team Settings"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1430082256893166478
+  ParentId: 8838130682930056557
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,7 +35,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18258535737398421081
+  Id: 8849561956949301266
   Name: "Respawn Settings"
   Transform {
     Location {
@@ -48,7 +48,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1430082256893166478
+  ParentId: 8838130682930056557
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -70,7 +70,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7367735074338159388
+  Id: 9874386128665033072
   Name: "Game Settings"
   Transform {
     Location {
@@ -83,7 +83,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1430082256893166478
+  ParentId: 8838130682930056557
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
