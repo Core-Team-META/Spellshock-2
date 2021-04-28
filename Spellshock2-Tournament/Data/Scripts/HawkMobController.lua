@@ -1,8 +1,9 @@
-﻿local AnimatedMesh = script:GetCustomProperty("AnimatedMesh"):WaitForObject()
+local AnimatedMesh = script:GetCustomProperty("AnimatedMesh"):WaitForObject()
 local HawkRoot = script:GetCustomProperty("HawkRoot"):WaitForObject()
 local AnimationStance = HawkRoot:GetCustomProperty("AnimationStance")
 local AttackSound = script:GetCustomProperty("AttackSound"):WaitForObject()
 local Costume = script:GetCustomProperty("Costume"):WaitForObject()
+local DestroyVFX = script:GetCustomProperty("DestroyVFX")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -38,7 +39,7 @@ end
 
 function OnRootDestroyed(thisObject)
 	if Object.IsValid( AnimatedMesh) then
-		World.SpawnAsset("2C05043BAB603C59:HawkPoof", {position = AnimatedMesh:GetWorldPosition()})
+		World.SpawnAsset(DestroyVFX, {position = AnimatedMesh:GetWorldPosition()})
 		Task.Wait()
 		AnimatedMesh:Destroy()
 	end
