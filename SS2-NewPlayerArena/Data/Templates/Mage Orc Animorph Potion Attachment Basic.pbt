@@ -76,6 +76,12 @@ Assets {
               SubObjectId: 8510115313151259704
             }
           }
+          Overrides {
+            Name: "cs:GarbageCollection"
+            ObjectReference {
+              SelfId: 17375365745852366583
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
