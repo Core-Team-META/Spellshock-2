@@ -255,7 +255,7 @@ function OnGlobalStatsClicked(thisButton)
 				reqXP = tostring(CONSUMABLES_COSTS[level])
 
 				CurrentStat.text = "+" .. tostring(currentStat) .. "%"
-				NextStat.text = "+" .. tostring(nextStat) .. "%"
+				NextStat.text = ""
 			elseif statPanel.name == "Healing Potion" then
 				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
 				local consumablesTable = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION]
@@ -265,12 +265,12 @@ function OnGlobalStatsClicked(thisButton)
 				reqXP = tostring(CONSUMABLES_COSTS[level])
 
 				CurrentStat.text = "+" .. tostring(currentStat) .. " HP"
-				NextStat.text = "+" .. tostring(nextStat) .. " HP"
+				NextStat.text = ""
 			end
 
 			LevelText.text = tostring(level)
-			XP_Progress.progress = currentXP / reqXP
-			XP_Amount.text = UTIL.FormatInt(currentXP) .. " / " .. UTIL.FormatInt(reqXP) .. " XP"
+			XP_Progress.progress = 1
+			XP_Amount.text = ""
 		end
 	end
 
@@ -447,14 +447,14 @@ function UpdateClassInfo(thisButton)
 		local shardCost = SHARD_COSTS[level].reqXP
 		local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 		local goldCost = SHARD_COSTS[level].reqGold
-
-		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
+		UpgradePanel.visibility = Visibility.FORCE_OFF
+		--[[if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 			UpgradePanel.visibility = Visibility.INHERIT
 		else
 			--ShowMorePanel.visibility = Visibility.INHERIT
 			UpgradePanel.visibility = Visibility.FORCE_OFF
-		end
+		end]]
 	end
 
 	-- Update the Class Description Panel
@@ -620,7 +620,7 @@ function UpdateAbilityInfo(thisButton)
 		GoldCost.text = UTIL.FormatInt(goldCost)
 		LevelProgressBar.progress = currentXP / reqXP
 		LevelNextText.text = tostring(abilityLevel + 1)
-		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_ON
+		--RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_ON
 		AbilityXPPanel.visibility = Visibility.INHERIT
 		MaxLevelPanel.visibility = Visibility.FORCE_OFF
 		LevelProgressBar:SetFillColor(RegularFillColor)
@@ -630,7 +630,7 @@ function UpdateAbilityInfo(thisButton)
 		LevelProgressBar:SetFillColor(MaxFillColor)
 
 		MaxLevelPanel.visibility = Visibility.INHERIT
-		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
+		--RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
 		AbilityXPPanel.visibility = Visibility.FORCE_OFF
 	end
 
@@ -645,10 +645,10 @@ function UpdateAbilityInfo(thisButton)
 	end
 
 	if currentXP >= reqXP and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
-		RightPanel_UpgradeButton.isInteractable = true
+		--RightPanel_UpgradeButton.isInteractable = true
 		UpgradeLabel:SetColor(Color.FromStandardHex("FFC200FF"))
 	else
-		RightPanel_UpgradeButton.isInteractable = false
+		--RightPanel_UpgradeButton.isInteractable = false
 		UpgradeLabel:SetColor(Color.FromStandardHex("CBCBCBFF"))
 	end
 
@@ -793,7 +793,7 @@ function OnUpgradeButtonClicked(thisButton)
 	if isUpgrading then
 		return
 	end
-	RightPanel_UpgradeButton.isInteractable = false
+	--RightPanel_UpgradeButton.isInteractable = false
 	isUpgrading = true
 	local classData = CurrentClassButton.clientUserData.dataTable
 	local abilityData = CurrentAbilityButton.clientUserData.dataTable
@@ -860,11 +860,11 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then
 		UpgradePanel.visibility = Visibility.INHERIT
 		ShowMorePanel.visibility = Visibility.FORCE_OFF
-		RightPanel_UpgradeButton.isInteractable = true
+		--RightPanel_UpgradeButton.isInteractable = true
 	else
 		UpgradePanel.visibility = Visibility.FORCE_OFF
 		ShowMorePanel.visibility = Visibility.INHERIT
-		RightPanel_UpgradeButton.isInteractable = false
+		--RightPanel_UpgradeButton.isInteractable = false
 	end
 
 	isUpgrading = false -- turn upgradin off
@@ -1090,8 +1090,8 @@ for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 end
 
 -- Setup the Upgrade button
-RightPanel_UpgradeButton.clickedEvent:Connect(OnUpgradeButtonClicked)
---RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
+--RightPanel_UpgradeButton.clickedEvent:Connect(OnUpgradeButtonClicked)
+RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
 
 -- Setup the Confirm Choice button
 ConfirmChoiceButton.clickedEvent:Connect(OnConfirmChoiceClicked)
