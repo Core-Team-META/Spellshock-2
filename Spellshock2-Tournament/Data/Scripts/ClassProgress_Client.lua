@@ -87,13 +87,13 @@ end
 --@param object player
 --@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentClassLevel(player)
-    return CONST.TOURNAMENT_CLASS_LEVEL--LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
+    return LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
 end
 
 --@param object player
 --@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetClassLevel(player, class)
-    return CONST.TOURNAMENT_CLASS_LEVEL--player:GetResource(UTIL.GetClassLevelString(class))
+    return player:GetResource(UTIL.GetClassLevelString(class))
 end
 
 
