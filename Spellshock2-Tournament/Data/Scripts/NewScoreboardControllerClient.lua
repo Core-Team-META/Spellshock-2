@@ -14,6 +14,7 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
+
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
 local PLAYER_TITLES = require(script:GetCustomProperty("PlayerTitles"))
@@ -170,8 +171,10 @@ function Tick(deltaTime)
                 nameText.x = 120
                 line:GetCustomProperty("VIPImage"):WaitForObject().visibility = Visibility.FORCE_OFF
             end
-          
-            line:GetCustomProperty("Level"):WaitForObject().text = tostring(player:GetResource(CONST.CLASS_LEVEL))
+            while not _G["Class.Progression"] do
+                Task.Wait()
+            end
+            line:GetCustomProperty("Level"):WaitForObject().text = tostring(_G["Class.Progression"].GetCurrentClassLevel(player))
             if player == LOCAL_PLAYER then
                 line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[3])
             else
