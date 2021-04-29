@@ -6961,6 +6961,8 @@ Objects {
   ChildIds: 4884068277358738119
   ChildIds: 12536668211629100267
   ChildIds: 10472360966056243138
+  ChildIds: 17746080887411854213
+  ChildIds: 17051659191264294604
   ChildIds: 15371879031376436309
   ChildIds: 10208777088954430569
   ChildIds: 15635755618925390978
@@ -8849,6 +8851,192 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 1221213810114228531
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17051659191264294604
+  Name: "STORE_MageElfChickenGoose"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10535149848714323386
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Goose Animorph Potion"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Uncommon_E"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 25
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 18235933670338395573
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 1221213810114228531
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17746080887411854213
+  Name: "STORE_MageOrcChickenGoose"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10535149848714323386
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Goose Animorph Potion"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Uncommon_E"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 25
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13105576907512273321
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
     }
     Overrides {
       Name: "cs:ClassIcon"
