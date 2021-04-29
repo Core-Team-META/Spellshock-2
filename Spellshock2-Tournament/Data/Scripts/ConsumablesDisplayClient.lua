@@ -84,7 +84,7 @@ end
 
 function OnPlayerLeft(player)
     if player == LOCAL_PLAYER then
-        listener:Disconnect()
+        --listener:Disconnect()
     end
 end
 
