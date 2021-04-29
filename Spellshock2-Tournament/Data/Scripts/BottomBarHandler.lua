@@ -1,6 +1,6 @@
 ﻿local ABGS = require(script:GetCustomProperty("ABGS"))
 local AS = require(script:GetCustomProperty("API_Spectator"))
-local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local ClassInfo = script:GetCustomProperty("ClassInfo"):WaitForObject()
 local BottomBar = script:GetCustomProperty("BottomBar"):WaitForObject()
 local ClassSelectionKeyIcon = script:GetCustomProperty("ClassSelectionKeyIcon"):WaitForObject()
@@ -49,7 +49,7 @@ function Tick()
     and not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() and not AS.IsViewingMap()then
         BottomBar.visibility = Visibility.INHERIT
         if currentClassId then
-            local level = LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(currentClassId))
+            local level = CONST.TOURNAMENT_CLASS_LEVEL--LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(currentClassId))
             --local level = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetClassLevelString(currentClassId))
             ClassLevel.text = "Lv. " .. tostring(level)
             ClassLevel:GetChildren()[1].text = "Lv. " .. tostring(level)
