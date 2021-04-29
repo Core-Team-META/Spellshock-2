@@ -44,7 +44,7 @@ end
 --@param int class => id of class (API.HEALTH_POTION)
 local function GetLevel(player, consumable)
     --return player:GetResource(UTIL.GetConsumableLevelString(consumable))
-    return CONST.TOURNAMENT_CONSUMABLE_LEVEL--_G.PerPlayerDictionary.GetNumber(player, UTIL.GetConsumableLevelString(consumable))
+    return _G.PerPlayerDictionary.GetNumber(player, UTIL.GetConsumableLevelString(consumable))
 end
 
 ------------------------------------------------------------------------------------------------------------------------
