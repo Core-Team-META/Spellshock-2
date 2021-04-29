@@ -1529,6 +1529,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8513700555094308874
+  Name: "Fantasy Hammer Head 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_head_hammer_001"
+  }
+}
+Assets {
   Id: 8509644064107880223
   Name: "Cone - Truncated Hollow Wide Thin"
   PlatformAssetType: 1
@@ -1589,6 +1598,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_002"
+  }
+}
+Assets {
+  Id: 8063868133702323256
+  Name: "Sphere - Half Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hemisphere_002"
   }
 }
 Assets {
@@ -2021,6 +2039,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pyramid_4_sided_truncated_hollow_thick_001"
+  }
+}
+Assets {
+  Id: 5836430349218932838
+  Name: "Pipe - Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_003"
   }
 }
 Assets {

@@ -34729,7 +34729,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LocalLobbyTime"
-      Int: 20
+      Int: 0
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
