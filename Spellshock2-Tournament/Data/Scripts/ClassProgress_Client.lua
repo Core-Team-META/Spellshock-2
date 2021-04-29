@@ -70,8 +70,8 @@ function OnPlayerLeft(player)
 end
 
 function Tick()
-    local xp = LOCAL_PLAYER:GetResource("CLASS_XP")
-    local level = LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
+    local xp = LOCAL_PLAYER:GetResource("CLASS_XP")--CONST.TOURNAMENT_CLASS_LEVEL--
+    local level = LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)--CONST.TOURNAMENT_CLASS_LEVEL--
     if xp and level and level >= 1 then
         local reqXp = CONST.ReqXp[level] or 0
         PROGRESS_BAR.progress = xp / reqXp
@@ -87,13 +87,13 @@ end
 --@param object player
 --@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentClassLevel(player)
-    return LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
+    return CONST.TOURNAMENT_CLASS_LEVEL--LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
 end
 
 --@param object player
 --@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetClassLevel(player, class)
-    return player:GetResource(UTIL.GetClassLevelString(class))
+    return CONST.TOURNAMENT_CLASS_LEVEL--player:GetResource(UTIL.GetClassLevelString(class))
 end
 
 
@@ -104,5 +104,5 @@ function API.GetClassXp(player, class)
 end
 
 
-listener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+--listener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)

@@ -20,7 +20,7 @@ local ADAPTOR = script:GetCustomProperty("MetaAbilityProgression_Adaptor"):WaitF
 local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerController"):WaitForObject()
 local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):WaitForObject()
 local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
-local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
+--local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
 local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
 local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
 local MOUNT_MANAGER = script:GetCustomProperty("MountManager_Server"):WaitForObject()
@@ -262,7 +262,7 @@ local function OnSaveEquippedCosmetic(player, data)
 end
 
 --@param object player
---@param table data
+--[[@param table data
 local function OnLoadDailyShopData(player, data)
     local dailyShopItems
     if data[CONST.STORAGE.DAILY_SHOP] then
@@ -287,7 +287,7 @@ local function OnSaveDailyShopData(player, data)
         DataWarning(player, "Daily Shop")
         data[CONST.STORAGE.DAILY_SHOP] = data[CONST.STORAGE.DAILY_SHOP]
     end
-end
+end]]
 
 --@param object player
 --@param table data
@@ -389,7 +389,7 @@ local function OnPlayerJoined(player)
 
     local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     OnLoadCurrencyData(player, currencyData)
-    OnLoadDailyShopData(player, currencyData)
+    --OnLoadDailyShopData(player, currencyData)
     OnLoadGamePlayStatsData(player, currencyData)
     OnLoadMultiplierData(player, currencyData)
 
@@ -426,7 +426,7 @@ local function OnPlayerLeft(player)
     --Nil out data tables
     META_AP.context.OnPlayerLeft(player)
     META_COSMETIC.context.OnPlayerLeft(player)
-    DAILY_SHOP.context.OnPlayerLeft(player)
+    --DAILY_SHOP.context.OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
     CLASS_PROGRESSION.context.OnPlayerLeft(player)
     CONSUMABLES.context.OnPlayerLeft(player)
@@ -454,7 +454,7 @@ function OnSavePlayerData(player)
     local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     OnSaveCurrencyData(player, currencyData)
     OnSaveGamePlayStatsData(player, currencyData)
-    OnSaveDailyShopData(player, currencyData)
+    --OnSaveDailyShopData(player, currencyData)
     OnSaveMultiplierData(player, currencyData)
 
     if player.serverUserData.ADMIN_VIP then
