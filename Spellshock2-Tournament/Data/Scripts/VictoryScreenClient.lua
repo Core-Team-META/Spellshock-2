@@ -16,6 +16,13 @@ repeat
 until GT_API]]
 local ABGS = require(script:GetCustomProperty('ABGS'))
 local MPC_API = require(script:GetCustomProperty('MetaAbilityProgressionConstants_API'))
+
+local function META_CP()
+    while not _G["Class.Progression"] do
+        Task.Wait()
+    end
+    return _G["Class.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 --	OBJECTS AND REFERENCES
 ------------------------------------------------------------------------------------------------------------------------
@@ -241,7 +248,7 @@ local function UpdatePanelForPlayer(panel, player)
     end
 
     local selectedClass = player:GetResource('CLASS_MAP')
-    local currentLevel = player:GetResource('C_LEVEL')
+    local currentLevel = META_CP().GetCurrentClassLevel(player)
 
     local icons = title:GetCustomProperty('ClassIcons'):WaitForObject()
     local titleText = title:GetCustomProperty('TitleText'):WaitForObject()
