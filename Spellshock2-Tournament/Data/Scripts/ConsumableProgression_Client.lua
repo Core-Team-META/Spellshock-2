@@ -53,8 +53,12 @@ end
 
 --@param object player
 --@param int class => id of class (API.HEALTH_POTION)
-function API.GetLevel(player, consumable)
-    return GetLevel(player, consumable)
+function API.GetLevel(player, consumable, showTrueValue)
+    if showTrueValue then
+        return GetLevel(player, consumable)
+    else
+        return CONST.TOURNAMENT_CONSUMABLE_LEVEL
+    end
 end
 
 --@param object player
@@ -63,4 +67,3 @@ function API.GetXp(player, consumable)
     --return player:GetResource(UTIL.GetConsumableXpString(consumable))
     return _G.PerPlayerDictionary.GetNumber(player, UTIL.GetConsumableXpString(consumable))
 end
-
