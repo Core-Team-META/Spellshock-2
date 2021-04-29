@@ -308,7 +308,7 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             AbilityName.text = infoTable.Name
             AbilityName:SetColor(RarityColors[rarity])
 
-            local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class)
+            local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class, true)
             CurrentLevel.text = tostring(abilityLevel)
             NextLevel.text = tostring(abilityLevel + 1)
 
@@ -318,7 +318,7 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             InfoDescription.text = infoTable.Description
         elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
             infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
-            local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class)
+            local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class, true)
             currentAmmount = META_CP().GetClassXp(LOCAL_PLAYER, class)
             reqXp = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
 
