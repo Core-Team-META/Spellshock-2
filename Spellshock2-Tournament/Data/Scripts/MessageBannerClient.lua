@@ -235,8 +235,9 @@ function OnPlayerClassLevelUp(data)
     end
 
     Task.Wait(1)
-
-    if not _Player or not Object.IsValid(_Player) then
+    print(_Player.name)
+    print(LOCAL_PLAYER.name)
+    if not _Player or not Object.IsValid(_Player) or _Player ~= LOCAL_PLAYER then
         return
     end
 
@@ -255,7 +256,7 @@ function OnPlayerClassLevelUp(data)
         LocalPlayerClassLevelUp(classID, tonumber(classLevel))
     end
 
-    propBannerText.text = _Player.name.." is now a level "..classLevel.." "..className.."!"
+    propBannerText.text = "You are now a level "..classLevel.." "..className.." in original Spellshock 2!"
     PlayerClassLevelup.visibility = Visibility.INHERIT
     LevelupSFX:Play()
     playerLevelTimer = time() + 5
