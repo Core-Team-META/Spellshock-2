@@ -89,7 +89,7 @@ end
 --@param object player
 local function SetPlayerMountSpeed(player)
     local level = GetLevel(player, API.MOUNT_SPEED) or 1
-    local mountSpeed = MOUNT_LEVELS[level]
+    local mountSpeed = MOUNT_LEVELS[CONST.TOURNAMENT_CONSUMABLE_LEVEL]
     if mountSpeed then
         mountSpeed:ApplyToPlayer(player)
     end
@@ -214,7 +214,7 @@ end
 
 function API.GetValue(player, consumable)
     local level = GetLevel(player, consumable)
-    return AP_DATA.GetConsumableValue(consumable, level)
+    return AP_DATA.GetConsumableValue(consumable, CONST.TOURNAMENT_CONSUMABLE_LEVEL)
 end
 
 function API.SetMovement(player)
