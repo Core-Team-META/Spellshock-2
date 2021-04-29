@@ -883,7 +883,7 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function HasCosmetic(storeId)
-	return _G["Meta.Ability.Progression"]["VFX"].IsCosmeticStrOwned(storeId)
+	return true --_G["Meta.Ability.Progression"]["VFX"].IsCosmeticStrOwned(storeId)
 end
 
 function CosmeticIsEquipped(cosmeticId)
