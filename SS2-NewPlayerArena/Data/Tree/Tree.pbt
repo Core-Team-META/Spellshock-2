@@ -1516,7 +1516,7 @@ Objects {
       Asset {
         Id: 10784387645319107096
       }
-      DistanceBetweenInstances: 9300
+      DistanceBetweenInstances: 8000
       MaterialChannel: 3
       SpawnDistance: 38400
       CullDistance {
@@ -1565,7 +1565,7 @@ Objects {
       GlobalPositionOffset {
       }
       Height {
-        Min: 8000
+        Min: 4000
         Max: 102400
       }
     }

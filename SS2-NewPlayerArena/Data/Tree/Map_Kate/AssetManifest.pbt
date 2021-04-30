@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17853943551029294903
+  Name: "Short Banner Fleur-de-lis"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_003"
+  }
+}
+Assets {
   Id: 17812816660570473491
   Name: "Tonemapping Post Process"
   PlatformAssetType: 20
@@ -1112,6 +1121,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_skull_pile_01_ref"
+  }
+}
+Assets {
+  Id: 10784387645319107096
+  Name: "Tree Oak 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_oak_001"
   }
 }
 Assets {

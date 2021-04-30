@@ -10,9 +10,9 @@ Assets {
         Name: "Small_column"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.907762647
+            Y: 0.907762647
+            Z: 0.907762647
           }
         }
         ParentId: 4781671109827199097
@@ -473,7 +473,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2355,7 +2355,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
