@@ -36,7 +36,6 @@ function Int()
     if not next(cosmeticTable) then
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
-    _G.COSMETIC_TABLE_BUILT = true
     repeat
         Task.Wait()
         for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
@@ -51,6 +50,7 @@ function Int()
         end
     until next(playerCosmetic)
     --UTIL.TablePrint(playerCosmetic)
+    _G.COSMETIC_TABLE_BUILT = true
 end
 
 function OnChildAdded(parent, object)
@@ -117,7 +117,7 @@ function API.GetCurrentCosmetic(player, bind, class)
     end
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     local skinId = API.GetCurrentCosmeticId(player, class, bind)
-    if skinId == 0 then
+    if skinId == 0 or not skinId then
         skinId = 1
     end
     return cosmeticTable[class][player.team][skinId][bind] 
