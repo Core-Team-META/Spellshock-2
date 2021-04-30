@@ -1,6 +1,7 @@
 local ABGS = require( script:GetCustomProperty("GameStateAPI") )
 local PROGRESSION = require( script:GetCustomProperty("ProgressionAPI") )
 local DEBUG_SAME_TEAM = script:GetCustomProperty("DebugSameTeam")
+local CONST = script:GetCustomProperty("CONST")
 
 local BASE_VALUE_PER_PLAYER = 1
 local TOTAL_CLASS_VALUE_EXPONENT = 0.45 -- Higher value means that ability leveling is ever-more powerful
@@ -10,6 +11,21 @@ local WIN_RATE_MAX = 0.8
 local WIN_RATE_EXPONENT = 1
 local WIN_RATE_COEFFICIENT = 500
 local LOBBY_REBALANCE_TIME = 8
+
+function GetWinRate(player)
+	local totalBattles = player:GetResource(CONST.TOTAL_GAMES)
+	local battlesWon = player:GetResource(CONST.GAMES_WON)
+	local battlesLost = player:GetResource(CONST.GAMES_LOST)
+
+	local winRate
+	if totalBattles > 0 then
+		winRate = CoreMath.Round(battlesWon / totalBattles, 4)
+	else
+		winRate = 0
+	end
+
+	return winRate
+end
 
 function ComputePlayerValue(player)
 	-- Return the cached value
@@ -203,6 +219,14 @@ function DoRebalance(playerToIgnore)
 	ApplyTeamChanges(team1, team2)
 end
 
+function DoRandomBalance()
+	local team = 1
+	for _, player in pairs(Game.GetPlayers()) do
+		player.team = team
+		team = 3-team -- change to other team
+		player:Respawn()
+	end
+end
 
 function OnPlayerJoin(player)
 	if DEBUG_SAME_TEAM then
