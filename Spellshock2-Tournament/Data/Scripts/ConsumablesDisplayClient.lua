@@ -84,15 +84,15 @@ end
 
 function OnPlayerLeft(player)
     if player == LOCAL_PLAYER then
-        listener:Disconnect()
+        --listener:Disconnect()
     end
 end
 
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("SetConsumablesNetworkObject", SetConsumablesNetworkObject)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
+--listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
 Task.Wait(3)
 level =
     _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetConsumableLevelString(CONST.CONSUMABLE_KEYS.HEALTH_POTION))
-LevelText.text = tostring(level)
+LevelText.text = tostring(CONST.TOURNAMENT_CONSUMABLE_LEVEL)

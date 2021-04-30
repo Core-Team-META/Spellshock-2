@@ -1943,15 +1943,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6261710715223371448
-  Name: "Trim - Curve 30\302\260 - 16m Radius "
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_trimitives_001_curve30_16m_ref"
-  }
-}
-Assets {
   Id: 6248700263324820103
   Name: "Ember Volume VFX"
   PlatformAssetType: 8
