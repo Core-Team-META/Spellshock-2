@@ -189,6 +189,9 @@ function RecordKillsDeaths()
 		local entry = GetEntryForPlayer(player)
 		entry.kills = player.kills
 		entry.deaths = player.deaths
+		for className, id in pairs(CONST.CLASS) do
+			entry.classes[className] = CLASS_PROGRESSION.GetClassLevel(player, id)
+		end
 	end
 end
 
@@ -208,9 +211,6 @@ function RecordPlayerWeapons()
 					entry.weapons[key] = 0
 				end
 				entry.weapons[key] = entry.weapons[key] + WEAPON_RECORDING_INTERVAL
-				for className, id in pairs(CONST.CLASS) do
-					entry.classes[className] = CLASS_PROGRESSION.GetClassLevel(player, id)
-				end
 			end
 		end
 	end
@@ -249,8 +249,7 @@ function OnRoundEnded()
 	report.endTime = os.time()
 	RecordWinLoss()
 	RecordKillsDeaths()
-
-	PrintReport()
+		PrintReport()
 	Reset()
 end
 
