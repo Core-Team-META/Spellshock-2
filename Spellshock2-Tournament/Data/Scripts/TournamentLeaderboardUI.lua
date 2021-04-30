@@ -121,9 +121,9 @@ function GenerateLeaderboard()
 		row.x = 0
 		
 		-- Grab the UI Text objects that are in the row's hierarchy
-		entryRank = row:GetCustomProperty("PlayerRank"):WaitForObject()
-		entryName = row:GetCustomProperty("PlayerName"):WaitForObject()
-		entryValue = row:GetCustomProperty("PlayerScore"):WaitForObject()
+		local entryRank = row:GetCustomProperty("PlayerRank"):WaitForObject()
+		local entryName = row:GetCustomProperty("PlayerName"):WaitForObject()
+		local entryValue = row:GetCustomProperty("PlayerScore"):WaitForObject()
 		
 		-- Write text data to UI
 		if localPlayerIndex < 0 and rowsAdded == ROW_COUNT - 1 and not SHOW_TOP_PLAYERS then
@@ -160,6 +160,7 @@ end
 
 
 function GetLeaderboardData()
+	if not Leaderboards.HasLeaderboards() then return nil end
 	return Leaderboards.GetLeaderboard(LEADERBOARD_REF, LEADERBOARD_TYPE)
 end
 
