@@ -213,7 +213,7 @@ Objects {
     Overrides {
       Name: "cs:Cosmetics"
       NetReference {
-        Key: "c333b186a0784c47af674b7704808501"
+        Key: "b5959d620ff140069e841b1ec4f6e772"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -222,7 +222,7 @@ Objects {
     Overrides {
       Name: "cs:Progression"
       NetReference {
-        Key: "fda12f8c98b648b0a612628d288062a6"
+        Key: "78859015f50c44aea7f29dd1883aa1c6"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -231,7 +231,7 @@ Objects {
     Overrides {
       Name: "cs:Currency"
       NetReference {
-        Key: "d5d513aebe8a4907862c98637c1f7b6f"
+        Key: "c78317bae7df4d3cb26d2a0eb95879c5"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }

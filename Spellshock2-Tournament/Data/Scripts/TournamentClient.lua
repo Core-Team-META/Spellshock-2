@@ -3,6 +3,8 @@ local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
 local ENABLED = SERVER_SCRIPT:GetCustomProperty("Enabled")
 
 local LEADERBOARD_REF = SERVER_SCRIPT:GetCustomProperty("LeaderboardReference")
+--local LEADERBOARD_REF = script:GetCustomProperty("Leaderboard")
+
 local EVENT_ID = SERVER_SCRIPT:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require( SERVER_SCRIPT:GetCustomProperty("AdditionalData") )
@@ -31,9 +33,9 @@ end
 
 local POPUP_ROOT = script:GetCustomProperty("PopupRoot"):WaitForObject()
 local NEW_1 = script:GetCustomProperty("NewScore1"):WaitForObject()
-local NEW_2 = script:GetCustomProperty("NewScore2"):WaitForObject()
+--local NEW_2 = script:GetCustomProperty("NewScore2"):WaitForObject()
 local BEST_1 = script:GetCustomProperty("BestScore1"):WaitForObject()
-local BEST_2 = script:GetCustomProperty("BestScore2"):WaitForObject()
+--local BEST_2 = script:GetCustomProperty("BestScore2"):WaitForObject()
 
 local EaseUI = require(script:GetCustomProperty("EaseUI"))
 
@@ -106,9 +108,9 @@ end
 
 function OnScore(newScore, bestScore)
 	NEW_1.text = tostring(newScore)
-	NEW_2.text = tostring(newScore)
+	--NEW_2.text = tostring(newScore)
 	BEST_1.text = tostring(bestScore)
-	BEST_2.text = tostring(bestScore)
+	--BEST_2.text = tostring(bestScore)
 	
 	Show()
 end
