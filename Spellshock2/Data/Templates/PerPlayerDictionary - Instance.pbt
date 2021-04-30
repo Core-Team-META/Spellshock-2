@@ -87,14 +87,6 @@ Assets {
             String: ""
           }
           Overrides {
-            Name: "cs:Keys9"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:Vals9"
-            String: ""
-          }
-          Overrides {
             Name: "cs:Keys1:isrep"
             Bool: true
           }
@@ -160,14 +152,6 @@ Assets {
           }
           Overrides {
             Name: "cs:Vals8:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Keys9:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Vals9:isrep"
             Bool: true
           }
         }
