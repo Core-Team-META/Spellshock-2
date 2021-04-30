@@ -78,7 +78,6 @@ Objects {
     }
   }
   ParentId: 6425084005942455346
-  ChildIds: 18178823164855814839
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -110,36 +109,6 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     DoesPositionOffsetSpring: true
-  }
-}
-Objects {
-  Id: 18178823164855814839
-  Name: "CameraShake"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11218418893857998390
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 6142737434011546352
-    }
   }
 }
 Objects {
