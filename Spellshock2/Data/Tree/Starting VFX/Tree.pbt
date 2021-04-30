@@ -6127,7 +6127,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3816311377343263656
       }
     }
     Overrides {
@@ -6229,7 +6229,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4119439656748146432
       }
     }
     Overrides {
@@ -6331,7 +6331,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6760933949847819494
       }
     }
     Overrides {
@@ -6433,7 +6433,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3216851518506907405
       }
     }
     Overrides {
@@ -6688,7 +6688,7 @@ Objects {
 }
 Objects {
   Id: 12500449938305376400
-  Name: "Mage_Elf_Epic"
+  Name: "Mage_Elf_Legendary"
   Transform {
     Location {
     }
@@ -6790,7 +6790,7 @@ Objects {
 }
 Objects {
   Id: 12203640177525807492
-  Name: "Mage_Elf_Legendary"
+  Name: "Mage_Elf_Rare"
   Transform {
     Location {
     }
@@ -6892,7 +6892,7 @@ Objects {
 }
 Objects {
   Id: 13852487608954893412
-  Name: "Mage_Elf_Rare"
+  Name: "Mage_Elf_Uncommon"
   Transform {
     Location {
     }
@@ -6931,19 +6931,19 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4998183764391921130
       }
     }
     Overrides {
@@ -7167,7 +7167,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1190687810994294505
       }
     }
     Overrides {
@@ -7269,7 +7269,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 7589711991430116307
       }
     }
     Overrides {
@@ -7371,7 +7371,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12301310941594607731
       }
     }
     Overrides {
@@ -7473,7 +7473,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1383873235647942791
       }
     }
     Overrides {
@@ -7728,7 +7728,7 @@ Objects {
 }
 Objects {
   Id: 14639377349743990951
-  Name: "Mage_Orc_Epic"
+  Name: "Mage_Orc_Legendary"
   Transform {
     Location {
     }
@@ -7830,7 +7830,7 @@ Objects {
 }
 Objects {
   Id: 7357559028658370737
-  Name: "Mage_Orc_Legendary"
+  Name: "Mage_Orc_Rare"
   Transform {
     Location {
     }
@@ -7932,7 +7932,7 @@ Objects {
 }
 Objects {
   Id: 9739678177055616527
-  Name: "Mage_Orc_Rare"
+  Name: "Mage_Orc_Uncommon"
   Transform {
     Location {
     }
@@ -7971,19 +7971,19 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 9234225907095365451
       }
     }
     Overrides {
