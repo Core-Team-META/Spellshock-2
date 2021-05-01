@@ -1,4 +1,13 @@
 Assets {
+  Id: 17903652760929758811
+  Name: "Humanoid 1 Tennis Top"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_upper_sport_002_ref"
+  }
+}
+Assets {
   Id: 17205556389324759255
   Name: "Pipe - Quarter Wedge"
   PlatformAssetType: 1
@@ -107,6 +116,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15097437220915579712
+  Name: "Trim - Curve 45\302\260 - 16m Radius"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_trimitives_001_curve45_16m_ref"
+  }
+}
+Assets {
   Id: 15074527860404380375
   Name: "Pipe - Quarter"
   PlatformAssetType: 1
@@ -167,6 +185,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_004"
+  }
+}
+Assets {
+  Id: 14197961243579255554
+  Name: "Office Carpet Basic 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_urb_office_carpet_004_uv_ref"
   }
 }
 Assets {
@@ -332,6 +359,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11190942736396495770
+  Name: "Additive Edgeline Top Fade"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_add_edgeline_sharpline_topfade"
+  }
+}
+Assets {
   Id: 10696576532019313521
   Name: "Fantasy Shield 03"
   PlatformAssetType: 1
@@ -359,12 +395,30 @@ Assets {
   }
 }
 Assets {
+  Id: 9551966620731737544
+  Name: "Metal Basic 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_basic_001"
+  }
+}
+Assets {
   Id: 9377227685447941950
   Name: "2D Basic Shapes Decal"
   PlatformAssetType: 14
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "dcl_basicShapes"
+  }
+}
+Assets {
+  Id: 9129519530357768813
+  Name: "Humanoid 1 Yasmine"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_head_basic_007_ref"
   }
 }
 Assets {
@@ -413,6 +467,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7683011456927666997
+  Name: "Cylinder - Rounded"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_rounded_002"
+  }
+}
+Assets {
   Id: 7663308268157147922
   Name: "Bark Dead 01"
   PlatformAssetType: 2
@@ -428,6 +491,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_005"
+  }
+}
+Assets {
+  Id: 7438354935394146601
+  Name: "Text 01: C"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_002"
   }
 }
 Assets {
@@ -473,6 +545,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_head_mace_002"
+  }
+}
+Assets {
+  Id: 6774570549536662057
+  Name: "Roof Metal 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_roof_metal_001_uv"
   }
 }
 Assets {
@@ -563,6 +644,15 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_gal_upper_military_001_ref"
+  }
+}
+Assets {
+  Id: 4697170280612963749
+  Name: "Ellipsoid - Truncated Hollow Wedge"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ellipsoid_hollow_wedge_001"
   }
 }
 Assets {
@@ -662,6 +752,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_invisible_001"
+  }
+}
+Assets {
+  Id: 2077525421079657949
+  Name: "Energy Tube Glow"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "Energy_Tube_Glow"
   }
 }
 Assets {
