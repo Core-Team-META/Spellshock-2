@@ -368,6 +368,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11076240285386210842
+  Name: "Prism - 5-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_pentagon_001"
+  }
+}
+Assets {
   Id: 10696576532019313521
   Name: "Fantasy Shield 03"
   PlatformAssetType: 1
@@ -536,6 +545,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_002"
+  }
+}
+Assets {
+  Id: 7049191719222274714
+  Name: "Pipe - Quarter Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_002"
   }
 }
 Assets {
