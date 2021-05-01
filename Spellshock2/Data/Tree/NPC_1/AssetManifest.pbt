@@ -107,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15074527860404380375
+  Name: "Pipe - Quarter"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_001"
+  }
+}
+Assets {
   Id: 14868655637861176575
   Name: "Ring - Thin"
   PlatformAssetType: 1
@@ -140,6 +149,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_gold_001"
+  }
+}
+Assets {
+  Id: 14577953825021911847
+  Name: "Fantasy Pommel 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_pommel_001"
   }
 }
 Assets {
@@ -269,6 +287,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11356258235871986179
+  Name: "Humanoid 1 Peasant Pants"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_lower_fantasy_000_ref"
+  }
+}
+Assets {
   Id: 11337413471323694429
   Name: "Metal Gold 01"
   PlatformAssetType: 2
@@ -302,6 +329,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_heart_polished_001"
+  }
+}
+Assets {
+  Id: 10696576532019313521
+  Name: "Fantasy Shield 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_003"
   }
 }
 Assets {
@@ -521,6 +557,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4708306824825204671
+  Name: "Humanoid 1 Military Tactical Fatigues"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_upper_military_001_ref"
+  }
+}
+Assets {
   Id: 4438523867532045845
   Name: "Fantasy Shield 01"
   PlatformAssetType: 1
@@ -545,6 +590,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_stucco_tint_001_uv"
+  }
+}
+Assets {
+  Id: 4150866873020968305
+  Name: "Humanoid 1 Rig"
+  PlatformAssetType: 25
+  PrimaryAsset {
+    AssetType: "SkeletonAssetRef"
+    AssetId: "npc_gal_wireframe_001_ref"
   }
 }
 Assets {
@@ -593,6 +647,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2970711086579668885
+  Name: "Pyramid - 3-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_threesided_001"
+  }
+}
+Assets {
   Id: 2754963224534021958
   Name: "Invisible"
   PlatformAssetType: 2
@@ -611,12 +674,30 @@ Assets {
   }
 }
 Assets {
+  Id: 1687528788148422459
+  Name: "Prism - 8-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_octagon_001"
+  }
+}
+Assets {
   Id: 1562276358413043561
   Name: "Fantasy Shield Strap 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_shield_strap_001"
+  }
+}
+Assets {
+  Id: 1341475761991174029
+  Name: "Humanoid 1 Nalo"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_head_basic_003_ref"
   }
 }
 Assets {
