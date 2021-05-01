@@ -9,8 +9,8 @@ Assets {
       Overrides {
         Name: "secondary color"
         Color {
-          R: 1
-          G: 5.36441803e-07
+          R: 0.86
+          G: 0.290463597
           A: 1
         }
       }

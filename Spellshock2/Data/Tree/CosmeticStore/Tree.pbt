@@ -24,6 +24,7 @@ Objects {
   ChildIds: 1216974658812176625
   ChildIds: 8365011557849145417
   ChildIds: 10738639794974161995
+  ChildIds: 8506590366234689429
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -35,6 +36,149 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 8506590366234689429
+  Name: "NPC Triggers"
+  Transform {
+    Location {
+      X: 18906.3887
+      Y: -38813.1719
+      Z: -6910
+    }
+    Rotation {
+      Yaw: -30.0000057
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2393098310708211399
+  ChildIds: 2417036659105469081
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2417036659105469081
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: -21647.416
+      Y: -31216.3125
+      Z: 6383.95508
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8506590366234689429
+  ChildIds: 13804627278330165023
+  ChildIds: 8575393152503900357
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 8575393152503900357
+  Name: "ELF_COSMETIC_SHOP_LEAVE_TRIGGER"
+  Transform {
+    Location {
+      X: 40088.4141
+      Y: 51592.3125
+      Z: 1051.16553
+    }
+    Rotation {
+      Yaw: 48.6015
+    }
+    Scale {
+      X: 4.70000029
+      Y: 4.20000029
+      Z: 4.6
+    }
+  }
+  ParentId: 2417036659105469081
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 13804627278330165023
+  Name: "ELF_COSMETIC_SHOP_TRIGGER"
+  Transform {
+    Location {
+      X: 40109.9336
+      Y: 51633.4453
+      Z: 1051.16553
+    }
+    Rotation {
+      Yaw: 48.6015
+    }
+    Scale {
+      X: 1.12097239
+      Y: 1.12097239
+      Z: 3.26704121
+    }
+  }
+  ParentId: 2417036659105469081
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "View Daily Shop"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
   }
 }
 Objects {
