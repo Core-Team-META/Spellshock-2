@@ -181,6 +181,9 @@ function RecordWinLoss()
 		local entry = GetEntryForPlayer(player)
 		entry.win = player.team == winningTeam
 		entry.loss = player.team == losingTeam
+		for className, id in pairs(CONST.CLASS) do
+			entry.classes[className] = CLASS_PROGRESSION.GetClassLevel(player, id)
+		end
 	end
 end
 
@@ -189,9 +192,6 @@ function RecordKillsDeaths()
 		local entry = GetEntryForPlayer(player)
 		entry.kills = player.kills
 		entry.deaths = player.deaths
-		for className, id in pairs(CONST.CLASS) do
-			entry.classes[className] = CLASS_PROGRESSION.GetClassLevel(player, id)
-		end
 	end
 end
 
@@ -249,7 +249,7 @@ function OnRoundEnded()
 	report.endTime = os.time()
 	RecordWinLoss()
 	RecordKillsDeaths()
-		PrintReport()
+	PrintReport()
 	Reset()
 end
 
