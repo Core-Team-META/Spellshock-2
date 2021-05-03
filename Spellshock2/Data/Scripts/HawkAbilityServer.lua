@@ -34,7 +34,7 @@ local ownerCameraRotation
 local ownerVectorForward
 
 function OnAbilityExecute(thisAbility)
-	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY or not Object.IsValid(thisAbility.owner) then
 		return
 	end
 	local OwnerPosition = thisAbility.owner:GetWorldPosition()
@@ -61,7 +61,7 @@ function OnAbilityExecute(thisAbility)
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 
 	Task.Wait(1)
-	if Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) then
+	if Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) and CurrentHawk and Object.IsValid(CurrentHawk) then
 		Timer =
 			META_AP().GetAbilityMod(
 			SpecialAbility.owner,
