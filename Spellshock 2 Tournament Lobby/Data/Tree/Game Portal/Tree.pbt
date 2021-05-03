@@ -5,7 +5,7 @@ Objects {
   Name: "ClientContext"
   Transform {
     Location {
-      Z: 149.999969
+      Z: 603.271606
     }
     Rotation {
     }
@@ -45,9 +45,9 @@ Objects {
       Yaw: -89.9999542
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.79481459
+      Y: 1.16106033
+      Z: 2.07701278
     }
   }
   ParentId: 4673865463779290119
@@ -62,7 +62,114 @@ Objects {
     }
     Overrides {
       Name: "bp:Disable Swirl and Edge"
-      Bool: true
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        R: 0.907500327
+        B: 0.99
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color B"
+      Color {
+        R: 0.437000155
+        B: 0.570000052
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color C"
+      Color {
+        R: 0.279999971
+        B: 0.163333222
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color Offset A"
+      Float: 0.309193224
+    }
+    Overrides {
+      Name: "bp:Color Offset B"
+      Float: 0.33014518
+    }
+    Overrides {
+      Name: "bp:Color Offset C"
+      Float: 0.340621144
+    }
+    Overrides {
+      Name: "bp:Intensity Color Blend"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 35.3640022
+    }
+    Overrides {
+      Name: "bp:Portal Shape"
+      Int: 12
+    }
+    Overrides {
+      Name: "bp:Portal Spread"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Edge Distance"
+      Float: 0.520874083
+    }
+    Overrides {
+      Name: "bp:Scene Tint Color"
+      Color {
+        R: 1
+        G: 0.56
+        B: 0.860666513
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:View Distortion Amount"
+      Float: 0.146266922
+    }
+    Overrides {
+      Name: "bp:Swirl Element Distance"
+      Float: 0.262203544
+    }
+    Overrides {
+      Name: "bp:Swirl Color"
+      Color {
+        R: 0.526500046
+        B: 0.809999943
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Edge Distortion"
+      Float: 0.277765334
+    }
+    Overrides {
+      Name: "bp:Speed"
+      Float: 0.429819047
+    }
+    Overrides {
+      Name: "bp:Intersection Distance"
+      Float: 39.3609695
+    }
+    Overrides {
+      Name: "bp:Scene View Distortion Type"
+      Enum {
+        Value: "mc:eportalscenedistortiontype:newenumerator1"
+      }
+    }
+    Overrides {
+      Name: "bp:Cast Shadows"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Unlit"
+      Bool: false
     }
   }
   Collidable_v2 {
