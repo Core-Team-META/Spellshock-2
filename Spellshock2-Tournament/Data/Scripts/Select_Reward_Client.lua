@@ -52,6 +52,9 @@ local function isAllowed(time)
 end
 
 local function ClaimButtonPressed()
+    while not END_REWARDS.context.OnRewardSelect do
+        Task.Wait()
+    end
     BUTTON.isInteractable = false
     LOCAL_PLAYER.clientUserData.hasClaimedReward = true
 

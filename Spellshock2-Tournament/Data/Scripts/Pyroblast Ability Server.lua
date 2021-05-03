@@ -83,7 +83,7 @@ function OnProjectileImpact(projectile, other, hitResult)
 			source = dmg.sourcePlayer,
 			position = nil,
 			rotation = nil,
-			tags = {id = "Mage_T"}
+			tags = {id = "Mage_R"}
 		}
 		COMBAT().ApplyDamage(attackData)
 		enemy:ResetVelocity()
