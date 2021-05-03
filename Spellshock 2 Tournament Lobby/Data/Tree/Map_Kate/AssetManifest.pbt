@@ -125,6 +125,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16845241941935487831
+  Name: "Glass 01 (no distortion)"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_glass_001"
+  }
+}
+Assets {
   Id: 16825643228001246048
   Name: "Gem - Pear Polished"
   PlatformAssetType: 1
@@ -185,6 +194,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_003"
+  }
+}
+Assets {
+  Id: 16341754942894824861
+  Name: "Flare Ray VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_ray_system"
   }
 }
 Assets {

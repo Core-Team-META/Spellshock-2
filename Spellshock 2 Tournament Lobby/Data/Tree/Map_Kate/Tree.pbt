@@ -1,6 +1,301 @@
 Name: "Map_Kate"
 RootId: 11819362894632979355
 Objects {
+  Id: 10917417158854873513
+  Name: "Flare Ray VFX"
+  Transform {
+    Location {
+      X: -5615.05811
+      Y: 15.7212181
+      Z: 7060.53906
+    }
+    Rotation {
+      Pitch: -49.6242371
+    }
+    Scale {
+      X: 69.3039856
+      Y: 69.3039856
+      Z: 69.3039856
+    }
+  }
+  ParentId: 11819362894632979355
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.826
+        G: 1
+        B: 0.997100055
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color B"
+      Color {
+        R: 0.993733346
+        G: 1
+        B: 0.906
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color C"
+      Color {
+        R: 1
+        G: 0.95835
+        B: 0.853
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Ray Color Method"
+      Enum {
+        Value: "mc:eraycoloringoptions:newenumerator2"
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Brightness"
+      Float: 0.01
+    }
+    Overrides {
+      Name: "bp:Ray Density"
+      Float: 7.69501686
+    }
+    Overrides {
+      Name: "bp:Ray Width"
+      Float: 13.3184452
+    }
+    Overrides {
+      Name: "bp:Ray Height"
+      Float: 9.82151
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16341754942894824861
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:high"
+  }
+}
+Objects {
+  Id: 6319021675052796174
+  Name: "Flare Ray VFX"
+  Transform {
+    Location {
+      X: -5514.77832
+      Y: 15.7212181
+      Z: 5569.98584
+    }
+    Rotation {
+      Pitch: -53.7201157
+    }
+    Scale {
+      X: 69.3039856
+      Y: 69.3039856
+      Z: 69.3039856
+    }
+  }
+  ParentId: 11819362894632979355
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.826
+        G: 1
+        B: 0.997100055
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color B"
+      Color {
+        R: 0.993733346
+        G: 1
+        B: 0.906
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color C"
+      Color {
+        R: 1
+        G: 0.95835
+        B: 0.853
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Ray Color Method"
+      Enum {
+        Value: "mc:eraycoloringoptions:newenumerator2"
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Brightness"
+      Float: 0.02
+    }
+    Overrides {
+      Name: "bp:Ray Density"
+      Float: 7.69501686
+    }
+    Overrides {
+      Name: "bp:Ray Width"
+      Float: 17.9810238
+    }
+    Overrides {
+      Name: "bp:Ray Height"
+      Float: 7.2959218
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16341754942894824861
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:high"
+  }
+}
+Objects {
+  Id: 17371352542325764416
+  Name: "TrialsBillboard"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11819362894632979355
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15188141266451225024
+      value {
+        Overrides {
+          Name: "Name"
+          String: "TrialsBillboard"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 377.617889
+            Y: 4412.24121
+            Z: 1326.95508
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 89.9999924
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.04974353
+            Y: 2.08472037
+            Z: 1.15855432
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10757778228317953070
+    }
+  }
+}
+Objects {
+  Id: 9081010047856043760
+  Name: "Default Floor"
+  Transform {
+    Location {
+      X: 415.981
+      Y: 58.8236961
+    }
+    Rotation {
+    }
+    Scale {
+      X: 50
+      Y: 50
+      Z: 1
+    }
+  }
+  ParentId: 11819362894632979355
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9966708463925914567
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 9547852514060820993
   Name: "Window_rotator"
   Transform {
@@ -110608,7 +110903,7 @@ Objects {
       A: 1
     }
     CastShadows: true
-    VolumetricIntensity: 5
+    VolumetricIntensity: 3
     TeamSettings {
     }
     Light {
@@ -110672,7 +110967,7 @@ Objects {
       A: 1
     }
     CastShadows: true
-    VolumetricIntensity: 5
+    VolumetricIntensity: 3
     TeamSettings {
     }
     Light {
@@ -114296,6 +114591,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -114350,6 +114646,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -114403,6 +114700,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -115173,6 +115471,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -118998,6 +119297,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -119052,6 +119352,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -119105,6 +119406,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -119875,6 +120177,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -160302,6 +160605,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -161539,6 +161843,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -162746,7 +163051,13 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 16640745019618043245
+        Id: 16845241941935487831
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        A: 0.57100004
       }
     }
   }

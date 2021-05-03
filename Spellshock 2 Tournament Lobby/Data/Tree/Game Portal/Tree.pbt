@@ -17,6 +17,7 @@ Objects {
   }
   ParentId: 10223229577338714746
   ChildIds: 1923098493935199895
+  ChildIds: 1994815098971309905
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -36,23 +37,23 @@ Objects {
   }
 }
 Objects {
-  Id: 1923098493935199895
+  Id: 1994815098971309905
   Name: "Game Portal"
   Transform {
     Location {
-      X: 0.000112533569
-      Y: 1.52587891e-05
-      Z: -944.539246
+      X: -48.4613724
+      Y: 59.2845
+      Z: -1455.703
     }
     Rotation {
       Pitch: 90
-      Yaw: -90
-      Roll: -0.00146484375
+      Yaw: -36.869873
+      Roll: 53.1281242
     }
     Scale {
-      X: 1.20473337
-      Y: 1.20473337
-      Z: 1.20473337
+      X: -1.5
+      Y: 5.50000048
+      Z: 5.50000048
     }
   }
   ParentId: 4673865463779290119
@@ -63,7 +64,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Use World Capture"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "bp:Disable Swirl and Edge"
@@ -102,16 +103,8 @@ Objects {
       Float: 0.33014518
     }
     Overrides {
-      Name: "bp:Color Offset C"
-      Float: 0.340621144
-    }
-    Overrides {
-      Name: "bp:Intensity Color Blend"
-      Float: 1
-    }
-    Overrides {
       Name: "bp:Emissive Boost"
-      Float: 35.3640022
+      Float: 1.5
     }
     Overrides {
       Name: "bp:Portal Shape"
@@ -123,7 +116,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Edge Distance"
-      Float: 0.520874083
+      Float: 0
     }
     Overrides {
       Name: "bp:Scene Tint Color"
@@ -140,7 +133,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Swirl Element Distance"
-      Float: 0.262203544
+      Float: 0
     }
     Overrides {
       Name: "bp:Swirl Color"
@@ -152,15 +145,15 @@ Objects {
     }
     Overrides {
       Name: "bp:Edge Distortion"
-      Float: 0.277765334
+      Float: 0
     }
     Overrides {
       Name: "bp:Speed"
-      Float: 0.429819047
+      Float: 0
     }
     Overrides {
       Name: "bp:Intersection Distance"
-      Float: 39.3609695
+      Float: 0
     }
     Overrides {
       Name: "bp:Scene View Distortion Type"
@@ -175,6 +168,177 @@ Objects {
     Overrides {
       Name: "bp:Unlit"
       Bool: false
+    }
+    Overrides {
+      Name: "bp:Screenshot Index"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Horizontal Bend Amount"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Use Radial Mask"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 5078205149223811113
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 1923098493935199895
+  Name: "Game Portal"
+  Transform {
+    Location {
+      X: 13.5576687
+      Y: 60.4322662
+      Z: -948.055908
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: -36.869873
+      Roll: 53.1284
+    }
+    Scale {
+      X: -0.25
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4673865463779290119
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Game ID"
+      String: "00cc84efe79344d3afc6591b358c53f3"
+    }
+    Overrides {
+      Name: "bp:Use World Capture"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Disable Swirl and Edge"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        R: 0.907500327
+        B: 0.99
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color B"
+      Color {
+        R: 0.437000155
+        B: 0.570000052
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color C"
+      Color {
+        R: 0.279999971
+        B: 0.163333222
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color Offset A"
+      Float: 0.309193224
+    }
+    Overrides {
+      Name: "bp:Color Offset B"
+      Float: 0.33014518
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 1.5
+    }
+    Overrides {
+      Name: "bp:Portal Shape"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Portal Spread"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Edge Distance"
+      Float: 0.643103719
+    }
+    Overrides {
+      Name: "bp:Scene Tint Color"
+      Color {
+        R: 1
+        G: 0.56
+        B: 0.860666513
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Swirl Color"
+      Color {
+        R: 0.526500046
+        B: 0.809999943
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Edge Distortion"
+      Float: 0.754894555
+    }
+    Overrides {
+      Name: "bp:Speed"
+      Float: 0.429819047
+    }
+    Overrides {
+      Name: "bp:Scene View Distortion Type"
+      Enum {
+        Value: "mc:eportalscenedistortiontype:newenumerator1"
+      }
+    }
+    Overrides {
+      Name: "bp:Cast Shadows"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Unlit"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Screenshot Index"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Use Radial Mask"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Bend Distance"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:View Distortion Amount"
+      Float: 0.13165985
+    }
+    Overrides {
+      Name: "bp:Vertical Bend Amount"
+      Float: 0
     }
   }
   Collidable_v2 {

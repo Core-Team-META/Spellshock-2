@@ -47,7 +47,7 @@ Assets {
       }
       Overrides {
         Name: "opacity"
-        Float: 0.304394096
+        Float: 0.230721861
       }
       Overrides {
         Name: "opacity distance"
