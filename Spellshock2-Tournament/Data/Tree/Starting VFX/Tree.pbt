@@ -6015,8 +6015,8 @@ Objects {
     }
   }
   ParentId: 5874015840417789592
-  ChildIds: 5657075643519372304
-  ChildIds: 17200648636998409393
+  ChildIds: 17434951090736812974
+  ChildIds: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6043,7 +6043,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17200648636998409393
+  Id: 2184845418430172428
   Name: "Elf_Team"
   Transform {
     Location {
@@ -6057,16 +6057,16 @@ Objects {
     }
   }
   ParentId: 15280340472575576204
-  ChildIds: 198966348581949997
-  ChildIds: 13852487608954893412
-  ChildIds: 12203640177525807492
-  ChildIds: 12500449938305376400
-  ChildIds: 16797345615201293924
-  ChildIds: 15313539032618190512
-  ChildIds: 13833440826593393822
-  ChildIds: 18236077725111569949
-  ChildIds: 17461741986269950273
-  ChildIds: 130528884609102117
+  ChildIds: 6929944746584899451
+  ChildIds: 6250522098797550638
+  ChildIds: 5173561936110372529
+  ChildIds: 13928764882481238903
+  ChildIds: 1813161130984064862
+  ChildIds: 15524633467638029650
+  ChildIds: 9204041878735627304
+  ChildIds: 6597544881014280901
+  ChildIds: 15227635709256069062
+  ChildIds: 14174494048947872243
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6093,7 +6093,7 @@ Objects {
   }
 }
 Objects {
-  Id: 130528884609102117
+  Id: 14174494048947872243
   Name: "Mage_Elf_Military"
   Transform {
     Location {
@@ -6106,7 +6106,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6127,7 +6127,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3816311377343263656
       }
     }
     Overrides {
@@ -6139,13 +6139,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6195,7 +6195,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17461741986269950273
+  Id: 15227635709256069062
   Name: "Mage_Elf_Afterlife"
   Transform {
     Location {
@@ -6208,7 +6208,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6229,7 +6229,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4119439656748146432
       }
     }
     Overrides {
@@ -6241,13 +6241,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6297,7 +6297,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18236077725111569949
+  Id: 6597544881014280901
   Name: "Mage_Elf_Justice"
   Transform {
     Location {
@@ -6310,7 +6310,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6331,7 +6331,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6760933949847819494
       }
     }
     Overrides {
@@ -6343,13 +6343,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6399,7 +6399,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13833440826593393822
+  Id: 9204041878735627304
   Name: "Mage_Elf_Punk"
   Transform {
     Location {
@@ -6412,7 +6412,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6433,7 +6433,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3216851518506907405
       }
     }
     Overrides {
@@ -6445,13 +6445,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6501,7 +6501,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15313539032618190512
+  Id: 15524633467638029650
   Name: "Mage_Elf_Royal"
   Transform {
     Location {
@@ -6514,7 +6514,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6535,7 +6535,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16785452133198136383
       }
     }
     Overrides {
@@ -6547,13 +6547,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -6603,7 +6603,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16797345615201293924
+  Id: 1813161130984064862
   Name: "Mage_Elf_Elemental"
   Transform {
     Location {
@@ -6616,7 +6616,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6687,8 +6687,8 @@ Objects {
   }
 }
 Objects {
-  Id: 12500449938305376400
-  Name: "Mage_Elf_Epic"
+  Id: 13928764882481238903
+  Name: "Mage_Elf_Legendary"
   Transform {
     Location {
     }
@@ -6700,7 +6700,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6789,8 +6789,8 @@ Objects {
   }
 }
 Objects {
-  Id: 12203640177525807492
-  Name: "Mage_Elf_Legendary"
+  Id: 5173561936110372529
+  Name: "Mage_Elf_Rare"
   Transform {
     Location {
     }
@@ -6802,7 +6802,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6891,8 +6891,8 @@ Objects {
   }
 }
 Objects {
-  Id: 13852487608954893412
-  Name: "Mage_Elf_Rare"
+  Id: 6250522098797550638
+  Name: "Mage_Elf_Uncommon"
   Transform {
     Location {
     }
@@ -6904,7 +6904,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -6931,19 +6931,19 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4998183764391921130
       }
     }
     Overrides {
@@ -6993,7 +6993,7 @@ Objects {
   }
 }
 Objects {
-  Id: 198966348581949997
+  Id: 6929944746584899451
   Name: "Mage_Elf_Default"
   Transform {
     Location {
@@ -7006,7 +7006,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17200648636998409393
+  ParentId: 2184845418430172428
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7083,7 +7083,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5657075643519372304
+  Id: 17434951090736812974
   Name: "Orc_Team"
   Transform {
     Location {
@@ -7097,16 +7097,16 @@ Objects {
     }
   }
   ParentId: 15280340472575576204
-  ChildIds: 5270735234149939323
-  ChildIds: 9739678177055616527
-  ChildIds: 7357559028658370737
-  ChildIds: 14639377349743990951
-  ChildIds: 4256923181772596376
-  ChildIds: 12007395968169172407
-  ChildIds: 16680699645217042637
-  ChildIds: 7657574915540273167
-  ChildIds: 4200157429373330951
-  ChildIds: 17093011576657356640
+  ChildIds: 6036544693899101048
+  ChildIds: 8262565254591811829
+  ChildIds: 323551626849731283
+  ChildIds: 11570359498486699099
+  ChildIds: 5741345524366522521
+  ChildIds: 11769336460109665372
+  ChildIds: 3097479626936101967
+  ChildIds: 16134386809260007297
+  ChildIds: 11267131579707470522
+  ChildIds: 10781049010087594105
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7133,7 +7133,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17093011576657356640
+  Id: 10781049010087594105
   Name: "Mage_Orc_Military"
   Transform {
     Location {
@@ -7146,7 +7146,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7167,7 +7167,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1190687810994294505
       }
     }
     Overrides {
@@ -7179,13 +7179,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7235,7 +7235,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4200157429373330951
+  Id: 11267131579707470522
   Name: "Mage_Orc_Afterlife"
   Transform {
     Location {
@@ -7248,7 +7248,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7269,7 +7269,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 7589711991430116307
       }
     }
     Overrides {
@@ -7281,13 +7281,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7337,7 +7337,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7657574915540273167
+  Id: 16134386809260007297
   Name: "Mage_Orc_Justice"
   Transform {
     Location {
@@ -7350,7 +7350,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7371,7 +7371,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12301310941594607731
       }
     }
     Overrides {
@@ -7383,13 +7383,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7439,7 +7439,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16680699645217042637
+  Id: 3097479626936101967
   Name: "Mage_Orc_Punk"
   Transform {
     Location {
@@ -7452,7 +7452,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7473,7 +7473,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1383873235647942791
       }
     }
     Overrides {
@@ -7485,13 +7485,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7541,7 +7541,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12007395968169172407
+  Id: 11769336460109665372
   Name: "Mage_Orc_Royal"
   Transform {
     Location {
@@ -7554,7 +7554,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7575,7 +7575,7 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6931475105875884327
       }
     }
     Overrides {
@@ -7587,13 +7587,13 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
@@ -7643,7 +7643,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4256923181772596376
+  Id: 5741345524366522521
   Name: "Mage_Orc_Elemental"
   Transform {
     Location {
@@ -7656,7 +7656,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7727,8 +7727,8 @@ Objects {
   }
 }
 Objects {
-  Id: 14639377349743990951
-  Name: "Mage_Orc_Epic"
+  Id: 11570359498486699099
+  Name: "Mage_Orc_Legendary"
   Transform {
     Location {
     }
@@ -7740,7 +7740,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7829,8 +7829,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7357559028658370737
-  Name: "Mage_Orc_Legendary"
+  Id: 323551626849731283
+  Name: "Mage_Orc_Rare"
   Transform {
     Location {
     }
@@ -7842,7 +7842,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7931,8 +7931,8 @@ Objects {
   }
 }
 Objects {
-  Id: 9739678177055616527
-  Name: "Mage_Orc_Rare"
+  Id: 8262565254591811829
+  Name: "Mage_Orc_Uncommon"
   Transform {
     Location {
     }
@@ -7944,7 +7944,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -7971,19 +7971,19 @@ Objects {
     Overrides {
       Name: "cs:02_AnimorphPotion_Projectile"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2945782094965142153
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Impact"
       AssetReference {
-        Id: 841534158063459245
+        Id: 12582858560613182221
       }
     }
     Overrides {
       Name: "cs:02_AnimorphPotion_Attachment"
       AssetReference {
-        Id: 841534158063459245
+        Id: 9234225907095365451
       }
     }
     Overrides {
@@ -8033,7 +8033,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5270735234149939323
+  Id: 6036544693899101048
   Name: "Mage_Orc_Default"
   Transform {
     Location {
@@ -8046,7 +8046,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5657075643519372304
+  ParentId: 17434951090736812974
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
