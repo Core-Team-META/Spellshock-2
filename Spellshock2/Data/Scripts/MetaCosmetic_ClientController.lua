@@ -36,6 +36,7 @@ function Int()
     if not next(cosmeticTable) then
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
+    _G.COSMETIC_TABLE_BUILT = true
     repeat
         Task.Wait()
         for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
@@ -49,8 +50,7 @@ function Int()
             end
         end
     until next(playerCosmetic)
-    --UTIL.TablePrint(playerCosmetic)
-    _G.COSMETIC_TABLE_BUILT = true
+    --UTIL.TablePrint(cosmeticTable)
 end
 
 function OnChildAdded(parent, object)
@@ -112,7 +112,7 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@param int class => id of class (API.WARRIOR, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
-    while not _G.COSMETIC_TABLE_BUILT do
+  while not _G.COSMETIC_TABLE_BUILT do
         Task.Wait()
     end
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
@@ -163,5 +163,6 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- INITIALIZE
 ------------------------------------------------------------------------------------------------------------------------
-Int()
 DATA_TRANSFER.childAddedEvent:Connect(OnChildAdded)
+Int()
+
