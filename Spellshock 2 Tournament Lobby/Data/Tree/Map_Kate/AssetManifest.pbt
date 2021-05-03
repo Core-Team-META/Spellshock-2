@@ -710,15 +710,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10396917736734746205
-  Name: "Main Street Foundation 01 - Corner"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_urb_dtn_mst_pillar_base_001_ref"
-  }
-}
-Assets {
   Id: 10386363488908962061
   Name: "Sphere"
   PlatformAssetType: 1
@@ -1151,15 +1142,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4710488340079958283
-  Name: "Bricks Large Foundation 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_large_foundation_001"
-  }
-}
-Assets {
   Id: 4708306824825204671
   Name: "Humanoid 1 Military Tactical Fatigues"
   PlatformAssetType: 26
@@ -1517,6 +1499,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_002"
+  }
+}
+Assets {
+  Id: 914042853511368327
+  Name: "Pipe - Quarter Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_002"
   }
 }
 Assets {

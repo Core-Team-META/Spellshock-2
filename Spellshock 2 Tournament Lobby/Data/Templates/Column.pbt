@@ -50,6 +50,14 @@ Assets {
           }
         }
         ParentId: 17741619918487123253
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -163,6 +171,14 @@ Assets {
           }
         }
         ParentId: 7212042459845624175
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -205,6 +221,14 @@ Assets {
           }
         }
         ParentId: 7212042459845624175
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -281,6 +305,14 @@ Assets {
           }
         }
         ParentId: 16617955885802292952
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -323,6 +355,14 @@ Assets {
           }
         }
         ParentId: 16617955885802292952
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -399,6 +439,14 @@ Assets {
           }
         }
         ParentId: 7762204195921347520
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -442,6 +490,14 @@ Assets {
           }
         }
         ParentId: 7762204195921347520
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -518,6 +574,14 @@ Assets {
           }
         }
         ParentId: 9781260003879270660
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -561,6 +625,14 @@ Assets {
           }
         }
         ParentId: 9781260003879270660
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -591,8 +663,8 @@ Assets {
         Name: "Main Street Foundation 01 - Corner"
         Transform {
           Location {
-            X: 0.21282959
-            Y: 14.1950684
+            X: 0.212750673
+            Y: 61.9016228
           }
           Rotation {
           }
@@ -603,6 +675,14 @@ Assets {
           }
         }
         ParentId: 17741619918487123253
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12334678993459933684
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
