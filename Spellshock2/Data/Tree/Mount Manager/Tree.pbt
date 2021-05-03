@@ -92,8 +92,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1940
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1840
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -177,8 +177,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1920
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1820
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -262,8 +262,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1900
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1800
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -347,8 +347,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1880
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1780
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -432,8 +432,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1860
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1760
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -517,8 +517,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1840
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1740
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -602,8 +602,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1820
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1720
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -687,8 +687,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1800
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1700
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -772,8 +772,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1780
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1680
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -857,8 +857,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1760
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1660
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
