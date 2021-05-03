@@ -72,18 +72,12 @@ function OnAbilityExecute(thisAbility)
 	newTrap.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, SpecialAbility.name .. ": LifeSpan")
 	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
 
-	local nearbyEnemies =
-		Game.FindPlayersInCylinder(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
-	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
+	local nearbyEnemies = Game.FindPlayersInCylinder(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
+	local bleedStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", {}, SpecialAbility.name .. ": Bleed Status")
+	local slowStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Slow Status")
 	for _, enemy in pairs(nearbyEnemies) do
-		API_SE.ApplyStatusEffect(
-			enemy,
-			API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id,
-			SpecialAbility.owner,
-			status.duration,
-			status.damage,
-			status.multiplier
-		)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, SpecialAbility.owner, bleedStatus.duration, bleedStatus.damage, bleedStatus.multiplier)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, slowStatus.duration, slowStatus.damage, slowStatus.multiplier)
 	end
 
 	local trapTrigger = newTrap:GetCustomProperty("Trigger"):WaitForObject()
