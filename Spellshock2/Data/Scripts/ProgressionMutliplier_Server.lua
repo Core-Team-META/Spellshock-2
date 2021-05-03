@@ -132,9 +132,6 @@ end
 --@param int value after mutlipliers applied
 local function GetXpAfterMultipliers(player, value)
     local multiplier = CONST.EVENT_XP_MULITPLIER + xpVipMultiplier
-    if IsServerXpMultiplierActive() then
-        multiplier = multiplier + CONST.XP_SERVER_BOOST_MULTIPLIER
-    end
 
     --VIP Member Multiplier Perk
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
@@ -165,10 +162,6 @@ end
 local function GetGoldAfterMultipliers(player, value)
     local multiplier = CONST.EVENT_GOLD_MULTIPLIER + goldVipMultiplier
 
-    if IsServerGoldMultiplierActive() then
-        multiplier = multiplier + CONST.GOLD_SERVER_BOOST_MULTIPLIER
-    end
-
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
         multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
     end
@@ -180,6 +173,7 @@ local function GetGoldAfterMultipliers(player, value)
 
     --Self Gold Boost Perk
     local selfBoostTtime = _G.PerPlayerDictionary.GetNumber(player, CONST.SELF_GOLD_BOOST_KEY)
+
     if selfBoostTtime and selfBoostTtime >= time() then
         multiplier = multiplier + CONST.GOLD_SELF_BOOST_MULTIPLIER
     end
@@ -289,7 +283,7 @@ local function GetRewardAfterMultipliers(player, reward)
      then -- Shard Multipliers
         amount = GetShardsAfterMultipliers(player, reward.amount)
     elseif reward.type == REWARD.REWARD_TYPES.GOLD then -- Gold Multiplier
-        amount = GetXpAfterMultipliers(player, reward.amount)
+        amount = GetGoldAfterMultipliers(player, reward.amount)
     elseif reward.type == REWARD.REWARD_TYPES.COSMETIC then
         amount = GetCosmeticAfterMultipliers(player, reward.amount)
     elseif reward.type == REWARD.REWARD_TYPES.CLASS_XP then -- Class XP Multiplier
