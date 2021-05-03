@@ -73,14 +73,18 @@ end
 --@param object player
 --@param int class => id of class (API.WARRIOR, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
-function API.GetBindLevel(player, bind, class)
+function API.GetBindLevel(player, bind, class, showTrueValue)
     if not class then
         class = player:GetResource(CONST.CLASS_RES)
     end
     local resName = UTIL.GetLevelString(class, bind)
     --return player:GetResource(resName)
     _G.PerPlayerDictionary.WaitForPlayer(player)
-    return _G.PerPlayerDictionary.GetNumber(player, resName)
+    if showTrueValue then
+        return _G.PerPlayerDictionary.GetNumber(player, resName)
+    else
+        return CONST.TOURNAMENT_ABILITY_LEVEL
+    end
 end
 
 --@param object player

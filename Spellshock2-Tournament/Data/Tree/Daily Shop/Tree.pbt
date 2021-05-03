@@ -83,7 +83,7 @@ Objects {
   }
   ParentId: 12438902226095385717
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -121,7 +121,7 @@ Objects {
   }
   ParentId: 12438902226095385717
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -130,7 +130,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Trigger {
-    Interactable: true
     InteractionLabel: "View Daily Shop"
     TeamSettings {
       IsTeamCollisionEnabled: true
@@ -160,7 +159,7 @@ Objects {
   }
   ParentId: 12438902226095385717
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -197,7 +196,7 @@ Objects {
   }
   ParentId: 12438902226095385717
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -206,7 +205,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Trigger {
-    Interactable: true
     InteractionLabel: "View Daily Shop"
     TeamSettings {
       IsTeamCollisionEnabled: true

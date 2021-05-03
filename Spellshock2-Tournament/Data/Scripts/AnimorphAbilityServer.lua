@@ -137,7 +137,7 @@ function OnSpecialAbilityCooldown(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	local skin = Equipment:GetCustomProperty("RID") or 1
+	local skin = Equipment:GetCustomProperty("EID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().MAGE, player.team, skin, META_AP().E)
 end
 

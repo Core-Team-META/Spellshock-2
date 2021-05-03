@@ -81,9 +81,9 @@ end
 function OnButtonPressed(thisButton)
 	if thisButton.clientUserData.stateID and thisButton ~= BaseButton then -- player selected a capture point
 		local capturePointState = ABCP.GetCapturePointState(thisButton.clientUserData.stateID)
-		print("Name: "..capturePointState.name)
-		print("Player Team: "..LOCAL_PLAYER.team)
-		print("Capture Team: "..capturePointState.owningTeam)
+		--print("Name: "..capturePointState.name)
+		--print("Player Team: "..LOCAL_PLAYER.team)
+		--print("Capture Team: "..capturePointState.owningTeam)
 		if LOCAL_PLAYER.team ~= capturePointState.owningTeam then return end
 	end
 

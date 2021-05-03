@@ -10,15 +10,17 @@ Assets {
         Name: "Spike"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.38690948
+            Y: 1.38690948
+            Z: 1.38690948
           }
         }
-        ParentId: 5325077493277344804
+        ParentId: 8564542831442195321
         ChildIds: 5161621782355196176
         ChildIds: 6775744376863439630
         ChildIds: 16928688606140580091
+        ChildIds: 18263138947784912734
+        ChildIds: 2376752186738752456
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -227,6 +229,134 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 18263138947784912734
+        Name: "Cylinder"
+        Transform {
+          Location {
+            X: 478.516235
+            Y: -0.670594394
+            Z: 0.203273103
+          }
+          Rotation {
+            Pitch: 86.8817673
+            Yaw: -127.254272
+            Roll: -125.691956
+          }
+          Scale {
+            X: 0.645152867
+            Y: 0.645152867
+            Z: 0.645152867
+          }
+        }
+        ParentId: 12509365087695726264
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 5
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.6
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7585887110500972880
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2376752186738752456
+        Name: "Cylinder"
+        Transform {
+          Location {
+            X: 465.482544
+            Y: -0.455989242
+            Z: 0.481931955
+          }
+          Rotation {
+            Pitch: 144.31897
+            Yaw: -94.1456299
+            Roll: -100.143158
+          }
+          Scale {
+            X: 0.645152926
+            Y: 0.645152926
+            Z: 0.645152926
+          }
+        }
+        ParentId: 12509365087695726264
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 5
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.6
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7585887110500972880
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
     }
     Assets {
       Id: 15022686768039723999
@@ -271,6 +401,24 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_bullet_001"
+      }
+    }
+    Assets {
+      Id: 7585887110500972880
+      Name: "Ring - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_005"
+      }
+    }
+    Assets {
+      Id: 3090596827184957478
+      Name: "Rope"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_rope_001"
       }
     }
     PrimaryAssetId {

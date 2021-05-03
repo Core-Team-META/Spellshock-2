@@ -7979,7 +7979,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8027,6 +8027,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8072,7 +8076,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8120,6 +8124,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8165,7 +8173,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8213,6 +8221,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8258,7 +8270,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8306,6 +8318,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8351,7 +8367,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8399,6 +8415,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8444,7 +8464,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8492,6 +8512,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8537,7 +8561,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8554,7 +8578,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 4729651385947370220
+        Id: 1916661986606512340
       }
     }
     Overrides {
@@ -8584,6 +8608,10 @@ Objects {
       AssetReference {
         Id: 1221213810114228531
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -8630,7 +8658,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8678,6 +8706,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8723,7 +8755,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8771,6 +8803,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8816,7 +8852,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 50
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8864,6 +8900,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8909,7 +8949,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -9002,7 +9042,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"

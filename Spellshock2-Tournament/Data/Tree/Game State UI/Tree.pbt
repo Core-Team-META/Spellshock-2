@@ -12150,7 +12150,7 @@ Objects {
     }
     UseParentHeight: true
     Text {
-      Label: "Ooccoo is now a level 10 Warrior!"
+      Label: "You are now a level 20 Assassin in original Spellshock 2!"
       Color {
         R: 1
         G: 1
@@ -12265,7 +12265,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 763
+    Width: 954
     Height: 45
     RenderTransformPivot {
       Anchor {
@@ -13730,7 +13730,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 763
+    Width: 954
     Height: 45
     RenderTransformPivot {
       Anchor {

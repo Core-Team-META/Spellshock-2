@@ -60,9 +60,9 @@ local function IsCosmeticUnlocked(player, skin, bind)
     local class = player:GetResource(CONST.CLASS_RES)
     local team = player.team
 
-    return playerCosmetic[player][class] ~= nil and playerCosmetic[player][class][team] ~= nil and
-        playerCosmetic[player][class][team][skin] ~= nil and
-        playerCosmetic[player][class][team][skin][bind] ~= nil
+    return true--playerCosmetic[player][class] ~= nil and playerCosmetic[player][class][team] ~= nil and
+        --playerCosmetic[player][class][team][skin] ~= nil and
+        --playerCosmetic[player][class][team][skin][bind] ~= nil
 end
 
 --@param object player
@@ -244,7 +244,7 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@return bool true / false
 function API.IsCosmeticOwned(player, class, team, skin, bind)
-    return UTIL.IsCosmeticOwned(playerCosmetic[player], class, team, skin, bind)
+    return true--UTIL.IsCosmeticOwned(playerCosmetic[player], class, team, skin, bind)
 end
 
 function API.ConvertSkinStringToId(str)

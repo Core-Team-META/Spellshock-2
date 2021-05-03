@@ -5,12 +5,12 @@ Objects {
   Name: "Victory Screen"
   Transform {
     Location {
-      X: -0.37890625
-      Y: 0.43359375
-      Z: 0.180664063
+      X: -19252.1582
+      Y: -2307.44971
+      Z: -6914.52148
     }
     Rotation {
-      Yaw: 174.999985
+      Yaw: 90
     }
     Scale {
       X: 1
@@ -126,7 +126,7 @@ Objects {
       Z: 208.167969
     }
     Rotation {
-      Yaw: -179.999985
+      Yaw: -179.999969
     }
     Scale {
       X: 1
@@ -24435,12 +24435,13 @@ Objects {
   Name: "Victory Cam"
   Transform {
     Location {
-      X: -598.04541
-      Y: -7.62939453e-06
-      Z: 190
+      X: -736.032166
+      Y: -2
+      Z: 267.79126
     }
     Rotation {
-      Pitch: -15
+      Pitch: -16
+      Yaw: 1
     }
     Scale {
       X: 1
@@ -24459,13 +24460,12 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Camera {
-    InitialDistance: -180
     MinDistance: 300
     MaxDistance: 600
     PositionOffset {
     }
     RotationOffset {
-      Pitch: -12
+      Pitch: -16
     }
     FieldOfView: 90
     ViewWidth: 1200

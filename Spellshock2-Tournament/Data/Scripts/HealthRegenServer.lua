@@ -17,7 +17,7 @@ local listener
 
 local function GetRegenValue(player, classId)
     local regenForClass = CONST.CLASS_REGEN[classId]
-    return (0.41 + (0.008 * META_CP().GetClassLevel(player, classId))) * regenForClass
+    return (0.41 + (0.008 * CONST.TOURNAMENT_CLASS_LEVEL)) * regenForClass
 end
 
 local function PlayerDamageTaken(attackData)

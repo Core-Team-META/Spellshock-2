@@ -81,7 +81,7 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@return bool true / false
 function API.IsCosmeticOwned(class, team, skin, bind)
-    return UTIL.IsCosmeticOwned(playerCosmetic, class, team, skin, bind)
+    return true--UTIL.IsCosmeticOwned(playerCosmetic, class, team, skin, bind)
 end
 
 function API.IsCosmeticStrOwned(str)

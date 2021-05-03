@@ -45,6 +45,7 @@ function CheckRespawnTimer()
 		local capturePointState = ABCP.GetCapturePointState(CurrentButton.clientUserData.stateID)
 		if LOCAL_PLAYER.team ~= capturePointState.owningTeam and CurrentButton ~= BaseButton then 
 			-- reset the player's selection to their base
+			print("2 Pressing button")
 			OnButtonPressed(BaseButton)
 			Task.Wait()
 		end
@@ -79,6 +80,9 @@ function CheckRespawnTimer()
 end
 
 function OnButtonPressed(thisButton)
+	if thisButton == nil then
+		thisButton = BASE_BUTTONS[LOCAL_PLAYER.team]
+	end
 	if thisButton.clientUserData.stateID and thisButton ~= BaseButton then -- player selected a capture point
 		local capturePointState = ABCP.GetCapturePointState(thisButton.clientUserData.stateID)
 		print("Name: "..capturePointState.name)
@@ -190,9 +194,10 @@ function UpdateBaseIndicators()
 		-- Set visibility
 		if i == LOCAL_PLAYER.team then
 			baseIndicator.visibility = Visibility.INHERIT
-			local iconButton = baseIndicator:GetCustomProperty("IconButton"):WaitForObject()
+			local iconButton = BASE_BUTTONS[i] --baseIndicator:GetCustomProperty("IconButton"):WaitForObject()
 			if BaseButton ~= iconButton then
 				BaseButton = iconButton
+				print("3 Pressing button")
 				OnButtonPressed(BaseButton)
 			end
 		else
@@ -225,11 +230,12 @@ function Tick(DeltaTime)
 	if AS.IsRespawning() or AS.IsViewingMap() or AS.IsJoiningMidgame() then
 		UpdateCapturePointIndicators()
 		UpdateBaseIndicators()
-		PANEL.visibility = Visibility.INHERIT
+		PANEL.visibility = Visibility.FORCE_OFF
 		
 		if (AS.IsRespawning() or AS.IsJoiningMidgame()) and RespawnTimer == -1 then
 			RespawnTimer = RespawnDelay -- activate timer
 			TIMER.text = tostring(RespawnDelay)
+			print("1 Pressing button")
 			OnButtonPressed(BaseButton)
 		end
 	else
@@ -257,6 +263,7 @@ end
 
 -- Add base indicators
 for i, baseLocation in ipairs(BaseLocations:GetChildren()) do
+	print("Spawning base indicator")
 	baseIndicators[i] = World.SpawnAsset(BASE_INDICATOR, {parent = PANEL})
 	local iconButton = baseIndicators[i]:GetCustomProperty("IconButton"):WaitForObject()
 	local selectedIcon = iconButton:GetCustomProperty("SelectedIcon"):WaitForObject()

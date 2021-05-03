@@ -1,8 +1,9 @@
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+
 while not _G["Class.Progression"] do
 	Task.Wait()
 end
 local CLASS_PROGRESSION = _G["Class.Progression"]
-
 
 local report = {}
 local roundCount = 0
@@ -11,29 +12,27 @@ local playerCount = 0
 local WEAPON_RECORDING_INTERVAL = 2
 local elapsedWeaponRecordingTime = 0
 
-
 function Reset()
 	report = {}
 	report.players = {}
-	
-	for _,player in ipairs(Game.GetPlayers()) do
+
+	for _, player in ipairs(Game.GetPlayers()) do
 		GetEntryForPlayer(player)
 	end
-	
+
 	report.playerCountHistory = nil
 	report.averageDT = 0.1
 	report.startTime = 0
 end
 
-
 function GetEntryForPlayer(player)
 	local id = player.id
 	local entry = report.players[id]
-	
+
 	if not entry then
 		entry = {}
 		report.players[id] = entry
-		
+
 		entry.joinTime = os.time()
 		entry.win = false
 		entry.loss = false
@@ -46,13 +45,11 @@ function GetEntryForPlayer(player)
 	return entry
 end
 
-
 function RemovePlayer(player)
 	report.players[player.id] = nil
 end
 
 Reset()
-
 
 function PrintReport()
 	local currenTime = os.time()
@@ -60,35 +57,40 @@ function PrintReport()
 	local roundDuration = report.endTime - report.startTime
 	local scoreA = Game.GetTeamScore(1)
 	local scoreB = Game.GetTeamScore(2)
-	
+
 	local str = "[SERVER ANALYSIS] "
-	str = str.."{"
-	
-	str = str.."\"roundCount\":" .. tostring(roundCount)
-			.. ",\"averageDT\":" .. tostring(report.averageDT)
-			.. ",\"roundDuration\":" .. tostring(roundDuration)
-			.. ",\"scoreA\":" .. tostring(scoreA)
-			.. ",\"scoreB\":" .. tostring(scoreB)
-			.. ",\"playerCountHistory\":\"" .. tostring(report.playerCountHistory) .. "\""
-	
+	str = str .. "{"
+
+	str =
+		str ..
+		'"roundCount":' ..
+			tostring(roundCount) ..
+				',"averageDT":' ..
+					tostring(report.averageDT) ..
+						',"roundDuration":' ..
+							tostring(roundDuration) ..
+								',"scoreA":' ..
+									tostring(scoreA) ..
+										',"scoreB":' .. tostring(scoreB) .. ',"playerCountHistory":"' .. tostring(report.playerCountHistory) .. '"'
+
 	-- Players
-	str = str .. ",\"players\":["
+	str = str .. ',"players":['
 	local playersWritten = 0
-	for playerId,entry in pairs(report.players) do
+	for playerId, entry in pairs(report.players) do
 		playersWritten = playersWritten + 1
 		if playersWritten == 1 then
 			str = str .. "{"
 		else
 			str = str .. ",{"
 		end
-		
+
 		-- ID
-		str = str .. "\"id\":\"" .. tostring(playerId) .. "\""
-		
+		str = str .. '"id":"' .. tostring(playerId) .. '"'
+
 		-- Time
 		local relativeJoinTime = entry.joinTime - report.startTime
-		str = str .. ",\"joinTime\":" .. tostring(relativeJoinTime)
-		
+		str = str .. ',"joinTime":' .. tostring(relativeJoinTime)
+
 		local leaveT = currenTime
 		if entry.leaveTime and entry.leaveTime > 0 then
 			leaveT = entry.leaveTime
@@ -98,64 +100,62 @@ function PrintReport()
 			joinT = entry.joinTime
 		end
 		timeInRound = leaveT - joinT
-		str = str .. ",\"timeInRound\":" .. tostring(timeInRound)
-		
+		str = str .. ',"timeInRound":' .. tostring(timeInRound)
+
 		-- Win/Loss
-		str = str .. ",\"win\":" .. tostring(entry.win)
-		str = str .. ",\"loss\":" .. tostring(entry.loss)
-		
+		str = str .. ',"win":' .. tostring(entry.win)
+		str = str .. ',"loss":' .. tostring(entry.loss)
+
 		-- Kill/Death
-		str = str .. ",\"kills\":" .. tostring(entry.kills)
-		str = str .. ",\"deaths\":" .. tostring(entry.deaths)
-		
+		str = str .. ',"kills":' .. tostring(entry.kills)
+		str = str .. ',"deaths":' .. tostring(entry.deaths)
+
 		-- Weapons
-		str = str .. ",\"totalWeaponTime\":" .. tostring(entry.totalWeaponTime)
-		str = str .. ",\"weapons\":{"
+		str = str .. ',"totalWeaponTime":' .. tostring(entry.totalWeaponTime)
+		str = str .. ',"weapons":{'
 		local weaponsWritten = 0
-		for weaponName,weaponTime in pairs(entry.weapons) do
+		for weaponName, weaponTime in pairs(entry.weapons) do
 			weaponsWritten = weaponsWritten + 1
 			if weaponsWritten > 1 then
 				str = str .. ","
 			end
-			str = str .. "\"" .. tostring(weaponName) .. "\":" .. tostring(weaponTime)
+			str = str .. '"' .. tostring(weaponName) .. '":' .. tostring(weaponTime)
 		end
 		str = str .. "}"
 
 		-- Classes
-		str = str .. ",\"classLevels\":{"
+		str = str .. ',"classLevels":{'
 		local classesWritten = 0
 		for className, classLevel in pairs(entry.classes) do
 			classesWritten = classesWritten + 1
 			if classesWritten > 1 then
 				str = str .. ","
 			end
-			str = str .. "\"" .. tostring(className) .. "\":" .. tostring(classLevel)
+			str = str .. '"' .. tostring(className) .. '":' .. tostring(classLevel)
 		end
 		str = str .. "}}"
 	end
 	str = str .. "]"
-	
+
 	-- Done
 	str = str .. "}"
 	print(str)
 end
 
-
 function Tick(deltaTime)
 	report.averageDT = CoreMath.Lerp(report.averageDT, deltaTime, 0.03)
-	
+
 	elapsedWeaponRecordingTime = elapsedWeaponRecordingTime + deltaTime
 	if elapsedWeaponRecordingTime > WEAPON_RECORDING_INTERVAL then
 		elapsedWeaponRecordingTime = elapsedWeaponRecordingTime - WEAPON_RECORDING_INTERVAL
-		
+
 		RecordPlayerWeapons()
 	end
 end
 
-
 function UpdatePlayerCountHistory(change)
 	playerCount = playerCount + change
-	
+
 	if report.playerCountHistory == nil then
 		report.playerCountHistory = tostring(playerCount)
 	else
@@ -163,11 +163,10 @@ function UpdatePlayerCountHistory(change)
 	end
 end
 
-
 function RecordWinLoss()
 	local scoreA = Game.GetTeamScore(1)
 	local scoreB = Game.GetTeamScore(2)
-	
+
 	local winningTeam = 0
 	local losingTeam = 0
 	if scoreA > scoreB then
@@ -177,97 +176,84 @@ function RecordWinLoss()
 		winningTeam = 2
 		losingTeam = 1
 	end
-	
-	for _,player in ipairs(Game.GetPlayers()) do
+
+	for _, player in ipairs(Game.GetPlayers()) do
 		local entry = GetEntryForPlayer(player)
 		entry.win = player.team == winningTeam
 		entry.loss = player.team == losingTeam
+		for className, id in pairs(CONST.CLASS) do
+			entry.classes[className] = CLASS_PROGRESSION.GetClassLevel(player, id)
+		end
 	end
 end
 
-
 function RecordKillsDeaths()
-	for _,player in ipairs(Game.GetPlayers()) do
+	for _, player in ipairs(Game.GetPlayers()) do
 		local entry = GetEntryForPlayer(player)
 		entry.kills = player.kills
 		entry.deaths = player.deaths
 	end
 end
 
-
 function RecordPlayerWeapons()
-	for _,player in ipairs(Game.GetPlayers()) do
+	for _, player in ipairs(Game.GetPlayers()) do
 		local entry = GetEntryForPlayer(player)
 		if not entry.totalWeaponTime then
 			entry.totalWeaponTime = 0
 		end
 		entry.totalWeaponTime = entry.totalWeaponTime + WEAPON_RECORDING_INTERVAL
-		
-		for _,equipment in ipairs(player:GetEquipment()) do
+
+		for _, equipment in ipairs(player:GetEquipment()) do
 			local key = equipment.name
 			local classId = equipment:GetCustomProperty("ClassID")
-			if key == "Warrior" 
-			or key == "Hunter" 
-			or key == "Mage" 
-			or key == "Assassin"
-			or key == "Healer" then
+			if key == "Warrior" or key == "Hunter" or key == "Mage" or key == "Assassin" or key == "Healer" then
 				if not entry.weapons[key] then
 					entry.weapons[key] = 0
 				end
 				entry.weapons[key] = entry.weapons[key] + WEAPON_RECORDING_INTERVAL
-				if classId and classId > 0 then
-					entry.classes[key] = CLASS_PROGRESSION.GetClassLevel(player, classId)
-				end
 			end
 		end
 	end
 end
 
-
 function OnPlayerJoined(player)
 	local entry = GetEntryForPlayer(player)
 	entry.joinTime = os.time()
-	
+
 	UpdatePlayerCountHistory(1)
 end
-
 
 function OnPlayerLeft(player)
 	local entry = GetEntryForPlayer(player)
 	entry.leaveTime = os.time()
-	
+
 	UpdatePlayerCountHistory(-1)
 end
-
 
 function OnRoundStarted()
 	if report.playerCountHistory then
 		report.playerCountHistory = report.playerCountHistory .. ",RS"
 	end
-	
+
 	report.startTime = os.time()
-	
-	for _,player in ipairs(Game.GetPlayers()) do
+
+	for _, player in ipairs(Game.GetPlayers()) do
 		local entry = GetEntryForPlayer(player)
 		entry.totalWeaponTime = 0
 		entry.weapons = {}
 	end
 end
 
-
 function OnRoundEnded()
 	roundCount = roundCount + 1
 	report.endTime = os.time()
 	RecordWinLoss()
 	RecordKillsDeaths()
-	
 	PrintReport()
 	Reset()
 end
-
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Game.roundStartEvent:Connect(OnRoundStarted)
 Game.roundEndEvent:Connect(OnRoundEnded)
-

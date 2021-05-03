@@ -14,6 +14,7 @@ local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
 local CONSUMABLES_COSTS = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
 local ClickSFX = script:GetCustomProperty("ClickSFX")
+local TorneyNotice = script:GetCustomProperty("TorneyNotice"):WaitForObject()
 
 local function META_AP()
     while not _G["Meta.Ability.Progression"] do
@@ -134,8 +135,10 @@ local function ToggleUI(isTrue)
     UI.SetCursorLockedToViewport(isTrue)
     if isTrue then
         REWARD_PARENT_UI.visibility = Visibility.FORCE_ON
+        TorneyNotice.visibility = Visibility.FORCE_OFF
     else
         REWARD_PARENT_UI.visibility = Visibility.FORCE_OFF
+        TorneyNotice.visibility = Visibility.FORCE_OFF
         RemoveAllCards()
         DisconnectListeners()
     end
@@ -305,7 +308,7 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             AbilityName.text = infoTable.Name
             AbilityName:SetColor(RarityColors[rarity])
 
-            local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class)
+            local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class, true)
             CurrentLevel.text = tostring(abilityLevel)
             NextLevel.text = tostring(abilityLevel + 1)
 
@@ -315,7 +318,7 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             InfoDescription.text = infoTable.Description
         elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
             infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
-            local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class)
+            local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class, true)
             currentAmmount = META_CP().GetClassXp(LOCAL_PLAYER, class)
             reqXp = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
 
@@ -586,6 +589,7 @@ function OnRewardSelect()
     for cardButton, slotID in pairs(SelectedCards) do
         table.insert(playerRewards, slotID)
     end
+    TorneyNotice.visibility = Visibility.INHERIT
     ANIMATION.context.RevealChosenCards(SelectedCards, CardPanels)
     Events.BroadcastToServer(NAMESPACE .. "GivePlayerRewards", playerRewards)
     Task.Spawn(
@@ -613,6 +617,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         ANIMATION.context.OnRewardShow(CardPanels)
         isRewardsLoaded = false
     elseif newState == ABGS.GAME_STATE_REWARDS_END and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
+        TorneyNotice.visibility = Visibility.INHERIT
         AutoSelectRewards()
         local playerRewards = {}
         for cardButton, slotID in pairs(SelectedCards) do

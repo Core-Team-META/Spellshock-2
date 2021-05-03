@@ -283,14 +283,14 @@ Objects {
   Name: "Map Camera"
   Transform {
     Location {
-      X: -27076.4063
-      Y: 11593.4746
-      Z: 36532.3086
+      X: -3034.52124
+      Y: -12056.0361
+      Z: 8475.7334
     }
     Rotation {
-      Pitch: -53.2585258
-      Yaw: -36.7458267
-      Roll: 4.28167505e-06
+      Pitch: -41.7134094
+      Yaw: 90.4087
+      Roll: 2.28745807e-06
     }
     Scale {
       X: 1
@@ -316,8 +316,8 @@ Objects {
     PositionOffset {
     }
     RotationOffset {
-      Pitch: -53.2585754
-      Yaw: -36.7458496
+      Pitch: -41.7134094
+      Yaw: 90.4087
     }
     FieldOfView: 90
     ViewWidth: 12000

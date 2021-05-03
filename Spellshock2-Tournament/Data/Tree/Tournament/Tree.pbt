@@ -1777,7 +1777,6 @@ Objects {
     Overrides {
       Name: "cs:NewScore2"
       ObjectReference {
-        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -1789,7 +1788,6 @@ Objects {
     Overrides {
       Name: "cs:BestScore2"
       ObjectReference {
-        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -1838,15 +1836,31 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Enabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:LeaderboardReference"
       NetReference {
-        Key: "E51F21AA8E227D05"
+        Key: "F16061CB3DD1328D"
         Type {
           Value: "mc:enetreferencetype:leaderboard"
         }
+      }
+    }
+    Overrides {
+      Name: "cs:EventID"
+      String: "CoreTrials"
+    }
+    Overrides {
+      Name: "cs:MetaAbilityProgressionConstants_API"
+      AssetReference {
+        Id: 15718075383189814537
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
   }
