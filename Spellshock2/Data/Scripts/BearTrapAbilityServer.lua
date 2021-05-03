@@ -40,7 +40,9 @@ function PlaceObject(thisAbility)
 	Task.Wait()
 	Task.Wait()
 	if not Object.IsValid(SpecialAbility) or not Object.IsValid(SpecialAbility.owner) then
-		newTrap:Destroy()
+		if Object.IsValid(newTrap) then
+			newTrap:Destroy()
+		end
 	end
 	newTrap:SetNetworkedCustomProperty("OwnerID", SpecialAbility.owner.id)	
 end
