@@ -1,10 +1,37 @@
 Assets {
+  Id: 18292448005538599011
+  Name: "Main Street Pillar 01 - Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_part_pillar_small_01_ref"
+  }
+}
+Assets {
   Id: 18186703465705438416
   Name: "Pyramid - 8-Sided Truncated"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pyramid_eighsided_truncated_001"
+  }
+}
+Assets {
+  Id: 18115774504240936051
+  Name: "Prism - 6-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_hexagon_001"
+  }
+}
+Assets {
+  Id: 18035432937960847746
+  Name: "Pipe - Quarter - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_lg_001_ref"
   }
 }
 Assets {
@@ -23,6 +50,15 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_gal_upper_sport_002_ref"
+  }
+}
+Assets {
+  Id: 17882896792933737184
+  Name: "Main Street Trim 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_trim_001_ref"
   }
 }
 Assets {
@@ -116,6 +152,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16683205471875026019
+  Name: "Cube - Rounded Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_rounded_001"
+  }
+}
+Assets {
   Id: 16640745019618043245
   Name: "Stone Basic"
   PlatformAssetType: 2
@@ -170,6 +215,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16000998614051823570
+  Name: "Trim - Straight - 08m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_trimitives_001_straight_8m_ref"
+  }
+}
+Assets {
   Id: 15683169359350375517
   Name: "Capsule"
   PlatformAssetType: 1
@@ -203,6 +257,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_001"
+  }
+}
+Assets {
+  Id: 15402296587404581505
+  Name: "Main Street Trim 02 - Corner"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_trim_002_corner_ref"
   }
 }
 Assets {
@@ -248,6 +311,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F6_Text_024"
+  }
+}
+Assets {
+  Id: 14863642431018513055
+  Name: "Prism - 5-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_pentagon_hq_001"
   }
 }
 Assets {
@@ -374,6 +446,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_blade_sword_004_ref"
+  }
+}
+Assets {
+  Id: 13841979021975495954
+  Name: "Pipe - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_lg_001_ref"
   }
 }
 Assets {
@@ -629,6 +710,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10396917736734746205
+  Name: "Main Street Foundation 01 - Corner"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_pillar_base_001_ref"
+  }
+}
+Assets {
   Id: 10386363488908962061
   Name: "Sphere"
   PlatformAssetType: 1
@@ -680,6 +770,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_shield_001"
+  }
+}
+Assets {
+  Id: 9566477155869250680
+  Name: "Wedge - Corner Complex - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_corelogo_shape_lg_001_ref"
   }
 }
 Assets {
@@ -899,6 +998,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7081561329622839522
+  Name: "Prism - 6-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_hexagon_hq_001"
+  }
+}
+Assets {
   Id: 6777629735529728799
   Name: "Fantasy Mace Head 01"
   PlatformAssetType: 1
@@ -941,6 +1049,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_quarter_pipe_wedge_002"
+  }
+}
+Assets {
+  Id: 5866323293989876544
+  Name: "Sci-fi Trim 01 S bend"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_scifi_trim_001_bend_up"
   }
 }
 Assets {
@@ -1022,6 +1139,15 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_guy_lower_fantasy_000_ref"
+  }
+}
+Assets {
+  Id: 4720527140667352434
+  Name: "Sci-fi Trim 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_scifi_trim_001_4m"
   }
 }
 Assets {
@@ -1169,6 +1295,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3398511306159614333
+  Name: "Fantasy Throne 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fantasy_throne_001_ref"
+  }
+}
+Assets {
   Id: 3345942036635779138
   Name: "Ring - Quarter"
   PlatformAssetType: 1
@@ -1241,6 +1376,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2417035538954855448
+  Name: "Ambient Occlusion Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_ao"
+  }
+}
+Assets {
   Id: 2303506147468924323
   Name: "Plane 4m - Two Sided"
   PlatformAssetType: 1
@@ -1274,6 +1418,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_ChargeUp_Hold_Var1"
+  }
+}
+Assets {
+  Id: 1936447668697306516
+  Name: "Main Street Trim 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_trim_002_ref"
   }
 }
 Assets {
@@ -1328,6 +1481,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pyramid_eighsided_001"
+  }
+}
+Assets {
+  Id: 1469570008751887144
+  Name: "Sci-fi Trim 01 End"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_scifi_trim_001_end"
   }
 }
 Assets {

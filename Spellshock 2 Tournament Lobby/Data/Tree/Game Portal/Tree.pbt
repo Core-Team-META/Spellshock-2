@@ -40,14 +40,19 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
+      X: 0.000112533569
+      Y: 1.52587891e-05
+      Z: -944.539246
     }
     Rotation {
-      Yaw: -89.9999542
+      Pitch: 90
+      Yaw: -90
+      Roll: -0.00146484375
     }
     Scale {
-      X: 1.79481459
-      Y: 1.16106033
-      Z: 2.07701278
+      X: 1.20473337
+      Y: 1.20473337
+      Z: 1.20473337
     }
   }
   ParentId: 4673865463779290119
@@ -110,7 +115,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Portal Shape"
-      Int: 12
+      Int: 1
     }
     Overrides {
       Name: "bp:Portal Spread"
