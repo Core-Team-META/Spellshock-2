@@ -48,7 +48,7 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY or not Object.IsValid(thisAbility.owner) then 
 		return 
 	end
 	local targetPosition = thisAbility.owner:GetWorldPosition()
