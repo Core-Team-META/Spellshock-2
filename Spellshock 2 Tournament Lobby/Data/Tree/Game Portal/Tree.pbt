@@ -236,30 +236,26 @@ Objects {
     Overrides {
       Name: "bp:Color A"
       Color {
-        R: 0.907500327
-        B: 0.99
+        R: 0.583333492
+        B: 1
         A: 1
       }
     }
     Overrides {
       Name: "bp:Color B"
       Color {
-        R: 0.437000155
-        B: 0.570000052
+        R: 0.130000398
+        B: 0.312
         A: 1
       }
     }
     Overrides {
       Name: "bp:Color C"
       Color {
-        R: 0.279999971
-        B: 0.163333222
+        R: 0.0511500239
+        B: 0.0990000069
         A: 1
       }
-    }
-    Overrides {
-      Name: "bp:Color Offset A"
-      Float: 0.309193224
     }
     Overrides {
       Name: "bp:Color Offset B"
@@ -267,7 +263,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Emissive Boost"
-      Float: 1.5
+      Float: 0
     }
     Overrides {
       Name: "bp:Portal Shape"
@@ -284,17 +280,9 @@ Objects {
     Overrides {
       Name: "bp:Scene Tint Color"
       Color {
-        R: 1
-        G: 0.56
-        B: 0.860666513
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Swirl Color"
-      Color {
-        R: 0.526500046
-        B: 0.809999943
+        R: 0.505500257
+        G: 0.309999943
+        B: 1
         A: 1
       }
     }
@@ -339,6 +327,26 @@ Objects {
     Overrides {
       Name: "bp:Vertical Bend Amount"
       Float: 0
+    }
+    Overrides {
+      Name: "bp:Color Offset A"
+      Float: 0.379980177
+    }
+    Overrides {
+      Name: "bp:Color Offset C"
+      Float: 0.759764194
+    }
+    Overrides {
+      Name: "bp:Intensity Color Blend"
+      Float: 0.565002561
+    }
+    Overrides {
+      Name: "bp:Swirl Color"
+      Color {
+        R: 0.130000398
+        B: 0.312
+        A: 1
+      }
     }
   }
   Collidable_v2 {

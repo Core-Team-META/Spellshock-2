@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17160263405929754053
+  Name: "Pipe - Quarter"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_001"
+  }
+}
+Assets {
   Id: 17151860729266019609
   Name: "Simple Exposure Post Process"
   PlatformAssetType: 20
@@ -215,6 +224,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16269162455055361493
+  Name: "Cube - Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_hq_test_001"
+  }
+}
+Assets {
   Id: 16242947141551458551
   Name: "Pyramid - 7-Sided Truncated"
   PlatformAssetType: 1
@@ -305,6 +323,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15311550138640852139
+  Name: "Cone - Truncated Hollow Concave"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_truncated_hollow_convex_001"
+  }
+}
+Assets {
   Id: 15275406079777444750
   Name: "Helix - 0.75"
   PlatformAssetType: 1
@@ -347,6 +374,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_banner_001"
+  }
+}
+Assets {
+  Id: 14690929629184396019
+  Name: "Color Grading Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_color_grading"
   }
 }
 Assets {
@@ -422,6 +458,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14241051475475996292
+  Name: "Decal Stains Bottom 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_stain_bottom_001"
+  }
+}
+Assets {
   Id: 14212988502358508072
   Name: "Metal Basic Steel"
   PlatformAssetType: 2
@@ -485,12 +530,12 @@ Assets {
   }
 }
 Assets {
-  Id: 13639117121097227691
-  Name: "Bricks Stone Block 01"
-  PlatformAssetType: 2
+  Id: 13650699884663610996
+  Name: "Decal Stains Round 01"
+  PlatformAssetType: 14
   PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bricks_stone_block_001"
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_stain_round_001"
   }
 }
 Assets {
@@ -536,6 +581,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_urb_pipes_acc_coupling_005_ref"
+  }
+}
+Assets {
+  Id: 12570018260124267559
+  Name: "Floor Candle Holder 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_candle_holder_floor_003"
   }
 }
 Assets {
@@ -665,6 +719,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11222178004213706966
+  Name: "Fantasy Castle Stairs Spiral Trim 01 - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_lg"
+  }
+}
+Assets {
   Id: 11212504336090518945
   Name: "Metal Old Beaten Gold 02"
   PlatformAssetType: 2
@@ -716,6 +779,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_002"
+  }
+}
+Assets {
+  Id: 10549684399192797779
+  Name: "Decal Stains Top 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_stain_top_001"
   }
 }
 Assets {
@@ -788,6 +860,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_corelogo_shape_lg_001_ref"
+  }
+}
+Assets {
+  Id: 9551966620731737544
+  Name: "Metal Basic 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_basic_001"
   }
 }
 Assets {
@@ -869,6 +950,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tooth_002"
+  }
+}
+Assets {
+  Id: 8106462835096310727
+  Name: "Pyramid - 8-Sided Truncated Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_eighsided_truncated_hq_001"
   }
 }
 Assets {
@@ -1340,6 +1430,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2826075149155698228
+  Name: "Cube - Chamfered Small Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_hq_003"
+  }
+}
+Assets {
   Id: 2811265457860980199
   Name: "Text 05: J"
   PlatformAssetType: 1
@@ -1355,6 +1454,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_invisible_001"
+  }
+}
+Assets {
+  Id: 2712652439387027265
+  Name: "Play Bold"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "PlayBold_ref"
   }
 }
 Assets {

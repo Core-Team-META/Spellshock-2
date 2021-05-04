@@ -1,19 +1,23 @@
 Assets {
-  Id: 1200203494458278078
-  Name: "Golden Bricks Large Foundation 01"
+  Id: 4910813762722542435
+  Name: "Custom Basic Material"
   PlatformAssetType: 13
   SerializationVersion: 81
   CustomMaterialAsset {
-    BaseMaterialId: 4710488340079958283
+    BaseMaterialId: 10184847056121543272
     ParameterOverrides {
       Overrides {
         Name: "gradient_color"
         Color {
-          R: 0.282
-          G: 0.282
-          B: 0.282
+          R: 0.603631
+          G: 0.612424076
+          B: 0.679
           A: 1
         }
+      }
+      Overrides {
+        Name: "gradient_shift"
+        Float: 0
       }
       Overrides {
         Name: "gradient_direction"
@@ -22,21 +26,17 @@ Assets {
         }
       }
       Overrides {
-        Name: "gradient_shift"
-        Float: 0.180072546
-      }
-      Overrides {
         Name: "gradient_falloff"
-        Float: 0.617503464
+        Float: 0.345835745
       }
     }
     Assets {
-      Id: 4710488340079958283
-      Name: "Bricks Large Foundation 01"
+      Id: 10184847056121543272
+      Name: "Basic Material"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_brick_large_foundation_001"
+        AssetId: "mi_basic_pbr_material_001"
       }
     }
   }
