@@ -13,25 +13,43 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
-local MIN_PLAYERS_TO_SUBMIT = 2
-local POINTS_PER_SUICIDE = -5
-local POINTS_PER_KILL_WILD = 5
-local POINTS_PER_KILL_TO_DEFENDER = 10
-local POINTS_PER_KILL_WHILE_SUPPORT = 15
-local POINTS_PER_DEATH_WILD = -4
-local POINTS_PER_DEATH_WHILE_SUPPORT = -2
+local MIN_PLAYERS_TO_SUBMIT = 2   -- 6
+local POINTS_PER_SUICIDE = -5    -- 0
+local POINTS_PER_KILL_WILD = 5   -- 20
+local POINTS_PER_KILL_TO_DEFENDER = 10  -- 30
+local POINTS_PER_KILL_WHILE_SUPPORT = 15   -- 25
+local POINTS_PER_DEATH_WILD = -4    -- -15
+local POINTS_PER_DEATH_WHILE_SUPPORT = -2    -- -12
 --local POINTS_PER_HEADSHOT = 2
 
-local POINTS_PER_DAMAGE_DONE = 0.1
-local POINTS_PER_HEALING_DONE = 0.075
-local POINTS_PER_KILL_STREAK = 50
+local POINTS_PER_DAMAGE_DONE = 0.1    -- .55
+local POINTS_PER_HEALING_DONE = 0.075    -- .375
+local POINTS_PER_KILL_STREAK = 50   -- 100
 
-local DIMINISHING_RETURNS = 1
-local MIN_KILL_VALUE = 1
-local POINTS_PER_OBJECTIVE_CAPTURED = 250
-local POINTS_PER_OBJECTIVE_SUPPORT = 200
+local DIMINISHING_RETURNS = 1   -- 2
+local MIN_KILL_VALUE = 1   -- 3
+local POINTS_PER_OBJECTIVE_CAPTURED = 250   -- 200
+local POINTS_PER_OBJECTIVE_SUPPORT = 200    -- 200
 local BONUS_MULTIPLY_PER_UNIQUE_KILL = 0.109
 local MAX_UNIQUE_COUNT = 8
+
+--To Add
+-- Kill Assists?
+-- Score Differential (raw points added based on your team's score)
+-- For example:
+-- Orc Score = 500, Elf Score = 235. Orc team would get +500 points, Elf team would get +235 points. Adds to score after win multiplier calculation.
+-- Make kill multiplier additive not a multiplier on the score (base 100 per unique kill)
+-- Show assists on scoreboard for capturing points (not just 'f' to capture points) Change caps/assists
+-- Have per class modifier on score applied at end?
+-- Add "soft cap" value which when reached. 2 new variables, soft cap point, and soft cap amount. Subtract this soft cap amount from base point value after the softcap point is reached.
+-- For example:
+-- If points per objective is set to 200, soft cap point = 5, soft cap amount = 50. Values would go: [200,200,200,200,200,150,100,50,0,0,0]
+-- Stop awarding points after a specific time (30m)
+-- Add assist captures to server printouts
+-- Separate bonus kill multiplier from kill points (since it will be additive), and add kill points as a new printout.
+-- V2 have a kill assist value 
+
+
 
 --Point Multiplier For Winning & Losing Team
 local POINTS_FOR_VICTORY = 5
