@@ -962,6 +962,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8355298660985848341
+  Name: "Glow Shape Decal"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_glow"
+  }
+}
+Assets {
   Id: 8210514785031040523
   Name: "Thorn"
   PlatformAssetType: 1

@@ -184,7 +184,7 @@ function Tick(deltaTime)
             line:GetCustomProperty("DeathsText"):WaitForObject().text = tostring(player.deaths)
             line:GetCustomProperty("UltKills"):WaitForObject().text = tostring(player:GetResource(RES.ULTIMATE_KILL))
             line:GetCustomProperty("CapturePoints"):WaitForObject().text =
-                tostring(player:GetResource(RES.TOTAL_CAPTURE_POINTS))
+                tostring(player:GetResource(RES.TOTAL_CAPTURE_POINTS) + player:GetResource(RES.CAPTURE_ASSISTS))
             line:GetCustomProperty("Damage"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_DAMAGE_RES))
             line:GetCustomProperty("Healing"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_HEALING_RES))
             line:GetCustomProperty("Killstreak"):WaitForObject().text =

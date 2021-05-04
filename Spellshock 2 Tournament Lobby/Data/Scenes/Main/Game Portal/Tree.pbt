@@ -239,7 +239,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Emissive Boost"
-      Float: 0
+      Float: 5
     }
     Overrides {
       Name: "bp:Portal Shape"
@@ -327,8 +327,8 @@ Objects {
     Overrides {
       Name: "bp:Color C"
       Color {
-        R: 0.0367334373
-        B: 0.116000004
+        R: 0.177650779
+        B: 0.561000049
         A: 1
       }
     }
