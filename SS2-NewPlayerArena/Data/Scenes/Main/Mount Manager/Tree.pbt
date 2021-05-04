@@ -15,16 +15,16 @@ Objects {
     }
   }
   ParentId: 12146404963937762687
-  ChildIds: 11825402674680137393
-  ChildIds: 10123162396797782446
-  ChildIds: 13485595245730455331
-  ChildIds: 2072705044685468058
-  ChildIds: 5778910747102975849
-  ChildIds: 10505087714449163207
-  ChildIds: 13587540951463717719
-  ChildIds: 2099052007542702274
-  ChildIds: 2407866160960248724
-  ChildIds: 12662488347679841356
+  ChildIds: 3489153405651434601
+  ChildIds: 6443973191784755757
+  ChildIds: 540605391869468028
+  ChildIds: 7131598685440868313
+  ChildIds: 7983400392815730391
+  ChildIds: 8693735909370429630
+  ChildIds: 14881954156407727219
+  ChildIds: 3202887429084992091
+  ChildIds: 10195958645555522802
+  ChildIds: 10203152351608290712
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -39,7 +39,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12662488347679841356
+  Id: 10203152351608290712
   Name: "Mount Level 10"
   Transform {
     Location {
@@ -92,8 +92,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1940
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1840
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -124,7 +124,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2407866160960248724
+  Id: 10195958645555522802
   Name: "Mount Level 9"
   Transform {
     Location {
@@ -177,8 +177,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1920
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1820
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -209,7 +209,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2099052007542702274
+  Id: 3202887429084992091
   Name: "Mount Level 8"
   Transform {
     Location {
@@ -262,8 +262,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1900
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1800
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -294,7 +294,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13587540951463717719
+  Id: 14881954156407727219
   Name: "Mount Level 7"
   Transform {
     Location {
@@ -347,8 +347,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1880
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1780
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -379,7 +379,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10505087714449163207
+  Id: 8693735909370429630
   Name: "Mount Level 6"
   Transform {
     Location {
@@ -432,8 +432,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1860
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1760
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -464,7 +464,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5778910747102975849
+  Id: 7983400392815730391
   Name: "Mount Level 5"
   Transform {
     Location {
@@ -517,8 +517,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1840
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1740
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -549,7 +549,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2072705044685468058
+  Id: 7131598685440868313
   Name: "Mount Level 4"
   Transform {
     Location {
@@ -602,8 +602,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1820
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1720
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -634,7 +634,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13485595245730455331
+  Id: 540605391869468028
   Name: "Mount Level 3"
   Transform {
     Location {
@@ -687,8 +687,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1800
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1700
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -719,7 +719,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10123162396797782446
+  Id: 6443973191784755757
   Name: "Mount Level 2"
   Transform {
     Location {
@@ -772,8 +772,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1780
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1680
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -804,7 +804,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11825402674680137393
+  Id: 3489153405651434601
   Name: "Mount Level 1"
   Transform {
     Location {
@@ -857,8 +857,8 @@ Objects {
       LookAtCursorProjectionPlane {
         Value: "mc:eprojectionplane:xy"
       }
-      MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1760
+      MountedMaxAcceleration: 1400
+      MountedWalkSpeed: 1660
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
