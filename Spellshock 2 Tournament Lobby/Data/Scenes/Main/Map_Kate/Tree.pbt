@@ -109496,6 +109496,38 @@ Objects {
         A: 1
       }
     }
+    Overrides {
+      Name: "bp:Distortion Amount"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Distortion Speed"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Distortion Scale"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Use Sun Direction for Directional Caustics"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Create Water Physics Volume"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Control Fog"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Caustics"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Water"
+      Bool: false
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
