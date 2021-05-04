@@ -34556,11 +34556,11 @@ Objects {
     }
     Overrides {
       Name: "cs:RoundHasDuration"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:RoundDuration"
-      Float: 120
+      Float: 1800
     }
     Overrides {
       Name: "cs:RoundEndHasDuration"
