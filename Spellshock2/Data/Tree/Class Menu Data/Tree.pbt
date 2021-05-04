@@ -4147,6 +4147,7 @@ Objects {
     }
   }
   ParentId: 10980313450103268903
+  ChildIds: 12693740746453728700
   ChildIds: 1234445642780183423
   ChildIds: 16181215288139751250
   ChildIds: 4885990649472038852
@@ -4159,7 +4160,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies caught in the roots are stunned."
+      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies caught in the roots take damage over time and are slowed. Slow = 70%."
     }
     Overrides {
       Name: "cs:Bind"
@@ -4269,7 +4270,7 @@ Objects {
 }
 Objects {
   Id: 1234445642780183423
-  Name: "Stun"
+  Name: "Slow"
   Transform {
     Location {
     }
@@ -4285,7 +4286,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How long an enemy will be stunned"
+      String: "How long an enemy will be slowed"
     }
     Overrides {
       Name: "cs:Icon"
@@ -4296,6 +4297,54 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod5"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12693740746453728700
+  Name: "Bleed"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7308866633911095885
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of damage applied to enemies per second"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 7227656168876650477
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
     }
     Overrides {
       Name: "cs:IsStatusEffect"
