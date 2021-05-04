@@ -2,7 +2,7 @@ Assets {
   Id: 3643490921711628289
   Name: "Custom Generic Water - No Distortion"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 14130572198134432741
     ParameterOverrides {
@@ -18,9 +18,9 @@ Assets {
       Overrides {
         Name: "shallow color"
         Color {
-          R: 0.225000009
+          R: 0.178537548
           G: 0.0258749761
-          B: 0.185174748
+          B: 0.225000009
           A: 1
         }
       }
@@ -47,7 +47,7 @@ Assets {
       }
       Overrides {
         Name: "opacity"
-        Float: 0.304394096
+        Float: 0.230721861
       }
       Overrides {
         Name: "opacity distance"

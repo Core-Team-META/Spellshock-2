@@ -136,7 +136,7 @@ local function CalculateSlot1(player)
         reward = REWARD_UTIL.GetSkillReward()
         reward = GiveNoneCappedAbilityCard(player, reward, class)
     end
-    reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
+    --reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
     return reward
 end
 
@@ -170,7 +170,7 @@ local function CalculateRegularSlot(player)
         reward = REWARD_UTIL.GetSkillReward()
         reward = GiveNoneCappedAbilityCard(player, reward, reward.class)
     end
-    reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
+    --reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
     return reward
 end
 
@@ -234,6 +234,7 @@ local function GetPlayerRewards(player)
         --Losing team gets small gold amount.
         tempTable[2] = REWARD_UTIL.GetLoserGoldAmmount()
     end
+
 
     for slot = 3, numberOfCards, 1 do
         tempTable[slot] = CalculateRegularSlot(player)

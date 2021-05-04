@@ -27,7 +27,11 @@ local chickenSuits = {
     [11] = script:GetCustomProperty("ChickenSuit11"),
     [12] = script:GetCustomProperty("ChickenSuit12"),
     [13] = script:GetCustomProperty("ChickenSuit13"),
-    [14] = script:GetCustomProperty("ChickenSuit14")
+    [14] = script:GetCustomProperty("ChickenSuit14"),
+    [15] = script:GetCustomProperty("ChickenSuit15"),
+    [16] = script:GetCustomProperty("ChickenSuit16"),
+    [17] = script:GetCustomProperty("ChickenSuit17"),
+    [18] = script:GetCustomProperty("ChickenSuit18"),
 }
 
 local function ReturnPlayerByName(Name)
@@ -379,7 +383,7 @@ commands = {
             if (target) then
                 target = ReturnPlayerByName(target)
             end
-         
+
             if target and Object.IsValid(target) then
                 Events.Broadcast("GETCOSMETIC", target, skin)
             end
@@ -436,7 +440,7 @@ commands = {
         OnCommandCalledServer = function(player, message)
             local split = {CoreString.Split(message)}
             local target = split[2] or nil
-            local duration = tonumber(split[3]) or 5
+            local duration = tonumber(split[3]) or 20
             local skinNumber = tonumber(split[4]) or nil
 
             if duration > 30 then

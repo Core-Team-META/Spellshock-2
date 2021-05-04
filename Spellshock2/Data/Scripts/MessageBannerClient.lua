@@ -38,7 +38,7 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local DEFAULT_DURATION = 5
 
 local function META_CP()
-	return _G["Class.Progression"]
+    return _G["Class.Progression"]
 end
 
 -- Check user properties
@@ -52,57 +52,114 @@ local messageEndTime = 0.0
 local playerLevelTimer = 0.0
 local classIcons = {}
 local LockedSkins = {}
+local messageQueue = {}
+local priorityQueue = {}
+
+local function ResetPanels()
+    PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
+    PANEL_ORC.visibility = Visibility.FORCE_OFF
+    PANEL_ELF.visibility = Visibility.FORCE_OFF
+    PANEL_LOOT.visibility = Visibility.FORCE_OFF
+    PlayerClassLevelup.visibility = Visibility.FORCE_OFF
+    LocalPlayerClassLevelup.visibility = Visibility.FORCE_OFF
+end
+
+local function ShowMessage(message)
+    ResetPanels()
+
+    local shouldShow = false
+
+    if not message.player then
+        TEXT_BOX.text = message.text
+        message.visable.visibility = Visibility.INHERIT
+        PANEL.visibility = Visibility.INHERIT
+        shouldShow = true
+    elseif message.player and Object.IsValid(message.player) and message.classID and message.classLevel then
+        if message.player == LOCAL_PLAYER then
+            LocalPlayerClassLevelUp(message.classID, tonumber(message.classLevel))
+        end
+        local propTeamBanners = PlayerClassLevelup:GetCustomProperty("TeamBanners"):WaitForObject()
+        local propBannerText = PlayerClassLevelup:GetCustomProperty("BannerText"):WaitForObject()
+
+        propBannerText.text = message.text
+
+        for index, panel in ipairs(propTeamBanners:GetChildren()) do
+            if index == message.player.team then
+                panel.visibility = Visibility.INHERIT
+            else
+                panel.visibility = Visibility.FORCE_OFF
+            end
+        end
+        message.visable.visibility = Visibility.INHERIT
+        shouldShow = true
+    end
+    if not shouldShow then
+        return
+    end
+
+    if message.sfx then
+        message.sfx:Play()
+    end
+
+    local timer = message.duration + time()
+
+    while time() < timer do
+        Task.Wait()
+    end
+    PANEL.visibility = Visibility.FORCE_OFF
+    PlayerClassLevelup.visibility = Visibility.FORCE_OFF
+    LocalPlayerClassLevelup.visibility = Visibility.FORCE_OFF
+end
 
 -- nil OnBannerMessageEvent(string, <float>)
 -- Handles a client side banner message event
 function OnBannerMessageEvent(message, duration, type)
-
-    if not type then type = 0 end
+    local tempTbl = {}
+    local isPriority = false
+    if not type then
+        type = 0
+    end
 
     if duration then
-        messageEndTime = time() + duration
+        tempTbl.duration = duration
     else
-        messageEndTime = time() + DEFAULT_DURATION
+        tempTbl.duration = DEFAULT_DURATION
     end
 
-    if type == 1 then
-        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
-        PANEL_ORC.visibility = Visibility.INHERIT
-        PANEL_ELF.visibility = Visibility.FORCE_OFF
-        PANEL_LOOT.visibility = Visibility.FORCE_OFF
-    elseif type == 2 then
-        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
-        PANEL_ORC.visibility = Visibility.FORCE_OFF
-        PANEL_ELF.visibility = Visibility.INHERIT
-        PANEL_LOOT.visibility = Visibility.FORCE_OFF
-    elseif type == 3 then
-        PANEL_DEFAULT.visibility = Visibility.FORCE_OFF
-        PANEL_ORC.visibility = Visibility.FORCE_OFF
-        PANEL_ELF.visibility = Visibility.FORCE_OFF
-        PANEL_LOOT.visibility = Visibility.INHERIT
-        LootSFX:Play()
-    else
-        PANEL_DEFAULT.visibility = Visibility.INHERIT
-        PANEL_ORC.visibility = Visibility.FORCE_OFF
-        PANEL_ELF.visibility = Visibility.FORCE_OFF
-        PANEL_LOOT.visibility = Visibility.FORCE_OFF
+    if type == 1 then --
+        tempTbl.visable = PANEL_ORC
+        isPriority = true
+    elseif type == 2 then --
+        tempTbl.visable = PANEL_ELF
+        isPriority = true
+    elseif type == 3 then --
+        tempTbl.visable = PANEL_LOOT
+        tempTbl.sfx = LootSFX
+    else --
+        tempTbl.visable = PANEL_DEFAULT
     end
-    TEXT_BOX.text = message
+    tempTbl.text = message
+    --TEXT_BOX.text = message
 
-    PANEL.visibility = Visibility.INHERIT
+    --PANEL.visibility = Visibility.INHERIT
+    if isPriority then
+        priorityQueue[#priorityQueue + 1] = tempTbl
+    else
+        messageQueue[#messageQueue + 1] = tempTbl
+    end
 end
 
 function HasUnlockedCardSlot(_ClassID, _ClassLevel)
     -- Any class rank 50 and one other other class rank 25
-    
+
     -- At least 2 classes rank 25
-        
+
     -- Any class rank 25
-        
+
     -- Any two classes rank 10
-        
+
     -- Any class rank 10
-        
+
     -- Any class rank 5
 
     if _ClassLevel == 50 then
@@ -173,12 +230,12 @@ function HasUnlockedCardSlot(_ClassID, _ClassLevel)
             return true
         end
     end
- 
+
     return false
 end
 
 function LocalPlayerClassLevelUp(classID, classLevel)
-    local Rarity 
+    local Rarity
     local Amount
     if LockedSkins[classID] and LockedSkins[classID][classLevel] then
         for rarity, amount in pairs(LockedSkins[classID][classLevel]) do
@@ -211,7 +268,7 @@ function LocalPlayerClassLevelUp(classID, classLevel)
                 panel.visibility = Visibility.INHERIT
             else
                 panel.visibility = Visibility.FORCE_OFF
-            end 
+            end
         end
 
         LocalPlayerClassLevelup.visibility = Visibility.INHERIT
@@ -226,7 +283,7 @@ function OnPlayerClassLevelUp(data)
     local className = CONST.CLASS_NAME[classID]
     local classIcon = classIcons[classID]
     local _Player
-
+    local tempTbl = {}
     for _, player in ipairs(Game.GetPlayers()) do
         if player.id == playerID then
             _Player = player
@@ -239,35 +296,46 @@ function OnPlayerClassLevelUp(data)
     if not _Player or not Object.IsValid(_Player) then
         return
     end
+    tempTbl.classID = classID
+    tempTbl.classLevel = classLevel
+    tempTbl.player = _Player
+    tempTbl.sfx = LevelupSFX
+    tempTbl.text = _Player.name .. " is now a level " .. classLevel .. " " .. className .. "!"
+    --propBannerText.text = _Player.name .. " is now a level " .. classLevel .. " " .. className .. "!"
 
-    local propTeamBanners = PlayerClassLevelup:GetCustomProperty("TeamBanners"):WaitForObject()
-    local propBannerText = PlayerClassLevelup:GetCustomProperty("BannerText"):WaitForObject()
-
-    for index, panel in ipairs(propTeamBanners:GetChildren()) do
-        if index == _Player.team then
-            panel.visibility = Visibility.INHERIT
-        else
-            panel.visibility = Visibility.FORCE_OFF
-        end 
-    end
-
-    if _Player == LOCAL_PLAYER then
-        LocalPlayerClassLevelUp(classID, tonumber(classLevel))
-    end
-
-    propBannerText.text = _Player.name.." is now a level "..classLevel.." "..className.."!"
-    PlayerClassLevelup.visibility = Visibility.INHERIT
-    LevelupSFX:Play()
-    playerLevelTimer = time() + 5
+    tempTbl.visable = PlayerClassLevelup
+    --PlayerClassLevelup.visibility = Visibility.INHERIT
+    --LevelupSFX:Play()
+    tempTbl.duration = 5
+    messageQueue[#messageQueue + 1] = tempTbl
 end
+--
 
 -- nil Tick(float)
 -- Hides the banner when the message has expired
-function Tick(deltaTime)
-    if time() > messageEndTime then PANEL.visibility = Visibility.FORCE_OFF end
-    if time() > playerLevelTimer then 
-        PlayerClassLevelup.visibility = Visibility.FORCE_OFF 
-        LocalPlayerClassLevelup.visibility = Visibility.FORCE_OFF 
+--[[function Tick(deltaTime)
+    if time() > messageEndTime then
+        PANEL.visibility = Visibility.FORCE_OFF
+    end
+    if time() > playerLevelTimer then
+        PlayerClassLevelup.visibility = Visibility.FORCE_OFF
+        LocalPlayerClassLevelup.visibility = Visibility.FORCE_OFF
+    end
+end]] function Tick()
+    if #messageQueue > 0 then
+        for i, message in ipairs(messageQueue) do
+            for _, priorityMessage in ipairs(priorityQueue) do
+                ShowMessage(priorityMessage)
+            end
+            priorityQueue = {}
+            ShowMessage(message)
+        end
+        messageQueue = {}
+    elseif #priorityQueue > 0 then
+        for _, priorityMessage in ipairs(priorityQueue) do
+            ShowMessage(priorityMessage)
+        end
+        priorityQueue = {}
     end
 end
 
