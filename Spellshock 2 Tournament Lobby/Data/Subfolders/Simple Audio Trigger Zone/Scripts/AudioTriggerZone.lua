@@ -27,7 +27,6 @@ function OnBeginOverlap(whichTrigger, other)
 			end
 		end
 	end
-	UI.PrintToScreen("Entering Audio Zone")
 end
 
 function OnEndOverlap(whichTrigger, other)
@@ -45,7 +44,6 @@ function OnEndOverlap(whichTrigger, other)
 		end
 		
 	end
-	UI.PrintToScreen("Leaving Audio Zone")
 end
 trigger.beginOverlapEvent:Connect(OnBeginOverlap)
 trigger.endOverlapEvent:Connect(OnEndOverlap)

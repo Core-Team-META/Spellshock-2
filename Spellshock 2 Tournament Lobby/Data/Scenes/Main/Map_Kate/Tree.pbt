@@ -5,8 +5,8 @@ Objects {
   Name: "Audio Trigger Zone"
   Transform {
     Location {
-      X: 348.576447
-      Y: 81.7631531
+      X: 425.883759
+      Y: 31.8597107
       Z: 600.988892
     }
     Rotation {
@@ -69,7 +69,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "AudioFolderLeave"
+    FilePartitionName: "AudioFolderLeave_1"
   }
   InstanceHistory {
     SelfId: 6313522896044814693
@@ -107,7 +107,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "AudioFolderEnter"
+    FilePartitionName: "AudioFolderEnter_1"
   }
   InstanceHistory {
     SelfId: 14800891875601135023
@@ -126,8 +126,8 @@ Objects {
     Rotation {
     }
     Scale {
-      X: 41.6357193
-      Y: 44.280468
+      X: 32.2966118
+      Y: 30.3711987
       Z: 20.3282928
     }
   }
@@ -109009,6 +109009,8 @@ Objects {
   ChildIds: 13033445076528113921
   ChildIds: 17840514188880549395
   ChildIds: 12719815346971774543
+  ChildIds: 15052726796759829501
+  ChildIds: 3487447969755137664
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -109023,13 +109025,137 @@ Objects {
   }
 }
 Objects {
+  Id: 3487447969755137664
+  Name: "Main Street Trim Roof 01"
+  Transform {
+    Location {
+      X: 2648.88892
+      Y: -733.418213
+      Z: 256.000732
+    }
+    Rotation {
+      Yaw: 89.9999619
+    }
+    Scale {
+      X: 1.81092882
+      Y: 1.00000036
+      Z: 1
+    }
+  }
+  ParentId: 5710051249282809965
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 16640745019618043245
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.872
+        G: 0.554446638
+        B: 0.490935951
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4958645895924258569
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15052726796759829501
+  Name: "Main Street Trim Roof 01"
+  Transform {
+    Location {
+      X: -2657.03052
+      Y: -698.056213
+      Z: 254.842407
+    }
+    Rotation {
+      Yaw: 89.9999771
+    }
+    Scale {
+      X: 1.80278897
+      Y: 1.00000036
+      Z: 1
+    }
+  }
+  ParentId: 5710051249282809965
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 16640745019618043245
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.872
+        G: 0.554446638
+        B: 0.490935951
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4958645895924258569
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 12719815346971774543
   Name: "Main Street Trim Roof 01"
   Transform {
     Location {
       X: -2929.0354
       Y: -648.254639
-      Z: 404.290833
+      Z: 401.634338
     }
     Rotation {
       Yaw: 89.9999924
@@ -109091,7 +109217,7 @@ Objects {
     Location {
       X: 2923.11523
       Y: -683.601501
-      Z: 404.290833
+      Z: 402.137268
     }
     Rotation {
       Yaw: 89.9999847
@@ -183648,6 +183774,7 @@ Objects {
   ChildIds: 11999185619006882938
   ChildIds: 2252254853593156269
   ChildIds: 10180561426608337406
+  ChildIds: 6694572883672729244
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -183658,6 +183785,53 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 6694572883672729244
+  Name: "\"Legendary Dragons\" Music Construction Kit (Layers) 01"
+  Transform {
+    Location {
+      X: 83.1851807
+      Y: -79.8361816
+      Z: 677.692505
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12613884892960576705
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 7773266008358081590
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      AutoPlay: true
+      Repeat: true
+      Volume: 1
+      Falloff: 2500
+      Radius: 6500
+    }
   }
 }
 Objects {
