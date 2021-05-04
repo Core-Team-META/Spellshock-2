@@ -1043,6 +1043,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7773266008358081590
+  Name: "\"Legendary Dragons\" Music Construction Kit (Layers) 01"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_legendary_dragons_LayersKit_ref"
+  }
+}
+Assets {
   Id: 7683011456927666997
   Name: "Cylinder - Rounded"
   PlatformAssetType: 1
