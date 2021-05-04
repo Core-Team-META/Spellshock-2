@@ -4928,7 +4928,7 @@ Assets {
     }
     Assets {
       Id: 14320420807192399895
-      Name: "Dragon Mob"
+      Name: "Whelp Mob"
       PlatformAssetType: 17
       PrimaryAsset {
         AssetType: "AnimatedMeshAssetRef"
