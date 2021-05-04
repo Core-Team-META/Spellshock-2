@@ -1,38 +1,53 @@
 Assets {
-  Id: 16596999054384078775
-  Name: "Ritual Mage Face"
+  Id: 16804305352556126771
+  Name: "Orc Mage Face Floral Skin"
   PlatformAssetType: 13
   SerializationVersion: 84
   CustomMaterialAsset {
-    BaseMaterialId: 6717054932271956401
+    BaseMaterialId: 58872637069711017
     ParameterOverrides {
       Overrides {
         Name: "color"
         Color {
-          G: 0.6
-          B: 3
-          A: 1
-        }
-      }
-      Overrides {
-        Name: "color b"
-        Color {
-          G: 0.0298012756
-          B: 0.450000048
+          R: 2.73333359
+          G: 0.99999994
+          B: 5
           A: 1
         }
       }
       Overrides {
         Name: "glass color"
         Color {
-          G: 0.318499953
-          B: 0.546
+          R: 0.233333588
+          B: 1
           A: 1
+        }
+      }
+      Overrides {
+        Name: "color b"
+        Color {
+          R: 0.331666857
+          B: 0.995000064
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "color c"
+        Color {
+          R: 0.466666698
+          B: 1
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "direction"
+        Vector {
+          Z: -2
         }
       }
     }
     Assets {
-      Id: 6717054932271956401
+      Id: 58872637069711017
       Name: "Magic Glass"
       PlatformAssetType: 2
       PrimaryAsset {
