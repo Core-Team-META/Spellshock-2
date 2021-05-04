@@ -51,6 +51,10 @@ Objects {
   ChildIds: 11170131055330862764
   ChildIds: 7697366252771648917
   ChildIds: 1344518710125391134
+  ChildIds: 11241518505168010192
+  ChildIds: 12581616027390555472
+  ChildIds: 14777634933114000376
+  ChildIds: 2156232999650362116
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -61,6 +65,168 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 2156232999650362116
+  Name: "ELF_COSMETIC_SHOP_LEAVE_TRIGGER"
+  Transform {
+    Location {
+      X: 40854.7891
+      Y: 52148
+      Z: 1051.16553
+    }
+    Rotation {
+      Yaw: 33.1581116
+    }
+    Scale {
+      X: 4.19803429
+      Y: 4.21105433
+      Z: 4.60918236
+    }
+  }
+  ParentId: 16765011581879931807
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 14777634933114000376
+  Name: "ELF_COSMETIC_SHOP_TRIGGER"
+  Transform {
+    Location {
+      X: 40817.7109
+      Y: 52122.3594
+      Z: 1051.16553
+    }
+    Rotation {
+      Yaw: 33.1581116
+    }
+    Scale {
+      X: 1.12097239
+      Y: 1.12097239
+      Z: 3.26704121
+    }
+  }
+  ParentId: 16765011581879931807
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "View Perk Shop"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 12581616027390555472
+  Name: "ORC_COSMETIC_SHOP_LEAVE_TRIGGER"
+  Transform {
+    Location {
+      X: 28.2832031
+      Y: -895.933594
+      Z: 57.7231445
+    }
+    Rotation {
+    }
+    Scale {
+      X: 5.69476271
+      Y: 4.21105146
+      Z: 4.60918236
+    }
+  }
+  ParentId: 16765011581879931807
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 11241518505168010192
+  Name: "ORC_COSMETIC_SHOP_TRIGGER"
+  Transform {
+    Location {
+      X: 27.8769531
+      Y: -877.371094
+      Z: 36.190918
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.12097239
+      Y: 1.12097239
+      Z: 3.26704121
+    }
+  }
+  ParentId: 16765011581879931807
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "View Perk Shop"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
   }
 }
 Objects {

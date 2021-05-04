@@ -143,12 +143,12 @@ Assets {
   }
 }
 Assets {
-  Id: 14120106793287193701
-  Name: "SS2_ZS_PROD_PROGRESSION"
+  Id: 14114800094121343083
+  Name: "ss2_live_currency"
   PlatformAssetType: 23
   NetReferenceAsset {
     NetReference {
-      Key: "efb8cc776c454a7faa0ae8a959d38706"
+      Key: "d5d513aebe8a4907862c98637c1f7b6f"
       Type {
         Value: "mc:enetreferencetype:sharedpersistence"
       }
@@ -287,6 +287,19 @@ Assets {
   }
 }
 Assets {
+  Id: 10371669433068938597
+  Name: "ss2_live_cosmetic"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "c333b186a0784c47af674b7704808501"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 10039668417810932723
   Name: "SELFGOLDBOOST"
   PlatformAssetType: 24
@@ -347,19 +360,6 @@ Assets {
       Key: "74e99b0b92e84e3a844820861e1c4f49"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 8993538532088866557
-  Name: "SS2_ZS_PROD_CURRENCY"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "62a4022574c249e9a7c4f5227e02bf61"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -478,19 +478,6 @@ Assets {
       Key: "21a7c8f2bff34e6784e198612c79525a"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 6078765718293111990
-  Name: "SS2_ZS_PROD_COSMETICS"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "89c321e4f4904b25afd9c8acb39a446d"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -678,6 +665,19 @@ Assets {
       Key: "39f7b248b32c4890a7b8666d16e98e12"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 438504899441459321
+  Name: "ss2_live_progression"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "fda12f8c98b648b0a612628d288062a6"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

@@ -41,8 +41,8 @@ Objects {
   Name: "Elf_Merchant_03"
   Transform {
     Location {
-      X: 20715.6504
-      Y: 26311.668
+      X: 20751.2012
+      Y: 26372.082
       Z: 944.123535
     }
     Rotation {
@@ -2127,7 +2127,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Cosmetic Shop"
+    Text: "Cosmetic Shop [O]"
     FontAsset {
       Id: 16670222695632479546
     }
@@ -11053,9 +11053,9 @@ Objects {
   Name: "Orc_Merchant_Captured_01"
   Transform {
     Location {
-      X: -19955.877
-      Y: -26561.9766
-      Z: 36.0454102
+      X: -20046.8711
+      Y: -26632.3789
+      Z: 43.8149414
     }
     Rotation {
       Yaw: 157.381577
@@ -13137,7 +13137,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Cosmetic Shop"
+    Text: "Cosmetic Shop [O]"
     FontAsset {
       Id: 16670222695632479546
     }
@@ -22455,7 +22455,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Daily Shop"
+    Text: "Daily Shop [L]"
     FontAsset {
       Id: 16670222695632479546
     }
@@ -34121,7 +34121,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Perk Shop"
+    Text: "Perk Shop [P]"
     FontAsset {
       Id: 16670222695632479546
     }
@@ -43069,7 +43069,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Daily Shop"
+    Text: "Daily Shop [L]"
     FontAsset {
       Id: 16670222695632479546
     }
@@ -51647,7 +51647,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Perk Shop"
+    Text: "Perk Shop [P]"
     FontAsset {
       Id: 16670222695632479546
     }

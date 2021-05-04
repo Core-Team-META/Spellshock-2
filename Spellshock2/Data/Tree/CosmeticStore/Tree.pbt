@@ -670,6 +670,7 @@ Objects {
     }
   }
   ParentId: 15968577037250973723
+  ChildIds: 17066422082306764683
   ChildIds: 3133517331089498449
   ChildIds: 8239047874490334820
   ChildIds: 12911691783651849817
@@ -15409,6 +15410,92 @@ Objects {
   Script {
     ScriptAsset {
       Id: 7042383887810743384
+    }
+  }
+}
+Objects {
+  Id: 17066422082306764683
+  Name: "META_CosmeticShop_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17267900532078282113
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ORC_COSMETIC_SHOP_TRIGGER"
+      ObjectReference {
+        SelfId: 11241518505168010192
+      }
+    }
+    Overrides {
+      Name: "cs:ORC_COSMETIC_SHOP_LEAVE_TRIGGER"
+      ObjectReference {
+        SelfId: 12581616027390555472
+      }
+    }
+    Overrides {
+      Name: "cs:ELF_COSMETIC_SHOP_TRIGGER"
+      ObjectReference {
+        SelfId: 14777634933114000376
+      }
+    }
+    Overrides {
+      Name: "cs:ELF_COSMETIC_SHOP_LEAVE_TRIGGER"
+      ObjectReference {
+        SelfId: 2156232999650362116
+      }
+    }
+    Overrides {
+      Name: "cs:COSMETIC_SHOP_CONTAINER"
+      ObjectReference {
+        SelfId: 14783742013657790731
+      }
+    }
+    Overrides {
+      Name: "cs:CLOSE_BUTTON"
+      ObjectReference {
+        SelfId: 4526402914534624545
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_OpenInventoryPanel"
+      AssetReference {
+        Id: 15148209995605876065
+      }
+    }
+    Overrides {
+      Name: "cs:TabsPanel"
+      ObjectReference {
+        SelfId: 714872234914652861
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5309670726132389040
     }
   }
 }
