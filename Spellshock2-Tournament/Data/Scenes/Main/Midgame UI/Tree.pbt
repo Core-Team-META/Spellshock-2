@@ -29698,7 +29698,7 @@ Objects {
     Width: 160
     Height: 14
     UIX: 1
-    UIY: -6.92553043
+    UIY: -4.21735191
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -29709,7 +29709,7 @@ Objects {
       Color {
         A: 1
       }
-      Size: 10
+      Size: 13
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -29776,7 +29776,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 10
+      Size: 13
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -29885,8 +29885,8 @@ Objects {
   }
   Control {
     Width: 480
-    Height: 14
-    UIY: -3.96514225
+    Height: 22
+    UIY: 0.7056427
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -29998,7 +29998,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -30127,7 +30127,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
