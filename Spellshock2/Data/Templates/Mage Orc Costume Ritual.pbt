@@ -7,7 +7,7 @@ Assets {
       RootId: 1626570364008791002
       Objects {
         Id: 1626570364008791002
-        Name: "Mage Orc Costume Rare"
+        Name: "Mage Orc Costume Ritual"
         Transform {
           Scale {
             X: 1
@@ -391,14 +391,14 @@ Assets {
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
-            X: 17.0264511
-            Y: -2.03622627
-            Z: -7.93923759
+            X: 17.0274296
+            Y: 2.56832695
+            Z: -7.93911219
           }
           Rotation {
-            Pitch: -1.15563965
-            Yaw: 0.635304213
-            Roll: 169.222626
+            Pitch: 2.47723436
+            Yaw: 19.743475
+            Roll: 169.444885
           }
           Scale {
             X: 1.38147831
@@ -3135,24 +3135,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 16943226905380919623
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 17.3090725
+            Float: 1.3856504
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 9.16647053
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              G: 0.2
-              B: 1
-              A: 1
-            }
+            Float: 0.806993663
           }
           Overrides {
             Name: "ma:Shared_Detail1:utile"
@@ -3174,15 +3166,14 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 16943226905380919623
+              Id: 675563715440209277
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
+              G: 0.6
+              B: 3
               A: 1
             }
           }
@@ -3671,29 +3662,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 16943226905380919623
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 17.3090725
+            Float: 1.3856504
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 2.71059704
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              G: 0.2
-              B: 1
-              A: 1
-            }
+            Float: 0.806993663
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 16943226905380919623
+              Id: 675563715440209277
             }
           }
           Overrides {
@@ -3716,9 +3699,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
+              G: 0.6
+              B: 3
               A: 1
             }
           }
@@ -6236,6 +6218,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_shield_003"
+      }
+    }
+    Assets {
+      Id: 675563715440209277
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
       }
     }
     Assets {
