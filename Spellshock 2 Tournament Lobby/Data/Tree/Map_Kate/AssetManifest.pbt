@@ -233,6 +233,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16245964090429751077
+  Name: "Underwater Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_water"
+  }
+}
+Assets {
   Id: 16242947141551458551
   Name: "Pyramid - 7-Sided Truncated"
   PlatformAssetType: 1
@@ -563,6 +572,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AnimatedMeshAssetRef"
     AssetId: "npc_human_gal_basic_002_ref"
+  }
+}
+Assets {
+  Id: 13043931635042484870
+  Name: "Sci-fi Trim 01 bend 90"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_scifi_trim_001_bend90"
   }
 }
 Assets {
@@ -1232,6 +1250,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4958645895924258569
+  Name: "Main Street Trim Roof 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_trim_003_ref"
+  }
+}
+Assets {
   Id: 4817109070430193625
   Name: "Humanoid 2 Peasant Pants"
   PlatformAssetType: 26
@@ -1526,15 +1553,6 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_ChargeUp_Hold_Var1"
-  }
-}
-Assets {
-  Id: 1936447668697306516
-  Name: "Main Street Trim 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_urb_dtn_mst_trim_002_ref"
   }
 }
 Assets {
