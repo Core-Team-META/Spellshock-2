@@ -1,7 +1,7 @@
-Name: "Forearm Sleeve_1"
-RootId: 1609135237627165291
+Name: "Forearm Sleeve"
+RootId: 650407598855994004
 Objects {
-  Id: 13266294645395818036
+  Id: 11302424759476717266
   Name: "Ring"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 2.92911911
     }
   }
-  ParentId: 1609135237627165291
+  ParentId: 650407598855994004
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -54,6 +54,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {
@@ -64,7 +65,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17154226675423903795
+  Id: 7231054463979231721
   Name: "Ring"
   Transform {
     Location {
@@ -82,7 +83,7 @@ Objects {
       Z: 2.92911696
     }
   }
-  ParentId: 1609135237627165291
+  ParentId: 650407598855994004
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -116,6 +117,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {
@@ -126,7 +128,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11126318715802727541
+  Id: 309418559058855163
   Name: "Ring"
   Transform {
     Location {
@@ -143,7 +145,7 @@ Objects {
       Z: 2.33924246
     }
   }
-  ParentId: 1609135237627165291
+  ParentId: 650407598855994004
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -177,6 +179,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {
@@ -187,7 +190,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4290833245169295136
+  Id: 6008216747347592486
   Name: "Ring"
   Transform {
     Location {
@@ -204,7 +207,7 @@ Objects {
       Z: 2.33924174
     }
   }
-  ParentId: 1609135237627165291
+  ParentId: 650407598855994004
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -238,6 +241,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {

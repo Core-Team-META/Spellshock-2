@@ -2,7 +2,7 @@ Assets {
   Id: 12334678993459933684
   Name: "Trim Base Material from Main Street Foundation 01 - Corner"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 14766815770986992196
     ParameterOverrides {

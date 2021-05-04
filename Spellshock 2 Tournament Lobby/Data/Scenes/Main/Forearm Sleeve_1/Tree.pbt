@@ -1,7 +1,7 @@
-Name: "Forearm Sleeve_2"
-RootId: 11822655334147479617
+Name: "Forearm Sleeve_1"
+RootId: 1609135237627165291
 Objects {
-  Id: 14213285294643884770
+  Id: 13266294645395818036
   Name: "Ring"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 2.92911911
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -54,6 +54,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {
@@ -64,7 +65,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11237880949258211683
+  Id: 17154226675423903795
   Name: "Ring"
   Transform {
     Location {
@@ -82,7 +83,7 @@ Objects {
       Z: 2.92911696
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -116,6 +117,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {
@@ -126,7 +128,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6568248225617058032
+  Id: 11126318715802727541
   Name: "Ring"
   Transform {
     Location {
@@ -143,7 +145,7 @@ Objects {
       Z: 2.33924246
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -177,6 +179,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {
@@ -187,7 +190,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2227889686645249702
+  Id: 4290833245169295136
   Name: "Ring"
   Transform {
     Location {
@@ -204,7 +207,7 @@ Objects {
       Z: 2.33924174
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -238,6 +241,7 @@ Objects {
     StaticMesh {
       Physics {
       }
+      BoundsScale: 1
     }
   }
   InstanceHistory {

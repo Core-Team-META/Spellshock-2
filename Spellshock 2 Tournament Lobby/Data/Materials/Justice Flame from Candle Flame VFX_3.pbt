@@ -2,7 +2,7 @@ Assets {
   Id: 133207967445344851
   Name: "Justice Flame from Candle Flame VFX_3"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 11912531266626647440
     ParameterOverrides {

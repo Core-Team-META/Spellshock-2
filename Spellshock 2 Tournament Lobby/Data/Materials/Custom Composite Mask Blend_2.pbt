@@ -2,7 +2,7 @@ Assets {
   Id: 10723525176054761965
   Name: "Trim Golden Composite Mask Blend_2"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 13801461059896540276
     ParameterOverrides {
