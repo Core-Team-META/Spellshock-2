@@ -113,7 +113,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 900
+          Width: 985
           Height: 30
           RenderTransformPivot {
             Anchor {
@@ -425,6 +425,7 @@ Assets {
             }
           }
           Text {
+            Label: "O"
             Color {
               R: 1
               G: 1
@@ -819,7 +820,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 650
+          UIX: 701.499512
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -886,7 +887,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 725
+          UIX: 776.499512
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -953,7 +954,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 800
+          UIX: 851.499512
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
