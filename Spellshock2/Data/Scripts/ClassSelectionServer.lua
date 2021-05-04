@@ -92,10 +92,11 @@ function OnClassChanged(player, classID)
     if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND_END or ABGS.GetGameState() ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
         --unequip everything
         UnequipPlayer(player)
-
+        if not Object.IsValid(player) then return end
         --player.animationStance = Class_Stances[classID]
+        
         EquipPlayer(player, classID)
-
+        if not Object.IsValid(player) then return end
         -- Used for determining which class is used during the round; used for calculating reward slot 1
         player.serverUserData.ClassesPlayed = player.serverUserData.ClassesPlayed or {}
         local current = player.serverUserData.ClassesPlayed[classID]
@@ -125,15 +126,16 @@ function OnGameStateChanged(oldState, newState)
         for _, player in ipairs(Game.GetPlayers()) do
             -- unequip everything just in case
             UnequipPlayer(player)
-
-            local classID = player:GetResource("CLASS_MAP")
-            if classID == 0 then
-                classID = META_AP().WARRIOR
+            local classID = 0
+            if Object.IsValid(player) then
+                classID = player:GetResource("CLASS_MAP")
+                if classID == 0 then
+                    classID = META_AP().WARRIOR
+                end
+                EquipPlayer(player, classID)
             end
 
-            EquipPlayer(player, classID)
-
-            if newState == ABGS.GAME_STATE_ROUND then
+            if newState == ABGS.GAME_STATE_ROUND and Object.IsValid(player) then
                 player.serverUserData.ClassesPlayed = {}
                 player.serverUserData.ClassesPlayed[classID] = 1
             end

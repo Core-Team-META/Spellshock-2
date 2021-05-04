@@ -64,7 +64,7 @@ function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
 
 	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
-
+	if player and not Object.IsValid(player) then return end
 	local SPEED = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_Speed, SpecialAbility.name .. ": Speed")
 	local RANGE = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Range, SpecialAbility.name .. ": Range")
 
