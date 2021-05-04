@@ -7,7 +7,7 @@ Assets {
       RootId: 5271413327047248262
       Objects {
         Id: 5271413327047248262
-        Name: "Warrior Orc Costume Expired"
+        Name: "Warrior Orc Costume Ritual"
         Transform {
           Scale {
             X: 1
