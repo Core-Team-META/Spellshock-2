@@ -66,6 +66,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -105,6 +106,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -132,5 +134,5 @@ Assets {
       AssetId: "Fantasy_Castle_Stairs_Spiral_03_with_Railing_-_Large_3m_Template"
     }
   }
-  SerializationVersion: 81
+  SerializationVersion: 84
 }
