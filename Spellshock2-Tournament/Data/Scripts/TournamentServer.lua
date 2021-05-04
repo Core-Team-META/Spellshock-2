@@ -14,6 +14,9 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
 local MIN_PLAYERS_TO_SUBMIT = 2 -- 6
+
+local BASE_POINTS = 1000
+
 local POINTS_PER_SUICIDE = 0 -- -5
 local POINTS_PER_KILL_WILD = 20 -- 5
 local POINTS_PER_ASSIST = 10
@@ -355,6 +358,7 @@ function OnRoundEnded()
 	for _, player in ipairs(Game.GetPlayers()) do
 		local playerData = player.serverUserData.tournament
 
+		local killPoints = playerData.points
 		-- Round points
 		local roundPoints = 0
 		local teamScoreBonus = 0
@@ -413,7 +417,7 @@ function OnRoundEnded()
 		playerData.points = playerData.points + objectiveAssistPoints
 
 		-- Add Default 1k starting points
-		playerData.points = playerData.points + 1000
+		playerData.points = playerData.points + BASE_POINTS
 
 		-- Add Teamscore To Final Score
 		playerData.points = playerData.points + teamScoreBonus
@@ -439,9 +443,11 @@ function OnRoundEnded()
 			print("------------------------------------------")
 			print(player.name .. " Points ")
 			print("------------------------------------------")
+			print("Starting Points: " .. tostring(BASE_POINTS))
 			print("Team Points: " .. tostring(roundPoints))
 			print("Damage Points: " .. tostring(damagePoints))
 			print("Healing Points: " .. tostring(healingPoints))
+			print("Kill Points: " .. tostring(killPoints))
 			print("Kill Streak Points: " .. tostring(killStreakPoints))
 			print("Kill Assist Points: " .. tostring(assistKillPoints))
 			print("Capture Points: " .. tostring(objectivePoints))
