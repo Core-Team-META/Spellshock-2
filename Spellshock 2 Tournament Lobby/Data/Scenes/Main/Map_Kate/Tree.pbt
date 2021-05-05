@@ -185169,7 +185169,7 @@ Objects {
     AudioBP {
       AutoPlay: true
       Repeat: true
-      Volume: 1
+      Volume: 0.4
       Falloff: 2500
       Radius: 6500
     }
