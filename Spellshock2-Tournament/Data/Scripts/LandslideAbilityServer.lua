@@ -94,7 +94,7 @@ function AddImpulseToPlayer(player)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Warrior_E"}
+		tags = {id = "Warrior_R"}
 	}
 	COMBAT().ApplyDamage(attackData)
 end
