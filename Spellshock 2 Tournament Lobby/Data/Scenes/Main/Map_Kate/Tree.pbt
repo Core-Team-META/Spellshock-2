@@ -294,6 +294,7 @@ Objects {
   ChildIds: 12584404083699573418
   ChildIds: 3689819016619709677
   ChildIds: 10949136766955199098
+  ChildIds: 15139009930614535493
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -305,6 +306,71 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 15139009930614535493
+  Name: "Spotlight"
+  Transform {
+    Location {
+      X: 9.93686
+      Y: 956.762207
+      Z: 841.474243
+    }
+    Rotation {
+      Pitch: -41.0278816
+      Yaw: -89.2681732
+      Roll: 2.26348016e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8299355614883317077
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Light {
+    Intensity: 50
+    Color {
+      R: 0.6
+      G: 0.705960035
+      B: 1
+      A: 1
+    }
+    VolumetricIntensity: 5
+    TeamSettings {
+    }
+    Light {
+      Temperature: 6500
+      LocalLight {
+        AttenuationRadius: 2062.09082
+        SpotLight {
+          SourceRadius: 20
+          SoftSourceRadius: 20
+          FallOffExponent: 8
+          UseFallOffExponent: true
+          InnerConeAngle: 2
+          OuterConeAngle: 29.9592209
+          Profile {
+            Value: "mc:espotlightprofile:basicspotlight"
+          }
+        }
+      }
+      MaxDrawDistance: 5000
+      MaxDistanceFadeRange: 1000
+    }
   }
 }
 Objects {
@@ -3781,6 +3847,7 @@ Objects {
   ChildIds: 7765079317665968905
   ChildIds: 5860688686472134254
   ChildIds: 14885193282615157503
+  ChildIds: 9460163827670226696
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3792,6 +3859,71 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 9460163827670226696
+  Name: "Spotlight"
+  Transform {
+    Location {
+      X: 52.7181854
+      Y: 955.023438
+      Z: 803.005249
+    }
+    Rotation {
+      Pitch: -39.5537376
+      Yaw: -92.197113
+      Roll: 0.955379367
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2198480925427136058
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Light {
+    Intensity: 50
+    Color {
+      R: 0.6
+      G: 0.705960035
+      B: 1
+      A: 1
+    }
+    VolumetricIntensity: 5
+    TeamSettings {
+    }
+    Light {
+      Temperature: 6500
+      LocalLight {
+        AttenuationRadius: 2062.09082
+        SpotLight {
+          SourceRadius: 20
+          SoftSourceRadius: 20
+          FallOffExponent: 8
+          UseFallOffExponent: true
+          InnerConeAngle: 2
+          OuterConeAngle: 29.9592209
+          Profile {
+            Value: "mc:espotlightprofile:basicspotlight"
+          }
+        }
+      }
+      MaxDrawDistance: 5000
+      MaxDistanceFadeRange: 1000
+    }
   }
 }
 Objects {
