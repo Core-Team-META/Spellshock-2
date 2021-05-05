@@ -36597,7 +36597,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 10.0295105
+    UIY: 1.35366154
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -36667,7 +36667,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "! All XP gained goes to your main account !"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 1
         G: 0.592220783
@@ -36683,7 +36683,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -36747,7 +36747,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "! All XP gained goes to your main account !"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
@@ -36762,7 +36762,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -36826,7 +36826,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "! All XP gained goes to your main account !"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
@@ -36841,7 +36841,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -36905,7 +36905,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "! All XP gained goes to your main account !"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
@@ -36920,7 +36920,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -36984,7 +36984,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "! All XP gained goes to your main account !"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
@@ -36999,7 +36999,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -44312,7 +44312,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 3.32736063
+    UIY: 12.8997841
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -44382,14 +44382,14 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "All XP gained goes to your main account"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 1
         G: 0.592220783
         B: 0.266000032
         A: 1
       }
-      Size: 25
+      Size: 21
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -44398,7 +44398,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -44462,13 +44462,13 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "All XP gained goes to your main account"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
         A: 0.483
       }
-      Size: 25
+      Size: 21
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -44477,7 +44477,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -44541,13 +44541,13 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "All XP gained goes to your main account"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
         A: 0.483
       }
-      Size: 25
+      Size: 21
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -44556,7 +44556,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -44620,13 +44620,13 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "All XP gained goes to your main account"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
         A: 0.483
       }
-      Size: 25
+      Size: 21
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -44635,7 +44635,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -44699,13 +44699,13 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "All XP gained goes to your main account"
+      Label: "All XP gained is automatically added to Spellshock 2 main game"
       Color {
         R: 0.109461717
         G: 0.0368894339
         A: 0.483
       }
-      Size: 25
+      Size: 21
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -44714,7 +44714,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
@@ -44756,7 +44756,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 139
+    Width: 227
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
