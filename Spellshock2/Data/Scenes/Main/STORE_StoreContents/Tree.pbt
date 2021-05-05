@@ -29,6 +29,8 @@ Objects {
   ChildIds: 15661930535761643696
   ChildIds: 576253302510452285
   ChildIds: 2527806109412890286
+  ChildIds: 2498832773142464569
+  ChildIds: 6012663476270730703
   ChildIds: 10693551201885745501
   ChildIds: 13179305561122875194
   ChildIds: 15901060859741511635
@@ -2759,6 +2761,184 @@ Objects {
   }
 }
 Objects {
+  Id: 6012663476270730703
+  Name: "STORE_HealerElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14040370941955306933
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 10811581856178897893
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 2498832773142464569
+  Name: "STORE_HealerOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14040370941955306933
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 14197173358139183376
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 2527806109412890286
   Name: "STORE_HealerElfCostumeMilitary"
   Transform {
@@ -3669,6 +3849,8 @@ Objects {
   ChildIds: 15184027615118249299
   ChildIds: 10392244645258314161
   ChildIds: 18061120336044511231
+  ChildIds: 10349545882516396242
+  ChildIds: 18294364881175603333
   ChildIds: 15946420753298548661
   ChildIds: 1631858887993325944
   ChildIds: 652653273394764313
@@ -6379,6 +6561,200 @@ Objects {
   }
 }
 Objects {
+  Id: 18294364881175603333
+  Name: "STORE_AssassinElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12672419140041425297
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 12266127825365652521
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 10349545882516396242
+  Name: "STORE_AssassinOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12672419140041425297
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7777495027374158003
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 18061120336044511231
   Name: "STORE_AssassinElfCostumeMilitary"
   Transform {
@@ -7337,6 +7713,8 @@ Objects {
   ChildIds: 11914320524564518685
   ChildIds: 5763112841366619610
   ChildIds: 1165069287023877933
+  ChildIds: 10836327058060684520
+  ChildIds: 5600396472097874372
   ChildIds: 5071540121921804771
   ChildIds: 7137236239549881775
   ChildIds: 15077966676793851499
@@ -11239,6 +11617,184 @@ Objects {
   }
 }
 Objects {
+  Id: 5600396472097874372
+  Name: "STORE_MageElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10535149848714323386
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7827848173566305469
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 10836327058060684520
+  Name: "STORE_MageOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10535149848714323386
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 3738483168692358011
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 1165069287023877933
   Name: "STORE_MageElfCostumeMilitary"
   Transform {
@@ -12149,6 +12705,8 @@ Objects {
   ChildIds: 5249179072111106921
   ChildIds: 15023144899693847556
   ChildIds: 5408796066949721797
+  ChildIds: 10765138035339787255
+  ChildIds: 2081996267687378600
   ChildIds: 8873004633845483845
   ChildIds: 11027198839736712650
   ChildIds: 6097746057389766794
@@ -14859,6 +15417,200 @@ Objects {
   }
 }
 Objects {
+  Id: 2081996267687378600
+  Name: "STORE_HunterElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16806644396874094188
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 5345924898154712675
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 10765138035339787255
+  Name: "STORE_HunterOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16806644396874094188
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 5363701975110401077
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 5408796066949721797
   Name: "STORE_HunterElfCostumeMilitary"
   Transform {
@@ -15801,6 +16553,8 @@ Objects {
   ChildIds: 320425414000174337
   ChildIds: 15498096351310748496
   ChildIds: 1762933990454238221
+  ChildIds: 15819210792588934617
+  ChildIds: 7699517418324474131
   ChildIds: 10877531935183384179
   ChildIds: 14179344688564034578
   ChildIds: 17932258122087720108
@@ -18493,6 +19247,200 @@ Objects {
     Overrides {
       Name: "cs:LockedUntil"
       Int: 60
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 7699517418324474131
+  Name: "STORE_WarriorElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6411471204784472395
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Warrior_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 12162609511359109839
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 15819210792588934617
+  Name: "STORE_WarriorOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6411471204784472395
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Warrior_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 14462698610109510325
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
     }
   }
   Collidable_v2 {
