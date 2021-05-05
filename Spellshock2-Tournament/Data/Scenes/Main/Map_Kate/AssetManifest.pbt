@@ -2789,6 +2789,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5106178074541799398
+  Name: "Cube - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_001"
+  }
+}
+Assets {
   Id: 5077890242058173313
   Name: "Fantasy Clay Pot 03"
   PlatformAssetType: 1
