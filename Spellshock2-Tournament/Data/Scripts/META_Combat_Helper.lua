@@ -61,7 +61,13 @@ local function UpdateCombatAmmount(attackData)
     local target = attackData.object
     local source = attackData.source
     local amount = attackData.damage.amount
+
     if amount > 0 then
+        local afterDmg = target.hitPoints - amount
+        if afterDmg < 0 then
+            amount = amount + afterDmg
+        end
+
         source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(amount))
         source:AddResource(CONST.ROUND_DAMAGE, CoreMath.Round(amount))
         Events.Broadcast("AS.LifeTimeDamage", source, CoreMath.Round(amount))
@@ -71,22 +77,22 @@ local function UpdateCombatAmmount(attackData)
         local classDamage = source.serverUserData.classDamage[class] or 0
         classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
-    else
+    elseif amount < 0 then
         if attackData.tags.Type == "HealthPotion" then
             return
         end
-        amount = amount * -1
+        amount = amount * -1 -- turn positive
         local afterHeal = target.hitPoints + amount
         if afterHeal > target.maxHitPoints then
-            local overhealing = target.maxHitPoints - afterHeal
-            if overhealing < 0 then
-                amount = 0
-            end
+            amount = target.maxHitPoints - target.hitPoints
         end
         source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(amount))
         Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(amount))
         source:AddResource(CONST.ROUND_HEALING, CoreMath.Round(amount))
+        amount = amount * -1 -- turn back negative
     end
+    
+    attackData.damage.amount = amount
     Events.Broadcast("AS.PlayerDamaged", attackData)
 end
 
@@ -155,6 +161,8 @@ function GoingToTakeDamage(attackData)
             source.hitPoints = CoreMath.Clamp(source.hitPoints + lifestealHeal, source.maxHitPoints)
         end
     end
+
+    UpdateCombatAmmount(attackData)
 end
 
 --#TODO Will need to check Gamestate for round in progress
@@ -172,7 +180,6 @@ function OnDamageTaken(attackData)
             return
         end
 
-        UpdateCombatAmmount(attackData)
         -- Assist Calculation
         TagAssistPlayer(player, target, attackData)
     end
