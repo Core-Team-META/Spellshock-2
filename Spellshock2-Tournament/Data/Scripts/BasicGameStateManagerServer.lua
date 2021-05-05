@@ -76,6 +76,20 @@ function SetGameState(newState)
 	elseif newState == ABGS.GAME_STATE_ROUND_END then
 		stateHasduration = ROUND_END_HAS_DURATION
 		stateDuration = ROUND_END_DURATION
+
+		local team1Score = Game.GetTeamScore(1)
+		local team2Score = Game.GetTeamScore(2)
+		local winningTeam
+		if team1Score == team2Score then
+			winningTeam = math.random(2)
+			Game.IncreaseTeamScore(winningTeam, 1)
+		elseif team1Score > team2Score then
+			winningTeam = 1
+		else
+			winningTeam = 2
+		end
+		_G["GameWinner"] = winningTeam
+		Events.Broadcast("TeamVictory", winningTeam)
 	elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		stateHasduration = true
 		stateDuration = 20

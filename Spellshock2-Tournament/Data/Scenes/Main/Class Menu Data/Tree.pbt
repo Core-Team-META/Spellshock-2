@@ -3343,7 +3343,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10980313450103268903
+  Id: 6433870816978918391
   Name: "Hunter"
   Transform {
     Location {
@@ -3357,13 +3357,13 @@ Objects {
     }
   }
   ParentId: 14151859424388630810
-  ChildIds: 5991922501775596303
-  ChildIds: 7308866633911095885
-  ChildIds: 18445814534937137316
-  ChildIds: 12324244977302229919
-  ChildIds: 12251547576816016754
-  ChildIds: 15584454778672282218
-  ChildIds: 18082246767474963931
+  ChildIds: 7131816658046722202
+  ChildIds: 18412283153513904580
+  ChildIds: 8666168139859894887
+  ChildIds: 10360241482528173191
+  ChildIds: 4955330168614914666
+  ChildIds: 8643815305842749532
+  ChildIds: 6931369295193808603
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3410,7 +3410,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18082246767474963931
+  Id: 6931369295193808603
   Name: "Aim"
   Transform {
     Location {
@@ -3423,7 +3423,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10980313450103268903
+  ParentId: 6433870816978918391
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3454,7 +3454,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15584454778672282218
+  Id: 8643815305842749532
   Name: "Crossbow"
   Transform {
     Location {
@@ -3467,11 +3467,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10980313450103268903
-  ChildIds: 3476371213677220383
-  ChildIds: 6918803888502819830
-  ChildIds: 3438177076390056663
-  ChildIds: 7195657300355699397
+  ParentId: 6433870816978918391
+  ChildIds: 13891013356092155595
+  ChildIds: 3689686179578230066
+  ChildIds: 12867010086844438041
+  ChildIds: 10625168359020745361
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3502,7 +3502,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7195657300355699397
+  Id: 10625168359020745361
   Name: "Charge Damage"
   Transform {
     Location {
@@ -3515,7 +3515,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15584454778672282218
+  ParentId: 8643815305842749532
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3546,7 +3546,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3438177076390056663
+  Id: 12867010086844438041
   Name: "Full Charge Bonus"
   Transform {
     Location {
@@ -3559,7 +3559,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15584454778672282218
+  ParentId: 8643815305842749532
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3590,7 +3590,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6918803888502819830
+  Id: 3689686179578230066
   Name: "Cooldown"
   Transform {
     Location {
@@ -3603,7 +3603,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15584454778672282218
+  ParentId: 8643815305842749532
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3634,7 +3634,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3476371213677220383
+  Id: 13891013356092155595
   Name: "Damage Range"
   Transform {
     Location {
@@ -3647,7 +3647,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15584454778672282218
+  ParentId: 8643815305842749532
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3678,7 +3678,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12251547576816016754
+  Id: 4955330168614914666
   Name: "Roll"
   Transform {
     Location {
@@ -3691,7 +3691,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10980313450103268903
+  ParentId: 6433870816978918391
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3722,7 +3722,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12324244977302229919
+  Id: 10360241482528173191
   Name: "Hawk"
   Transform {
     Location {
@@ -3735,10 +3735,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10980313450103268903
-  ChildIds: 14900438383312703483
-  ChildIds: 13115313745008892479
-  ChildIds: 8291059155082126557
+  ParentId: 6433870816978918391
+  ChildIds: 16538156518455162552
+  ChildIds: 11564997874835022876
+  ChildIds: 8428205462741160681
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3769,7 +3769,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8291059155082126557
+  Id: 8428205462741160681
   Name: "Duration"
   Transform {
     Location {
@@ -3782,7 +3782,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12324244977302229919
+  ParentId: 10360241482528173191
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3813,7 +3813,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13115313745008892479
+  Id: 11564997874835022876
   Name: "Cooldown"
   Transform {
     Location {
@@ -3826,7 +3826,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12324244977302229919
+  ParentId: 10360241482528173191
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3857,7 +3857,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14900438383312703483
+  Id: 16538156518455162552
   Name: "Damage"
   Transform {
     Location {
@@ -3870,7 +3870,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12324244977302229919
+  ParentId: 10360241482528173191
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3901,7 +3901,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18445814534937137316
+  Id: 8666168139859894887
   Name: "Bear Trap"
   Transform {
     Location {
@@ -3914,11 +3914,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10980313450103268903
-  ChildIds: 14552168326025627377
-  ChildIds: 2284718048942926788
-  ChildIds: 2897540318327134445
-  ChildIds: 11687984352410726181
+  ParentId: 6433870816978918391
+  ChildIds: 8807848442363056970
+  ChildIds: 5588102262453057124
+  ChildIds: 507933853648907378
+  ChildIds: 8485998209918905801
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3949,7 +3949,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11687984352410726181
+  Id: 8485998209918905801
   Name: "Stun"
   Transform {
     Location {
@@ -3962,7 +3962,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18445814534937137316
+  ParentId: 8666168139859894887
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3997,7 +3997,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2897540318327134445
+  Id: 507933853648907378
   Name: "Cooldown"
   Transform {
     Location {
@@ -4010,7 +4010,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18445814534937137316
+  ParentId: 8666168139859894887
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -4041,7 +4041,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2284718048942926788
+  Id: 5588102262453057124
   Name: "Bleed Damage"
   Transform {
     Location {
@@ -4054,7 +4054,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18445814534937137316
+  ParentId: 8666168139859894887
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -4089,7 +4089,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14552168326025627377
+  Id: 8807848442363056970
   Name: "Damage"
   Transform {
     Location {
@@ -4102,7 +4102,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18445814534937137316
+  ParentId: 8666168139859894887
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -4133,7 +4133,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7308866633911095885
+  Id: 18412283153513904580
   Name: "Entangle"
   Transform {
     Location {
@@ -4146,10 +4146,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10980313450103268903
-  ChildIds: 1234445642780183423
-  ChildIds: 16181215288139751250
-  ChildIds: 4885990649472038852
+  ParentId: 6433870816978918391
+  ChildIds: 11037346231233002437
+  ChildIds: 8869154295439845846
+  ChildIds: 14182349820178268677
+  ChildIds: 8371457713731557742
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4159,7 +4160,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies caught in the roots are stunned."
+      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies caught in the roots take damage over time and are slowed. Slow = 70%."
     }
     Overrides {
       Name: "cs:Bind"
@@ -4180,7 +4181,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4885990649472038852
+  Id: 8371457713731557742
   Name: "Radius"
   Transform {
     Location {
@@ -4193,7 +4194,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7308866633911095885
+  ParentId: 18412283153513904580
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -4224,7 +4225,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16181215288139751250
+  Id: 14182349820178268677
   Name: "Cooldown"
   Transform {
     Location {
@@ -4237,7 +4238,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7308866633911095885
+  ParentId: 18412283153513904580
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -4268,8 +4269,8 @@ Objects {
   }
 }
 Objects {
-  Id: 1234445642780183423
-  Name: "Stun"
+  Id: 8869154295439845846
+  Name: "Slow"
   Transform {
     Location {
     }
@@ -4281,11 +4282,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7308866633911095885
+  ParentId: 18412283153513904580
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How long an enemy will be stunned"
+      String: "How long an enemy will be slowed"
     }
     Overrides {
       Name: "cs:Icon"
@@ -4316,7 +4317,55 @@ Objects {
   }
 }
 Objects {
-  Id: 5991922501775596303
+  Id: 11037346231233002437
+  Name: "Bleed"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18412283153513904580
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of damage applied to enemies per second"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 7227656168876650477
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7131816658046722202
   Name: "Rain of Arrows"
   Transform {
     Location {
@@ -4329,10 +4378,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10980313450103268903
-  ChildIds: 13053078901636615346
-  ChildIds: 12181989338779408196
-  ChildIds: 16866776982984953891
+  ParentId: 6433870816978918391
+  ChildIds: 11096629177227880351
+  ChildIds: 4936324423552136912
+  ChildIds: 584805066574736943
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4363,7 +4412,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16866776982984953891
+  Id: 584805066574736943
   Name: "Damage Radius"
   Transform {
     Location {
@@ -4376,7 +4425,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5991922501775596303
+  ParentId: 7131816658046722202
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -4407,7 +4456,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12181989338779408196
+  Id: 4936324423552136912
   Name: "Cooldown"
   Transform {
     Location {
@@ -4420,7 +4469,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5991922501775596303
+  ParentId: 7131816658046722202
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -4451,7 +4500,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13053078901636615346
+  Id: 11096629177227880351
   Name: "Damage"
   Transform {
     Location {
@@ -4464,7 +4513,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5991922501775596303
+  ParentId: 7131816658046722202
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"

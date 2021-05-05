@@ -52,8 +52,6 @@ function Tick(deltaTime)
 		end
 
 		if winningTeam then
-			_G["GameWinner"] = winningTeam
-			Events.Broadcast("TeamVictory", winningTeam)
 			ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
 		end
 	end

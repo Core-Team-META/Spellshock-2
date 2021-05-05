@@ -962,6 +962,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8355298660985848341
+  Name: "Glow Shape Decal"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_glow"
+  }
+}
+Assets {
   Id: 8210514785031040523
   Name: "Thorn"
   PlatformAssetType: 1
@@ -1349,6 +1358,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3977866291149364048
+  Name: "Cabin Bold"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "CabinBold_ref"
+  }
+}
+Assets {
   Id: 3715487088176351191
   Name: "Cube - Chamfered Large"
   PlatformAssetType: 1
@@ -1490,15 +1508,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_invisible_001"
-  }
-}
-Assets {
-  Id: 2712652439387027265
-  Name: "Play Bold"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "PlayBold_ref"
   }
 }
 Assets {

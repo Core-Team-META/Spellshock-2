@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/3/29
@@ -131,7 +131,7 @@ function GoingToTakeDamage(attackData)
         attackData.damage.amount = 0
     end
     -- Assassin Shurikin Life Steal
-    if attackData.tags and attackData.tags.id and attackData.tags.id ~= "StatusEffect" and attackData.tags.id ~= "Assassin_R" then
+    if attackData.tags and attackData.tags.id and attackData.tags.id ~= "StatusEffect" then --and attackData.tags.id ~= "Assassin_R"
         if
             target.serverUserData.shuriken and target.serverUserData.shuriken[source.id] and
                 target.serverUserData.shuriken[source.id] > time()

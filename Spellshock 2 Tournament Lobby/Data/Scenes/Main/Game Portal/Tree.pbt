@@ -234,36 +234,12 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "bp:Color A"
-      Color {
-        R: 0.583333492
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Color B"
-      Color {
-        R: 0.130000398
-        B: 0.312
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Color C"
-      Color {
-        R: 0.0511500239
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
       Name: "bp:Color Offset B"
       Float: 0.33014518
     }
     Overrides {
       Name: "bp:Emissive Boost"
-      Float: 0
+      Float: 5
     }
     Overrides {
       Name: "bp:Portal Shape"
@@ -345,6 +321,30 @@ Objects {
       Color {
         R: 0.130000398
         B: 0.312
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color C"
+      Color {
+        R: 0.177650779
+        B: 0.561000049
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        R: 0.56666851
+        B: 2
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color B"
+      Color {
+        R: 0.118516698
+        B: 0.547000051
         A: 1
       }
     }

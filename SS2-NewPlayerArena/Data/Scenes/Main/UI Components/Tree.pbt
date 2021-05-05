@@ -33299,6 +33299,7 @@ Objects {
     Width: 156
     Height: 20
     UIX: -179.645874
+    UIY: -7.25
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -33350,7 +33351,6 @@ Objects {
   Control {
     Height: 10
     UIX: 10.5
-    UIY: 11
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -33380,7 +33380,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomleft"
+          Value: "mc:euianchor:middleleft"
         }
       }
       TargetAnchor {
@@ -33696,7 +33696,7 @@ Objects {
   Control {
     Height: 10
     UIX: 58.0577965
-    UIY: 8.07665253
+    UIY: 10.250061
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -33721,7 +33721,7 @@ Objects {
         Id: 11336346532215892341
       }
       VerticalJustification {
-        Value: "mc:everticaljustification:baseline"
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -33769,7 +33769,8 @@ Objects {
   Control {
     Width: 30
     Height: 30
-    UIX: 25.0851383
+    UIX: 25.085
+    UIY: 1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -37097,7 +37098,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: -1.09036338
+    UIY: -6
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"

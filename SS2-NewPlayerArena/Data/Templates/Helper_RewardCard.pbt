@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 4509724161207917958
         ChildIds: 1879694575523701921
         ChildIds: 6672106617270379639
         UnregisteredParameters {
@@ -2082,7 +2082,8 @@ Assets {
         Control {
           Width: 59
           Height: 233
-          UIY: 98.8615417
+          UIX: 71
+          UIY: -53
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2096,12 +2097,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomleft"
+                Value: "mc:euianchor:bottomright"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:bottomright"
               }
             }
           }
@@ -2267,7 +2268,8 @@ Assets {
         Control {
           Width: 59
           Height: 233
-          UIY: 98.8615417
+          UIX: -71
+          UIY: -53
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2281,12 +2283,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomright"
+                Value: "mc:euianchor:bottomleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topright"
+                Value: "mc:euianchor:bottomleft"
               }
             }
           }
@@ -2451,7 +2453,7 @@ Assets {
         Control {
           Width: 67
           Height: 198
-          UIY: 74.2824707
+          UIY: -74.1132431
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2470,7 +2472,7 @@ Assets {
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:bottomcenter"
               }
             }
           }
