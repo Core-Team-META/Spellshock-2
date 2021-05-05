@@ -28,6 +28,21 @@ local function ShouldTrack(player)
     return true
 end
 
+local function TagAssistPlayer(player, target, attackData)
+    target.serverUserData.damageTable = target.serverUserData.damageTable or {}
+    target.serverUserData.damageTable[player] = target.serverUserData.damageTable[player] or {}
+    local assistTbl = target.serverUserData.damageTable[player]
+    if assistTbl.timer and assistTbl.timer < time() then
+        assistTbl.damage = assistTbl.damage or 0
+        assistTbl.damage = assistTbl.damage + attackData.damage.amount
+        assistTbl.timer = time() + 10
+    else
+        assistTbl.damage = attackData.damage.amount
+        assistTbl.timer = time() + 10
+    end
+    target.serverUserData.damageTable[player] = assistTbl
+end
+
 local function UpdateKillStreak(attackData)
     local source = attackData.source
     local currentKillStreak = source:GetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK)
@@ -145,7 +160,21 @@ end
 --#TODO Will need to check Gamestate for round in progress
 function OnDamageTaken(attackData)
     if attackData.source and not playerDead[attackData.object.id] then
+        local target = attackData.object
+        local player = attackData.source
+        if not Object.IsValid(player) then
+            return
+        end
+        if not Object.IsValid(target) then
+            return
+        end
+        if not target:IsA("Player") then
+            return
+        end
+
         UpdateCombatAmmount(attackData)
+        -- Assist Calculation
+        TagAssistPlayer(player, target, attackData)
     end
 end
 
@@ -158,10 +187,28 @@ function OnDied(attackData)
             sourceData.playersKilled = sourceData.playersKilled or {}
             sourceData.playersKilled[target.id] =
                 sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
+
+            target.serverUserData.damageTable = {}
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
             source:AddResource(CONST.LIFE_TIME_KILLS, 1)
             Events.Broadcast("META_CH.OnDied", attackData)
+
+            -- Apply Assist Points
+            for assistPlayer, assist in pairs(target.serverUserData.damageTable) do
+                if
+                    assistPlayer and Object.IsValid(assistPlayer) and assistPlayer ~= source and
+                        assistPlayer.team ~= target.team and
+                        assist.timer and
+                        assist.timer >= time()
+                 then
+                    local assistPlayerData = assistPlayer.serverUserData.tournament
+                    assistPlayerData.killAssists = assistPlayerData.killAssists + 1
+                    assistPlayer.serverUserData.tournament = assistPlayerData
+
+                    assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
+                end
+            end
         end
     end
     target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
