@@ -422,13 +422,14 @@ Objects {
   Name: "Trigger"
   Transform {
     Location {
+      Y: 59.9637146
       Z: 102.708862
     }
     Rotation {
     }
     Scale {
       X: 7.06979752
-      Y: 0.5
+      Y: 5.4903121
       Z: 7.70949
     }
   }
