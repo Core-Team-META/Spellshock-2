@@ -444,7 +444,7 @@ Objects {
   }
   Trigger {
     Interactable: true
-    InteractionLabel: "Take Portal to Another Core World"
+    InteractionLabel: "Take Portal to Spellshock Tournament"
     TeamSettings {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
