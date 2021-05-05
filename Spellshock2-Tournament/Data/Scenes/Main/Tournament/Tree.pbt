@@ -152,7 +152,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -215,7 +215,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1627,7 +1627,7 @@ Objects {
       }
     }
     Text {
-      Label: "GUNS N\' GLORY"
+      Label: "CORE TRIALS "
       Color {
         R: 0.65
         G: 0.348675489
@@ -1690,7 +1690,7 @@ Objects {
       }
     }
     Text {
-      Label: "GUNS N\' GLORY"
+      Label: "CORE TRIALS "
       Color {
         A: 0.692000031
       }

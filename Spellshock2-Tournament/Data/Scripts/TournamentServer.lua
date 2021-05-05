@@ -121,17 +121,20 @@ local function CalculateSoftCap(value, base, count, reduction)
 	end
 end
 
-function SubmitScore(player, score, totalKills, headshots, uniquePlayersKilled)
-	score = CoreMath.Round(score)
-	--print("##### Submit Score for " .. player.name .. " = " .. tostring(score))
+function SubmitScore(player, score, totalKills, teamScore, uniquePlayersKilled)
+	if player and Object.IsValid(player) then
+		score = CoreMath.Round(score)
+		--print("##### Submit Score for " .. player.name .. " = " .. tostring(score))
 
-	local additionalData = ADDITIONAL_DATA.Serialize(totalKills, headshots, uniquePlayersKilled)
-	Leaderboards.SubmitPlayerScore(LEADERBOARD_REF, player, score, additionalData)
+		local additionalData = ADDITIONAL_DATA.Serialize(totalKills, teamScore, uniquePlayersKilled)
+		Leaderboards.SubmitPlayerScore(LEADERBOARD_REF, player, score, additionalData)
 
-	local bestScore = SetPlayerScoreToStorage(player, score)
-	TransferStorageToPlayer(player)
+		local bestScore = SetPlayerScoreToStorage(player, score)
+		TransferStorageToPlayer(player)
 
-	Events.BroadcastToPlayer(player, EVENT_ID, score, bestScore)
+		Events.BroadcastToPlayer(player, EVENT_ID, score, bestScore)
+		Task.Wait()
+	end
 end
 
 function OnPlayerDamaged(attackData)
@@ -353,9 +356,20 @@ function OnRoundEnded()
 		winningScore = scoreTeam2
 		losingScore = scoreTeam1
 	end
+	local str = "[TOURNAMENT ANALYSIS] "
+	str = str.."{"
+
+	str = str.."\"winningTeam\":" .. tostring(winningTeam)
+			.. ",\"winningTeamScore\":" .. tostring(winningScore)
+			.. ",\"losingTeamScore\":" .. tostring(losingScore)
+	-- Players
+	str = str .. ",\"players\":["
+	local playersWritten = 0
 
 	-- Add the different point categories at end of round
 	for _, player in ipairs(Game.GetPlayers()) do
+
+
 		local playerData = player.serverUserData.tournament
 
 		local killPoints = playerData.points
@@ -439,33 +453,65 @@ function OnRoundEnded()
 			playerData.points = CoreMath.Round(playerData.points + uniqueKillsBonus)
 		end
 
+		-- Add to player data for admin printouts
+		player.serverUserData.tournament.teamScore = CoreMath.Round(teamScoreBonus)
+
+		playersWritten = playersWritten + 1
+		if playersWritten == 1 then
+			str = str .. "{"
+		else
+			str = str .. ",{"
+		end
+		-- ID
+		str = str .. "\"id\":\"" .. tostring(player.id) .. "\""
+
+		str = str .. ",\"base\":" .. tostring(BASE_POINTS)
+		str = str .. ",\"team\":" .. tostring(roundPoints)
+		str = str .. ",\"damage\":" .. tostring(damagePoints)
+		str = str .. ",\"healing\":" .. tostring(healingPoints)
+		str = str .. ",\"kills\":" .. tostring(killPoints)
+		str = str .. ",\"killStreak\":" .. tostring(killStreakPoints)
+		str = str .. ",\"killAssist\":" .. tostring(assistKillPoints)
+		str = str .. ",\"objective\":" .. tostring(objectivePoints)
+		str = str .. ",\"assistCapture\":" .. tostring(objectiveAssistPoints)
+		str = str .. ",\"uniqueKills\":" .. tostring(objectiveAssistPoints)
+		str = str .. ",\"teamScore\":" .. tostring(teamScoreBonus)
+		str = str .. ",\"total\":" .. tostring(playerData.points)
+
+		str = str .. "}"
+
 		if DEBUG_MODE then
-			print("------------------------------------------")
-			print(player.name .. " Points ")
-			print("------------------------------------------")
-			print("Starting Points: " .. tostring(BASE_POINTS))
-			print("Team Points: " .. tostring(roundPoints))
-			print("Damage Points: " .. tostring(damagePoints))
-			print("Healing Points: " .. tostring(healingPoints))
-			print("Kill Points: " .. tostring(killPoints))
-			print("Kill Streak Points: " .. tostring(killStreakPoints))
-			print("Kill Assist Points: " .. tostring(assistKillPoints))
-			print("Capture Points: " .. tostring(objectivePoints))
-			print("Assist Capture Points: " .. tostring(objectiveAssistPoints))
-			print("Unique Kill Points: " .. tostring(uniqueKillsBonus))
-			print("Team Score Bonus: " .. tostring(teamScoreBonus))
-			print("Points Total: " .. tostring(playerData.points))
-			print("------------------------------------------")
+			print("------------------------------------------" .. "\n" ..
+			player.name .. " Points " .. "\n" ..
+			"------------------------------------------" .. "\n" ..
+			"Starting Points: " .. tostring(BASE_POINTS) .. "\n" ..
+			"Team Points: " .. tostring(roundPoints) .. "\n" ..
+			"Damage Points: " .. tostring(damagePoints) .. "\n" ..
+			"Healing Points: " .. tostring(healingPoints) .. "\n" ..
+			"Kill Points: " .. tostring(killPoints) .. "\n" ..
+			"Kill Streak Points: " .. tostring(killStreakPoints) .. "\n" ..
+			"Kill Assist Points: " .. tostring(assistKillPoints) .. "\n" ..
+			"Capture Points: " .. tostring(objectivePoints) .. "\n" ..
+			"Assist Capture Points: " .. tostring(objectiveAssistPoints) .. "\n" ..
+			"Unique Kill Points: " .. tostring(uniqueKillsBonus) .. "\n" ..
+			"Team Score Bonus: " .. tostring(teamScoreBonus) .. "\n" ..
+			"Points Total: " .. tostring(playerData.points) .. "\n" ..
+			"------------------------------------------")
 		end
 	end
+
+	-- Done
+	str = str .. "]}"
+	print(str)
 
 	-- Submit points for valid players
 	for _, player in ipairs(Game.GetPlayers()) do
 		local playerData = player.serverUserData.tournament
 
-		SubmitScore(player, playerData.points, playerData.totalKills, playerData.headshots, playerData.uniqueCount or 0)
+		SubmitScore(player, playerData.points, playerData.totalKills, playerData.teamScore, playerData.uniqueCount or 0)
 	end
 end
+
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.roundStartEvent:Connect(OnRoundStarted)

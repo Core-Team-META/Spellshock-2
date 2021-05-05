@@ -919,7 +919,7 @@ Objects {
       }
     }
     Text {
-      Label: "GUNS N\' GLORY - TOURNAMENT"
+      Label: "CORE TRIALS  - TOURNAMENT"
       Color {
         R: 0.73791039
         G: 0.386429429
@@ -982,7 +982,7 @@ Objects {
       }
     }
     Text {
-      Label: "GUNS N\' GLORY - TOURNAMENT"
+      Label: "CORE TRIALS - TOURNAMENT"
       Color {
         A: 0.692000031
       }

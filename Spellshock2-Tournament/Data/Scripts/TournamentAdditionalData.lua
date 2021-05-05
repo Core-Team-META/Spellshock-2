@@ -1,19 +1,19 @@
 
 local API = {}
 
-function API.Serialize(totalKills, headshots, uniquePlayersKilled)
+function API.Serialize(totalKills, teamScore, uniquePlayersKilled)
 	if totalKills > 999 then
 		totalKills = 999
 	end
-	if headshots > 999 then
-		headshots = 999
+	if teamScore > 999 then
+		teamScore = 999
 	end
 	if uniquePlayersKilled > 99 then
 		uniquePlayersKilled = 99
 	end
 	local value = 
 		100000 * totalKills + 
-		100 * headshots + 
+		100 * teamScore + 
 		uniquePlayersKilled
 	
 	return tostring(value)
@@ -30,11 +30,11 @@ function API.Parse(data)
 	end
 	
 	local totalKills = math.floor(value / 100000)
-	local headshots = value - totalKills * 100000
-	headshots = math.floor(headshots / 100)
-	local uniquePlayersKilled = value - totalKills * 100000 - headshots * 100
+	local teamScore = value - totalKills * 100000
+	teamScore = math.floor(teamScore / 100)
+	local uniquePlayersKilled = value - totalKills * 100000 - teamScore * 100
 	
-	return totalKills, headshots, uniquePlayersKilled
+	return totalKills, teamScore, uniquePlayersKilled
 end
 
 function Test()

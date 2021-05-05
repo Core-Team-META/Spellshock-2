@@ -43,7 +43,7 @@ local HIDDEN_X = 400
 local IN_DELAY = 3
 local IN_DURATION = 0.7
 local OUT_DURATION = 0.9
-local WAITING_MAX_DURATION = 40
+local WAITING_MAX_DURATION = 70
 
 local STATE_HIDDEN = 0
 local STATE_IN_DELAY = 1
@@ -141,6 +141,7 @@ admins["Melamoryxq"] = true
 admins["Mucusinator"] = true
 admins["WitcherSilver"] = true
 admins["AJ"] = true
+admins["Bot1"] = true
 
 function OnBindingPressed(player, action)
 	if currentState == STATE_WAITING and action == "ability_extra_37" then -- K
@@ -169,12 +170,12 @@ function OnBindingPressed(player, action)
 			local name = entry.name
 			local score = entry.score
 			local additionalData = entry.additionalData
-			local totalKills, headshots, uniquePlayersKilled = ADDITIONAL_DATA.Parse(additionalData)
+			local totalKills, teamScore, uniquePlayersKilled = ADDITIONAL_DATA.Parse(additionalData)
 			print(tostring(i) .. ") " .. name .. 
 				", score = " .. score ..
 				", +data = " .. additionalData ..
 				", totalKills = " .. totalKills ..
-				", headshots = " .. headshots ..
+				", teamScore = " .. teamScore ..
 				", uniqueKills = " .. uniquePlayersKilled)
 		end
 	end
