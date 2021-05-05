@@ -82,7 +82,7 @@ function SupernovaEnding()
 				source = SpecialAbility.owner,
 				position = nil,
 				rotation = nil,
-				tags = {id = "Mage_T"}
+				tags = {id = "Healer_T"}
 			}
 			-- Heal
 			COMBAT().ApplyDamage(attackData)
@@ -98,7 +98,7 @@ function SupernovaEnding()
 				source = SpecialAbility.owner,
 				position = nil,
 				rotation = nil,
-				tags = {id = "Mage_T"}
+				tags = {id = "Healer_T"}
 			}
 			COMBAT().ApplyDamage(attackData)
 		   -- Stun

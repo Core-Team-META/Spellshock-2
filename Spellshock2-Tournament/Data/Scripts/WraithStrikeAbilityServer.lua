@@ -223,7 +223,7 @@ function DamageInArea()
 		source = SpecialAbility.owner,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Assassin_Q"}
+		tags = {id = "Assassin_T"}
 	}
 
     -- Get enemies in a sphere

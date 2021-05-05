@@ -105,7 +105,7 @@ function Tick(dTime)
 					source = dmg.sourcePlayer,
 					position = nil,
 					rotation = nil,
-					tags = {id = "Mage_E"}
+					tags = {id = "Healer_E"}
 				}
 
 				if dmg.amount < 0 and thisObject.hitPoints < thisObject.maxHitPoints then

@@ -55,7 +55,7 @@ function OnBeginOverlap(thisTrigger, other)
 		source = SpecialAbility.owner,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Mage_Q"}
+		tags = {id = "Healer_Q"}
 	}
 	COMBAT().ApplyDamage(attackData)
 end
