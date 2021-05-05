@@ -1,6 +1,6 @@
 Assets {
   Id: 7047570860712842217
-  Name: "Mage Animorph Potion Attachment Basic"
+  Name: "Mage Animorph Potion Attachment StrikeTeam"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
