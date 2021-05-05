@@ -2041,9 +2041,9 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            X: -3.29214931
-            Y: 4.76256037
-            Z: 27.5228844
+            X: -3.65973496
+            Y: 4.76256084
+            Z: 27.3387184
           }
           Rotation {
             Roll: 45
@@ -2051,7 +2051,7 @@ Assets {
           Scale {
             X: 0.102725983
             Y: 0.102733284
-            Z: 0.247737318
+            Z: 0.103
           }
         }
         ParentId: 18313487118547941323
@@ -2087,7 +2087,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 7363477334452929865
           }
           Teams {
           }
@@ -2103,9 +2103,9 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            X: -3.29215717
-            Y: -4.76254845
-            Z: 27.5228863
+            X: -3.65974283
+            Y: -4.76254749
+            Z: 27.3387184
           }
           Rotation {
             Roll: -45
@@ -2113,7 +2113,7 @@ Assets {
           Scale {
             X: 0.102725983
             Y: 0.102733284
-            Z: 0.247737318
+            Z: 0.103
           }
         }
         ParentId: 18313487118547941323
@@ -2149,7 +2149,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 7363477334452929865
           }
           Teams {
           }
@@ -2590,22 +2590,22 @@ Assets {
       }
       Objects {
         Id: 9335940241502045486
-        Name: "eye"
+        Name: "pupil"
         Transform {
           Location {
-            X: -1.54870355
-            Y: -7.32331
-            Z: 29.2659187
+            X: 1.0225302
+            Y: -5.41995955
+            Z: 30.5541553
           }
           Rotation {
-            Pitch: -22.9111023
-            Yaw: -8.98999
-            Roll: -58.803009
+            Pitch: -56.6306763
+            Yaw: -8.99081421
+            Roll: 11.2426586
           }
           Scale {
-            X: 0.0453913286
-            Y: 0.0454170741
-            Z: 0.0981288478
+            X: 0.0242659468
+            Y: 0.0242797043
+            Z: 0.0240567345
           }
         }
         ParentId: 18313487118547941323
@@ -2638,7 +2638,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -2651,22 +2651,22 @@ Assets {
       }
       Objects {
         Id: 13321797172270852820
-        Name: "eye"
+        Name: "pupil"
         Transform {
           Location {
-            X: -1.5486902
-            Y: 7.32331896
-            Z: 29.2659168
+            X: 0.48422429
+            Y: 5.42205238
+            Z: 30.2844467
           }
           Rotation {
-            Pitch: -22.9111023
-            Yaw: 8.98986912
-            Roll: 58.8027954
+            Pitch: -54.7518921
+            Yaw: 9.23112
+            Roll: -179.754593
           }
           Scale {
-            X: 0.0453913286
-            Y: 0.0454170741
-            Z: 0.0981288478
+            X: 0.0254818611
+            Y: 0.0254963115
+            Z: 0.0252621751
           }
         }
         ParentId: 18313487118547941323
@@ -2699,7 +2699,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -4137,12 +4137,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15590791169563939070
-      Name: "Gem - Round Polished"
+      Id: 7363477334452929865
+      Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_round_polished_001"
+        AssetId: "sm_sphere_002"
       }
     }
     Assets {
@@ -4188,6 +4188,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_gem_pear_polished_001"
+      }
+    }
+    Assets {
+      Id: 4533424030597734882
+      Name: "Lens"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_lense_001"
       }
     }
     Assets {

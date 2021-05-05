@@ -568,9 +568,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -646,9 +646,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -726,9 +726,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -806,9 +806,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -885,9 +885,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -944,12 +944,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 4.94842863
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.39268208
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -958,15 +954,11 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.76000005
-              G: 0.76000005
-              B: 0.76000005
+              R: 0.401041657
+              G: 0.203891471
+              B: 0.139946818
               A: 1
             }
           }
@@ -1043,9 +1035,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -1102,29 +1094,21 @@ Assets {
             }
           }
           Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 10184847056121543272
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.76000005
-              G: 0.76000005
-              B: 0.76000005
+              R: 0.401041657
+              G: 0.203891471
+              B: 0.139946818
               A: 1
             }
           }
@@ -1511,9 +1495,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -1584,9 +1568,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -1942,9 +1926,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -2015,9 +1999,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -2406,9 +2390,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -2479,9 +2463,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -2837,9 +2821,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -2910,9 +2894,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -3025,9 +3009,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.114000008
-              G: 0.0494988
-              B: 0.0196079928
               A: 1
             }
           }
@@ -3105,9 +3086,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.229000017
-              G: 0.0994318053
-              B: 0.0393879861
               A: 1
             }
           }
@@ -3185,9 +3163,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.349
-              G: 0.151535794
-              B: 0.0600279756
               A: 1
             }
           }
@@ -3302,9 +3277,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.229000017
-              G: 0.0994318053
-              B: 0.0393879861
               A: 1
             }
           }
@@ -3382,9 +3354,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.349
-              G: 0.151535794
-              B: 0.0600279756
               A: 1
             }
           }
@@ -3460,9 +3429,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.114000008
-              G: 0.0494988
-              B: 0.0196079928
               A: 1
             }
           }
@@ -3493,7 +3459,7 @@ Assets {
       }
       Objects {
         Id: 11397547423738874545
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Gem - Pear Polished"
         Transform {
           Location {
             X: 55.5030251
@@ -3539,9 +3505,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -3572,7 +3538,7 @@ Assets {
       }
       Objects {
         Id: 17195333944138736665
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Gem - Pear Polished"
         Transform {
           Location {
             X: 20.3376141
@@ -3619,9 +3585,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -3652,7 +3618,7 @@ Assets {
       }
       Objects {
         Id: 337862446460193590
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Gem - Pear Polished"
         Transform {
           Location {
             X: 133.800095
@@ -3728,12 +3694,12 @@ Assets {
       }
       Objects {
         Id: 5259846969007836711
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Sphere"
         Transform {
           Location {
-            X: 80.8221207
-            Y: -29.9986668
-            Z: 201.405167
+            X: 78.0069
+            Y: -30.000391
+            Z: 201.404221
           }
           Rotation {
             Pitch: -45.012085
@@ -3741,9 +3707,9 @@ Assets {
             Roll: -81.5649414
           }
           Scale {
-            X: 0.393121243
-            Y: 0.393120974
-            Z: 0.811794639
+            X: 0.354368776
+            Y: 0.354368418
+            Z: 0.35425961
           }
         }
         ParentId: 10966287789672587567
@@ -3793,7 +3759,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 7363477334452929865
           }
           Teams {
           }
@@ -3808,12 +3774,12 @@ Assets {
       }
       Objects {
         Id: 4150129244852369707
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Sphere"
         Transform {
           Location {
-            X: 80.8221207
-            Y: 29.9986668
-            Z: 201.405167
+            X: 78.0069
+            Y: 30.000391
+            Z: 201.404221
           }
           Rotation {
             Pitch: 45.0120583
@@ -3821,9 +3787,9 @@ Assets {
             Roll: 98.4350281
           }
           Scale {
-            X: 0.393121243
-            Y: 0.393120974
-            Z: 0.811794639
+            X: 0.354368776
+            Y: 0.354368418
+            Z: 0.35425961
           }
         }
         ParentId: 10966287789672587567
@@ -3873,7 +3839,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 7363477334452929865
           }
           Teams {
           }
@@ -3888,22 +3854,22 @@ Assets {
       }
       Objects {
         Id: 9605887130991321803
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Lens"
         Transform {
           Location {
-            X: 91.3065567
-            Y: -32.9971619
-            Z: 203.991974
+            X: 95.7776413
+            Y: -30.2259579
+            Z: 203.990891
           }
           Rotation {
-            Pitch: -45.0119629
-            Yaw: -133.636719
-            Roll: -114.359985
+            Pitch: -45.4885254
+            Yaw: 90.0907745
+            Roll: -88.1004
           }
           Scale {
-            X: 0.133989364
-            Y: 0.133989051
-            Z: 0.297411
+            X: 0.0709799
+            Y: 0.0709797293
+            Z: 0.0709855407
           }
         }
         ParentId: 10966287789672587567
@@ -3950,7 +3916,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -3965,22 +3931,22 @@ Assets {
       }
       Objects {
         Id: 9678004990885260543
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Lens"
         Transform {
           Location {
-            X: 91.3065567
-            Y: 32.9971619
-            Z: 203.991974
+            X: 97.3468
+            Y: 29.6669445
+            Z: 203.990891
           }
           Rotation {
-            Pitch: 45.0119171
-            Yaw: -46.3632202
-            Roll: 65.6400146
+            Pitch: 47.5598221
+            Yaw: 87.3417892
+            Roll: 86.1225739
           }
           Scale {
-            X: 0.133989364
-            Y: 0.133989051
-            Z: 0.297411
+            X: 0.0709799
+            Y: 0.0709797293
+            Z: 0.0709855407
           }
         }
         ParentId: 10966287789672587567
@@ -4027,7 +3993,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -4042,7 +4008,7 @@ Assets {
       }
       Objects {
         Id: 7638331764875501967
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Gem - Pear Polished"
         Transform {
           Location {
             X: 20.3376141
@@ -4089,9 +4055,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4122,7 +4088,7 @@ Assets {
       }
       Objects {
         Id: 330253681326535557
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Gem - Pear Polished"
         Transform {
           Location {
             X: 17.7988434
@@ -4167,9 +4133,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4200,7 +4166,7 @@ Assets {
       }
       Objects {
         Id: 9551497890071231874
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Gem - Pear Polished"
         Transform {
           Location {
             X: 15.3561335
@@ -4225,29 +4191,21 @@ Assets {
             }
           }
           Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 10184847056121543272
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.66516972
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 8.97748661
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.76000005
-              G: 0.76000005
-              B: 0.76000005
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4278,7 +4236,7 @@ Assets {
       }
       Objects {
         Id: 18011844004964611333
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Gem - Pear Polished"
         Transform {
           Location {
             X: 51.8869896
@@ -4323,9 +4281,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 2
-              G: 0.702
-              B: 0.281000018
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4356,12 +4314,12 @@ Assets {
       }
       Objects {
         Id: 14257132846193490201
-        Name: "Pyramid - 4-Sided Truncated Polished"
+        Name: "Sphere - Half"
         Transform {
           Location {
-            X: 77.6383591
-            Y: 25.3534031
-            Z: 196.610657
+            X: 77.6328125
+            Y: 27.375
+            Z: 200.777344
           }
           Rotation {
             Pitch: 21.145813
@@ -4369,9 +4327,9 @@ Assets {
             Roll: 35.9041367
           }
           Scale {
-            X: 0.443952084
-            Y: 0.443929166
-            Z: 0.753374398
+            X: 0.443954
+            Y: 0.443931162
+            Z: -0.461813927
           }
         }
         ParentId: 10966287789672587567
@@ -4403,9 +4361,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.38500002
-              G: 0.185056686
-              B: 0.0923999846
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4421,7 +4379,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -4457,7 +4415,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4471,7 +4429,7 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            Y: 12.7830553
+            Y: 12.7830467
           }
           Rotation {
             Pitch: 1.5690378
@@ -4479,9 +4437,9 @@ Assets {
             Roll: 71.2431412
           }
           Scale {
-            X: 0.101972677
-            Y: 0.227795437
-            Z: 0.101970993
+            X: 0.079041563
+            Y: 0.103058711
+            Z: 0.0783591792
           }
         }
         ParentId: 3319353449462717995
@@ -4505,7 +4463,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.309999943
+              R: 0.026041666
+              G: 0.00914062187
+              B: 0.0036588558
               A: 1
             }
           }
@@ -4547,13 +4507,13 @@ Assets {
           }
           Rotation {
             Pitch: 1.5690378
-            Yaw: -41.184
-            Roll: -71.2429733
+            Yaw: -41.1839905
+            Roll: -71.242981
           }
           Scale {
-            X: 0.101972677
-            Y: 0.227795437
-            Z: 0.101970993
+            X: 0.079041563
+            Y: 0.103058711
+            Z: 0.0783591792
           }
         }
         ParentId: 3319353449462717995
@@ -4577,7 +4537,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.309999943
+              R: 0.026041666
+              G: 0.00914062187
+              B: 0.0036588558
               A: 1
             }
           }
@@ -4615,19 +4577,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 74.9555
-            Y: 27.2128811
-            Z: 205.913193
+            X: 77.5697
+            Y: 27.7545338
+            Z: 203.418701
           }
           Rotation {
-            Pitch: 22.2864685
-            Yaw: -55.7776489
-            Roll: -42.4526672
+            Pitch: 3.04208422
+            Yaw: -39.0799255
+            Roll: -38.7137756
           }
           Scale {
-            X: 0.443951398
-            Y: 0.443924725
-            Z: 0.818543673
+            X: 0.443952143
+            Y: 0.4439255
+            Z: 0.509397388
           }
         }
         ParentId: 10966287789672587567
@@ -4659,9 +4621,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.38500002
-              G: 0.185056686
-              B: 0.0923999846
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4677,7 +4639,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -4695,19 +4657,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 77.6383591
-            Y: -25.353
-            Z: 196.610657
+            X: 76.484375
+            Y: -27.671875
+            Z: 202.523438
           }
           Rotation {
             Pitch: 21.145813
             Yaw: 50.182
-            Roll: -35.904
+            Roll: -35.9039917
           }
           Scale {
-            X: 0.443952084
-            Y: 0.443929166
-            Z: 0.753374398
+            X: 0.443954
+            Y: 0.443931162
+            Z: -0.461813927
           }
         }
         ParentId: 10966287789672587567
@@ -4739,9 +4701,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.38500002
-              G: 0.185056686
-              B: 0.0923999846
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4757,7 +4719,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -4775,19 +4737,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 74.9555
-            Y: -27.213
-            Z: 205.913193
+            X: 77.5697
+            Y: -26.6713467
+            Z: 203.418701
           }
           Rotation {
-            Pitch: 22.2864685
-            Yaw: 55.778
-            Roll: 42.453
+            Pitch: 8.83187103
+            Yaw: 43.7824402
+            Roll: 39.2018242
           }
           Scale {
-            X: 0.443951398
-            Y: 0.443924725
-            Z: 0.818543673
+            X: 0.443952143
+            Y: 0.4439255
+            Z: 0.509397388
           }
         }
         ParentId: 10966287789672587567
@@ -4819,9 +4781,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.38500002
-              G: 0.185056686
-              B: 0.0923999846
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4837,7 +4799,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -4879,12 +4841,30 @@ Assets {
       }
     }
     Assets {
-      Id: 15590791169563939070
-      Name: "Gem - Round Polished"
+      Id: 7363477334452929865
+      Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_round_polished_001"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 4533424030597734882
+      Name: "Lens"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_lense_001"
+      }
+    }
+    Assets {
+      Id: 5646704112327633341
+      Name: "Sphere - Half"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hemisphere_001"
       }
     }
     Assets {

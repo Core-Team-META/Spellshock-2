@@ -4142,9 +4142,9 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 80.8221207
-            Y: -29.9986668
-            Z: 201.405167
+            X: 76.8002777
+            Y: -29.9947491
+            Z: 201.404694
           }
           Rotation {
             Pitch: -45.012085
@@ -4154,7 +4154,7 @@ Assets {
           Scale {
             X: 0.393121243
             Y: 0.393120974
-            Z: 0.811794639
+            Z: 0.393
           }
         }
         ParentId: 5134177231585358834
@@ -4204,7 +4204,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 7363477334452929865
           }
           Teams {
           }
@@ -4222,9 +4222,9 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 80.8221207
-            Y: 29.9986668
-            Z: 201.405167
+            X: 76.8002777
+            Y: 29.9947491
+            Z: 201.404694
           }
           Rotation {
             Pitch: 45.0120583
@@ -4234,7 +4234,7 @@ Assets {
           Scale {
             X: 0.393121243
             Y: 0.393120974
-            Z: 0.811794639
+            Z: 0.393
           }
         }
         ParentId: 5134177231585358834
@@ -4284,7 +4284,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 7363477334452929865
           }
           Teams {
           }
@@ -4302,19 +4302,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 91.3065567
-            Y: -32.9971619
-            Z: 203.991974
+            X: 96.5076141
+            Y: -32.9942245
+            Z: 203.992477
           }
           Rotation {
-            Pitch: -45.0119629
-            Yaw: -133.636719
-            Roll: -114.359985
+            Pitch: -45.2567749
+            Yaw: -86.0523071
+            Roll: -100.815582
           }
           Scale {
-            X: 0.133989364
-            Y: 0.133989051
-            Z: 0.297411
+            X: 0.101683788
+            Y: 0.101683542
+            Z: 0.101691835
           }
         }
         ParentId: 5134177231585358834
@@ -4361,7 +4361,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -4379,19 +4379,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 91.3065567
-            Y: 32.9971619
-            Z: 203.991974
+            X: 96.6105347
+            Y: 31.1710129
+            Z: 203.992477
           }
           Rotation {
-            Pitch: 45.0119171
-            Yaw: -46.3632202
-            Roll: 65.6400146
+            Pitch: 46.7202721
+            Yaw: -92.4702148
+            Roll: 79.1564407
           }
           Scale {
-            X: 0.133989364
-            Y: 0.133989051
-            Z: 0.297411
+            X: 0.101683788
+            Y: 0.101683542
+            Z: 0.101691835
           }
         }
         ParentId: 5134177231585358834
@@ -4438,7 +4438,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -4743,19 +4743,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 77.6383591
-            Y: 25.3534031
-            Z: 196.610657
+            X: 77.7734375
+            Y: 30.03125
+            Z: 198.966797
           }
           Rotation {
-            Pitch: 21.145813
-            Yaw: -50.1820679
-            Roll: 35.9041367
+            Pitch: 28.2853699
+            Yaw: -53.4474792
+            Roll: 28.4016495
           }
           Scale {
-            X: 0.443952084
-            Y: 0.443929166
-            Z: 0.753374398
+            X: 0.443961173
+            Y: 0.443929732
+            Z: -0.355551034
           }
         }
         ParentId: 5134177231585358834
@@ -4805,7 +4805,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -4841,7 +4841,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4855,17 +4855,19 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            Y: 12.7830553
+            X: 1.23017681
+            Y: 9.15526
+            Z: -3.77384901
           }
           Rotation {
-            Pitch: 1.5690378
-            Yaw: 41.1844673
-            Roll: 71.2431412
+            Pitch: -4.99642944
+            Yaw: 21.7105808
+            Roll: 58.7767677
           }
           Scale {
-            X: 0.101972677
-            Y: 0.227795437
-            Z: 0.101970993
+            X: 0.101990245
+            Y: 0.126276478
+            Z: 0.0914386958
           }
         }
         ParentId: 4237807863517918248
@@ -4889,7 +4891,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.309999943
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4927,17 +4931,19 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            Y: -12.7830553
+            X: 1.9016279
+            Y: -7.53789616
+            Z: -5.1804657
           }
           Rotation {
-            Pitch: 1.5690378
-            Yaw: -41.184
-            Roll: -71.2429733
+            Pitch: -4.58136
+            Yaw: -22.9748535
+            Roll: -56.1964417
           }
           Scale {
-            X: 0.101972677
-            Y: 0.227795437
-            Z: 0.101970993
+            X: 0.101990245
+            Y: 0.126276478
+            Z: 0.0914386958
           }
         }
         ParentId: 4237807863517918248
@@ -4961,7 +4967,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.309999943
+              R: 0.0885416642
+              G: 0.0310781151
+              B: 0.0124401096
               A: 1
             }
           }
@@ -4999,19 +5007,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 74.9555
-            Y: 27.2128811
-            Z: 205.913193
+            X: 74.9574661
+            Y: 29.8575172
+            Z: 205.913712
           }
           Rotation {
-            Pitch: 22.2864685
-            Yaw: -55.7776489
-            Roll: -42.4526672
+            Pitch: 4.99280643
+            Yaw: -40.6506653
+            Roll: -38.8243408
           }
           Scale {
-            X: 0.443951398
-            Y: 0.443924725
-            Z: 0.818543673
+            X: 0.452185363
+            Y: 0.452169687
+            Z: 0.480514824
           }
         }
         ParentId: 5134177231585358834
@@ -5061,7 +5069,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -5079,19 +5087,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 77.6383591
-            Y: -25.353
-            Z: 196.610657
+            X: 76.8046875
+            Y: -30.3515625
+            Z: 201.283203
           }
           Rotation {
-            Pitch: 21.145813
-            Yaw: 50.182
-            Roll: -35.904
+            Pitch: 21.1456985
+            Yaw: 50.1823311
+            Roll: -25.1850586
           }
           Scale {
-            X: 0.443952084
-            Y: 0.443929166
-            Z: 0.753374398
+            X: 0.443961173
+            Y: 0.443929732
+            Z: -0.355551034
           }
         }
         ParentId: 5134177231585358834
@@ -5141,7 +5149,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -5159,19 +5167,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 74.9555
-            Y: -27.213
-            Z: 205.913193
+            X: 74.9574661
+            Y: -30.386837
+            Z: 205.913712
           }
           Rotation {
-            Pitch: 22.2864685
-            Yaw: 55.778
-            Roll: 42.453
+            Pitch: 2.46157956
+            Yaw: 38.6139679
+            Roll: 38.6919403
           }
           Scale {
-            X: 0.443951398
-            Y: 0.443924725
-            Z: 0.818543673
+            X: 0.452185363
+            Y: 0.452169687
+            Z: 0.480514824
           }
         }
         ParentId: 5134177231585358834
@@ -5221,7 +5229,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -5263,12 +5271,30 @@ Assets {
       }
     }
     Assets {
-      Id: 15590791169563939070
-      Name: "Gem - Round Polished"
+      Id: 7363477334452929865
+      Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_round_polished_001"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 4533424030597734882
+      Name: "Lens"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_lense_001"
+      }
+    }
+    Assets {
+      Id: 5646704112327633341
+      Name: "Sphere - Half"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hemisphere_001"
       }
     }
     Assets {
