@@ -59,6 +59,7 @@ function OnRoundStart()
 
         Events.Broadcast("ToggleLoadScreen", false)
     else
+        Task.Wait(1)
         for _, player in ipairs(AllPlayers) do
             if Object.IsValid(player) then
                 player:Respawn()
