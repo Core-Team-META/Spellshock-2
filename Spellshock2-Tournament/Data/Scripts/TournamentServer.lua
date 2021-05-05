@@ -39,7 +39,7 @@ local BONUS_MULTIPLY_PER_UNIQUE_KILL = 100
 local MAX_UNIQUE_COUNT = 8
 
 -- Base Point Removal Softcaps
-local SOFTCAP_KILLSTREAK_COUNT = 1
+local SOFTCAP_KILLSTREAK_COUNT = 10
 local SOFTCAP_KILLSTREAK_REDUCTION = 20
 
 local SOFTCAP_OBJECTIVE_COUNT = 5
@@ -64,20 +64,7 @@ local POINTS_FOR_LOSS = 4
 
 local STORAGE_KEY = "TournamentSupport"
 
-local function TagAssistPlayer(player, target, attackData)
-	target.serverUserData.damageTable = target.serverUserData.damageTable or {}
-	target.serverUserData.damageTable[player] = target.serverUserData.damageTable[player] or {}
-	local assistTbl = target.serverUserData.damageTable[player]
-	if assistTbl.timer and assistTbl.timer < time() then
-		assistTbl.damage = assistTbl.damage or 0
-		assistTbl.damage = assistTbl.damage + attackData.damage.amount
-		assistTbl.timer = time() + 10
-	else
-		assistTbl.damage = attackData.damage.amount
-		assistTbl.timer = time() + 10
-	end
-	target.serverUserData.damageTable[player] = assistTbl
-end
+
 
 local function CalculateBaseSoftCap(value, base, count, reduction)
 	local roundSoftcap = 0
@@ -133,7 +120,7 @@ function SubmitScore(player, score, totalKills, teamScore, uniquePlayersKilled)
 		TransferStorageToPlayer(player)
 
 		Events.BroadcastToPlayer(player, EVENT_ID, score, bestScore)
-		Task.Wait()
+		Task.Wait(0.20) -- Throttle to 5 a second
 	end
 end
 
@@ -151,7 +138,7 @@ function OnPlayerDamaged(attackData)
 	end
 
 	-- Assist Calculation
-	TagAssistPlayer(player, target, attackData)
+	--TagAssistPlayer(player, target, attackData)
 
 	if not target.isDead then
 		return
@@ -213,19 +200,6 @@ function OnPlayerDamaged(attackData)
 	-- Apply points
 	playerData.points = playerData.points + killPoints
 	targetData.points = targetData.points + deathPoints
-
-	-- Apply Assist Points
-	for assistPlayer, assist in pairs(target.serverUserData.damageTable) do
-		if
-			assistPlayer and Object.IsValid(assistPlayer) and assistPlayer ~= player and assistPlayer.team ~= target.team and
-				assist.timer and
-				assist.timer >= time()
-		 then
-			local assistPlayerData = assistPlayer.serverUserData.tournament
-			assistPlayerData.killAssists = assistPlayerData.killAssists + 1
-			assistPlayer.serverUserData.tournament = assistPlayerData
-		end
-	end
 
 	-- Track unique kills bonus
 	local targetId = target.id
@@ -376,9 +350,11 @@ function OnRoundEnded()
 		-- Round points
 		local roundPoints = 0
 		local teamScoreBonus = 0
+		local hasWon = false
 		if player.team == winningTeam then
 			roundPoints = CoreMath.Round(winningScore * POINTS_FOR_VICTORY)
 			teamScoreBonus = winningScore
+			hasWon = true
 		else
 			roundPoints = CoreMath.Round(losingScore * POINTS_FOR_LOSS)
 			teamScoreBonus = losingScore
@@ -464,7 +440,7 @@ function OnRoundEnded()
 		end
 		-- ID
 		str = str .. "\"id\":\"" .. tostring(player.id) .. "\""
-
+		str = str .. ",\"wonRound\":" .. tostring(hasWon)
 		str = str .. ",\"base\":" .. tostring(BASE_POINTS)
 		str = str .. ",\"team\":" .. tostring(roundPoints)
 		str = str .. ",\"damage\":" .. tostring(damagePoints)
