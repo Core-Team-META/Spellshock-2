@@ -52,10 +52,8 @@ function ComputePlayerValue(player)
 	local weightedWinRate = player.serverUserData.weightedWinRate
 	local winRateValue = weightedWinRate
 	if winRateValue then
-		winRateValue = CoreMath.Clamp(winRateValue, WIN_RATE_MIN, WIN_RATE_MAX)
-		winRateValue = winRateValue ^ WIN_RATE_EXPONENT
-		winRateValue = winRateValue * WIN_RATE_COEFFICIENT
-		value = value + winRateValue
+	value = WIN_RATE_COEFFICIENT * player.serverUserData.weightedWinRate
+		--value = value + winRateValue
 	end
 
 	player.serverUserData.balanceValue = value
