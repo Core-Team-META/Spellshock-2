@@ -870,6 +870,11 @@ Objects {
   ChildIds: 3689819016619709677
   ChildIds: 10949136766955199098
   ChildIds: 15139009930614535493
+  ChildIds: 3607913007243213672
+  ChildIds: 7890703652775891071
+  ChildIds: 1773127003600374588
+  ChildIds: 15196698796651679124
+  ChildIds: 16606033415684989952
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -881,6 +886,251 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 16606033415684989952
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -213.158905
+      Y: -55.5129242
+      Z: -153.672363
+    }
+    Rotation {
+      Yaw: 89.9997711
+    }
+    Scale {
+      X: 2.16501975
+      Y: 2.16501975
+      Z: 2.16501975
+    }
+  }
+  ParentId: 8299355614883317077
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "coretrials.coregames.com"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
+  }
+}
+Objects {
+  Id: 15196698796651679124
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -217.028656
+      Y: -55.5130272
+      Z: -103.685059
+    }
+    Rotation {
+      Yaw: 89.9997482
+    }
+    Scale {
+      X: 2.16501975
+      Y: 2.16501975
+      Z: 2.16501975
+    }
+  }
+  ParentId: 8299355614883317077
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "applied to the main game"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
+  }
+}
+Objects {
+  Id: 1773127003600374588
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -239.2444
+      Y: -55.5129
+      Z: -60.6173096
+    }
+    Rotation {
+      Yaw: 89.9997559
+    }
+    Scale {
+      X: 2.16501975
+      Y: 2.16501975
+      Z: 2.16501975
+    }
+  }
+  ParentId: 8299355614883317077
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "All rewards are automatically"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
+  }
+}
+Objects {
+  Id: 7890703652775891071
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -252.959274
+      Y: -55.5127602
+      Z: -7.50634766
+    }
+    Rotation {
+      Yaw: 89.9998
+    }
+    Scale {
+      X: 2.16501975
+      Y: 2.16501975
+      Z: 2.16501975
+    }
+  }
+  ParentId: 8299355614883317077
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "on the tournament leadeboard"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
+  }
+}
+Objects {
+  Id: 3607913007243213672
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -271.169678
+      Y: -55.5125847
+      Z: 36.9289551
+    }
+    Rotation {
+      Yaw: 89.9998245
+    }
+    Scale {
+      X: 2.16501975
+      Y: 2.16501975
+      Z: 2.16501975
+    }
+  }
+  ParentId: 8299355614883317077
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "Play five games to qualify a score"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
   }
 }
 Objects {
@@ -1063,9 +1313,9 @@ Objects {
   Name: "World Text"
   Transform {
     Location {
-      X: -187.090271
-      Y: -55.5129242
-      Z: -81.1647949
+      X: -200.56575
+      Y: -55.5128441
+      Z: 95.4691162
     }
     Rotation {
       Yaw: 89.9998627
@@ -1114,7 +1364,7 @@ Objects {
     Location {
       X: -167.338104
       Y: -55.5129852
-      Z: -24.0297852
+      Z: 141.445557
     }
     Rotation {
       Yaw: 89.9998779
@@ -1163,7 +1413,7 @@ Objects {
     Location {
       X: -213.52684
       Y: -55.5129395
-      Z: 30.7336426
+      Z: 184.984375
     }
     Rotation {
       Yaw: 89.9999084
@@ -1212,7 +1462,7 @@ Objects {
     Location {
       X: -246.498703
       Y: -55.5130119
-      Z: 85.47229
+      Z: 228.875854
     }
     Rotation {
       Yaw: 89.999939
@@ -1261,7 +1511,7 @@ Objects {
     Location {
       X: -278.759674
       Y: -55.5126762
-      Z: 168.034668
+      Z: 288.052246
     }
     Rotation {
       Yaw: 89.9999542
@@ -1310,7 +1560,7 @@ Objects {
     Location {
       X: -261.968109
       Y: -55.5123825
-      Z: 221.410278
+      Z: 332.714722
     }
     Rotation {
       Yaw: 89.9999619
@@ -1359,7 +1609,7 @@ Objects {
     Location {
       X: -241.499847
       Y: -55.512661
-      Z: 273.523926
+      Z: 377.752075
     }
     Rotation {
       Yaw: 89.9999771
@@ -1408,7 +1658,7 @@ Objects {
     Location {
       X: -259.327209
       Y: -55.5124664
-      Z: 324.344849
+      Z: 424.264893
     }
     Rotation {
       Yaw: 89.9999847
@@ -1457,7 +1707,7 @@ Objects {
     Location {
       X: -246.944901
       Y: -55.5122566
-      Z: 414.306763
+      Z: 488.999756
     }
     Rotation {
       Yaw: 89.9999924
@@ -4418,8 +4668,11 @@ Objects {
   ChildIds: 17290700190932543514
   ChildIds: 11502171789584351825
   ChildIds: 640640352521052967
+  ChildIds: 1984311568874439733
   ChildIds: 18006524176217294458
   ChildIds: 7765079317665968905
+  ChildIds: 5831225448279030896
+  ChildIds: 10537877199231863927
   ChildIds: 5860688686472134254
   ChildIds: 14885193282615157503
   ChildIds: 9460163827670226696
@@ -4612,13 +4865,111 @@ Objects {
   }
 }
 Objects {
+  Id: 10537877199231863927
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -148.397949
+      Y: -41.6834526
+      Z: -87.3875732
+    }
+    Rotation {
+      Yaw: 89.9999619
+    }
+    Scale {
+      X: 2.10949206
+      Y: 2.10949206
+      Z: 2.10949206
+    }
+  }
+  ParentId: 2198480925427136058
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "consecutive games"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
+  }
+}
+Objects {
+  Id: 5831225448279030896
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -270.662567
+      Y: -41.6835327
+      Z: -44.3553467
+    }
+    Rotation {
+      Yaw: 89.9999619
+    }
+    Scale {
+      X: 2.10949206
+      Y: 2.10949206
+      Z: 2.10949206
+    }
+  }
+  ParentId: 2198480925427136058
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "Scores are averaged across five"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
+  }
+}
+Objects {
   Id: 7765079317665968905
   Name: "World Text"
   Transform {
     Location {
-      X: -219.049271
-      Y: -55.513298
-      Z: 20.0559082
+      X: -157.22757
+      Y: -55.5134659
+      Z: 42.2655029
     }
     Rotation {
       Yaw: 89.9999542
@@ -4640,7 +4991,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "not equally proportioned."
+    Text: "weighted equally"
     FontAsset {
       Id: 3977866291149364048
     }
@@ -4665,9 +5016,9 @@ Objects {
   Name: "World Text"
   Transform {
     Location {
-      X: -138.917511
-      Y: -55.5132027
-      Z: 73.592041
+      X: -236.508972
+      Y: -55.5129356
+      Z: 86.7094727
     }
     Rotation {
       Yaw: 89.9999542
@@ -4689,7 +5040,56 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Those factors are "
+    Text: "Scoring criteria are not all"
+    FontAsset {
+      Id: 3977866291149364048
+    }
+    Color {
+      R: 0.119
+      G: 0.0495833382
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+    IsLit: true
+  }
+}
+Objects {
+  Id: 1984311568874439733
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -243.230682
+      Y: -55.51297
+      Z: 163.036621
+    }
+    Rotation {
+      Yaw: 89.9999619
+    }
+    Scale {
+      X: 2.10949206
+      Y: 2.10949206
+      Z: 2.10949206
+    }
+  }
+  ParentId: 2198480925427136058
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "deaths, and overall team score."
     FontAsset {
       Id: 3977866291149364048
     }
@@ -4714,9 +5114,9 @@ Objects {
   Name: "World Text"
   Transform {
     Location {
-      X: -231.220169
-      Y: -55.5131302
-      Z: 168.490112
+      X: -234.041641
+      Y: -55.5133514
+      Z: 210.896118
     }
     Rotation {
       Yaw: 89.9999542
@@ -4738,7 +5138,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "and where kills/deaths occur."
+    Text: "done, kill and death location,"
     FontAsset {
       Id: 3977866291149364048
     }
@@ -4765,7 +5165,7 @@ Objects {
     Location {
       X: -272.961914
       Y: -55.5122681
-      Z: 224.438354
+      Z: 256.159302
     }
     Rotation {
       Yaw: 89.9999771
@@ -4787,7 +5187,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "kills by you, deaths of each player"
+    Text: "kills & assists, damage and healing"
     FontAsset {
       Id: 3977866291149364048
     }
@@ -4812,9 +5212,9 @@ Objects {
   Name: "World Text"
   Transform {
     Location {
-      X: -262.329102
-      Y: -55.512291
-      Z: 280.127563
+      X: -254.207382
+      Y: -55.5122948
+      Z: 304.077271
     }
     Rotation {
       Yaw: 89.9999847
@@ -4836,7 +5236,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Victory/loss,  points captured,"
+    Text: "Victory/loss, points captured,"
     FontAsset {
       Id: 3977866291149364048
     }
@@ -4863,7 +5263,7 @@ Objects {
     Location {
       X: -283.401978
       Y: -55.5123291
-      Z: 368.668457
+      Z: 379.024902
     }
     Rotation {
       Yaw: 89.9999619
@@ -4912,7 +5312,7 @@ Objects {
     Location {
       X: -222.399872
       Y: -55.5127754
-      Z: 421.958984
+      Z: 434.717773
     }
     Rotation {
       Yaw: 89.9999924
