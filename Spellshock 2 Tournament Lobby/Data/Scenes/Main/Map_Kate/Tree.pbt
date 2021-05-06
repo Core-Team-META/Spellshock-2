@@ -109874,7 +109874,6 @@ Objects {
   ChildIds: 11233662023903963362
   ChildIds: 15557912604291189873
   ChildIds: 10607005211516212664
-  ChildIds: 9081010047856043760
   ChildIds: 3255604727766080176
   ChildIds: 6379267499716978614
   ChildIds: 5178212891527766784
@@ -113547,62 +113546,6 @@ Objects {
       Physics {
         Mass: 100
         LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 9081010047856043760
-  Name: "Default Floor"
-  Transform {
-    Location {
-      X: -2.97729492
-      Y: 7.46128845
-    }
-    Rotation {
-    }
-    Scale {
-      X: 50
-      Y: 50
-      Z: 1
-    }
-  }
-  ParentId: 5710051249282809965
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 9966708463925914567
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
       }
       BoundsScale: 1
     }

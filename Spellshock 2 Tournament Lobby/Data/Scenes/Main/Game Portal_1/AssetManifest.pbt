@@ -1,13 +1,4 @@
 Assets {
-  Id: 7161484124044748572
-  Name: "Anton"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "AntonRegular_ref"
-  }
-}
-Assets {
   Id: 5078205149223811113
   Name: "Game Portal"
   PlatformAssetType: 6
