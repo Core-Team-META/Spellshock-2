@@ -246,6 +246,10 @@ Objects {
   ChildIds: 17371352542325764416
   ChildIds: 2198480925427136058
   ChildIds: 8299355614883317077
+  ChildIds: 17997837879120647831
+  ChildIds: 7149652042460690871
+  ChildIds: 12495885424134570345
+  ChildIds: 8348205952294988185
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -257,6 +261,577 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 8348205952294988185
+  Name: "Fantasy Clay Pot 03"
+  Transform {
+    Location {
+      X: 2948.60474
+      Y: -3207.78125
+      Z: 543.165771
+    }
+    Rotation {
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 13757505286794477421
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5077890242058173313
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 12495885424134570345
+  Name: "Fantasy Clay Pots - Group 01 Treasure Template"
+  Transform {
+    Location {
+      X: 2858.73804
+      Y: 3290.68262
+      Z: 542.379456
+    }
+    Rotation {
+      Yaw: -10.0999451
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 13757505286794477421
+  ChildIds: 9317214336755618747
+  ChildIds: 14016156455399005856
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 7149652042460690871
+    SubobjectId: 11219999704181712747
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 14016156455399005856
+  Name: "Fantasy Clay Pot 03"
+  Transform {
+    Location {
+      X: -19.2887306
+      Y: 63.9457397
+      Z: 3.05175781e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12495885424134570345
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 3722419759708884904
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5077890242058173313
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 11939281012984780209
+    SubobjectId: 6718526481598303085
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+  }
+}
+Objects {
+  Id: 9317214336755618747
+  Name: "Fantasy Clay Pot 02"
+  Transform {
+    Location {
+      X: 29.6485443
+      Y: -0.153137207
+      Z: 1.52587891e-05
+    }
+    Rotation {
+      Yaw: -29.6053772
+    }
+    Scale {
+      X: 1.05433965
+      Y: 1.05433965
+      Z: 1.05433965
+    }
+  }
+  ParentId: 12495885424134570345
+  ChildIds: 1168893129727065395
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 4553827069405744674
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:utile"
+      Float: 0.5
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:vtile"
+      Float: 0.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8985846431173858098
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 11965080948200390381
+    SubobjectId: 6809822331347263537
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+  }
+}
+Objects {
+  Id: 1168893129727065395
+  Name: "Lens"
+  Transform {
+    Location {
+      X: -1.44380081
+      Y: -2.16347075
+      Z: 102.971985
+    }
+    Rotation {
+      Yaw: 29.6053791
+    }
+    Scale {
+      X: 0.455349684
+      Y: 0.455349684
+      Z: 0.435881525
+    }
+  }
+  ParentId: 9317214336755618747
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3829371837080260434
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.18
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.18
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2259061091144827160
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 13100091704414713154
+    SubobjectId: 5566738385874250654
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+  }
+}
+Objects {
+  Id: 7149652042460690871
+  Name: "Fantasy Clay Pots - Group 01 Treasure Template"
+  Transform {
+    Location {
+      X: -2488.05933
+      Y: -3220.37769
+      Z: 543.165771
+    }
+    Rotation {
+      Yaw: -17.0788708
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 13757505286794477421
+  ChildIds: 11965080948200390381
+  ChildIds: 11939281012984780209
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 7149652042460690871
+    SubobjectId: 11219999704181712747
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 11939281012984780209
+  Name: "Fantasy Clay Pot 03"
+  Transform {
+    Location {
+      X: -19.2887306
+      Y: 63.9457397
+      Z: 3.05175781e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7149652042460690871
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 3722419759708884904
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5077890242058173313
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 11939281012984780209
+    SubobjectId: 6718526481598303085
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+  }
+}
+Objects {
+  Id: 11965080948200390381
+  Name: "Fantasy Clay Pot 02"
+  Transform {
+    Location {
+      X: 29.6485443
+      Y: -0.153137207
+      Z: 1.52587891e-05
+    }
+    Rotation {
+      Yaw: -29.6053772
+    }
+    Scale {
+      X: 1.05433965
+      Y: 1.05433965
+      Z: 1.05433965
+    }
+  }
+  ParentId: 7149652042460690871
+  ChildIds: 13100091704414713154
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 4553827069405744674
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:utile"
+      Float: 0.5
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:vtile"
+      Float: 0.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8985846431173858098
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 11965080948200390381
+    SubobjectId: 6809822331347263537
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+  }
+}
+Objects {
+  Id: 13100091704414713154
+  Name: "Lens"
+  Transform {
+    Location {
+      X: -1.44380081
+      Y: -2.16347075
+      Z: 102.971985
+    }
+    Rotation {
+      Yaw: 29.6053791
+    }
+    Scale {
+      X: 0.455349684
+      Y: 0.455349684
+      Z: 0.435881525
+    }
+  }
+  ParentId: 11965080948200390381
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3829371837080260434
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.18
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.18
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2259061091144827160
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 13100091704414713154
+    SubobjectId: 5566738385874250654
+    InstanceId: 1819136340148476142
+    TemplateId: 11620757485829302762
+  }
+}
+Objects {
+  Id: 17997837879120647831
+  Name: "Fantasy Clay Pot 03"
+  Transform {
+    Location {
+      X: 2800.23633
+      Y: 3093.17432
+      Z: 543.263245
+    }
+    Rotation {
+      Yaw: -55.0439453
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 13757505286794477421
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5077890242058173313
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
   }
 }
 Objects {
@@ -342,7 +917,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Light {
-    Intensity: 50
+    Intensity: 35
     Color {
       R: 0.6
       G: 0.705960035
@@ -368,8 +943,8 @@ Objects {
           }
         }
       }
-      MaxDrawDistance: 5000
-      MaxDistanceFadeRange: 1000
+      MaxDrawDistance: 10000
+      MaxDistanceFadeRange: 2000
     }
   }
 }
@@ -3895,7 +4470,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Light {
-    Intensity: 50
+    Intensity: 35
     Color {
       R: 0.6
       G: 0.705960035
@@ -3921,8 +4496,8 @@ Objects {
           }
         }
       }
-      MaxDrawDistance: 5000
-      MaxDistanceFadeRange: 1000
+      MaxDrawDistance: 10000
+      MaxDistanceFadeRange: 2000
     }
   }
 }
@@ -4286,9 +4861,9 @@ Objects {
   Name: "World Text"
   Transform {
     Location {
-      X: -283.401947
-      Y: -55.5123367
-      Z: 359.481812
+      X: -283.401978
+      Y: -55.5123291
+      Z: 368.668457
     }
     Rotation {
       Yaw: 89.9999619
@@ -4337,7 +4912,7 @@ Objects {
     Location {
       X: -222.399872
       Y: -55.5127754
-      Z: 412.772339
+      Z: 421.958984
     }
     Rotation {
       Yaw: 89.9999924
@@ -108848,12 +109423,12 @@ Objects {
   Name: "Area Light"
   Transform {
     Location {
-      X: 142.614594
+      X: 62.6108398
       Y: 5065.9209
-      Z: 1573.75244
+      Z: 1110.2019
     }
     Rotation {
-      Yaw: -89.9999847
+      Yaw: -90
     }
     Scale {
       X: 1
