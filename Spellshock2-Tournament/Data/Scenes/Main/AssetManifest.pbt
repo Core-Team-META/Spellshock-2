@@ -34,19 +34,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16070869092351677475
-  Name: "ss2_live_cosmetic"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "c333b186a0784c47af674b7704808501"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 15969669977645369301
   Name: "SERVERXPBOOST"
   PlatformAssetType: 24
@@ -225,6 +212,19 @@ Assets {
       Key: "c81a7c40c1ba46dbb33f665f92aa360c"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 12477160499860297771
+  Name: "ss2_tournament_cosmetic"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "45adc1911c4e4a839b9613ca9ef3bddb"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

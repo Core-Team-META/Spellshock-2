@@ -18,7 +18,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:AfkGameID"
-      String: "9abe5f/spellshock-2-afk-zone"
+      String: "68b525/spellshock-2-tournament"
     }
   }
   Collidable_v2 {
@@ -213,7 +213,7 @@ Objects {
     Overrides {
       Name: "cs:Cosmetics"
       NetReference {
-        Key: "b5959d620ff140069e841b1ec4f6e772"
+        Key: "45adc1911c4e4a839b9613ca9ef3bddb"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -222,7 +222,7 @@ Objects {
     Overrides {
       Name: "cs:Progression"
       NetReference {
-        Key: "78859015f50c44aea7f29dd1883aa1c6"
+        Key: "fda12f8c98b648b0a612628d288062a6"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -231,7 +231,7 @@ Objects {
     Overrides {
       Name: "cs:Currency"
       NetReference {
-        Key: "c78317bae7df4d3cb26d2a0eb95879c5"
+        Key: "d5d513aebe8a4907862c98637c1f7b6f"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
