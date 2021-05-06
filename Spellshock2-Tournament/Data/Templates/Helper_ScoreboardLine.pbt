@@ -753,7 +753,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 575
+          UIX: 625
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -820,7 +820,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 701.499512
+          UIX: 751.5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -887,7 +887,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 776.499512
+          UIX: 826.5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -954,7 +954,7 @@ Assets {
         Control {
           Width: 200
           Height: 30
-          UIX: 851.499512
+          UIX: 900
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
