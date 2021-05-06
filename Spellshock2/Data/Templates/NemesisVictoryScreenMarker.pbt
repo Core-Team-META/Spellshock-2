@@ -50,7 +50,7 @@ Assets {
         }
         Control {
           Height: 115
-          UIY: 530
+          UIY: -248.074829
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1018,6 +1018,7 @@ Assets {
         }
         Control {
           Height: 39
+          UIY: -4
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1882,7 +1883,7 @@ Assets {
         }
         Control {
           Height: 39
-          UIY: -2.68471146
+          UIY: -5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"

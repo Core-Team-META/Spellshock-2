@@ -36,14 +36,13 @@ function ComputePlayerValue(player)
 	-- Each player brings a base value to the team
 	local value = BASE_VALUE_PER_PLAYER
 	
-	-- Add the value of the player's total ability progression
+	--[[ Add the value of the player's total ability progression
 	local accountLevel = player:GetResource(PROGRESSION.ACCOUNT_LEVEL)
 	local totalClassValue = accountLevel
 	totalClassValue = totalClassValue ^ TOTAL_CLASS_VALUE_EXPONENT
 	totalClassValue = totalClassValue * TOTAL_CLASS_VALUE_COEFFICIENT
 	value = value + totalClassValue
-
---[[
+	]]
 
 	while not player.serverUserData.weightedWinRate do
 		Task.Wait()
@@ -53,18 +52,15 @@ function ComputePlayerValue(player)
 	local weightedWinRate = player.serverUserData.weightedWinRate
 	local winRateValue = weightedWinRate
 	if winRateValue then
-		winRateValue = CoreMath.Clamp(winRateValue, WIN_RATE_MIN, WIN_RATE_MAX)
-		winRateValue = winRateValue ^ WIN_RATE_EXPONENT
-		winRateValue = winRateValue * WIN_RATE_COEFFICIENT
-		value = value + winRateValue
+	value = WIN_RATE_COEFFICIENT * player.serverUserData.weightedWinRate
+		--value = value + winRateValue
 	end
 
-]]--
 	player.serverUserData.balanceValue = value
 
 	print("[Balance] Player " .. player.name .. 
-		", classValue = " .. tostring(accountLevel) .. "->" .. tostring(totalClassValue) .. 
-		--", winRateValue = " .. tostring(weightedWinRate) .. "->" .. tostring(winRateValue) .. 
+		--", classValue = " .. tostring(accountLevel) .. "->" .. tostring(totalClassValue) .. 
+		", winRateValue = " .. tostring(weightedWinRate) .. "->" .. tostring(winRateValue) .. 
 		", totalValue = " .. tostring(value))
 
 	return value

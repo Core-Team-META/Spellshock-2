@@ -501,7 +501,7 @@ Assets {
         }
         Control {
           Height: -6
-          UIY: 3
+          UIY: 1
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -526,7 +526,7 @@ Assets {
               Id: 11336346532215892341
             }
             VerticalJustification {
-              Value: "mc:everticaljustification:baseline"
+              Value: "mc:everticaljustification:center"
             }
           }
           AnchorLayout {
