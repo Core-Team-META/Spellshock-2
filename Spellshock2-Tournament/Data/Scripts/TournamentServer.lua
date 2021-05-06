@@ -18,8 +18,8 @@ local StartTime = tonumber(os.time({year=2021, month=5, day=6, hour=19}))
 local EndTime = tonumber(os.time({year=2021, month=5, day=12, hour=19})) 
 
 
-local MIN_PLAYERS_TO_SUBMIT = 2 -- 6
-local REQUIRED_ROUNDS_PLAYED = 1
+local MIN_PLAYERS_TO_SUBMIT = 6
+local REQUIRED_ROUNDS_PLAYED = 5
 
 local BASE_POINTS = 1000
 
@@ -284,7 +284,9 @@ function TransferStorageToPlayer(player)
 end
 
 function OnPlayerRespawn(player)
-	player.serverUserData.tournament.killCredited = false
+	if player.serverUserData.tournament then
+		player.serverUserData.tournament.killCredited = false
+	end
 	player.serverUserData.damageTable = {}
 end
 
@@ -464,7 +466,9 @@ function OnRoundEnded()
 		end
 
 		-- Add to player data for admin printouts
-		player.serverUserData.tournament.teamScore = CoreMath.Round(teamScoreBonus)
+		if player.serverUserData.tournament then
+			player.serverUserData.tournament.teamScore = CoreMath.Round(teamScoreBonus)
+		end
 
 		playersWritten = playersWritten + 1
 		if playersWritten == 1 then
