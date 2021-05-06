@@ -527,7 +527,9 @@ function OnRoundEnded()
 			SubmitScore(player, totalScore)
 			player:SetResource("TournamentRound", 0)
 			player.serverUserData.tournamentRound = 0
+			player.serverUserData.totalTourneyScore = 0
 
+			
 		elseif player.serverUserData.tournamentRound then
 
 			player.serverUserData.totalTourneyScore = CoreMath.Round(player.serverUserData.totalTourneyScore + playerData.points)
