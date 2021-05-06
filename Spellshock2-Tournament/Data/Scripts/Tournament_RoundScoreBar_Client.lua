@@ -12,17 +12,17 @@ function OnResourceChanged(player, string, value)
 end
 
 function OnRoundStart()
-    RoundScoreBar.visibility = Visibillity.FORCE_ON
+    RoundScoreBar.visibility = Visibility.FORCE_ON
 end
 
 function OnRoundEnded()
-    RoundScoreBar.visibility = Visibillity.FORCE_ON
+    RoundScoreBar.visibility = Visibility.FORCE_ON
 end
 
-RoundScoreBar.visibility = Visibillity.FORCE_OFF
+RoundScoreBar.visibility = Visibility.FORCE_OFF
 RoundText.text = tostring(maxRoundCount - value) .. " Rounds Until Score"
 RoundScoreBar.progress = value / maxRoundCount - 1
 
 LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
-Game.roundStartEvent:Connect(OnRoundStarted)
+Game.roundStartEvent:Connect(OnRoundStart)
 Game.roundEndEvent:Connect(OnRoundEnded)
