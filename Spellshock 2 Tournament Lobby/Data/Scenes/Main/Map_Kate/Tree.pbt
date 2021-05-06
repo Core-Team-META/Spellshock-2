@@ -7328,6 +7328,14 @@ Objects {
           Name: "bp:Horizontal Bend Amount"
           Float: 0.725680411
         }
+        Overrides {
+          Name: "bp:Game ID"
+          String: "fb35d8/team-meta-portal-images"
+        }
+        Overrides {
+          Name: "bp:Screenshot Index"
+          Int: 1
+        }
       }
     }
     TemplateAsset {
