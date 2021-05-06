@@ -1134,8 +1134,8 @@ Objects {
     }
     StatBar {
       Color {
-        R: 0.97
-        B: 0.886489391
+        R: 0.930000067
+        G: 0.693807662
         A: 1
       }
       BackgroundColor {
@@ -1825,7 +1825,7 @@ Objects {
   Control {
     Width: 500
     Height: 300
-    UIY: -405
+    UIY: -360.608154
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
