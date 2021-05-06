@@ -518,7 +518,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1400
-      MountedWalkSpeed: 1740
+      MountedWalkSpeed: 1820
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true

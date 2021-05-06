@@ -170,7 +170,7 @@ Objects {
       }
     }
     Text {
-      Label: "Play in three of Core\'s top shooters to test your aim and take home the glory! The top 10 players of each game (as determined by the global leaderboards) will be rewarded with fame and funds."
+      Label: "The last week of the Core Trials starts now! Compete in Spellshock 2 and Nexus Wars and reach the top of the leaderboards by the end of the tournament to win!"
       Color {
         R: 1
         G: 1
@@ -228,13 +228,14 @@ Objects {
   Control {
     Width: 906
     Height: 50
+    UIY: -47.0178146
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "Prize pool: $6000"
+      Label: "Prize pool: $10000"
       Color {
         R: 1
         G: 1
@@ -279,6 +280,10 @@ Objects {
     }
   }
   ParentId: 10056745762599936962
+  ChildIds: 10225220334871711462
+  ChildIds: 8842374044347800856
+  ChildIds: 8292678508567203200
+  ChildIds: 12372490479562639642
   ChildIds: 13910444094113344537
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -292,13 +297,14 @@ Objects {
   Control {
     Width: 906
     Height: 60
+    UIY: 83.1251602
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "From: March 18 to 25 at noon (Pacific)"
+      Label: "From: May 6 to 12 at noon (Pacific)"
       Color {
         R: 1
         G: 1
@@ -356,6 +362,7 @@ Objects {
   Control {
     Width: 906
     Height: 40
+    UIY: -30.5841084
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -426,7 +433,7 @@ Objects {
       }
     }
     Text {
-      Label: "- Strike Team"
+      Label: "- Spellshock 2 Tournament"
       Color {
         R: 1
         G: 1
@@ -471,7 +478,7 @@ Objects {
     }
   }
   ParentId: 15621328011532701117
-  ChildIds: 17766615160645528426
+  ChildIds: 16927780784364845793
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -490,71 +497,7 @@ Objects {
       }
     }
     Text {
-      Label: "- Freeze Tag"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 2044747135125227812
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 17766615160645528426
-  Name: "UI Text Box"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 817825039986872089
-  ChildIds: 16927780784364845793
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 906
-    Height: 60
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "- Arsenal of Guns"
+      Label: "- Nexus Wars"
       Color {
         R: 1
         G: 1
@@ -598,7 +541,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17766615160645528426
+  ParentId: 817825039986872089
   ChildIds: 1420510905268255527
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -612,6 +555,7 @@ Objects {
   Control {
     Width: 906
     Height: 35
+    UIY: -1.41070557
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -682,7 +626,7 @@ Objects {
       }
     }
     Text {
-      Label: "gunsnglory.coregames.com"
+      Label: "coretrials.coregames.com"
       Color {
         R: 1
         G: 1
@@ -740,6 +684,7 @@ Objects {
   Control {
     Width: 686
     Height: 2
+    UIY: -15.2389069
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -798,14 +743,14 @@ Objects {
   Control {
     Width: 702
     Height: 100
-    UIY: 15
+    UIY: 7.9236393
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "Scoring in  Strike Team  is based on a combination of points captured, wins, kills, and bonus points for variety of players killed, headshots and penalties for dying."
+      Label: "Scoring in  Spellshock  is based on a combination of points captured, wins, kills, damage, healing, and bonus points for kill streaks. Penalties exist for dying. Highest score wins!"
       Color {
         R: 1
         G: 1
@@ -830,6 +775,306 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12372490479562639642
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: -21206.6973
+      Y: -30731.3457
+      Z: 9518.49121
+    }
+    Rotation {
+      Yaw: 34.0789909
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13306787078138862329
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIX: 15.9689913
+    UIY: -27.4992733
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "16-20  =  $100"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 16
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2044747135125227812
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8292678508567203200
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: -21206.6973
+      Y: -30731.3457
+      Z: 9518.49121
+    }
+    Rotation {
+      Yaw: 34.0789566
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13306787078138862329
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIX: 15.9689913
+    UIY: -51.8321571
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "11-15  =  $200"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 16
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2044747135125227812
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8842374044347800856
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: -21206.6973
+      Y: -30731.3457
+      Z: 9518.49121
+    }
+    Rotation {
+      Yaw: 34.0789223
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13306787078138862329
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIX: 15.9689913
+    UIY: -75.7284546
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "   6-10  =  $300"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 16
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2044747135125227812
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10225220334871711462
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: -21206.6973
+      Y: -30731.3457
+      Z: 9518.49121
+    }
+    Rotation {
+      Yaw: 34.0788956
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13306787078138862329
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIX: 15.9689913
+    UIY: -98.9187241
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "     1-5  =  $400"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 16
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2044747135125227812
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
         }
       }
     }
