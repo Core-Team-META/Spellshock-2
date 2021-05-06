@@ -7170,7 +7170,7 @@ Objects {
       }
     }
     Text {
-      Label: "LEADERBOARDS"
+      Label: "TOURNAMENT"
       Color {
         R: 1
         G: 0.609006643
@@ -7428,9 +7428,8 @@ Objects {
         Id: 16806313330175629846
       }
       Color {
-        R: 1
-        G: 0.580397367
-        B: 0.00999999
+        R: 0.690000057
+        B: 0.671721458
         A: 0.754
       }
       TeamSettings {
@@ -7800,9 +7799,8 @@ Objects {
         Id: 16806313330175629846
       }
       Color {
-        R: 1
-        G: 0.825695395
-        B: 0.0600000024
+        R: 0.666666687
+        B: 0.622516036
         A: 0.754
       }
       TeamSettings {
