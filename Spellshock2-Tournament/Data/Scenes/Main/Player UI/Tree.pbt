@@ -1046,6 +1046,7 @@ Objects {
   ChildIds: 13758668348394316779
   ChildIds: 11794835789634732982
   ChildIds: 15074806705067325972
+  ChildIds: 3972823998484605733
   UnregisteredParameters {
     Overrides {
       Name: "cs:MainText"
@@ -1084,6 +1085,195 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middleright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3972823998484605733
+  Name: "RoundScoreBar"
+  Transform {
+    Location {
+      X: 36052.0195
+      Y: 10131.6709
+      Z: -6685
+    }
+    Rotation {
+      Yaw: -39.9998169
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 437366451163449499
+  ChildIds: 17872490130864321857
+  ChildIds: 12688744686812728086
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 300
+    Height: 40
+    UIY: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    StatBar {
+      Color {
+        R: 0.97
+        B: 0.886489391
+        A: 1
+      }
+      BackgroundColor {
+        A: 0.713000059
+      }
+      Percent: 0.328631967
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12688744686812728086
+  Name: "Tournament_RoundScoreBar_Client"
+  Transform {
+    Location {
+      X: -0.01171875
+      Y: 0.0019531264
+    }
+    Rotation {
+      Yaw: 1.70754683e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3972823998484605733
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:RoundScoreBar"
+      ObjectReference {
+        SelfId: 3972823998484605733
+      }
+    }
+    Overrides {
+      Name: "cs:RoundText"
+      ObjectReference {
+        SelfId: 17872490130864321857
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3623637813409306889
+    }
+  }
+}
+Objects {
+  Id: 17872490130864321857
+  Name: "RoundText"
+  Transform {
+    Location {
+      X: -0.00390625047
+      Y: -0.00390624953
+    }
+    Rotation {
+      Yaw: -6.83018834e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3972823998484605733
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Text"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 20
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }

@@ -13,8 +13,13 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
+
+local StartTime = tonumber(os.time({year=2021, month=5, day=6, hour=19})) 
+local EndTime = tonumber(os.time({year=2021, month=5, day=12, hour=19})) 
+
+
 local MIN_PLAYERS_TO_SUBMIT = 2 -- 6
-local REQUIRED_ROUNDS_PLAYED = 5
+local REQUIRED_ROUNDS_PLAYED = 1
 
 local BASE_POINTS = 1000
 
@@ -285,7 +290,7 @@ end
 
 function OnPlayerJoined(player)
 	ClearData(player)
-
+	player:SetResource("TournamentRound", 0)
 	player.respawnedEvent:Connect(OnPlayerRespawn)
 
 	TransferStorageToPlayer(player)
@@ -305,6 +310,7 @@ end]] function OnRoundStarted()
 		ClearData(player)
 		player.serverUserData.tournamentRound = player.serverUserData.tournamentRound or 0
 		player.serverUserData.tournamentRound = player.serverUserData.tournamentRound + 1
+		player:AddResource("TournamentRound", 1)
 	end
 end
 
@@ -313,6 +319,18 @@ function OnRoundEnded()
 	if #Game.GetPlayers() < MIN_PLAYERS_TO_SUBMIT then
 		return
 	end
+	local currentTime = os.time(os.date("!*t"))
+
+	warn(" Current Time: " .. tostring(currentTime) .. " StartTime:" .. tostring(StartTime) .. " EndTime: " .. tostring(EndTime))
+
+	if  currentTime < StartTime then
+        return
+    end
+
+	if currentTime > EndTime then
+		return
+	end
+
 
 	-- Wait for some calculations in other scripts
 	Task.Wait()
@@ -503,7 +521,7 @@ function OnRoundEnded()
 
 			local totalScore = CoreMath.Round(player.serverUserData.totalTourneyScore + playerData.points)
 			SubmitScore(player, totalScore)
-
+			player:SetResource("TournamentRound", 0)
 			player.serverUserData.tournamentRound = 0
 
 		elseif player.serverUserData.tournamentRound then
