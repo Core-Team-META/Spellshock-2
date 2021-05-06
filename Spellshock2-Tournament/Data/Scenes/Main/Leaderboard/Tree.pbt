@@ -671,6 +671,7 @@ Objects {
     }
   }
   ParentId: 1420510905268255527
+  ChildIds: 2303314053679964664
   ChildIds: 6406703529752724279
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -684,7 +685,7 @@ Objects {
   Control {
     Width: 686
     Height: 2
-    UIY: -15.2389069
+    UIY: -17.8329144
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -743,7 +744,7 @@ Objects {
   Control {
     Width: 702
     Height: 100
-    UIY: 7.9236393
+    UIY: 121.951218
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -757,7 +758,71 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 20
+      Size: 17
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2044747135125227812
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 2303314053679964664
+  Name: "UI Text Box"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11292387561335762685
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 702
+    Height: 150
+    UIY: 7.9236393
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Scores are posted to the tournament leaderboard after playing five consecutive games. Subsequent sets of five matches can post a new score. Tournament scores equal the sum of points earned in all five matches."
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 17
       Justification {
         Value: "mc:etextjustify:left"
       }
