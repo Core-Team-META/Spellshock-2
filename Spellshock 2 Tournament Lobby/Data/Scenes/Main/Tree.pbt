@@ -254,7 +254,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:DestinationGame"
-      String: "00cc84/spellshock-2-tournament"
+      String: "4f467c/spellshock-2-tournament-game"
     }
   }
   Collidable_v2 {
