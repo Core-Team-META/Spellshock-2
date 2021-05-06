@@ -167,16 +167,20 @@ end
 
 --#TODO Will need to check Gamestate for round in progress
 function OnDamageTaken(attackData)
-    if attackData.source and not playerDead[attackData.object.id] then
+    if attackData.source and attackData.object then
         local target = attackData.object
         local player = attackData.source
+
         if not Object.IsValid(player) then
             return
         end
         if not Object.IsValid(target) then
             return
         end
-        if not target:IsA("Player") then
+        if not target:IsA("Player") or not player:IsA("Player") then
+            return
+        end
+        if playerDead[attackData.object.id] then
             return
         end
 
@@ -188,33 +192,42 @@ end
 function OnDied(attackData)
     local target = attackData.object
     local source = attackData.source
-    if target and ShouldTrack(target) then
-        if source then
-            local sourceData = source.serverUserData
-            sourceData.playersKilled = sourceData.playersKilled or {}
-            sourceData.playersKilled[target.id] =
-                sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
 
-            target.serverUserData.damageTable = {}
-            UpdateKillStreak(attackData)
-            UpdateUltimateKillAmmount(attackData)
-            source:AddResource(CONST.LIFE_TIME_KILLS, 1)
-            Events.Broadcast("META_CH.OnDied", attackData)
+    if not source or not Object.IsValid(source) then
+        return
+    end
+    if not target or not Object.IsValid(target) then
+        return
+    end
+    if not target:IsA("Player") or not source:IsA("Player") then
+        return
+    end
 
-            -- Apply Assist Points
-            for assistPlayer, assist in pairs(target.serverUserData.damageTable) do
-                if
-                    assistPlayer and Object.IsValid(assistPlayer) and assistPlayer ~= source and
-                        assistPlayer.team ~= target.team and
-                        assist.timer and
-                        assist.timer >= time()
-                 then
-                    local assistPlayerData = assistPlayer.serverUserData.tournament
-                    assistPlayerData.killAssists = assistPlayerData.killAssists + 1
-                    assistPlayer.serverUserData.tournament = assistPlayerData
+    if ShouldTrack(target) then
+        local sourceData = source.serverUserData
+        sourceData.playersKilled = sourceData.playersKilled or {}
+        sourceData.playersKilled[target.id] =
+            sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
 
-                    assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
-                end
+        target.serverUserData.damageTable = {}
+        UpdateKillStreak(attackData)
+        UpdateUltimateKillAmmount(attackData)
+        source:AddResource(CONST.LIFE_TIME_KILLS, 1)
+        Events.Broadcast("META_CH.OnDied", attackData)
+
+        -- Apply Assist Points
+        for assistPlayer, assist in pairs(target.serverUserData.damageTable) do
+            if
+                assistPlayer and Object.IsValid(assistPlayer) and assistPlayer ~= source and
+                    assistPlayer.team ~= target.team and
+                    assist.timer and
+                    assist.timer >= time()
+                then
+                local assistPlayerData = assistPlayer.serverUserData.tournament
+                assistPlayerData.killAssists = assistPlayerData.killAssists + 1
+                assistPlayer.serverUserData.tournament = assistPlayerData
+
+                assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
             end
         end
     end
