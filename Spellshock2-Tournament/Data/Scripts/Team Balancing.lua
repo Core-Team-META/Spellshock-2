@@ -216,12 +216,14 @@ function DoRebalance(playerToIgnore)
 end
 
 function DoRandomBalance()
-	local team = 1
-	for _, player in pairs(Game.GetPlayers()) do
-		player.team = team
-		team = 3 - team -- change to other team
-		player:Respawn()
-	end
+    local team = 1
+    for _, player in pairs(Game.GetPlayers()) do
+        if Object.IsValid(player) and player.team ~= team then
+            player.team = team
+            player:Respawn()
+        end
+        team = 3 - team -- change to other team
+    end
 end
 
 function OnPlayerJoin(player)
@@ -262,8 +264,17 @@ function OnPlayerLeft(playerToIgnore)
 	-- If so, ignore them in the algorithm
 
 	if IsLobby() then
-		DoRebalance(playerToIgnore)
-	end
+        local team1 = Game.GetPlayers({includeTeams = 1, ignorePlayers = playerToIgnore})
+        local team2 = Game.GetPlayers({includeTeams = 2, ignorePlayers = playerToIgnore})
+
+        if #team1 + #team2 <= 1 then
+            return
+        end
+
+        if math.abs(#team1 - #team2) >= 2 then
+            DoRandomBalance()
+        end
+    end
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoin)
@@ -277,7 +288,8 @@ function OnGameStateChanged(oldState, newState)
 		local delay = ABGS.GetTimeRemainingInState() - LOBBY_REBALANCE_TIME
 		Task.Wait(delay)
 		ClearCachedPlayerValues()
-		DoRebalance()
+		--DoRebalance()
+		DoRandomBalance()
 	end
 end
 Events.Connect("GameStateChanged", OnGameStateChanged)
