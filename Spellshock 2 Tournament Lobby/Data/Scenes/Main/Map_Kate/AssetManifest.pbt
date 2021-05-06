@@ -962,6 +962,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8985846431173858098
+  Name: "Fantasy Clay Pot 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_clay_pot_002_ref"
+  }
+}
+Assets {
   Id: 8355298660985848341
   Name: "Glow Shape Decal"
   PlatformAssetType: 14
@@ -1259,6 +1268,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5077890242058173313
+  Name: "Fantasy Clay Pot 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_clay_pot_003_ref"
+  }
+}
+Assets {
   Id: 5026846565116306924
   Name: "Pipe - Half Thick"
   PlatformAssetType: 1
@@ -1301,6 +1319,15 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_gal_upper_military_001_ref"
+  }
+}
+Assets {
+  Id: 4553827069405744674
+  Name: "Metal Old Beaten Gold 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_gold_002"
   }
 }
 Assets {
@@ -1364,6 +1391,24 @@ Assets {
   PrimaryAsset {
     AssetType: "FontAssetRef"
     AssetId: "CabinBold_ref"
+  }
+}
+Assets {
+  Id: 3829371837080260434
+  Name: "Gold Treasure 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_gold_treasure_001"
+  }
+}
+Assets {
+  Id: 3722419759708884904
+  Name: "Metal Iron Rusted 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_iron_003"
   }
 }
 Assets {
@@ -1553,6 +1598,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bullet_001"
+  }
+}
+Assets {
+  Id: 2259061091144827160
+  Name: "Lens"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_lense_001"
   }
 }
 Assets {

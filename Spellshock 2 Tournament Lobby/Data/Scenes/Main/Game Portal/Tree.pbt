@@ -60,7 +60,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "bp:Game ID"
-      String: "00cc84efe79344d3afc6591b358c53f3"
+      String: "4f467c/spellshock-2-tournament-game"
     }
     Overrides {
       Name: "bp:Use World Capture"
