@@ -390,8 +390,11 @@ local function OnPlayerJoined(player)
     local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     OnLoadCurrencyData(player, currencyData)
     --OnLoadDailyShopData(player, currencyData)
-    OnLoadGamePlayStatsData(player, currencyData)
     OnLoadMultiplierData(player, currencyData)
+
+    -- Tournament Data
+    local tournamentData = Storage.GetPlayerData(player)
+    OnLoadGamePlayStatsData(player, tournamentData)
 
     if currencyData[CONST.STORAGE.ADMIN_PERKS] then
         player.serverUserData.ADMIN_VIP = true
@@ -453,7 +456,6 @@ function OnSavePlayerData(player)
 
     local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     OnSaveCurrencyData(player, currencyData)
-    OnSaveGamePlayStatsData(player, currencyData)
     --OnSaveDailyShopData(player, currencyData)
     OnSaveMultiplierData(player, currencyData)
 
@@ -462,6 +464,11 @@ function OnSavePlayerData(player)
     end
 
     Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, currencyData)
+
+    local tournamentData = Storage.GetPlayerData(player)
+    -- Tournament
+    OnSaveGamePlayStatsData(player, tournamentData)
+    Storage.SetPlayerData(player, tournamentData)
 
     --data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
 
