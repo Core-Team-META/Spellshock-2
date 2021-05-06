@@ -14,6 +14,7 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
 local MIN_PLAYERS_TO_SUBMIT = 2 -- 6
+local REQUIRED_ROUNDS_PLAYED = 5
 
 local BASE_POINTS = 1000
 
@@ -108,13 +109,13 @@ local function CalculateSoftCap(value, base, count, reduction)
 	end
 end
 
-function SubmitScore(player, score, totalKills, teamScore, uniquePlayersKilled)
+function SubmitScore(player, score)
 	if player and Object.IsValid(player) then
 		score = CoreMath.Round(score)
 		--print("##### Submit Score for " .. player.name .. " = " .. tostring(score))
 
-		local additionalData = ADDITIONAL_DATA.Serialize(totalKills, teamScore, uniquePlayersKilled)
-		Leaderboards.SubmitPlayerScore(LEADERBOARD_REF, player, score, additionalData)
+		--local additionalData = ADDITIONAL_DATA.Serialize(totalKills, teamScore, uniquePlayersKilled)
+		Leaderboards.SubmitPlayerScore(LEADERBOARD_REF, player, score, "")
 
 		local bestScore = SetPlayerScoreToStorage(player, score)
 		TransferStorageToPlayer(player)
@@ -210,7 +211,7 @@ Events.Connect("AS.PlayerDamaged", OnPlayerDamaged)
 
 function ClearData(player)
 	local playerData = {}
-
+	player.serverUserData.totalTourneyScore = player.serverUserData.totalTourneyScore or 0
 	playerData.points = 0
 	playerData.totalKills = 0
 	playerData.headshots = 0
@@ -302,6 +303,8 @@ end
 end]] function OnRoundStarted()
 	for _, player in ipairs(Game.GetPlayers()) do
 		ClearData(player)
+		player.serverUserData.tournamentRound = player.serverUserData.tournamentRound or 0
+		player.serverUserData.tournamentRound = player.serverUserData.tournamentRound + 1
 	end
 end
 
@@ -330,6 +333,17 @@ function OnRoundEnded()
 		winningScore = scoreTeam2
 		losingScore = scoreTeam1
 	end
+
+	if _G.MAP_MODE and _G.MAP_MODE == 1 then
+		winningScore = CoreMath.Round(winningScore * 1.66)
+		losingScore = CoreMath.Round(losingScore * 1.66)
+	end
+
+	winningScore = CoreMath.Clamp(winningScore, 0, 510)
+	losingScore = CoreMath.Clamp(losingScore, 0, 510)
+
+
+
 	local str = "[TOURNAMENT ANALYSIS] "
 	str = str.."{"
 
@@ -338,6 +352,8 @@ function OnRoundEnded()
 			.. ",\"losingTeamScore\":" .. tostring(losingScore)
 	-- Players
 	str = str .. ",\"players\":["
+
+
 	local playersWritten = 0
 
 	-- Add the different point categories at end of round
@@ -483,8 +499,17 @@ function OnRoundEnded()
 	-- Submit points for valid players
 	for _, player in ipairs(Game.GetPlayers()) do
 		local playerData = player.serverUserData.tournament
+		if player.serverUserData.tournamentRound and player.serverUserData.tournamentRound == REQUIRED_ROUNDS_PLAYED then
 
-		SubmitScore(player, playerData.points, playerData.totalKills, playerData.teamScore, playerData.uniqueCount or 0)
+			local totalScore = CoreMath.Round(player.serverUserData.totalTourneyScore + playerData.points)
+			SubmitScore(player, totalScore)
+
+			player.serverUserData.tournamentRound = 0
+
+		elseif player.serverUserData.tournamentRound then
+
+			player.serverUserData.totalTourneyScore = CoreMath.Round(player.serverUserData.totalTourneyScore + playerData.points)
+		end
 	end
 end
 
