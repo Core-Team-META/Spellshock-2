@@ -206,7 +206,7 @@ Objects {
     Location {
       X: 13.5576687
       Y: 60.4322662
-      Z: -948.055908
+      Z: -954.391174
     }
     Rotation {
       Pitch: 90
@@ -214,16 +214,16 @@ Objects {
       Roll: 53.1284
     }
     Scale {
-      X: -0.25
-      Y: 1
-      Z: 1
+      X: -0.312860638
+      Y: 1.25144255
+      Z: 1.25144255
     }
   }
   ParentId: 4673865463779290119
   UnregisteredParameters {
     Overrides {
       Name: "bp:Game ID"
-      String: "00cc84efe79344d3afc6591b358c53f3"
+      String: "4f467c/spellshock-2-tournament-game"
     }
     Overrides {
       Name: "bp:Use World Capture"
@@ -239,7 +239,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Emissive Boost"
-      Float: 5
+      Float: 0
     }
     Overrides {
       Name: "bp:Portal Shape"
@@ -251,7 +251,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Edge Distance"
-      Float: 0.643103719
+      Float: 0.147073835
     }
     Overrides {
       Name: "bp:Scene Tint Color"
@@ -264,11 +264,11 @@ Objects {
     }
     Overrides {
       Name: "bp:Edge Distortion"
-      Float: 0.754894555
+      Float: 0.183027
     }
     Overrides {
       Name: "bp:Speed"
-      Float: 0.429819047
+      Float: 0.439047366
     }
     Overrides {
       Name: "bp:Scene View Distortion Type"
@@ -293,10 +293,6 @@ Objects {
       Bool: true
     }
     Overrides {
-      Name: "bp:Bend Distance"
-      Float: 0
-    }
-    Overrides {
       Name: "bp:View Distortion Amount"
       Float: 0.13165985
     }
@@ -314,15 +310,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Intensity Color Blend"
-      Float: 0.565002561
-    }
-    Overrides {
-      Name: "bp:Swirl Color"
-      Color {
-        R: 0.130000398
-        B: 0.312
-        A: 1
-      }
+      Float: 0.641263247
     }
     Overrides {
       Name: "bp:Color C"
@@ -347,6 +335,22 @@ Objects {
         B: 0.547000051
         A: 1
       }
+    }
+    Overrides {
+      Name: "bp:Swirl Element Distance"
+      Float: 0.414716244
+    }
+    Overrides {
+      Name: "bp:Rotation"
+      Float: 55.6706429
+    }
+    Overrides {
+      Name: "bp:Bend Distance"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Horizontal Bend Amount"
+      Float: 0
     }
   }
   Collidable_v2 {
@@ -423,14 +427,14 @@ Objects {
   Transform {
     Location {
       Y: 59.9637146
-      Z: 102.708862
+      Z: -375.079529
     }
     Rotation {
     }
     Scale {
-      X: 7.06979752
-      Y: 5.4903121
-      Z: 7.70949
+      X: 14.2348871
+      Y: 11.0546265
+      Z: 15.5229082
     }
   }
   ParentId: 10223229577338714746
@@ -451,7 +455,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
+      Value: "mc:etriggershape:sphere"
     }
   }
   InstanceHistory {
