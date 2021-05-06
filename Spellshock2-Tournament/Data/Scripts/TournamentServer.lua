@@ -293,6 +293,8 @@ end
 function OnPlayerJoined(player)
 	ClearData(player)
 	player:SetResource("TournamentRound", 0)
+	player.serverUserData.tournamentRound = 0
+	player.serverUserData.totalTourneyScore = 0
 	player.respawnedEvent:Connect(OnPlayerRespawn)
 
 	TransferStorageToPlayer(player)
