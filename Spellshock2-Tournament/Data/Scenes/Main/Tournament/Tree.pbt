@@ -1849,7 +1849,7 @@ Objects {
     }
     Overrides {
       Name: "cs:EventID"
-      String: "CoreTrialsReset"
+      String: "CoreTrialsReset2"
     }
     Overrides {
       Name: "cs:MetaAbilityProgressionConstants_API"
