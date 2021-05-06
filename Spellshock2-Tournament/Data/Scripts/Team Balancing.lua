@@ -218,11 +218,13 @@ end
 function DoRandomBalance()
     local team = 1
     for _, player in pairs(Game.GetPlayers()) do
-        if Object.IsValid(player) and player.team ~= team then
-            player.team = team
-            player:Respawn()
+        if Object.IsValid(player) then
+			if player.team ~= team then
+				player.team = team
+            	player:Respawn()
+			end
+			team = 3 - team -- change to other team
         end
-        team = 3 - team -- change to other team
     end
 end
 
