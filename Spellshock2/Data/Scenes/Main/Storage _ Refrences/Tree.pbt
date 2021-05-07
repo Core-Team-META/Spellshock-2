@@ -20,6 +20,10 @@ Objects {
       Name: "cs:AfkGameID"
       String: "9abe5f/spellshock-2-afk-zone"
     }
+    Overrides {
+      Name: "cs:Tourney"
+      String: ""
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
