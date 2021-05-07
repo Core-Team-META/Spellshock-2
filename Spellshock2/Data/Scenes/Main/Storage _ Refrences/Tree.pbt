@@ -22,7 +22,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tourney"
-      String: ""
+      String: "68b525/spellshock-2-tournament"
     }
   }
   Collidable_v2 {

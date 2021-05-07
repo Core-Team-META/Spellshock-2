@@ -581,7 +581,6 @@ Objects {
   }
   ParentId: 14309298661779837450
   ChildIds: 5827552885169488067
-  ChildIds: 14974369761790314334
   ChildIds: 2701140948091579562
   UnregisteredParameters {
     Overrides {
@@ -668,9 +667,7 @@ Objects {
     }
     StatBar {
       Color {
-        R: 1
-        G: 0.539652526
-        A: 1
+        A: 0.329000026
       }
       BackgroundColor {
         A: 0.713000059
@@ -731,14 +728,14 @@ Objects {
       }
     }
     Text {
-      Label: "Click [J] to teleport"
+      Label: "Hit [J] key to teleport"
       Color {
         R: 1
         G: 1
         B: 1
         A: 1
       }
-      Size: 18
+      Size: 15
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -748,71 +745,6 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 14974369761790314334
-  Name: "UI Image"
-  Transform {
-    Location {
-      X: 36052.0195
-      Y: 10131.6729
-      Z: -6685
-    }
-    Rotation {
-      Yaw: -39.9998
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18035952774399680954
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: -2
-    Height: -2
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-      }
-      Color {
-        A: 1
-      }
-      TeamSettings {
       }
     }
     AnchorLayout {
@@ -993,10 +925,10 @@ Objects {
       }
     }
     Text {
-      Label: "MAY 6 - 12"
+      Label: "SPELLSHOCK 2: MAY 6 - 12"
       Color {
-        R: 0.88
-        G: 0.507019877
+        R: 1
+        G: 0.576159179
         A: 1
       }
       Size: 16
