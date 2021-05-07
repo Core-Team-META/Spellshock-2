@@ -92,5 +92,16 @@ LeaderboardConfigs {
     Id: "791E5BC0434D7A9F"
     EntryLimit: 100
   }
+  Config {
+    SortType {
+      Value: "mc:ecoresdkleaderboardsorting:higherisbetter"
+    }
+    FormatType {
+      Value: "mc:ecoresdkleaderboardformat:numeric"
+    }
+    Name: "CoreTrialsReset3"
+    Id: "986CB905D96EEEA6"
+    EntryLimit: 100
+  }
 }
 MaxPlayers: 16

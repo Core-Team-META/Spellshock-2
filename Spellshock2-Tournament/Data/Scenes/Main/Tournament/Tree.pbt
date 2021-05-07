@@ -1841,7 +1841,7 @@ Objects {
     Overrides {
       Name: "cs:LeaderboardReference"
       NetReference {
-        Key: "791E5BC0434D7A9F"
+        Key: "986CB905D96EEEA6"
         Type {
           Value: "mc:enetreferencetype:leaderboard"
         }
@@ -1849,7 +1849,7 @@ Objects {
     }
     Overrides {
       Name: "cs:EventID"
-      String: "CoreTrialsReset2"
+      String: "CoreTrialsReset3"
     }
     Overrides {
       Name: "cs:MetaAbilityProgressionConstants_API"
