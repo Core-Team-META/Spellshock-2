@@ -139,7 +139,7 @@ Objects {
   }
   Trigger {
     Interactable: true
-    InteractionLabel: "View Perk Shop"
+    InteractionLabel: "View Cosmetic Shop"
     TeamSettings {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
@@ -219,7 +219,7 @@ Objects {
   }
   Trigger {
     Interactable: true
-    InteractionLabel: "View Perk Shop"
+    InteractionLabel: "View Cosmetic Shop"
     TeamSettings {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
