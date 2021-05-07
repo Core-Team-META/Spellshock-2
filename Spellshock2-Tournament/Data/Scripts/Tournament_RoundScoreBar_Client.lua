@@ -8,16 +8,18 @@ local listener
 function OnResourceChanged(player, string, value)
     if player == LOCAL_PLAYER and string == "TournamentRound" then
         RoundText.text = tostring(maxRoundCount - value) .. " Rounds Until Score"
-        RoundScoreBar.progress = value / maxRoundCount - 1
+        RoundScoreBar.progress = value / (maxRoundCount - 1)
     end
 end
 
 function OnRoundStart()
     RoundScoreBar.visibility = Visibility.FORCE_ON
+    RoundText.visibility = Visibility.FORCE_ON
 end
 
 function OnRoundEnded()
-    RoundScoreBar.visibility = Visibility.FORCE_ON
+    RoundScoreBar.visibility = Visibility.FORCE_OFF
+    RoundText.visibility = Visibility.FORCE_OFF
 end
 
 function OnPlayerLeft(player)
@@ -28,7 +30,7 @@ end
 
 RoundScoreBar.visibility = Visibility.FORCE_OFF
 RoundText.text = tostring(maxRoundCount - value) .. " Rounds Until Score"
-RoundScoreBar.progress = value / maxRoundCount - 1
+RoundScoreBar.progress = value / (maxRoundCount - 1)
 
 Game.roundStartEvent:Connect(OnRoundStart)
 Game.roundEndEvent:Connect(OnRoundEnded)

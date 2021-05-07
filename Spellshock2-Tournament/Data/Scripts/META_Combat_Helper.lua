@@ -78,7 +78,7 @@ local function UpdateCombatAmmount(attackData)
         classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
     elseif amount < 0 then
-        if attackData.tags.Type == "HealthPotion" then
+        if attackData.tags and (attackData.tags.Type == "HealthPotion" or attackData.tags.id == "Mage_T") then
             return
         end
         amount = amount * -1 -- turn positive
@@ -209,13 +209,11 @@ function OnDied(attackData)
         sourceData.playersKilled[target.id] =
             sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
 
-        target.serverUserData.damageTable = {}
         UpdateKillStreak(attackData)
         UpdateUltimateKillAmmount(attackData)
         source:AddResource(CONST.LIFE_TIME_KILLS, 1)
         Events.Broadcast("META_CH.OnDied", attackData)
 
-        -- Apply Assist Points
         for assistPlayer, assist in pairs(target.serverUserData.damageTable) do
             if
                 assistPlayer and Object.IsValid(assistPlayer) and assistPlayer ~= source and
@@ -226,7 +224,7 @@ function OnDied(attackData)
                 local assistPlayerData = assistPlayer.serverUserData.tournament
                 assistPlayerData.killAssists = assistPlayerData.killAssists + 1
                 assistPlayer.serverUserData.tournament = assistPlayerData
-
+                    --warn(assistPlayer.name .. " Got Assist")
                 assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
             end
         end
