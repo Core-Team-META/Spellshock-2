@@ -65,7 +65,7 @@ function GenerateLeaderboard()
 	
 	-- Special case for top players
 	if SHOW_TOP_PLAYERS then
-		if localPlayerIndex > 0 and localPlayerIndex <= ROW_COUNT then
+		if localPlayerIndex > 0 and localPlayerIndex <= halfRowCount then
 			
 			script.parent.visibility = Visibility.FORCE_OFF
 			return
