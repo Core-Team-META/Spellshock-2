@@ -1,12 +1,12 @@
 Name: "STORE_StoreContents"
 RootId: 183626879870554728
 Objects {
-  Id: 14040370941955306933
+  Id: 2841561321224879357
   Name: "Healer"
   Transform {
     Location {
-      X: -16801.8594
-      Y: -54773.4453
+      X: -16801.8574
+      Y: -54773.4531
       Z: -512.586426
     }
     Rotation {
@@ -19,42 +19,46 @@ Objects {
     }
   }
   ParentId: 183626879870554728
-  ChildIds: 14768570195345754018
-  ChildIds: 4075441790339158283
-  ChildIds: 3332617907739690450
-  ChildIds: 16650802591813332717
-  ChildIds: 7171114154187679592
-  ChildIds: 1679226698594760872
-  ChildIds: 13242563945356642828
-  ChildIds: 15661930535761643696
-  ChildIds: 576253302510452285
-  ChildIds: 2527806109412890286
-  ChildIds: 10693551201885745501
-  ChildIds: 13179305561122875194
-  ChildIds: 15901060859741511635
-  ChildIds: 15778918312847893681
-  ChildIds: 8855492044482357584
-  ChildIds: 10959278184286091569
-  ChildIds: 15028143661754266087
-  ChildIds: 2610898865359085650
-  ChildIds: 6630217517382758772
-  ChildIds: 8140457688792633889
-  ChildIds: 2521983690256259040
-  ChildIds: 8795372980405501426
-  ChildIds: 5736680010893308505
-  ChildIds: 1564917338675340424
-  ChildIds: 6554261017270080643
-  ChildIds: 5869897605212759173
-  ChildIds: 12040403801693632249
-  ChildIds: 17314291406002053082
-  ChildIds: 7399993663203687235
-  ChildIds: 5406729310960805884
-  ChildIds: 4816487705258454670
-  ChildIds: 8244042242827809535
-  ChildIds: 17916730922327064934
-  ChildIds: 16263814942962717128
-  ChildIds: 2322105053870675862
-  ChildIds: 16392966220296593278
+  ChildIds: 10281192010944590267
+  ChildIds: 6362210849804528468
+  ChildIds: 8848945103315824995
+  ChildIds: 10812886387213995717
+  ChildIds: 6458280791393490564
+  ChildIds: 3265913437077602918
+  ChildIds: 15902252367086741701
+  ChildIds: 11396875488759431131
+  ChildIds: 17781288250707835922
+  ChildIds: 11936909407535470287
+  ChildIds: 18312502160054193093
+  ChildIds: 7649828425708927871
+  ChildIds: 1375976906235845421
+  ChildIds: 909524467619202978
+  ChildIds: 14846676363633174658
+  ChildIds: 15278349171154831257
+  ChildIds: 4168890048245063801
+  ChildIds: 1510691339976572217
+  ChildIds: 14968953725538046366
+  ChildIds: 6762203513004119033
+  ChildIds: 6410900493638617251
+  ChildIds: 2612834189000533445
+  ChildIds: 7037860561939992223
+  ChildIds: 3950710690819871924
+  ChildIds: 11008055671817890502
+  ChildIds: 16825276562549529112
+  ChildIds: 9840774298325720957
+  ChildIds: 6359694236493066723
+  ChildIds: 16024013606267594454
+  ChildIds: 11878005839291709493
+  ChildIds: 1732333604548175169
+  ChildIds: 18332433421511912783
+  ChildIds: 11966961390582895273
+  ChildIds: 8690881402265190663
+  ChildIds: 9799835410187310436
+  ChildIds: 383702850041380018
+  ChildIds: 10518017346429870837
+  ChildIds: 11734553096794670279
+  ChildIds: 6539166074396575433
+  ChildIds: 15060005172277419832
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -69,7 +73,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16392966220296593278
+  Id: 15060005172277419832
   Name: "STORE_HealerElfSupernovaFrost"
   Transform {
     Location {
@@ -85,7 +89,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -166,7 +170,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2322105053870675862
+  Id: 6539166074396575433
   Name: "STORE_HealerOrcSupernovaFire"
   Transform {
     Location {
@@ -182,7 +186,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -263,7 +267,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16263814942962717128
+  Id: 11734553096794670279
   Name: "STORE_HealerElfSupernovaBasic"
   Transform {
     Location {
@@ -279,7 +283,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -360,7 +364,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17916730922327064934
+  Id: 10518017346429870837
   Name: "STORE_HealerOrcSupernovaBasic"
   Transform {
     Location {
@@ -376,7 +380,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -453,7 +457,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8244042242827809535
+  Id: 383702850041380018
   Name: "STORE_HealerElfDivineLightFrost"
   Transform {
     Location {
@@ -469,7 +473,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -550,7 +554,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4816487705258454670
+  Id: 9799835410187310436
   Name: "STORE_HealerOrcDinveLightFire"
   Transform {
     Location {
@@ -566,7 +570,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -647,7 +651,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5406729310960805884
+  Id: 8690881402265190663
   Name: "STORE_HealerElfDivineLightBasic"
   Transform {
     Location {
@@ -663,7 +667,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -740,7 +744,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7399993663203687235
+  Id: 11966961390582895273
   Name: "STORE_HealerOrcDinveLightBasic"
   Transform {
     Location {
@@ -756,7 +760,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -833,7 +837,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17314291406002053082
+  Id: 18332433421511912783
   Name: "STORE_HealerElfHealingCrystalFrost"
   Transform {
     Location {
@@ -849,7 +853,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -930,7 +934,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12040403801693632249
+  Id: 1732333604548175169
   Name: "STORE_HealerOrcHealingCrystalFire"
   Transform {
     Location {
@@ -946,7 +950,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1027,7 +1031,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5869897605212759173
+  Id: 11878005839291709493
   Name: "STORE_HealerElfHealingCrystalBasic"
   Transform {
     Location {
@@ -1043,7 +1047,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1120,7 +1124,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6554261017270080643
+  Id: 16024013606267594454
   Name: "STORE_HealerOrcHealingCrystalBasic"
   Transform {
     Location {
@@ -1136,7 +1140,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1213,7 +1217,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1564917338675340424
+  Id: 6359694236493066723
   Name: "STORE_HealerElfSunBeamFrost"
   Transform {
     Location {
@@ -1229,7 +1233,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1310,7 +1314,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5736680010893308505
+  Id: 9840774298325720957
   Name: "STORE_HealerOrcSunBeamFire"
   Transform {
     Location {
@@ -1326,7 +1330,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1407,7 +1411,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8795372980405501426
+  Id: 16825276562549529112
   Name: "STORE_HealerElfSunBeamBasic"
   Transform {
     Location {
@@ -1423,7 +1427,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1500,7 +1504,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2521983690256259040
+  Id: 11008055671817890502
   Name: "STORE_HealerOrcSunBeamBasic"
   Transform {
     Location {
@@ -1516,7 +1520,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1593,7 +1597,201 @@ Objects {
   }
 }
 Objects {
-  Id: 8140457688792633889
+  Id: 3950710690819871924
+  Name: "STORE_HealerElfCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2841561321224879357
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Floral Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 4538343493041892213
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 7037860561939992223
+  Name: "STORE_HealerOrcCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2841561321224879357
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Poison Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 5112996657558298999
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 2612834189000533445
   Name: "STORE_HealerElfCostumeAfterlife"
   Transform {
     Location {
@@ -1609,7 +1807,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1690,7 +1888,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6630217517382758772
+  Id: 6410900493638617251
   Name: "STORE_HealerOrcCostumeAfterlife"
   Transform {
     Location {
@@ -1706,7 +1904,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1787,7 +1985,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2610898865359085650
+  Id: 6762203513004119033
   Name: "STORE_HealerElfCostumePunk"
   Transform {
     Location {
@@ -1803,7 +2001,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1884,7 +2082,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15028143661754266087
+  Id: 14968953725538046366
   Name: "STORE_HealerOrcCostumePunk"
   Transform {
     Location {
@@ -1900,7 +2098,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1981,7 +2179,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10959278184286091569
+  Id: 1510691339976572217
   Name: "STORE_HealerElfCostumeFrost"
   Transform {
     Location {
@@ -1997,7 +2195,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2078,7 +2276,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8855492044482357584
+  Id: 4168890048245063801
   Name: "STORE_HealerOrcCostumeFire"
   Transform {
     Location {
@@ -2094,7 +2292,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2175,7 +2373,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15778918312847893681
+  Id: 15278349171154831257
   Name: "STORE_HealerElfCostumeJustice"
   Transform {
     Location {
@@ -2191,7 +2389,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2272,7 +2470,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15901060859741511635
+  Id: 14846676363633174658
   Name: "STORE_HealerOrcCostumeJustice"
   Transform {
     Location {
@@ -2288,7 +2486,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2369,7 +2567,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13179305561122875194
+  Id: 909524467619202978
   Name: "STORE_HealerElfCostumeLegendary"
   Transform {
     Location {
@@ -2385,7 +2583,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2466,7 +2664,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10693551201885745501
+  Id: 1375976906235845421
   Name: "STORE_HealerOrcCostumeLegendary"
   Transform {
     Location {
@@ -2482,7 +2680,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2563,7 +2761,185 @@ Objects {
   }
 }
 Objects {
-  Id: 2527806109412890286
+  Id: 7649828425708927871
+  Name: "STORE_HealerElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2841561321224879357
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 10811581856178897893
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 18312502160054193093
+  Name: "STORE_HealerOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2841561321224879357
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 14197173358139183376
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8614122186465498534
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 11936909407535470287
   Name: "STORE_HealerElfCostumeMilitary"
   Transform {
     Location {
@@ -2579,7 +2955,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2652,7 +3028,7 @@ Objects {
   }
 }
 Objects {
-  Id: 576253302510452285
+  Id: 17781288250707835922
   Name: "STORE_HealerOrcCostumeMilitary"
   Transform {
     Location {
@@ -2668,7 +3044,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2741,7 +3117,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15661930535761643696
+  Id: 11396875488759431131
   Name: "STORE_HealerElfCostumeRare"
   Transform {
     Location {
@@ -2757,7 +3133,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2830,7 +3206,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13242563945356642828
+  Id: 15902252367086741701
   Name: "STORE_HealerOrcCostumeRare"
   Transform {
     Location {
@@ -2846,7 +3222,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2919,7 +3295,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1679226698594760872
+  Id: 3265913437077602918
   Name: "STORE_HealerElfCostumeRoyal"
   Transform {
     Location {
@@ -2935,7 +3311,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3008,7 +3384,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7171114154187679592
+  Id: 6458280791393490564
   Name: "STORE_HealerOrcCostumeRoyal"
   Transform {
     Location {
@@ -3024,7 +3400,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3097,7 +3473,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16650802591813332717
+  Id: 10812886387213995717
   Name: "STORE_HealerElfCostumeUncommon"
   Transform {
     Location {
@@ -3113,7 +3489,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3186,7 +3562,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3332617907739690450
+  Id: 8848945103315824995
   Name: "STORE_HealerOrcCostumeUncommon"
   Transform {
     Location {
@@ -3202,7 +3578,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3275,7 +3651,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4075441790339158283
+  Id: 6362210849804528468
   Name: "STORE_HealerElfCostumeCommon"
   Transform {
     Location {
@@ -3291,7 +3667,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3360,7 +3736,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14768570195345754018
+  Id: 10281192010944590267
   Name: "STORE_HealerOrcCostumeCommon"
   Transform {
     Location {
@@ -3376,7 +3752,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14040370941955306933
+  ParentId: 2841561321224879357
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3445,12 +3821,12 @@ Objects {
   }
 }
 Objects {
-  Id: 12672419140041425297
+  Id: 13489422674253217486
   Name: "Assassin"
   Transform {
     Location {
-      X: -16801.8594
-      Y: -54773.4453
+      X: -16801.8574
+      Y: -54773.4531
       Z: -512.586426
     }
     Rotation {
@@ -3463,42 +3839,46 @@ Objects {
     }
   }
   ParentId: 183626879870554728
-  ChildIds: 9202346937646964392
-  ChildIds: 3757035629304499998
-  ChildIds: 13425028047139519871
-  ChildIds: 8702165868818436254
-  ChildIds: 7373256730262997445
-  ChildIds: 9079994367771713598
-  ChildIds: 8017304210726490842
-  ChildIds: 15184027615118249299
-  ChildIds: 10392244645258314161
-  ChildIds: 18061120336044511231
-  ChildIds: 15946420753298548661
-  ChildIds: 1631858887993325944
-  ChildIds: 652653273394764313
-  ChildIds: 13771296410404005589
-  ChildIds: 12387234463881044263
-  ChildIds: 9721803026555458167
-  ChildIds: 7692884652120230274
-  ChildIds: 6578833183770604221
-  ChildIds: 12129973096210460538
-  ChildIds: 3148474391431488214
-  ChildIds: 6119372117797679230
-  ChildIds: 12286710690963255487
-  ChildIds: 6354342633521026028
-  ChildIds: 17735235708639594362
-  ChildIds: 7526206056502814933
-  ChildIds: 2554035532820962755
-  ChildIds: 6443390205166605684
-  ChildIds: 8269854931179384057
-  ChildIds: 17978183080542202813
-  ChildIds: 14587202446413643770
-  ChildIds: 16643402880479982489
-  ChildIds: 2910562269393276872
-  ChildIds: 10859255542170999053
-  ChildIds: 15591305140363473753
-  ChildIds: 9167048352674557202
-  ChildIds: 18272694257109280502
+  ChildIds: 3727796801096621896
+  ChildIds: 11131417286957795342
+  ChildIds: 5318983710829998776
+  ChildIds: 16118648417493577345
+  ChildIds: 7994448054935231404
+  ChildIds: 5373843004805745671
+  ChildIds: 15654324242597733983
+  ChildIds: 6339738632808663709
+  ChildIds: 9438302406738870390
+  ChildIds: 12809885686972280052
+  ChildIds: 12678561596257691473
+  ChildIds: 8109921508424262076
+  ChildIds: 3951643352182867323
+  ChildIds: 2806746149029687703
+  ChildIds: 16854732695920057742
+  ChildIds: 10833552292988801239
+  ChildIds: 17937509584815873213
+  ChildIds: 2883748669456778035
+  ChildIds: 5352656502675441769
+  ChildIds: 17891708519428410423
+  ChildIds: 10526298396579097253
+  ChildIds: 5212319774144680804
+  ChildIds: 13110619047294251082
+  ChildIds: 10224270641951990184
+  ChildIds: 3447428376531385214
+  ChildIds: 3238811710245869844
+  ChildIds: 7661216900123694398
+  ChildIds: 15810558271955357964
+  ChildIds: 4473268458027518552
+  ChildIds: 8802940118627870662
+  ChildIds: 5929598874498357743
+  ChildIds: 15499672809526385723
+  ChildIds: 8925814509912849827
+  ChildIds: 9028826964450235303
+  ChildIds: 13941499533856538798
+  ChildIds: 7488480123775714991
+  ChildIds: 17062325908842250814
+  ChildIds: 3475215280130116692
+  ChildIds: 3825316450048675475
+  ChildIds: 17962041790807533550
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3513,7 +3893,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18272694257109280502
+  Id: 17962041790807533550
   Name: "STORE_AssassinElfWraithStrikeFrost"
   Transform {
     Location {
@@ -3529,7 +3909,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3610,7 +3990,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9167048352674557202
+  Id: 3825316450048675475
   Name: "STORE_AssassinOrcWraithStrikeFire"
   Transform {
     Location {
@@ -3626,7 +4006,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3707,7 +4087,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15591305140363473753
+  Id: 3475215280130116692
   Name: "STORE_AssassinElfWraithStrikeBasic"
   Transform {
     Location {
@@ -3723,7 +4103,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3800,7 +4180,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10859255542170999053
+  Id: 17062325908842250814
   Name: "STORE_AssassinOrcWraithStrikeBasic"
   Transform {
     Location {
@@ -3816,7 +4196,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3893,7 +4273,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2910562269393276872
+  Id: 7488480123775714991
   Name: "STORE_AssassinElfDeathsShadowFrost"
   Transform {
     Location {
@@ -3909,7 +4289,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3990,7 +4370,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16643402880479982489
+  Id: 13941499533856538798
   Name: "STORE_AssassinOrcDeathsShadowFire"
   Transform {
     Location {
@@ -4006,7 +4386,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4087,7 +4467,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14587202446413643770
+  Id: 9028826964450235303
   Name: "STORE_AssassinElfDeathsShadowBasic"
   Transform {
     Location {
@@ -4103,7 +4483,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4180,7 +4560,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17978183080542202813
+  Id: 8925814509912849827
   Name: "STORE_AssassinOrcDeathsShadowBasic"
   Transform {
     Location {
@@ -4196,7 +4576,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4273,7 +4653,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8269854931179384057
+  Id: 15499672809526385723
   Name: "STORE_AssassinElfShurikenFrost"
   Transform {
     Location {
@@ -4289,7 +4669,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4370,7 +4750,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6443390205166605684
+  Id: 5929598874498357743
   Name: "STORE_AssassinOrcShurikenFire"
   Transform {
     Location {
@@ -4386,7 +4766,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4467,7 +4847,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2554035532820962755
+  Id: 8802940118627870662
   Name: "STORE_AssassinElfShurikenBasic"
   Transform {
     Location {
@@ -4483,7 +4863,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4560,7 +4940,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7526206056502814933
+  Id: 4473268458027518552
   Name: "STORE_AssassinOrcShurikenBasic"
   Transform {
     Location {
@@ -4576,7 +4956,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4653,7 +5033,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17735235708639594362
+  Id: 15810558271955357964
   Name: "STORE_AssassinElfBladeDashFrost"
   Transform {
     Location {
@@ -4669,7 +5049,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4750,7 +5130,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6354342633521026028
+  Id: 7661216900123694398
   Name: "STORE_AssassinOrcBladeDashFire"
   Transform {
     Location {
@@ -4766,7 +5146,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4847,7 +5227,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12286710690963255487
+  Id: 3238811710245869844
   Name: "STORE_AssassinElfBladeDashBasic"
   Transform {
     Location {
@@ -4863,7 +5243,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4940,7 +5320,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6119372117797679230
+  Id: 3447428376531385214
   Name: "STORE_AssassinOrcBladeDashBasic"
   Transform {
     Location {
@@ -4956,7 +5336,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5033,7 +5413,201 @@ Objects {
   }
 }
 Objects {
-  Id: 3148474391431488214
+  Id: 10224270641951990184
+  Name: "STORE_AssassinElfCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13489422674253217486
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Floral Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 5440041940318455098
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 13110619047294251082
+  Name: "STORE_AssassinOrcCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13489422674253217486
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Poison Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 14456063576781148988
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 5212319774144680804
   Name: "STORE_AssassinElfCostumeAfterlife"
   Transform {
     Location {
@@ -5049,7 +5623,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5130,7 +5704,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12129973096210460538
+  Id: 10526298396579097253
   Name: "STORE_AssassinOrcCostumeAfterlife"
   Transform {
     Location {
@@ -5146,7 +5720,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5227,7 +5801,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6578833183770604221
+  Id: 17891708519428410423
   Name: "STORE_AssassinElfCostumePunk"
   Transform {
     Location {
@@ -5243,7 +5817,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5324,7 +5898,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7692884652120230274
+  Id: 5352656502675441769
   Name: "STORE_AssassinOrcCostumePunk"
   Transform {
     Location {
@@ -5340,7 +5914,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5421,7 +5995,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9721803026555458167
+  Id: 2883748669456778035
   Name: "STORE_AssassinElfCostumeFrost"
   Transform {
     Location {
@@ -5437,7 +6011,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5518,7 +6092,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12387234463881044263
+  Id: 17937509584815873213
   Name: "STORE_AssassinOrcCostumeFire"
   Transform {
     Location {
@@ -5534,7 +6108,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5615,7 +6189,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13771296410404005589
+  Id: 10833552292988801239
   Name: "STORE_AssassinElfCostumeJustice"
   Transform {
     Location {
@@ -5631,7 +6205,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5712,7 +6286,7 @@ Objects {
   }
 }
 Objects {
-  Id: 652653273394764313
+  Id: 16854732695920057742
   Name: "STORE_AssassinOrcCostumeJustice"
   Transform {
     Location {
@@ -5728,7 +6302,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5809,7 +6383,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1631858887993325944
+  Id: 2806746149029687703
   Name: "STORE_AssassinElfCostumeLegendary"
   Transform {
     Location {
@@ -5825,7 +6399,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5898,7 +6472,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15946420753298548661
+  Id: 3951643352182867323
   Name: "STORE_AssassinOrcCostumeLegendary"
   Transform {
     Location {
@@ -5914,7 +6488,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5987,7 +6561,201 @@ Objects {
   }
 }
 Objects {
-  Id: 18061120336044511231
+  Id: 8109921508424262076
+  Name: "STORE_AssassinElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13489422674253217486
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 12266127825365652521
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12678561596257691473
+  Name: "STORE_AssassinOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13489422674253217486
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7777495027374158003
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12809885686972280052
   Name: "STORE_AssassinElfCostumeMilitary"
   Transform {
     Location {
@@ -6003,7 +6771,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6084,7 +6852,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10392244645258314161
+  Id: 9438302406738870390
   Name: "STORE_AssassinOrcCostumeMilitary"
   Transform {
     Location {
@@ -6100,7 +6868,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6181,7 +6949,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15184027615118249299
+  Id: 6339738632808663709
   Name: "STORE_AssassinElfCostumeRare"
   Transform {
     Location {
@@ -6197,7 +6965,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6278,7 +7046,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8017304210726490842
+  Id: 15654324242597733983
   Name: "STORE_AssassinOrcCostumeRare"
   Transform {
     Location {
@@ -6294,7 +7062,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6375,7 +7143,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9079994367771713598
+  Id: 5373843004805745671
   Name: "STORE_AssassinElfCostumeRoyal"
   Transform {
     Location {
@@ -6391,7 +7159,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6464,7 +7232,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7373256730262997445
+  Id: 7994448054935231404
   Name: "STORE_AssassinOrcCostumeRoyal"
   Transform {
     Location {
@@ -6480,7 +7248,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6553,7 +7321,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8702165868818436254
+  Id: 16118648417493577345
   Name: "STORE_AssassinElfCostumeUncommon"
   Transform {
     Location {
@@ -6569,7 +7337,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6642,7 +7410,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13425028047139519871
+  Id: 5318983710829998776
   Name: "STORE_AssassinOrcCostumeUncommon"
   Transform {
     Location {
@@ -6658,7 +7426,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6731,7 +7499,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3757035629304499998
+  Id: 11131417286957795342
   Name: "STORE_AssassinElfCostumeCommon"
   Transform {
     Location {
@@ -6747,7 +7515,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6824,7 +7592,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9202346937646964392
+  Id: 3727796801096621896
   Name: "STORE_AssassinOrcCostumeCommon"
   Transform {
     Location {
@@ -6840,7 +7608,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12672419140041425297
+  ParentId: 13489422674253217486
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6917,12 +7685,12 @@ Objects {
   }
 }
 Objects {
-  Id: 10535149848714323386
+  Id: 4769531989880991617
   Name: "Mage"
   Transform {
     Location {
-      X: -16801.8594
-      Y: -54773.4453
+      X: -16801.8574
+      Y: -54773.4531
       Z: -512.586426
     }
     Rotation {
@@ -6935,54 +7703,58 @@ Objects {
     }
   }
   ParentId: 183626879870554728
-  ChildIds: 11195901746675770541
-  ChildIds: 8037746957011449630
-  ChildIds: 2986903812678147571
-  ChildIds: 17219288610858441301
-  ChildIds: 11705979873415652465
-  ChildIds: 15045579344745403888
-  ChildIds: 5416529891043956694
-  ChildIds: 11914320524564518685
-  ChildIds: 5763112841366619610
-  ChildIds: 1165069287023877933
-  ChildIds: 5071540121921804771
-  ChildIds: 7137236239549881775
-  ChildIds: 15077966676793851499
-  ChildIds: 10362440647174091851
-  ChildIds: 17109734293971987637
-  ChildIds: 6494669486914412015
-  ChildIds: 15517934468837375573
-  ChildIds: 9626688823886975949
-  ChildIds: 14975287630744146632
-  ChildIds: 8313691221586582163
-  ChildIds: 13258418934991207318
-  ChildIds: 10611460568713770089
-  ChildIds: 9686661234464263271
-  ChildIds: 4884068277358738119
-  ChildIds: 12536668211629100267
-  ChildIds: 10472360966056243138
-  ChildIds: 18204070851498521937
-  ChildIds: 16726468937291496417
-  ChildIds: 12173675032757593869
-  ChildIds: 17452102280492251303
-  ChildIds: 6208944946673529512
-  ChildIds: 8174044513584780748
-  ChildIds: 13023958875621038080
-  ChildIds: 15046124092669894638
-  ChildIds: 6292858790392511158
-  ChildIds: 8573079489676174980
-  ChildIds: 17954629474534473418
-  ChildIds: 2464426022506002782
-  ChildIds: 9521094269679846508
-  ChildIds: 4857301968771318359
-  ChildIds: 12499714782838622112
-  ChildIds: 3454181375237784623
-  ChildIds: 514009562175353930
-  ChildIds: 2740548218932796536
-  ChildIds: 15087158809078270719
-  ChildIds: 6267649254016633221
-  ChildIds: 11244626392264706768
-  ChildIds: 9259071074988431972
+  ChildIds: 2030767024765483121
+  ChildIds: 7768305980828741079
+  ChildIds: 9714679766890496316
+  ChildIds: 12011216239212935090
+  ChildIds: 5336172649567335516
+  ChildIds: 5861884498056756222
+  ChildIds: 9604533946415094362
+  ChildIds: 4949128945630032816
+  ChildIds: 7581350995770564069
+  ChildIds: 3793054258440717306
+  ChildIds: 13515293973441812763
+  ChildIds: 12845307491358935671
+  ChildIds: 9259585854700088943
+  ChildIds: 8939970471393268519
+  ChildIds: 17224809814360574683
+  ChildIds: 249110637973884457
+  ChildIds: 7488854295576710987
+  ChildIds: 5512413525986298173
+  ChildIds: 3089114390248417553
+  ChildIds: 2281185849075995369
+  ChildIds: 1639267063724211413
+  ChildIds: 9722246441671206755
+  ChildIds: 12467657842520984933
+  ChildIds: 11453668533362801810
+  ChildIds: 3170438154465538285
+  ChildIds: 3940790318244084632
+  ChildIds: 10864343784380609318
+  ChildIds: 14161886705086109047
+  ChildIds: 180794709238413666
+  ChildIds: 9001541909955248895
+  ChildIds: 6485796144002577970
+  ChildIds: 6089828076729558361
+  ChildIds: 1046677400539050173
+  ChildIds: 9529588364550689121
+  ChildIds: 5599187901493781457
+  ChildIds: 10869935383527311992
+  ChildIds: 8204009844021745306
+  ChildIds: 8974208688674073449
+  ChildIds: 16326681674055020437
+  ChildIds: 902328317068751241
+  ChildIds: 15337913208296115804
+  ChildIds: 12011936912468781272
+  ChildIds: 4789055456202414153
+  ChildIds: 14889056753014150753
+  ChildIds: 17882839924577436759
+  ChildIds: 18154210193225318870
+  ChildIds: 15703991615432774206
+  ChildIds: 6228292093989781659
+  ChildIds: 4692590473355352075
+  ChildIds: 4175464270136292513
+  ChildIds: 8830067030433918159
+  ChildIds: 15444773901723270895
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6997,7 +7769,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9259071074988431972
+  Id: 15444773901723270895
   Name: "STORE_MageElfPyroblastFrost"
   Transform {
     Location {
@@ -7013,7 +7785,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7094,7 +7866,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11244626392264706768
+  Id: 8830067030433918159
   Name: "STORE_MageOrcPyroblastFire"
   Transform {
     Location {
@@ -7110,7 +7882,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7191,7 +7963,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6267649254016633221
+  Id: 4175464270136292513
   Name: "STORE_MageElfPyroblastBasic"
   Transform {
     Location {
@@ -7207,7 +7979,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7284,7 +8056,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15087158809078270719
+  Id: 4692590473355352075
   Name: "STORE_MageOrcPyroblastBasic"
   Transform {
     Location {
@@ -7300,7 +8072,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7377,7 +8149,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2740548218932796536
+  Id: 6228292093989781659
   Name: "STORE_MageElfIcebergFrost"
   Transform {
     Location {
@@ -7393,7 +8165,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7474,7 +8246,7 @@ Objects {
   }
 }
 Objects {
-  Id: 514009562175353930
+  Id: 15703991615432774206
   Name: "STORE_MageOrcIcebergFire"
   Transform {
     Location {
@@ -7490,7 +8262,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7571,7 +8343,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3454181375237784623
+  Id: 18154210193225318870
   Name: "STORE_MageElfIcebergBasic"
   Transform {
     Location {
@@ -7587,7 +8359,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7664,7 +8436,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12499714782838622112
+  Id: 17882839924577436759
   Name: "STORE_MageOrcIcebergBasic"
   Transform {
     Location {
@@ -7680,7 +8452,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7757,7 +8529,395 @@ Objects {
   }
 }
 Objects {
-  Id: 4857301968771318359
+  Id: 14889056753014150753
+  Name: "STORE_MageElfChickenGoose"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Goose Animorph Potion"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Uncommon_E"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 18235933670338395573
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 1221213810114228531
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 4789055456202414153
+  Name: "STORE_MageOrcChickenGoose"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Goose Animorph Potion"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Uncommon_E"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13105576907512273321
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 1221213810114228531
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12011936912468781272
+  Name: "STORE_MageElfChickenSheep"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Sheep Animorph Potion"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Afterlife_E"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 250
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 400242005143841
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 1221213810114228531
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 15337913208296115804
+  Name: "STORE_MageOrcChickenGoat"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Goat Animorph Potion"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Afterlife_E"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 250
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 6138452713068008720
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 1221213810114228531
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 902328317068751241
   Name: "STORE_MageElfChickenFrost"
   Transform {
     Location {
@@ -7773,7 +8933,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7819,7 +8979,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "Rare"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -7854,7 +9014,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9521094269679846508
+  Id: 16326681674055020437
   Name: "STORE_MageOrcChickenFire"
   Transform {
     Location {
@@ -7870,7 +9030,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7916,104 +9076,6 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 5485640623370883304
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 1221213810114228531
-      }
-    }
-    Overrides {
-      Name: "cs:LockedUntil"
-      Int: 10
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 2464426022506002782
-  Name: "STORE_MageElfChickenTurtle"
-  Transform {
-    Location {
-      X: -12835.8818
-      Y: 55836.1211
-      Z: 512.586426
-    }
-    Rotation {
-      Yaw: 3.4150944e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10535149848714323386
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Turtle Animorph Potion"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Mage_Elf_Military_E"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 100
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Mage"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Ability"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "LowerBody"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 13246053039233465812
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-    Overrides {
-      Name: "cs:Rarity"
       String: "Rare"
     }
     Overrides {
@@ -8049,310 +9111,15 @@ Objects {
   }
 }
 Objects {
-  Id: 17954629474534473418
-  Name: "STORE_MageOrcChickenLizard"
-  Transform {
-    Location {
-      X: -12835.8818
-      Y: 55836.1211
-      Z: 512.586426
-    }
-    Rotation {
-      Yaw: 3.4150944e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10535149848714323386
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Lizard Animorph Potion"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Mage_Orc_Military_E"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 100
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Mage"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Ability"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "LowerBody"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 6286429262189186051
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-    Overrides {
-      Name: "cs:Rarity"
-      String: "Rare"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 5485640623370883304
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 1221213810114228531
-      }
-    }
-    Overrides {
-      Name: "cs:LockedUntil"
-      Int: 10
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 8573079489676174980
-  Name: "STORE_MageElfChickenSheep"
-  Transform {
-    Location {
-      X: -12835.8818
-      Y: 55836.1211
-      Z: 512.586426
-    }
-    Rotation {
-      Yaw: 3.4150944e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10535149848714323386
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Sheep Animorph Potion"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Mage_Elf_Afterlife_E"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 100
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Mage"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Ability"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "LowerBody"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 400242005143841
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-    Overrides {
-      Name: "cs:Rarity"
-      String: "Rare"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 5485640623370883304
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 1221213810114228531
-      }
-    }
-    Overrides {
-      Name: "cs:LockedUntil"
-      Int: 10
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 6292858790392511158
-  Name: "STORE_MageOrcChickenGoat"
-  Transform {
-    Location {
-      X: -12835.8818
-      Y: 55836.1211
-      Z: 512.586426
-    }
-    Rotation {
-      Yaw: 3.4150944e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10535149848714323386
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Goat Animorph Potion"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Mage_Orc_Afterlife_E"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 100
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Mage"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Ability"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "LowerBody"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 6138452713068008720
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-    Overrides {
-      Name: "cs:Rarity"
-      String: "Rare"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 5485640623370883304
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 1221213810114228531
-      }
-    }
-    Overrides {
-      Name: "cs:LockedUntil"
-      Int: 10
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 15046124092669894638
+  Id: 8974208688674073449
   Name: "STORE_MageElfChickenCow"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -8360,7 +9127,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8441,16 +9208,15 @@ Objects {
   }
 }
 Objects {
-  Id: 13023958875621038080
+  Id: 8204009844021745306
   Name: "STORE_MageOrcChickenBull"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -8458,7 +9224,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8539,16 +9305,15 @@ Objects {
   }
 }
 Objects {
-  Id: 8174044513584780748
+  Id: 10869935383527311992
   Name: "STORE_MageElfChickenPig"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -8556,7 +9321,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8637,16 +9402,15 @@ Objects {
   }
 }
 Objects {
-  Id: 6208944946673529512
+  Id: 5599187901493781457
   Name: "STORE_MageOrcChickenBoar"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -8654,7 +9418,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8735,16 +9499,15 @@ Objects {
   }
 }
 Objects {
-  Id: 17452102280492251303
+  Id: 9529588364550689121
   Name: "STORE_MageElfChickenBuck"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -8752,7 +9515,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8833,16 +9596,15 @@ Objects {
   }
 }
 Objects {
-  Id: 12173675032757593869
+  Id: 1046677400539050173
   Name: "STORE_MageOrcChickenAntelope"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -8850,7 +9612,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8931,16 +9693,15 @@ Objects {
   }
 }
 Objects {
-  Id: 16726468937291496417
-  Name: "STORE_MageElfChickenGoose"
+  Id: 6089828076729558361
+  Name: "STORE_MageElfChickenTurtle"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -8948,19 +9709,19 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Goose Animorph Potion"
+      String: "Turtle Animorph Potion"
     }
     Overrides {
       Name: "cs:ID"
-      String: "Mage_Elf_Uncommon_E"
+      String: "Mage_Elf_Military_E"
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 100
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -8977,7 +9738,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 18235933670338395573
+        Id: 13246053039233465812
       }
     }
     Overrides {
@@ -9008,6 +9769,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 5
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9025,16 +9790,15 @@ Objects {
   }
 }
 Objects {
-  Id: 18204070851498521937
-  Name: "STORE_MageOrcChickenGoose"
+  Id: 6485796144002577970
+  Name: "STORE_MageOrcChickenLizard"
   Transform {
     Location {
-      X: -12835.8818
-      Y: 55836.1211
+      X: -12835.8809
+      Y: 55836.125
       Z: 512.586426
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -9042,19 +9806,19 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Goose Animorph Potion"
+      String: "Lizard Animorph Potion"
     }
     Overrides {
       Name: "cs:ID"
-      String: "Mage_Orc_Uncommon_E"
+      String: "Mage_Orc_Military_E"
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 100
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -9071,7 +9835,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 13105576907512273321
+        Id: 6286429262189186051
       }
     }
     Overrides {
@@ -9102,6 +9866,10 @@ Objects {
         Id: 1221213810114228531
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 5
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9119,7 +9887,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10472360966056243138
+  Id: 9001541909955248895
   Name: "STORE_MageElfChickenBasic"
   Transform {
     Location {
@@ -9135,7 +9903,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9212,7 +9980,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12536668211629100267
+  Id: 180794709238413666
   Name: "STORE_MageOrcChickenBasic"
   Transform {
     Location {
@@ -9228,7 +9996,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9305,7 +10073,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4884068277358738119
+  Id: 14161886705086109047
   Name: "STORE_MageElfTornadoFrost"
   Transform {
     Location {
@@ -9321,7 +10089,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9402,7 +10170,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9686661234464263271
+  Id: 10864343784380609318
   Name: "STORE_MageOrcTornadoFire"
   Transform {
     Location {
@@ -9418,7 +10186,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9499,7 +10267,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10611460568713770089
+  Id: 3940790318244084632
   Name: "STORE_MageElfTornadoBasic"
   Transform {
     Location {
@@ -9515,7 +10283,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9592,7 +10360,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13258418934991207318
+  Id: 3170438154465538285
   Name: "STORE_MageOrcTornadoBasic"
   Transform {
     Location {
@@ -9608,7 +10376,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9685,7 +10453,201 @@ Objects {
   }
 }
 Objects {
-  Id: 8313691221586582163
+  Id: 11453668533362801810
+  Name: "STORE_MageElfCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Floral Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 4482552282330192355
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12467657842520984933
+  Name: "STORE_MageOrcCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Poison Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13308067609229496927
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 9722246441671206755
   Name: "STORE_MageElfCostumeAfterlife"
   Transform {
     Location {
@@ -9701,7 +10663,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9782,7 +10744,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14975287630744146632
+  Id: 1639267063724211413
   Name: "STORE_MageOrcCostumeAfterlife"
   Transform {
     Location {
@@ -9798,7 +10760,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9879,7 +10841,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9626688823886975949
+  Id: 2281185849075995369
   Name: "STORE_MageElfCostumePunk"
   Transform {
     Location {
@@ -9895,7 +10857,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -9976,7 +10938,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15517934468837375573
+  Id: 3089114390248417553
   Name: "STORE_MageOrcCostumePunk"
   Transform {
     Location {
@@ -9992,7 +10954,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10073,7 +11035,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6494669486914412015
+  Id: 5512413525986298173
   Name: "STORE_MageElfCostumeFrost"
   Transform {
     Location {
@@ -10089,7 +11051,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10170,7 +11132,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17109734293971987637
+  Id: 7488854295576710987
   Name: "STORE_MageOrcCostumeFire"
   Transform {
     Location {
@@ -10186,7 +11148,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10267,7 +11229,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10362440647174091851
+  Id: 249110637973884457
   Name: "STORE_MageOrcCostumeJustice"
   Transform {
     Location {
@@ -10283,7 +11245,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10364,7 +11326,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15077966676793851499
+  Id: 17224809814360574683
   Name: "STORE_MageElfCostumeJustice"
   Transform {
     Location {
@@ -10380,7 +11342,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10461,7 +11423,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7137236239549881775
+  Id: 8939970471393268519
   Name: "STORE_MageElfCostumeLegendary"
   Transform {
     Location {
@@ -10477,7 +11439,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10558,7 +11520,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5071540121921804771
+  Id: 9259585854700088943
   Name: "STORE_MageOrcCostumeLegendary"
   Transform {
     Location {
@@ -10574,7 +11536,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10655,7 +11617,185 @@ Objects {
   }
 }
 Objects {
-  Id: 1165069287023877933
+  Id: 12845307491358935671
+  Name: "STORE_MageElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7827848173566305469
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 13515293973441812763
+  Name: "STORE_MageOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4769531989880991617
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 3738483168692358011
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 3793054258440717306
   Name: "STORE_MageElfCostumeMilitary"
   Transform {
     Location {
@@ -10671,7 +11811,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10744,7 +11884,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5763112841366619610
+  Id: 7581350995770564069
   Name: "STORE_MageOrcCostumeMilitary"
   Transform {
     Location {
@@ -10760,7 +11900,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10833,7 +11973,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11914320524564518685
+  Id: 4949128945630032816
   Name: "STORE_MageElfCostumeRare"
   Transform {
     Location {
@@ -10849,7 +11989,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -10922,7 +12062,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5416529891043956694
+  Id: 9604533946415094362
   Name: "STORE_MageOrcCostumeRare"
   Transform {
     Location {
@@ -10938,7 +12078,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11011,7 +12151,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15045579344745403888
+  Id: 5861884498056756222
   Name: "STORE_MageElfCostumeRoyal"
   Transform {
     Location {
@@ -11027,7 +12167,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11100,7 +12240,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11705979873415652465
+  Id: 5336172649567335516
   Name: "STORE_MageOrcCostumeRoyal"
   Transform {
     Location {
@@ -11116,7 +12256,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11189,7 +12329,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17219288610858441301
+  Id: 12011216239212935090
   Name: "STORE_MageElfCostumeUncommon"
   Transform {
     Location {
@@ -11205,7 +12345,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11278,7 +12418,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2986903812678147571
+  Id: 9714679766890496316
   Name: "STORE_MageOrcCostumeUncommon"
   Transform {
     Location {
@@ -11294,7 +12434,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11367,7 +12507,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8037746957011449630
+  Id: 7768305980828741079
   Name: "STORE_MageElfCostumeCommon"
   Transform {
     Location {
@@ -11383,7 +12523,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11452,7 +12592,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11195901746675770541
+  Id: 2030767024765483121
   Name: "STORE_MageOrcCostumeCommon"
   Transform {
     Location {
@@ -11468,7 +12608,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10535149848714323386
+  ParentId: 4769531989880991617
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11537,12 +12677,12 @@ Objects {
   }
 }
 Objects {
-  Id: 16806644396874094188
+  Id: 629997279508047345
   Name: "Hunter"
   Transform {
     Location {
-      X: -16801.8594
-      Y: -54773.4453
+      X: -16801.8574
+      Y: -54773.4531
       Z: -512.586426
     }
     Rotation {
@@ -11555,42 +12695,46 @@ Objects {
     }
   }
   ParentId: 183626879870554728
-  ChildIds: 4165409453904157160
-  ChildIds: 2625712869262449488
-  ChildIds: 10552569479951470247
-  ChildIds: 16846555800394328858
-  ChildIds: 17275378262654714910
-  ChildIds: 10496270687547933819
-  ChildIds: 16896564480689015870
-  ChildIds: 5249179072111106921
-  ChildIds: 15023144899693847556
-  ChildIds: 5408796066949721797
-  ChildIds: 8873004633845483845
-  ChildIds: 11027198839736712650
-  ChildIds: 6097746057389766794
-  ChildIds: 15633130637725041879
-  ChildIds: 4337760296111819667
-  ChildIds: 5749018703745451234
-  ChildIds: 13093035169518167104
-  ChildIds: 1848605734204263611
-  ChildIds: 861909038544750193
-  ChildIds: 12013801449036224691
-  ChildIds: 1518678894978041679
-  ChildIds: 2527967482449587084
-  ChildIds: 13165287837118709503
-  ChildIds: 15892885447691224580
-  ChildIds: 1663647621941274473
-  ChildIds: 2214416505927885173
-  ChildIds: 14131850654878188788
-  ChildIds: 16655123933273012343
-  ChildIds: 18273946828107390873
-  ChildIds: 154832358422587547
-  ChildIds: 16677471737004828422
-  ChildIds: 3654095796396402959
-  ChildIds: 1161261990890864814
-  ChildIds: 1012650461480342982
-  ChildIds: 2600794859602077185
-  ChildIds: 2378503719444293361
+  ChildIds: 16169283947071701754
+  ChildIds: 10055677156645867788
+  ChildIds: 2177999731969527784
+  ChildIds: 14438112724648148539
+  ChildIds: 17221843652630820021
+  ChildIds: 4018748781298671973
+  ChildIds: 9859765605704163770
+  ChildIds: 16183598744935405237
+  ChildIds: 4230358968647258293
+  ChildIds: 5991068225915018825
+  ChildIds: 3641486647288335064
+  ChildIds: 11648573603237385284
+  ChildIds: 6994342824837615789
+  ChildIds: 5508276137087117410
+  ChildIds: 10035208838839044842
+  ChildIds: 18183882123383193379
+  ChildIds: 1379863543920424384
+  ChildIds: 17880684131194590987
+  ChildIds: 14004093388877128373
+  ChildIds: 16131156091461197553
+  ChildIds: 8753771032347404701
+  ChildIds: 6037345955553713605
+  ChildIds: 12066047018931556334
+  ChildIds: 4754057443152949958
+  ChildIds: 3883779167674949180
+  ChildIds: 4193357001380819620
+  ChildIds: 3209004924655160320
+  ChildIds: 10341686508356418743
+  ChildIds: 615418988033307554
+  ChildIds: 16363239128264015745
+  ChildIds: 15698213153394924599
+  ChildIds: 2653332957938772248
+  ChildIds: 2071402724189493700
+  ChildIds: 4390811167854993888
+  ChildIds: 6398349553751840271
+  ChildIds: 10081158488850340072
+  ChildIds: 5855323224101660830
+  ChildIds: 12304458275480429069
+  ChildIds: 7227036744943370370
+  ChildIds: 16973271287230441067
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -11605,7 +12749,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2378503719444293361
+  Id: 16973271287230441067
   Name: "STORE_HunterElfHawkFrost"
   Transform {
     Location {
@@ -11621,7 +12765,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11702,7 +12846,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2600794859602077185
+  Id: 7227036744943370370
   Name: "STORE_HunterOrcHawkFire"
   Transform {
     Location {
@@ -11718,7 +12862,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11799,7 +12943,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1012650461480342982
+  Id: 12304458275480429069
   Name: "STORE_HunterElfHawkBasic"
   Transform {
     Location {
@@ -11815,7 +12959,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11892,7 +13036,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1161261990890864814
+  Id: 5855323224101660830
   Name: "STORE_HunterOrcHawkBasic"
   Transform {
     Location {
@@ -11908,7 +13052,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -11985,7 +13129,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3654095796396402959
+  Id: 10081158488850340072
   Name: "STORE_HunterElfBearTrapFrost"
   Transform {
     Location {
@@ -12001,7 +13145,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12082,7 +13226,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16677471737004828422
+  Id: 6398349553751840271
   Name: "STORE_HunterOrcBearTrapFire"
   Transform {
     Location {
@@ -12098,7 +13242,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12179,7 +13323,7 @@ Objects {
   }
 }
 Objects {
-  Id: 154832358422587547
+  Id: 4390811167854993888
   Name: "STORE_HunterElfBearTrapBasic"
   Transform {
     Location {
@@ -12195,7 +13339,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12272,7 +13416,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18273946828107390873
+  Id: 2071402724189493700
   Name: "STORE_HunterOrcBearTrapBasic"
   Transform {
     Location {
@@ -12288,7 +13432,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12365,7 +13509,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16655123933273012343
+  Id: 2653332957938772248
   Name: "STORE_HunterElfEntangleFrost"
   Transform {
     Location {
@@ -12381,7 +13525,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12462,7 +13606,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14131850654878188788
+  Id: 15698213153394924599
   Name: "STORE_HunterOrcEntangleFire"
   Transform {
     Location {
@@ -12478,7 +13622,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12559,7 +13703,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2214416505927885173
+  Id: 16363239128264015745
   Name: "STORE_HunterElfEntangleBasic"
   Transform {
     Location {
@@ -12575,7 +13719,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12652,7 +13796,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1663647621941274473
+  Id: 615418988033307554
   Name: "STORE_HunterOrcEntangleBasic"
   Transform {
     Location {
@@ -12668,7 +13812,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12745,7 +13889,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15892885447691224580
+  Id: 10341686508356418743
   Name: "STORE_HunterElfArrowsFrost"
   Transform {
     Location {
@@ -12761,7 +13905,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12842,7 +13986,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13165287837118709503
+  Id: 3209004924655160320
   Name: "STORE_HunterOrcArrowsFire"
   Transform {
     Location {
@@ -12858,7 +14002,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -12939,7 +14083,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2527967482449587084
+  Id: 4193357001380819620
   Name: "STORE_HunterElfArrowsBasic"
   Transform {
     Location {
@@ -12955,7 +14099,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13032,7 +14176,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1518678894978041679
+  Id: 3883779167674949180
   Name: "STORE_HunterOrcArrowsBasic"
   Transform {
     Location {
@@ -13048,7 +14192,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13125,7 +14269,201 @@ Objects {
   }
 }
 Objects {
-  Id: 12013801449036224691
+  Id: 4754057443152949958
+  Name: "STORE_HunterElfCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 629997279508047345
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Floral Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Elf_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 16407316188737264211
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12066047018931556334
+  Name: "STORE_HunterOrcCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 629997279508047345
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Poison Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Orc_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7090679116195874415
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6037345955553713605
   Name: "STORE_HunterElfCostumeAfterlife"
   Transform {
     Location {
@@ -13141,7 +14479,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13222,7 +14560,7 @@ Objects {
   }
 }
 Objects {
-  Id: 861909038544750193
+  Id: 8753771032347404701
   Name: "STORE_HunterOrcCostumeAfterlife"
   Transform {
     Location {
@@ -13238,7 +14576,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13319,7 +14657,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1848605734204263611
+  Id: 16131156091461197553
   Name: "STORE_HunterElfCostumePunk"
   Transform {
     Location {
@@ -13335,7 +14673,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13416,7 +14754,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13093035169518167104
+  Id: 14004093388877128373
   Name: "STORE_HunterOrcCostumePunk"
   Transform {
     Location {
@@ -13432,7 +14770,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13513,7 +14851,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5749018703745451234
+  Id: 17880684131194590987
   Name: "STORE_HunterElfCostumeFrost"
   Transform {
     Location {
@@ -13529,7 +14867,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13610,7 +14948,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4337760296111819667
+  Id: 1379863543920424384
   Name: "STORE_HunterOrcCostumeFire"
   Transform {
     Location {
@@ -13626,7 +14964,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13707,7 +15045,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15633130637725041879
+  Id: 18183882123383193379
   Name: "STORE_HunterElfCostumeJustice"
   Transform {
     Location {
@@ -13723,7 +15061,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13804,7 +15142,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6097746057389766794
+  Id: 10035208838839044842
   Name: "STORE_HunterOrcCostumeJustice"
   Transform {
     Location {
@@ -13820,7 +15158,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13901,7 +15239,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11027198839736712650
+  Id: 5508276137087117410
   Name: "STORE_HunterElfCostumeLegendary"
   Transform {
     Location {
@@ -13917,7 +15255,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -13990,7 +15328,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8873004633845483845
+  Id: 6994342824837615789
   Name: "STORE_HunterOrcCostumeLegendary"
   Transform {
     Location {
@@ -14006,7 +15344,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14079,7 +15417,201 @@ Objects {
   }
 }
 Objects {
-  Id: 5408796066949721797
+  Id: 11648573603237385284
+  Name: "STORE_HunterElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 629997279508047345
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 5345924898154712675
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 3641486647288335064
+  Name: "STORE_HunterOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 629997279508047345
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 5363701975110401077
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8744665518178580042
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 5991068225915018825
   Name: "STORE_HunterElfCostumeMilitary"
   Transform {
     Location {
@@ -14095,7 +15627,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14176,7 +15708,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15023144899693847556
+  Id: 4230358968647258293
   Name: "STORE_HunterOrcCostumeMilitary"
   Transform {
     Location {
@@ -14192,7 +15724,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14273,7 +15805,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5249179072111106921
+  Id: 16183598744935405237
   Name: "STORE_HunterElfCostumeRare"
   Transform {
     Location {
@@ -14289,7 +15821,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14370,7 +15902,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16896564480689015870
+  Id: 9859765605704163770
   Name: "STORE_HunterOrcCostumeRare"
   Transform {
     Location {
@@ -14386,7 +15918,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14467,7 +15999,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10496270687547933819
+  Id: 4018748781298671973
   Name: "STORE_HunterElfCostumeRoyal"
   Transform {
     Location {
@@ -14483,7 +16015,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14556,7 +16088,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17275378262654714910
+  Id: 17221843652630820021
   Name: "STORE_HunterOrcCostumeRoyal"
   Transform {
     Location {
@@ -14572,7 +16104,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14645,7 +16177,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16846555800394328858
+  Id: 14438112724648148539
   Name: "STORE_HunterElfCostumeUncommon"
   Transform {
     Location {
@@ -14661,7 +16193,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14734,7 +16266,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10552569479951470247
+  Id: 2177999731969527784
   Name: "STORE_HunterOrcCostumeUncommon"
   Transform {
     Location {
@@ -14750,7 +16282,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14823,7 +16355,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2625712869262449488
+  Id: 10055677156645867788
   Name: "STORE_HunterElfCostumeCommon"
   Transform {
     Location {
@@ -14839,7 +16371,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14908,7 +16440,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4165409453904157160
+  Id: 16169283947071701754
   Name: "STORE_HunterOrcCostumeCommon"
   Transform {
     Location {
@@ -14924,7 +16456,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16806644396874094188
+  ParentId: 629997279508047345
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -14993,12 +16525,12 @@ Objects {
   }
 }
 Objects {
-  Id: 6411471204784472395
+  Id: 6014363551501876596
   Name: "Warrior"
   Transform {
     Location {
-      X: -16801.8594
-      Y: -54773.4453
+      X: -16801.8574
+      Y: -54773.4531
       Z: -512.586426
     }
     Rotation {
@@ -15011,42 +16543,46 @@ Objects {
     }
   }
   ParentId: 183626879870554728
-  ChildIds: 10392045704310245780
-  ChildIds: 11083520247889548544
-  ChildIds: 1376916143577622124
-  ChildIds: 14707987883636114781
-  ChildIds: 18067121141781984630
-  ChildIds: 16678230273821699169
-  ChildIds: 1431299859093935326
-  ChildIds: 320425414000174337
-  ChildIds: 15498096351310748496
-  ChildIds: 1762933990454238221
-  ChildIds: 10877531935183384179
-  ChildIds: 14179344688564034578
-  ChildIds: 17932258122087720108
-  ChildIds: 7966648441631401621
-  ChildIds: 1735279658689446259
-  ChildIds: 14185998502530551114
-  ChildIds: 179713294667721768
-  ChildIds: 284906943835425740
-  ChildIds: 7268588817221443355
-  ChildIds: 13149701031558610285
-  ChildIds: 2075351885057384382
-  ChildIds: 15012338187201026628
-  ChildIds: 12647329218218582882
-  ChildIds: 1297464973745287994
-  ChildIds: 8652970605773719260
-  ChildIds: 920003657516602780
-  ChildIds: 15119124504491317958
-  ChildIds: 12477078923106131111
-  ChildIds: 17668864227279624800
-  ChildIds: 4364690750672654805
-  ChildIds: 2066783242318707754
-  ChildIds: 17618655501180603730
-  ChildIds: 5414143562083384281
-  ChildIds: 13661502856320192871
-  ChildIds: 2031435076255499022
-  ChildIds: 13562251019008157523
+  ChildIds: 8668816314669281979
+  ChildIds: 1933300531313913091
+  ChildIds: 10358809751282634089
+  ChildIds: 5224642073540865672
+  ChildIds: 17361924391660007502
+  ChildIds: 8375346639416093801
+  ChildIds: 832852183620103485
+  ChildIds: 8870861429388331760
+  ChildIds: 18194442782238635202
+  ChildIds: 2712616877686639463
+  ChildIds: 13978382661215453332
+  ChildIds: 10494350567239669387
+  ChildIds: 16206203731275542969
+  ChildIds: 12254900780707333483
+  ChildIds: 1433526998525153871
+  ChildIds: 12437404134891127884
+  ChildIds: 672875485701046619
+  ChildIds: 11582356229222301156
+  ChildIds: 15784729718990673155
+  ChildIds: 11731633897296656414
+  ChildIds: 16426798826066220484
+  ChildIds: 11977006527426290489
+  ChildIds: 340467376754414046
+  ChildIds: 1983919791315338979
+  ChildIds: 14088506873426338104
+  ChildIds: 8024626452018915976
+  ChildIds: 5854609548868225455
+  ChildIds: 3932813655961804938
+  ChildIds: 3687837878081930287
+  ChildIds: 1049255338863829428
+  ChildIds: 13144034148451327610
+  ChildIds: 10465924762379331342
+  ChildIds: 4539049764002556285
+  ChildIds: 7792623848265245317
+  ChildIds: 10565603679659521092
+  ChildIds: 2601565599859468582
+  ChildIds: 1797719323532526085
+  ChildIds: 11711859086687959846
+  ChildIds: 763745747304513463
+  ChildIds: 11681489717119685446
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15061,7 +16597,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13562251019008157523
+  Id: 11681489717119685446
   Name: "STORE_WarriorElfBoulderThrowFrost"
   Transform {
     Location {
@@ -15077,7 +16613,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15158,7 +16694,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2031435076255499022
+  Id: 763745747304513463
   Name: "STORE_WarriorOrcBoulderThrowFire"
   Transform {
     Location {
@@ -15174,7 +16710,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15255,7 +16791,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13661502856320192871
+  Id: 11711859086687959846
   Name: "STORE_WarriorElfBoulderThrowBasic"
   Transform {
     Location {
@@ -15271,7 +16807,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15348,7 +16884,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5414143562083384281
+  Id: 1797719323532526085
   Name: "STORE_WarriorOrcBoulderThrowBasic"
   Transform {
     Location {
@@ -15364,7 +16900,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15441,7 +16977,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17618655501180603730
+  Id: 2601565599859468582
   Name: "STORE_WarriorElfShieldDashFrost"
   Transform {
     Location {
@@ -15457,7 +16993,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15538,7 +17074,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2066783242318707754
+  Id: 10565603679659521092
   Name: "STORE_WarriorOrcShieldDashFire"
   Transform {
     Location {
@@ -15554,7 +17090,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15635,7 +17171,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4364690750672654805
+  Id: 7792623848265245317
   Name: "STORE_WarriorElfShieldDashBasic"
   Transform {
     Location {
@@ -15651,7 +17187,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15728,7 +17264,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17668864227279624800
+  Id: 4539049764002556285
   Name: "STORE_WarriorOrcShieldDashBasic"
   Transform {
     Location {
@@ -15744,7 +17280,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15821,7 +17357,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12477078923106131111
+  Id: 10465924762379331342
   Name: "STORE_WarriorElfStoneWallFrost"
   Transform {
     Location {
@@ -15837,7 +17373,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -15918,7 +17454,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15119124504491317958
+  Id: 13144034148451327610
   Name: "STORE_WarriorOrcStoneWallFire"
   Transform {
     Location {
@@ -15934,7 +17470,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16015,7 +17551,7 @@ Objects {
   }
 }
 Objects {
-  Id: 920003657516602780
+  Id: 1049255338863829428
   Name: "STORE_WarriorElfStoneWallBasic"
   Transform {
     Location {
@@ -16031,7 +17567,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16108,7 +17644,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8652970605773719260
+  Id: 3687837878081930287
   Name: "STORE_WarriorOrcStoneWallBasic"
   Transform {
     Location {
@@ -16124,7 +17660,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16201,7 +17737,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1297464973745287994
+  Id: 3932813655961804938
   Name: "STORE_WarriorElfRockStrikeFrost"
   Transform {
     Location {
@@ -16217,7 +17753,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16298,7 +17834,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12647329218218582882
+  Id: 5854609548868225455
   Name: "STORE_WarriorOrcRockStrikeFire"
   Transform {
     Location {
@@ -16314,7 +17850,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16395,7 +17931,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15012338187201026628
+  Id: 8024626452018915976
   Name: "STORE_WarriorElfRockStrikeBasic"
   Transform {
     Location {
@@ -16411,7 +17947,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16488,7 +18024,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2075351885057384382
+  Id: 14088506873426338104
   Name: "STORE_WarriorOrcRockStrikeBasic"
   Transform {
     Location {
@@ -16504,7 +18040,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16581,7 +18117,201 @@ Objects {
   }
 }
 Objects {
-  Id: 13149701031558610285
+  Id: 1983919791315338979
+  Name: "STORE_WarriorElfCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6014363551501876596
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Floral Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Warrior_Elf_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 1462091408356787310
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 340467376754414046
+  Name: "STORE_WarriorOrcCostumeFoliage"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6014363551501876596
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Poison Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Warrior_Orc_Foliage_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 2853879422506937055
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 11977006527426290489
   Name: "STORE_WarriorElfCostumeAfterlife"
   Transform {
     Location {
@@ -16597,7 +18327,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16678,8 +18408,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7268588817221443355
-  Name: "STORE_WarriorkOrcCostumeAfterlife"
+  Id: 16426798826066220484
+  Name: "STORE_WarriorOrcCostumeAfterlife"
   Transform {
     Location {
       X: -12835.8809
@@ -16694,7 +18424,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16775,7 +18505,7 @@ Objects {
   }
 }
 Objects {
-  Id: 284906943835425740
+  Id: 11731633897296656414
   Name: "STORE_WarriorElfCostumePunk"
   Transform {
     Location {
@@ -16791,7 +18521,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16872,7 +18602,7 @@ Objects {
   }
 }
 Objects {
-  Id: 179713294667721768
+  Id: 15784729718990673155
   Name: "STORE_WarriorOrcCostumePunk"
   Transform {
     Location {
@@ -16888,7 +18618,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -16969,7 +18699,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14185998502530551114
+  Id: 11582356229222301156
   Name: "STORE_WarriorElfCostumeFrost"
   Transform {
     Location {
@@ -16985,7 +18715,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17066,7 +18796,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1735279658689446259
+  Id: 672875485701046619
   Name: "STORE_WarriorOrcCostumeFire"
   Transform {
     Location {
@@ -17082,7 +18812,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17163,7 +18893,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7966648441631401621
+  Id: 12437404134891127884
   Name: "STORE_WarriorElfCostumeJustice"
   Transform {
     Location {
@@ -17179,7 +18909,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17260,7 +18990,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17932258122087720108
+  Id: 1433526998525153871
   Name: "STORE_WarriorOrcCostumeJustice"
   Transform {
     Location {
@@ -17276,7 +19006,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17357,7 +19087,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14179344688564034578
+  Id: 12254900780707333483
   Name: "STORE_WarriorElfCostumeLegendary"
   Transform {
     Location {
@@ -17373,7 +19103,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17446,7 +19176,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10877531935183384179
+  Id: 16206203731275542969
   Name: "STORE_WarriorOrcCostumeLegendary"
   Transform {
     Location {
@@ -17462,7 +19192,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17535,7 +19265,201 @@ Objects {
   }
 }
 Objects {
-  Id: 1762933990454238221
+  Id: 10494350567239669387
+  Name: "STORE_WarriorElfCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6014363551501876596
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Draugr Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Warrior_Elf_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 12162609511359109839
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 13978382661215453332
+  Name: "STORE_WarriorOrcCostumeAlternative"
+  Transform {
+    Location {
+      X: -12835.8809
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6014363551501876596
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Ritual Warrior"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Warrior_Orc_Alternative_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 50
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Warrior"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 14462698610109510325
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17370828256945431127
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 12903613763615525878
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 2712616877686639463
   Name: "STORE_WarriorElfCostumeMilitary"
   Transform {
     Location {
@@ -17551,7 +19475,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17632,7 +19556,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15498096351310748496
+  Id: 18194442782238635202
   Name: "STORE_WarriorOrcCostumeMilitary"
   Transform {
     Location {
@@ -17648,7 +19572,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17729,7 +19653,7 @@ Objects {
   }
 }
 Objects {
-  Id: 320425414000174337
+  Id: 8870861429388331760
   Name: "STORE_WarriorElfCostumeRare"
   Transform {
     Location {
@@ -17745,7 +19669,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17826,7 +19750,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1431299859093935326
+  Id: 832852183620103485
   Name: "STORE_WarriorOrcCostumeRare"
   Transform {
     Location {
@@ -17842,7 +19766,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -17923,7 +19847,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16678230273821699169
+  Id: 8375346639416093801
   Name: "STORE_WarriorElfCostumeRoyal"
   Transform {
     Location {
@@ -17939,7 +19863,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -18012,7 +19936,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18067121141781984630
+  Id: 17361924391660007502
   Name: "STORE_WarriorOrcCostumeRoyal"
   Transform {
     Location {
@@ -18028,7 +19952,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -18101,7 +20025,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14707987883636114781
+  Id: 5224642073540865672
   Name: "STORE_WarriorElfCostumeUncommon"
   Transform {
     Location {
@@ -18117,7 +20041,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -18190,7 +20114,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1376916143577622124
+  Id: 10358809751282634089
   Name: "STORE_WarriorOrcCostumeUncommon"
   Transform {
     Location {
@@ -18206,7 +20130,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -18279,7 +20203,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11083520247889548544
+  Id: 1933300531313913091
   Name: "STORE_WarriorElfCostumeCommon"
   Transform {
     Location {
@@ -18295,7 +20219,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -18364,7 +20288,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10392045704310245780
+  Id: 8668816314669281979
   Name: "STORE_WarriorOrcCostumeCommon"
   Transform {
     Location {
@@ -18380,7 +20304,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6411471204784472395
+  ParentId: 6014363551501876596
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
