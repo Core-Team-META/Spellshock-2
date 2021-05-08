@@ -23,6 +23,7 @@ Objects {
   ChildIds: 17436479203009380714
   ChildIds: 6391789068312908978
   ChildIds: 1275772343600876952
+  ChildIds: 5263470911289048608
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,6 +36,35 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 5263470911289048608
+  Name: "Point Indicator"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Point Indicator"
   }
 }
 Objects {
