@@ -62,9 +62,10 @@ function OnAbilityExecute(thisAbility)
 
 	Task.Wait(1)
 	if Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) and CurrentHawk and Object.IsValid(CurrentHawk) then
+		local player = SpecialAbility.owner
 		Timer =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+				player,
 			META_AP().T,
 			"mod2",
 			DEFAULT_LifeSpan,

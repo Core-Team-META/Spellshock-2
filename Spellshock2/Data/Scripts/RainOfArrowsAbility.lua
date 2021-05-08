@@ -55,13 +55,14 @@ function PlaceObject(thisAbility)
 	--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
+		local player = SpecialAbility.owner
 		dmg.amount =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+				player,
 			META_AP().Q,
 			"mod1",
 			DEFAULT_DamageAmount,
-			SpecialAbility.name .. ": Damage Amount"
+			player.name .. ": Damage Amount"
 		)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = SpecialAbility.owner
