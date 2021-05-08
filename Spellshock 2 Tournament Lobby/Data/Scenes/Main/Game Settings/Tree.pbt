@@ -1,6 +1,62 @@
 Name: "Game Settings"
 RootId: 3390733902140207501
 Objects {
+  Id: 5301894428122291433
+  Name: "Nameplates"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3390733902140207501
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15979967455835987047
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Nameplates"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:ShowHealthbars"
+          Bool: false
+        }
+        Overrides {
+          Name: "cs:ShowOnSelf"
+          Bool: false
+        }
+        Overrides {
+          Name: "cs:ShowNumbers"
+          Bool: false
+        }
+        Overrides {
+          Name: "cs:AnimateChanges"
+          Bool: false
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1997882820213850367
+    }
+  }
+}
+Objects {
   Id: 9554034967728527011
   Name: "Third Person Camera Settings"
   Transform {
