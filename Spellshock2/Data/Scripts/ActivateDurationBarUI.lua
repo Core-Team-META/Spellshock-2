@@ -41,14 +41,15 @@ local totalDuration = 0
 
 function OnSpecialAbilityExecute(thisAbility)
 	if SpecialAbility:GetCurrentPhase() ~= AbilityPhase.READY then
+		local player = SpecialAbility.owner
 		totalDuration =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+			player.owner,
 			META_AP()[Class],
 			META_AP()[BindingName],
 			DurationMod,
 			DEFAULT_Duration,
-			SpecialAbility.name .. ": Duration"
+			player.name .. ": Duration"
 		)
 		durationTimer = totalDuration
 	end
