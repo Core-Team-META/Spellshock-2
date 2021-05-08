@@ -44,7 +44,7 @@ function OnSpecialAbilityExecute(thisAbility)
 		local player = SpecialAbility.owner
 		totalDuration =
 			META_AP().GetAbilityMod(
-			player.owner,
+			player,
 			META_AP()[Class],
 			META_AP()[BindingName],
 			DurationMod,
