@@ -1,4 +1,4 @@
-﻿-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
 -- Date: 04/02/2021
 -- Version: 0.0.1
 --===========================================================================================
@@ -34,7 +34,7 @@ local ownerCameraRotation
 local ownerVectorForward
 
 function OnAbilityExecute(thisAbility)
-	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY or not Object.IsValid(thisAbility.owner) then
 		return
 	end
 	local OwnerPosition = thisAbility.owner:GetWorldPosition()
@@ -61,10 +61,11 @@ function OnAbilityExecute(thisAbility)
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 
 	Task.Wait(1)
-	if Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) then
+	if Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) and CurrentHawk and Object.IsValid(CurrentHawk) then
+		local player = SpecialAbility.owner
 		Timer =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+				player,
 			META_AP().T,
 			"mod2",
 			DEFAULT_LifeSpan,
