@@ -28,9 +28,9 @@ function OnPlayerLeft(player)
     end
 end
 
-RoundScoreBar.visibility = Visibility.FORCE_OFF
-RoundText.text = tostring(maxRoundCount - value) .. " Rounds Until Score"
-RoundScoreBar.progress = value / (maxRoundCount - 1)
+RoundScoreBar.visibility = Visibility.FORCE_ON
+RoundText.text = "Progress Begins Next Round"
+RoundScoreBar.progress = 0
 
 Game.roundStartEvent:Connect(OnRoundStart)
 Game.roundEndEvent:Connect(OnRoundEnded)

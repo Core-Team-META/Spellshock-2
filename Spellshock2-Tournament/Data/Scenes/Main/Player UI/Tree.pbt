@@ -789,7 +789,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 18
+      Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
