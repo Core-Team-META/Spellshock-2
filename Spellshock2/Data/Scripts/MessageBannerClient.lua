@@ -68,7 +68,7 @@ local function ShowMessage(message)
     ResetPanels()
 
     local shouldShow = false
-
+    local timer = 3 + time()
     if not message.player then
         TEXT_BOX.text = message.text
         message.visable.visibility = Visibility.INHERIT
@@ -101,7 +101,6 @@ local function ShowMessage(message)
         message.sfx:Play()
     end
 
-    local timer = message.duration + time()
 
     while time() < timer do
         Task.Wait()
