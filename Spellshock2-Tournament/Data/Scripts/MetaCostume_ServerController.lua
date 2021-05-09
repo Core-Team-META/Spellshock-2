@@ -202,6 +202,9 @@ function BuildEquippedCosmeticDataTable(player, data)
                 playerEquippedCosmetic[player][class][bind] = {}
                 for teamId, skinId in pairs(binds) do
                     if skinId == 1 then
+                        skinId = 1
+                    end
+                    if bind == 8 and skinId == 1 then
                         skinId = math.random(5, 12)
                     end
                     playerEquippedCosmetic[player][class][bind][teamId] = skinId
@@ -220,7 +223,10 @@ function BuildEquippedCosmeticDataTable(player, data)
             for _, bind in pairs(CONST.COSMETIC_BIND) do
                 playerEquippedCosmetic[player][class][bind] = {}
                 for _, team in pairs(CONST.TEAM) do
-                    local skinId = math.random(5, 12)
+                    local skinId = 1
+                    if bind == 8 and skinId == 1 then
+                        skinId = math.random(5, 12)
+                    end
                     playerEquippedCosmetic[player][class][bind][team] = skinId
                     --player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
                     local key = UTIL.GetSkinString(class, team, bind)
