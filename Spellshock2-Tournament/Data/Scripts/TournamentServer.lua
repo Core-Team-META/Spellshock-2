@@ -16,7 +16,7 @@ local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 local StartTime = tonumber(os.time({year = 2021, month = 5, day = 6, hour = 19}))
 local EndTime = tonumber(os.time({year = 2021, month = 5, day = 12, hour = 19}))
 
-local MIN_PLAYERS_TO_SUBMIT = 6
+local MIN_PLAYERS_TO_SUBMIT = 1
 local REQUIRED_ROUNDS_PLAYED = 5
 
 local BASE_POINTS = 1000
@@ -67,6 +67,8 @@ local POINTS_FOR_VICTORY = 5
 local POINTS_FOR_LOSS = 4
 
 local STORAGE_KEY = "TournamentSupport"
+
+local roundActive = {}
 
 local function CalculateBaseSoftCap(value, base, count, reduction)
 	local roundSoftcap = 0
@@ -286,16 +288,16 @@ function OnPlayerRespawn(player)
 	player.serverUserData.damageTable = {}
 end
 
+
 function OnPlayerJoined(player)
 	ClearData(player)
 	player:SetResource("TournamentRound", 0)
 	player.serverUserData.tournamentRound = 0
 	player.serverUserData.totalTourneyScore = 0
+	--roundActive[player] = false
 	player.respawnedEvent:Connect(OnPlayerRespawn)
-
 	TransferStorageToPlayer(player)
 end
---
 
 --[[ TODO: Debuging
 	player.bindingPressedEvent:Connect(
@@ -305,12 +307,15 @@ end
 			end
 		end
 	)
-end]] function OnRoundStarted()
+end]]-- 
+
+function OnRoundStarted()
 	for _, player in ipairs(Game.GetPlayers()) do
 		ClearData(player)
 		player.serverUserData.tournamentRound = player.serverUserData.tournamentRound or 0
 		player.serverUserData.tournamentRound = player.serverUserData.tournamentRound + 1
 		player:AddResource("TournamentRound", 1)
+		--roundActive[player] = true
 	end
 end
 
@@ -319,10 +324,11 @@ function OnRoundEnded()
 	if #Game.GetPlayers() < MIN_PLAYERS_TO_SUBMIT then
 		for _, player in ipairs(Game.GetPlayers()) do
 			player.serverUserData.tournamentRound = player.serverUserData.tournamentRound or 0
-			if player.serverUserData.tournamentRound > 0 then
+			if roundActive[player] and player.serverUserData.tournamentRound > 0 then
 				player.serverUserData.tournamentRound = player.serverUserData.tournamentRound - 1
 				player:RemoveResource("TournamentRound", 1)
 			end
+			--roundActive[player] = false
 		end
 		return
 	end
