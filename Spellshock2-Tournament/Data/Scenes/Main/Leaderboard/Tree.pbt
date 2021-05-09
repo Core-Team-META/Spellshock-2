@@ -751,7 +751,7 @@ Objects {
       }
     }
     Text {
-      Label: "Scoring in  Spellshock  is based on a combination of points captured, wins, kills, damage, healing, and bonus points for kill streaks. Penalties exist for dying. Highest score wins!"
+      Label: "Scoring in  Spellshock  is based on a combination of points captured, wins, kills, damage, healing, and bonus points for kill streaks. Penalties exist for dying. Rounds are limited to 10 minutes. Highest score wins!"
       Color {
         R: 1
         G: 1
