@@ -281,16 +281,16 @@ classTable = {
         --Rain of Arrows
         [CONST.BIND.Q] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Placement Range
-            [1] = {mod1 = 80, mod2 = 700, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 20},
-            [2] = {mod1 = 85, mod2 = 725, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 19},
-            [3] = {mod1 = 90, mod2 = 750, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 18},
-            [4] = {mod1 = 95, mod2 = 775, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 17},
-            [5] = {mod1 = 100, mod2 = 800, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 16},
-            [6] = {mod1 = 105, mod2 = 810, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 15},
-            [7] = {mod1 = 110, mod2 = 820, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 14},
-            [8] = {mod1 = 115, mod2 = 830, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 13},
-            [9] = {mod1 = 120, mod2 = 840, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 12},
-            [10] = {mod1 = 125, mod2 = 850, mod3 = 2800, mod4 = 0, mod5 = 0, mod6 = 10}
+            [1] = {mod1 = 80, mod2 = 700, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 20},
+            [2] = {mod1 = 85, mod2 = 725, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 19},
+            [3] = {mod1 = 90, mod2 = 750, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 18},
+            [4] = {mod1 = 95, mod2 = 775, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 17},
+            [5] = {mod1 = 100, mod2 = 800, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 16},
+            [6] = {mod1 = 105, mod2 = 810, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 15},
+            [7] = {mod1 = 110, mod2 = 820, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 14},
+            [8] = {mod1 = 115, mod2 = 830, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 13},
+            [9] = {mod1 = 120, mod2 = 840, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 12},
+            [10] = {mod1 = 125, mod2 = 850, mod3 = 4000, mod4 = 0, mod5 = 0, mod6 = 10}
         },
         -- Entangle
         [CONST.BIND.E] = {
@@ -394,16 +394,16 @@ classTable = {
         --Healing Crystal
         [CONST.BIND.E] = {
             -- mod1 = Heal Amount, mod2 = Duration, mod3 = Delay Between Heals, mod4 = Placement Range, mod5 = Radius
-            [1] = {mod1 = 25, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 600, mod6 = 26},
-            [2] = {mod1 = 26, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 620, mod6 = 25.5},
-            [3] = {mod1 = 27, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 640, mod6 = 25},
-            [4] = {mod1 = 28, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 660, mod6 = 24.5},
-            [5] = {mod1 = 29, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 680, mod6 = 24},
-            [6] = {mod1 = 30, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 700, mod6 = 23},
-            [7] = {mod1 = 31, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 750, mod6 = 22.5},
-            [8] = {mod1 = 32, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 800, mod6 = 22},
-            [9] = {mod1 = 33, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 800, mod6 = 21.5},
-           [10] = {mod1 = 35, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 800, mod6 = 21}
+            [1] = {mod1 = 25, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 600, mod6 = 26},
+            [2] = {mod1 = 26, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 620, mod6 = 25.5},
+            [3] = {mod1 = 27, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 640, mod6 = 25},
+            [4] = {mod1 = 28, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 660, mod6 = 24.5},
+            [5] = {mod1 = 29, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 680, mod6 = 24},
+            [6] = {mod1 = 30, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 700, mod6 = 23},
+            [7] = {mod1 = 31, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 750, mod6 = 22.5},
+            [8] = {mod1 = 32, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 800, mod6 = 22},
+            [9] = {mod1 = 33, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 800, mod6 = 21.5},
+           [10] = {mod1 = 35, mod2 = 7, mod3 = 0.5, mod4 = 4000, mod5 = 800, mod6 = 21}
         },
         --Divine Light
         [CONST.BIND.R] = {
