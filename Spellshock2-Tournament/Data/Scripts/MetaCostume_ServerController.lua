@@ -89,6 +89,9 @@ end
 --@param int skinId
 local function SetCurrentCosmetic(player, skinId)
     local class = player:GetResource(CONST.CLASS_RES)
+    if skinId == 0 then
+        skinId = 1
+    end
     playerEquippedCosmetic[player][class][CONST.COSTUME_ID][player.team] = skinId
     --player:SetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID), skinId)
     --print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
@@ -198,6 +201,9 @@ function BuildEquippedCosmeticDataTable(player, data)
             for bind, binds in pairs(classes) do
                 playerEquippedCosmetic[player][class][bind] = {}
                 for teamId, skinId in pairs(binds) do
+                    if skinId == 1 then
+                        skinId = math.random(5, 12)
+                    end
                     playerEquippedCosmetic[player][class][bind][teamId] = skinId
                     --player:SetResource(UTIL.GetSkinString(class, teamId, bind), skinId)
                     local key = UTIL.GetSkinString(class, teamId, bind)
@@ -214,10 +220,11 @@ function BuildEquippedCosmeticDataTable(player, data)
             for _, bind in pairs(CONST.COSMETIC_BIND) do
                 playerEquippedCosmetic[player][class][bind] = {}
                 for _, team in pairs(CONST.TEAM) do
-                    playerEquippedCosmetic[player][class][bind][team] = CONST.DEFAULT_SKIN
+                    local skinId = math.random(5, 12)
+                    playerEquippedCosmetic[player][class][bind][team] = skinId
                     --player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
                     local key = UTIL.GetSkinString(class, team, bind)
-                    _G.PerPlayerDictionary.Set(player, key, 1)
+                    _G.PerPlayerDictionary.Set(player, key, skinId)
                     --print("BuildEquippedCosmeticDataTable 2: " .. key)
                 end
             end
