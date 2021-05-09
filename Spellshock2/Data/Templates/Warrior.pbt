@@ -2051,6 +2051,7 @@ Assets {
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.3
+            CanRotate: true
             PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
