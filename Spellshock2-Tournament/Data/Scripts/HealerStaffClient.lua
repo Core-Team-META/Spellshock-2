@@ -30,9 +30,9 @@ function AbilityTick(ability, deltaTime)
             CHARGING_ABILITY:AdvancePhase()
             return
         end
-        if LOCAL_PLAYER:IsBindingPressed("ability_secondary") then
+        --[[if LOCAL_PLAYER:IsBindingPressed("ability_secondary") then
             CHARGING_ABILITY:Interrupt()
-        end
+        end]]
 
         --------------------------------------------------------------
 
