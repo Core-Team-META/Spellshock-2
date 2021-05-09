@@ -13,10 +13,8 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
-
-local StartTime = tonumber(os.time({year=2021, month=5, day=6, hour=19})) 
-local EndTime = tonumber(os.time({year=2021, month=5, day=12, hour=19})) 
-
+local StartTime = tonumber(os.time({year = 2021, month = 5, day = 6, hour = 19}))
+local EndTime = tonumber(os.time({year = 2021, month = 5, day = 12, hour = 19}))
 
 local MIN_PLAYERS_TO_SUBMIT = 6
 local REQUIRED_ROUNDS_PLAYED = 5
@@ -69,8 +67,6 @@ local POINTS_FOR_VICTORY = 5
 local POINTS_FOR_LOSS = 4
 
 local STORAGE_KEY = "TournamentSupport"
-
-
 
 local function CalculateBaseSoftCap(value, base, count, reduction)
 	local roundSoftcap = 0
@@ -321,20 +317,29 @@ end
 function OnRoundEnded()
 	-- Points are only valid if the minimum player count is met
 	if #Game.GetPlayers() < MIN_PLAYERS_TO_SUBMIT then
+		for _, player in ipairs(Game.GetPlayers()) do
+			player.serverUserData.tournamentRound = player.serverUserData.tournamentRound or 0
+			if player.serverUserData.tournamentRound > 0 then
+				player.serverUserData.tournamentRound = player.serverUserData.tournamentRound - 1
+				player:RemoveResource("TournamentRound", 1)
+			end
+		end
 		return
 	end
 	local currentTime = os.time(os.date("!*t"))
 
-	warn(" Current Time: " .. tostring(currentTime) .. " StartTime:" .. tostring(StartTime) .. " EndTime: " .. tostring(EndTime))
+	warn(
+		" Current Time: " ..
+			tostring(currentTime) .. " StartTime:" .. tostring(StartTime) .. " EndTime: " .. tostring(EndTime)
+	)
 
-	if  currentTime < StartTime then
-        return
-    end
+	if currentTime < StartTime then
+		return
+	end
 
 	if currentTime > EndTime then
 		return
 	end
-
 
 	-- Wait for some calculations in other scripts
 	Task.Wait()
@@ -364,24 +369,21 @@ function OnRoundEnded()
 	winningScore = CoreMath.Clamp(winningScore, 0, 510)
 	losingScore = CoreMath.Clamp(losingScore, 0, 510)
 
-
-
 	local str = "[TOURNAMENT ANALYSIS] "
-	str = str.."{"
+	str = str .. "{"
 
-	str = str.."\"winningTeam\":" .. tostring(winningTeam)
-			.. ",\"winningTeamScore\":" .. tostring(winningScore)
-			.. ",\"losingTeamScore\":" .. tostring(losingScore)
+	str =
+		str ..
+		'"winningTeam":' ..
+			tostring(winningTeam) ..
+				',"winningTeamScore":' .. tostring(winningScore) .. ',"losingTeamScore":' .. tostring(losingScore)
 	-- Players
-	str = str .. ",\"players\":["
-
+	str = str .. ',"players":['
 
 	local playersWritten = 0
 
 	-- Add the different point categories at end of round
 	for _, player in ipairs(Game.GetPlayers()) do
-
-
 		local playerData = player.serverUserData.tournament
 
 		local killPoints = playerData.points
@@ -479,40 +481,68 @@ function OnRoundEnded()
 			str = str .. ",{"
 		end
 		-- ID
-		str = str .. "\"id\":\"" .. tostring(player.id) .. "\""
-		str = str .. ",\"wonRound\":" .. tostring(hasWon)
-		str = str .. ",\"base\":" .. tostring(BASE_POINTS)
-		str = str .. ",\"team\":" .. tostring(roundPoints)
-		str = str .. ",\"damage\":" .. tostring(damagePoints)
-		str = str .. ",\"healing\":" .. tostring(healingPoints)
-		str = str .. ",\"kills\":" .. tostring(killPoints)
-		str = str .. ",\"killStreak\":" .. tostring(killStreakPoints)
-		str = str .. ",\"killAssist\":" .. tostring(assistKillPoints)
-		str = str .. ",\"objective\":" .. tostring(objectivePoints)
-		str = str .. ",\"assistCapture\":" .. tostring(objectiveAssistPoints)
-		str = str .. ",\"uniqueKills\":" .. tostring(objectiveAssistPoints)
-		str = str .. ",\"teamScore\":" .. tostring(teamScoreBonus)
-		str = str .. ",\"total\":" .. tostring(playerData.points)
+		str = str .. '"id":"' .. tostring(player.id) .. '"'
+		str = str .. ',"wonRound":' .. tostring(hasWon)
+		str = str .. ',"base":' .. tostring(BASE_POINTS)
+		str = str .. ',"team":' .. tostring(roundPoints)
+		str = str .. ',"damage":' .. tostring(damagePoints)
+		str = str .. ',"healing":' .. tostring(healingPoints)
+		str = str .. ',"kills":' .. tostring(killPoints)
+		str = str .. ',"killStreak":' .. tostring(killStreakPoints)
+		str = str .. ',"killAssist":' .. tostring(assistKillPoints)
+		str = str .. ',"objective":' .. tostring(objectivePoints)
+		str = str .. ',"assistCapture":' .. tostring(objectiveAssistPoints)
+		str = str .. ',"uniqueKills":' .. tostring(objectiveAssistPoints)
+		str = str .. ',"teamScore":' .. tostring(teamScoreBonus)
+		str = str .. ',"total":' .. tostring(playerData.points)
 
 		str = str .. "}"
 
 		if DEBUG_MODE then
-			print("------------------------------------------" .. "\n" ..
-			player.name .. " Points " .. "\n" ..
-			"------------------------------------------" .. "\n" ..
-			"Starting Points: " .. tostring(BASE_POINTS) .. "\n" ..
-			"Team Points: " .. tostring(roundPoints) .. "\n" ..
-			"Damage Points: " .. tostring(damagePoints) .. "\n" ..
-			"Healing Points: " .. tostring(healingPoints) .. "\n" ..
-			"Kill Points: " .. tostring(killPoints) .. "\n" ..
-			"Kill Streak Points: " .. tostring(killStreakPoints) .. "\n" ..
-			"Kill Assist Points: " .. tostring(assistKillPoints) .. "\n" ..
-			"Capture Points: " .. tostring(objectivePoints) .. "\n" ..
-			"Assist Capture Points: " .. tostring(objectiveAssistPoints) .. "\n" ..
-			"Unique Kill Points: " .. tostring(uniqueKillsBonus) .. "\n" ..
-			"Team Score Bonus: " .. tostring(teamScoreBonus) .. "\n" ..
-			"Points Total: " .. tostring(playerData.points) .. "\n" ..
-			"------------------------------------------")
+			print(
+				"------------------------------------------" ..
+				"\n" ..
+				player.name .. " Points " ..
+				"\n" ..
+				"------------------------------------------" ..
+				"\n" ..
+				"Starting Points: " ..
+				tostring(BASE_POINTS) ..
+				"\n" ..
+				"Team Points: " ..
+				tostring(roundPoints) ..
+				"\n" ..
+				"Damage Points: " ..
+				tostring(damagePoints) ..
+				"\n" ..
+				"Healing Points: " ..
+				tostring(healingPoints) ..
+				"\n" ..
+				"Kill Points: " ..
+				tostring(killPoints) ..
+				"\n" ..
+				"Kill Streak Points: " ..
+				tostring(killStreakPoints) ..
+				"\n" ..
+				"Kill Assist Points: " ..
+				tostring(assistKillPoints) ..
+				"\n" ..
+				"Capture Points: " ..
+				tostring(objectivePoints) ..
+				"\n" ..
+				"Assist Capture Points: " ..
+				tostring(objectiveAssistPoints) ..
+				"\n" ..
+				"Unique Kill Points: " ..
+				tostring(uniqueKillsBonus) ..
+				"\n" ..
+				"Team Score Bonus: " ..
+				tostring(teamScoreBonus) ..
+				"\n" ..
+				"Points Total: " ..
+				tostring(playerData.points) ..
+				"\n" .. "------------------------------------------"
+			)
 		end
 	end
 
@@ -524,21 +554,16 @@ function OnRoundEnded()
 	for _, player in ipairs(Game.GetPlayers()) do
 		local playerData = player.serverUserData.tournament
 		if player.serverUserData.tournamentRound and player.serverUserData.tournamentRound == REQUIRED_ROUNDS_PLAYED then
-
 			local totalScore = CoreMath.Round(player.serverUserData.totalTourneyScore + playerData.points)
 			SubmitScore(player, totalScore)
 			player:SetResource("TournamentRound", 0)
 			player.serverUserData.tournamentRound = 0
 			player.serverUserData.totalTourneyScore = 0
-
-			
 		elseif player.serverUserData.tournamentRound then
-
 			player.serverUserData.totalTourneyScore = CoreMath.Round(player.serverUserData.totalTourneyScore + playerData.points)
 		end
 	end
 end
-
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.roundStartEvent:Connect(OnRoundStarted)
