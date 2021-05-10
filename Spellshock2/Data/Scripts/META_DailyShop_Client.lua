@@ -26,10 +26,10 @@ local SHOP_ITEMS = script:GetCustomProperty("Shop_Items"):WaitForObject()
 local REFRESH_BUTTON = script:GetCustomProperty("Refresh"):WaitForObject()
 local REFRESH_BUTTON_PREMIUM = script:GetCustomProperty("Refresh_Premium"):WaitForObject()
 local PARENT_UI = script:GetCustomProperty("DailyShop"):WaitForObject()
-local ORC_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_TRIGGER"):WaitForObject()
-local ORC_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
+local ORC_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_TRIGGER"):WaitForObject()
+local ORC_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
 local CLOSE_BUTTON = script:GetCustomProperty("BUTTON"):WaitForObject()
 local REFRESH_IN_TEXT = script:GetCustomProperty("REFRESH_IN_TEXT"):WaitForObject()
 local REFRESH_IN_TEXT_HIGHLIGHT = script:GetCustomProperty("REFRESH_IN_TEXT_HIGHLIGHT"):WaitForObject()
@@ -63,7 +63,6 @@ local closeButtonLisener = nil
 local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 local shopItems = SHOP_ITEMS:GetChildren()
 local shouldRefresh = true
-
 
 local CardDescriptions = {
     [REWARD_UTIL.REWARD_TYPES.GOLD] = "Gold can be used to upgrade abilities and purchase items at the Daily Shop.",
@@ -111,7 +110,7 @@ local function ToggleUi(bool)
         PARENT_UI.visibility = Visibility.FORCE_ON
         ORC_DAILY_SHOP_TRIGGER.isInteractable = false
         ELF_DAILY_SHOP_TRIGGER.isInteractable = false
-
+        Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
         --SFX
         World.SpawnAsset(SFX_OPEN)
     else
@@ -123,7 +122,6 @@ local function ToggleUi(bool)
         ELF_DAILY_SHOP_TRIGGER.isInteractable = true
         DisconnectButtonListener(listeners)
     end
-    Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
     UI.SetCursorVisible(bool)
     UI.SetCanCursorInteractWithUI(bool)
     UI.SetCursorLockedToViewport(bool)
@@ -316,8 +314,8 @@ local function DisconnectNpcListener()
 end
 
 local function ConnectNpcListener()
-    npcTriggers[#npcTriggers + 1] = ORC_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
     npcTriggers[#npcTriggers + 1] = ELF_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
+    npcTriggers[#npcTriggers + 1] = ORC_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
