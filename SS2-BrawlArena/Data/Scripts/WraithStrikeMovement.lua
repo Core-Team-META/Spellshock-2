@@ -1,0 +1,35 @@
+
+local Left_Wing = script:GetCustomProperty("Left_Wing"):WaitForObject()
+local LeftWing0 = script:GetCustomProperty("LeftWing0"):WaitForObject()
+local LeftWing1 = script:GetCustomProperty("LeftWing1"):WaitForObject()
+local LeftWrist = script:GetCustomProperty("LeftWrist"):WaitForObject()
+local LeftWingTop = script:GetCustomProperty("LeftWingTop"):WaitForObject()
+local LeftWingMid = script:GetCustomProperty("LeftWingMid"):WaitForObject()
+local LeftWingBot = script:GetCustomProperty("LeftWingBot"):WaitForObject()
+
+local Right_Wing = script:GetCustomProperty("Right_Wing"):WaitForObject()
+local RightWing0 = script:GetCustomProperty("RightWing0"):WaitForObject()
+local RightWing1 = script:GetCustomProperty("RightWing1"):WaitForObject()
+local RightWrist = script:GetCustomProperty("RightWrist"):WaitForObject()
+local RightWingTop = script:GetCustomProperty("RightWingTop"):WaitForObject()
+local RightWingMid = script:GetCustomProperty("RightWingMid"):WaitForObject()
+local RightWingBot = script:GetCustomProperty("RightWingBot"):WaitForObject()
+
+local Ease3D = require(script:GetCustomProperty("Ease3D"))
+
+--Task.Wait(2) --buffer
+Ease3D.EaseRotation(Left_Wing, Rotation.New(0, 45, -30), 0.5, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(LeftWing0, Rotation.New(0, 0, 0), 0.6, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(LeftWing1, Rotation.New(-20, 48, -84), 0.7, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(LeftWrist, Rotation.New(-36, -24, -51), 0.8, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(LeftWingTop, Rotation.New(0, 0, 12), 0.9, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(LeftWingMid, Rotation.New(0, 0, -12), 1.0, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(LeftWingBot, Rotation.New(0, 0, -51), 1.1, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+
+Ease3D.EaseRotation(Right_Wing, Rotation.New(0, 45, 30), 0.5, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(RightWing0, Rotation.New(0, 0, 0), 0.6, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(RightWing1, Rotation.New(20, 48, 84), 0.7, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(RightWrist, Rotation.New(36, -24, 51), 0.8, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(RightWingTop, Rotation.New(0, 0, -12), 0.9, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(RightWingMid, Rotation.New(0, 0, 12), 1, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EaseRotation(RightWingBot, Rotation.New(0, 0, 51), 1.1, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
