@@ -10982,7 +10982,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 1964254608213071037
             }
           }
           Overrides {
@@ -11112,7 +11112,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 1964254608213071037
             }
           }
           Overrides {
@@ -11242,7 +11242,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 1964254608213071037
             }
           }
           Overrides {
@@ -11372,7 +11372,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 1964254608213071037
             }
           }
           Overrides {
@@ -11502,7 +11502,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 1964254608213071037
             }
           }
           Overrides {
@@ -16484,7 +16484,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 1964254608213071037
             }
           }
           Overrides {
@@ -18288,7 +18288,7 @@ Assets {
       }
     }
     Assets {
-      Id: 5318852982404395572
+      Id: 1964254608213071037
       Name: "Bark Redwood 01"
       PlatformAssetType: 2
       PrimaryAsset {

@@ -9209,7 +9209,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12476654224073211161
+            Id: 8978661562815925692
           }
           Teams {
           }
@@ -9467,7 +9467,7 @@ Assets {
       }
     }
     Assets {
-      Id: 12476654224073211161
+      Id: 8978661562815925692
       Name: "Rock Hexagonal"
       PlatformAssetType: 1
       PrimaryAsset {
