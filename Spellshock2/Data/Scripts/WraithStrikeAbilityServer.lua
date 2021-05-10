@@ -9,6 +9,8 @@ function COMBAT()
 end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+
 
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
@@ -45,6 +47,7 @@ local CancelBindings = {
 	ability_secondary = true,
 	ability_extra_12 = true
 }
+
 
 local function SetNetworkProperty(bool)
 	Equipment:SetNetworkedCustomProperty("T_isPreviewing", bool)
@@ -110,7 +113,7 @@ end
 function OnSpecialAbilityCast(thisAbility)
 	if goingIntoShortCooldown then return end
 	if isPreviewing == false or isExecuting then
-		--print("INTERRUPTING")
+		print("INTERRUPTING")
 		SpecialAbility:Interrupt()
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
@@ -290,7 +293,7 @@ function DisableFlying()
 end
 
 function GoOnShortCooldown()
-	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
+	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) or ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then return end
 	goingIntoShortCooldown = true
 	while Object.IsValid(SpecialAbility) and SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
