@@ -10,7 +10,7 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local isShooting = false
 local EventListeners = {}
 
-local CancelBindings = {
+--[[local CancelBindings = {
 	ability_extra_20 = true,
 	ability_extra_22 = true,
 	ability_extra_23 = true,
@@ -30,7 +30,7 @@ function OnBindingReleased(player, bind)
     if bind == "ability_primary" then
         isShooting = false
     end
-end
+end]]
 
 function OnShootCooldown(thisAbility)
     local Cooldown = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[Class], META_AP().LMB, "mod6", 0.8, ShootAbility.name .. ": Cooldown")
@@ -41,21 +41,21 @@ function OnShootCooldown(thisAbility)
 	end, Cooldown)
 end
 
-function OnShootReady(thisAbility)
+--[[function OnShootReady(thisAbility)
     Task.Wait()
     if isShooting and ShootAbility.isEnabled and thisAbility:GetCurrentPhase() == AbilityPhase.READY then
         ShootAbility:Activate()
     end
-end
+end]]
 
 function OnEquip(thisEquipment, player)
     if player ~= LOCAL_PLAYER then
         script:Destroy()
         return
     end
-    table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+    --[[table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
     table.insert(EventListeners, player.bindingReleasedEvent:Connect(OnBindingReleased))
-    table.insert(EventListeners, ShootAbility.readyEvent:Connect(OnShootReady))
+    table.insert(EventListeners, ShootAbility.readyEvent:Connect(OnShootReady))]]
     table.insert(EventListeners, ShootAbility.cooldownEvent:Connect(OnShootCooldown))
 end
 

@@ -262,11 +262,13 @@ function API.OnPlayerRestored(victoryScreen, player, data)
 	local respawnOnDeactivate = victoryScreen:GetCustomProperty("RespawnOnDeactivate")
 	Winners = {}
 	_G["MovementCanControl"] = true
+
+	if not Object.IsValid(player) then return end
+
 	if(_G["DefaultPlayerSetting"] ) then
 		_G["DefaultPlayerSetting"]:ApplyToPlayer(player)
 
 	end
-
 	player.movementControlMode = MovementControlMode.LOOK_RELATIVE
 	player.lookControlMode = LookControlMode.RELATIVE
 	player.canMount = true
@@ -279,6 +281,7 @@ function API.OnPlayerRestored(victoryScreen, player, data)
 		tasks[player] = nil
 	end
 	Task.Wait()
+	if not Object.IsValid(player) then return end
 	player.lookControlMode = LookControlMode.RELATIVE
 end
 

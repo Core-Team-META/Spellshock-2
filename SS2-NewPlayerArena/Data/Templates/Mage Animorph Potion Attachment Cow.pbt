@@ -587,6 +587,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -655,6 +656,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -725,6 +727,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -795,6 +798,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -872,6 +876,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -949,6 +954,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1028,6 +1034,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1107,6 +1114,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1184,6 +1192,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1263,6 +1272,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1342,6 +1352,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1421,6 +1432,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1500,6 +1512,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1737,6 +1750,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1816,6 +1830,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1887,6 +1902,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1959,6 +1975,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2164,6 +2181,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2243,6 +2261,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2314,6 +2333,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2386,6 +2406,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2625,6 +2646,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2704,6 +2726,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2774,6 +2797,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2846,6 +2870,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3052,6 +3077,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3131,6 +3157,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3201,6 +3228,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3273,6 +3301,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3350,6 +3379,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3427,6 +3457,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3514,9 +3545,9 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 5.4420867
-            Y: 30.7671604
-            Z: 3.66455197
+            X: 5.765625
+            Y: 31.9375
+            Z: 6.51953125
           }
           Rotation {
             Pitch: 7.06669092
@@ -3524,9 +3555,9 @@ Assets {
             Roll: 40.5923958
           }
           Scale {
-            X: 0.459210813
-            Y: 0.459181517
-            Z: 0.521937132
+            X: 0.459213227
+            Y: 0.459185898
+            Z: -0.349711031
           }
         }
         ParentId: 13479032108907632501
@@ -3576,7 +3607,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -3585,6 +3616,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3593,19 +3625,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 3.22552347
-            Y: 30.149622
-            Z: 15.1414862
+            X: 6.36177778
+            Y: 32.6413422
+            Z: 11.5854187
           }
           Rotation {
-            Pitch: 29.4300613
-            Yaw: -52.3826599
-            Roll: -37.3566284
+            Pitch: 2.52829
+            Yaw: -53.322052
+            Roll: -41.5623169
           }
           Scale {
-            X: 0.505902886
-            Y: 0.505928755
-            Z: 0.688633263
+            X: 0.505878925
+            Y: 0.505929947
+            Z: 0.540338933
           }
         }
         ParentId: 13479032108907632501
@@ -3655,7 +3687,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -3664,6 +3696,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3672,19 +3705,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 3.22552347
-            Y: -30.149622
-            Z: 15.1414862
+            X: 3.85053253
+            Y: -34.9252548
+            Z: 13.9510069
           }
           Rotation {
-            Pitch: 29.4299583
-            Yaw: 52.3831902
-            Roll: 37.3570862
+            Pitch: 3.35693526
+            Yaw: 50.0946579
+            Roll: 33.5345535
           }
           Scale {
-            X: 0.505902886
-            Y: 0.505928755
-            Z: 0.688633263
+            X: 0.505878925
+            Y: 0.505929947
+            Z: 0.540338933
           }
         }
         ParentId: 13479032108907632501
@@ -3734,7 +3767,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -3743,6 +3776,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3751,9 +3785,9 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 5.4420867
-            Y: -30.7671604
-            Z: 3.66455197
+            X: 7.1953125
+            Y: -33.125
+            Z: 8.43359375
           }
           Rotation {
             Pitch: 7.06668425
@@ -3761,9 +3795,9 @@ Assets {
             Roll: -40.5920105
           }
           Scale {
-            X: 0.459210783
-            Y: 0.459181517
-            Z: 0.521937132
+            X: 0.459213197
+            Y: 0.459185898
+            Z: -0.349711031
           }
         }
         ParentId: 13479032108907632501
@@ -3813,7 +3847,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 5646704112327633341
           }
           Teams {
           }
@@ -3822,6 +3856,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3849,7 +3884,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3863,19 +3898,19 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            X: -15.800766
-            Y: 16.8104038
-            Z: 20.7774277
+            X: -4.94905615
+            Y: 5.0316925
+            Z: -4.97659969
           }
           Rotation {
-            Pitch: 9.54340649
-            Yaw: 21.7232876
-            Roll: 105.441025
+            Pitch: 5.48025
+            Yaw: -0.283508301
+            Roll: 57.3801
           }
           Scale {
-            X: 0.101969309
-            Y: 0.148212388
-            Z: 0.101989642
+            X: 0.10196583
+            Y: 0.104930364
+            Z: 0.0747595
           }
         }
         ParentId: 3508944364677825269
@@ -3899,7 +3934,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.309999943
+              R: 0.015625
+              G: 0.015625
+              B: 0.015625
               A: 1
             }
           }
@@ -3928,6 +3965,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3936,19 +3974,19 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            X: -15.800766
-            Y: -16.8104038
-            Z: 20.7774277
+            X: -3.88395309
+            Y: -6.95071363
+            Z: -4.45782137
           }
           Rotation {
-            Pitch: 9.54340649
-            Yaw: -21.7229919
-            Roll: -105.44101
+            Pitch: 10.9489155
+            Yaw: 9.57702
+            Roll: -55.8243408
           }
           Scale {
-            X: 0.101969309
-            Y: 0.148212403
-            Z: 0.101989649
+            X: 0.10196583
+            Y: 0.104930378
+            Z: 0.0747595057
           }
         }
         ParentId: 3508944364677825269
@@ -3972,7 +4010,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.309999943
+              R: 0.015625
+              G: 0.015625
+              B: 0.015625
               A: 1
             }
           }
@@ -4001,6 +4041,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4079,6 +4120,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4154,6 +4196,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4231,6 +4274,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4239,7 +4283,7 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 30.7812195
+            X: 30.7784157
             Y: -30.9447193
             Z: 32.4246941
           }
@@ -4249,9 +4293,9 @@ Assets {
             Roll: -135.775162
           }
           Scale {
-            X: 0.393121243
-            Y: 0.393120974
-            Z: 0.811794639
+            X: 0.362251908
+            Y: 0.362251669
+            Z: 0.362140208
           }
         }
         ParentId: 12264827001123851630
@@ -4301,7 +4345,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -4310,6 +4354,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4389,6 +4434,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4397,7 +4443,7 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 30.7812195
+            X: 30.7784157
             Y: 30.9447193
             Z: 32.4246941
           }
@@ -4407,9 +4453,9 @@ Assets {
             Roll: 44.2248459
           }
           Scale {
-            X: 0.393121243
-            Y: 0.393120974
-            Z: 0.811794639
+            X: 0.362251908
+            Y: 0.362251669
+            Z: 0.362140208
           }
         }
         ParentId: 12264827001123851630
@@ -4459,7 +4505,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 3179843506183788979
           }
           Teams {
           }
@@ -4468,6 +4514,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4476,19 +4523,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 43.4657745
-            Y: -35.0004
-            Z: 36.9460449
+            X: 48.2800713
+            Y: -30.1119671
+            Z: 38.1623
           }
           Rotation {
-            Pitch: -50.2741089
-            Yaw: -126.817123
-            Roll: -123.570129
+            Pitch: -36.1904602
+            Yaw: -68.8571777
+            Roll: -113.484772
           }
           Scale {
-            X: 0.128727481
-            Y: 0.128727138
-            Z: 0.285731167
+            X: 0.0853299
+            Y: 0.0853296667
+            Z: 0.085510537
           }
         }
         ParentId: 12264827001123851630
@@ -4535,7 +4582,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -4544,6 +4591,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4623,6 +4671,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4631,19 +4680,19 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: 43.4657745
-            Y: 35.0004
-            Z: 36.9460449
+            X: 47.8433952
+            Y: 29.5538445
+            Z: 38.5213242
           }
           Rotation {
-            Pitch: 50.2740479
-            Yaw: -53.1829834
-            Roll: 56.4299431
+            Pitch: 35.1141205
+            Yaw: -116.188324
+            Roll: 67.3102341
           }
           Scale {
-            X: 0.128727481
-            Y: 0.128727138
-            Z: 0.285731167
+            X: 0.0853299
+            Y: 0.0853296667
+            Z: 0.085510537
           }
         }
         ParentId: 12264827001123851630
@@ -4690,7 +4739,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
@@ -4699,6 +4748,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4777,6 +4827,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4847,6 +4898,7 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4879,12 +4931,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15590791169563939070
-      Name: "Gem - Round Polished"
+      Id: 5646704112327633341
+      Name: "Sphere - Half"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_round_polished_001"
+        AssetId: "sm_hemisphere_001"
       }
     }
     Assets {
@@ -4896,10 +4948,28 @@ Assets {
         AssetId: "sm_urb_sub_craftsman_stairs_001_pillar"
       }
     }
+    Assets {
+      Id: 3179843506183788979
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 4533424030597734882
+      Name: "Lens"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_lense_001"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 81
+  SerializationVersion: 84
 }

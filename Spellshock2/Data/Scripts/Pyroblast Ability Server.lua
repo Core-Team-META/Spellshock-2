@@ -59,9 +59,10 @@ function OnProjectileImpact(projectile, other, hitResult)
 	CoreDebug.DrawSphere(projectile:GetWorldPosition(), DamageRadius, {duration = 5})
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
+		local player = SpecialAbility.owner
 		dmg.amount =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+			player,
 			META_AP().R,
 			"mod1",
 			DEFAULT_DamageAmount,

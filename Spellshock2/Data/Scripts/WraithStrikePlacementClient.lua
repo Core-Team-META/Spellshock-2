@@ -145,9 +145,10 @@ function CalculatePlacement()
 	if AbilityMod == "NONE" then
 		PlacementRange = DEFAULT_Range
 	else
+		local player = SpecialAbility.owner
 		PlacementRange =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+				player,
 			META_AP()[Class],
 			META_AP()[BindingName],
 			AbilityMod,

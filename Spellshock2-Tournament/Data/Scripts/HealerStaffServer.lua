@@ -104,7 +104,7 @@ function HealPlayerFromHealProjectile()
         source = dmg.sourcePlayer,
         position = nil,
         rotation = nil,
-        tags = {id = "Mage_E"}
+        tags = {id = "HealerStaff"}
     }
 
     if dmg.sourcePlayer.hitPoints < dmg.sourcePlayer.maxHitPoints then
@@ -139,7 +139,7 @@ function HealAllPlayersInRadius(healTrigger)
                 source = dmg.sourcePlayer,
                 position = nil,
                 rotation = nil,
-                tags = {id = "Mage_E"}
+                tags = {id = "HealerStaff"}
             }
 
             if dmg.amount < 0 and thisObject.hitPoints < thisObject.maxHitPoints then

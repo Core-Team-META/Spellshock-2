@@ -397,8 +397,8 @@ function Tick(deltaTime)
 					-- Update name and health color based on teams
 					if SHOW_NAMES then
 						local currentClass = player:GetResource("CLASS_MAP")
-						local classLevel = player:GetResource(UTIL.GetClassLevelString(currentClass))
-						nameplate.nameText.text = string.format("[%d] %s", classLevel, player.name)
+						--local classLevel = player:GetResource(UTIL.GetClassLevelString(currentClass))
+						nameplate.nameText.text = player.name--string.format("[%d] %s", classLevel, player.name)
 						nameplate.nameText:SetColor(_G.TeamColors[player.team])
 						nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 					end

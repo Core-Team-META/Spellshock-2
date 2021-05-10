@@ -15,6 +15,7 @@ local ABGS = require(script:GetCustomProperty("ABGS"))
 
 -- Internal custom properties
 local AF_PANEL = script:GetCustomProperty("ActivityFeedPanel"):WaitForObject()
+local AF_Container = script:GetCustomProperty("ActivityFeedContainer"):WaitForObject()
 local AF_LINE_TEMPLATE = script:GetCustomProperty("ActivityFeedLineTemplate")
 local AF_TEXT_TEMPLATE = script:GetCustomProperty("ActivityFeedTextTemplate")
 local AF_IMAGE_TEMPLATE = script:GetCustomProperty("ActivityFeedImageTemplate")
@@ -444,17 +445,17 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
     if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"]) then
-		AF_PANEL.visibility = Visibility.INHERIT
+		AF_Container.visibility = Visibility.INHERIT
 	else -- hide
-		AF_PANEL.visibility = Visibility.FORCE_OFF
+		AF_Container.visibility = Visibility.FORCE_OFF
 	end
 end
 
 function OnGameStateChanged (oldState, newState)
 	if newState == ABGS.GAME_STATE_ROUND then
-        AF_PANEL.visibility = Visibility.INHERIT
+        AF_Container.visibility = Visibility.INHERIT
 	elseif newState == ABGS.GAME_STATE_ROUND_END then -- hide
-		AF_PANEL.visibility = Visibility.FORCE_OFF
+		AF_Container.visibility = Visibility.FORCE_OFF
 	end
 end
 
@@ -810,7 +811,7 @@ end
 Init()
 
 -- Hide panel initially
-AF_PANEL.visibility = Visibility.FORCE_OFF
+AF_Container.visibility = Visibility.FORCE_OFF
 
 Events.Connect("AKI", OnKill)
 Game.roundEndEvent:Connect(ResetFeed)

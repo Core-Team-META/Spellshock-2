@@ -20,7 +20,13 @@ Assets {
         Name: "cs:DebugSameTeam"
         Bool: false
       }
+      Overrides {
+        Name: "cs:CONST"
+        AssetReference {
+          Id: 15718075383189814537
+        }
+      }
     }
   }
-  SerializationVersion: 81
+  SerializationVersion: 84
 }

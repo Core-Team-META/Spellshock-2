@@ -2,45 +2,48 @@ Assets {
   Id: 93978677877269913
   Name: "Custom Amethyst_2"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 1364294402302747595
     ParameterOverrides {
       Overrides {
         Name: "color middle"
         Color {
-          R: 0.142
-          B: 0.00709982403
+          R: 0.140625
+          G: 0.846187353
+          B: 1
           A: 1
         }
       }
       Overrides {
         Name: "color"
         Color {
-          R: 1
-          G: 0.0694443583
-          B: 0.0694443583
+          R: 0.574443758
+          G: 0.847218335
+          B: 1
           A: 0.592
         }
       }
       Overrides {
         Name: "specular"
-        Float: 1
+        Float: 0
       }
       Overrides {
         Name: "roughness"
-        Float: 0
+        Float: 0.0597237386
       }
       Overrides {
         Name: "color bottom"
         Color {
-          R: 0.551
+          R: 0.18420513
+          G: 0.427901745
+          B: 0.551
           A: 0.592
         }
       }
       Overrides {
         Name: "emissive top"
-        Float: 0
+        Float: 5
       }
       Overrides {
         Name: "color offset a"
@@ -56,11 +59,11 @@ Assets {
       }
       Overrides {
         Name: "emissive bottom"
-        Float: 3.04224062
+        Float: 3.61891747
       }
       Overrides {
         Name: "scale"
-        Float: 1.41514635
+        Float: 3.14176536
       }
       Overrides {
         Name: "bubbles brightness"
@@ -68,15 +71,19 @@ Assets {
       }
       Overrides {
         Name: "metallic"
-        Float: 0.533263445
+        Float: 1
       }
       Overrides {
         Name: "internal cracks brightness"
-        Float: 0
+        Float: 6.36897135
       }
       Overrides {
         Name: "normal strength"
         Float: 0.418509
+      }
+      Overrides {
+        Name: "thickness"
+        Float: 1.9316479
       }
     }
     Assets {

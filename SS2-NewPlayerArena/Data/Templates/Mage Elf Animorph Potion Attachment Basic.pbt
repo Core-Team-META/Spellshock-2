@@ -76,12 +76,6 @@ Assets {
               SubObjectId: 8510115313151259704
             }
           }
-          Overrides {
-            Name: "cs:GarbageCollection"
-            ObjectReference {
-              SelfId: 17375365745852366583
-            }
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -477,6 +471,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -538,6 +533,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -601,6 +597,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -664,6 +661,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -727,6 +725,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -790,6 +789,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -928,6 +928,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1039,6 +1040,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1109,6 +1111,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1179,6 +1182,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1249,6 +1253,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1319,6 +1324,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1457,6 +1463,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1565,6 +1572,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1635,6 +1643,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1705,6 +1714,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1775,6 +1785,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1845,6 +1856,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -1951,6 +1963,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2010,6 +2023,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2018,9 +2032,9 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            X: -3.29214931
-            Y: 4.76047325
-            Z: 27.5228844
+            X: -3.65973496
+            Y: 4.76047373
+            Z: 27.3387184
           }
           Rotation {
             Roll: 45
@@ -2028,7 +2042,7 @@ Assets {
           Scale {
             X: 0.102725983
             Y: 0.102733284
-            Z: 0.247737318
+            Z: 0.103
           }
         }
         ParentId: 1729226178086060402
@@ -2064,13 +2078,14 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 3179843506183788979
           }
           Teams {
           }
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2079,9 +2094,9 @@ Assets {
         Name: "eye"
         Transform {
           Location {
-            X: -3.29215717
-            Y: -4.76046133
-            Z: 27.5228863
+            X: -3.65974283
+            Y: -4.76046085
+            Z: 27.3387184
           }
           Rotation {
             Roll: -45
@@ -2089,7 +2104,7 @@ Assets {
           Scale {
             X: 0.102725983
             Y: 0.102733284
-            Z: 0.247737318
+            Z: 0.103
           }
         }
         ParentId: 1729226178086060402
@@ -2125,13 +2140,14 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 3179843506183788979
           }
           Teams {
           }
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2191,6 +2207,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2252,6 +2269,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2355,6 +2373,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2418,6 +2437,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2500,6 +2520,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2562,27 +2583,28 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
       Objects {
         Id: 15713109571048643302
-        Name: "eye"
+        Name: "pupil"
         Transform {
           Location {
-            X: -1.54870355
-            Y: -7.323
-            Z: 29.2659187
+            X: 1.0225302
+            Y: -5.41995955
+            Z: 30.5541553
           }
           Rotation {
-            Pitch: -22.9111023
-            Yaw: -8.98999
-            Roll: -58.803
+            Pitch: -56.6306763
+            Yaw: -8.99081421
+            Roll: 11.2426586
           }
           Scale {
-            X: 0.0453913286
-            Y: 0.0454170741
-            Z: 0.0981288478
+            X: 0.0242659468
+            Y: 0.0242797043
+            Z: 0.0240567345
           }
         }
         ParentId: 1729226178086060402
@@ -2615,34 +2637,35 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
       Objects {
         Id: 11369765809708260758
-        Name: "eye"
+        Name: "pupil"
         Transform {
           Location {
-            X: -1.5486902
-            Y: 7.32331896
-            Z: 29.2659168
+            X: 0.48422429
+            Y: 5.42205238
+            Z: 30.2844467
           }
           Rotation {
-            Pitch: -22.9111023
-            Yaw: 8.98986912
-            Roll: 58.8027954
+            Pitch: -54.7518921
+            Yaw: 9.23112
+            Roll: -179.754593
           }
           Scale {
-            X: 0.0453913286
-            Y: 0.0454170741
-            Z: 0.0981288478
+            X: 0.0254818611
+            Y: 0.0254963115
+            Z: 0.0252621751
           }
         }
         ParentId: 1729226178086060402
@@ -2675,13 +2698,14 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 15590791169563939070
+            Id: 4533424030597734882
           }
           Teams {
           }
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2745,6 +2769,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2808,6 +2833,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2871,6 +2897,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2934,6 +2961,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -2997,6 +3025,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3060,6 +3089,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3123,6 +3153,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3186,6 +3217,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3249,6 +3281,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3312,6 +3345,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3373,6 +3407,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -3434,6 +3469,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -4091,12 +4127,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15590791169563939070
-      Name: "Gem - Round Polished"
+      Id: 3179843506183788979
+      Name: "Sphere"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_round_polished_001"
+        AssetId: "sm_sphere_002"
       }
     }
     Assets {
@@ -4163,6 +4199,15 @@ Assets {
       }
     }
     Assets {
+      Id: 4533424030597734882
+      Name: "Lens"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_lense_001"
+      }
+    }
+    Assets {
       Id: 3438912523759796853
       Name: "Raptor Mob"
       PlatformAssetType: 17
@@ -4194,5 +4239,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 81
+  SerializationVersion: 84
 }

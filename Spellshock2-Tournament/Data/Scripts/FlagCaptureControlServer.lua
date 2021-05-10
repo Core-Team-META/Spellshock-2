@@ -96,7 +96,8 @@ local BINDING_IGNORE = {
     ability_extra_14 = true, -- Left Alt
     ability_extra_27 = true, -- I (class selection)
     ability_extra_37 = true, -- K
-    ability_extra_41 = true -- C (crouch)
+    ability_extra_41 = true, -- C (crouch)
+    ability_extra_33 = true -- F
 }
 
 -- nil Reset()

@@ -182,9 +182,9 @@ function Tick(deltaTime)
             end
             line:GetCustomProperty("KillsText"):WaitForObject().text = tostring(player.kills)
             line:GetCustomProperty("DeathsText"):WaitForObject().text = tostring(player.deaths)
-            line:GetCustomProperty("UltKills"):WaitForObject().text = tostring(player:GetResource(RES.ULTIMATE_KILL))
+            line:GetCustomProperty("UltKills"):WaitForObject().text = tostring(player:GetResource(RES.ASSIST_KILLS))
             line:GetCustomProperty("CapturePoints"):WaitForObject().text =
-                tostring(player:GetResource(RES.TOTAL_CAPTURE_POINTS))
+                tostring(player:GetResource(RES.TOTAL_CAPTURE_POINTS) + player:GetResource(RES.CAPTURE_ASSISTS))
             line:GetCustomProperty("Damage"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_DAMAGE_RES))
             line:GetCustomProperty("Healing"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_HEALING_RES))
             line:GetCustomProperty("Killstreak"):WaitForObject().text =
@@ -218,8 +218,8 @@ headerLine:GetCustomProperty("Level"):WaitForObject().text = "Level"
 headerLine:GetCustomProperty("Name"):WaitForObject().text = "Name"
 headerLine:GetCustomProperty("KillsText"):WaitForObject().text = "Kills"
 headerLine:GetCustomProperty("DeathsText"):WaitForObject().text = "Deaths"
-headerLine:GetCustomProperty("UltKills"):WaitForObject().text = "Ult Kills"
-headerLine:GetCustomProperty("CapturePoints"):WaitForObject().text = "Captures"
+headerLine:GetCustomProperty("UltKills"):WaitForObject().text = "Kill Assists"
+headerLine:GetCustomProperty("CapturePoints"):WaitForObject().text = "Caps/Assists"
 headerLine:GetCustomProperty("Damage"):WaitForObject().text = "Damage"
 headerLine:GetCustomProperty("Healing"):WaitForObject().text = "Healing"
 headerLine:GetCustomProperty("Killstreak"):WaitForObject().text = "Kill Streak"

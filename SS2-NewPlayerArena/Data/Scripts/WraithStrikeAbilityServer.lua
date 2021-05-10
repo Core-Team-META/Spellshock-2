@@ -223,7 +223,7 @@ function DamageInArea()
 		source = SpecialAbility.owner,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Assassin_Q"}
+		tags = {id = "Assassin_T"}
 	}
 
     -- Get enemies in a sphere
@@ -293,7 +293,7 @@ end
 function GoOnShortCooldown()
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 	goingIntoShortCooldown = true
-	while SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
+	while Object.IsValid(SpecialAbility) and SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 			SpecialAbility:Activate()
 		else

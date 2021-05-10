@@ -94,7 +94,7 @@ function AddImpulseToPlayer(player)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Warrior_E"}
+		tags = {id = "Warrior_R"}
 	}
 	COMBAT().ApplyDamage(attackData)
 end
@@ -143,7 +143,7 @@ function ToggleDash(mode)
 		end
 		
 		if SpecialAbility and Object.IsValid(SpecialAbility) and originalPlayerSettings ~= {} then
-			SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
+			SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking or 1000
 			SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
 			_G["Consumables"].SetMovement(Equipment.owner)
 		end

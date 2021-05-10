@@ -89,19 +89,19 @@ API.CLASS_NAME = {
 }
 
 API.CLASS_HEALTH = {
-    [API.CLASS.WARRIOR] = 400,
-    [API.CLASS.MAGE] = 300,
+    [API.CLASS.WARRIOR] = 430,
+    [API.CLASS.MAGE] = 260,
     [API.CLASS.HUNTER] = 350,
     [API.CLASS.HEALER] = 300,
     [API.CLASS.ASSASSIN] = 320
 }
 
 API.CLASS_REGEN = {
-    [API.CLASS.WARRIOR] = 16.0,
+    [API.CLASS.WARRIOR] = 18.0,
     [API.CLASS.MAGE] = 4.0,
     [API.CLASS.HUNTER] = 6.0,
     [API.CLASS.HEALER] = 2.0,
-    [API.CLASS.ASSASSIN] = 7.0
+    [API.CLASS.ASSASSIN] = 9.0
 }
 
 API.ReqXp = {
@@ -175,9 +175,9 @@ API.DIMINISHING_RETURNS = {
 --Default XP Values before multipliers
 API.CLASS_XP = { 
     Kills = 300,
-    Captures = 850,
+    Captures = 900,
     CapAssists = 600,
-    Wins = 2000,
+    Wins = 2500,
     Interrupt = 25, -- Interrupt Capture Point Player
     KillOnPoint = 100
 }
@@ -332,7 +332,9 @@ API.COSMETIC_SKIN = {
     PUNK = 7,
     JUSTICE = 8,
     AFTERLIFE = 9,
-    MILITARY = 10
+    MILITARY = 10,
+    FOLIAGE = 11,
+    ALTERNATIVE = 12
 }
 
 -- BINDING KEYS
@@ -362,7 +364,8 @@ API.COMBAT_STATS = {
     LARGEST_KILL_STREAK = "LKSTREAK",
     ULTIMATE_KILL = "ULTKILL",
     TOTAL_CAPTURE_POINTS = "TOTALCAP",
-    CAPTURE_ASSISTS = "CAPASSISTS"
+    CAPTURE_ASSISTS = "CAPASSISTS",
+    ASSIST_KILLS = "ASSISTKILLS"
 }
 
 API.GAME_PLAYER_STATS = {
@@ -436,7 +439,6 @@ API.PERK_TYPES = {
 -- COMBAT TIMERS
 ------------------------------------------------------------------------------------------------------------------------
 API.MOUNT_COOLDOWN_TIME = 4
-
 
 ------------------------------------------------------------------------------------------------------------------------
 -- TOURNAMENT

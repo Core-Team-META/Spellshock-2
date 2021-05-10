@@ -25,7 +25,8 @@ _G.MENU_TABLE = {
 	Leaderboards = 7,
 	PerkShop = 8,
 	DailyShop = 9,
-	Tutorial_Slides = 10
+	Tutorial_Slides = 10,
+	TourneyPopup = 11
 }
 
 function SpamPrevent()
@@ -127,7 +128,14 @@ function OnBindingPressed(whichPlayer, binding)
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
 		end
---[[	elseif (binding == "ability_extra_51" and SpamPrevent()) then -- F2 and CurrentGameState == ABGS.GAME_STATE_LOBBY
+	elseif binding == "ability_extra_36" and SpamPrevent() then -- J
+		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["TourneyPopup"]) -- Show
+		elseif _G.CurrentMenu == _G.MENU_TABLE["TourneyPopup"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+		end
+
+--[[elseif (binding == "ability_extra_51" and SpamPrevent()) then -- F2 and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		if LOCAL_PLAYER.clientUserData.hasSkippedReward or ((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) 
 		and not LOCAL_PLAYER.isDead then
 			--print(">> COSMETIC SHOP")

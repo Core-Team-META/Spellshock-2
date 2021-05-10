@@ -320,7 +320,7 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
             local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class, true)
             currentAmmount = META_CP().GetClassXp(LOCAL_PLAYER, class)
-            reqXp = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
+            reqXp = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 50)]
 
             CardTitle.text = infoTable.ClassName .. " XP"
             ClassPanel:Destroy()

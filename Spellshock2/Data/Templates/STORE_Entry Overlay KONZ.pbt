@@ -2056,6 +2056,12 @@ Assets {
             IsButtonEnabled: true
             Font {
             }
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -2205,7 +2211,6 @@ Assets {
           }
         }
         ParentId: 5656437231004079263
-        ChildIds: 18361772718121540471
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2229,71 +2234,6 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 18361772718121540471
-        Name: "BG_TEXTURE"
-        Transform {
-          Location {
-            X: 18290.002
-            Y: 20960.0039
-            Z: 8130
-          }
-          Rotation {
-            Yaw: 135
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15819887109873040302
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 409
-          Height: 47
-          UIY: 35.4633484
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 8500926758797605639
-            }
-            Color {
-              G: 0.121042758
-              B: 0.806952477
-              A: 0.232000008
-            }
-            TeamSettings {
-            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -2334,9 +2274,9 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 170
-          Height: 105
-          UIY: 76.0476456
+          Width: 220
+          Height: 60
+          UIY: 149.600647
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2350,7 +2290,7 @@ Assets {
               B: 1
               A: 1
             }
-            Size: 20
+            Size: 15
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -2977,7 +2917,6 @@ Assets {
           }
         }
         ParentId: 4952959141040710486
-        ChildIds: 4737879276895020331
         ChildIds: 8542996243289247517
         ChildIds: 13213838486122375306
         Collidable_v2 {
@@ -2990,9 +2929,10 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 120
-          Height: 120
-          UIY: 77.7028
+          Width: 70
+          Height: 70
+          UIX: -15
+          UIY: 37.4062042
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -3003,69 +2943,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middleright"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4737879276895020331
-        Name: "ICON"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8562357717940045261
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 230
-          Height: 230
-          UIY: 13.9780626
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 8578995028087510781
-            }
-            Color {
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
+                Value: "mc:euianchor:middleright"
               }
             }
           }
@@ -3113,7 +2996,7 @@ Assets {
               R: 1
               G: 1
               B: 1
-              A: 0.765000045
+              A: 0.614
             }
             TeamSettings {
             }
@@ -3157,8 +3040,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: -3
-          Height: -3
+          Width: -5
+          Height: -5
           UIY: 1
           RenderTransformPivot {
             Anchor {
@@ -3401,24 +3284,6 @@ Assets {
       }
     }
     Assets {
-      Id: 8500926758797605639
-      Name: "Fantasy Ability Red 003"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_003"
-      }
-    }
-    Assets {
-      Id: 8578995028087510781
-      Name: "UI Gradient Circular 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Basic_Shape_001"
-      }
-    }
-    Assets {
       Id: 10764905697215343362
       Name: "Icon Lock"
       PlatformAssetType: 9
@@ -3432,5 +3297,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 81
+  SerializationVersion: 84
 }

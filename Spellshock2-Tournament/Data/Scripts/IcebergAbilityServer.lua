@@ -210,7 +210,7 @@ function Tick(deltaTime)
 					source = dmg.sourcePlayer,
 					position = nil,
 					rotation = nil,
-					tags = {id = "Mage_R"}
+					tags = {id = "Mage_T"}
 				}
 				COMBAT().ApplyDamage(attackData)
 	
@@ -232,7 +232,7 @@ function Tick(deltaTime)
 				source = dmg.sourcePlayer,
 				position = nil,
 				rotation = nil,
-				tags = {id = "Mage_R"}
+				tags = {id = "Mage_T"}
 			}
 			COMBAT().ApplyDamage(attackData)
 		end

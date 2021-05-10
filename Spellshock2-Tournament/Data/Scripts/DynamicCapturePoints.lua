@@ -15,6 +15,7 @@ local A_Bases = {1, 5} -- first index is Orc, second is Elf
 local B_Bases = {4, 2}
 local configTable = {Configuration_A, Configuration_B}
 local basesTable = {A_Bases, B_Bases}
+_G.MAP_MODE = 1
 
 function OnRoundStart()
     local AllPlayers = Game.GetPlayers()
@@ -26,9 +27,11 @@ function OnRoundStart()
         NewBases = basesTable[randIndex]
         script:SetNetworkedCustomProperty("ScoreLimit", SmallMapScore)
         script:SetNetworkedCustomProperty("GameType", 1)
+        _G.MAP_MODE = 1
     else
         script:SetNetworkedCustomProperty("ScoreLimit", BigMapScore)
         script:SetNetworkedCustomProperty("GameType", 2)
+        _G.MAP_MODE = 2
     end
 
     for _, id in ipairs(ABCP.GetCapturePoints()) do
@@ -59,6 +62,7 @@ function OnRoundStart()
 
         Events.Broadcast("ToggleLoadScreen", false)
     else
+        Task.Wait(1)
         for _, player in ipairs(AllPlayers) do
             if Object.IsValid(player) then
                 player:Respawn()

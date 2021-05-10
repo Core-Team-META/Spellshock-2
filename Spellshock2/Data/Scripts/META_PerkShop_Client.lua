@@ -127,7 +127,7 @@ function Int()
     end
 end
 
-function OnDailyShopOpen(player, keybind)
+function OnPerkShopOpen(player, keybind)
     if keybind == "ability_extra_33" and PARENT_UI:IsVisibleInHierarchy() and isAllowed(0.5) then
         ToggleShop(false)
     end
@@ -164,7 +164,7 @@ ConnectNpcListener()
 CLOSE_BUTTON.clickedEvent:Connect(OnButtonPressed)
 ORC_PERK_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 ELF_PERK_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
-LOCAL_PLAYER.bindingReleasedEvent:Connect(OnDailyShopOpen)
+LOCAL_PLAYER.bindingReleasedEvent:Connect(OnPerkShopOpen)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnButtonInteracted)
 Events.Connect("Menu Changed", OnMenuChanged)
 Int()

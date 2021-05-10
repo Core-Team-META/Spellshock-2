@@ -155,9 +155,10 @@ function OnSpecialAbilityExecute(thisAbility)
 
 	-- Activate duration bar UI if DurationMod was set
 	if DurationMod then
+		local player = SpecialAbility.owner
 		totalDuration =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+				player,
 			META_AP()[Class],
 			META_AP()[BindingName],
 			DurationMod,
@@ -222,9 +223,10 @@ function CalculatePlacement()
 	if AbilityMod == "NONE" then
 		PlacementRange = DEFAULT_Range
 	else
+		local player = SpecialAbility.owner
 		PlacementRange =
 			META_AP().GetAbilityMod(
-			SpecialAbility.owner,
+				player,
 			META_AP()[Class],
 			META_AP()[BindingName],
 			AbilityMod,

@@ -3,6 +3,8 @@ local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
 local ENABLED = SERVER_SCRIPT:GetCustomProperty("Enabled")
 
 local LEADERBOARD_REF = SERVER_SCRIPT:GetCustomProperty("LeaderboardReference")
+--local LEADERBOARD_REF = script:GetCustomProperty("Leaderboard")
+
 local EVENT_ID = SERVER_SCRIPT:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require( SERVER_SCRIPT:GetCustomProperty("AdditionalData") )
@@ -31,9 +33,9 @@ end
 
 local POPUP_ROOT = script:GetCustomProperty("PopupRoot"):WaitForObject()
 local NEW_1 = script:GetCustomProperty("NewScore1"):WaitForObject()
-local NEW_2 = script:GetCustomProperty("NewScore2"):WaitForObject()
+--local NEW_2 = script:GetCustomProperty("NewScore2"):WaitForObject()
 local BEST_1 = script:GetCustomProperty("BestScore1"):WaitForObject()
-local BEST_2 = script:GetCustomProperty("BestScore2"):WaitForObject()
+--local BEST_2 = script:GetCustomProperty("BestScore2"):WaitForObject()
 
 local EaseUI = require(script:GetCustomProperty("EaseUI"))
 
@@ -41,7 +43,7 @@ local HIDDEN_X = 400
 local IN_DELAY = 3
 local IN_DURATION = 0.7
 local OUT_DURATION = 0.9
-local WAITING_MAX_DURATION = 40
+local WAITING_MAX_DURATION = 70
 
 local STATE_HIDDEN = 0
 local STATE_IN_DELAY = 1
@@ -106,9 +108,9 @@ end
 
 function OnScore(newScore, bestScore)
 	NEW_1.text = tostring(newScore)
-	NEW_2.text = tostring(newScore)
+	--NEW_2.text = tostring(newScore)
 	BEST_1.text = tostring(bestScore)
-	BEST_2.text = tostring(bestScore)
+	--BEST_2.text = tostring(bestScore)
 	
 	Show()
 end
@@ -139,6 +141,7 @@ admins["Melamoryxq"] = true
 admins["Mucusinator"] = true
 admins["WitcherSilver"] = true
 admins["AJ"] = true
+admins["Bot1"] = true
 
 function OnBindingPressed(player, action)
 	if currentState == STATE_WAITING and action == "ability_extra_37" then -- K
@@ -167,12 +170,12 @@ function OnBindingPressed(player, action)
 			local name = entry.name
 			local score = entry.score
 			local additionalData = entry.additionalData
-			local totalKills, headshots, uniquePlayersKilled = ADDITIONAL_DATA.Parse(additionalData)
+			local totalKills, teamScore, uniquePlayersKilled = ADDITIONAL_DATA.Parse(additionalData)
 			print(tostring(i) .. ") " .. name .. 
 				", score = " .. score ..
 				", +data = " .. additionalData ..
 				", totalKills = " .. totalKills ..
-				", headshots = " .. headshots ..
+				", teamScore = " .. teamScore ..
 				", uniqueKills = " .. uniquePlayersKilled)
 		end
 	end
