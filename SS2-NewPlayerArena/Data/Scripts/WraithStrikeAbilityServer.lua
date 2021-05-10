@@ -42,7 +42,6 @@ local CancelBindings = {
 	ability_extra_20 = true,
 	ability_extra_22 = true,
 	ability_extra_23 = true,
-	ability_extra_4 = true,
 	ability_secondary = true,
 	ability_extra_12 = true
 }
