@@ -120,6 +120,7 @@ Objects {
   ParentId: 15242701704453393815
   ChildIds: 179159324718384714
   ChildIds: 17948786855663811410
+  ChildIds: 7418355071380189161
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -130,6 +131,53 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 7418355071380189161
+  Name: "META_VIP_Member_Chat"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1450419042999387635
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:PerksData"
+      ObjectReference {
+        SelfId: 3306084329147392987
+      }
+    }
+    Overrides {
+      Name: "cs:MetaAbilityProgressionConstants_API"
+      AssetReference {
+        Id: 15718075383189814537
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13819923668383053442
+    }
   }
 }
 Objects {
