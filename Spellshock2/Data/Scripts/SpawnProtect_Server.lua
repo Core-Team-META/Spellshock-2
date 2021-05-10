@@ -45,11 +45,18 @@ local function ClearListeners()
     listeners = {}
 end
 
+local function ClearPlayerFlags()
+    for _, player in ipairs(Game.GetPlayers()) do
+        player.serverUserData.SpawnProtect = nil
+    end
+end
+
 local function EnableSmallSpawnProtect()
-    listeners[#listeners + 1] = SmallOrc.beginOverlapEvent:Connect(OnBeginOverLap)
-    listeners[#listeners + 1] = SmallElf.beginOverlapEvent:Connect(OnBeginOverLap)
     listeners[#listeners + 1] = SmallElf.endOverlapEvent:Connect(OnEndOverlap)
     listeners[#listeners + 1] = SmallOrc.endOverlapEvent:Connect(OnEndOverlap)
+    listeners[#listeners + 1] = SmallOrc.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = SmallElf.beginOverlapEvent:Connect(OnBeginOverLap)
+    --[[Task.Wait()
     for _, object in ipairs(SmallOrc:GetOverlappingObjects()) do
         if IsAValidPlayer(object) then
             OnBeginOverLap(SmallOrc, object)
@@ -59,14 +66,15 @@ local function EnableSmallSpawnProtect()
         if IsAValidPlayer(object) then
             OnBeginOverLap(SmallElf, object)
         end
-    end
+    end]]--
 end
 
 local function EnableLargeSpawnProtect()
-    listeners[#listeners + 1] = LargeOrcBase.beginOverlapEvent:Connect(OnBeginOverLap)
-    listeners[#listeners + 1] = LargeElfBase.beginOverlapEvent:Connect(OnBeginOverLap)
     listeners[#listeners + 1] = LargeElfBase.endOverlapEvent:Connect(OnEndOverlap)
     listeners[#listeners + 1] = LargeOrcBase.endOverlapEvent:Connect(OnEndOverlap)
+    listeners[#listeners + 1] = LargeOrcBase.beginOverlapEvent:Connect(OnBeginOverLap)
+    listeners[#listeners + 1] = LargeElfBase.beginOverlapEvent:Connect(OnBeginOverLap)
+   --[[ Task.Wait()
     for _, object in ipairs(LargeOrcBase:GetOverlappingObjects()) do
         if IsAValidPlayer(object) then
             OnBeginOverLap(LargeOrcBase, object)
@@ -76,7 +84,7 @@ local function EnableLargeSpawnProtect()
         if IsAValidPlayer(object) then
             OnBeginOverLap(LargeElfBase, object)
         end
-    end
+    end]]--
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -101,6 +109,7 @@ function OnNetworkChanged(object, string)
     if object == DynamicCapturePoints and string == "GameType" then
         local gameType = object:GetCustomProperty(string)
         ClearListeners()
+        ClearPlayerFlags()
         if gameType == 1 then
             EnableSmallSpawnProtect()
         elseif gameType == 2 then
@@ -112,5 +121,4 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-
 DynamicCapturePoints.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
