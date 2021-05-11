@@ -87,17 +87,18 @@ Assets {
       Overrides {
         Name: "deep color"
         Color {
-          R: 0.0210781284
-          G: 0.0569999851
-          B: 0.0570000038
+          R: 0.0170819983
+          G: 0.0922841728
+          B: 0.146000013
           A: 1
         }
       }
       Overrides {
         Name: "shallow color"
         Color {
-          G: 0.0788333192
-          B: 0.086
+          R: 0.164930657
+          G: 0.329861313
+          B: 0.269386768
           A: 1
         }
       }
@@ -108,9 +109,9 @@ Assets {
       Overrides {
         Name: "foam color"
         Color {
-          R: 0.843403161
+          R: 0.72
           G: 1
-          B: 0.990045488
+          B: 0.986
           A: 1
         }
       }

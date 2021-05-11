@@ -30,7 +30,7 @@ Assets {
       }
       Overrides {
         Name: "opacity"
-        Float: 1
+        Float: 0.9
       }
       Overrides {
         Name: "u_tiles"
@@ -89,6 +89,10 @@ Assets {
       }
       Overrides {
         Name: "foam shift"
+        Float: 1
+      }
+      Overrides {
+        Name: "normal amount"
         Float: 1
       }
     }

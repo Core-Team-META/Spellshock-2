@@ -215,12 +215,30 @@ Assets {
   }
 }
 Assets {
+  Id: 16845241941935487831
+  Name: "Glass 01 (no distortion)"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_glass_001"
+  }
+}
+Assets {
   Id: 16825643228001246048
   Name: "Gem - Pear Polished"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gem_pear_polished_001"
+  }
+}
+Assets {
+  Id: 16792581383048137430
+  Name: "Waterfall Base Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_waterfall_base_volume"
   }
 }
 Assets {
@@ -455,6 +473,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pyramid_eighsided_truncated_hq_001"
+  }
+}
+Assets {
+  Id: 15097437220915579712
+  Name: "Trim - Curve 45\302\260 - 16m Radius"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_trimitives_001_curve45_16m_ref"
   }
 }
 Assets {
@@ -923,6 +950,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_stain_round_001"
+  }
+}
+Assets {
+  Id: 12377676071953128633
+  Name: "Pipe - Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_004"
   }
 }
 Assets {
