@@ -176,7 +176,7 @@ function OnEquipped(equipment, player)
 end
 
 function OnBindingReleased(player, bind)
-	if ABILITY:GetCurrentPhase() == AbilityPhase.CAST and bind == "ability_primary" then
+	if Object.IsValid(ABILITY) and ABILITY:GetCurrentPhase() == AbilityPhase.CAST and bind == "ability_primary" then
 		isCharging = 0
 		ABILITY:AdvancePhase()
 	end
