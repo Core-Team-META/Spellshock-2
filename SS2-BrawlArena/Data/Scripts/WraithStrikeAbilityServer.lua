@@ -292,7 +292,7 @@ end
 function GoOnShortCooldown()
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 	goingIntoShortCooldown = true
-	while Object.IsValid(SpecialAbility) and SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
+	while Object.IsValid(SpecialAbility) and SpecialAbility.owner and SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 			SpecialAbility:Activate()
 		else
