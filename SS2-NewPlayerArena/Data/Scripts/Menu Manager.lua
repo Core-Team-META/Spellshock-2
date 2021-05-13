@@ -96,15 +96,11 @@ function OnBindingPressed(whichPlayer, binding)
 			end
 		end
 	elseif binding == "ability_extra_27" and SpamPrevent() then -- i
-		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and (CurrentGameState == ABGS.GAME_STATE_ROUND) then
+		--[[if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and (CurrentGameState == ABGS.GAME_STATE_ROUND) then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassAbilities"])
-		elseif
-			(_G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == "ShowIcons") and
-				(CurrentGameState == ABGS.GAME_STATE_LOBBY or LOCAL_PLAYER.clientUserData.hasSkippedReward)
-		 then
-			if
-				CurrentGameState == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2
-			 then
+		else]]
+		if (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == "ShowIcons") then
+			if CurrentGameState == ABGS.GAME_STATE_LOBBY and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
 				return
 			end
 
