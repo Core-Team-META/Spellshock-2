@@ -1,38 +1,6 @@
 Name: "Front UI"
 RootId: 18439257393742900714
 Objects {
-  Id: 5309308354018706378
-  Name: "Tourney Popup"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18439257393742900714
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Tourney Popup"
-  }
-}
-Objects {
   Id: 4351061755930196403
   Name: "Loading Screen"
   Transform {
