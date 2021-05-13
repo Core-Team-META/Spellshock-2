@@ -350,6 +350,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15841568496325179700
+  Name: "Bricks Concrete Cinder Block 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_concrete_001"
+  }
+}
+Assets {
   Id: 15790099952196539896
   Name: "Sci-fi Chest Epic Lid 01"
   PlatformAssetType: 1
@@ -1634,6 +1643,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_corelogo_shape_001"
+  }
+}
+Assets {
+  Id: 8727996348861654071
+  Name: "Pyramid - 4-Sided Truncated Hollow Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_4_sided_truncated_thick_001"
   }
 }
 Assets {
