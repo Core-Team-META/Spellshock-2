@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10258515349694145501
+  Name: "BG Flat 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_019"
+  }
+}
+Assets {
   Id: 9700420677989277499
   Name: "Brass Hit Low Music Stinger 01"
   PlatformAssetType: 10
