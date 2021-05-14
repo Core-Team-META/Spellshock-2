@@ -50,12 +50,19 @@ function OnProjectileImpact(projectile, other, hitResult)
 		DEFAULT_DamageRadius,
 		SpecialAbility.name .. ": Radius"
 	)
-	local nearbyEnemies =
+	--[[local nearbyEnemies =
 		Game.FindPlayersInSphere(
 		projectile:GetWorldPosition(),
 		DamageRadius,
 		{ignoreTeams = SpecialAbility.owner.team, ignoreDead = true}
-	)
+	)]]--
+
+	local nearbyEnemies =
+	COMBAT().FindInSphere(
+	projectile:GetWorldPosition(),
+	DamageRadius,
+	{ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
+
 	CoreDebug.DrawSphere(projectile:GetWorldPosition(), DamageRadius, {duration = 5})
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
@@ -72,6 +79,11 @@ function OnProjectileImpact(projectile, other, hitResult)
 		dmg.sourcePlayer = SpecialAbility.owner
 		dmg.sourceAbility = SpecialAbility
 
+		local enemy = enemy
+		if not enemy:IsA("Player") then
+			enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
+		end
+
 		local directionVector = enemy:GetWorldPosition() - SpecialAbility.owner:GetWorldPosition()
 		directionVector = directionVector / directionVector.size
 		directionVector.z = 0.7
@@ -87,8 +99,10 @@ function OnProjectileImpact(projectile, other, hitResult)
 			tags = {id = "Mage_R"}
 		}
 		COMBAT().ApplyDamage(attackData)
+		if enemy:IsA("Player") then
 		enemy:ResetVelocity()
 		enemy:AddImpulse(impulseVector)
+		end
 	end
 end
 
