@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17951992793618514894
+  Name: "Cone - Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_truncated_001"
+  }
+}
+Assets {
   Id: 17925863108097959649
   Name: "Text 03: I"
   PlatformAssetType: 1
@@ -125,6 +134,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17615065733973239937
+  Name: "Ring - Beveled"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ring_faceted_001"
+  }
+}
+Assets {
   Id: 17587880652047825598
   Name: "Cylinder - Bottom-Aligned"
   PlatformAssetType: 1
@@ -158,6 +176,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F5_Text_015"
+  }
+}
+Assets {
+  Id: 17160283160308691459
+  Name: "Text 05: ~"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F6_Text_036"
   }
 }
 Assets {
@@ -557,6 +584,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14787632982408056212
+  Name: "Humanoid 1 Tennis Top"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_upper_sport_002_ref"
+  }
+}
+Assets {
   Id: 14764814241270937025
   Name: "Wicker Basket 01"
   PlatformAssetType: 2
@@ -734,15 +770,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "plastic_matte_001"
-  }
-}
-Assets {
-  Id: 13800436588944964225
-  Name: "Bush 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_002"
   }
 }
 Assets {
@@ -1439,6 +1466,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9588236609717213000
+  Name: "Shield 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_shield_001"
+  }
+}
+Assets {
   Id: 9564538927409393589
   Name: "Stone Basic"
   PlatformAssetType: 2
@@ -1898,6 +1934,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7438354935394146601
+  Name: "Text 01: C"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_002"
+  }
+}
+Assets {
   Id: 7362232965091765999
   Name: "Bricks Mortar Thick 01"
   PlatformAssetType: 2
@@ -2183,6 +2228,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_modern_sight_forw_002"
+  }
+}
+Assets {
+  Id: 5949268049384519735
+  Name: "Pipe - Quarter Wedge Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter_pipe_wedge_002"
   }
 }
 Assets {
@@ -2546,12 +2600,30 @@ Assets {
   }
 }
 Assets {
+  Id: 4322675021483384603
+  Name: "Fantasy Shield 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_002"
+  }
+}
+Assets {
   Id: 4320885659990681021
   Name: "Wedge - Concave"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_wedge_curved_concave_001"
+  }
+}
+Assets {
+  Id: 4287721634146140667
+  Name: "Pipe - 45-Degree Short Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_curve45_002"
   }
 }
 Assets {
@@ -2924,15 +2996,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2148407408977013770
-  Name: "Grass Clumps"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_grass_002_uv"
-  }
-}
-Assets {
   Id: 2140913818093261140
   Name: "Sci-fi Trim 01 bend 90"
   PlatformAssetType: 1
@@ -3140,15 +3203,6 @@ Assets {
   }
 }
 Assets {
-  Id: 901541979513849367
-  Name: "Bush 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_001"
-  }
-}
-Assets {
   Id: 889917629752285723
   Name: "Bark Redwood 01"
   PlatformAssetType: 2
@@ -3182,6 +3236,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_006"
+  }
+}
+Assets {
+  Id: 675563715440209277
+  Name: "Emissive Glow Transparent"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_emissive_001"
   }
 }
 Assets {
