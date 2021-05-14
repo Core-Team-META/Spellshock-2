@@ -10,13 +10,14 @@ Assets {
         Name: "NPCHealthBar"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 4781671109827199097
         ChildIds: 15617251036984758824
+        ChildIds: 9685409460266157624
         ChildIds: 5777712033558582302
         ChildIds: 11664256979501536535
         WantsNetworking: true
@@ -74,6 +75,54 @@ Assets {
         Script {
           ScriptAsset {
             Id: 9422585818978022287
+          }
+        }
+      }
+      Objects {
+        Id: 9685409460266157624
+        Name: "Name"
+        Transform {
+          Location {
+            X: 1.07519531
+            Z: 22.1367188
+          }
+          Rotation {
+            Roll: -3.05175781e-05
+          }
+          Scale {
+            X: 0.75
+            Y: 0.75
+            Z: 0.75
+          }
+        }
+        ParentId: 14705474953321211921
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Text {
+          Text: "Target Dummy"
+          FontAsset {
+            Id: 16670222695632479546
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalSize: 1
+          VerticalSize: 1
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
           }
         }
       }
@@ -229,16 +278,15 @@ Assets {
         Name: "Label"
         Transform {
           Location {
-            X: 1.07507086
-            Z: -0.628738403
+            X: 1.07519531
           }
           Rotation {
             Roll: -3.05175781e-05
           }
           Scale {
-            X: 0.779753268
-            Y: 0.779753268
-            Z: 0.779753268
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 14705474953321211921
@@ -254,6 +302,7 @@ Assets {
         Text {
           Text: "100 / 100"
           FontAsset {
+            Id: 16670222695632479546
           }
           Color {
             R: 1
@@ -270,6 +319,15 @@ Assets {
             Value: "mc:ecoretextverticalalign:center"
           }
         }
+      }
+    }
+    Assets {
+      Id: 16670222695632479546
+      Name: "Play Bold"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "PlayBold_ref"
       }
     }
     Assets {

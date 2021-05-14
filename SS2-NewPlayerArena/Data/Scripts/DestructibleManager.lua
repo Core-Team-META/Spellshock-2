@@ -67,6 +67,7 @@ end
 function API.DamageObject(attackData)
 	--print("DamageObject() object = " .. tostring(object))
 	local object = attackData.object
+	--warn(tostring(attackData.damage.amount))
 	--[[
 	local attackObject = object:GetCustomProperty("AttackComponent"):WaitForObject()
 	if attackObject then

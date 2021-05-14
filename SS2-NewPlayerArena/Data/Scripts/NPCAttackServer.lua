@@ -6,18 +6,27 @@
 	Works in conjunction with NPCAIServer. The separation of the two scripts makes it
 	easier to design diverse kinds of enemies.
 --]]
-
 -- Component dependencies
-local MODULE = require( script:GetCustomProperty("ModuleManager") )
-require( script:GetCustomProperty("DestructibleManager") )
-function DESTRUCTIBLE_MANAGER() return MODULE.Get("standardcombo.NPCKit.DestructibleManager") end
-function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
-function PLAYER_HOMING_TARGETS() return MODULE.Get("standardcombo.Combat.PlayerHomingTargets") end
-function CROSS_CONTEXT_CALLER() return MODULE.Get("standardcombo.Utils.CrossContextCaller") end
-function LOOT_DROP_FACTORY() return MODULE.Get_Optional("standardcombo.NPCKit.LootDropFactory") end
-
+local MODULE = require(script:GetCustomProperty("ModuleManager"))
+require(script:GetCustomProperty("DestructibleManager"))
+function DESTRUCTIBLE_MANAGER()
+	return MODULE.Get("standardcombo.NPCKit.DestructibleManager")
+end
+function COMBAT()
+	return MODULE.Get("standardcombo.Combat.Wrap")
+end
+function PLAYER_HOMING_TARGETS()
+	return MODULE.Get("standardcombo.Combat.PlayerHomingTargets")
+end
+function CROSS_CONTEXT_CALLER()
+	return MODULE.Get("standardcombo.Utils.CrossContextCaller")
+end
+function LOOT_DROP_FACTORY()
+	return MODULE.Get_Optional("standardcombo.NPCKit.LootDropFactory")
+end
 
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
+local Collider = script:GetCustomProperty("Collider"):WaitForObject()
 
 local DAMAGE_TO_PLAYERS = script:GetCustomProperty("DamageToPlayers") or 1
 local DAMAGE_TO_NPCS = script:GetCustomProperty("DamageToNPCs") or 1
@@ -45,6 +54,7 @@ local projectileImpactListener = nil
 
 local tagData = {}
 
+local MAX_HEALTH = ROOT:GetCustomProperty("CurrentHealth")
 
 function GetTeam()
 	if not Object.IsValid(ROOT) then
@@ -64,11 +74,9 @@ function GetObjectTeam(object)
 	return nil
 end
 
-
 function Attack(target)
 	if target:IsA("Player") and PLAYER_HOMING_TARGETS() then
 		target = PLAYER_HOMING_TARGETS().GetTargetForPlayer(target)
-		
 	elseif target.context and target.context.HOMING_TARGET then
 		target = target.context.HOMING_TARGET
 	end
@@ -81,31 +89,34 @@ function Attack(target)
 		direction = v:GetNormalized() + 200 * Vector3.UP * v.size * PROJECTILE_GRAVITY / PROJECTILE_SPEED / PROJECTILE_SPEED
 	end
 
-	CROSS_CONTEXT_CALLER().Call(function()
-		local projectile = Projectile.Spawn(PROJECTILE_BODY, startPos, direction)
-		projectile.lifeSpan = PROJECTILE_LIFESPAN
-		projectile.speed = PROJECTILE_SPEED
-		projectile.gravityScale = PROJECTILE_GRAVITY
+	CROSS_CONTEXT_CALLER().Call(
+		function()
+			local projectile = Projectile.Spawn(PROJECTILE_BODY, startPos, direction)
+			projectile.lifeSpan = PROJECTILE_LIFESPAN
+			projectile.speed = PROJECTILE_SPEED
+			projectile.gravityScale = PROJECTILE_GRAVITY
 
-		if IS_PROJECTILE_HOMING then
-			projectile.homingTarget = target
-			projectile.drag = HOMING_DRAG
-			projectile.homingAcceleration = HOMING_ACCELERATION
+			if IS_PROJECTILE_HOMING then
+				projectile.homingTarget = target
+				projectile.drag = HOMING_DRAG
+				projectile.homingAcceleration = HOMING_ACCELERATION
+			end
+
+			projectile.piercesRemaining = 999
+
+			projectileImpactListener = projectile.impactEvent:Connect(OnProjectileImpact)
 		end
-
-		projectile.piercesRemaining = 999
-
-		projectileImpactListener = projectile.impactEvent:Connect(OnProjectileImpact)
-	end)
+	)
 
 	SpawnAsset(MUZZLE_FLASH_VFX, startPos, rotation)
 end
 
-
 function OnProjectileImpact(projectile, other, hitResult)
 	local myTeam = GetTeam()
 	local impactTeam = GetObjectTeam(other)
-	if (impactTeam ~= 0 and myTeam == impactTeam) then return end
+	if (impactTeam ~= 0 and myTeam == impactTeam) then
+		return
+	end
 
 	CleanupProjectileListener()
 
@@ -137,7 +148,7 @@ function OnProjectileImpact(projectile, other, hitResult)
 		position = pos,
 		rotation = rot,
 		tags = tagData
-		}
+	}
 
 	-- Apply the damage
 	COMBAT().ApplyDamage(attackData)
@@ -146,14 +157,12 @@ function OnProjectileImpact(projectile, other, hitResult)
 	projectile:Destroy()
 end
 
-
 function CleanupProjectileListener()
 	if projectileImpactListener then
 		projectileImpactListener:Disconnect()
 		projectileImpactListener = nil
 	end
 end
-
 
 function SpawnAsset(template, pos, rot)
 	if not template then
@@ -169,7 +178,6 @@ function SpawnAsset(template, pos, rot)
 		end
 	)
 end
-
 
 function OnDestroyed(obj)
 	--print("OnDestroyed()")
@@ -189,9 +197,11 @@ function ApplyDamage(attackData)
 	local rotation = attackData.rotation
 	local source = attackData.source
 
-	if (amount ~= 0) then
+
+
+	if (amount >= 0 and source.team ~= GetTeam()) or (amount < 0 and source.team == GetTeam()) then
 		local prevHealth = GetHealth()
-		local newHealth = prevHealth - amount
+		local newHealth = CoreMath.Clamp(prevHealth - amount, 0, MAX_HEALTH)
 		SetHealth(newHealth)
 
 		local hitResult = dmg:GetHitResult()
@@ -230,10 +240,18 @@ function ApplyDamage(attackData)
 			SpawnAsset(DAMAGE_FX, impactPosition, impactRotation)
 		end
 
-		-- Events
+		local flyPosition = ROOT:GetWorldPosition()
+		flyPosition.z = flyPosition.z + 100
 
-		Events.Broadcast("ObjectDamaged", id, prevHealth, amount, impactPosition, impactRotation, source)
-		Events.BroadcastToAllPlayers("ObjectDamaged", id, prevHealth, amount, impactPosition, impactRotation)
+		if attackData.tags and attackData.tags.id then
+		ROOT:SetNetworkedCustomProperty("AID", attackData.tags.id)
+		end
+		local tempObject = {}
+		tempObject.team = Collider.team
+		-- Events
+		Events.BroadcastToAllPlayers("PlayerDamage", amount, flyPosition, tempObject, source)
+		--Events.Broadcast("ObjectDamaged", id, prevHealth, amount, impactPosition, impactRotation, source)
+		--Events.BroadcastToAllPlayers("ObjectDamaged", id, prevHealth, amount, impactPosition, impactRotation)
 
 		if (newHealth <= 0) then
 			Events.Broadcast("ObjectDestroyed", id)
@@ -253,7 +271,6 @@ end
 function SetHealth(value)
 	ROOT:SetNetworkedCustomProperty("CurrentHealth", value)
 end
-
 
 function DropRewards(killer)
 	-- Give resources

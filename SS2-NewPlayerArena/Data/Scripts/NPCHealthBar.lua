@@ -10,45 +10,51 @@
 		GetMaxHealth()
 		GetTeam()
 --]]
-
 local FILL_BAR = script:GetCustomProperty("Fill"):WaitForObject()
 local LABEL = script:GetCustomProperty("Label"):WaitForObject()
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
+while not script.parent do
+	Task.Wait()
+end
 
 script.parent:LookAtLocalView()
 script.parent.visibility = Visibility.FORCE_OFF
 
 local _data = nil
 
-
 -- Expects a script with specific functions, allowing different scripts to be passed
 function SetDataProvider(data)
 	_data = data
 end
 
-
 function Tick()
-	if not _data then return end
-	
+	if not _data then
+		return
+	end
+
 	local hp = _data:GetHealth()
 	local maxHP = _data:GetMaxHealth()
-	
-	if hp <= 0 or hp >= maxHP then
+	local team = _data:GetTeam()
+	if hp <= 0 then
 		script.parent.visibility = Visibility.FORCE_OFF
 		return
-		
 	else
 		script.parent.visibility = Visibility.INHERIT
 	end
-	
+
 	LABEL.text = CoreMath.Round(hp) .. " / " .. CoreMath.Round(maxHP)
-	
+
 	local percent = hp / maxHP
 	percent = CoreMath.Clamp(percent, 0, 1)
-	
+	if team == 3 then
+		FILL_BAR:SetColor(_G.TeamColors[3 - LOCAL_PLAYER.team])
+	else
+		FILL_BAR:SetColor(_G.TeamColors[team])
+	end
 	local scale = FILL_BAR:GetScale()
 	scale.z = percent
 	FILL_BAR:SetScale(scale)
-	
+
 	FILL_BAR.team = _data:GetTeam()
 end
-

@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10893006266995777896
+        ParentId: 4061218764847954597
         ChildIds: 2002613162895055436
         ChildIds: 2819413231850312934
         ChildIds: 4560343318950424608
@@ -56,6 +56,12 @@ Assets {
           Overrides {
             Name: "cs:TemplateChoiceRandom"
             Bool: false
+          }
+          Overrides {
+            Name: "cs:ActiveDummies"
+            ObjectReference {
+              SelfId: 8627705420451481647
+            }
           }
           Overrides {
             Name: "cs:TemplateChoiceRandom:tooltip"
@@ -169,7 +175,7 @@ Assets {
           Overrides {
             Name: "cs:DevMinion"
             AssetReference {
-              Id: 1711912198823339044
+              Id: 10613128307169199580
             }
           }
         }

@@ -45,7 +45,7 @@ function Teleport(thisAbility)
 	local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Damage Amount")
 	local enemiesInRange = Game.FindPlayersInCylinder(SpecialAbility.owner:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = SpecialAbility.owner.team})
 	--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {duration = 5})
-	local npcsInRange = NPC_MANAGER().FindInSphere(position, radius + 10000)
+	local npcsInRange = NPC_MANAGER().FindInSphere(position, radius)
 
 	local dmgMod = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod1", DEFAULT_DamageRange, SpecialAbility.name..": Damage Amount")
 	local dmg = Damage.New()
