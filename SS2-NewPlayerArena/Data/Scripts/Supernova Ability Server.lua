@@ -69,13 +69,19 @@ function SupernovaEnding()
 
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 
-    local playersInRange = Game.FindPlayersInCylinder(dmgPosition, EffectRadius, {ignoreDead = true})
+    --local playersInRange = Game.FindPlayersInCylinder(dmgPosition, EffectRadius, {ignoreDead = true})
+	local playersInRange = COMBAT().FindInSphere(dmgPosition, EffectRadius, {ignoreDead = true})
     for _, otherPlayer in ipairs(playersInRange) do
 		if otherPlayer.team == SpecialAbility.owner.team then
 			local dmg = Damage.New() 
 			dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_HealAmount, SpecialAbility.name..": Heal Amount")
 			dmg.sourcePlayer = SpecialAbility.owner
 			dmg.sourceAbility = SpecialAbility
+
+			if not otherPlayer:IsA("Player") then
+				otherPlayer = otherPlayer:GetCustomProperty("Collider"):WaitForObject()
+			end
+
 			local attackData = {
 				object = otherPlayer,
 				damage = dmg,
@@ -92,6 +98,11 @@ function SupernovaEnding()
 			dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
 			dmg.sourcePlayer = SpecialAbility.owner
 			dmg.sourceAbility = SpecialAbility
+
+			if not otherPlayer:IsA("Player") then
+				otherPlayer = otherPlayer:GetCustomProperty("Collider"):WaitForObject()
+			end
+
 			local attackData = {
 				object = otherPlayer,
 				damage = dmg,

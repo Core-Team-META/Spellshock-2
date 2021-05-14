@@ -22,7 +22,7 @@ end
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount
-	if spamPrevent < time() and Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
+	if spamPrevent < time() and Object.IsValid(impactData.targetObject) and (impactData.targetObject:IsA("Player") or impactData.targetObject.name == "Collider") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Healer Staff: Damage Range")
 		amount = math.random(rangeTable.min, rangeTable.max)
 	else 
