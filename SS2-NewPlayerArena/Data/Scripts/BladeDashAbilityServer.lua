@@ -6,6 +6,7 @@
 -- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+function NPC_MANAGER() return MODULE:Get("standardcombo.NPCKit.NPCManager") end
 
 local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
 local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
@@ -44,6 +45,7 @@ function Teleport(thisAbility)
 	local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Damage Amount")
 	local enemiesInRange = Game.FindPlayersInCylinder(SpecialAbility.owner:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = SpecialAbility.owner.team})
 	--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {duration = 5})
+	local npcsInRange = NPC_MANAGER().FindInSphere(position, radius + 10000)
 
 	local dmgMod = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod1", DEFAULT_DamageRange, SpecialAbility.name..": Damage Amount")
 	local dmg = Damage.New()
@@ -78,6 +80,23 @@ function Teleport(thisAbility)
 		}
 		COMBAT().ApplyDamage(attackData) -- damage enemy
 		COMBAT().ApplyDamage(healData) -- heal caster
+	end
+
+	for _, npc in ipairs(npcsInRange) do
+		local enemy = npc
+		if not enemy:IsA("Player") then
+			enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
+		end
+		local attackData = {
+			object = enemy,
+			damage = dmg,
+			source = SpecialAbility.owner,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Assassin_Q"}
+		}
+		COMBAT().ApplyDamage(attackData) -- damage enemy
+		--COMBAT().ApplyDamage(healData) -- heal caster
 	end
 
 	

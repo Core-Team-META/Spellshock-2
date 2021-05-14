@@ -248,6 +248,10 @@ function DamageInArea()
 		dmg.sourcePlayer = SpecialAbility.owner
 		dmg.sourceAbility = SpecialAbility
 
+		local enemy = enemy
+		if not enemy:IsA("Player") then
+			enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
+		end
 		local attackData = {
 			object = enemy,
 			damage = dmg,
