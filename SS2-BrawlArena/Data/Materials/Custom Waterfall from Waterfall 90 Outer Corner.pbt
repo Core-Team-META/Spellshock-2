@@ -35,7 +35,7 @@ Assets {
       }
       Overrides {
         Name: "arc"
-        Float: 0
+        Float: 0.109271303
       }
       Overrides {
         Name: "fadeleftedge"
