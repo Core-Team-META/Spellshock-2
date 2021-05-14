@@ -143,6 +143,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4479180494355222818
+  Name: "Icon Checkmark"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Checkmark"
+  }
+}
+Assets {
   Id: 3622280845155549501
   Name: "Fantasy Book 001"
   PlatformAssetType: 9
