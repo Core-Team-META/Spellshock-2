@@ -34,7 +34,7 @@ local CHARGE_DURATION = SHOOT_ABILITY:GetCustomProperty("ChargeDuration") or 0.5
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount = DAMAGE_TO_OBJECTS
-	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
+	if Object.IsValid(impactData.targetObject) and (impactData.targetObject:IsA("Player") or impactData.targetObject.name == "Collider") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 		amount = math.random(rangeTable.min, rangeTable.max)
 	else 
@@ -138,7 +138,7 @@ function OnProjectileSpawned(weapon, projectile)
 end
 
 function OnChargedProjectileImpacted(projectile, other, hitResult)
-	if not Object.IsValid(WEAPON) or not WEAPON.owner or not Object.IsValid(WEAPON.owner) or not other:IsA("Player") then return end
+	if not Object.IsValid(WEAPON) or not WEAPON.owner or not Object.IsValid(WEAPON.owner) or not (other:IsA("Player") or other.name == "Collider") then return end
 
 	local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 	local amount = math.random(rangeTable.min, rangeTable.max)

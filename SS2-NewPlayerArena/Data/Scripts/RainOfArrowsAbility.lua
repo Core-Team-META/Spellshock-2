@@ -51,7 +51,7 @@ function PlaceObject(thisAbility)
 	if not SpecialAbility or not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 
 	-- Damage enemies
-	local nearbyEnemies = Game.FindPlayersInCylinder(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
+	local nearbyEnemies = COMBAT().FindInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
@@ -67,6 +67,11 @@ function PlaceObject(thisAbility)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = SpecialAbility.owner
 		dmg.sourceAbility = SpecialAbility
+
+		local enemy = enemy
+		if not enemy:IsA("Player") then
+			enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
+		end
 
 		local attackData = {
 			object = enemy,

@@ -133,23 +133,25 @@ function Tick(deltaTime)
 			return
 		end
 
-		if HawkTarget and Object.IsValid(HawkTarget) and not HawkTarget.isDead and CurrentHawk and Object.IsValid(CurrentHawk) then
+		if HawkTarget and Object.IsValid(HawkTarget) and not COMBAT().IsDead(HawkTarget) and CurrentHawk and Object.IsValid(CurrentHawk) then
 			CurrentHawk:LookAtContinuous(HawkTarget, true)
 			hasFoundTarget = true
 			local DistanceVector = HawkTarget:GetWorldPosition() - CurrentHawk:GetWorldPosition()
 			--print("DISTANCE: "..tostring(DistanceVector.size))
 
 			if DistanceVector.size < 150 then
-				local status =
-					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
-				API_SE.ApplyStatusEffect(
-					HawkTarget,
-					API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
-					SpecialAbility.owner,
-					status.duration,
-					status.damage,
-					status.multiplier
-				)
+				if HawkTarget:IsA("Player") then
+					local status =
+						META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
+					API_SE.ApplyStatusEffect(
+						HawkTarget,
+						API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
+						SpecialAbility.owner,
+						status.duration,
+						status.damage,
+						status.multiplier
+					)
+				end
 
 				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
 
@@ -217,25 +219,28 @@ function Tick(deltaTime)
 				SpecialAbility.name .. ": Range"
 			)
 			local neabyEnemies =
-				Game.FindPlayersInSphere(
+				COMBAT().FindInSphere(
 				CurrentHawk:GetWorldPosition(),
 				HawkRange,
 				{ignoreTeams = SpecialAbility.owner.team, ignoreDead = true}
 			)
 			--CoreDebug.DrawSphere(CurrentHawk:GetWorldPosition(), HawkRange, {duration = 1})
 			for _, enemy in pairs(neabyEnemies) do
+				if not enemy:IsA("Player") then
+					enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
+				end
 				-- check if the enemy was already hit
-				if not HitPlayers[enemy] and not enemy.isDead then
+				if not HitPlayers[enemy] and not COMBAT().IsDead(enemy) then
 					HitPlayers[enemy] = true
 					HawkTarget = enemy -- set new target
 					break
-				elseif enemy ~= PreviousTarget and not enemy.isDead then
+				elseif enemy ~= PreviousTarget and not COMBAT().IsDead(enemy) then
 					HawkTarget = enemy -- set new target
 					break
 				end
 			end
 
-			if HawkTarget == nil and PreviousTarget ~= nil and Object.IsValid(PreviousTarget) and not PreviousTarget.isDead then
+			if HawkTarget == nil and PreviousTarget ~= nil and Object.IsValid(PreviousTarget) and not COMBAT().IsDead(PreviousTarget) then
 				HawkTarget = PreviousTarget
 			elseif hasFoundTarget then
 				local HawkSpeed =
