@@ -1880,12 +1880,12 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      X: -6382.90967
-      Y: -2976.39697
-      Z: -13495.2559
+      X: -2722.1792
+      Y: 170003.609
+      Z: -15407.7617
     }
     Rotation {
-      Yaw: 25
+      Yaw: -52.8516846
     }
     Scale {
       X: 1
@@ -1898,7 +1898,7 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:forceoff"
@@ -1907,7 +1907,7 @@ Objects {
     Material {
       Id: 13795170071507932677
     }
-    VoxelSize: 1200
+    VoxelSize: 500
     OctreeDepth: 5
     GeneratorID: "DEPRECATED"
   }
