@@ -31,7 +31,7 @@ function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(SpecialAbility) or not Object.IsValid(SpecialAbility.owner) or other == SpecialAbility.owner then
 		return
 	end
-	if not other:IsA("Player") or COMBAT().IsDead(other) then
+	if (not other:IsA("Player") and other.name ~= "Collider") or COMBAT().IsDead(other) then
 		return
 	end
 

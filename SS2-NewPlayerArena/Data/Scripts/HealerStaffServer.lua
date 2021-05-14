@@ -45,7 +45,7 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 	local sourceAbility = SHOOT_ABILITY
 
     if Object.IsValid(other) then
-        if other:IsA("Player") then
+        if other:IsA("Player") or other.name == "Collider" then
             local position = hitResult:GetImpactPosition()
             local bomb = META_AP().SpawnAsset(HEAL_EXPLOSION_TEMPLATE, {position = position})
             local trigger = bomb:GetCustomProperty("Trigger"):WaitForObject()
@@ -120,7 +120,7 @@ function HealAllPlayersInRadius(healTrigger)
     local OverlappingObjects = healTrigger:GetOverlappingObjects()
 
     for _, thisObject in pairs(OverlappingObjects) do
-        if Object.IsValid(thisObject) and thisObject:IsA("Player") and not thisObject.isDead then
+        if Object.IsValid(thisObject) and (thisObject:IsA("Player") or thisObject.name == "Collider") and not COMBAT().IsDead(thisObject) then
             local dmg = Damage.New()
 
             local healAmount = META_AP().GetAbilityMod(WEAPON.owner, META_AP().LMB, "mod2", 20, WEAPON.name .. ": Heal Amount")
@@ -132,6 +132,7 @@ function HealAllPlayersInRadius(healTrigger)
             dmg.reason = DamageReason.COMBAT
             dmg.sourcePlayer = ability.owner
             dmg.sourceAbility = ability
+
 
             local attackData = {
                 object = thisObject,
