@@ -62,7 +62,7 @@ local function UpdateCombatAmmount(attackData)
     local source = attackData.source
     local amount = attackData.damage.amount
 
-    if amount > 0 then
+    if source and source:IsA("Player") and target and target:IsA("Player") and amount > 0 then
         local afterDmg = target.hitPoints - amount
         if afterDmg < 0 then
             amount = amount + afterDmg
@@ -77,7 +77,7 @@ local function UpdateCombatAmmount(attackData)
         local classDamage = source.serverUserData.classDamage[class] or 0
         classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
-    elseif amount < 0 then
+    elseif source and source:IsA("Player") and target and target:IsA("Player") and amount < 0 then
         if attackData.tags and (attackData.tags.Type == "HealthPotion" or attackData.tags.id == "Mage_T") then
             return
         end

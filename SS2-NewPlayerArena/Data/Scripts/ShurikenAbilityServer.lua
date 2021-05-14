@@ -29,7 +29,7 @@ local PlayerVFX = nil
 
 function OnProjectileImpacted(projectile, other, hitResult)
     if other and Object.IsValid(SpecialAbility) and Object.IsValid(SpecialAbility.owner)
-    and other:IsA("Player") and other.team ~= SpecialAbility.team then
+    and other.team ~= SpecialAbility.team then -- other:IsA("Player") and 
         --Play ImpactFX
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
 		META_AP().SpawnAsset(PlayerImpactVFX, {position = projectile:GetWorldPosition()})
