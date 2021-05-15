@@ -72,6 +72,8 @@ function OnAbilityExecute(thisAbility)
 	newTrap.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, SpecialAbility.name .. ": LifeSpan")
 	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
 
+	Events.Broadcast("TrainingAbilityUsed", thisAbility.owner, "Hunter_E")
+
 	local nearbyEnemies = Game.FindPlayersInCylinder(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	local bleedStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", {}, SpecialAbility.name .. ": Bleed Status")
 	local slowStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Slow Status")
