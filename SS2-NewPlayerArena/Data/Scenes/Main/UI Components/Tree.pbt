@@ -16,7 +16,6 @@ Objects {
   }
   ParentId: 5269136214174580617
   ChildIds: 94216634871211739
-  ChildIds: 10556274225325759828
   ChildIds: 8379177854478888520
   ChildIds: 9807275894072396047
   ChildIds: 13067353738339151208
@@ -84632,35 +84631,6 @@ Objects {
   }
 }
 Objects {
-  Id: 10556274225325759828
-  Name: "Class Menu Data"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5687116453631511844
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Class Menu Data"
-  }
-}
-Objects {
   Id: 94216634871211739
   Name: "Menu Manager"
   Transform {
@@ -84702,5 +84672,34 @@ Objects {
     ScriptAsset {
       Id: 14730659522932281457
     }
+  }
+}
+Objects {
+  Id: 10556274225325759828
+  Name: "Class Menu Data"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5269136214174580617
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Class Menu Data"
   }
 }

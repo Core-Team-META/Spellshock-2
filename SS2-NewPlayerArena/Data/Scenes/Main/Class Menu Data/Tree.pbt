@@ -97,6 +97,14 @@ Objects {
       Name: "cs:Bind"
       String: "RMB"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -143,6 +151,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -321,6 +337,14 @@ Objects {
       Name: "cs:Bind"
       String: "SHIFT"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -412,6 +436,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -640,6 +672,14 @@ Objects {
       Name: "cs:Bind"
       String: "R"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Use"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -819,6 +859,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "E"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Healing"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -1042,6 +1090,14 @@ Objects {
       Name: "cs:Bind"
       String: "Q"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1241,6 +1297,14 @@ Objects {
       Name: "cs:Bind"
       String: "RMB"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1286,6 +1350,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -1419,6 +1491,14 @@ Objects {
       Name: "cs:Bind"
       String: "SHIFT"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1466,6 +1546,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -1690,6 +1778,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -1918,6 +2014,14 @@ Objects {
       Name: "cs:Bind"
       String: "E"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2096,6 +2200,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -2340,6 +2452,14 @@ Objects {
       Name: "cs:Bind"
       String: "RMB"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2385,6 +2505,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -2519,6 +2647,14 @@ Objects {
       Name: "cs:Bind"
       String: "SHIFT"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2610,6 +2746,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -2834,6 +2978,14 @@ Objects {
       Name: "cs:Bind"
       String: "R"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3013,6 +3165,14 @@ Objects {
       Name: "cs:Bind"
       String: "E"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Use"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3191,6 +3351,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -3439,6 +3607,14 @@ Objects {
       Name: "cs:Bind"
       String: "RMB"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3486,6 +3662,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -3707,6 +3891,14 @@ Objects {
       Name: "cs:Bind"
       String: "SHIFT"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3753,6 +3945,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -3933,6 +4133,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -4166,6 +4374,14 @@ Objects {
       Name: "cs:Bind"
       String: "E"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Use"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4396,6 +4612,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -4642,6 +4866,14 @@ Objects {
       Name: "cs:Bind"
       String: "RMB"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4776,6 +5008,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -4953,6 +5193,14 @@ Objects {
       Name: "cs:Bind"
       String: "SHIFT"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4998,6 +5246,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -5133,6 +5389,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {
@@ -5312,6 +5576,14 @@ Objects {
       Name: "cs:Bind"
       String: "E"
     }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Use"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 3
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5446,6 +5718,14 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+    Overrides {
+      Name: "cs:QuestType"
+      String: "Damage"
+    }
+    Overrides {
+      Name: "cs:QuestRequirement"
+      Int: 300
     }
   }
   Collidable_v2 {

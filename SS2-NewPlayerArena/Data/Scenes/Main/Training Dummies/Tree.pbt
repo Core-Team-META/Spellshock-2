@@ -47,6 +47,14 @@ Objects {
     }
   }
   ParentId: 9300596346937838033
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ClassMenuData"
+      ObjectReference {
+        SelfId: 10556274225325759828
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
