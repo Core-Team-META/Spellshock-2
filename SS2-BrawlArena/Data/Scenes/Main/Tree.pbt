@@ -1910,6 +1910,61 @@ Objects {
     VoxelSize: 500
     OctreeDepth: 5
     GeneratorID: "DEPRECATED"
+    Foliage {
+      Asset {
+        Id: 10784387645319107096
+      }
+      DistanceBetweenInstances: 3000
+      SpawnDistance: 32000
+      CullDistance {
+        Min: 50000
+        Max: 70000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 30
+      }
+      Scaling {
+        Scaling: Free
+        ScaleX {
+          Min: 1.5
+          Max: 2
+        }
+        ScaleY {
+          Min: 1.5
+          Max: 2
+        }
+        ScaleZ {
+          Min: 1.2
+          Max: 1.3
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      Materials {
+        key: "Nature_Trunk"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+        Z: -140
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
   }
 }
 Objects {

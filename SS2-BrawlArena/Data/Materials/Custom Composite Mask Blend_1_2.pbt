@@ -9,16 +9,8 @@ Assets {
       Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 8329339828071933523
+          Id: 9571902954734362392
         }
-      }
-      Overrides {
-        Name: "u_tiles"
-        Float: 5
-      }
-      Overrides {
-        Name: "v_tiles"
-        Float: 5
       }
       Overrides {
         Name: "cmp:Material2"
@@ -28,7 +20,7 @@ Assets {
       }
       Overrides {
         Name: "blend_amount"
-        Float: 0.157049596
+        Float: 0.360857457
       }
       Overrides {
         Name: "u_tiles2"
@@ -37,15 +29,6 @@ Assets {
       Overrides {
         Name: "v_tiles2"
         Float: 5
-      }
-      Overrides {
-        Name: "cmpc:Material1"
-        Color {
-          R: 0.445000023
-          G: 0.36223
-          B: 0.320845
-          A: 1
-        }
       }
       Overrides {
         Name: "cmpc:Material2"
@@ -60,6 +43,23 @@ Assets {
         Name: "gradient_worldspace"
         Bool: false
       }
+      Overrides {
+        Name: "cmpc:Material1"
+        Color {
+          R: 0.481661469
+          G: 0.527
+          B: 0.158626974
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "u_tiles"
+        Float: 9
+      }
+      Overrides {
+        Name: "v_tiles"
+        Float: 9
+      }
     }
     Assets {
       Id: 2868304604294957594
@@ -71,12 +71,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8329339828071933523
-      Name: "Concrete Basic 01"
+      Id: 9571902954734362392
+      Name: "Moss 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_concrete_001"
+        AssetId: "mi_moss_001_uv"
       }
     }
     Assets {

@@ -1808,6 +1808,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8777307662385110705
+  Name: "Fern 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fern_generic_003"
+  }
+}
+Assets {
   Id: 8727996348861654071
   Name: "Pyramid - 4-Sided Truncated Hollow Thick"
   PlatformAssetType: 1
@@ -2291,6 +2300,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_002"
+  }
+}
+Assets {
+  Id: 6308772142413739892
+  Name: "Branches Cluster Big"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_branches_big_001"
   }
 }
 Assets {
