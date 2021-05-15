@@ -37,6 +37,8 @@ function OnAbilityExecute(thisAbility)
 	local nearbyEnemies = Game.FindPlayersInCylinder(SpecialAbility.owner:GetWorldPosition(), StunRadius, {ignoreTeams = SpecialAbility.owner.team})
 	--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), StunRadius, {duration = 5})
 	
+	Events.Broadcast("TrainingAbilityUsed", thisAbility.owner, "Healer_R")
+
 	ImpulseAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_ImpulseAmount, SpecialAbility.name..": Impulse Amount")
 	local statusEffects = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", {}, SpecialAbility.name .. ": Status")
 	local status = statusEffects.BLIND
