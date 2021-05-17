@@ -1,6 +1,78 @@
 Name: "Training Dummies"
 RootId: 4061218764847954597
 Objects {
+  Id: 579770419756918206
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4061218764847954597
+  ChildIds: 10043023366663293196
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 10043023366663293196
+  Name: "TrainingProgression_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 579770419756918206
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ClassMenuData"
+      ObjectReference {
+        SelfId: 10556274225325759828
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6789845330908708201
+    }
+  }
+}
+Objects {
   Id: 9300596346937838033
   Name: "ServerContext"
   Transform {
@@ -34,7 +106,7 @@ Objects {
 }
 Objects {
   Id: 12330057494269597211
-  Name: "TrainingServer_Helper"
+  Name: "TrainingProgression_Server"
   Transform {
     Location {
     }
