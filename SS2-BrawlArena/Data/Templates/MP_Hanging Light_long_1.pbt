@@ -10,12 +10,12 @@ Assets {
         Name: "MP_Hanging Light_long"
         Transform {
           Scale {
-            X: 1.38350606
-            Y: 1.38350606
-            Z: 1.38350606
+            X: 2.08071828
+            Y: 2.08071828
+            Z: 2.08071828
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14813965702415156087
         ChildIds: 9426744944040021147
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -48,7 +48,6 @@ Assets {
           }
         }
         ParentId: 12522935092154146847
-        ChildIds: 9626660686893875112
         ChildIds: 15943190323467247651
         ChildIds: 1997858205143836868
         ChildIds: 18055210647005841641
@@ -69,10 +68,6 @@ Assets {
         ChildIds: 18254723278745478056
         ChildIds: 9404645569423890444
         ChildIds: 2535804370861655286
-        ChildIds: 4893791412196854814
-        ChildIds: 8204308325553306544
-        ChildIds: 11030583625286954261
-        ChildIds: 1042510460288251234
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -84,63 +79,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 9626660686893875112
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: -4.95621109
-            Y: -0.108219907
-            Z: 2196.31934
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: 172.874969
-            Roll: -145.488754
-          }
-          Scale {
-            X: 0.6001122
-            Y: 0.600106597
-            Z: 1.2688663
-          }
-        }
-        ParentId: 9426744944040021147
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 9564375138959007662
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: true
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16372496464315477095
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
         }
       }
       Objects {
@@ -1484,214 +1422,6 @@ Assets {
             X: -5.98460245
             Y: -3.40096617
             Z: 714.935608
-          }
-          Rotation {
-            Yaw: -42.7610779
-          }
-          Scale {
-            X: 1.3258518
-            Y: 1.3258518
-            Z: 0.994389057
-          }
-        }
-        ParentId: 9426744944040021147
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5625
-              G: 0.5625
-              B: 0.5625
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10771108408610196052
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 4893791412196854814
-        Name: "Chain Tile 01"
-        Transform {
-          Location {
-            X: -5.98460245
-            Y: -3.40096617
-            Z: 1006.61029
-          }
-          Rotation {
-            Yaw: -42.7610779
-          }
-          Scale {
-            X: 1.3258518
-            Y: 1.3258518
-            Z: 0.994389057
-          }
-        }
-        ParentId: 9426744944040021147
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5625
-              G: 0.5625
-              B: 0.5625
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10771108408610196052
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 8204308325553306544
-        Name: "Chain Tile 01"
-        Transform {
-          Location {
-            X: -5.98460245
-            Y: -3.40096617
-            Z: 1310.54626
-          }
-          Rotation {
-            Yaw: -42.7610779
-          }
-          Scale {
-            X: 1.3258518
-            Y: 1.3258518
-            Z: 0.994389057
-          }
-        }
-        ParentId: 9426744944040021147
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5625
-              G: 0.5625
-              B: 0.5625
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10771108408610196052
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 11030583625286954261
-        Name: "Chain Tile 01"
-        Transform {
-          Location {
-            X: -5.98460245
-            Y: -3.40096617
-            Z: 1601.74866
-          }
-          Rotation {
-            Yaw: -42.7610779
-          }
-          Scale {
-            X: 1.3258518
-            Y: 1.3258518
-            Z: 0.994389057
-          }
-        }
-        ParentId: 9426744944040021147
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5625
-              G: 0.5625
-              B: 0.5625
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10771108408610196052
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 1042510460288251234
-        Name: "Chain Tile 01"
-        Transform {
-          Location {
-            X: -5.98460245
-            Y: -3.40096617
-            Z: 1895.63611
           }
           Rotation {
             Yaw: -42.7610779

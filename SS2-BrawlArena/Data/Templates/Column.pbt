@@ -15,10 +15,11 @@ Assets {
             Z: 1.91668212
           }
         }
-        ParentId: 17231976051581128765
+        ParentId: 8783338405577951007
         ChildIds: 5645384357378470732
         ChildIds: 8972848686049367217
         ChildIds: 12731451334256756753
+        ChildIds: 6241203362883677817
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -690,6 +691,63 @@ Assets {
             AssetReference {
               Id: 12334678993459933684
             }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10396917736734746205
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 6241203362883677817
+        Name: "Main Street Foundation 01 - Corner"
+        Transform {
+          Location {
+            X: 0.203125
+            Y: 61.90625
+            Z: 2525.51025
+          }
+          Rotation {
+            Yaw: 3.4150944e-06
+          }
+          Scale {
+            X: 2.78330326
+            Y: 3.25556874
+            Z: -0.910327315
+          }
+        }
+        ParentId: 17741619918487123253
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10723525176054761965
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
           }
         }
         Collidable_v2 {

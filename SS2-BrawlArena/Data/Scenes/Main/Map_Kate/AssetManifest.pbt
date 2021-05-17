@@ -44,6 +44,24 @@ Assets {
   }
 }
 Assets {
+  Id: 18096837860516497113
+  Name: "Office Wall Panel 03"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_urb_office_wall_003_uv_ref"
+  }
+}
+Assets {
+  Id: 18045522745443426933
+  Name: "Main Street Window Detail 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_part_window_detail_001_ref"
+  }
+}
+Assets {
   Id: 18014941405078390650
   Name: "Kelp Tall Bush 01"
   PlatformAssetType: 1
@@ -764,6 +782,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14265726385927418716
+  Name: "Fantasy Castle Trim - Battlement 01 4m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_battlement_001_4m"
+  }
+}
+Assets {
   Id: 14231809728886464860
   Name: "Wood Raw White"
   PlatformAssetType: 2
@@ -779,6 +806,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "steel_001"
+  }
+}
+Assets {
+  Id: 14119091520495069311
+  Name: "Plane Ring - One Sided Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_ring_003"
   }
 }
 Assets {
@@ -1097,6 +1133,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12326740569496383044
+  Name: "Frame Medium Straight"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_4b_tray_straight"
+  }
+}
+Assets {
   Id: 12167237750251133404
   Name: "Pipe - 8-Sided"
   PlatformAssetType: 1
@@ -1382,6 +1427,24 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_hq_test_001"
+  }
+}
+Assets {
+  Id: 11125925303412095214
+  Name: "Jungle Vine (end)"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_liana-vine_end_001_uv"
+  }
+}
+Assets {
+  Id: 11076240285386210842
+  Name: "Prism - 5-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_pentagon_001"
   }
 }
 Assets {
@@ -1826,6 +1889,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8716535955846502775
+  Name: "Frame Medium Corner"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_5B_tray_Corner"
+  }
+}
+Assets {
   Id: 8626697804450090273
   Name: "Stone Arch (doorway) 001"
   PlatformAssetType: 1
@@ -1889,15 +1961,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8355298660985848341
-  Name: "Glow Shape Decal"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_glow"
-  }
-}
-Assets {
   Id: 8353147935132205805
   Name: "Prism - 6-Sided Half"
   PlatformAssetType: 1
@@ -1949,6 +2012,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "fxsm_waterfall_straight"
+  }
+}
+Assets {
+  Id: 8109355405655986353
+  Name: "Sphere - Inverted"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_inverted_001"
   }
 }
 Assets {
@@ -2789,6 +2861,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4286823887220239396
+  Name: "Fantasy Castle Stairs Spiral Trim 01 - 4m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_4m"
+  }
+}
+Assets {
   Id: 4209751927826907232
   Name: "Branches Cluster Medium"
   PlatformAssetType: 1
@@ -3194,15 +3275,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2303506147468924323
-  Name: "Plane 4m - Two Sided"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_plane_4m_002"
-  }
-}
-Assets {
   Id: 2264041107168619230
   Name: "Cone - Bullet"
   PlatformAssetType: 1
@@ -3272,6 +3344,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_001"
+  }
+}
+Assets {
+  Id: 1966905298560770071
+  Name: "Square Column Topper 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_column_square_top_002"
   }
 }
 Assets {
