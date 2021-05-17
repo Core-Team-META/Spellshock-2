@@ -160,6 +160,10 @@ Objects {
     }
   }
   ParentId: 4061218764847954597
+  ChildIds: 7440611720845950457
+  ChildIds: 13386192757385963611
+  ChildIds: 3437231407619509646
+  ChildIds: 5906946194111199268
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -174,6 +178,245 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 5906946194111199268
+  Name: "Healer Test Dummy"
+  Transform {
+    Location {
+      X: -5084.88281
+      Y: -2891.33545
+      Z: 1897.0105
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8627705420451481647
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4467490429473095940
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Healer Test Dummy"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1086.75391
+            Y: -5450
+            Z: 1897.0105
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 180
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Team"
+          Int: 2
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10560204242345459862
+    }
+  }
+}
+Objects {
+  Id: 3437231407619509646
+  Name: "Healer Test Dummy"
+  Transform {
+    Location {
+      X: -5084.88281
+      Y: -5329.20166
+      Z: 1897.0105
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8627705420451481647
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4467490429473095940
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Healer Test Dummy"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1086.75354
+            Y: -3012.13574
+            Z: 1897.0105
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 180
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Team"
+          Int: 2
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10560204242345459862
+    }
+  }
+}
+Objects {
+  Id: 13386192757385963611
+  Name: "Healer Test Dummy"
+  Transform {
+    Location {
+      X: -5084.88281
+      Y: -2891.33545
+      Z: 1897.0105
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8627705420451481647
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4467490429473095940
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Healer Test Dummy"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -5084.88281
+            Y: -5329.20166
+            Z: 1897.0105
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10560204242345459862
+    }
+  }
+}
+Objects {
+  Id: 7440611720845950457
+  Name: "Healer Test Dummy"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8627705420451481647
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4467490429473095940
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Healer Test Dummy"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -5084.88281
+            Y: -2891.33545
+            Z: 1897.0105
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10560204242345459862
+    }
   }
 }
 Objects {

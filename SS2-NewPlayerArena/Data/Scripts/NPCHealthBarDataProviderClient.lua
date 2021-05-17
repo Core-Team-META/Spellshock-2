@@ -19,7 +19,7 @@
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 
 local HEALTH_BAR_TEMPLATE = script:GetCustomProperty("HealthBarTemplate")
-local MAX_HEALTH = ROOT:GetCustomProperty("CurrentHealth")
+local MAX_HEALTH = 1500--ROOT:GetCustomProperty("CurrentHealth")
 
 
 function GetHealth()

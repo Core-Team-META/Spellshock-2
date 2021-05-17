@@ -12,6 +12,7 @@ end
 function CheckQuestProgress(attackData)
     local sourcePlayer = attackData.source
     local tagID = attackData.tags and attackData.tags.id
+    local isHeal = false
     if not tagID then
         return
     end
@@ -27,14 +28,21 @@ function CheckQuestProgress(attackData)
         return
     end
     local amount = attackData.damage.amount
-    if attackData.damage and attackData.damage.amount < 0 then
-        amount = amount * -1
+
+    if class == CONST.CLASS.HEALER and bind == CONST.BIND.E then
+        if attackData.damage and attackData.damage.amount < 0 then
+            amount = amount * -1
+        else
+            return
+        end
     end
-    if sourcePlayer:GetResource(API.GetResourceString(class, bind)) ~= 1 then
+
+    if sourcePlayer:GetResource(API.GetResourceString(class, bind)) ~= 1 and amount > 0 then
         if sourcePlayer:GetResource(API.GetResourceString(class, bind)) == 0 then
             amount = amount + 1
         end
-        amount = API.IsTrainingComplete(sourcePlayer, class, bind, QuestData) and QuestData[class][bind].required or amount
+        amount =
+            API.IsTrainingComplete(sourcePlayer, class, bind, QuestData) and QuestData[class][bind].required or amount
         sourcePlayer:AddResource(API.GetResourceString(class, bind), CoreMath.Round(amount))
     end
 end
