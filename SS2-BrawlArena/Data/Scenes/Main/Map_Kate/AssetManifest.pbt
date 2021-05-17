@@ -260,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16967182821200846753
+  Name: "Pipe - Quarter Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_003"
+  }
+}
+Assets {
   Id: 16933361490793048899
   Name: "Metal Iron Rusted 02"
   PlatformAssetType: 2
@@ -341,6 +350,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16682371750824371507
+  Name: "Metal Corrugated 03"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_mil_metal_corrugated_metal_003_uv_ref"
+  }
+}
+Assets {
   Id: 16536652190868273770
   Name: "Rock Block 02"
   PlatformAssetType: 1
@@ -365,15 +383,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ring_faceted_003"
-  }
-}
-Assets {
-  Id: 16341754942894824861
-  Name: "Flare Ray VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_ray_system"
   }
 }
 Assets {
@@ -482,24 +491,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_001"
-  }
-}
-Assets {
-  Id: 15529149580810381787
-  Name: "Cube - Rounded Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_rounded_001"
-  }
-}
-Assets {
-  Id: 15402296587404581505
-  Name: "Main Street Trim 02 - Corner"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_urb_dtn_mst_trim_002_corner_ref"
   }
 }
 Assets {
@@ -1142,6 +1133,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12239571452334311883
+  Name: "Metal Corrugated 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_mil_metal_corrugated_metal_001_uv_ref"
+  }
+}
+Assets {
   Id: 12167237750251133404
   Name: "Pipe - 8-Sided"
   PlatformAssetType: 1
@@ -1430,15 +1430,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11125925303412095214
-  Name: "Jungle Vine (end)"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_liana-vine_end_001_uv"
-  }
-}
-Assets {
   Id: 11076240285386210842
   Name: "Prism - 5-Sided"
   PlatformAssetType: 1
@@ -1637,15 +1628,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9566477155869250680
-  Name: "Wedge - Corner Complex - Large"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_corelogo_shape_lg_001_ref"
-  }
-}
-Assets {
   Id: 9564538927409393589
   Name: "Stone Basic"
   PlatformAssetType: 2
@@ -1733,15 +1715,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_hq_003"
-  }
-}
-Assets {
-  Id: 9199751096616988864
-  Name: "Candle Flame VFX"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "fxsm_candleflame"
   }
 }
 Assets {
@@ -2165,6 +2138,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_fan_bricks_mortar_001_uv"
+  }
+}
+Assets {
+  Id: 7338438260782626966
+  Name: "Frame Small 45 Degree Corner Sharp"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tray45_Corner_Sharp"
   }
 }
 Assets {
@@ -2978,24 +2960,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3702191406046426907
-  Name: "Emissive Glow Transparent"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_emissive_001"
-  }
-}
-Assets {
-  Id: 3684596128793881079
-  Name: "Trim - Curve 30\302\260 - 16m Radius "
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_trimitives_001_curve30_16m_ref"
-  }
-}
-Assets {
   Id: 3674060815778311744
   Name: "Small Open Crate"
   PlatformAssetType: 1
@@ -3038,15 +3002,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_door_3x6_001"
-  }
-}
-Assets {
-  Id: 3398511306159614333
-  Name: "Fantasy Throne 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_fantasy_throne_001_ref"
   }
 }
 Assets {
@@ -3248,15 +3203,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2448982667642731065
-  Name: "Prism - 5-Sided Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_prism_pentagon_hq_001"
-  }
-}
-Assets {
   Id: 2437857163573821662
   Name: "Large Wood Board 8m"
   PlatformAssetType: 1
@@ -3326,15 +3272,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_trimitives_001_curve30_4m_ref"
-  }
-}
-Assets {
-  Id: 2064017466518942736
-  Name: "Cube - Chamfered Large"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_chamfer"
   }
 }
 Assets {
@@ -3479,15 +3416,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_tib_01_ref"
-  }
-}
-Assets {
-  Id: 1166787965693692855
-  Name: "Candle Group 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_prop_fantasy_candles_group_001"
   }
 }
 Assets {
