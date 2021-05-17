@@ -68,6 +68,7 @@ function Init()
                     abilityPanels[abilityIndex].name = panel:GetCustomProperty("AbilityName"):WaitForObject()
                     abilityPanels[abilityIndex].count = panel:GetCustomProperty("Count"):WaitForObject()
                     abilityPanels[abilityIndex].checkmark = panel:GetCustomProperty("Checkmark"):WaitForObject()
+                    abilityPanels[abilityIndex].complete = panel:GetCustomProperty("Complete"):WaitForObject()
 
                     abilityPanels[abilityIndex].icon:SetImage(QuestData[classIndex][abilityIndex].abilityIcon)
                     abilityPanels[abilityIndex].name.text = string.format(DESCRIPTIONS[QuestData[classIndex][abilityIndex].type], QuestData[classIndex][abilityIndex].name)
@@ -115,16 +116,12 @@ function UpdateAbilityInfo(panel, class, bind, value)
         panel.count.visibility = Visibility.FORCE_OFF
         panel.name.visibility = Visibility.FORCE_OFF
         panel.checkmark.visibility = Visibility.INHERIT
-        if panel.complete then
-            panel.complete.visibility = Visibility.INHERIT
-        end
+        panel.complete.visibility = Visibility.INHERIT
     else
         panel.count.visibility = Visibility.INHERIT
         panel.name.visibility = Visibility.INHERIT
         panel.checkmark.visibility = Visibility.FORCE_OFF
-        if panel.complete then
-            panel.complete.visibility = Visibility.FORCE_OFF
-        end
+        panel.complete.visibility = Visibility.FORCE_OFF
 
         --panel.name.text = QuestData[class][bind].name
         if not value then
