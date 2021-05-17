@@ -1988,15 +1988,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8109355405655986353
-  Name: "Sphere - Inverted"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_inverted_001"
-  }
-}
-Assets {
   Id: 8021476752120115971
   Name: "Rock 01"
   PlatformAssetType: 1
