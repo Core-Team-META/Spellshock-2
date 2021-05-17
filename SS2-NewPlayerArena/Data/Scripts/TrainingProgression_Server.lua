@@ -34,6 +34,7 @@ function CheckQuestProgress(attackData)
         if sourcePlayer:GetResource(API.GetResourceString(class, bind)) == 0 and amount == 1 then
             amount = amount + 1
         end
+        amount = API.IsTrainingComplete(sourcePlayer, class, bind, QuestData) and QuestData[class][bind].required or amount
         sourcePlayer:AddResource(API.GetResourceString(class, bind), CoreMath.Round(amount))
     end
 end
