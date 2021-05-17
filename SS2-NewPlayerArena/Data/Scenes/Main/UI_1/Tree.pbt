@@ -2,7 +2,7 @@ Name: "UI_1"
 RootId: 18118910128564520673
 Objects {
   Id: 5811339876210712894
-  Name: "Quest UI"
+  Name: "Training UI"
   Transform {
     Location {
     }
