@@ -16,7 +16,7 @@ end
 
 
 function API.GetTrainingProgress(player, class, bind)
-    return player:GetResource(TRAIN_API.GetResourceString(class, bind))
+    return player:GetResource(TRAIN_API.GetResourceString(class, bind)) - 1
 end
 
 function API.IsTrainingComplete(player, class, bind)
@@ -35,7 +35,7 @@ function OnResourceChanged(player, key, value)
         local class = tonumber(keys[2])
         local bind = tonumber(keys[3])
         if class and bind and value > 1 then
-            Events.Broadcast("TrainingUpdated", player, class, bind, value, TRAIN_API.IsClassCompleted(player, class, QuestData))
+            Events.Broadcast("TrainingUpdated", player, class, bind, API.GetTrainingProgress(player, class, bind), TRAIN_API.IsClassCompleted(player, class, QuestData))
         end
     end
 end
