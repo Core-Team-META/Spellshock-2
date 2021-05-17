@@ -15,12 +15,25 @@ function API.GetResourceString(class, bind)
     return API.KEY .. "_" .. tostring(class) .. "_" .. tostring(bind)
 end
 
-function API.IsTrainingComplete(player, class, bind, QuestData)
-    local currentProgress = API.GetTrainingProgress(player, class, bind)
-    if (currentProgress >= QuestData[class][bind].required + 1) then
+function API.IsTrainingComplete(player, class, bind, data)
+    local currentProgress = player:GetResource(API.GetResourceString(class, bind))
+    if (currentProgress >= (data[class][bind].required + 1)) then
         return true
     end
     return false
+end
+
+
+function API.IsClassCompleted(player, class, QuestData)
+    for bind = 1, 4 do
+        if
+            not API.IsTrainingComplete(player, class, bind, QuestData) and
+                player:GetResource(API.GetResourceString(class, bind)) ~= 1
+         then
+            return false
+        end
+    end
+    return true
 end
 
 

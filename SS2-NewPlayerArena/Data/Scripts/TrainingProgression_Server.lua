@@ -31,7 +31,7 @@ function CheckQuestProgress(attackData)
         amount = amount * -1
     end
     if sourcePlayer:GetResource(API.GetResourceString(class, bind)) ~= 1 then
-        if amount == 1 then
+        if sourcePlayer:GetResource(API.GetResourceString(class, bind)) == 0 and amount == 1 then
             amount = amount + 1
         end
         sourcePlayer:AddResource(API.GetResourceString(class, bind), CoreMath.Round(amount))
@@ -43,8 +43,18 @@ function OnTargetDamage(attackData)
     CheckQuestProgress(attackData)
 end
 
+function OnTrainingAbilityUsed(source, tag)
+    local attackData = {}
+    attackData.source = source
+    attackData.tags = {}
+    attackData.tags.id = tag
+    attackData.damage = {}
+    attackData.damage.amount = 1
+    CheckQuestProgress(attackData)
+end
+
 function OnClaimReward(player, class, bind)
-    if API.IsTrainingComplete(player, class, bind) and player:GetResource(API.GetResourceString(class, bind)) ~= 1 then
+    if API.IsClassCompleted(player, class, QuestData) then
     --#TODO Give reward
 
     -- Set Resource to 1 to be consider claimed
@@ -77,7 +87,7 @@ Init()
 --UTIL.TablePrint(QuestData)
 
 Events.Connect("TargetDummyDamage", OnTargetDamage)
-Events.Connect("TrainingAbilityUsed", CheckQuestProgress)
+Events.Connect("TrainingAbilityUsed", OnTrainingAbilityUsed)
 Events.ConnectForPlayer("TrainingClaim", OnClaimReward)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
