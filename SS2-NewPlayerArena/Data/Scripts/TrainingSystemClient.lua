@@ -108,7 +108,7 @@ function Init()
     Sidebar.AbilityPanels = abilityPanels
 end
 
-function UpdateAbilityInfo(panel, class, bind)
+function UpdateAbilityInfo(panel, class, bind, value)
     panel.icon:SetImage(QuestData[class][bind].abilityIcon)
             
     if TRAINING.IsTrainingComplete(LOCAL_PLAYER, class, bind) then
@@ -127,7 +127,10 @@ function UpdateAbilityInfo(panel, class, bind)
         end
 
         --panel.name.text = QuestData[class][bind].name
-        panel.count.text = string.format("%d/%d", TRAINING.GetTrainingProgress(LOCAL_PLAYER, class, bind), QuestData[class][bind].required)
+        if not value then
+            value = TRAINING.GetTrainingProgress(LOCAL_PLAYER, class, bind)
+        end
+        panel.count.text = string.format("%d/%d", value, QuestData[class][bind].required)
         panel.name.text = string.format(DESCRIPTIONS[QuestData[class][bind].type], QuestData[class][bind].name)
     end
 end
@@ -158,11 +161,11 @@ end
 function OnTrainingUpdated(player, class, bind, value)
     if player ~= Game.GetLocalPlayer() then return end
 
-    UpdateAbilityInfo(Quest_UI[class].AbilityPanels[bind], class, bind)
+    UpdateAbilityInfo(Quest_UI[class].AbilityPanels[bind], class, bind, value)
     --Quest_UI[class].AbilityPanels[bind].count.text = string.format("%d/%d", value, QuestData[class][bind].required)
 
     if class == LOCAL_PLAYER:GetResource(CONST.CLASS_RES) then
-        UpdateAbilityInfo(Sidebar.AbilityPanels[bind], class, bind)
+        UpdateAbilityInfo(Sidebar.AbilityPanels[bind], class, bind, value)
     end
 end
 
