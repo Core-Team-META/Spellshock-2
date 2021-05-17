@@ -17,7 +17,8 @@ end
 
 function API.IsTrainingComplete(player, class, bind, data)
     local currentProgress = player:GetResource(API.GetResourceString(class, bind))
-    if (currentProgress >= (data[class][bind].required + 1)) then
+    currentProgress = currentProgress <= 1 and currentProgress or currentProgress - 1
+    if (currentProgress >= data[class][bind].required) then
         return true
     end
     return false

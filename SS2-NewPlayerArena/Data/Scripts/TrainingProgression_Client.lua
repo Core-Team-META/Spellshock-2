@@ -16,7 +16,8 @@ end
 
 
 function API.GetTrainingProgress(player, class, bind)
-    return player:GetResource(TRAIN_API.GetResourceString(class, bind)) - 1
+    local currentProgress = player:GetResource(TRAIN_API.GetResourceString(class, bind))
+    return currentProgress <= 1 and currentProgress or currentProgress - 1
 end
 
 function API.IsTrainingComplete(player, class, bind)
