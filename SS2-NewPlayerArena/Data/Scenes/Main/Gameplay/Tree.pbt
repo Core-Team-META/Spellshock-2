@@ -34433,6 +34433,10 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "cs:ScorePerKill"
+          Int: 0
+        }
       }
     }
     TemplateAsset {
@@ -34554,6 +34558,10 @@ Objects {
             Y: 1
             Z: 1
           }
+        }
+        Overrides {
+          Name: "cs:ShowRoundMessage"
+          Bool: false
         }
       }
     }
@@ -35068,11 +35076,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 20
+      Float: 3
     }
     Overrides {
       Name: "cs:LocalLobbyTime"
