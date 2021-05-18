@@ -401,11 +401,11 @@ local function OnPlayerJoined(player)
     OnLoadCostumeData(player, cosmeticData)
     OnLoadEquippedCosmetic(player, cosmeticData)
 
-    if TEAM_MEMBER.IsTeamMember(player) then
-        AddAllCosmetics(player)
-    else
+   -- if TEAM_MEMBER.IsTeamMember(player) then
+     --   AddAllCosmetics(player)
+    --else
         AddDefaultCosmetics(player)
-    end
+  --  end
     
     local classId = cosmeticData[CONST.STORAGE.CLASS_FAVORITE] or math.random(5)
     CLASS_SELECTION.context.OnPlayerJoined(player, classId)
