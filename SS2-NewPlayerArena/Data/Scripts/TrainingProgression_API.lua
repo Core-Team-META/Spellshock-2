@@ -10,33 +10,31 @@ API.QUEST_TYPE = {
     Use = 3
 }
 
-
 function API.GetResourceString(class, bind)
     return API.KEY .. "_" .. tostring(class) .. "_" .. tostring(bind)
 end
 
 function API.IsTrainingComplete(player, class, bind, data)
     local currentProgress = player:GetResource(API.GetResourceString(class, bind))
-    currentProgress = currentProgress <= 1 and currentProgress or currentProgress - 1
-    if (currentProgress >= data[class][bind].required) then
+    local isComplete = false
+    if currentProgress == 1 then
+        isComplete = true
+    end
+    currentProgress = currentProgress == 1 and currentProgress or currentProgress - 1
+    if (currentProgress >= data[class][bind].required) or isComplete then
         return true
     end
     return false
 end
 
-
 function API.IsClassCompleted(player, class, QuestData)
     for bind = 1, 4 do
-        if
-            not API.IsTrainingComplete(player, class, bind, QuestData) and
-                player:GetResource(API.GetResourceString(class, bind)) ~= 1
-         then
+        if not API.IsTrainingComplete(player, class, bind, QuestData) then
             return false
         end
     end
     return true
 end
-
 
 function API.BuildTable(ClassMenuData)
     local tempTbl = {}
