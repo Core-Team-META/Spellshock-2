@@ -1050,6 +1050,12 @@ Assets {
               SubObjectId: 2716804742797173936
             }
           }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1118,6 +1124,12 @@ Assets {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 2716804742797173936
+            }
+          }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
             }
           }
         }
@@ -1229,6 +1241,12 @@ Assets {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 2716804742797173936
+            }
+          }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
             }
           }
         }

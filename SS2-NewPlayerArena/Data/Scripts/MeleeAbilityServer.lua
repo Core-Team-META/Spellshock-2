@@ -15,6 +15,7 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
@@ -138,7 +139,7 @@ function MeleeAttack(other)
 			source = ABILITY.owner,
 			position = pos,
 			rotation = rot,
-			tags = {id = "BasicAttack", ability = ABILITY, equipment = EQUIPMENT}
+			tags = {id = "BasicAttack", ability = ABILITY, equipment = ROOT}
 		}
 		COMBAT().ApplyDamage(attackData)
 

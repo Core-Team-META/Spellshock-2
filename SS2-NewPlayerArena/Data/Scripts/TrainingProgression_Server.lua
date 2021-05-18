@@ -17,6 +17,7 @@ function CheckQuestProgress(attackData)
         return
     end
     local class, bind
+    local equipment = attackData.tags.equipment
     if tagID ~= "BasicAttack" then
         local stringTable = UTIL.StringSplit("_", tagID)
         if #stringTable ~= 2 then
@@ -24,10 +25,11 @@ function CheckQuestProgress(attackData)
         end
         class = CONST.CLASS[string.upper(stringTable[1])]
         bind = CONST.BIND[stringTable[2]]
-    elseif tagID == "BasicAttack" and attackData.tags.equipment then
+    elseif tagID == "BasicAttack" and equipment and Object.IsValid(equipment) then
         bind = 5
-        class = attackData.tags.equipment:GetCustomProperty("ClassID")
+        class = equipment:GetCustomProperty("ClassID")
     end
+
     if not class or not bind then
         return
     end
