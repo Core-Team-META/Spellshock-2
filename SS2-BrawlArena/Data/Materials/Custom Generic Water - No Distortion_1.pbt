@@ -1,80 +1,123 @@
 Assets {
   Id: 3643490921711628289
-  Name: "Custom Generic Water - No Distortion_1"
+  Name: "Maya Generic Water - No Distortion_1"
   PlatformAssetType: 13
   SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 211372444056789047
     ParameterOverrides {
       Overrides {
+        Name: "opacity"
+        Float: 0.6
+      }
+      Overrides {
+        Name: "opacity distance"
+        Float: 0
+      }
+      Overrides {
+        Name: "foam shape"
+        Float: 2.37377119
+      }
+      Overrides {
+        Name: "foam shape max"
+        Float: 0.630376935
+      }
+      Overrides {
+        Name: "foam shape min"
+        Float: 0.265181363
+      }
+      Overrides {
+        Name: "normal foam brightness"
+        Float: 0.0622943267
+      }
+      Overrides {
+        Name: "wind direction"
+        Vector {
+          X: 1
+          Z: 0.2
+        }
+      }
+      Overrides {
         Name: "deep color"
         Color {
-          R: 0.0190540142
-          G: 0.0123699978
-          B: 0.0625
+          R: 0.0105119962
+          G: 0.0895466581
+          B: 0.146000013
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "foam color"
+        Color {
+          R: 0.72
+          G: 1
+          B: 0.986
           A: 1
         }
       }
       Overrides {
         Name: "shallow color"
         Color {
-          R: 0.178537548
-          G: 0.0258749761
-          B: 0.225000009
+          R: 0.0992882177
+          G: 0.295275331
+          B: 0.329861313
           A: 1
         }
       }
       Overrides {
-        Name: "emissive"
+        Name: "edge normal flattening"
+        Float: 1
+      }
+      Overrides {
+        Name: "normal amount"
+        Float: 1
+      }
+      Overrides {
+        Name: "normal distance"
         Float: 5
       }
       Overrides {
-        Name: "foam color"
-        Color {
-          R: 1
-          G: 0.7
-          B: 0.794999957
-          A: 1
+        Name: "material_scale"
+        Float: 1
+      }
+      Overrides {
+        Name: "u_tiles"
+        Float: 0.5
+      }
+      Overrides {
+        Name: "v_tiles"
+        Float: 0.5
+      }
+      Overrides {
+        Name: "edge foam brightness"
+        Float: 0.224603772
+      }
+      Overrides {
+        Name: "foam shift"
+        Float: 1
+      }
+      Overrides {
+        Name: "foam tightness"
+        Float: 10
+      }
+      Overrides {
+        Name: "object displacement amount"
+        Float: 1
+      }
+      Overrides {
+        Name: "flow direction"
+        Vector {
+          X: 0.2
+          Z: 0.2
         }
       }
       Overrides {
-        Name: "wind speed"
-        Float: 0
+        Name: "reflection brightness"
+        Float: 0.15
       }
       Overrides {
         Name: "speed"
-        Float: 0.05
-      }
-      Overrides {
-        Name: "opacity"
-        Float: 0.230721861
-      }
-      Overrides {
-        Name: "opacity distance"
-        Float: 152.444519
-      }
-      Overrides {
-        Name: "foam shape"
-        Float: 1.52640235
-      }
-      Overrides {
-        Name: "foam shape max"
-        Float: 0.67736131
-      }
-      Overrides {
-        Name: "foam shape min"
-        Float: 0.221512511
-      }
-      Overrides {
-        Name: "normal foam brightness"
-        Float: 0.143236
-      }
-      Overrides {
-        Name: "wind direction"
-        Vector {
-          X: 0.5
-          Z: 0.1
-        }
+        Float: 0
       }
     }
     Assets {

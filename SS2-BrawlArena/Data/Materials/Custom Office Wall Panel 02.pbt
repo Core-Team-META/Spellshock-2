@@ -1,6 +1,6 @@
 Assets {
   Id: 7604262368212927124
-  Name: "Custom Office Wall Panel 02"
+  Name: "Maya statue Office Wall Panel 02"
   PlatformAssetType: 13
   SerializationVersion: 84
   CustomMaterialAsset {
@@ -9,39 +9,28 @@ Assets {
       Overrides {
         Name: "color"
         Color {
-          R: 0.033775419
-          G: 0.224
-          B: 0.204977572
+          R: 0.0405606627
+          G: 0.269000024
+          B: 0.246156111
           A: 1
         }
       }
       Overrides {
         Name: "color_secondary"
         Color {
-          R: 0.0259346981
-          G: 0.101401702
-          B: 0.172
+          R: 0.0511154793
+          G: 0.199855551
+          B: 0.339000016
           A: 1
         }
       }
       Overrides {
-        Name: "gradient_color"
-        Color {
-          R: 0.49011296
-          G: 0.543290138
-          B: 0.767
-          A: 1
-        }
+        Name: "gradient_worldspace"
+        Bool: true
       }
       Overrides {
-        Name: "gradient_direction"
-        Vector {
-          Y: -1
-        }
-      }
-      Overrides {
-        Name: "gradient_falloff"
-        Float: 1
+        Name: "material_scale"
+        Float: 7
       }
     }
     Assets {

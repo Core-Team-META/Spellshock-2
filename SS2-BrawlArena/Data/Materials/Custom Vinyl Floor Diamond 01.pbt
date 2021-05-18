@@ -60,6 +60,10 @@ Assets {
         Name: "gradient_falloff"
         Float: 1
       }
+      Overrides {
+        Name: "material_scale"
+        Float: 25
+      }
     }
     Assets {
       Id: 9093111762299707185

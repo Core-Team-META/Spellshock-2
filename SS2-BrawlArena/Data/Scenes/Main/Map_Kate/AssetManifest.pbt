@@ -377,6 +377,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16376509536101035686
+  Name: "Text 06: S"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_018"
+  }
+}
+Assets {
   Id: 16372496464315477095
   Name: "Ring - Beveled Thick"
   PlatformAssetType: 1
@@ -446,6 +455,15 @@ Assets {
   PrimaryAsset {
     AssetType: "BlueprintAssetRef"
     AssetId: "fxbp_post_process_advanced_motion_blur"
+  }
+}
+Assets {
+  Id: 15942781329967116928
+  Name: "Text 01: O"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_014"
   }
 }
 Assets {
@@ -1016,6 +1034,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13001313809542465033
+  Name: "Container - Trapezoid Thick 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_container_triangular_Thick_ref"
+  }
+}
+Assets {
   Id: 12905923173550510229
   Name: "Cylinder - Polished"
   PlatformAssetType: 1
@@ -1214,6 +1241,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12029683888168922580
+  Name: "Text 06: ,"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_062"
+  }
+}
+Assets {
   Id: 11893514062468969040
   Name: "Bone Human Ribcage 01"
   PlatformAssetType: 1
@@ -1373,6 +1409,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_stain_top_001"
+  }
+}
+Assets {
+  Id: 11392267178736274211
+  Name: "Lens - Half"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half_lense_001"
   }
 }
 Assets {
@@ -1544,6 +1589,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prism_octagon_hq_001"
+  }
+}
+Assets {
+  Id: 10268579576729666886
+  Name: "Text 06: O"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_014"
   }
 }
 Assets {
@@ -1763,6 +1817,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9026586278082715440
+  Name: "Text 06: -"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_047"
+  }
+}
+Assets {
   Id: 9005202394387316338
   Name: "Craftsman Wall Interior 02 Corner"
   PlatformAssetType: 1
@@ -1805,6 +1868,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_008"
+  }
+}
+Assets {
+  Id: 8978493338261578446
+  Name: "Text 06: ["
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_053"
   }
 }
 Assets {
@@ -2123,6 +2195,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7436120957885304537
+  Name: "Thorn"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tooth_002"
+  }
+}
+Assets {
   Id: 7362232965091765999
   Name: "Bricks Mortar Thick 01"
   PlatformAssetType: 2
@@ -2348,15 +2429,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6308772142413739892
-  Name: "Branches Cluster Big"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_gen_branches_big_001"
-  }
-}
-Assets {
   Id: 6293838519925911015
   Name: "Horn"
   PlatformAssetType: 1
@@ -2543,6 +2615,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_001"
+  }
+}
+Assets {
+  Id: 5486060422813138016
+  Name: "Text 06: U"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_020"
   }
 }
 Assets {
@@ -3158,6 +3239,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2570005431541115469
+  Name: "Plane Ring - One Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_ring_001"
+  }
+}
+Assets {
   Id: 2560696021019413069
   Name: "Sci-fi Trim 01 End"
   PlatformAssetType: 1
@@ -3191,6 +3281,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_fire_volume_vfx"
+  }
+}
+Assets {
+  Id: 2480263629687941334
+  Name: "Text 06: J"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_009"
   }
 }
 Assets {
@@ -3509,6 +3608,15 @@ Assets {
   }
 }
 Assets {
+  Id: 657272299728706187
+  Name: "Text 03: J"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F5_Text_009"
+  }
+}
+Assets {
   Id: 588881991680217981
   Name: "Cone - Truncated Hollow Wide Thick"
   PlatformAssetType: 1
@@ -3563,6 +3671,15 @@ Assets {
   }
 }
 Assets {
+  Id: 264822942120462526
+  Name: "Text 02: \'"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "Text_057"
+  }
+}
+Assets {
   Id: 238039622760425136
   Name: "Fantasy Castle Floor 02"
   PlatformAssetType: 1
@@ -3587,6 +3704,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_001"
+  }
+}
+Assets {
+  Id: 170953270453983636
+  Name: "Text 06: \'"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F8_Text_057"
   }
 }
 Assets {
