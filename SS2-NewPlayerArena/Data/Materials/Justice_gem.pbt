@@ -2,7 +2,7 @@ Assets {
   Id: 7736855885758844635
   Name: "Justice_gem"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 6631081666212622438
     ParameterOverrides {
