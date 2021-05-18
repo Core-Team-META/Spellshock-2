@@ -116,7 +116,7 @@ end
 Init()
 --UTIL.TablePrint(QuestData)
 
-Events.Connect("TargetDummyDamage", OnTargetDamage)
+Events.Connect("CombatWrapAPI.OnDamageTaken", OnTargetDamage)
 Events.Connect("TrainingAbilityUsed", OnTrainingAbilityUsed)
 Events.ConnectForPlayer("TrainingClaim", OnClaimReward)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
