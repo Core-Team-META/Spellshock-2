@@ -121,6 +121,7 @@ function UpdateAbilityInfo(panel, class, bind, value)
         panel.name.visibility = Visibility.FORCE_OFF
         panel.checkmark.visibility = Visibility.INHERIT
         panel.complete.visibility = Visibility.INHERIT
+        return true
     else
         panel.count.visibility = Visibility.INHERIT
         panel.name.visibility = Visibility.INHERIT
@@ -133,13 +134,23 @@ function UpdateAbilityInfo(panel, class, bind, value)
         end
         panel.count.text = string.format("%d/%d", value, QuestData[class][bind].required)
         panel.name.text = string.format(DESCRIPTIONS[QuestData[class][bind].type], QuestData[class][bind].name)
+        return false
     end
 end
 
 function UpdateMenu()
     for class, classPanel in ipairs(Quest_UI) do
+        local notFullyComplete = false
         for bind, panel in ipairs(Quest_UI[class].AbilityPanels) do
-            UpdateAbilityInfo(panel, class, bind)
+            local isCompleted = UpdateAbilityInfo(panel, class, bind)
+
+            if not isCompleted then
+                notFullyComplete = true
+            end
+        end
+
+        if notFullyComplete == false then
+            classPanel.className.text = CONST.CLASS_NAME[class].." (COMPLETE!)"
         end
     end
 end
