@@ -173,6 +173,7 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 	local rotation = Rotation.New(normal, Vector3.UP)
 
 	if Object.IsValid(other) then
+		Events.Broadcast("TrainingAbilityUsed", WEAPON.owner, "Hunter_RMB")
 		if other:IsA("Player") then
 			local bomb = META_AP().SpawnAsset(CHARGED_PROJECTILE_BOMB, {position = position, rotation = rotation})
 			bomb.serverUserData.damage = bombDamage
