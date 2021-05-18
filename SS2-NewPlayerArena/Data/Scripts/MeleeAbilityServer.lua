@@ -241,7 +241,7 @@ function OnExecute(ability)
 			player.brakingDecelerationFalling = 4000
 
 			Task.Wait(1)
-
+			Events.Broadcast("TrainingAbilityUsed", ability.owner, "Warrior_RMB")
 			if Object.IsValid(player) then
 				player.desiredFacingMode = desiredFacingMode
 				player.brakingDecelerationFalling = brakingDecelerationFalling

@@ -74,6 +74,7 @@ function OnExecuteAbility(ability)
         player.brakingDecelerationWalking = lastBrakingDecelerationWalking
         player.maxWalkSpeed = lastMaxWalkingSpeed
         player:ResetVelocity()
+        Events.Broadcast("TrainingAbilityUsed", WEAPON.owner, "Assassin_RMB")
     end
 end
 

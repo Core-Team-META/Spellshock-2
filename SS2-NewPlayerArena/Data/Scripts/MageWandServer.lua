@@ -30,7 +30,7 @@ local AbilityMod = script:GetCustomProperty("AbilityMod")
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount = DAMAGE_TO_OBJECTS
-	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
+	if Object.IsValid(impactData.targetObject) and (impactData.targetObject:IsA("Player") or impactData.targetObject.name == "Collider") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 		amount = math.random(rangeTable.min, rangeTable.max)
 	else
@@ -58,7 +58,7 @@ function OnTargetImpact(theWeapon, impactData)
 		tags = {id = "BasicAttack", weapon = WEAPON}
 	}
 	COMBAT().ApplyDamage(attackData)
-
+	Events.Broadcast("TrainingAbilityUsed", WEAPON.owner, "Mage_RMB")
 	--[[
 	if impactData.targetObject:IsA("Player") then
 		print ("Doing the impulse!")
