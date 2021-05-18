@@ -2,7 +2,7 @@ Assets {
   Id: 1493619771870277314
   Name: "Custom Basic Material_tank hatch"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 10184847056121543272
     ParameterOverrides {

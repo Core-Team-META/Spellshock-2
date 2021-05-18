@@ -2,7 +2,7 @@ Assets {
   Id: 8617952432129533738
   Name: "Custom Vinyl Floor Stars 01"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 459895165796339283
     ParameterOverrides {
