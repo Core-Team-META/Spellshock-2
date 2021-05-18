@@ -269,7 +269,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "Congradulations!"
+      Label: "Congratulations!"
       Color {
         R: 1
         G: 1
@@ -5464,7 +5464,7 @@ Objects {
 }
 Objects {
   Id: 4657954750633721455
-  Name: "BUTTON"
+  Name: "EXIT BUTTON"
   Transform {
     Location {
     }
@@ -8716,6 +8716,12 @@ Objects {
       Name: "cs:Stinger"
       ObjectReference {
         SelfId: 13114596089732118816
+      }
+    }
+    Overrides {
+      Name: "cs:CloseButton"
+      ObjectReference {
+        SelfId: 4657954750633721455
       }
     }
   }
