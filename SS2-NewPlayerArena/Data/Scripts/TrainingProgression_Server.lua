@@ -62,12 +62,21 @@ function OnTrainingAbilityUsed(source, tag)
     CheckQuestProgress(attackData)
 end
 
-function OnClaimReward(player, class, bind)
+function OnClaimReward(player, class)
     if API.IsClassCompleted(player, class, QuestData) then
-    --#TODO Give reward
-
-    -- Set Resource to 1 to be consider claimed
-    --player:SetResource(API.GetResourceString(class, bind), 1)
+        --#TODO Needs rairty logic
+        local skinId = math.random(2, 12)
+        if skinId < 10 then
+            skinId = "0" .. tostring(skinId)
+        else
+            skinId = tostring(skinId)
+        end
+        Events.Broadcast("GETCOSMETIC", player, tostring(class) .. tostring(CONST.TEAM.ORC) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT))
+        Events.Broadcast("GETCOSMETIC", player, tostring(class) .. tostring(CONST.TEAM.ELF) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT))
+        for bind = 1, 4 do
+            player:SetResource(API.GetResourceString(class, bind), 1)
+        end
+        Events.BroadcastToPlayer("TrainingComplete", player, class, skinId)
     end
 end
 

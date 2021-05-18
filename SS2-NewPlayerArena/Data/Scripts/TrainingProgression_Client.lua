@@ -24,19 +24,23 @@ function API.IsTrainingComplete(player, class, bind)
     return TRAIN_API.IsTrainingComplete(player, class, bind, QuestData)
 end
 
-function API.ClaimReward(player, class, bind)
+function API.ClaimReward(player, class)
     if TRAIN_API.IsClassCompleted(player, class, QuestData) then
-        Events.BroadcastToServer("TrainingClaim", class, bind)
+        Events.BroadcastToServer("TrainingClaim", class)
     end
 end
 
 function OnResourceChanged(player, key, value)
     local keys = UTIL.StringSplit("_", key)
-    if keys[1] == TRAIN_API.KEY then
+    if keys[1] == TRAIN_API.KEY and value ~= 1 then
         local class = tonumber(keys[2])
         local bind = tonumber(keys[3])
+        local isClassComplete = TRAIN_API.IsClassCompleted(player, class, QuestData)
         if class and bind and value > 1 then
-            Events.Broadcast("TrainingUpdated", player, class, bind, API.GetTrainingProgress(player, class, bind), TRAIN_API.IsClassCompleted(player, class, QuestData))
+            Events.Broadcast("TrainingUpdated", player, class, bind, API.GetTrainingProgress(player, class, bind), isClassComplete)
+        end
+        if isClassComplete then
+            API.ClaimReward(player, class)
         end
     end
 end
