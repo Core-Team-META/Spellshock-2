@@ -71,12 +71,24 @@ function OnClaimReward(player, class)
         else
             skinId = tostring(skinId)
         end
-        Events.Broadcast("GETCOSMETIC", player, tostring(class) .. tostring(CONST.TEAM.ORC) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT))
-        Events.Broadcast("GETCOSMETIC", player, tostring(class) .. tostring(CONST.TEAM.ELF) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT))
-        for bind = 1, 4 do
+        Events.Broadcast(
+            "GETCOSMETIC",
+            player,
+            tostring(class) .. tostring(CONST.TEAM.ORC) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT)
+        )
+        Events.Broadcast(
+            "GETCOSMETIC",
+            player,
+            tostring(class) .. tostring(CONST.TEAM.ELF) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT)
+        )
+        for bind = 1, 6 do
             player:SetResource(API.GetResourceString(class, bind), 1)
         end
         Events.BroadcastToPlayer(player, "TrainingComplete", class, skinId)
+        -- All Classes completed
+        if API.AreAllClassesCompleted(player, QuestData) then
+            player:AddResource(CONST.GOLD, 10000)
+        end
     end
 end
 

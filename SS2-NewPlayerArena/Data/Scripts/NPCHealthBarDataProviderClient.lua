@@ -33,6 +33,10 @@ function GetMaxHealth()
 	return MAX_HEALTH
 end
 
+function GetName()
+	return ROOT:GetCustomProperty("Name")
+end
+
 function GetTeam()
 	if Object.IsValid(ROOT) then
 		return ROOT:GetCustomProperty("Team")

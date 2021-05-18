@@ -36,6 +36,15 @@ function API.IsClassCompleted(player, class, QuestData)
     return true
 end
 
+function API.AreAllClassesCompleted(player, QuestData)
+    for _, class in pairs(CONST.CLASS) do
+        if not API.IsClassCompleted(player, class, QuestData) then
+            return false
+        end
+    end
+    return true
+end
+
 function API.BuildTable(ClassMenuData)
     local tempTbl = {}
     for _, classData in ipairs(ClassMenuData:GetChildren()) do

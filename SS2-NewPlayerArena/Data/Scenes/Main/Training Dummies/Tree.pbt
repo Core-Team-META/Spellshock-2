@@ -184,13 +184,6 @@ Objects {
   Id: 5906946194111199268
   Name: "Healer Test Dummy"
   Transform {
-    Location {
-      X: -5084.88281
-      Y: -2891.33545
-      Z: 1897.0105
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -225,14 +218,6 @@ Objects {
           Name: "Rotation"
           Rotator {
             Yaw: 180
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
         Overrides {
@@ -296,9 +281,9 @@ Objects {
         Overrides {
           Name: "Scale"
           Vector {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
           }
         }
         Overrides {
@@ -361,10 +346,14 @@ Objects {
         Overrides {
           Name: "Scale"
           Vector {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
           }
+        }
+        Overrides {
+          Name: "cs:Team"
+          Int: 1
         }
       }
     }

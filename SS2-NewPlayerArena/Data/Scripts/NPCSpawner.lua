@@ -51,6 +51,7 @@ function Spawn()
 			local rot = point:GetWorldRotation()
 
 			local newMinion = World.SpawnAsset(minionTemplate, {position = pos, rotation = rot})
+			newMinion:SetWorldScale(newMinion:GetWorldScale() * 1.5)
 			newMinion.parent = ActiveDummies
 			if SPAWN_VFX then
 				SpawnVisualEffect(SPAWN_VFX, pos, rot)

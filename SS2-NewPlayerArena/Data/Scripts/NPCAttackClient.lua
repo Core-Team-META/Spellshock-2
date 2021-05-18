@@ -9,6 +9,13 @@
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 local Dummy = script:GetCustomProperty("Dummy"):WaitForObject()
 local ClientContext = script:GetCustomProperty("ClientContext"):WaitForObject()
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+local team = ROOT:GetCustomProperty("Team")
+
+local HealSign = nil
+if script:GetCustomProperty("HealSign") then
+	HealSign = script:GetCustomProperty("HealSign"):WaitForObject()
+end
 local currentTask, sfxTemp, sheep
 
 local SheepTemplate = script:GetCustomProperty("SheepTemp")
@@ -101,4 +108,15 @@ function SpawnAsset(template, pos, rot)
 	if spawnedVfx and spawnedVfx.lifeSpan <= 0 then
 		spawnedVfx.lifeSpan = 1.5
 	end
+end
+
+function Tick()
+	if HealSign then
+		if LOCAL_PLAYER.team == team and HealSign and Object.IsValid(HealSign) then
+			HealSign.visibility = Visibility.FORCE_ON
+		elseif HealSign and Object.IsValid(HealSign) then
+			HealSign.visibility = Visibility.FORCE_OFF
+		end
+	end
+	Task.Wait(1)
 end

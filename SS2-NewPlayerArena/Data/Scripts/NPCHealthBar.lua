@@ -12,6 +12,10 @@
 --]]
 local FILL_BAR = script:GetCustomProperty("Fill"):WaitForObject()
 local LABEL = script:GetCustomProperty("Label"):WaitForObject()
+local NAME = script:GetCustomProperty("Name"):WaitForObject()
+local ROOT = script:GetCustomProperty("NPCHealthBar"):WaitForObject()
+
+
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 while not script.parent do
@@ -36,13 +40,18 @@ function Tick()
 	local hp = _data:GetHealth()
 	local maxHP = _data:GetMaxHealth()
 	local team = _data:GetTeam()
+	local name = _data:GetName()
 	if hp <= 0 then
 		script.parent.visibility = Visibility.FORCE_OFF
 		return
 	else
 		script.parent.visibility = Visibility.INHERIT
 	end
-
+	if team == LOCAL_PLAYER.team then
+		NAME.text = "Injured Dummy"
+	else
+		NAME.text = "Enemy Dummy"
+	end
 	LABEL.text = CoreMath.Round(hp) .. " / " .. CoreMath.Round(maxHP)
 
 	local percent = hp / maxHP
@@ -58,3 +67,5 @@ function Tick()
 
 	FILL_BAR.team = _data:GetTeam()
 end
+
+ROOT:SetWorldScale(ROOT:GetWorldScale() * 0.5)

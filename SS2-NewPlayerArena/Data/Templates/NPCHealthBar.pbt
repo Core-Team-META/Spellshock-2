@@ -62,6 +62,18 @@ Assets {
               SubObjectId: 11664256979501536535
             }
           }
+          Overrides {
+            Name: "cs:Name"
+            ObjectReference {
+              SubObjectId: 9685409460266157624
+            }
+          }
+          Overrides {
+            Name: "cs:NPCHealthBar"
+            ObjectReference {
+              SubObjectId: 14705474953321211921
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
