@@ -14,7 +14,6 @@ function Init()
     QuestData = TRAIN_API.BuildTable(ClassMenuData)
 end
 
-
 function API.GetTrainingProgress(player, class, bind)
     local currentProgress = player:GetResource(TRAIN_API.GetResourceString(class, bind))
     return currentProgress <= 1 and currentProgress or currentProgress - 1
@@ -30,6 +29,10 @@ function API.ClaimReward(player, class)
     end
 end
 
+function API.IsClassComplete(player, class)
+    return TRAIN_API.IsClassCompleted(player, class, QuestData)
+end
+
 function OnResourceChanged(player, key, value)
     local keys = UTIL.StringSplit("_", key)
     if keys[1] == TRAIN_API.KEY and value ~= 1 then
@@ -37,7 +40,14 @@ function OnResourceChanged(player, key, value)
         local bind = tonumber(keys[3])
         local isClassComplete = TRAIN_API.IsClassCompleted(player, class, QuestData)
         if class and bind and value > 1 then
-            Events.Broadcast("TrainingUpdated", player, class, bind, API.GetTrainingProgress(player, class, bind), isClassComplete)
+            Events.Broadcast(
+                "TrainingUpdated",
+                player,
+                class,
+                bind,
+                API.GetTrainingProgress(player, class, bind),
+                isClassComplete
+            )
         end
         if isClassComplete then
             API.ClaimReward(player, class)
