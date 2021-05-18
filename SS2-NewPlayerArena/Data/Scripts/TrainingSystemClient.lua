@@ -39,7 +39,7 @@ function Init()
         QuestData[class].className = classData.name
         for _, abilityData in ipairs(classData:GetChildren()) do
             local bind = CONST.BIND[abilityData:GetCustomProperty("Bind")]
-            if bind < 5 then
+            if bind < 7 then
                 QuestData[class][bind] = {}
                 local questType = abilityData:GetCustomProperty("QuestType")
                 if not QUEST_TYPE[questType] then
@@ -83,6 +83,8 @@ function Init()
             Quest_UI[classIndex].AbilityPanels = abilityPanels
         end
     end
+
+    UTIL.TablePrint(Quest_UI)
 
     local abilityPanels = {}
     --[[while LOCAL_PLAYER:GetResource(CONST.CLASS_RES) == 0 do
