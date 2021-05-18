@@ -76,7 +76,7 @@ function OnClaimReward(player, class)
         for bind = 1, 4 do
             player:SetResource(API.GetResourceString(class, bind), 1)
         end
-        Events.BroadcastToPlayer("TrainingComplete", player, class, skinId)
+        Events.BroadcastToPlayer(player, "TrainingComplete", class, skinId)
     end
 end
 

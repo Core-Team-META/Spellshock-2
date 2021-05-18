@@ -2,6 +2,9 @@ local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local TrainingMenuPanel = script:GetCustomProperty("TrainingMenuPanel"):WaitForObject()
 local TrainingSidePanel = script:GetCustomProperty("TrainingSidePanel"):WaitForObject()
+local MessagePanel = script:GetCustomProperty("MessagePanel"):WaitForObject()
+local BannerText = MessagePanel:GetCustomProperty("BannerText"):WaitForObject()
+local Stinger = script:GetCustomProperty("Stinger"):WaitForObject()
 
 while not _G.TRAINING_PROGRESSION do
     Task.Wait()
@@ -27,6 +30,7 @@ local DESCRIPTIONS = {
 }
 
 function Init()
+    MessagePanel.visibility = Visibility.FORCE_OFF
     for _, classData in ipairs(ClassMenuData:GetChildren()) do
         local class = CONST.CLASS[classData:GetCustomProperty("ClassID")]
         QuestData[class] = {}
@@ -177,10 +181,20 @@ function OnResourceChanged(player, name, classID)
     end
 end
 
+function OnClassTrainingComplete(class)
+    BannerText.text = string.format("Your training for the %s is complete", QuestData[class].className)
+    MessagePanel.visibility = Visibility.INHERIT
+    Stinger:Play()
+    Task.Spawn( function ()
+        MessagePanel.visibility = Visibility.FORCE_OFF
+    end, 5)
+end
+
 Init()
 
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("TrainingUpdated", OnTrainingUpdated)
+Events.Connect("TrainingComplete", OnClassTrainingComplete)
 
 if LOCAL_PLAYER:GetResource(CONST.CLASS_RES) ~= 0 then
     OnResourceChanged(nil, CONST.CLASS_RES, LOCAL_PLAYER:GetResource(CONST.CLASS_RES))
