@@ -2,7 +2,7 @@ Assets {
   Id: 16631753906885171846
   Name: "Trim BR Base Material from Main Street Foundation 01"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 14766815770986992196
     ParameterOverrides {

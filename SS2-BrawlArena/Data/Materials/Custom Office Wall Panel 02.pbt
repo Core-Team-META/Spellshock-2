@@ -2,7 +2,7 @@ Assets {
   Id: 7604262368212927124
   Name: "Custom Office Wall Panel 02"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 9460137000938941232
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 6706994979498537532
   Name: "Custom Window Blind Horizontal 01_celestial"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 10653414963470501660
     ParameterOverrides {
