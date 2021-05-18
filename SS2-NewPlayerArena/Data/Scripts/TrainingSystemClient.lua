@@ -5,6 +5,7 @@ local TrainingSidePanel = script:GetCustomProperty("TrainingSidePanel"):WaitForO
 local MessagePanel = script:GetCustomProperty("MessagePanel"):WaitForObject()
 local BannerText = MessagePanel:GetCustomProperty("BannerText"):WaitForObject()
 local Stinger = script:GetCustomProperty("Stinger"):WaitForObject()
+local CloseButton = script:GetCustomProperty("CloseButton"):WaitForObject()
 
 while not _G.TRAINING_PROGRESSION do
     Task.Wait()
@@ -170,6 +171,12 @@ function OnMenuChanged(oldMenu, newMenu)
 	end
 end
 
+function OnCloseButtonClicked(thisButton)
+    if _G.CurrentMenu == _G.MENU_TABLE["Quest"] then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    end
+end
+
 function OnTrainingUpdated(player, class, bind, value)
     if player ~= Game.GetLocalPlayer() then return end
 
@@ -206,6 +213,7 @@ Init()
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("TrainingUpdated", OnTrainingUpdated)
 Events.Connect("TrainingComplete", OnClassTrainingComplete)
+CloseButton.clickedEvent:Connect(OnCloseButtonClicked)
 
 if LOCAL_PLAYER:GetResource(CONST.CLASS_RES) ~= 0 then
     OnResourceChanged(nil, CONST.CLASS_RES, LOCAL_PLAYER:GetResource(CONST.CLASS_RES))
