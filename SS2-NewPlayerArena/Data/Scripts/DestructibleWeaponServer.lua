@@ -20,7 +20,7 @@ local function META_AP()
 end
 
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject(1) or script.parent
-
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 local DAMAGE_TO_PLAYERS = script:GetCustomProperty("DamageRange")
 local DEFAULT_DamageRange = {min=DAMAGE_TO_PLAYERS.x, max=DAMAGE_TO_PLAYERS.y}
 local DAMAGE_TO_OBJECTS = script:GetCustomProperty("DamageToObjects")
@@ -55,7 +55,7 @@ function OnTargetImpact(theWeapon, impactData)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "BasicAttack", weapon = WEAPON}
+		tags = {id = "BasicAttack", weapon = WEAPON, equipment = EQUIPMENT}
 	}
 	COMBAT().ApplyDamage(attackData)
 	

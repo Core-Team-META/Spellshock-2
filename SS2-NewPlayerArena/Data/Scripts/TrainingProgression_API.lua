@@ -10,6 +10,8 @@ API.QUEST_TYPE = {
     Use = 3
 }
 
+API.BIND_AMOUNT = 6
+
 function API.GetResourceString(class, bind)
     return API.KEY .. "_" .. tostring(class) .. "_" .. tostring(bind)
 end
@@ -28,7 +30,7 @@ function API.IsTrainingComplete(player, class, bind, data)
 end
 
 function API.IsClassCompleted(player, class, QuestData)
-    for bind = 1, 4 do
+    for bind = 1, API.BIND_AMOUNT do
         if not API.IsTrainingComplete(player, class, bind, QuestData) then
             return false
         end
@@ -52,7 +54,7 @@ function API.BuildTable(ClassMenuData)
         tempTbl[class] = {}
         for _, abilityData in ipairs(classData:GetChildren()) do
             local bind = CONST.BIND[abilityData:GetCustomProperty("Bind")]
-            if bind < 5 then
+            if bind <= API.BIND_AMOUNT then
                 tempTbl[class][bind] = {}
                 local questType = abilityData:GetCustomProperty("QuestType")
                 if not API.QUEST_TYPE[questType] then

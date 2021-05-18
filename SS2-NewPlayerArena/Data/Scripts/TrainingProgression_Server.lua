@@ -16,14 +16,18 @@ function CheckQuestProgress(attackData)
     if not tagID then
         return
     end
-    local stringTable = UTIL.StringSplit("_", tagID)
-
-    if #stringTable ~= 2 then
-        return
+    local class, bind
+    if tagID ~= "BasicAttack" then
+        local stringTable = UTIL.StringSplit("_", tagID)
+        if #stringTable ~= 2 then
+            return
+        end
+        class = CONST.CLASS[string.upper(stringTable[1])]
+        bind = CONST.BIND[stringTable[2]]
+    elseif tagID == "BasicAttack" and attackData.tags.equipment then
+        bind = 5
+        class = attackData.tags.equipment:GetCustomProperty("ClassID")
     end
-    local class = CONST.CLASS[string.upper(stringTable[1])]
-    local bind = CONST.BIND[stringTable[2]]
-
     if not class or not bind then
         return
     end
@@ -81,7 +85,7 @@ function OnClaimReward(player, class)
             player,
             tostring(class) .. tostring(CONST.TEAM.ELF) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT)
         )
-        for bind = 1, 6 do
+        for bind = 1, API.BIND_AMOUNT do
             player:SetResource(API.GetResourceString(class, bind), 1)
         end
         Events.BroadcastToPlayer(player, "TrainingComplete", class, skinId)

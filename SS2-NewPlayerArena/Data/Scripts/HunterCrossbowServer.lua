@@ -15,6 +15,7 @@ end
 
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject()
 local CHARGED_WEAPON = script:GetCustomProperty("ChargedWeapon"):WaitForObject()
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local SHOOT_ABILITY = script:GetCustomProperty("ShootAbility"):WaitForObject()
 local CHARGED_PROJECTILE_BOMB = script:GetCustomProperty("ChargedProjectileBomb")
@@ -76,8 +77,9 @@ function OnTargetImpact(theWeapon, impactData)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "BasicAttack", weapon = WEAPON}
+		tags = {id = "BasicAttack", weapon = WEAPON, equipment = EQUIPMENT}
 	}
+	
 	COMBAT().ApplyDamage(attackData)
 	
 	if theWeapon.owner:GetResource("CLASS_MAP") == META_AP().HUNTER and impactData.targetObject:IsA("Player") then
