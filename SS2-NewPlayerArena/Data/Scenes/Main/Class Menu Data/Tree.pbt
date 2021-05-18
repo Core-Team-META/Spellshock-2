@@ -443,7 +443,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 500
     }
   }
   Collidable_v2 {
@@ -1785,7 +1785,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 150
     }
   }
   Collidable_v2 {
@@ -2020,7 +2020,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 150
     }
   }
   Collidable_v2 {
@@ -3952,7 +3952,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 200
     }
   }
   Collidable_v2 {
