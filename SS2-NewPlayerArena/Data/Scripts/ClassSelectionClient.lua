@@ -75,6 +75,12 @@ while not _G.CurrentMenu do
 	Task.Wait()
 end
 
+while not _G.TRAINING_PROGRESSION do
+    Task.Wait()
+end
+
+local TRAINING = _G.TRAINING_PROGRESSION
+
 local HelperClassButtonTemplate = script:GetCustomProperty("Helper_Class_Button")
 local HelperAbilityModTemplate = script:GetCustomProperty("Helper_AbilityModPanel")
 local Helper_LifeTimeStatLine = script:GetCustomProperty("Helper_LifeTimeStatLine")
@@ -128,6 +134,23 @@ function OnMenuChanged(oldMenu, newMenu)
 			if META_AP()[data.ClassID] == currentClass then
 				newButton = classButton
 			end
+
+			local checkMark = classButton.clientUserData.panel:GetCustomProperty("CheckmarkPanel"):WaitForObject()
+			checkMark.visibility = Visibility.FORCE_OFF
+
+			local notFullyComplete = false
+			for bind = 1, 6 do
+				local isCompleted = TRAINING.IsClassComplete(LOCAL_PLAYER, META_AP()[data.ClassID], bind)
+	
+				if not isCompleted then
+					notFullyComplete = true
+				end
+			end
+
+			if notFullyComplete == false then
+				checkMark.visibility = Visibility.INHERIT
+			end
+
 			classButton.clientUserData.level.text = tostring(META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[data.ClassID]))
 		end
 
