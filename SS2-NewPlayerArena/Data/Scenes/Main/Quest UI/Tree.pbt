@@ -666,8 +666,8 @@ Objects {
   }
   Control {
     Width: 404
-    Height: 40
-    UIY: -29.390625
+    Height: 45
+    UIY: -50.2128906
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -726,7 +726,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -3022,7 +3022,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "All task have been completed for this class"
+      Label: "All tasks have been completed for this class"
       Color {
         R: 1
         G: 0.609006643
