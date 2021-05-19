@@ -1,13 +1,4 @@
 Assets {
-  Id: 18292448005538599011
-  Name: "Main Street Pillar 01 - Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_urb_dtn_mst_part_pillar_small_01_ref"
-  }
-}
-Assets {
   Id: 18257460502441294512
   Name: "Prism - 3-Sided Convex"
   PlatformAssetType: 1
@@ -980,6 +971,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13573796372134547963
+  Name: "Hiragana Font 1: \357\275\236"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "meyiro_block_hiragana_088"
+  }
+}
+Assets {
   Id: 13490705285119382153
   Name: "Rock 02"
   PlatformAssetType: 1
@@ -1148,6 +1148,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_001"
+  }
+}
+Assets {
+  Id: 12336055700043431724
+  Name: "Main Street Wall 02 - Corner Trim 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_wall_002_corner_02_ref"
   }
 }
 Assets {
@@ -1556,12 +1565,30 @@ Assets {
   }
 }
 Assets {
+  Id: 10396917736734746205
+  Name: "Main Street Foundation 01 - Corner"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_pillar_base_001_ref"
+  }
+}
+Assets {
   Id: 10378479423839914021
   Name: "Metal Iron 01"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_001"
+  }
+}
+Assets {
+  Id: 10348504537208471755
+  Name: "Pipe - 4-Sided Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_4_sided_thin_001"
   }
 }
 Assets {
@@ -2321,6 +2348,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6723942016239750273
+  Name: "Whitebox Stairs 01 Straight"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_gen_whitebox_stairs_001"
+  }
+}
+Assets {
   Id: 6719239131406999789
   Name: "Pipe - 6-Sided - Rounded"
   PlatformAssetType: 1
@@ -2429,6 +2465,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6330433717258016822
+  Name: "Pipe - 4-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_4_sided_001"
+  }
+}
+Assets {
   Id: 6293838519925911015
   Name: "Horn"
   PlatformAssetType: 1
@@ -2498,6 +2543,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_modern_sight_forw_002"
+  }
+}
+Assets {
+  Id: 6021347779703637982
+  Name: "Main Street Trim 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_trim_005_ref"
   }
 }
 Assets {
@@ -3551,6 +3605,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_barrel_001"
+  }
+}
+Assets {
+  Id: 901541979513849367
+  Name: "Bush 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bush_generic_001"
   }
 }
 Assets {

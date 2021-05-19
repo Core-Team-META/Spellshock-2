@@ -1,6 +1,6 @@
 Assets {
   Id: 5002343900690964419
-  Name: "Custom Vinyl Floor Diamond 01"
+  Name: "Maya Vinyl Floor Diamond 01"
   PlatformAssetType: 13
   SerializationVersion: 85
   CustomMaterialAsset {
@@ -54,7 +54,7 @@ Assets {
       }
       Overrides {
         Name: "gradient_shift"
-        Float: 0.584489584
+        Float: 1
       }
       Overrides {
         Name: "gradient_falloff"

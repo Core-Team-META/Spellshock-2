@@ -1,8 +1,8 @@
 Assets {
   Id: 10998095340503322171
-  Name: "Metal Clear Coat Reflector Triangle 02"
+  Name: "Maya Clear Coat Reflector Triangle 02"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 15595452886975173147
     ParameterOverrides {

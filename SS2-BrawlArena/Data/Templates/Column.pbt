@@ -673,14 +673,14 @@ Assets {
         Name: "Main Street Foundation 01 - Corner"
         Transform {
           Location {
-            X: 0.212750673
-            Y: 61.9016228
+            X: 0.208933607
+            Y: 16.4959278
           }
           Rotation {
           }
           Scale {
-            X: 4.40511894
-            Y: 4.40511894
+            X: 4.4052124
+            Y: 5.12079334
             Z: 4.40511894
           }
         }
@@ -724,17 +724,17 @@ Assets {
         Name: "Main Street Foundation 01 - Corner"
         Transform {
           Location {
-            X: 0.203125
-            Y: 61.90625
-            Z: 2525.51025
+            X: 0.5234375
+            Y: 18.5234375
+            Z: 2525.46533
           }
           Rotation {
             Yaw: 3.4150944e-06
           }
           Scale {
-            X: 2.78330326
-            Y: 3.25556874
-            Z: -0.910327315
+            X: 2.78332186
+            Y: 4.0331707
+            Z: -0.910328209
           }
         }
         ParentId: 17741619918487123253
