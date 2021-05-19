@@ -275,6 +275,10 @@ Objects {
         SelfId: 9142192154120443476
       }
     }
+    Overrides {
+      Name: "cs:BroadcastEnabled"
+      Bool: true
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

@@ -26,7 +26,8 @@ _G.MENU_TABLE = {
 	PerkShop = 8,
 	DailyShop = 9,
 	Tutorial_Slides = 10,
-	Quest = 11
+	Quest = 11,
+	TrainingComplete = 12
 }
 
 function SpamPrevent()
