@@ -94,6 +94,7 @@ function OnClaimReward(player, class)
         -- All Classes completed
         if API.AreAllClassesCompleted(player, QuestData) then
             player:AddResource(CONST.GOLD, 10000)
+            Events.BroadcastToPlayer(player, "AllTrainingComplete")
         end
     end
 end
