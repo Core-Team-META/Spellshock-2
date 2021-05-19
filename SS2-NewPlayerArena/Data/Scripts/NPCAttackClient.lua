@@ -35,7 +35,7 @@ local STATE_DISABLED = 8
 function OnPropertyChanged(object, propertyName)
 	if (propertyName == "AID") then
 		local state = ROOT:GetCustomProperty("AID")
-
+		if state == "" then return end
 		--#TODO need to make sheep disappear on damage
 		if currentTask then
 			currentTask:Cancel()
