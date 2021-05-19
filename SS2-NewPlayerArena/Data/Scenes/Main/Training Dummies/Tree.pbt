@@ -1031,7 +1031,7 @@ Objects {
     }
     Overrides {
       Name: "cs:RespawnCount"
-      Int: 3
+      Int: 8
     }
     Overrides {
       Name: "cs:RespawnCount:tooltip"
