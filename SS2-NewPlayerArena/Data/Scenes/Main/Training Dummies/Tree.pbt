@@ -88,6 +88,7 @@ Objects {
   }
   ParentId: 4061218764847954597
   ChildIds: 12330057494269597211
+  ChildIds: 12892440920175972228
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -102,6 +103,138 @@ Objects {
   }
   NetworkContext {
     Type: Server
+  }
+}
+Objects {
+  Id: 12892440920175972228
+  Name: "OrcMarkers"
+  Transform {
+    Location {
+      X: -5640.98193
+      Y: -4162.30713
+      Z: 3549.82813
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9300596346937838033
+  ChildIds: 15145073142100561586
+  ChildIds: 7975725687312200729
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7975725687312200729
+  Name: "Marker2"
+  Transform {
+    Location {
+      Y: 677.411621
+    }
+    Rotation {
+      Pitch: -0.625365257
+      Yaw: 100.179718
+      Roll: 3.95979548
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12892440920175972228
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15853221351069871392
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15145073142100561586
+  Name: "Marker1"
+  Transform {
+    Location {
+      Y: -677.411621
+    }
+    Rotation {
+      Pitch: -0.625365257
+      Yaw: 100.17971
+      Roll: 3.95979476
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12892440920175972228
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15853221351069871392
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
   }
 }
 Objects {
@@ -146,8 +279,8 @@ Objects {
   }
 }
 Objects {
-  Id: 8627705420451481647
-  Name: "Active Dummies"
+  Id: 8537565592430760203
+  Name: "Active Targets"
   Transform {
     Location {
     }
@@ -160,10 +293,6 @@ Objects {
     }
   }
   ParentId: 4061218764847954597
-  ChildIds: 7440611720845950457
-  ChildIds: 13386192757385963611
-  ChildIds: 3437231407619509646
-  ChildIds: 5906946194111199268
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -181,6 +310,383 @@ Objects {
   }
 }
 Objects {
+  Id: 12175219969688861728
+  Name: "Target Spawner"
+  Transform {
+    Location {
+      X: -3719.60596
+      Y: -3575.55151
+      Z: 1877.04883
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4061218764847954597
+  ChildIds: 3916534422610442399
+  ChildIds: 2032783929528242907
+  ChildIds: 13177032228008847533
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 2115067058074172231
+    SubobjectId: 16550237567989222799
+    InstanceId: 1510595699315866409
+    TemplateId: 9715208150814216499
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 13177032228008847533
+  Name: "SpawnPoints"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12175219969688861728
+  ChildIds: 13036431244330522605
+  ChildIds: 6424029503060041436
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 14392909844659767016
+    SubobjectId: 4560343318950424608
+    InstanceId: 1510595699315866409
+    TemplateId: 9715208150814216499
+  }
+}
+Objects {
+  Id: 6424029503060041436
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: -1894.50586
+      Y: 116.979492
+      Z: 1702.99585
+    }
+    Rotation {
+      Yaw: 3.80170807e-16
+      Roll: -2.66804285e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13177032228008847533
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DevMinion"
+      AssetReference {
+        Id: 12594554804176722083
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13043298331982480779
+    }
+  }
+  InstanceHistory {
+    SelfId: 10504180642049449591
+    SubobjectId: 7580160202273646783
+    InstanceId: 1510595699315866409
+    TemplateId: 9715208150814216499
+  }
+}
+Objects {
+  Id: 13036431244330522605
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 3192.80469
+      Y: 116.979492
+      Z: 1702.99585
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13177032228008847533
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DevMinion"
+      AssetReference {
+        Id: 12594554804176722083
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 13043298331982480779
+    }
+  }
+  InstanceHistory {
+    SelfId: 10504180642049449591
+    SubobjectId: 7580160202273646783
+    InstanceId: 1510595699315866409
+    TemplateId: 9715208150814216499
+  }
+}
+Objects {
+  Id: 2032783929528242907
+  Name: "NPCCampBehavior_PeriodicSpawn"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12175219969688861728
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:InitialDelay"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:RespawnCooldown"
+      Float: 10
+    }
+    Overrides {
+      Name: "cs:RespawnCount"
+      Int: 1
+    }
+    Overrides {
+      Name: "cs:RespawnCount:tooltip"
+      String: "Respawn Dummies, when there are less than this number"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 12200778004173910073
+    }
+  }
+  InstanceHistory {
+    SelfId: 16128773779463594542
+    SubobjectId: 2819413231850312934
+    InstanceId: 1510595699315866409
+    TemplateId: 9715208150814216499
+  }
+}
+Objects {
+  Id: 3916534422610442399
+  Name: "NPCSpawner"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12175219969688861728
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Team"
+      Int: 2
+    }
+    Overrides {
+      Name: "cs:TemplateChoiceRandom"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ActiveDummies"
+      ObjectReference {
+        SelfId: 8537565592430760203
+      }
+    }
+    Overrides {
+      Name: "cs:FlyingDummy"
+      ObjectReference {
+      }
+    }
+    Overrides {
+      Name: "cs:Scale"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:TemplateChoiceRandom:tooltip"
+      String: "NPC Spawn Points can have multiple templates as custom properties. When spawning, one of those is selected. If the choice is not random, then it will be deterministically sequential."
+    }
+    Overrides {
+      Name: "cs:Team:tooltip"
+      String: "The team of the NPCs when they spawn."
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11442145144906346287
+    }
+  }
+  InstanceHistory {
+    SelfId: 16374750860944026756
+    SubobjectId: 2002613162895055436
+    InstanceId: 1510595699315866409
+    TemplateId: 9715208150814216499
+  }
+}
+Objects {
+  Id: 8627705420451481647
+  Name: "Active Dummies"
+  Transform {
+    Location {
+      X: -3134.78735
+      Y: -4343.07666
+      Z: 1883.24414
+    }
+    Rotation {
+      Yaw: 2.521626
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4061218764847954597
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5380107591291187923
+  Name: "ActiveDummiesRotate"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4061218764847954597
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ActiveDummies"
+      ObjectReference {
+        SelfId: 8627705420451481647
+      }
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6378612074389842525
+    }
+  }
+}
+Objects {
   Id: 5906946194111199268
   Name: "Healer Test Dummy"
   Transform {
@@ -190,7 +696,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8627705420451481647
+  ParentId: 4061218764847954597
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -217,12 +723,20 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 180
+            Yaw: -179.999985
           }
         }
         Overrides {
           Name: "cs:Team"
           Int: 2
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
+          }
         }
       }
     }
@@ -248,7 +762,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8627705420451481647
+  ParentId: 4061218764847954597
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -275,7 +789,7 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 180
+            Yaw: -179.999985
           }
         }
         Overrides {
@@ -314,7 +828,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8627705420451481647
+  ParentId: 4061218764847954597
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -372,7 +886,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8627705420451481647
+  ParentId: 4061218764847954597
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -399,6 +913,14 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
           }
         }
       }

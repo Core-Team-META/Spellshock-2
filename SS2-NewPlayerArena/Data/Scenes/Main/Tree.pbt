@@ -38,6 +38,7 @@ Objects {
   ChildIds: 8165810180434056474
   ChildIds: 7402664568116664363
   ChildIds: 925551224970841487
+  ChildIds: 11586701043288458948
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -50,6 +51,169 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 11586701043288458948
+  Name: "Enemy_Target"
+  Transform {
+    Location {
+      X: 2817.86816
+      Y: -12591.2217
+      Z: -6798.18604
+    }
+    Rotation {
+      Yaw: -90.2225342
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  ChildIds: 13935234393975190034
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:HealthFraction"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:CurrentTask"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:TargetID"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:Name"
+      String: "Target"
+    }
+    Overrides {
+      Name: "cs:Level"
+      Int: 1
+    }
+    Overrides {
+      Name: "cs:BaseMaxHitPoints"
+      Float: 50000
+    }
+    Overrides {
+      Name: "cs:MoveSpeed"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:EngageRange"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:ImmuneToStun"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CapsuleHeight"
+      Float: 310
+    }
+    Overrides {
+      Name: "cs:CapsuleWidth"
+      Float: 100
+    }
+    Overrides {
+      Name: "cs:Experience"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Task1"
+      String: "dummy_heal"
+    }
+    Overrides {
+      Name: "cs:MovementEffectTemplate"
+      AssetReference {
+        Id: 3204240134922665953
+      }
+    }
+    Overrides {
+      Name: "cs:DeathEffectTemplate"
+      AssetReference {
+        Id: 3204240134922665953
+      }
+    }
+    Overrides {
+      Name: "cs:FollowRoot"
+      ObjectReference {
+        SelfId: 13935234393975190034
+      }
+    }
+    Overrides {
+      Name: "cs:DropCombatDistance"
+      Float: 4000
+    }
+    Overrides {
+      Name: "cs:HealthFraction:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrentTask:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:TargetID:isrep"
+      Bool: true
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 11586701043288458948
+    SubobjectId: 191125463511178831
+    InstanceId: 848603674042906797
+    TemplateId: 1271273818983499322
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 13935234393975190034
+  Name: "FollowRoot"
+  Transform {
+    Location {
+      Z: 105
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11586701043288458948
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 13935234393975190034
+    SubobjectId: 7136197101489531545
+    InstanceId: 848603674042906797
+    TemplateId: 1271273818983499322
   }
 }
 Objects {

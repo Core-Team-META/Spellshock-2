@@ -91,7 +91,7 @@ local function UpdateCombatAmmount(attackData)
         source:AddResource(CONST.ROUND_HEALING, CoreMath.Round(amount))
         amount = amount * -1 -- turn back negative
     end
-    
+
     attackData.damage.amount = amount
     Events.Broadcast("AS.PlayerDamaged", attackData)
 end
@@ -220,12 +220,14 @@ function OnDied(attackData)
                     assistPlayer.team ~= target.team and
                     assist.timer and
                     assist.timer >= time()
-                then
+             then
                 local assistPlayerData = assistPlayer.serverUserData.tournament
-                assistPlayerData.killAssists = assistPlayerData.killAssists + 1
-                assistPlayer.serverUserData.tournament = assistPlayerData
+                if assistPlayerData then
+                    assistPlayerData.killAssists = assistPlayerData.killAssists + 1
+                    assistPlayer.serverUserData.tournament = assistPlayerData
                     --warn(assistPlayer.name .. " Got Assist")
-                assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
+                    assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
+                end
             end
         end
     end
