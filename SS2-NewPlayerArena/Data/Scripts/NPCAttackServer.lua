@@ -199,7 +199,6 @@ function ApplyDamage(attackData)
 
 	Events.Broadcast("TargetDummyDamage", attackData)
 
-
 	if (amount >= 0 and source.team ~= GetTeam()) or (amount < 0 and source.team == GetTeam()) then
 		local prevHealth = GetHealth()
 		local newHealth = CoreMath.Clamp(prevHealth - amount, 0, MAX_HEALTH)
@@ -245,7 +244,7 @@ function ApplyDamage(attackData)
 		flyPosition.z = flyPosition.z + 100
 
 		if attackData.tags and attackData.tags.id then
-		ROOT:SetNetworkedCustomProperty("AID", attackData.tags.id)
+			ROOT:SetNetworkedCustomProperty("AID", attackData.tags.id)
 		end
 		local tempObject = {}
 		tempObject.team = Collider.team
@@ -259,6 +258,10 @@ function ApplyDamage(attackData)
 			Events.BroadcastToAllPlayers("ObjectDestroyed", id)
 
 			DropRewards(source)
+		end
+		Task.Wait(0.2)
+		if ROOT and Object.IsValid(ROOT) then
+			ROOT:SetNetworkedCustomProperty("AID", "")
 		end
 
 	--print(ROOT.name .. " Health = " .. newHealth)
