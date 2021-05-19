@@ -25,13 +25,15 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local QUEST_TYPE = {
     Damage = 1,
     Healing = 2,
-    Use = 3
+    Use = 3,
+    Charge = 4
 }
 
 local DESCRIPTIONS = {
     [QUEST_TYPE.Damage] = "Use %s to deal damage",
     [QUEST_TYPE.Healing] = "Use %s to heal your allies",
-    [QUEST_TYPE.Use] = "Use %s"
+    [QUEST_TYPE.Use] = "Use %s",
+    [QUEST_TYPE.Charge] = "Hit enemy with your Charge Attack",
 }
 
 function Init()
@@ -140,7 +142,11 @@ function UpdateAbilityInfo(panel, class, bind, value)
             value = TRAINING.GetTrainingProgress(LOCAL_PLAYER, class, bind)
         end
         panel.count.text = string.format("%d/%d", value, QuestData[class][bind].required)
-        panel.name.text = string.format(DESCRIPTIONS[QuestData[class][bind].type], QuestData[class][bind].name)
+        if bind == CONST.BIND.RMB then
+            panel.name.text = string.format(DESCRIPTIONS[QUEST_TYPE.Charge], QuestData[class][bind].name)
+        else
+            panel.name.text = string.format(DESCRIPTIONS[QuestData[class][bind].type], QuestData[class][bind].name)
+        end
         return false
     end
 end
@@ -225,7 +231,7 @@ function OnClassTrainingComplete(class)
     end, 5)
 end
 
--- ====== Popup Logic ===================
+-- ====== Popup Logic ============================================================
 function OnAllTrainingComplete()
     Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
     Task.Wait()

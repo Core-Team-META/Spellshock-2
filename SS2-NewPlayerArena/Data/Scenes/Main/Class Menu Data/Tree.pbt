@@ -154,7 +154,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestType"
-      String: "Damage"
+      String: "Healing"
     }
     Overrides {
       Name: "cs:QuestRequirement"

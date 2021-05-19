@@ -35,7 +35,7 @@ function CheckQuestProgress(attackData)
     end
     local amount = attackData.damage.amount
 
-    if class == CONST.CLASS.HEALER and bind == CONST.BIND.E then
+    if class == CONST.CLASS.HEALER and (bind == CONST.BIND.E or bind == CONST.BIND.LMB) then
         if attackData.damage and attackData.damage.amount < 0 then
             amount = amount * -1
         else

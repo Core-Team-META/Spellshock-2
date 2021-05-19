@@ -7,6 +7,7 @@
 	spawn and despawn.
 --]]
 local ActiveDummies = script:GetCustomProperty("ActiveDummies"):WaitForObject()
+local FlyingDummy = script:GetCustomProperty("FlyingDummy"):WaitForObject()
 
 local TEAM = script:GetCustomProperty("Team")
 local IS_TEMPLATE_RANDOM = script:GetCustomProperty("TemplateChoiceRandom")
@@ -52,7 +53,16 @@ function Spawn()
 
 			local newMinion = World.SpawnAsset(minionTemplate, {position = pos, rotation = rot})
 			newMinion:SetWorldScale(newMinion:GetWorldScale() * 1.5)
-			newMinion.parent = ActiveDummies
+			
+			if point.name == "Flying Spawn Point" then
+				if point:GetChildren()[1] then
+					point:GetChildren()[1]:Destroy()
+				end
+				newMinion.parent = point
+			else
+				newMinion.parent = ActiveDummies
+			end
+			
 			if SPAWN_VFX then
 				SpawnVisualEffect(SPAWN_VFX, pos, rot)
 			end
@@ -194,9 +204,12 @@ function FindSpawnPoints()
 	else
 		print("WARNING: " .. script.name .. " did not find a SpawnPoints folder/group.")
 	end
+
+	table.insert(spawnPoints, FlyingDummy:GetChildren()[1])
 end
 
 FindSpawnPoints()
+FlyingDummy:RotateContinuous(Rotation.New(0,0,10))
 
 function OnDestroyed(obj)
 	--print("OnDestroyed()")
