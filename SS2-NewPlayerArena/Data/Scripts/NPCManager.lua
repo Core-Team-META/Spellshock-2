@@ -54,12 +54,18 @@ end
 function API.FindInSphere(position, radius, parameters)
 	local result = {}
 	local radiusSquared = radius*radius
-	
 	for npc,_ in pairs(allNPCs) do
 		local npcPos = npc:GetWorldPosition()
 		local distanceSquared = (position - npcPos).sizeSquared
 		if distanceSquared <= radiusSquared then
 			table.insert(result, npc)
+		end
+	end
+	for _, player in ipairs(Game.GetPlayers(parameters)) do
+		local playerPos = player:GetWorldPosition()
+		local distanceSquared = (position -playerPos).sizeSquared
+		if distanceSquared <= radiusSquared then
+			table.insert(result, player)
 		end
 	end
 	return result

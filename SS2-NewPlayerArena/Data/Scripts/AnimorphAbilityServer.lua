@@ -68,7 +68,6 @@ function OnProjectileImpacted(projectile, other, hitResult)
 				enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
 			end
 			if not enemy.serverUserData.DamageImmunity then
-				
 				enemy.serverUserData.NotAdjustHp = true
 				-- Damage
 				if DamageAmount ~= 0 or not enemy:IsA("Player") then
@@ -82,13 +81,12 @@ function OnProjectileImpacted(projectile, other, hitResult)
 						tags = {id = "Mage_E"}
 					}
 
-			
 					COMBAT().ApplyDamage(attackData)
 					Task.Wait()
 				end
 
 				-- equip animal costume
-				if not enemy.isDead and not enemy.serverUserData.isAnimorphed and enemy:IsA("Player") then
+				if enemy:IsA("Player") and not enemy.isDead and not enemy.serverUserData.isAnimorphed then
 					enemy.serverUserData.isAnimorphed = true
 					local costumeTemplate = PlayerVFX.Attachment
 					local newCostume = META_AP().SpawnAsset(costumeTemplate)
@@ -104,6 +102,10 @@ function OnProjectileImpacted(projectile, other, hitResult)
 					newCostume:SetNetworkedCustomProperty("Duration", Duration)
 
 					newCostume:Equip(enemy)
+					if Equipment and Object.IsValid(Equipment) then
+						local player = Equipment.owner
+						Events.Broadcast("TrainingAbilityUsed", player, "Mage_E")
+					end
 				end
 			end
 		end
