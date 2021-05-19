@@ -19,9 +19,11 @@ Assets {
         ChildIds: 7394192047744713355
         ChildIds: 4023150603512517085
         ChildIds: 16062307449487918487
-        ChildIds: 3453851943830755151
-        ChildIds: 5032119278645232552
-        ChildIds: 832369626906492632
+        ChildIds: 15200323291792711410
+        ChildIds: 1851395783044300550
+        ChildIds: 14024099808096081105
+        ChildIds: 18006078588901847797
+        ChildIds: 12463729698699560710
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -180,7 +182,7 @@ Assets {
         }
         Control {
           Width: 100
-          Height: 60
+          Height: 50
           UIY: 2
           RenderTransformPivot {
             Anchor {
@@ -365,8 +367,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 45
-          Height: 45
+          Width: 40
+          Height: 40
           UIX: 9.96861267
           RenderTransformPivot {
             Anchor {
@@ -669,7 +671,7 @@ Assets {
           Width: 543
           Height: 60
           UIX: 5
-          UIY: 60
+          UIY: 48
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -722,8 +724,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 40
-          Height: 40
+          Width: 35
+          Height: 35
           UIX: 9.96861267
           RenderTransformPivot {
             Anchor {
@@ -1117,7 +1119,7 @@ Assets {
         Control {
           Width: 490
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: -8.74502563
           RenderTransformPivot {
             Anchor {
@@ -1132,7 +1134,7 @@ Assets {
               B: 0.279999971
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -1189,7 +1191,7 @@ Assets {
         Control {
           Width: 277
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: 11.2549744
           RenderTransformPivot {
             Anchor {
@@ -1203,7 +1205,7 @@ Assets {
               G: 0.623841226
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -1300,7 +1302,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3453851943830755151
+        Id: 15200323291792711410
         Name: "Ability Panel"
         Transform {
           Location {
@@ -1318,39 +1320,39 @@ Assets {
           }
         }
         ParentId: 11872956465247871638
-        ChildIds: 12512179899383553420
-        ChildIds: 17751142239013349520
-        ChildIds: 16312198246424088604
-        ChildIds: 9388446713270274105
+        ChildIds: 16803537298252042487
+        ChildIds: 10347254444927610764
+        ChildIds: 1039058194685080837
+        ChildIds: 9290897481479938504
         UnregisteredParameters {
           Overrides {
             Name: "cs:ClassIcon"
             ObjectReference {
-              SubObjectId: 12512179899383553420
+              SubObjectId: 16803537298252042487
             }
           }
           Overrides {
             Name: "cs:AbilityName"
             ObjectReference {
-              SubObjectId: 17751142239013349520
+              SubObjectId: 10347254444927610764
             }
           }
           Overrides {
             Name: "cs:Count"
             ObjectReference {
-              SubObjectId: 16312198246424088604
+              SubObjectId: 1039058194685080837
             }
           }
           Overrides {
             Name: "cs:Checkmark"
             ObjectReference {
-              SubObjectId: 14751296397266721914
+              SubObjectId: 7638901831716794840
             }
           }
           Overrides {
             Name: "cs:Complete"
             ObjectReference {
-              SubObjectId: 9388446713270274105
+              SubObjectId: 9290897481479938504
             }
           }
         }
@@ -1370,7 +1372,7 @@ Assets {
           Width: 543
           Height: 60
           UIX: 5
-          UIY: 60
+          UIY: 48
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1393,7 +1395,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12512179899383553420
+        Id: 16803537298252042487
         Name: "Class Icon"
         Transform {
           Location {
@@ -1410,9 +1412,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3453851943830755151
-        ChildIds: 8057831505153925258
-        ChildIds: 14751296397266721914
+        ParentId: 15200323291792711410
+        ChildIds: 9457238920164792366
+        ChildIds: 7638901831716794840
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1423,8 +1425,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 40
-          Height: 40
+          Width: 35
+          Height: 35
           UIX: 9.96861267
           RenderTransformPivot {
             Anchor {
@@ -1459,7 +1461,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8057831505153925258
+        Id: 9457238920164792366
         Name: "FRAME_INNER_GOLD"
         Transform {
           Location {
@@ -1476,7 +1478,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12512179899383553420
+        ParentId: 16803537298252042487
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1525,7 +1527,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14751296397266721914
+        Id: 7638901831716794840
         Name: "Checkmark Panel"
         Transform {
           Location {
@@ -1542,9 +1544,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12512179899383553420
-        ChildIds: 15315343077231854361
-        ChildIds: 7989998854384048107
+        ParentId: 16803537298252042487
+        ChildIds: 2903987751380873696
+        ChildIds: 14405062912105732473
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1585,7 +1587,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15315343077231854361
+        Id: 2903987751380873696
         Name: "UI Image"
         Transform {
           Location {
@@ -1601,7 +1603,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14751296397266721914
+        ParentId: 7638901831716794840
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1651,7 +1653,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7989998854384048107
+        Id: 14405062912105732473
         Name: "Checkmark"
         Transform {
           Location {
@@ -1667,8 +1669,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14751296397266721914
-        ChildIds: 18246048924691534594
+        ParentId: 7638901831716794840
+        ChildIds: 8930084703606844359
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1721,7 +1723,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18246048924691534594
+        Id: 8930084703606844359
         Name: "UI Image"
         Transform {
           Location {
@@ -1737,7 +1739,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7989998854384048107
+        ParentId: 14405062912105732473
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1788,7 +1790,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17751142239013349520
+        Id: 10347254444927610764
         Name: "Ability Name"
         Transform {
           Location {
@@ -1805,7 +1807,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3453851943830755151
+        ParentId: 15200323291792711410
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1818,7 +1820,7 @@ Assets {
         Control {
           Width: 490
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: -8.74502563
           RenderTransformPivot {
             Anchor {
@@ -1833,7 +1835,7 @@ Assets {
               B: 0.279999971
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -1860,7 +1862,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16312198246424088604
+        Id: 1039058194685080837
         Name: "Count"
         Transform {
           Location {
@@ -1877,7 +1879,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3453851943830755151
+        ParentId: 15200323291792711410
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1890,7 +1892,7 @@ Assets {
         Control {
           Width: 277
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: 11.2549744
           RenderTransformPivot {
             Anchor {
@@ -1904,7 +1906,7 @@ Assets {
               G: 0.623841226
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -1931,7 +1933,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9388446713270274105
+        Id: 9290897481479938504
         Name: "Complete"
         Transform {
           Location {
@@ -1948,7 +1950,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3453851943830755151
+        ParentId: 15200323291792711410
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2001,7 +2003,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5032119278645232552
+        Id: 1851395783044300550
         Name: "Ability Panel"
         Transform {
           Location {
@@ -2019,39 +2021,39 @@ Assets {
           }
         }
         ParentId: 11872956465247871638
-        ChildIds: 15923678764655717008
-        ChildIds: 3239051031348941258
-        ChildIds: 783322876083522074
-        ChildIds: 1864909795459674208
+        ChildIds: 10666643475185568036
+        ChildIds: 2005598775227152217
+        ChildIds: 6649914071481560135
+        ChildIds: 6109916576124090710
         UnregisteredParameters {
           Overrides {
             Name: "cs:ClassIcon"
             ObjectReference {
-              SubObjectId: 15923678764655717008
+              SubObjectId: 10666643475185568036
             }
           }
           Overrides {
             Name: "cs:AbilityName"
             ObjectReference {
-              SubObjectId: 3239051031348941258
+              SubObjectId: 2005598775227152217
             }
           }
           Overrides {
             Name: "cs:Count"
             ObjectReference {
-              SubObjectId: 783322876083522074
+              SubObjectId: 6649914071481560135
             }
           }
           Overrides {
             Name: "cs:Checkmark"
             ObjectReference {
-              SubObjectId: 13293407011501402984
+              SubObjectId: 47455822990586741
             }
           }
           Overrides {
             Name: "cs:Complete"
             ObjectReference {
-              SubObjectId: 1864909795459674208
+              SubObjectId: 6109916576124090710
             }
           }
         }
@@ -2071,7 +2073,7 @@ Assets {
           Width: 543
           Height: 60
           UIX: 5
-          UIY: 110
+          UIY: 93
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2094,7 +2096,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15923678764655717008
+        Id: 10666643475185568036
         Name: "Class Icon"
         Transform {
           Location {
@@ -2111,9 +2113,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5032119278645232552
-        ChildIds: 4187380702968289863
-        ChildIds: 13293407011501402984
+        ParentId: 1851395783044300550
+        ChildIds: 5614712171936837816
+        ChildIds: 47455822990586741
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2124,8 +2126,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 40
-          Height: 40
+          Width: 35
+          Height: 35
           UIX: 9.96861267
           RenderTransformPivot {
             Anchor {
@@ -2160,7 +2162,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4187380702968289863
+        Id: 5614712171936837816
         Name: "FRAME_INNER_GOLD"
         Transform {
           Location {
@@ -2177,7 +2179,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15923678764655717008
+        ParentId: 10666643475185568036
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2226,7 +2228,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13293407011501402984
+        Id: 47455822990586741
         Name: "Checkmark Panel"
         Transform {
           Location {
@@ -2243,9 +2245,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15923678764655717008
-        ChildIds: 17758790995418569240
-        ChildIds: 3751972254550060763
+        ParentId: 10666643475185568036
+        ChildIds: 10766935675044743120
+        ChildIds: 8505232673759471259
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2286,7 +2288,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17758790995418569240
+        Id: 10766935675044743120
         Name: "UI Image"
         Transform {
           Location {
@@ -2302,7 +2304,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13293407011501402984
+        ParentId: 47455822990586741
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2352,7 +2354,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3751972254550060763
+        Id: 8505232673759471259
         Name: "Checkmark"
         Transform {
           Location {
@@ -2368,8 +2370,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13293407011501402984
-        ChildIds: 16194249197727023569
+        ParentId: 47455822990586741
+        ChildIds: 17126093486033935203
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2422,7 +2424,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16194249197727023569
+        Id: 17126093486033935203
         Name: "UI Image"
         Transform {
           Location {
@@ -2438,7 +2440,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3751972254550060763
+        ParentId: 8505232673759471259
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2489,7 +2491,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3239051031348941258
+        Id: 2005598775227152217
         Name: "Ability Name"
         Transform {
           Location {
@@ -2506,7 +2508,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5032119278645232552
+        ParentId: 1851395783044300550
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2519,7 +2521,7 @@ Assets {
         Control {
           Width: 490
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: -8.74502563
           RenderTransformPivot {
             Anchor {
@@ -2534,7 +2536,7 @@ Assets {
               B: 0.279999971
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -2561,7 +2563,7 @@ Assets {
         }
       }
       Objects {
-        Id: 783322876083522074
+        Id: 6649914071481560135
         Name: "Count"
         Transform {
           Location {
@@ -2578,7 +2580,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5032119278645232552
+        ParentId: 1851395783044300550
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2591,7 +2593,7 @@ Assets {
         Control {
           Width: 277
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: 11.2549744
           RenderTransformPivot {
             Anchor {
@@ -2605,7 +2607,7 @@ Assets {
               G: 0.623841226
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -2632,7 +2634,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1864909795459674208
+        Id: 6109916576124090710
         Name: "Complete"
         Transform {
           Location {
@@ -2649,7 +2651,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5032119278645232552
+        ParentId: 1851395783044300550
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2702,7 +2704,7 @@ Assets {
         }
       }
       Objects {
-        Id: 832369626906492632
+        Id: 14024099808096081105
         Name: "Ability Panel"
         Transform {
           Location {
@@ -2720,39 +2722,39 @@ Assets {
           }
         }
         ParentId: 11872956465247871638
-        ChildIds: 17372677164946609210
-        ChildIds: 217808611204927801
-        ChildIds: 2430674568765679159
-        ChildIds: 2773712200288313588
+        ChildIds: 15003100294098989444
+        ChildIds: 7082929964200570624
+        ChildIds: 18140545446904320030
+        ChildIds: 12141148533251457839
         UnregisteredParameters {
           Overrides {
             Name: "cs:ClassIcon"
             ObjectReference {
-              SubObjectId: 17372677164946609210
+              SubObjectId: 15003100294098989444
             }
           }
           Overrides {
             Name: "cs:AbilityName"
             ObjectReference {
-              SubObjectId: 217808611204927801
+              SubObjectId: 7082929964200570624
             }
           }
           Overrides {
             Name: "cs:Count"
             ObjectReference {
-              SubObjectId: 2430674568765679159
+              SubObjectId: 18140545446904320030
             }
           }
           Overrides {
             Name: "cs:Checkmark"
             ObjectReference {
-              SubObjectId: 27969487899622336
+              SubObjectId: 1731625622546324355
             }
           }
           Overrides {
             Name: "cs:Complete"
             ObjectReference {
-              SubObjectId: 2773712200288313588
+              SubObjectId: 12141148533251457839
             }
           }
         }
@@ -2772,7 +2774,7 @@ Assets {
           Width: 543
           Height: 60
           UIX: 5
-          UIY: 110
+          UIY: 93
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2795,7 +2797,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17372677164946609210
+        Id: 15003100294098989444
         Name: "Class Icon"
         Transform {
           Location {
@@ -2812,9 +2814,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 832369626906492632
-        ChildIds: 11443167207171272481
-        ChildIds: 27969487899622336
+        ParentId: 14024099808096081105
+        ChildIds: 8547652967270665894
+        ChildIds: 1731625622546324355
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2825,8 +2827,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 40
-          Height: 40
+          Width: 35
+          Height: 35
           UIX: 9.96861267
           RenderTransformPivot {
             Anchor {
@@ -2861,7 +2863,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11443167207171272481
+        Id: 8547652967270665894
         Name: "FRAME_INNER_GOLD"
         Transform {
           Location {
@@ -2878,7 +2880,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17372677164946609210
+        ParentId: 15003100294098989444
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2927,7 +2929,7 @@ Assets {
         }
       }
       Objects {
-        Id: 27969487899622336
+        Id: 1731625622546324355
         Name: "Checkmark Panel"
         Transform {
           Location {
@@ -2944,9 +2946,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17372677164946609210
-        ChildIds: 11216636945027718044
-        ChildIds: 13708187058529059392
+        ParentId: 15003100294098989444
+        ChildIds: 5867525613479221907
+        ChildIds: 7063812879008281967
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2987,7 +2989,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11216636945027718044
+        Id: 5867525613479221907
         Name: "UI Image"
         Transform {
           Location {
@@ -3003,7 +3005,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 27969487899622336
+        ParentId: 1731625622546324355
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3053,7 +3055,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13708187058529059392
+        Id: 7063812879008281967
         Name: "Checkmark"
         Transform {
           Location {
@@ -3069,8 +3071,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 27969487899622336
-        ChildIds: 3826903101783625133
+        ParentId: 1731625622546324355
+        ChildIds: 14542545336786446996
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3123,7 +3125,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3826903101783625133
+        Id: 14542545336786446996
         Name: "UI Image"
         Transform {
           Location {
@@ -3139,7 +3141,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13708187058529059392
+        ParentId: 7063812879008281967
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3190,7 +3192,7 @@ Assets {
         }
       }
       Objects {
-        Id: 217808611204927801
+        Id: 7082929964200570624
         Name: "Ability Name"
         Transform {
           Location {
@@ -3207,7 +3209,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 832369626906492632
+        ParentId: 14024099808096081105
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3220,7 +3222,7 @@ Assets {
         Control {
           Width: 490
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: -8.74502563
           RenderTransformPivot {
             Anchor {
@@ -3235,7 +3237,7 @@ Assets {
               B: 0.279999971
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -3262,7 +3264,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2430674568765679159
+        Id: 18140545446904320030
         Name: "Count"
         Transform {
           Location {
@@ -3279,7 +3281,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 832369626906492632
+        ParentId: 14024099808096081105
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3292,7 +3294,7 @@ Assets {
         Control {
           Width: 277
           Height: 35
-          UIX: 60
+          UIX: 54.161171
           UIY: 11.2549744
           RenderTransformPivot {
             Anchor {
@@ -3306,7 +3308,7 @@ Assets {
               G: 0.623841226
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -3333,7 +3335,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2773712200288313588
+        Id: 12141148533251457839
         Name: "Complete"
         Transform {
           Location {
@@ -3350,7 +3352,1409 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 832369626906492632
+        ParentId: 14024099808096081105
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 175
+          Height: 35
+          UIX: 25
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "COMPLETE!"
+            Color {
+              R: 0.914000034
+              G: 0.623841226
+              A: 1
+            }
+            Size: 20
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18006078588901847797
+        Name: "Ability Panel"
+        Transform {
+          Location {
+            X: 3208.56226
+            Y: 10229.3877
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: -3.41509394e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11872956465247871638
+        ChildIds: 2034706589572734895
+        ChildIds: 1813449104549097838
+        ChildIds: 4658716857618543424
+        ChildIds: 7598773378103288875
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ClassIcon"
+            ObjectReference {
+              SubObjectId: 2034706589572734895
+            }
+          }
+          Overrides {
+            Name: "cs:AbilityName"
+            ObjectReference {
+              SubObjectId: 1813449104549097838
+            }
+          }
+          Overrides {
+            Name: "cs:Count"
+            ObjectReference {
+              SubObjectId: 4658716857618543424
+            }
+          }
+          Overrides {
+            Name: "cs:Checkmark"
+            ObjectReference {
+              SubObjectId: 10811691238222800337
+            }
+          }
+          Overrides {
+            Name: "cs:Complete"
+            ObjectReference {
+              SubObjectId: 7598773378103288875
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 543
+          Height: 60
+          UIX: 5
+          UIY: 137
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2034706589572734895
+        Name: "Class Icon"
+        Transform {
+          Location {
+            X: 6417.12695
+            Y: 20458.7773
+            Z: -5694.08789
+          }
+          Rotation {
+            Yaw: 49.8706627
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18006078588901847797
+        ChildIds: 16084216642741006314
+        ChildIds: 10811691238222800337
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 35
+          Height: 35
+          UIX: 9.96861267
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 3369441422951943214
+            }
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16084216642741006314
+        Name: "FRAME_INNER_GOLD"
+        Transform {
+          Location {
+            X: 3208.56299
+            Y: 10229.3887
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706627
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2034706589572734895
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 2
+          Height: 2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 2764905514123890102
+            }
+            Color {
+              R: 1
+              G: 0.825695455
+              B: 0.0600000024
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10811691238222800337
+        Name: "Checkmark Panel"
+        Transform {
+          Location {
+            X: -13058.0986
+            Y: -13557.7715
+            Z: 8184.57031
+          }
+          Rotation {
+            Yaw: -44.7412834
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2034706589572734895
+        ChildIds: 3208554771219656135
+        ChildIds: 13722512721885003166
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 2
+          Height: 2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3208554771219656135
+        Name: "UI Image"
+        Transform {
+          Location {
+            X: 2.49424484e-05
+            Y: 0.00552421575
+          }
+          Rotation {
+            Yaw: 3.41509403e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10811691238222800337
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 200
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 1814707273787853473
+            }
+            Color {
+              R: 0.994000077
+              G: 0.662666678
+              A: 0.5
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13722512721885003166
+        Name: "Checkmark"
+        Transform {
+          Location {
+            X: 2.49424484e-05
+            Y: 0.00552421575
+          }
+          Rotation {
+            Yaw: 3.41509403e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10811691238222800337
+        ChildIds: 14219519986245033310
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: -11
+          Height: -5
+          UIX: 1
+          UIY: 2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 4479180494355222818
+            }
+            Color {
+              R: 0.106000066
+              G: 0.0286032222
+              A: 0.8
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14219519986245033310
+        Name: "UI Image"
+        Transform {
+          Location {
+            X: 2.49473378e-05
+            Y: 0.00552421529
+          }
+          Rotation {
+            Yaw: 6.48867863e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13722512721885003166
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          UIX: -1
+          UIY: -2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 4479180494355222818
+            }
+            Color {
+              R: 0.874000072
+              G: 0.804634869
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1813449104549097838
+        Name: "Ability Name"
+        Transform {
+          Location {
+            X: 3208.56299
+            Y: 10229.3887
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706627
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18006078588901847797
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 490
+          Height: 35
+          UIX: 54.161171
+          UIY: -8.74502563
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "Use Rain of Arrows to deal damage"
+            Color {
+              R: 1
+              G: 0.609006643
+              B: 0.279999971
+              A: 1
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4658716857618543424
+        Name: "Count"
+        Transform {
+          Location {
+            X: 3208.5625
+            Y: 10229.3887
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706741
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18006078588901847797
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 277
+          Height: 35
+          UIX: 54.161171
+          UIY: 11.2549744
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "COMPLETE!"
+            Color {
+              R: 0.914000034
+              G: 0.623841226
+              A: 1
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7598773378103288875
+        Name: "Complete"
+        Transform {
+          Location {
+            X: 3208.56299
+            Y: 10229.3906
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706932
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18006078588901847797
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 175
+          Height: 35
+          UIX: 25
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "COMPLETE!"
+            Color {
+              R: 0.914000034
+              G: 0.623841226
+              A: 1
+            }
+            Size: 20
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12463729698699560710
+        Name: "Ability Panel"
+        Transform {
+          Location {
+            X: 3208.56226
+            Y: 10229.3877
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: -3.41509394e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11872956465247871638
+        ChildIds: 12686597205055178029
+        ChildIds: 14590220923276135906
+        ChildIds: 3846864071428072012
+        ChildIds: 4639781346324604069
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ClassIcon"
+            ObjectReference {
+              SubObjectId: 12686597205055178029
+            }
+          }
+          Overrides {
+            Name: "cs:AbilityName"
+            ObjectReference {
+              SubObjectId: 14590220923276135906
+            }
+          }
+          Overrides {
+            Name: "cs:Count"
+            ObjectReference {
+              SubObjectId: 3846864071428072012
+            }
+          }
+          Overrides {
+            Name: "cs:Checkmark"
+            ObjectReference {
+              SubObjectId: 12403457160041346061
+            }
+          }
+          Overrides {
+            Name: "cs:Complete"
+            ObjectReference {
+              SubObjectId: 4639781346324604069
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 543
+          Height: 60
+          UIX: 5
+          UIY: 137
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12686597205055178029
+        Name: "Class Icon"
+        Transform {
+          Location {
+            X: 6417.12695
+            Y: 20458.7773
+            Z: -5694.08789
+          }
+          Rotation {
+            Yaw: 49.8706627
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12463729698699560710
+        ChildIds: 1509219520488499772
+        ChildIds: 12403457160041346061
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 35
+          Height: 35
+          UIX: 9.96861267
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 3369441422951943214
+            }
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1509219520488499772
+        Name: "FRAME_INNER_GOLD"
+        Transform {
+          Location {
+            X: 3208.56299
+            Y: 10229.3887
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706627
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12686597205055178029
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 2
+          Height: 2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 2764905514123890102
+            }
+            Color {
+              R: 1
+              G: 0.825695455
+              B: 0.0600000024
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12403457160041346061
+        Name: "Checkmark Panel"
+        Transform {
+          Location {
+            X: -13058.0986
+            Y: -13557.7715
+            Z: 8184.57031
+          }
+          Rotation {
+            Yaw: -44.7412834
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12686597205055178029
+        ChildIds: 14299952605672035279
+        ChildIds: 9981821807336802052
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 2
+          Height: 2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14299952605672035279
+        Name: "UI Image"
+        Transform {
+          Location {
+            X: 2.49424484e-05
+            Y: 0.00552421575
+          }
+          Rotation {
+            Yaw: 3.41509403e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12403457160041346061
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 200
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 1814707273787853473
+            }
+            Color {
+              R: 0.994000077
+              G: 0.662666678
+              A: 0.5
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9981821807336802052
+        Name: "Checkmark"
+        Transform {
+          Location {
+            X: 2.49424484e-05
+            Y: 0.00552421575
+          }
+          Rotation {
+            Yaw: 3.41509403e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12403457160041346061
+        ChildIds: 10202514052539820265
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: -11
+          Height: -5
+          UIX: 1
+          UIY: 2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 4479180494355222818
+            }
+            Color {
+              R: 0.106000066
+              G: 0.0286032222
+              A: 0.8
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10202514052539820265
+        Name: "UI Image"
+        Transform {
+          Location {
+            X: 2.49473378e-05
+            Y: 0.00552421529
+          }
+          Rotation {
+            Yaw: 6.48867863e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9981821807336802052
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          UIX: -1
+          UIY: -2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 4479180494355222818
+            }
+            Color {
+              R: 0.874000072
+              G: 0.804634869
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14590220923276135906
+        Name: "Ability Name"
+        Transform {
+          Location {
+            X: 3208.56299
+            Y: 10229.3887
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706627
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12463729698699560710
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 490
+          Height: 35
+          UIX: 54.161171
+          UIY: -8.74502563
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "Use Rain of Arrows to deal damage"
+            Color {
+              R: 1
+              G: 0.609006643
+              B: 0.279999971
+              A: 1
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3846864071428072012
+        Name: "Count"
+        Transform {
+          Location {
+            X: 3208.5625
+            Y: 10229.3887
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706741
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12463729698699560710
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 277
+          Height: 35
+          UIX: 54.161171
+          UIY: 11.2549744
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "COMPLETE!"
+            Color {
+              R: 0.914000034
+              G: 0.623841226
+              A: 1
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4639781346324604069
+        Name: "Complete"
+        Transform {
+          Location {
+            X: 3208.56299
+            Y: 10229.3906
+            Z: -2847.04395
+          }
+          Rotation {
+            Yaw: 49.8706932
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12463729698699560710
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

@@ -43,6 +43,10 @@ Assets {
             }
           }
           Overrides {
+            Name: "cs:Name"
+            String: "Enemy Dummy"
+          }
+          Overrides {
             Name: "cs:ObjectId:isrep"
             Bool: true
           }

@@ -8,6 +8,7 @@ local function META_AP()
 end
 
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject(1) or script.parent
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 local DEFAULT_DamageRange = {min=30, max=40}
 
 local BindingName = script:GetCustomProperty("BindingName")
@@ -51,7 +52,7 @@ function OnTargetImpact(theWeapon, impactData)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "BasicAttack", weapon = WEAPON}
+		tags = {id = "BasicAttack", weapon = WEAPON, equipment = EQUIPMENT}
 	}
 
     COMBAT().ApplyDamage(attackData)

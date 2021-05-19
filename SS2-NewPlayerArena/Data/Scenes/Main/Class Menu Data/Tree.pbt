@@ -21,7 +21,7 @@ Objects {
   ChildIds: 12268359843287134752
   ChildIds: 10173767803381806693
   ChildIds: 5951747015638852658
-  ChildIds: 17818325083354340351
+  ChildIds: 7066932658230536859
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -68,8 +68,8 @@ Objects {
   }
 }
 Objects {
-  Id: 17818325083354340351
-  Name: "Aim"
+  Id: 7066932658230536859
+  Name: "Charge Attack"
   Transform {
     Location {
     }
@@ -86,12 +86,12 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 3134265528574068078
+        Id: 5231252917595305835
       }
     }
     Overrides {
       Name: "cs:Description"
-      String: "Coming Soon"
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a concentrated orb of solar fire that damages enemies. Charge and hold for a more powerful attack that heals you!"
     }
     Overrides {
       Name: "cs:Bind"
@@ -99,11 +99,11 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestType"
-      String: "Damage"
+      String: "Use"
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 3
     }
   }
   Collidable_v2 {
@@ -443,7 +443,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 500
     }
   }
   Collidable_v2 {
@@ -1221,7 +1221,7 @@ Objects {
   ChildIds: 12149063864994188577
   ChildIds: 3582449926246867777
   ChildIds: 5148288800905722429
-  ChildIds: 13715645127346419987
+  ChildIds: 14212219871338321671
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1268,8 +1268,8 @@ Objects {
   }
 }
 Objects {
-  Id: 13715645127346419987
-  Name: "Coming Soon"
+  Id: 14212219871338321671
+  Name: "Charge Attack"
   Transform {
     Location {
     }
@@ -1286,12 +1286,12 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 8134115028302896138
+        Id: 6020653271052380125
       }
     }
     Overrides {
       Name: "cs:Description"
-      String: "Coming Soon"
+      String: "Melee Weapon \342\200\223 Press LMB to attack nearby enemies with quick, precise strikes. Charge and hold to leap forward!"
     }
     Overrides {
       Name: "cs:Bind"
@@ -1299,11 +1299,11 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestType"
-      String: "Damage"
+      String: "Use"
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 3
     }
   }
   Collidable_v2 {
@@ -1785,7 +1785,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 150
     }
   }
   Collidable_v2 {
@@ -2020,7 +2020,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 150
     }
   }
   Collidable_v2 {
@@ -2376,7 +2376,7 @@ Objects {
   ChildIds: 17921801492270808935
   ChildIds: 12569285425812604991
   ChildIds: 11257300732353543757
-  ChildIds: 15081305371877301329
+  ChildIds: 4229170528567591224
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2423,8 +2423,8 @@ Objects {
   }
 }
 Objects {
-  Id: 15081305371877301329
-  Name: "Aim"
+  Id: 4229170528567591224
+  Name: "Charge Attack"
   Transform {
     Location {
     }
@@ -2441,12 +2441,12 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 3134265528574068078
+        Id: 405738147373459326
       }
     }
     Overrides {
       Name: "cs:Description"
-      String: "Coming Soon"
+      String: "Ranged Weapon \342\200\223 Press LMB to fire an orb of pure magic that damages enemies. Charge and hold for a powerful attack deals extra lightning damage to nearby enemies! Lightning Zap Duration = 3. Zap Damage = 15."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2454,11 +2454,11 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestType"
-      String: "Damage"
+      String: "Use"
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 3
     }
   }
   Collidable_v2 {
@@ -3531,7 +3531,7 @@ Objects {
   ChildIds: 11903558504160302023
   ChildIds: 10196550517977698212
   ChildIds: 12433313973569169244
-  ChildIds: 18092809878629468700
+  ChildIds: 930013892530796024
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3578,8 +3578,8 @@ Objects {
   }
 }
 Objects {
-  Id: 18092809878629468700
-  Name: "Aim"
+  Id: 930013892530796024
+  Name: "Charge Attack"
   Transform {
     Location {
     }
@@ -3596,12 +3596,12 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 3134265528574068078
+        Id: 11559340443332851237
       }
     }
     Overrides {
       Name: "cs:Description"
-      String: "Coming Soon"
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Charge and hold for an empowered attack!Slow Effect = 30%. Slow Duration = 1.5s"
     }
     Overrides {
       Name: "cs:Bind"
@@ -3609,11 +3609,11 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestType"
-      String: "Damage"
+      String: "Use"
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 3
     }
   }
   Collidable_v2 {
@@ -3952,7 +3952,7 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
+      Int: 200
     }
   }
   Collidable_v2 {
@@ -4788,7 +4788,7 @@ Objects {
   ChildIds: 2915110725920319466
   ChildIds: 5630919436078665662
   ChildIds: 12457944925786905307
-  ChildIds: 2116309813112021571
+  ChildIds: 2666553684157645264
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4835,8 +4835,8 @@ Objects {
   }
 }
 Objects {
-  Id: 2116309813112021571
-  Name: "Shield"
+  Id: 2666553684157645264
+  Name: "Charge Attack"
   Transform {
     Location {
     }
@@ -4849,18 +4849,16 @@ Objects {
     }
   }
   ParentId: 7707063254117227183
-  ChildIds: 6911613999291788906
-  ChildIds: 14835130495323346638
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 12289747022974899819
+        Id: 16876013848738050406
       }
     }
     Overrides {
       Name: "cs:Description"
-      String: "Alternate \342\200\223 Hold RMB to raise your shield and reduce incoming damage."
+      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings. Charge and hold for a more powerful attack that does additional damage and propels you forward. Charge Radius =  500. Full Charge Time = 1.5 seconds"
     }
     Overrides {
       Name: "cs:Bind"
@@ -4868,99 +4866,11 @@ Objects {
     }
     Overrides {
       Name: "cs:QuestType"
-      String: "Damage"
+      String: "Use"
     }
     Overrides {
       Name: "cs:QuestRequirement"
-      Int: 300
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 14835130495323346638
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2116309813112021571
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6911613999291788906
-  Name: "Block Percentage"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2116309813112021571
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The percentage of damage that will be blocked"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 804681952734696509
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
+      Int: 3
     }
   }
   Collidable_v2 {

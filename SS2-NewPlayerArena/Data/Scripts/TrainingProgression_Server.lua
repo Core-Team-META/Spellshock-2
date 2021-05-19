@@ -16,13 +16,19 @@ function CheckQuestProgress(attackData)
     if not tagID then
         return
     end
-    local stringTable = UTIL.StringSplit("_", tagID)
-
-    if #stringTable ~= 2 then
-        return
+    local class, bind
+    local equipment = attackData.tags.equipment
+    if tagID ~= "BasicAttack" then
+        local stringTable = UTIL.StringSplit("_", tagID)
+        if #stringTable ~= 2 then
+            return
+        end
+        class = CONST.CLASS[string.upper(stringTable[1])]
+        bind = CONST.BIND[stringTable[2]]
+    elseif tagID == "BasicAttack" and equipment and Object.IsValid(equipment) then
+        bind = 5
+        class = equipment:GetCustomProperty("ClassID")
     end
-    local class = CONST.CLASS[string.upper(stringTable[1])]
-    local bind = CONST.BIND[stringTable[2]]
 
     if not class or not bind then
         return
@@ -71,12 +77,25 @@ function OnClaimReward(player, class)
         else
             skinId = tostring(skinId)
         end
-        Events.Broadcast("GETCOSMETIC", player, tostring(class) .. tostring(CONST.TEAM.ORC) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT))
-        Events.Broadcast("GETCOSMETIC", player, tostring(class) .. tostring(CONST.TEAM.ELF) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT))
-        for bind = 1, 4 do
+        Events.Broadcast(
+            "GETCOSMETIC",
+            player,
+            tostring(class) .. tostring(CONST.TEAM.ORC) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT)
+        )
+        Events.Broadcast(
+            "GETCOSMETIC",
+            player,
+            tostring(class) .. tostring(CONST.TEAM.ELF) .. skinId .. tostring(CONST.COSMETIC_BIND.OUTFIT)
+        )
+        for bind = 1, API.BIND_AMOUNT do
             player:SetResource(API.GetResourceString(class, bind), 1)
         end
         Events.BroadcastToPlayer(player, "TrainingComplete", class, skinId)
+        -- All Classes completed
+        if API.AreAllClassesCompleted(player, QuestData) then
+            player:AddResource(CONST.GOLD, 10000)
+            Events.BroadcastToPlayer(player, "AllTrainingComplete")
+        end
     end
 end
 
@@ -104,7 +123,7 @@ end
 Init()
 --UTIL.TablePrint(QuestData)
 
-Events.Connect("TargetDummyDamage", OnTargetDamage)
+Events.Connect("CombatWrapAPI.OnDamageTaken", OnTargetDamage)
 Events.Connect("TrainingAbilityUsed", OnTrainingAbilityUsed)
 Events.ConnectForPlayer("TrainingClaim", OnClaimReward)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

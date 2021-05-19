@@ -26,7 +26,8 @@ _G.MENU_TABLE = {
 	PerkShop = 8,
 	DailyShop = 9,
 	Tutorial_Slides = 10,
-	Quest = 11
+	Quest = 11,
+	TrainingComplete = 12
 }
 
 function SpamPrevent()
@@ -111,7 +112,7 @@ function OnBindingPressed(whichPlayer, binding)
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
 		end
-	elseif binding == "ability_extra_37" and SpamPrevent() then -- K
+	--[[elseif binding == "ability_extra_37" and SpamPrevent() then -- K
 		if
 			LOCAL_PLAYER.clientUserData.hasSkippedReward or
 				((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) and
@@ -123,7 +124,7 @@ function OnBindingPressed(whichPlayer, binding)
 			elseif _G.CurrentMenu == _G.MENU_TABLE["Leaderboards"] then
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
-		end
+		end]]
 	elseif binding == "ability_extra_36" and SpamPrevent() then  -- J
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["Quest"]) -- Show
@@ -152,8 +153,10 @@ function Tick()
 			ABGS.GetGameState() ~= ABGS.GAME_STATE_PLAYER_SHOWCASE
 	 then
 		UI.SetCursorVisible(false)
+		UI.SetCanCursorInteractWithUI(false)
 	elseif _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and not UI.IsCursorVisible() then
 		UI.SetCursorVisible(true)
+		UI.SetCanCursorInteractWithUI(true)
 	end
 end
 

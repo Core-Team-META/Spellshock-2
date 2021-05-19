@@ -49,7 +49,7 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
             local position = hitResult:GetImpactPosition()
             local bomb = META_AP().SpawnAsset(HEAL_EXPLOSION_TEMPLATE, {position = position})
             local trigger = bomb:GetCustomProperty("Trigger"):WaitForObject()
-
+            Events.Broadcast("TrainingAbilityUsed", WEAPON.owner, "Healer_RMB")
             HealAllPlayersInRadius(trigger)
 
             local spawnDirection = Vector3.New(math.random(-100, 100), math.random(-100, 100), 100):GetNormalized()
@@ -62,7 +62,9 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
             healProjectile.drag = 2
             healProjectile.homingAcceleration = 12000
             healProjectile.lifeSpan = 3
-            healProjectile.owner = other
+            if other:IsA("Player") then
+                 healProjectile.owner = other
+            end
             healProjectile.capsuleRadius = 10
             healProjectile.gravityScale = 0
             healProjectile.capsuleLength = 30
@@ -143,7 +145,7 @@ function HealAllPlayersInRadius(healTrigger)
                 tags = {id = "HealerStaff"}
             }
 
-            if dmg.amount < 0 and thisObject.hitPoints < thisObject.maxHitPoints then
+            if dmg.amount < 0 and (thisObject.name == "Collider" or thisObject.hitPoints < thisObject.maxHitPoints) then
                 COMBAT().ApplyDamage(attackData)
             elseif dmg.amount > 0 then
                 COMBAT().ApplyDamage(attackData)

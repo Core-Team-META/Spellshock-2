@@ -152,6 +152,6 @@ function Tick(deltaTime)
 end
 
 -- Initialize
-SetGameState(ABGS.GAME_STATE_LOBBY)
+SetGameState(ABGS.GAME_STATE_ROUND)
 
 ABGS.RegisterGameStateManagerServer(GetGameState, GetTimeRemainingInState, SetGameState, SetTimeRemainingInState)

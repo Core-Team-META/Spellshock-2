@@ -5,6 +5,10 @@ local TrainingSidePanel = script:GetCustomProperty("TrainingSidePanel"):WaitForO
 local MessagePanel = script:GetCustomProperty("MessagePanel"):WaitForObject()
 local BannerText = MessagePanel:GetCustomProperty("BannerText"):WaitForObject()
 local Stinger = script:GetCustomProperty("Stinger"):WaitForObject()
+local CloseButton = script:GetCustomProperty("CloseButton"):WaitForObject()
+local AllTrainingCompletePanel = script:GetCustomProperty("AllTrainingCompletePanel"):WaitForObject()
+local TeleportButton = script:GetCustomProperty("TeleportButton"):WaitForObject()
+local PopupCloseButton = script:GetCustomProperty("PopupCloseButton"):WaitForObject()
 
 while not _G.TRAINING_PROGRESSION do
     Task.Wait()
@@ -12,6 +16,7 @@ end
 
 local TRAINING = _G.TRAINING_PROGRESSION
 
+local clickedTeleport = false
 local Quest_UI = {}
 local Sidebar = {}
 local QuestData = {}
@@ -38,7 +43,7 @@ function Init()
         QuestData[class].className = classData.name
         for _, abilityData in ipairs(classData:GetChildren()) do
             local bind = CONST.BIND[abilityData:GetCustomProperty("Bind")]
-            if bind < 5 then
+            if bind < 7 then
                 QuestData[class][bind] = {}
                 local questType = abilityData:GetCustomProperty("QuestType")
                 if not QUEST_TYPE[questType] then
@@ -108,6 +113,8 @@ function Init()
             abilityPanels[abilityIndex].name.text = string.format(DESCRIPTIONS[QuestData[classIndex][abilityIndex].type], QuestData[classIndex][abilityIndex].name)
             abilityPanels[abilityIndex].count.text = string.format("%d/%d", TRAINING.GetTrainingProgress(LOCAL_PLAYER, classIndex, abilityIndex), QuestData[classIndex][abilityIndex].required)
             ]]
+        elseif panel.name == "Tasks Complete Panel" then
+            Sidebar.TasksComplete = panel
         end
     end
     Sidebar.AbilityPanels = abilityPanels
@@ -121,6 +128,7 @@ function UpdateAbilityInfo(panel, class, bind, value)
         panel.name.visibility = Visibility.FORCE_OFF
         panel.checkmark.visibility = Visibility.INHERIT
         panel.complete.visibility = Visibility.INHERIT
+        return true
     else
         panel.count.visibility = Visibility.INHERIT
         panel.name.visibility = Visibility.INHERIT
@@ -133,13 +141,23 @@ function UpdateAbilityInfo(panel, class, bind, value)
         end
         panel.count.text = string.format("%d/%d", value, QuestData[class][bind].required)
         panel.name.text = string.format(DESCRIPTIONS[QuestData[class][bind].type], QuestData[class][bind].name)
+        return false
     end
 end
 
 function UpdateMenu()
     for class, classPanel in ipairs(Quest_UI) do
+        local notFullyComplete = false
         for bind, panel in ipairs(Quest_UI[class].AbilityPanels) do
-            UpdateAbilityInfo(panel, class, bind)
+            local isCompleted = UpdateAbilityInfo(panel, class, bind)
+
+            if not isCompleted then
+                notFullyComplete = true
+            end
+        end
+
+        if notFullyComplete == false then
+            classPanel.className.text = CONST.CLASS_NAME[class].." (COMPLETE!)"
         end
     end
 end
@@ -159,6 +177,12 @@ function OnMenuChanged(oldMenu, newMenu)
 	end
 end
 
+function OnCloseButtonClicked(thisButton)
+    if _G.CurrentMenu == _G.MENU_TABLE["Quest"] then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    end
+end
+
 function OnTrainingUpdated(player, class, bind, value)
     if player ~= Game.GetLocalPlayer() then return end
 
@@ -167,6 +191,12 @@ function OnTrainingUpdated(player, class, bind, value)
 
     if class == LOCAL_PLAYER:GetResource(CONST.CLASS_RES) then
         UpdateAbilityInfo(Sidebar.AbilityPanels[bind], class, bind, value)
+
+        if TRAINING.IsClassComplete(LOCAL_PLAYER, class) then
+            Sidebar.TasksComplete.visibility = Visibility.INHERIT
+        else
+            Sidebar.TasksComplete.visibility = Visibility.FORCE_OFF
+        end
     end
 end
 
@@ -175,8 +205,13 @@ function OnResourceChanged(player, name, classID)
         Sidebar.classIcon:SetImage(QuestData[classID].classIcon)
         Sidebar.className.text = QuestData[classID].className
 
-        for bind, panel in ipairs(Sidebar.AbilityPanels) do
-            UpdateAbilityInfo(panel, classID, bind)
+        if TRAINING.IsClassComplete(LOCAL_PLAYER, classID) then
+            Sidebar.TasksComplete.visibility = Visibility.INHERIT
+        else
+            Sidebar.TasksComplete.visibility = Visibility.FORCE_OFF
+            for bind, panel in ipairs(Sidebar.AbilityPanels) do
+                UpdateAbilityInfo(panel, classID, bind)
+            end
         end
     end
 end
@@ -190,11 +225,37 @@ function OnClassTrainingComplete(class)
     end, 5)
 end
 
+-- ====== Popup Logic ===================
+function OnAllTrainingComplete()
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    Task.Wait()
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["TrainingComplete"])
+
+    MessagePanel.visibility = Visibility.FORCE_OFF
+    AllTrainingCompletePanel.visibility = Visibility.INHERIT
+end
+
+function OnTeleportClicked()
+    if clickedTeleport then return end
+    clickedTeleport = true
+    Events.BroadcastToServer("TransferPlayerToGame")
+end
+
+function OnPopupCloseClicked()
+    AllTrainingCompletePanel.visibility = Visibility.FORCE_OFF
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+end
+--==========================================================================
+
 Init()
 
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("TrainingUpdated", OnTrainingUpdated)
 Events.Connect("TrainingComplete", OnClassTrainingComplete)
+Events.Connect("AllTrainingComplete", OnAllTrainingComplete)
+CloseButton.clickedEvent:Connect(OnCloseButtonClicked)
+TeleportButton.clickedEvent:Connect(OnTeleportClicked)
+PopupCloseButton.clickedEvent:Connect(OnPopupCloseClicked)
 
 if LOCAL_PLAYER:GetResource(CONST.CLASS_RES) ~= 0 then
     OnResourceChanged(nil, CONST.CLASS_RES, LOCAL_PLAYER:GetResource(CONST.CLASS_RES))

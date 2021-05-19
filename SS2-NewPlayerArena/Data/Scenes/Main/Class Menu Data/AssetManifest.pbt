@@ -170,15 +170,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12289747022974899819
-  Name: "Fantasy Shield 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Shield_003"
-  }
-}
-Assets {
   Id: 11559340443332851237
   Name: "Fantasy Ability Green 002"
   PlatformAssetType: 9
@@ -266,15 +257,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Yellow_005"
-  }
-}
-Assets {
-  Id: 8134115028302896138
-  Name: "Icon Clock"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Clock"
   }
 }
 Assets {
@@ -404,15 +386,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3134265528574068078
-  Name: "Icon Target"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Target"
-  }
-}
-Assets {
   Id: 2453109304991346687
   Name: "Fantasy Ability Green 014"
   PlatformAssetType: 9
@@ -446,15 +419,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Yellow_023"
-  }
-}
-Assets {
-  Id: 804681952734696509
-  Name: "Fantasy Ability Teal 023"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Teal_023"
   }
 }
 Assets {
