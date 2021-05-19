@@ -97,7 +97,7 @@ function OnBindingPressed(whichPlayer, binding)
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
 		end
-	elseif binding == "ability_extra_27" and SpamPrevent() then -- i
+	elseif binding == "ability_extra_27" and SpamPrevent() and not LOCAL_PLAYER.isDead then -- i
 		--[[if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and (CurrentGameState == ABGS.GAME_STATE_ROUND) then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassAbilities"])
 		else]]
