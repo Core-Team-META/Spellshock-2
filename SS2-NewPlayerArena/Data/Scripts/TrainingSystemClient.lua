@@ -6,6 +6,9 @@ local MessagePanel = script:GetCustomProperty("MessagePanel"):WaitForObject()
 local BannerText = MessagePanel:GetCustomProperty("BannerText"):WaitForObject()
 local Stinger = script:GetCustomProperty("Stinger"):WaitForObject()
 local CloseButton = script:GetCustomProperty("CloseButton"):WaitForObject()
+local AllTrainingCompletePanel = script:GetCustomProperty("AllTrainingCompletePanel"):WaitForObject()
+local TeleportButton = script:GetCustomProperty("TeleportButton"):WaitForObject()
+local PopupCloseButton = script:GetCustomProperty("PopupCloseButton"):WaitForObject()
 
 while not _G.TRAINING_PROGRESSION do
     Task.Wait()
@@ -13,6 +16,7 @@ end
 
 local TRAINING = _G.TRAINING_PROGRESSION
 
+local clickedTeleport = false
 local Quest_UI = {}
 local Sidebar = {}
 local QuestData = {}
@@ -221,12 +225,37 @@ function OnClassTrainingComplete(class)
     end, 5)
 end
 
+-- ====== Popup Logic ===================
+function OnAllTrainingComplete()
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    Task.Wait()
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["TrainingComplete"])
+
+    MessagePanel.visibility = Visibility.FORCE_OFF
+    AllTrainingCompletePanel.visibility = Visibility.INHERIT
+end
+
+function OnTeleportClicked()
+    if clickedTeleport then return end
+    clickedTeleport = true
+    Events.BroadcastToServer("TransferPlayerToGame")
+end
+
+function OnPopupCloseClicked()
+    AllTrainingCompletePanel.visibility = Visibility.FORCE_OFF
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+end
+--==========================================================================
+
 Init()
 
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("TrainingUpdated", OnTrainingUpdated)
 Events.Connect("TrainingComplete", OnClassTrainingComplete)
+Events.Connect("AllTrainingComplete", OnAllTrainingComplete)
 CloseButton.clickedEvent:Connect(OnCloseButtonClicked)
+TeleportButton.clickedEvent:Connect(OnTeleportClicked)
+PopupCloseButton.clickedEvent:Connect(OnPopupCloseClicked)
 
 if LOCAL_PLAYER:GetResource(CONST.CLASS_RES) ~= 0 then
     OnResourceChanged(nil, CONST.CLASS_RES, LOCAL_PLAYER:GetResource(CONST.CLASS_RES))

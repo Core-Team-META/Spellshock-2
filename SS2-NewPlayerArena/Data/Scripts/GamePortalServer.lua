@@ -42,6 +42,14 @@ function OnInteracted(trigger, player)
 	player:TransferToGame(DESTINATION_GAME)
 end
 
+if script:GetCustomProperty("BroadcastEnabled") == true then
+	function OnTransferToGame(player)
+		player:TransferToGame(DESTINATION_GAME)
+	end
+
+	Events.ConnectForPlayer("TransferPlayerToGame", OnTransferToGame)
+end
+
 -- Initialize
 TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)
 TRIGGER.interactedEvent:Connect(OnInteracted)

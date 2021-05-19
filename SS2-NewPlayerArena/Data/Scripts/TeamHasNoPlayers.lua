@@ -21,5 +21,5 @@ function OnPlayerLeft(player)
     end
 end
 
-Game.playerLeftEvent:Connect(OnPlayerLeft)
+--Game.playerLeftEvent:Connect(OnPlayerLeft)
 
