@@ -84,8 +84,6 @@ function Init()
         end
     end
 
-    UTIL.TablePrint(Quest_UI)
-
     local abilityPanels = {}
     --[[while LOCAL_PLAYER:GetResource(CONST.CLASS_RES) == 0 do
         Task.Wait()
@@ -111,6 +109,8 @@ function Init()
             abilityPanels[abilityIndex].name.text = string.format(DESCRIPTIONS[QuestData[classIndex][abilityIndex].type], QuestData[classIndex][abilityIndex].name)
             abilityPanels[abilityIndex].count.text = string.format("%d/%d", TRAINING.GetTrainingProgress(LOCAL_PLAYER, classIndex, abilityIndex), QuestData[classIndex][abilityIndex].required)
             ]]
+        elseif panel.name == "Tasks Complete Panel" then
+            Sidebar.TasksComplete = panel
         end
     end
     Sidebar.AbilityPanels = abilityPanels
@@ -187,6 +187,12 @@ function OnTrainingUpdated(player, class, bind, value)
 
     if class == LOCAL_PLAYER:GetResource(CONST.CLASS_RES) then
         UpdateAbilityInfo(Sidebar.AbilityPanels[bind], class, bind, value)
+
+        if TRAINING.IsClassComplete(LOCAL_PLAYER, class) then
+            Sidebar.TasksComplete.visibility = Visibility.INHERIT
+        else
+            Sidebar.TasksComplete.visibility = Visibility.FORCE_OFF
+        end
     end
 end
 
@@ -195,8 +201,13 @@ function OnResourceChanged(player, name, classID)
         Sidebar.classIcon:SetImage(QuestData[classID].classIcon)
         Sidebar.className.text = QuestData[classID].className
 
-        for bind, panel in ipairs(Sidebar.AbilityPanels) do
-            UpdateAbilityInfo(panel, classID, bind)
+        if TRAINING.IsClassComplete(LOCAL_PLAYER, classID) then
+            Sidebar.TasksComplete.visibility = Visibility.INHERIT
+        else
+            Sidebar.TasksComplete.visibility = Visibility.FORCE_OFF
+            for bind, panel in ipairs(Sidebar.AbilityPanels) do
+                UpdateAbilityInfo(panel, classID, bind)
+            end
         end
     end
 end

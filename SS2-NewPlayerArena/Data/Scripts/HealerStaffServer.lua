@@ -145,7 +145,7 @@ function HealAllPlayersInRadius(healTrigger)
                 tags = {id = "HealerStaff"}
             }
 
-            if dmg.amount < 0 and thisObject.hitPoints < thisObject.maxHitPoints then
+            if dmg.amount < 0 and (thisObject.name == "Collider" or thisObject.hitPoints < thisObject.maxHitPoints) then
                 COMBAT().ApplyDamage(attackData)
             elseif dmg.amount > 0 then
                 COMBAT().ApplyDamage(attackData)
