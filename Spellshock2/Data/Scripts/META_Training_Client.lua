@@ -19,6 +19,7 @@ local ORC_TRAINING_LEAVE_TRIGGER = script:GetCustomProperty("ORC_TRAINING_LEAVE_
 local ELF_TRAINING_TRIGGER = script:GetCustomProperty("ELF_TRAINING_TRIGGER"):WaitForObject()
 local ELF_TRAINING_LEAVE_TRIGGER = script:GetCustomProperty("ELF_TRAINING_LEAVE_TRIGGER"):WaitForObject()
 local CLOSE_BUTTON = script:GetCustomProperty("CLOSE_BUTTON"):WaitForObject()
+local TeleportButton = script:GetCustomProperty("TeleportButton"):WaitForObject()
 
 local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
 ------------------------------------------------------------------------------------------------------------------------
@@ -29,6 +30,7 @@ local npcTriggers = {}
 local perkPanels = {}
 local spamPrevent
 local closeButtonLisener = nil
+local hasTeleported = false
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -103,6 +105,13 @@ local function OnCloseButtonPressed(button)
     ToggleShop(false)
 end
 
+local function OnTeleportClicked(thisButton)
+    if not hasTeleported and isAllowed(0.5) then
+        hasTeleported = true
+        Events.BroadcastToServer("TeleportToTraining")
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -137,3 +146,4 @@ ELF_TRAINING_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnCosmeticShopOpen)
 Events.Connect("Menu Changed", OnMenuChanged)
 CLOSE_BUTTON.clickedEvent:Connect(OnCloseButtonPressed)
+TeleportButton.clickedEvent:Connect(OnTeleportClicked)
