@@ -118,7 +118,7 @@ local function AddAllCosmetics(player)
 end
 
 local function DataWarning(player, name)
-    warn("[Storage Warning]: " .. name .." Failed To Store For " .. player.name)
+    warn("[Storage Warning]: " .. name .. " Failed To Store For " .. player.name)
 end
 
 --@param object player
@@ -268,12 +268,12 @@ local function OnLoadDailyShopData(player, data)
     if data[CONST.STORAGE.DAILY_SHOP] then
         dailyShopItems = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.DAILY_SHOP])
     end
-   if Environment.IsSinglePlayerPreview() then
+    if Environment.IsSinglePlayerPreview() then
         while not DAILY_SHOP.context.OnLoadPlayerDailyShop do
             Task.Wait()
         end
     end
-   
+
     DAILY_SHOP.context.OnLoadPlayerDailyShop(player, dailyShopItems)
 end
 
@@ -376,6 +376,29 @@ local function OnSaveMultiplierData(player, data)
 end
 
 --@param object player
+--@param table data
+local function OnLoadTrainingData(player, data)
+    local value = data[CONST.STORAGE.TRAINING_STATUS]
+    if value then
+        _G.PerPlayerDictionary.Set(player, CONST.TRAINING_STATUS, value)
+    else
+        _G.PerPlayerDictionary.Set(player, CONST.TRAINING_STATUS, 0)
+    end
+end
+
+--@param object player
+--@param table data
+local function OnSaveTrainingData(player, data)
+    local trainingStatus = _G.PerPlayerDictionary.GetNumber(player, CONST.TRAINING_STATUS)
+    if trainingStatus then
+        data[CONST.STORAGE.TRAINING_STATUS] = trainingStatus
+    elseif data[CONST.STORAGE.TRAINING_STATUS] then
+        DataWarning(player, "Training")
+        data[CONST.STORAGE.TRAINING_STATUS] = data[CONST.STORAGE.TRAINING_STATUS]
+    end
+end
+
+--@param object player
 local function OnPlayerJoined(player)
     Task.Wait()
     if not Object.IsValid(player) then
@@ -392,6 +415,7 @@ local function OnPlayerJoined(player)
     OnLoadDailyShopData(player, currencyData)
     OnLoadGamePlayStatsData(player, currencyData)
     OnLoadMultiplierData(player, currencyData)
+    OnLoadTrainingData(player, currencyData)
 
     if currencyData[CONST.STORAGE.ADMIN_PERKS] then
         player.serverUserData.ADMIN_VIP = true
@@ -401,12 +425,12 @@ local function OnPlayerJoined(player)
     OnLoadCostumeData(player, cosmeticData)
     OnLoadEquippedCosmetic(player, cosmeticData)
 
-   -- if TEAM_MEMBER.IsTeamMember(player) then
-     --   AddAllCosmetics(player)
+    -- if TEAM_MEMBER.IsTeamMember(player) then
+    --   AddAllCosmetics(player)
     --else
-        AddDefaultCosmetics(player)
-  --  end
-    
+    AddDefaultCosmetics(player)
+    --  end
+
     local classId = cosmeticData[CONST.STORAGE.CLASS_FAVORITE] or math.random(5)
     CLASS_SELECTION.context.OnPlayerJoined(player, classId)
     --end
@@ -456,6 +480,7 @@ function OnSavePlayerData(player)
     OnSaveGamePlayStatsData(player, currencyData)
     OnSaveDailyShopData(player, currencyData)
     OnSaveMultiplierData(player, currencyData)
+    OnSaveTrainingData(player, currencyData)
 
     if player.serverUserData.ADMIN_VIP then
         currencyData[CONST.STORAGE.ADMIN_PERKS] = true
