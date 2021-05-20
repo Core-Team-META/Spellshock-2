@@ -943,7 +943,6 @@ Objects {
   ChildIds: 16374750860944026756
   ChildIds: 16128773779463594542
   ChildIds: 14392909844659767016
-  ChildIds: 17394089346425434198
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -962,92 +961,6 @@ Objects {
     InstanceId: 1510595699315866409
     TemplateId: 9715208150814216499
     WasRoot: true
-  }
-}
-Objects {
-  Id: 17394089346425434198
-  Name: "FlyingDummy"
-  Transform {
-    Location {
-      X: 529.605957
-      Y: -634.448486
-      Z: 1232.95117
-    }
-    Rotation {
-      Roll: 0.235968515
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2115067058074172231
-  ChildIds: 5907562390957189351
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 5907562390957189351
-  Name: "Flying Spawn Point"
-  Transform {
-    Location {
-      X: 1115
-    }
-    Rotation {
-      Pitch: 0.235969365
-      Yaw: 90
-      Roll: 0.23596853
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17394089346425434198
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:DevMinion"
-      AssetReference {
-        Id: 10613128307169199580
-      }
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 13043298331982480779
-    }
-  }
-  InstanceHistory {
-    SelfId: 10504180642049449591
-    SubobjectId: 7580160202273646783
-    InstanceId: 1510595699315866409
-    TemplateId: 9715208150814216499
   }
 }
 Objects {
@@ -1606,7 +1519,7 @@ Objects {
     Overrides {
       Name: "cs:FlyingDummy"
       ObjectReference {
-        SelfId: 17394089346425434198
+        SelfId: 841534158063459245
       }
     }
     Overrides {
