@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16417635530805838553
+  Name: "Fantasy Ability Red 037"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_037"
+  }
+}
+Assets {
   Id: 16259713446874198849
   Name: "Military Frame 006"
   PlatformAssetType: 9
@@ -77,6 +86,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "CenterCircle_001Outline"
+  }
+}
+Assets {
+  Id: 13298271364458101774
+  Name: "Fantasy Ability Teal 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Teal_005"
   }
 }
 Assets {
@@ -203,6 +221,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_009"
+  }
+}
+Assets {
+  Id: 3385920120892313289
+  Name: "Fantasy Ability Purple 025"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_025"
   }
 }
 Assets {

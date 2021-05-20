@@ -287,6 +287,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7237904830540802135
+  Name: "Fantasy Ability Blue 014"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_014"
+  }
+}
+Assets {
   Id: 7144188424269409394
   Name: "Alert Triangle"
   PlatformAssetType: 9

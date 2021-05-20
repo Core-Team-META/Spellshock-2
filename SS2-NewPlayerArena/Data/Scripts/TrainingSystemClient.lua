@@ -9,6 +9,8 @@ local CloseButton = script:GetCustomProperty("CloseButton"):WaitForObject()
 local AllTrainingCompletePanel = script:GetCustomProperty("AllTrainingCompletePanel"):WaitForObject()
 local TeleportButton = script:GetCustomProperty("TeleportButton"):WaitForObject()
 local PopupCloseButton = script:GetCustomProperty("PopupCloseButton"):WaitForObject()
+local TeleportIcon = script:GetCustomProperty("TeleportIcon"):WaitForObject()
+local TeleportSideBar = script:GetCustomProperty("TeleportSideBar"):WaitForObject()
 
 while not _G.TRAINING_PROGRESSION do
     Task.Wait()
@@ -65,6 +67,7 @@ function Init()
             local classIndex = #Quest_UI+1
             Quest_UI[classIndex] = {}
             local abilityPanels = {}
+            local slotCount = 1
             for _, panel in ipairs(classPanel:GetChildren()) do
                 if panel.name == "Class Panel" then
                     Quest_UI[classIndex].classIcon = panel:GetCustomProperty("ClassIcon"):WaitForObject()
@@ -73,7 +76,14 @@ function Init()
                     Quest_UI[classIndex].classIcon:SetImage(QuestData[classIndex].classIcon)
                     Quest_UI[classIndex].className.text = QuestData[classIndex].className
                 elseif panel.name == "Ability Panel" then
-                    local abilityIndex = #abilityPanels+1
+                    local abilityIndex
+                    if slotCount < 3 then
+                        abilityIndex = slotCount+4
+                    else
+                        abilityIndex = slotCount - 2
+                    end
+                    slotCount = slotCount + 1
+
                     abilityPanels[abilityIndex] = {}
                     abilityPanels[abilityIndex].icon = panel:GetCustomProperty("ClassIcon"):WaitForObject()
                     abilityPanels[abilityIndex].name = panel:GetCustomProperty("AbilityName"):WaitForObject()
@@ -91,9 +101,7 @@ function Init()
     end
 
     local abilityPanels = {}
-    --[[while LOCAL_PLAYER:GetResource(CONST.CLASS_RES) == 0 do
-        Task.Wait()
-    end]]
+    local slotCount = 1
     local classIndex = LOCAL_PLAYER:GetResource(CONST.CLASS_RES)
     for _, panel in ipairs(TrainingSidePanel:GetChildren()) do
         if panel.name == "Class Panel" then
@@ -103,7 +111,14 @@ function Init()
             --Sidebar.classIcon:SetImage(QuestData[classIndex].classIcon)
             --Sidebar.className.text = QuestData[classIndex].className
         elseif panel.name == "Ability Panel" then
-            local abilityIndex = #abilityPanels+1
+            local abilityIndex 
+            if slotCount < 3 then
+                abilityIndex = slotCount+4
+            else
+                abilityIndex = slotCount - 2
+            end
+            slotCount = slotCount + 1
+
             abilityPanels[abilityIndex] = {}
             abilityPanels[abilityIndex].icon = panel:GetCustomProperty("ClassIcon"):WaitForObject()
             abilityPanels[abilityIndex].name = panel:GetCustomProperty("AbilityName"):WaitForObject()
@@ -239,6 +254,8 @@ function OnAllTrainingComplete()
 
     MessagePanel.visibility = Visibility.FORCE_OFF
     AllTrainingCompletePanel.visibility = Visibility.INHERIT
+    TeleportIcon.visibility = Visibility.INHERIT
+    TeleportSideBar.visibility = Visibility.INHERIT
 end
 
 function OnTeleportClicked()
@@ -251,9 +268,37 @@ function OnPopupCloseClicked()
     AllTrainingCompletePanel.visibility = Visibility.FORCE_OFF
     Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 end
+
+function OnBindingPressed(player, bind)
+    if bind == "ability_extra_26" then
+        for class = 1, 5 do
+            if TRAINING.IsClassComplete(LOCAL_PLAYER, class) == false then
+                return
+            end
+        end
+        
+        OnTeleportClicked()
+    end
+end
+
+LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 --==========================================================================
 
 Init()
+
+Task.Spawn(function ()
+    local allTrainingComplete = true
+    for class = 1, 5 do
+        if TRAINING.IsClassComplete(LOCAL_PLAYER, class) == false then
+            allTrainingComplete = false
+            break
+        end
+    end
+    if allTrainingComplete then
+        TeleportIcon.visibility = Visibility.INHERIT
+        TeleportSideBar.visibility = Visibility.INHERIT
+    end
+end, 5)
 
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("TrainingUpdated", OnTrainingUpdated)
