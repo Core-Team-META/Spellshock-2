@@ -827,7 +827,7 @@ Objects {
     Location {
       X: -2722.1792
       Y: 170003.609
-      Z: -15407.7617
+      Z: -14393.542
     }
     Rotation {
       Yaw: -52.8516846
@@ -862,8 +862,8 @@ Objects {
       DistanceBetweenInstances: 3000
       SpawnDistance: 32000
       CullDistance {
-        Min: 50000
-        Max: 70000
+        Min: 100000
+        Max: 100000
       }
       ReceivesDecals: true
       GroundSlopeAngle {

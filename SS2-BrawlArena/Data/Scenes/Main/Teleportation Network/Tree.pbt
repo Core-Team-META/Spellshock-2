@@ -5,8 +5,8 @@ Objects {
   Name: "Destination C"
   Transform {
     Location {
-      X: 5227.60791
-      Y: 180159.688
+      X: 393.660156
+      Y: 182391.234
       Z: -4672.19043
     }
     Rotation {
@@ -299,9 +299,9 @@ Objects {
   Name: "Destination C"
   Transform {
     Location {
-      X: 8252.71387
-      Y: 176170.125
-      Z: -8660.91406
+      X: 3458.77295
+      Y: 174654.188
+      Z: -8664.47852
     }
     Rotation {
     }
@@ -592,9 +592,9 @@ Objects {
   Name: "Destination C"
   Transform {
     Location {
-      X: 2113.05664
-      Y: 176170.781
-      Z: -8660.91406
+      X: -2682.1084
+      Y: 174650.391
+      Z: -8665.44727
     }
     Rotation {
     }

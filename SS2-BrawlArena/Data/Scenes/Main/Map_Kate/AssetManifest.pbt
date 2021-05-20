@@ -197,15 +197,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17240925491654302561
-  Name: "Concrete Rough"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_gen_concrete_rough_001"
-  }
-}
-Assets {
   Id: 17182007171222709614
   Name: "Text 03: P"
   PlatformAssetType: 1
@@ -1457,15 +1448,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11279883391063370210
-  Name: "Additive Soft Edge"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_additive_edgefade"
-  }
-}
-Assets {
   Id: 11228299035028749551
   Name: "Leafy Patch 02"
   PlatformAssetType: 1
@@ -1715,15 +1697,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "stone_001"
-  }
-}
-Assets {
-  Id: 9551966620731737544
-  Name: "Metal Basic 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_basic_001"
   }
 }
 Assets {
@@ -2345,6 +2318,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_trimitives_001_straight_8m_ref"
+  }
+}
+Assets {
+  Id: 6787783267253838161
+  Name: "Kelp Tile 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_kelp_tile_01"
   }
 }
 Assets {
@@ -2996,6 +2978,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4118365081020077494
+  Name: "Cone - Concave"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_convex_001"
+  }
+}
+Assets {
   Id: 3948711934400020999
   Name: "Stone Block Long Broken"
   PlatformAssetType: 1
@@ -3158,15 +3149,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3323004215598028599
-  Name: "Wedge - Concave Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_wedge_curved_concave_hq_001"
-  }
-}
-Assets {
   Id: 3240158528397641148
   Name: "Modern Weapon - Barrel 02"
   PlatformAssetType: 1
@@ -3275,21 +3257,21 @@ Assets {
   }
 }
 Assets {
-  Id: 2635330027741249494
-  Name: "Diamond - 6-Sided"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_diamond_6_sided_001"
-  }
-}
-Assets {
   Id: 2615820326670724915
   Name: "Pipe - Half"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_half-pipe_001"
+  }
+}
+Assets {
+  Id: 2611610763897399680
+  Name: "Coral Spikes Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_spike_small_01"
   }
 }
 Assets {
@@ -3536,6 +3518,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1283637584618690841
+  Name: "Fantasy Castle Wall 03 - Curve Top"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_wall_curve_003_top_01"
+  }
+}
+Assets {
   Id: 1259997542378019594
   Name: "Fantasy Castle Stairs 01"
   PlatformAssetType: 1
@@ -3608,15 +3599,6 @@ Assets {
   }
 }
 Assets {
-  Id: 901541979513849367
-  Name: "Bush 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_001"
-  }
-}
-Assets {
   Id: 889917629752285723
   Name: "Bark Redwood 01"
   PlatformAssetType: 2
@@ -3677,15 +3659,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F5_Text_009"
-  }
-}
-Assets {
-  Id: 588881991680217981
-  Name: "Cone - Truncated Hollow Wide Thick"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_truncated_hollow_005"
   }
 }
 Assets {
