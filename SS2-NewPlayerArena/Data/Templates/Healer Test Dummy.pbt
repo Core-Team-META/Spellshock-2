@@ -15,7 +15,7 @@ Assets {
             Z: 1.5
           }
         }
-        ParentId: 8627705420451481647
+        ParentId: 4061218764847954597
         ChildIds: 15726278937776440657
         ChildIds: 4251040078088566911
         ChildIds: 10841026120316590842
@@ -71,7 +71,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
@@ -1381,19 +1381,19 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -7.72131252
-            Y: 4.16938
-            Z: 164.617752
+            X: -7.1399703
+            Y: 6.6386714
+            Z: 164.617676
           }
           Rotation {
-            Pitch: 29.2548122
-            Yaw: 130.354126
-            Roll: -172.43013
+            Pitch: -6.51580811
+            Yaw: 131.193069
+            Roll: 160.535248
           }
           Scale {
             X: 0.117915772
             Y: 0.177031577
-            Z: 0.176884189
+            Z: 0.176884219
           }
         }
         ParentId: 14307308261017710405
@@ -2081,17 +2081,17 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -10.0692768
-            Y: -3.57122755
-            Z: 163.147705
+            X: -8.79296494
+            Y: -5.74869347
+            Z: 165.606934
           }
           Rotation {
-            Pitch: 0.268911362
-            Yaw: 174.525223
-            Roll: 154.834534
+            Pitch: 16.8716259
+            Yaw: 168.973068
+            Roll: -158.016556
           }
           Scale {
-            X: 0.0949220732
+            X: 0.0949220881
             Y: 0.14251022
             Z: 0.142391592
           }
@@ -2912,8 +2912,8 @@ Assets {
         Name: "HealSign"
         Transform {
           Location {
-            X: -31.5517502
-            Y: -35.019104
+            X: -31.5517559
+            Y: -30.6314926
             Z: 98.5319824
           }
           Rotation {
@@ -2949,19 +2949,19 @@ Assets {
         Name: "Bench Tile Right"
         Transform {
           Location {
-            X: 1.8320297
-            Y: -3.24853611
-            Z: 7.90576172
+            X: 3.98145151
+            Y: 30.6777248
+            Z: -12.0271
           }
           Rotation {
-            Pitch: -2.04905664e-05
-            Yaw: 87.0816803
-            Roll: 89.9999237
+            Pitch: 90.9009323
+            Yaw: 9.62426758
+            Roll: 12.5259094
           }
           Scale {
-            X: 0.666657269
-            Y: 0.666658342
-            Z: 0.0338662788
+            X: 0.440749109
+            Y: 0.99211812
+            Z: 0.033867836
           }
         }
         ParentId: 5631681931662453294
@@ -2969,6 +2969,14 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 2
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 2
           }
         }
         Collidable_v2 {

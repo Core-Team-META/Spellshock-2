@@ -7,7 +7,7 @@ Assets {
       RootId: 641820647445633837
       Objects {
         Id: 641820647445633837
-        Name: "Sheep"
+        Name: "TargetDummy_Sheep_Template"
         Transform {
           Scale {
             X: 0.7
@@ -15,7 +15,7 @@ Assets {
             Z: 0.7
           }
         }
-        ParentId: 6025345842610151354
+        ParentId: 4781671109827199097
         ChildIds: 6955698486358296757
         UnregisteredParameters {
           Overrides {
@@ -2693,6 +2693,7 @@ Assets {
         ChildIds: 11067510265662013256
         ChildIds: 16342259640243787318
         ChildIds: 11990874194104389264
+        ChildIds: 14559971347575530480
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3141,6 +3142,80 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 15590791169563939070
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 14559971347575530480
+        Name: "Gem - Heart Polished"
+        Transform {
+          Location {
+            X: 32.6015205
+            Y: 57.4572563
+            Z: -87.0170288
+          }
+          Rotation {
+            Pitch: 40.4113808
+            Yaw: 180
+            Roll: 90
+          }
+          Scale {
+            X: 2.05090976
+            Y: 1.7729497
+            Z: 4.07924175
+          }
+        }
+        ParentId: 4681549885189671331
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6.66516972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1.69367325
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2810379255825890868
           }
           Teams {
           }
