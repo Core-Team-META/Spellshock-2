@@ -26,7 +26,7 @@ _G.MENU_TABLE = {
 	PerkShop = 8,
 	DailyShop = 9,
 	Tutorial_Slides = 10,
-	TourneyPopup = 11
+	Training = 11
 }
 
 function SpamPrevent()
