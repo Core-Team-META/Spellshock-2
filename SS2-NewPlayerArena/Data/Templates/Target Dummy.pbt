@@ -437,6 +437,8 @@ Assets {
         ChildIds: 8634303485764191295
         ChildIds: 10955056595218617787
         ChildIds: 16277280900044578293
+        ChildIds: 1966584361121349293
+        ChildIds: 11618266826919638921
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -589,7 +591,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1579,6 +1581,101 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 1966584361121349293
+        Name: "Chain Tile 01"
+        Transform {
+          Location {
+            X: -23.0870972
+            Y: -3.82389331
+            Z: 43.7009277
+          }
+          Rotation {
+            Pitch: -0.554840088
+            Yaw: -2.96878052
+            Roll: 0.0209092814
+          }
+          Scale {
+            X: 1.1168828
+            Y: 1.11688018
+            Z: 0.452852368
+          }
+        }
+        ParentId: 5990241511996944852
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10771108408610196052
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 11618266826919638921
+        Name: "Fantasy Pommel 02"
+        Transform {
+          Location {
+            X: -22.0310879
+            Y: -3.8501792
+            Z: 152.607101
+          }
+          Rotation {
+            Roll: 180
+          }
+          Scale {
+            X: 3.50578
+            Y: 3.50578
+            Z: 3.50578
+          }
+        }
+        ParentId: 5990241511996944852
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17616555706524180168
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
     }
     Assets {
       Id: 7683011456927666997
@@ -1650,6 +1747,24 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_urb_sub_craftsman_roof_001_beam"
+      }
+    }
+    Assets {
+      Id: 10771108408610196052
+      Name: "Chain Tile 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_chain_001"
+      }
+    }
+    Assets {
+      Id: 17616555706524180168
+      Name: "Fantasy Pommel 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_002"
       }
     }
     PrimaryAssetId {
