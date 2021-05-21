@@ -8,6 +8,7 @@ local NAMESPACE = "METADS."
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -19,6 +20,12 @@ local ORC_TRAINING_LEAVE_TRIGGER = script:GetCustomProperty("ORC_TRAINING_LEAVE_
 local ELF_TRAINING_TRIGGER = script:GetCustomProperty("ELF_TRAINING_TRIGGER"):WaitForObject()
 local ELF_TRAINING_LEAVE_TRIGGER = script:GetCustomProperty("ELF_TRAINING_LEAVE_TRIGGER"):WaitForObject()
 local CLOSE_BUTTON = script:GetCustomProperty("CLOSE_BUTTON"):WaitForObject()
+local TeleportButton = script:GetCustomProperty("TeleportButton"):WaitForObject()
+local TrainingNotice = script:GetCustomProperty("TrainingNotice"):WaitForObject()
+
+local TrainingIncomplete = PARENT_UI:GetCustomProperty("TrainingIncomplete"):WaitForObject()
+local TrainingFinished = PARENT_UI:GetCustomProperty("TrainingFinished"):WaitForObject()
+local SidebarPanel = PARENT_UI:GetCustomProperty("Sidebar"):WaitForObject()
 
 local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
 ------------------------------------------------------------------------------------------------------------------------
@@ -29,6 +36,11 @@ local npcTriggers = {}
 local perkPanels = {}
 local spamPrevent
 local closeButtonLisener = nil
+local hasTeleported = false
+
+local function META_CP()
+	return _G["Class.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -103,6 +115,13 @@ local function OnCloseButtonPressed(button)
     ToggleShop(false)
 end
 
+local function OnTeleportClicked(thisButton)
+    if not hasTeleported and isAllowed(0.5) then
+        hasTeleported = true
+        Events.BroadcastToServer("TeleportToTraining")
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -137,3 +156,44 @@ ELF_TRAINING_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnCosmeticShopOpen)
 Events.Connect("Menu Changed", OnMenuChanged)
 CLOSE_BUTTON.clickedEvent:Connect(OnCloseButtonPressed)
+TeleportButton.clickedEvent:Connect(OnTeleportClicked)
+
+while not _G.PerPlayerDictionary or not _G.CurrentMenu do
+    Task.Wait()
+end
+
+Task.Wait()
+local hasCompletedTraining = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONST.TRAINING_STATUS)
+if hasCompletedTraining == 0 then
+    TrainingNotice.visibility = Visibility.INHERIT
+    TrainingIncomplete.visibility = Visibility.INHERIT
+    SidebarPanel.visibility = Visibility.INHERIT
+    TrainingFinished.visibility = Visibility.FORCE_OFF
+else
+    TrainingNotice.visibility = Visibility.FORCE_OFF
+    TrainingIncomplete.visibility = Visibility.FORCE_OFF
+    SidebarPanel.visibility = Visibility.FORCE_OFF
+    TrainingFinished.visibility = Visibility.INHERIT
+end
+
+local isNewPlayer = true
+for _, class in ipairs(CONST.CLASS) do
+    if META_CP().GetClassLevel(LOCAL_PLAYER, class) ~= 1 then
+        isNewPlayer = false
+    end
+end
+
+if isNewPlayer and hasCompletedTraining == 0 then
+    warn("NEW PLAYER: "..LOCAL_PLAYER.name)
+    if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["Training"])
+    else
+        warn("Waiting for menu to be none")
+        Task.Spawn(function ()
+            while  _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] do
+                Task.Wait(1)
+            end 
+            Events.Broadcast("Changing Menu", _G.MENU_TABLE["Training"])
+         end)
+    end
+end

@@ -1,4 +1,13 @@
 Assets {
+  Id: 18159336325577157925
+  Name: "Icon Skull"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Skull"
+  }
+}
+Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -62,15 +71,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13892267814833461183
-  Name: "Fantasy Bell 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_BBlanket_001"
-  }
-}
-Assets {
   Id: 13462854128336502995
   Name: "Center Circle 001 Outline"
   PlatformAssetType: 9
@@ -107,21 +107,21 @@ Assets {
   }
 }
 Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
+  }
+}
+Assets {
   Id: 9008238566657320754
   Name: "Sci-fi Frame 006"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFi_Frame_006"
-  }
-}
-Assets {
-  Id: 8578995028087510781
-  Name: "UI Gradient Circular 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Basic_Shape_001"
   }
 }
 Assets {
