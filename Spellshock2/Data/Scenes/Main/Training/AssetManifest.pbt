@@ -1,4 +1,13 @@
 Assets {
+  Id: 18159336325577157925
+  Name: "Icon Skull"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Skull"
+  }
+}
+Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -140,15 +149,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_020"
-  }
-}
-Assets {
-  Id: 4367859479593647968
-  Name: "Fantasy Frame 009"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Frame_009"
   }
 }
 Assets {
