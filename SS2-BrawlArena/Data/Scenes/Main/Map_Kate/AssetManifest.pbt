@@ -3329,6 +3329,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2448982667642731065
+  Name: "Prism - 5-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_pentagon_hq_001"
+  }
+}
+Assets {
   Id: 2437857163573821662
   Name: "Large Wood Board 8m"
   PlatformAssetType: 1
