@@ -877,8 +877,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7440611720845950457
-  Name: "Healer Test Dummy"
+  Id: 18247732862433929570
+  Name: "Healer Test Dummy 2"
   Transform {
     Scale {
       X: 1
@@ -896,11 +896,11 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 4467490429473095940
+      key: 1525299052646529850
       value {
         Overrides {
           Name: "Name"
-          String: "Healer Test Dummy"
+          String: "Healer Test Dummy 2"
         }
         Overrides {
           Name: "Position"
@@ -910,15 +910,10 @@ Objects {
             Z: 1897.0105
           }
         }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
       }
     }
     TemplateAsset {
-      Id: 10560204242345459862
+      Id: 9198439947252829063
     }
   }
 }
