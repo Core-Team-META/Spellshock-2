@@ -900,7 +900,7 @@ Objects {
       Materials {
         key: "Nature_Trunk"
         value {
-          Id: 841534158063459245
+          Id: 9650217245010659427
         }
       }
       LocalPositionOffset {

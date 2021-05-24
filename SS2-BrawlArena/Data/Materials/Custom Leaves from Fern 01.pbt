@@ -13,8 +13,17 @@ Assets {
       Overrides {
         Name: "color_accent"
         Color {
-          R: 0.385416657
-          G: 0.34895432
+          R: 0.269791633
+          G: 0.385416657
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.0496805385
+          G: 0.159999967
+          B: 0.0191666652
           A: 1
         }
       }

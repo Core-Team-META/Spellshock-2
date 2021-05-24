@@ -8,7 +8,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "damage_amount"
-        Float: 0.447080314
+        Float: 0.129469693
       }
       Overrides {
         Name: "color_accent"

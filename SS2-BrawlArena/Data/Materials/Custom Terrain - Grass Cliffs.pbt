@@ -15,6 +15,29 @@ Assets {
           A: 1
         }
       }
+      Overrides {
+        Name: "gradient_color"
+        Color {
+          R: 0.32996
+          G: 0.584000051
+          B: 0.533192098
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "gradient_falloff"
+        Float: 0.63108021
+      }
+      Overrides {
+        Name: "gradient_direction"
+        Vector {
+          X: -1
+        }
+      }
+      Overrides {
+        Name: "gradient_shift"
+        Float: 0.52858156
+      }
     }
     Assets {
       Id: 13407417223406409810

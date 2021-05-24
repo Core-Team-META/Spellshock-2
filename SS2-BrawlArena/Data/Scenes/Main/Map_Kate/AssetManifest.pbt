@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 18198612390204212876
-  Name: "Bricks Cobblestone Floor Arches 001"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_cobblestone_floor_arch_001"
-  }
-}
-Assets {
   Id: 18141993204830915813
   Name: "Fantasy Castle Accessory Roof 01 "
   PlatformAssetType: 1
@@ -185,15 +176,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fern_generic_001"
-  }
-}
-Assets {
-  Id: 17409295383154929877
-  Name: "Wood Planks Beveled Painted 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_wood_bevel_planks_white_001_uv"
   }
 }
 Assets {
@@ -563,6 +545,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fern_generic_004"
+  }
+}
+Assets {
+  Id: 15122124826381828578
+  Name: "Fantasy Castle Stairs Spiral 03 - Large 3m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_003_lg_3m"
   }
 }
 Assets {
@@ -1619,15 +1610,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10293907404001327825
-  Name: "Prism - 8-Sided Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_prism_octagon_hq_001"
-  }
-}
-Assets {
   Id: 10268579576729666886
   Name: "Text 06: O"
   PlatformAssetType: 1
@@ -2012,15 +1994,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prism_trapezoid_001"
-  }
-}
-Assets {
-  Id: 8528600366674269189
-  Name: "Wedge - Convex"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_wedge_curved_convex_001"
   }
 }
 Assets {
@@ -2807,15 +2780,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4755534378174475627
-  Name: "Text 04: ,"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "F7_Text_062"
-  }
-}
-Assets {
   Id: 4724136460001867649
   Name: "Frame Large Outside Corner - Neon"
   PlatformAssetType: 1
@@ -3110,15 +3074,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_crate_narrow_open_simple_160cm_001"
-  }
-}
-Assets {
-  Id: 3665975595307183562
-  Name: "Craftsman Part - Inside Center Trim 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_sub_craftsman_part_intTrim_001_mid"
   }
 }
 Assets {
@@ -3572,15 +3527,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1259997542378019594
-  Name: "Fantasy Castle Stairs 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_001"
-  }
-}
-Assets {
   Id: 1197983536016875073
   Name: "Rock Flat 02"
   PlatformAssetType: 1
@@ -3659,15 +3605,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_bark_redwood_001_uv"
-  }
-}
-Assets {
-  Id: 865869904938673548
-  Name: "Text 05: )"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "F6_Text_046"
   }
 }
 Assets {
@@ -3848,14 +3785,5 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_column_square_segment_001"
-  }
-}
-Assets {
-  Id: 34823057115098118
-  Name: "Text 05: 6"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "F6_Text_032"
   }
 }
