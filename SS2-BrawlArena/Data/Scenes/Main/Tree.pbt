@@ -825,12 +825,12 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      X: 189988.578
-      Y: 280817.719
+      X: -123267.531
+      Y: 323004.719
       Z: 2464.72559
     }
     Rotation {
-      Yaw: -14.6448669
+      Yaw: 12.8265457
     }
     Scale {
       X: 1
