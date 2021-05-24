@@ -881,6 +881,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13800436588944964225
+  Name: "Bush 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bush_generic_002"
+  }
+}
+Assets {
   Id: 13791225619385764102
   Name: "Wicker Basket 02"
   PlatformAssetType: 2
@@ -977,6 +986,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
+  }
+}
+Assets {
+  Id: 13407417223406409810
+  Name: "Terrain - Grass Cliffs"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_terrain_cliff-grass-001_wa"
   }
 }
 Assets {
@@ -1481,6 +1499,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_skull_pile_01_ref"
+  }
+}
+Assets {
+  Id: 10784387645319107096
+  Name: "Tree Oak 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_oak_001"
   }
 }
 Assets {
@@ -3437,6 +3464,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1755255133030522901
+  Name: "Tree Oak Bare 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_oak_002"
+  }
+}
+Assets {
   Id: 1693247766034882366
   Name: "Gear - generic large five-spoked"
   PlatformAssetType: 1
@@ -3608,6 +3644,15 @@ Assets {
   }
 }
 Assets {
+  Id: 901541979513849367
+  Name: "Bush 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bush_generic_001"
+  }
+}
+Assets {
   Id: 889917629752285723
   Name: "Bark Redwood 01"
   PlatformAssetType: 2
@@ -3740,6 +3785,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_wedge_002"
+  }
+}
+Assets {
+  Id: 211372444056789047
+  Name: "Generic Water - No Distortion"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxma_parameter_driven_water_nodistortion"
   }
 }
 Assets {

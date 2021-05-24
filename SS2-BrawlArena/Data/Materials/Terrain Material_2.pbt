@@ -12,7 +12,7 @@ Assets {
       }
       Overrides {
         Name: "material1side_scale"
-        Float: 0.1
+        Float: 0.2
       }
       Overrides {
         Name: "cmp:Material3"
@@ -28,11 +28,11 @@ Assets {
       }
       Overrides {
         Name: "material3_scale"
-        Float: 0.1
+        Float: 0.2
       }
       Overrides {
         Name: "material3side_scale"
-        Float: 0.1
+        Float: 0.2
       }
       Overrides {
         Name: "cmp:Material2"

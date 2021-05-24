@@ -8,7 +8,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "opacity"
-        Float: 0.8
+        Float: 0.9
       }
       Overrides {
         Name: "opacity distance"

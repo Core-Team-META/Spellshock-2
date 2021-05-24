@@ -15,7 +15,7 @@ Objects {
     }
   }
   ChildIds: 15438590278407643691
-  ChildIds: 12626000991766525324
+  ChildIds: 3444078312991520235
   ChildIds: 9877962287386381687
   ChildIds: 1578063274563920644
   ChildIds: 18005697627958196623
@@ -821,16 +821,16 @@ Objects {
   }
 }
 Objects {
-  Id: 12626000991766525324
+  Id: 3444078312991520235
   Name: "Terrain"
   Transform {
     Location {
-      X: -2722.1792
-      Y: 170003.609
-      Z: -14393.542
+      X: 189988.578
+      Y: 280817.719
+      Z: 2464.72559
     }
     Rotation {
-      Yaw: -52.8516846
+      Yaw: -14.6448669
     }
     Scale {
       X: 1
@@ -846,11 +846,14 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Terrain {
     Material {
-      Id: 13795170071507932677
+      Id: 2997389267026443798
     }
     VoxelSize: 500
     OctreeDepth: 5
@@ -859,15 +862,16 @@ Objects {
       Asset {
         Id: 10784387645319107096
       }
-      DistanceBetweenInstances: 3000
-      SpawnDistance: 32000
+      DistanceBetweenInstances: 2500
+      SpawnDistance: 64000
       CullDistance {
-        Min: 100000
-        Max: 100000
+        Min: 45000
+        Max: 50000
       }
-      ReceivesDecals: true
+      CastShadow: true
+      AffectDistanceFieldLighting: true
       GroundSlopeAngle {
-        Max: 30
+        Max: 90
       }
       Scaling {
         Scaling: Free
@@ -880,16 +884,17 @@ Objects {
           Max: 2
         }
         ScaleZ {
-          Min: 1.2
-          Max: 1.3
+          Min: 1.3
+          Max: 1.5
         }
       }
+      RotationAlignment: AlignToWorldUp
       RandomYaw: true
       RandomPitchAngle: 6
       Materials {
         key: "Nature_Leaves"
         value {
-          Id: 841534158063459245
+          Id: 1002280726180043930
         }
       }
       Materials {
@@ -899,7 +904,7 @@ Objects {
         }
       }
       LocalPositionOffset {
-        Z: -140
+        Z: -200
       }
       LocalRotationOffset {
       }
