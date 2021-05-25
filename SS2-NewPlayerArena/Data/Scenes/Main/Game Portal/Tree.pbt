@@ -275,6 +275,12 @@ Objects {
         SelfId: 16597196290281542510
       }
     }
+    Overrides {
+      Name: "cs:GameLinks"
+      ObjectReference {
+        SelfId: 16972268230034387723
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

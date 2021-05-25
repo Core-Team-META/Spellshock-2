@@ -18,9 +18,9 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
+local GameLinks = script:GetCustomProperty("GameLinks"):WaitForObject()
 
--- User exposed properties
-local DESTINATION_GAME = COMPONENT_ROOT:GetCustomProperty("DestinationGame")
+local DESTINATION_GAME = GameLinks:GetCustomProperty("MainGame")
 
 -- Check user properties
 if string.len(DESTINATION_GAME) < 8 then

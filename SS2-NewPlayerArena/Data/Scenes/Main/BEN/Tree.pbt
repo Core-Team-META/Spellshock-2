@@ -20,10 +20,6 @@ Objects {
   }
   ParentId: 10784299909865591368
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:DestinationGame"
-      String: "f8b143/spellshock-2"
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -59,10 +55,6 @@ Objects {
   }
   ParentId: 10784299909865591368
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:DestinationGame"
-      String: "f8b143/spellshock-2"
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
