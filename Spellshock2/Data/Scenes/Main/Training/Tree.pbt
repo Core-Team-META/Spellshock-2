@@ -41,8 +41,8 @@ Objects {
   Name: "ORC_TRAINING_TRIGGER"
   Transform {
     Location {
-      X: -21734.6426
-      Y: -32887.3047
+      X: -23818.6563
+      Y: -30542.9063
       Z: 6564.43848
     }
     Rotation {
@@ -83,8 +83,8 @@ Objects {
   Name: "ORC_TRAINING_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: -21751.0117
-      Y: -32896.082
+      X: -23835.0254
+      Y: -30551.6836
       Z: 6585.9707
     }
     Rotation {
@@ -123,8 +123,8 @@ Objects {
   Name: "ELF_TRAINING_TRIGGER"
   Transform {
     Location {
-      X: 19102.1875
-      Y: 21223.2383
+      X: 19342.0977
+      Y: 19358.9141
       Z: 7435.12061
     }
     Rotation {
@@ -165,8 +165,8 @@ Objects {
   Name: "ELF_TRAINING_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 19147.1914
-      Y: 21225.9141
+      X: 19387.1016
+      Y: 19361.5898
       Z: 7435.12061
     }
     Rotation {
