@@ -44,6 +44,56 @@ Assets {
           A: 1
         }
       }
+      Overrides {
+        Name: "cmp:Material4"
+        AssetReference {
+          Id: 14793205094176453575
+        }
+      }
+      Overrides {
+        Name: "cmp:Material4_Sides"
+        AssetReference {
+          Id: 14793205094176453575
+        }
+      }
+      Overrides {
+        Name: "material4_scale"
+        Float: 0.3
+      }
+      Overrides {
+        Name: "material4side_scale"
+        Float: 0.3
+      }
+      Overrides {
+        Name: "cmp:Material2"
+        AssetReference {
+          Id: 15281399694292404596
+        }
+      }
+      Overrides {
+        Name: "cmp:Material2_Sides"
+        AssetReference {
+          Id: 15281399694292404596
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material2"
+        Color {
+          R: 0.796875
+          G: 0.610107422
+          B: 0.610107422
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material2_Sides"
+        Color {
+          R: 0.796875
+          G: 0.610107422
+          B: 0.610107422
+          A: 1
+        }
+      }
     }
     Assets {
       Id: 12032822587521192598
@@ -70,6 +120,42 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "cliff_003"
+      }
+    }
+    Assets {
+      Id: 14793205094176453575
+      Name: "Rock Obsidian 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fresnel_rock_obsidian_001_uv"
+      }
+    }
+    Assets {
+      Id: 14793205094176453575
+      Name: "Rock Obsidian 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fresnel_rock_obsidian_001_uv"
+      }
+    }
+    Assets {
+      Id: 15281399694292404596
+      Name: "Sand 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_sand_001_uv"
+      }
+    }
+    Assets {
+      Id: 15281399694292404596
+      Name: "Sand 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_sand_001_uv"
       }
     }
   }

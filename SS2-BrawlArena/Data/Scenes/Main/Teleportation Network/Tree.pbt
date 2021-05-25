@@ -5,12 +5,12 @@ Objects {
   Name: "Destination C"
   Transform {
     Location {
-      X: 337750.906
-      Y: 277922.219
-      Z: 384.184326
+      X: 11844.2559
+      Y: 385921.031
+      Z: 386.050537
     }
     Rotation {
-      Yaw: -91.5612793
+      Yaw: -46.3832397
     }
     Scale {
       X: 1
@@ -299,11 +299,12 @@ Objects {
   Name: "Destination C"
   Transform {
     Location {
-      X: 332050.781
-      Y: 272769.688
-      Z: -3335.44897
+      X: 9055.49902
+      Y: 378756.656
+      Z: -3335.94702
     }
     Rotation {
+      Yaw: 40.2500534
     }
     Scale {
       X: 1
@@ -592,9 +593,9 @@ Objects {
   Name: "Destination C"
   Transform {
     Location {
-      X: 337143.656
-      Y: 269982.063
-      Z: -3336.33911
+      X: 14769.3691
+      Y: 378666.063
+      Z: -3336.54736
     }
     Rotation {
       Yaw: -109.823303
