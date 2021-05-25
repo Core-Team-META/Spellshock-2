@@ -20,6 +20,7 @@ local ORC_TRAINING_LEAVE_TRIGGER = script:GetCustomProperty("ORC_TRAINING_LEAVE_
 local ELF_TRAINING_TRIGGER = script:GetCustomProperty("ELF_TRAINING_TRIGGER"):WaitForObject()
 local ELF_TRAINING_LEAVE_TRIGGER = script:GetCustomProperty("ELF_TRAINING_LEAVE_TRIGGER"):WaitForObject()
 local CLOSE_BUTTON = script:GetCustomProperty("CLOSE_BUTTON"):WaitForObject()
+local CloseButton2 = script:GetCustomProperty("CloseButton2"):WaitForObject()
 local TeleportButton = script:GetCustomProperty("TeleportButton"):WaitForObject()
 local TrainingNotice = script:GetCustomProperty("TrainingNotice"):WaitForObject()
 
@@ -156,6 +157,7 @@ ELF_TRAINING_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnCosmeticShopOpen)
 Events.Connect("Menu Changed", OnMenuChanged)
 CLOSE_BUTTON.clickedEvent:Connect(OnCloseButtonPressed)
+CloseButton2.clickedEvent:Connect(OnCloseButtonPressed)
 TeleportButton.clickedEvent:Connect(OnTeleportClicked)
 
 while not _G.PerPlayerDictionary or not _G.CurrentMenu do
@@ -167,12 +169,10 @@ local hasCompletedTraining = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONS
 if hasCompletedTraining == 0 then
     TrainingNotice.visibility = Visibility.INHERIT
     TrainingIncomplete.visibility = Visibility.INHERIT
-    SidebarPanel.visibility = Visibility.INHERIT
     TrainingFinished.visibility = Visibility.FORCE_OFF
 else
     TrainingNotice.visibility = Visibility.FORCE_OFF
     TrainingIncomplete.visibility = Visibility.FORCE_OFF
-    SidebarPanel.visibility = Visibility.FORCE_OFF
     TrainingFinished.visibility = Visibility.INHERIT
 end
 

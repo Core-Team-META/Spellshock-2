@@ -188,6 +188,24 @@ Assets {
   }
 }
 Assets {
+  Id: 955340689223569148
+  Name: "Fantasy Coins 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
+  Id: 813134327095273190
+  Name: "Fantasy Gear Top 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Top_010"
+  }
+}
+Assets {
   Id: 48307754774318265
   Name: "UI Gradient Rectangular 001"
   PlatformAssetType: 9
