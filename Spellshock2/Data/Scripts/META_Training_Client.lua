@@ -177,18 +177,18 @@ else
 end
 
 local isNewPlayer = true
-for _, class in ipairs(CONST.CLASS) do
+for _, class in pairs(CONST.CLASS) do
     if META_CP().GetClassLevel(LOCAL_PLAYER, class) ~= 1 then
         isNewPlayer = false
     end
 end
 
 if isNewPlayer and hasCompletedTraining == 0 then
-    warn("NEW PLAYER: "..LOCAL_PLAYER.name)
+    --warn("NEW PLAYER: "..LOCAL_PLAYER.name)
     if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
         Events.Broadcast("Changing Menu", _G.MENU_TABLE["Training"])
     else
-        warn("Waiting for menu to be none")
+        --warn("Waiting for menu to be none")
         Task.Spawn(function ()
             while  _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] do
                 Task.Wait(1)
