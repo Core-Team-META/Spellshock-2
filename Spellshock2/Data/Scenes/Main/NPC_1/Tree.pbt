@@ -1001,9 +1001,9 @@ Objects {
   Name: "World Text"
   Transform {
     Location {
-      X: 71.5064316
-      Y: 3.12642717
-      Z: -0.175803
+      X: 53.0274124
+      Y: -5.32246077e-06
+      Z: 30.6153812
     }
     Rotation {
       Pitch: 1.38200676
@@ -1011,9 +1011,9 @@ Objects {
       Roll: 120.009613
     }
     Scale {
-      X: 0.772662
-      Y: 0.772662
-      Z: 0.772662
+      X: 0.772662103
+      Y: 0.772662103
+      Z: 0.772662103
     }
   }
   ParentId: 18303556241685300844
@@ -1040,7 +1040,7 @@ Objects {
     HorizontalSize: 1
     VerticalSize: 1
     HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
+      Value: "mc:ecoretexthorizontalalign:center"
     }
     VerticalAlignment {
       Value: "mc:ecoretextverticalalign:center"
@@ -7246,9 +7246,9 @@ Objects {
   Name: "World Text"
   Transform {
     Location {
-      X: 55.6838684
-      Y: 3.53624749
-      Z: -5.36166811
+      X: 44.2083054
+      Y: 0.000490207924
+      Z: 25.5230236
     }
     Rotation {
       Pitch: 1.82158399
@@ -7256,9 +7256,9 @@ Objects {
       Roll: 120.016624
     }
     Scale {
-      X: 0.720278621
-      Y: 0.720278621
-      Z: 0.720278621
+      X: 0.720277965
+      Y: 0.720277965
+      Z: 0.720277965
     }
   }
   ParentId: 2944123187534650827
@@ -7285,7 +7285,7 @@ Objects {
     HorizontalSize: 1
     VerticalSize: 1
     HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
+      Value: "mc:ecoretexthorizontalalign:center"
     }
     VerticalAlignment {
       Value: "mc:ecoretextverticalalign:center"
