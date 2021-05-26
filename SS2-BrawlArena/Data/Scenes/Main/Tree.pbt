@@ -15,6 +15,7 @@ Objects {
     }
   }
   ChildIds: 15438590278407643691
+  ChildIds: 2775623703831563631
   ChildIds: 3444078312991520235
   ChildIds: 9877962287386381687
   ChildIds: 1578063274563920644
@@ -634,6 +635,105 @@ Objects {
     VoxelSize: 150
     OctreeDepth: 5
     GeneratorID: "DEPRECATED"
+    Foliage {
+      Asset {
+        Id: 13266663870848907036
+      }
+      DistanceBetweenInstances: 1000
+      MaterialChannel: 1
+      SpawnDistance: 20000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        ScaleX {
+          Min: 2
+          Max: 2
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 1964254608213071037
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 8021476752120115971
+      }
+      DistanceBetweenInstances: 1000
+      MaterialChannel: 3
+      SpawnDistance: 20000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 20
+      }
+      Scaling {
+        Scaling: Free
+        ScaleX {
+          Min: 0.5
+          Max: 1
+        }
+        ScaleY {
+          Min: 0.5
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.5
+          Max: 1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 90
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 14793205094176453575
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
   }
 }
 Objects {
@@ -964,6 +1064,46 @@ Objects {
         Max: 102400
       }
     }
+  }
+}
+Objects {
+  Id: 2775623703831563631
+  Name: "Terrain"
+  Transform {
+    Location {
+      X: 7272.54395
+      Y: -8102.94141
+      Z: 886.909912
+    }
+    Rotation {
+      Yaw: 82.9329376
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Terrain {
+    Material {
+      Id: 3099757720755967884
+    }
+    VoxelSize: 100
+    OctreeDepth: 5
+    GeneratorID: "DEPRECATED"
   }
 }
 Objects {

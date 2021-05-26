@@ -29,18 +29,18 @@ Assets {
       Overrides {
         Name: "cmpc:Material1"
         Color {
-          R: 0.498000026
-          G: 0.498000026
-          B: 0.498000026
+          R: 0.679
+          G: 0.679
+          B: 0.679
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material1_Sides"
         Color {
-          R: 0.491000026
-          G: 0.491000026
-          B: 0.491000026
+          R: 0.578
+          G: 0.578
+          B: 0.578
           A: 1
         }
       }
@@ -91,6 +91,34 @@ Assets {
           R: 0.796875
           G: 0.610107422
           B: 0.610107422
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmp:Material3"
+        AssetReference {
+          Id: 10487907976569797598
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material3"
+        Color {
+          R: 8
+          G: 1.19999981
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmp:Material3_Sides"
+        AssetReference {
+          Id: 10487907976569797598
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material3_Sides"
+        Color {
+          R: 8
+          G: 1.19999981
           A: 1
         }
       }
@@ -156,6 +184,24 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_sand_001_uv"
+      }
+    }
+    Assets {
+      Id: 10487907976569797598
+      Name: "Cliff 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_cliff_001_uv"
+      }
+    }
+    Assets {
+      Id: 10487907976569797598
+      Name: "Cliff 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_cliff_001_uv"
       }
     }
   }
