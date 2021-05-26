@@ -26,7 +26,7 @@ Objects {
     }
     Overrides {
       Name: "cs:TrainingArena"
-      String: "309ebf/spellshock-2-training"
+      String: "cbe76f/spellshock-2-training"
     }
   }
   Collidable_v2 {

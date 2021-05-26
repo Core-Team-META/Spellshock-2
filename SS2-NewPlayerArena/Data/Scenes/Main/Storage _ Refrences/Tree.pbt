@@ -22,7 +22,7 @@ Objects {
     }
     Overrides {
       Name: "cs:MainGame"
-      String: "496988/spellshock-2-live"
+      String: "f8b143/spellshock-2"
     }
   }
   Collidable_v2 {
@@ -217,7 +217,7 @@ Objects {
     Overrides {
       Name: "cs:Cosmetics"
       NetReference {
-        Key: "4873e6b8721c4d1a86c08580be083a43"
+        Key: "c333b186a0784c47af674b7704808501"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -226,7 +226,7 @@ Objects {
     Overrides {
       Name: "cs:Progression"
       NetReference {
-        Key: "5e37c82c383e4ba29b2bfe724b2c48db"
+        Key: "fda12f8c98b648b0a612628d288062a6"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -235,7 +235,7 @@ Objects {
     Overrides {
       Name: "cs:Currency"
       NetReference {
-        Key: "9a10eeb68b0b4d63915aab86829874b2"
+        Key: "d5d513aebe8a4907862c98637c1f7b6f"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }

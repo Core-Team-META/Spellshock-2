@@ -60,4 +60,4 @@ LeaderboardConfigs {
     EntryLimit: 50
   }
 }
-MaxPlayers: 6
+MaxPlayers: 8
