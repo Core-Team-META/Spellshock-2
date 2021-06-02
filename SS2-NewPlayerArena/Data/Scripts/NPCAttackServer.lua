@@ -197,7 +197,12 @@ function ApplyDamage(attackData)
 	local rotation = attackData.rotation
 	local source = attackData.source
 
+	if not Object.IsValid(source) then
+		return
+	end
+	
 	Events.Broadcast("TargetDummyDamage", attackData)
+
 
 	if (amount >= 0 and source.team ~= GetTeam()) or (amount < 0 and source.team == GetTeam()) then
 		local prevHealth = GetHealth()
