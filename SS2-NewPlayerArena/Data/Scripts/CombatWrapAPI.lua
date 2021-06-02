@@ -59,20 +59,21 @@ function API.ApplyDamage(attackData)
 	end
 
 	Events.Broadcast("CombatWrapAPI.GoingToTakeDamage", attackData)
+	 --
 
-	CROSS_CONTEXT_CALLER().Call(
-		function()
-			GetWrapperFor(object).ApplyDamage(attackData)
+	--[[CROSS_CONTEXT_CALLER().Call(
+		function()]]
+			 GetWrapperFor(object).ApplyDamage(attackData)
 
-			Events.Broadcast("CombatWrapAPI.OnDamageTaken", attackData)
+	Events.Broadcast("CombatWrapAPI.OnDamageTaken", attackData)
 
-			local currentHealth = API.GetHitPoints(object)
-			if currentHealth and currentHealth <= 0 then
-				Events.Broadcast("CombatWrapAPI.ObjectHasDied", attackData)
-			end
-		end
-	)
+	local currentHealth = API.GetHitPoints(object)
+	if currentHealth and currentHealth <= 0 then
+		Events.Broadcast("CombatWrapAPI.ObjectHasDied", attackData)
+	end
 end
+--)
+--end
 
 -- IsDead()
 function API.IsDead(object)

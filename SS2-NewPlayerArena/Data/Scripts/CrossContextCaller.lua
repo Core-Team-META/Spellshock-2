@@ -24,9 +24,13 @@ function API.Call(F)
 	table.insert(functionsToRun, F)
 end
 
-function Tick()
+function CheckCaller()
 	while functionsToRun[1] do
 		functionsToRun[1]()
 		table.remove(functionsToRun, 1)
 	end
+end
+
+function Tick()
+	pcall(CheckCaller)
 end
