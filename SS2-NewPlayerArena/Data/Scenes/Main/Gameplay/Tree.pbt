@@ -650,6 +650,7 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
     }
   }
 }
@@ -35186,6 +35187,7 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
     }
   }
   InstanceHistory {
@@ -35232,6 +35234,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
