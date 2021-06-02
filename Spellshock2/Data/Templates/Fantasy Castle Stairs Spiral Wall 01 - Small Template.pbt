@@ -184,5 +184,5 @@ Assets {
       AssetId: "Fantasy_Castle_Stairs_Spiral_Wall_01_-_Small_Template"
     }
   }
-  SerializationVersion: 85
+  SerializationVersion: 87
 }
