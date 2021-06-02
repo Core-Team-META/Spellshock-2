@@ -2,7 +2,7 @@ Assets {
   Id: 11834312313352554996
   Name: "Golden Bricks_M"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

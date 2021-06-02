@@ -213,19 +213,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12468353192930553913
-  Name: "SS2_BE_PROD_PROGRESSION"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "06aa8a5ccba94efe82095b881462eab5"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 11738101196508092081
   Name: "Server Gold"
   PlatformAssetType: 24
@@ -387,19 +374,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8845614076972316242
-  Name: "SS2_BE_PROD_CURRENCY"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "627fd490885c4745bc44c7d55a8fb5db"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 8209956498192832287
   Name: "VIP Member"
   PlatformAssetType: 24
@@ -430,19 +404,6 @@ Assets {
       Key: "a6ce54693101494f951fb3cfc42a0f3c"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 7612318090407833903
-  Name: "SS2_BE_PROD_COSMETICS"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "5de58cc9214344bca1a53c803d5d9292"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

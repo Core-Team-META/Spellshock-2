@@ -2,7 +2,7 @@ Assets {
   Id: 18015270462977968056
   Name: "ElvenMaya Waterfall from Waterfall 90 Outer Corner"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 15620176012887556244
     ParameterOverrides {

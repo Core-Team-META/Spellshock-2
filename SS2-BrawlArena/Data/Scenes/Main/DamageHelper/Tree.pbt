@@ -116,6 +116,7 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -169,6 +170,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -221,6 +223,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -286,6 +289,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -838,6 +842,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {

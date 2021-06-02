@@ -2,7 +2,7 @@ Assets {
   Id: 10122866060562897834
   Name: "Mage Ritual Flame"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 1580899145783672584
     ParameterOverrides {

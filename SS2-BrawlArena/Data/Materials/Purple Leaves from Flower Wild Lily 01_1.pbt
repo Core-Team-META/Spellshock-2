@@ -2,7 +2,7 @@ Assets {
   Id: 3163225366987205191
   Name: "Purple Leaves from Flower Wild Lily 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 13137230637274685689
     ParameterOverrides {

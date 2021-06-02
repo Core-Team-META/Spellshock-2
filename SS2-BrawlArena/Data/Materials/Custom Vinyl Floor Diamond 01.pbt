@@ -2,7 +2,7 @@ Assets {
   Id: 5002343900690964419
   Name: "Maya Vinyl Floor Diamond 01"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 9093111762299707185
     ParameterOverrides {
