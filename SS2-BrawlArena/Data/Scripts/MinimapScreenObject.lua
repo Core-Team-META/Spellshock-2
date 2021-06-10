@@ -1,3 +1,4 @@
+if true then return end
 local ScreenObject = require(script:GetCustomProperty("ScreenObject"))
 
 local SCREEN_OBJECT_GROUP = script:GetCustomProperty("ScreenObjectGroup"):WaitForObject()

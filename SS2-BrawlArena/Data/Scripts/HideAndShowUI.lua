@@ -1,3 +1,4 @@
+if true then return end
 local Parent = script.parent
 local AllEvents 
 AllEvents = {
