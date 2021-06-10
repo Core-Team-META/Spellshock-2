@@ -78,7 +78,7 @@ function SetGameState(newState)
 		stateDuration = ROUND_END_DURATION
 	elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		stateHasduration = true
-		stateDuration = 20
+		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
 		stateDuration = 60
@@ -140,11 +140,11 @@ function Tick(deltaTime)
 		elseif previousState == ABGS.GAME_STATE_ROUND_END then
 			nextState = ABGS.GAME_STATE_PLAYER_SHOWCASE
 		elseif previousState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
-			nextState = ABGS.GAME_STATE_REWARDS
-		elseif previousState == ABGS.GAME_STATE_REWARDS then
+			nextState = ABGS.GAME_STATE_LOBBY
+		--[[elseif previousState == ABGS.GAME_STATE_REWARDS then
 			nextState = ABGS.GAME_STATE_REWARDS_END
 		elseif previousState == ABGS.GAME_STATE_REWARDS_END then
-			nextState = ABGS.GAME_STATE_LOBBY
+			nextState = ABGS.GAME_STATE_LOBBY]]
 		end
 
 		SetGameState(nextState)
