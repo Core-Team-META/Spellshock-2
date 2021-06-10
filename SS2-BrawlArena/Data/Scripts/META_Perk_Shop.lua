@@ -1,3 +1,4 @@
+if true then return end
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)

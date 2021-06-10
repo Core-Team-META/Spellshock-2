@@ -1,3 +1,4 @@
+if true then return end
 local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop Client Controller
