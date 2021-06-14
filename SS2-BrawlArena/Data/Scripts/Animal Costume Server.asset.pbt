@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:GarbageCollection"
         ObjectReference {
-          SelfId: 12421538004512198785
+          SelfId: 492040989204770406
         }
       }
     }

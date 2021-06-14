@@ -65,7 +65,8 @@ function OnEquip(equipment, player)
 	--Task.Wait()
 	PlayerDiedEvent = player.diedEvent:Connect(OnPlayerDied)
 	PlayerDamageEvent = player.damagedEvent:Connect(OnPlayerDamaged)
-	player:SetVisibility(false, false)
+	--player:SetVisibility(false, false)
+	player.isVisible = false
 	player.animationStance = "unarmed_stance"
 	_Owner = player
 	Timer = Equipment:GetCustomProperty("Duration")
@@ -73,7 +74,8 @@ end
 
 function OnUnequip(equipment, player)
 	if Object.IsValid(player) then
-		player:SetVisibility(true)
+		--player:SetVisibility(true)
+		player.isVisible = true
 		player.serverUserData.isAnimorphed = false
 	end
 

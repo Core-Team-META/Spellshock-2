@@ -91,7 +91,8 @@ end
 function OnAbilityExecute(thisAbility)
 	WeaponAbility.isEnabled = false
 	META_AP().SpawnAsset(PlayerVFX.Beginning, {position = thisAbility.owner:GetWorldPosition()})
-	thisAbility.owner:SetVisibility(false)
+	--thisAbility.owner:SetVisibility(false)
+	thisAbility.owner.isVisible = false
 	isInvisible = true
 	SpecialAbility.serverUserData.OriginalStance = SpecialAbility.owner.animationStance
 	SpecialAbility.owner.animationStance = "unarmed_sit_chair_upright"
@@ -117,7 +118,8 @@ function DisableInvisility()
 		--print("Disable Invis")
 		SpecialAbility.owner.animationStance = SpecialAbility.serverUserData.OriginalStance
 		META_AP().SpawnAsset(PlayerVFX.Ending, {position = SpecialAbility.owner:GetWorldPosition()})
-		SpecialAbility.owner:SetVisibility(true)
+		--SpecialAbility.owner:SetVisibility(true)
+		SpecialAbility.owner.isVisible = true
 		isInvisible = false
 		META_AP().AdjustPlayerMovment(SpecialAbility.owner, META_AP().ASSASSIN)
 		SetNetworkProperty(isInvisible)
@@ -149,7 +151,8 @@ end
 function OnUnequip(thisEquipment, player)
 	if not Object.IsValid(player) then return end
 	META_AP().AdjustPlayerMovment(player, META_AP().ASSASSIN)
-	player:SetVisibility(true)
+	--player:SetVisibility(true)
+	player.isVisible = true
 	isInvisible = false
 	if Object.IsValid(script) then
 		SetNetworkProperty(isInvisible)
