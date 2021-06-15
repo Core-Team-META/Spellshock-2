@@ -174,6 +174,19 @@ Assets {
   }
 }
 Assets {
+  Id: 13201759682801862308
+  Name: "SS2_BE_ARENA_PROGRESSION"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "e6e84d6a3888426abee2fe91ac07ef32"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 12913628546500597405
   Name: "Premium 1"
   PlatformAssetType: 24
@@ -243,6 +256,19 @@ Assets {
       Key: "ed3f26e02a3f4bbaa2b8953812753225"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 11542869115790566308
+  Name: "SS2_BE_ARENA_CURRENCY"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "c311f5f902d6413295505a45e8e1d041"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -547,6 +573,19 @@ Assets {
       Key: "7faf80a1c1fb4e3ea5ec9333a5128889"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 3414851193831569927
+  Name: "SS2_BE_ARENA_COSMETICS"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "642b5edadf174f36b5f7cdef4eb3890b"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
