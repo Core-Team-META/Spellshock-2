@@ -2,7 +2,7 @@ Assets {
   Id: 2500429364942806031
   Name: "Turtle Shell"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 12261421290424202325
     ParameterOverrides {

@@ -23211,6 +23211,10 @@ Objects {
         A: 0.394000024
       }
       Percent: 0.401268125
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -23960,6 +23964,10 @@ Objects {
         A: 0.394000024
       }
       Percent: 0.61664
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -29982,6 +29990,10 @@ Objects {
         A: 1
       }
       Percent: 0.935734928
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -30231,6 +30243,10 @@ Objects {
         A: 1
       }
       Percent: 0.615063429
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -30567,6 +30583,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -33047,6 +33067,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -35874,6 +35898,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -38353,6 +38381,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -40832,6 +40864,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {

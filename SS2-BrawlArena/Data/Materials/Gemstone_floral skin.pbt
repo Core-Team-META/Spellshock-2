@@ -2,7 +2,7 @@ Assets {
   Id: 4424421691934574836
   Name: "Gemstone_floral skin"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 6631081666212622438
     ParameterOverrides {

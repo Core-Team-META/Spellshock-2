@@ -2,7 +2,7 @@ Assets {
   Id: 3643490921711628289
   Name: "Maya Generic Water - No Distortion_1"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 211372444056789047
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 13193876312782744037
   Name: "Elven Stone Basic_1"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 9564538927409393589
     ParameterOverrides {

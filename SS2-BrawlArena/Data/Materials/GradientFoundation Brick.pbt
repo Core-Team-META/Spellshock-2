@@ -2,7 +2,7 @@ Assets {
   Id: 7916375719022080075
   Name: "GradientFoundation Brick"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 12493929799329424281
     ParameterOverrides {
