@@ -2,7 +2,7 @@ Assets {
   Id: 6413616756648312044
   Name: "Custom Fog Cloud"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 10718211566565106589
     ParameterOverrides {

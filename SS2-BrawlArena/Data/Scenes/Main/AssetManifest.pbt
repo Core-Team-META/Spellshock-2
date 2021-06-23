@@ -25,15 +25,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16388825162191980240
-  Name: "Rock Pile 002"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rocks_small_002"
-  }
-}
-Assets {
   Id: 15969669977645369301
   Name: "SERVERXPBOOST"
   PlatformAssetType: 24
@@ -125,33 +116,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14793205094176453575
-  Name: "Rock Obsidian 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fresnel_rock_obsidian_001_uv"
-  }
-}
-Assets {
-  Id: 14333097303507909878
-  Name: "Bone Human Scattered 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bones_human_scatter_01_ref"
-  }
-}
-Assets {
-  Id: 14293176668765266901
-  Name: "Rock Pile 001"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rocks_small_001"
-  }
-}
-Assets {
   Id: 13420476618392182070
   Name: "Gem Pack 1"
   PlatformAssetType: 24
@@ -162,15 +126,6 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
-  }
-}
-Assets {
-  Id: 13266663870848907036
-  Name: "Coral Branches Big"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_coral_branch_big_01"
   }
 }
 Assets {
@@ -239,15 +194,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11594524757616528940
-  Name: "Bone Human Skull 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bones_human_skull_01_ref"
-  }
-}
-Assets {
   Id: 11588052875130059778
   Name: "SELFXPBOOST"
   PlatformAssetType: 24
@@ -297,15 +243,6 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
-  }
-}
-Assets {
-  Id: 10784387645319107096
-  Name: "Tree Oak 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_tree_oak_001"
   }
 }
 Assets {
@@ -410,15 +347,6 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
-  }
-}
-Assets {
-  Id: 8021476752120115971
-  Name: "Rock 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_001"
   }
 }
 Assets {
@@ -601,15 +529,6 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
-  }
-}
-Assets {
-  Id: 1964254608213071037
-  Name: "Bark Redwood 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_redwood_001_uv"
   }
 }
 Assets {

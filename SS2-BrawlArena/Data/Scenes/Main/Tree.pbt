@@ -15,11 +15,6 @@ Objects {
     }
   }
   ChildIds: 15438590278407643691
-  ChildIds: 2775623703831563631
-  ChildIds: 3444078312991520235
-  ChildIds: 9877962287386381687
-  ChildIds: 1578063274563920644
-  ChildIds: 18005697627958196623
   ChildIds: 1723935035097762787
   ChildIds: 8741304376243743320
   ChildIds: 5487414887334290809
@@ -37,6 +32,7 @@ Objects {
   ChildIds: 14081316750909284148
   ChildIds: 1040821784051272386
   ChildIds: 558457977808525101
+  ChildIds: 18353737381528462390
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -49,6 +45,38 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 18353737381528462390
+  Name: "Kate"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Kate"
   }
 }
 Objects {
@@ -569,541 +597,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Gameplay"
-  }
-}
-Objects {
-  Id: 18005697627958196623
-  Name: "Map_Kate"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Map_Kate"
-  }
-}
-Objects {
-  Id: 1578063274563920644
-  Name: "Terrain"
-  Transform {
-    Location {
-      X: -620.418213
-      Y: -2378.20801
-      Z: -145.614258
-    }
-    Rotation {
-      Yaw: -17.8789673
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Terrain {
-    Material {
-      Id: 2709292502648616788
-    }
-    VoxelSize: 150
-    OctreeDepth: 5
-    GeneratorID: "DEPRECATED"
-    Foliage {
-      Asset {
-        Id: 13266663870848907036
-      }
-      DistanceBetweenInstances: 1000
-      MaterialChannel: 1
-      SpawnDistance: 20000
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 2
-          Max: 2
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 1964254608213071037
-        }
-      }
-      LocalPositionOffset {
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 8021476752120115971
-      }
-      DistanceBetweenInstances: 1000
-      MaterialChannel: 3
-      SpawnDistance: 20000
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 20
-      }
-      Scaling {
-        Scaling: Free
-        ScaleX {
-          Min: 0.5
-          Max: 1
-        }
-        ScaleY {
-          Min: 0.5
-          Max: 1
-        }
-        ScaleZ {
-          Min: 0.5
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 90
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 14793205094176453575
-        }
-      }
-      LocalPositionOffset {
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-  }
-}
-Objects {
-  Id: 9877962287386381687
-  Name: "Terrain"
-  Transform {
-    Location {
-      Z: 1254.09766
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Terrain {
-    Material {
-      Id: 9416049990700558820
-    }
-    VoxelSize: 100
-    OctreeDepth: 5
-    GeneratorID: "DEPRECATED"
-    Foliage {
-      Asset {
-        Id: 11594524757616528940
-      }
-      DistanceBetweenInstances: 100
-      MaterialChannel: 3
-      SpawnDistance: 22400
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 2
-          Max: 2
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 90
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -10
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 16388825162191980240
-      }
-      DistanceBetweenInstances: 300
-      MaterialChannel: 1
-      SpawnDistance: 22400
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        Scaling: Free
-        ScaleX {
-          Min: 1
-          Max: 1.5
-        }
-        ScaleY {
-          Min: 1
-          Max: 1.5
-        }
-        ScaleZ {
-          Min: 1
-          Max: 2
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -30
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: 700
-        Max: 1000
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 14293176668765266901
-      }
-      DistanceBetweenInstances: 300
-      MaterialChannel: 1
-      SpawnDistance: 22400
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        Scaling: Free
-        ScaleX {
-          Min: 1
-          Max: 1.5
-        }
-        ScaleY {
-          Min: 1
-          Max: 1.5
-        }
-        ScaleZ {
-          Min: 1
-          Max: 2
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -30
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 14333097303507909878
-      }
-      DistanceBetweenInstances: 200
-      MaterialChannel: 3
-      SpawnDistance: 22400
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 1
-          Max: 1
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -4
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-  }
-}
-Objects {
-  Id: 3444078312991520235
-  Name: "Terrain"
-  Transform {
-    Location {
-      X: -123267.531
-      Y: 323004.719
-      Z: 2464.72559
-    }
-    Rotation {
-      Yaw: 12.8265457
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Terrain {
-    Material {
-      Id: 2997389267026443798
-    }
-    VoxelSize: 500
-    OctreeDepth: 5
-    GeneratorID: "DEPRECATED"
-    Foliage {
-      Asset {
-        Id: 10784387645319107096
-      }
-      DistanceBetweenInstances: 2500
-      SpawnDistance: 64000
-      CullDistance {
-        Min: 45000
-        Max: 50000
-      }
-      CastShadow: true
-      AffectDistanceFieldLighting: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        Scaling: Free
-        ScaleX {
-          Min: 1.5
-          Max: 2
-        }
-        ScaleY {
-          Min: 1.5
-          Max: 2
-        }
-        ScaleZ {
-          Min: 1.3
-          Max: 1.5
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Leaves"
-        value {
-          Id: 1002280726180043930
-        }
-      }
-      Materials {
-        key: "Nature_Trunk"
-        value {
-          Id: 9650217245010659427
-        }
-      }
-      LocalPositionOffset {
-        Z: -200
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-  }
-}
-Objects {
-  Id: 2775623703831563631
-  Name: "Terrain"
-  Transform {
-    Location {
-      X: 7272.54395
-      Y: -8102.94141
-      Z: 886.909912
-    }
-    Rotation {
-      Yaw: 82.9329376
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Terrain {
-    Material {
-      Id: 3099757720755967884
-    }
-    VoxelSize: 100
-    OctreeDepth: 5
-    GeneratorID: "DEPRECATED"
   }
 }
 Objects {

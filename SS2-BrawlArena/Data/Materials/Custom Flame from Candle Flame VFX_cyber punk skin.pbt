@@ -2,7 +2,7 @@ Assets {
   Id: 8397545476538111502
   Name: "Custom Flame from Candle Flame VFX_cyber punk skin"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 7327414281955096658
     ParameterOverrides {

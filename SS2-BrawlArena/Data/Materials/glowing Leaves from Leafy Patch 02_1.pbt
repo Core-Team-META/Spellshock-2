@@ -2,7 +2,7 @@ Assets {
   Id: 9541816698793208434
   Name: "glowing Leaves from Leafy Patch 02_1"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 89
   CustomMaterialAsset {
     BaseMaterialId: 3554527700542446431
     ParameterOverrides {
