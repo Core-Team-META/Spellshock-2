@@ -215,6 +215,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14465316728247841933
+  Name: "Plane 1m - Two Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_1m_002"
+  }
+}
+Assets {
   Id: 14452616722762075696
   Name: "Fantasy Castle Pillar 01 Base"
   PlatformAssetType: 1
@@ -518,6 +527,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_torch_fire"
+  }
+}
+Assets {
+  Id: 4542959667302136808
+  Name: "Portcullis"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_portcullis_001"
   }
 }
 Assets {

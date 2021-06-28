@@ -319,7 +319,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "TEMP_MAP_OBECTS"
+    FilePartitionName: "Spawn Protect"
   }
 }
 Objects {
