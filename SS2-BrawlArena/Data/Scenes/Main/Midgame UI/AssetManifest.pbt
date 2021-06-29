@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17440982127418626575
-  Name: "Frame Tri 001 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameTri_001Wedge"
-  }
-}
-Assets {
   Id: 17370828256945431127
   Name: "Fantasy Ability Yellow 026"
   PlatformAssetType: 9
@@ -41,15 +32,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameFlat_020"
-  }
-}
-Assets {
-  Id: 16759978556497479664
-  Name: "Center Arrow 005 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_005Wedge"
   }
 }
 Assets {
@@ -122,15 +104,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Shape_Triangle"
-  }
-}
-Assets {
-  Id: 12978135121763375046
-  Name: "Fantasy Craft Stone 028"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Crafting_Stone_028"
   }
 }
 Assets {
@@ -323,30 +296,12 @@ Assets {
   }
 }
 Assets {
-  Id: 6173243591385665392
-  Name: "Frame Outlined 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameSolid4px_025"
-  }
-}
-Assets {
   Id: 5992778860505362279
   Name: "BG Flat 016"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_33"
-  }
-}
-Assets {
-  Id: 5879483734359299184
-  Name: "Frame Line 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameLine_001"
   }
 }
 Assets {

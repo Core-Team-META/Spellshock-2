@@ -1,0 +1,30 @@
+Assets {
+  Id: 8521840060127652219
+  Name: "MapRegister"
+  PlatformAssetType: 3
+  TextAsset {
+    CustomParameters {
+      Overrides {
+        Name: "cs:MapRegisty_API"
+        AssetReference {
+          Id: 15486491960255723849
+        }
+      }
+      Overrides {
+        Name: "cs:Map_Name"
+        String: ""
+      }
+      Overrides {
+        Name: "cs:Map_Root"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:Map_Camera"
+        ObjectReference {
+        }
+      }
+    }
+  }
+  SerializationVersion: 89
+}
