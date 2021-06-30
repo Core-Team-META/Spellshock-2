@@ -2,7 +2,7 @@ Assets {
   Id: 11578613740515729824
   Name: "bue flame vfx"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 1580899145783672584
     ParameterOverrides {

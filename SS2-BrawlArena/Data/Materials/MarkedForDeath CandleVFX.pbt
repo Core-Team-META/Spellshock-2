@@ -2,7 +2,7 @@ Assets {
   Id: 29250203062375072
   Name: "MarkedForDeath CandleVFX"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 1580899145783672584
     ParameterOverrides {

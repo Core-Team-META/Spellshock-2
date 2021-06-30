@@ -2,7 +2,7 @@ Assets {
   Id: 11194448359142091792
   Name: "Custom Base Material from Japanese Temple Foundation 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 12790801516593378452
     ParameterOverrides {

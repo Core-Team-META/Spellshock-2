@@ -2,7 +2,7 @@ Assets {
   Id: 8750634484502190746
   Name: "Snow Cobblestone Composite Mask Blend_2"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

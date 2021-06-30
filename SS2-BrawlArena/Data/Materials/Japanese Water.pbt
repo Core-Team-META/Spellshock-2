@@ -2,7 +2,7 @@ Assets {
   Id: 5729927485928244672
   Name: "Japanese Water"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 6279993523772827179
     ParameterOverrides {

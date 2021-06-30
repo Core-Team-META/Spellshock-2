@@ -1,8 +1,11 @@
 local MapRegisty_API = require(script:GetCustomProperty("MapRegisty_API"))
-local Map_Name = script:GetCustomProperty("Map_Name") 
-local Map_Root = script:GetCustomProperty("Map_Root"):WaitForObject()
-local Map_Camera = script:GetCustomProperty("Map_Camera"):WaitForObject()
+local name = script:GetCustomProperty("Map_Name") 
+local root = script:GetCustomProperty("Map_Root"):WaitForObject()
+local camera = script:GetCustomProperty("Map_Camera"):WaitForObject()
+local isEnabled = script:GetCustomProperty("IsEnabled")
 
 
-MapRegisty_API.AddMap(Map_Name,Map_Root,Map_Camera)
-Map_Root.isEnabled = false
+MapRegisty_API.AddMap({name = name,root = root,camera = camera, isEnabled = isEnabled})
+if Environment.IsServer() then 
+    root.isEnabled = false
+end

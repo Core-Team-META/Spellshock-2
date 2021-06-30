@@ -2,7 +2,7 @@ Assets {
   Id: 13333453542432317151
   Name: "Elven Composite Mask Blend_2"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

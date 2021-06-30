@@ -2,7 +2,7 @@ Assets {
   Id: 2489814144296072130
   Name: "Steel Flame from Candle Flame VFX_4"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 11912531266626647440
     ParameterOverrides {

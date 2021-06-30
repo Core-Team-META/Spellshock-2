@@ -2,7 +2,7 @@ Assets {
   Id: 17780255700617696764
   Name: "winter Trunk from Tree Sakura Hero Bare 01"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 6136827371784165474
     ParameterOverrides {

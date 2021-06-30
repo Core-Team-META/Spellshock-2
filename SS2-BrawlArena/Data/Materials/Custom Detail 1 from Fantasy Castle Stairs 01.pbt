@@ -2,7 +2,7 @@ Assets {
   Id: 4674214804887089910
   Name: "Custom Detail 1 from Fantasy Castle Stairs 01"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 6505051548328453428
     ParameterOverrides {

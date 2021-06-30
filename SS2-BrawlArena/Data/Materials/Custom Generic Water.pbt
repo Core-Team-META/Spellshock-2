@@ -2,7 +2,7 @@ Assets {
   Id: 18299768880977311987
   Name: "Fontains Generic Water"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 6279993523772827179
     ParameterOverrides {

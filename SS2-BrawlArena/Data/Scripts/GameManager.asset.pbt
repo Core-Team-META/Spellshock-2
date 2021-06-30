@@ -11,12 +11,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:GameManager_API"
-        AssetReference {
-          Id: 9632532963862958783
-        }
-      }
-      Overrides {
         Name: "cs:Trap_Count"
         Vector2 {
           X: 2
@@ -24,8 +18,10 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:GameTypeinfo"
-        Vector {
+        Name: "cs:Modifier_Count"
+        Vector2 {
+          X: 1
+          Y: 3
         }
       }
       Overrides {
@@ -37,8 +33,30 @@ Assets {
         String: ""
       }
       Overrides {
-        Name: "cs:GameTypeinfo:isrep"
-        Bool: true
+        Name: "cs:GameModifiers"
+        String: ""
+      }
+      Overrides {
+        Name: "cs:Gamemode"
+        String: ""
+      }
+      Overrides {
+        Name: "cs:GameManager_API"
+        AssetReference {
+          Id: 9632532963862958783
+        }
+      }
+      Overrides {
+        Name: "cs:EventSetUp"
+        AssetReference {
+          Id: 7590394335736721718
+        }
+      }
+      Overrides {
+        Name: "cs:APIBasicGameState"
+        AssetReference {
+          Id: 11974742996071064388
+        }
       }
       Overrides {
         Name: "cs:Queued:isrep"
@@ -48,7 +66,15 @@ Assets {
         Name: "cs:Traps:isrep"
         Bool: true
       }
+      Overrides {
+        Name: "cs:GameModifiers:isrep"
+        Bool: true
+      }
+      Overrides {
+        Name: "cs:Gamemode:isrep"
+        Bool: true
+      }
     }
   }
-  SerializationVersion: 89
+  SerializationVersion: 91
 }

@@ -49,7 +49,10 @@ function OnRewardSelected(player)
 	VictoryScreenAPI.OnPlayerRestored(RootGroup, player, emptyData)
 	VictoryScreenAPI.playerRestoredEvent:_Fire(player, RootGroup, emptyData)
 	--Events.Broadcast("TeleportPlayer", player)
-	player:Respawn()
+	player:Spawn(
+		{spawnKey = _G["GameManager"].data.map.name}
+	)
+
 end
 
 function OnGameStateChanged(oldState, newState, hasDuration, time)

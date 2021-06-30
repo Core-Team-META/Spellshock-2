@@ -175,7 +175,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ScoreLimit"
-      Int: 3
+      Int: 20
     }
     Overrides {
       Name: "cs:GameType"

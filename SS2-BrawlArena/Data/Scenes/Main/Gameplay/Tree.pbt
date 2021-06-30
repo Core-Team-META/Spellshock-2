@@ -33186,11 +33186,9 @@ Objects {
   }
   ParentId: 1723935035097762787
   ChildIds: 10601513216307356140
-  ChildIds: 10771271542622299293
   ChildIds: 3304758069846154482
   ChildIds: 5293368789949702539
   ChildIds: 13176624787599669359
-  ChildIds: 11798337410127425647
   ChildIds: 10940231112837147839
   UnregisteredParameters {
   }
@@ -33617,61 +33615,6 @@ Objects {
   }
 }
 Objects {
-  Id: 11798337410127425647
-  Name: "Kill Team Score"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8241872012420175897
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7522103914088346876
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Kill Team Score"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15939366409926775473
-    }
-  }
-}
-Objects {
   Id: 13176624787599669359
   Name: "Victory Announcer"
   Transform {
@@ -34051,93 +33994,6 @@ Objects {
     SubobjectId: 17454989556266754053
     InstanceId: 2468698662337628124
     TemplateId: 5453172935682938064
-  }
-}
-Objects {
-  Id: 10771271542622299293
-  Name: "Round Teamscore Limit"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8241872012420175897
-  ChildIds: 14946250699847449181
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 14946250699847449181
-  Name: "RoundTeamscoreLimitServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10771271542622299293
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:API"
-      AssetReference {
-        Id: 11974742996071064388
-      }
-    }
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 10771271542622299293
-      }
-    }
-    Overrides {
-      Name: "cs:DynamicCapturePoints"
-      ObjectReference {
-        SelfId: 7797079106509707913
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 6322885574366977805
-    }
-  }
-  InstanceHistory {
-    SelfId: 9974091882436901008
-    SubobjectId: 12163572761643508072
-    InstanceId: 16186739670479447875
-    TemplateId: 4250583515264430884
   }
 }
 Objects {

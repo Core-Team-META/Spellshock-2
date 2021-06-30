@@ -2,7 +2,7 @@ Assets {
   Id: 16468829378127698215
   Name: "old rusted wood"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 17334459064182595595
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 17763375775449008280
   Name: "FireBoulder"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 1512708355930270667
     ParameterOverrides {

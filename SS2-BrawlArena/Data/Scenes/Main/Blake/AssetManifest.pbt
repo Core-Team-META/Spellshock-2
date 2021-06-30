@@ -1215,7 +1215,7 @@ Assets {
 }
 Assets {
   Id: 6541805622198821459
-  Name: "Japanese - Chest Hinge 01"
+  Name: "Japanese Chest Hinge 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"

@@ -2,7 +2,7 @@ Assets {
   Id: 12162506564053930323
   Name: "Custom Shoji Screen 01"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 7217321678417955981
     ParameterOverrides {

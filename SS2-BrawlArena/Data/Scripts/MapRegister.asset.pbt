@@ -11,6 +11,10 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:IsEnabled"
+        Bool: true
+      }
+      Overrides {
         Name: "cs:Map_Name"
         String: ""
       }
@@ -26,5 +30,5 @@ Assets {
       }
     }
   }
-  SerializationVersion: 89
+  SerializationVersion: 91
 }

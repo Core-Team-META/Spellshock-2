@@ -234,7 +234,9 @@ function API.OnPlayerTeleported(victoryScreen, player,  topThreePlayerStats, dur
 	player:SetMounted(false)
 	player.canMount = false
 	Task.Wait()
-	player:Respawn()
+	player:Spawn(
+		{spawnKey = _G["GameManager"].data.map.name}
+	)
 	
 	--[[Task.Wait(.1)
 

@@ -31,7 +31,7 @@ API.GAME_STATE_ROUND_END = 2
 API.GAME_STATE_PLAYER_SHOWCASE = 3
 API.GAME_STATE_REWARDS = 4
 API.GAME_STATE_REWARDS_END = 5
-
+API.GAME_STATE_LOADING = 6
 -- nil RegisterGameStateManager(function, function, function, function) [Server]
 -- Called once by a manager component that at minimum handles replication.
 -- Functions passed in must match signatures of the functions below.

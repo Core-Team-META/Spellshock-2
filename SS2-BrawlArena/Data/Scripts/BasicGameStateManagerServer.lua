@@ -85,6 +85,9 @@ function SetGameState(newState)
 	elseif newState == ABGS.GAME_STATE_REWARDS_END then
 		stateHasduration = true
 		stateDuration = 5
+	elseif newState == ABGS.GAME_STATE_LOADING then
+		stateHasduration = true
+		stateDuration = 3
 	else
 		error("Tried to set game state to unknown state %d", newState)
 	end
@@ -140,6 +143,8 @@ function Tick(deltaTime)
 		elseif previousState == ABGS.GAME_STATE_ROUND_END then
 			nextState = ABGS.GAME_STATE_PLAYER_SHOWCASE
 		elseif previousState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+			nextState = ABGS.GAME_STATE_LOADING
+		elseif previousState == ABGS.GAME_STATE_LOADING then
 			nextState = ABGS.GAME_STATE_LOBBY
 		--[[elseif previousState == ABGS.GAME_STATE_REWARDS then
 			nextState = ABGS.GAME_STATE_REWARDS_END

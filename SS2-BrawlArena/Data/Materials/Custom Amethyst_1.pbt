@@ -2,7 +2,7 @@ Assets {
   Id: 8440229342576301274
   Name: "Arrow Detail"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 1364294402302747595
     ParameterOverrides {

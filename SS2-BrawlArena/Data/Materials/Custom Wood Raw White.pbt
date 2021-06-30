@@ -2,7 +2,7 @@ Assets {
   Id: 14144834243161742390
   Name: "Bloody Wood Raw White"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 14231809728886464860
     ParameterOverrides {

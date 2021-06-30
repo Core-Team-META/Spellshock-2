@@ -2,7 +2,7 @@ Assets {
   Id: 11271426141366864439
   Name: "Shiny Bomb"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 15740376057655838420
     ParameterOverrides {

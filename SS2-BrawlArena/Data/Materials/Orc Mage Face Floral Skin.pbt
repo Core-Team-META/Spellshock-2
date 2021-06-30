@@ -2,7 +2,7 @@ Assets {
   Id: 16804305352556126771
   Name: "Orc Mage Face Floral Skin"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 58872637069711017
     ParameterOverrides {

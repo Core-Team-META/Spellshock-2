@@ -1,6 +1,46 @@
 Name: "Settings"
 RootId: 16180445914411969106
 Objects {
+  Id: 18219074312285686416
+  Name: "Spawn Settings"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16180445914411969106
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Settings {
+    IsDefault: true
+    RespawnSettings {
+      RespawnDelay: 6
+      RespawnMode_v2 {
+        Value: "mc:erespawnmode:atclosestspawnpoint"
+      }
+      SpawnMode {
+        Value: "mc:espawnmode:random"
+      }
+    }
+  }
+}
+Objects {
   Id: 6624830203631857602
   Name: "Team Settings"
   Transform {
@@ -30,45 +70,6 @@ Objects {
     TeamSettings {
       TeamMode_v2 {
         Value: "mc:eteammode:teamsvs"
-      }
-    }
-  }
-}
-Objects {
-  Id: 13138408104099998467
-  Name: "Respawn Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16180445914411969106
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    RespawnSettings {
-      RespawnDelay: 1000
-      RespawnMode_v2 {
-        Value: "mc:erespawnmode:roundrobin"
-      }
-      StartSpawned: true
-      SpawnMode {
-        Value: "mc:none:none"
       }
     }
   }

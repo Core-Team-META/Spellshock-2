@@ -2,7 +2,7 @@ Assets {
   Id: 8335153518807122013
   Name: "Elven Generic Water - No Distortion"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 211372444056789047
     ParameterOverrides {

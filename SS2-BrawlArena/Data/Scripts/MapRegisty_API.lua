@@ -1,12 +1,8 @@
 local MapGlobalVariables = require(script:GetCustomProperty("MapGlobalVariables"))
 
 local MapRegistry = {}
-function MapRegistry.AddMap(name, root)
-    table.insert(MapGlobalVariables["Maps"],
-    {
-        name = name,
-        root = root
-    })
+function MapRegistry.AddMap(mapdata)
+    table.insert(MapGlobalVariables.Maps,mapdata)
 end
 
 return MapRegistry

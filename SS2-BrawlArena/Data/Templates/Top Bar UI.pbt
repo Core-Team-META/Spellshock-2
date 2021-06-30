@@ -4,10 +4,10 @@ Assets {
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 16005568255856067052
+      RootId: 15664167488785403408
       Objects {
-        Id: 16005568255856067052
-        Name: "Top Bar"
+        Id: 15664167488785403408
+        Name: "UI Container"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,64 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9266164554250188459
+        ParentId: 4781671109827199097
+        ChildIds: 16005568255856067052
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Canvas {
+            ContentType {
+              Value: "mc:ecanvascontenttype:dynamic"
+            }
+            Opacity: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16005568255856067052
+        Name: "Top Bar UI"
+        Transform {
+          Location {
+            X: -550
+            Y: -2975
+            Z: 3025
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15664167488785403408
         ChildIds: 17572552189595630427
         ChildIds: 17896853001410575246
         ChildIds: 9492158107961447001
@@ -5618,5 +5675,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 89
+  SerializationVersion: 91
 }

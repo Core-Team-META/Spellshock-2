@@ -1,14 +1,16 @@
 Assets {
   Id: 15257030629160339914
-  Name: "GamemodeManager"
+  Name: "GamemodeRegister"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:GameModeTemplate"
-        AssetReference {
-          Id: 841534158063459245
-        }
+        Name: "cs:IsEnabled"
+        Bool: true
+      }
+      Overrides {
+        Name: "cs:Name"
+        String: ""
       }
       Overrides {
         Name: "cs:GameModeSpawn_Server"
@@ -28,7 +30,13 @@ Assets {
           Id: 841534158063459245
         }
       }
+      Overrides {
+        Name: "cs:Gamemode_API"
+        AssetReference {
+          Id: 15944243147643565388
+        }
+      }
     }
   }
-  SerializationVersion: 89
+  SerializationVersion: 91
 }

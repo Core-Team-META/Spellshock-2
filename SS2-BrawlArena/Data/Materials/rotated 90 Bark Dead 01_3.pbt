@@ -2,7 +2,7 @@ Assets {
   Id: 13369849568980851555
   Name: "rotated 90 Bark Dead 01_3"
   PlatformAssetType: 13
-  SerializationVersion: 89
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 7663308268157147922
     ParameterOverrides {
