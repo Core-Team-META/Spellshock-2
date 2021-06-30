@@ -1106,15 +1106,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12107410425077790377
-  Name: "Simple Exposure Post Process"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_post_process_simple_exposure"
-  }
-}
-Assets {
   Id: 12095835209017042614
   Name: "Cube"
   PlatformAssetType: 1
@@ -1718,15 +1709,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8365212580610470526
-  Name: "Advanced Bloom Post Process"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_post_process_bloom_advanced"
-  }
-}
-Assets {
   Id: 8353147935132205805
   Name: "Prism - 6-Sided Half"
   PlatformAssetType: 1
@@ -2051,6 +2033,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5589076934991732924
+  Name: "Sky Dome Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_skydome_adjstment"
+  }
+}
+Assets {
   Id: 5532749834732697190
   Name: "Japanese Temple Torii Gate Rope 01"
   PlatformAssetType: 1
@@ -2147,15 +2138,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_004"
-  }
-}
-Assets {
-  Id: 4830180112729125717
-  Name: "Simple Sketch Line Post Process"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_ppm_sketchline_simple"
   }
 }
 Assets {
@@ -2384,6 +2366,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3704846883478142504
+  Name: "Sun Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_sun_adjustment"
+  }
+}
+Assets {
   Id: 3682206342183528038
   Name: "Fantasy Sword Grip 01"
   PlatformAssetType: 1
@@ -2462,6 +2453,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_gen_concrete_cracked_001_uv"
+  }
+}
+Assets {
+  Id: 3210571694155071859
+  Name: "Skylight Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_skylight_adjustment"
   }
 }
 Assets {
@@ -2786,6 +2786,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fantasy_block_broken_01"
+  }
+}
+Assets {
+  Id: 1037672320462169984
+  Name: "Fog Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_fog_adjustment"
   }
 }
 Assets {
