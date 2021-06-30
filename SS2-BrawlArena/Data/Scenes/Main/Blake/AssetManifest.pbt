@@ -152,15 +152,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16910278292812118833
-  Name: "Sun Light"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "CORESKY_SunLight"
-  }
-}
-Assets {
   Id: 16871564283002016771
   Name: "Japanese Temple Wall 01 - Doorway 02"
   PlatformAssetType: 1
@@ -665,15 +656,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11515840070784317904
-  Name: "Skylight"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "CORESKY_Skylight"
-  }
-}
-Assets {
   Id: 11410181570375320289
   Name: "Japanese Temple Wall 01 - Window 01"
   PlatformAssetType: 1
@@ -1079,15 +1061,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7887238662729938253
-  Name: "Sky Dome"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "CORESKY_Sky"
-  }
-}
-Assets {
   Id: 7879807112657890156
   Name: "Japanese Temple Pillar 01 - Mid 01 150cm"
   PlatformAssetType: 1
@@ -1295,6 +1268,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5589076934991732924
+  Name: "Sky Dome Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_skydome_adjstment"
+  }
+}
+Assets {
   Id: 5532749834732697190
   Name: "Japanese Temple Torii Gate Rope 01"
   PlatformAssetType: 1
@@ -1484,6 +1466,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3704846883478142504
+  Name: "Sun Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_sun_adjustment"
+  }
+}
+Assets {
   Id: 3640916567585745974
   Name: "Fantasy Castle Stairs 01"
   PlatformAssetType: 1
@@ -1535,6 +1526,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_roof_peak_001_end_01_tip_ref"
+  }
+}
+Assets {
+  Id: 3210571694155071859
+  Name: "Skylight Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_skylight_adjustment"
   }
 }
 Assets {
@@ -1751,6 +1751,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fantasy_candles_group_001"
+  }
+}
+Assets {
+  Id: 1037672320462169984
+  Name: "Fog Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_fog_adjustment"
   }
 }
 Assets {
