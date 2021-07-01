@@ -140,7 +140,7 @@ Objects {
     Overrides {
       Name: "cs:DynamicCapturePoints"
       ObjectReference {
-        SelfId: 7797079106509707913
+        SelfId: 841534158063459245
       }
     }
     Overrides {

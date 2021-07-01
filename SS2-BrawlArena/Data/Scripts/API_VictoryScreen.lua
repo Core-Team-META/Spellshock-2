@@ -174,7 +174,7 @@ function API.TeleportWinners( player, spawnObject)
 	--player:SetVisibility(false)
 	local spawnPosition = spawnObject:GetWorldPosition()
 	local spawnRotation = spawnObject:GetWorldRotation()
-	player:Respawn({position = spawnPosition, rotation = spawnRotation})
+	player:Spawn({position = spawnPosition, rotation = spawnRotation})
 
 	player:ResetVelocity() -- stop the player from flying off if they are currently in motion
 	player:SetWorldPosition(spawnPosition)
@@ -234,8 +234,7 @@ function API.OnPlayerTeleported(victoryScreen, player,  topThreePlayerStats, dur
 	player:SetMounted(false)
 	player.canMount = false
 	Task.Wait()
-	player:Spawn(
-		{spawnKey = _G["GameManager"].data.map.name}
+	player:Spawn( 
 	)
 	
 	--[[Task.Wait(.1)
@@ -274,7 +273,7 @@ function API.OnPlayerRestored(victoryScreen, player, data)
 	player.canMount = true
 	
 	if(respawnOnDeactivate) then
-		player:Respawn()
+		player:Despawn()
 	end
 	if(tasks[player]) then
 		tasks[player]:Cancel()

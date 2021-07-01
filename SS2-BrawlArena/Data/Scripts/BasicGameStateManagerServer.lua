@@ -81,7 +81,7 @@ function SetGameState(newState)
 		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 60
+		stateDuration = 3
 	elseif newState == ABGS.GAME_STATE_REWARDS_END then
 		stateHasduration = true
 		stateDuration = 5
@@ -136,6 +136,7 @@ function Tick(deltaTime)
 	if GetTimeRemainingInState() == 0.0 and script:GetCustomProperty("StateHasDuration") then
 		local previousState = GetGameState()
 		local nextState
+
 		if previousState == ABGS.GAME_STATE_LOBBY then
 			nextState = ABGS.GAME_STATE_ROUND
 		elseif previousState == ABGS.GAME_STATE_ROUND then
@@ -152,7 +153,7 @@ function Tick(deltaTime)
 			nextState = ABGS.GAME_STATE_LOBBY]]
 		end
 
-		SetGameState(nextState)
+		SetGameState(nextState) 
 	end
 end
 

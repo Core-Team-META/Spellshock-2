@@ -1,13 +1,56 @@
 Name: "Victory Screen"
 RootId: 6321736022504211634
 Objects {
+  Id: 82329213429667881
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      Y: 322.269531
+      Z: -16.4077148
+    }
+    Rotation {
+    }
+    Scale {
+      X: 7.9233737
+      Y: 8.27189255
+      Z: 0.689928532
+    }
+  }
+  ParentId: 6321736022504211634
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 17423099472536112862
   Name: "Victory Screen"
   Transform {
     Location {
-      X: -19252.1582
-      Y: -2307.44971
-      Z: -6914.52148
     }
     Rotation {
       Yaw: 90

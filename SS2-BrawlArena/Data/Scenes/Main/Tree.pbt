@@ -31,7 +31,6 @@ Objects {
   ChildIds: 16664972843586423484
   ChildIds: 14081316750909284148
   ChildIds: 1040821784051272386
-  ChildIds: 558457977808525101
   ChildIds: 18353737381528462390
   UnregisteredParameters {
   }
@@ -77,35 +76,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Kate"
-  }
-}
-Objects {
-  Id: 558457977808525101
-  Name: "Datonare"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Datonare"
   }
 }
 Objects {

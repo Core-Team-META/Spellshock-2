@@ -3,28 +3,28 @@
 -- Version 0.0.1
 --===========================================================================================
 
-local GarbageCollection = script:GetCustomProperty("GarbageCollection"):WaitForObject()
-local Warrior = script:GetCustomProperty("Warrior")
-local Hunter = script:GetCustomProperty("Hunter")
-local Mage = script:GetCustomProperty("Mage")
-local Assassin = script:GetCustomProperty("Assassin")
-local Healer = script:GetCustomProperty("Healer")
+local GarbageCollection = script:GetCustomProperty('GarbageCollection'):WaitForObject()
+local Warrior = script:GetCustomProperty('Warrior')
+local Hunter = script:GetCustomProperty('Hunter')
+local Mage = script:GetCustomProperty('Mage')
+local Assassin = script:GetCustomProperty('Assassin')
+local Healer = script:GetCustomProperty('Healer')
 
 local function META_AP()
-    while not _G["Meta.Ability.Progression"] do
+    while not _G['Meta.Ability.Progression'] do
         Task.Wait()
     end
-    return _G["Meta.Ability.Progression"]
+    return _G['Meta.Ability.Progression']
 end
 
 local function GetCurrentCosmeticId(player, classID, bind)
-    return META_AP()["VFX"].GetCurrentCosmeticId(player, classID, bind)
+    return META_AP()['VFX'].GetCurrentCosmeticId(player, classID, bind)
 end
 
-local ABGS = require(script:GetCustomProperty("ABGS"))
+local ABGS = require(script:GetCustomProperty('ABGS'))
 
 -- Used for end screen
-local COSTUME_EQUIPMENT_TEMPLATE = script:GetCustomProperty("Costume_Equipment")
+local COSTUME_EQUIPMENT_TEMPLATE = script:GetCustomProperty('Costume_Equipment')
 
 local ClassTemplates = {
     [META_AP().WARRIOR] = Warrior,
@@ -35,11 +35,11 @@ local ClassTemplates = {
 }
 
 local Class_Stances = {
-    [META_AP().WARRIOR] = "2hand_melee_stance",
-    [META_AP().HUNTER] = "2hand_rifle_aim_shoulder",
-    [META_AP().MAGE] = "2hand_staff_ready",
-    [META_AP().ASSASSIN] = "unarmed_ready",
-    [META_AP().HEALER] = "2hand_staff_stance"
+    [META_AP().WARRIOR] = '2hand_melee_stance',
+    [META_AP().HUNTER] = '2hand_rifle_aim_shoulder',
+    [META_AP().MAGE] = '2hand_staff_ready',
+    [META_AP().ASSASSIN] = 'unarmed_ready',
+    [META_AP().HEALER] = '2hand_staff_stance'
 }
 
 local function EquipPlayer(player, classID)
@@ -49,11 +49,11 @@ local function EquipPlayer(player, classID)
     local eId = GetCurrentCosmeticId(player, classID, 2)
     local rId = GetCurrentCosmeticId(player, classID, 3)
     local tId = GetCurrentCosmeticId(player, classID, 4)
-    newClass:SetNetworkedCustomProperty("OID", oId)
-    newClass:SetNetworkedCustomProperty("QID", qId)
-    newClass:SetNetworkedCustomProperty("EID", eId)
-    newClass:SetNetworkedCustomProperty("RID", rId)
-    newClass:SetNetworkedCustomProperty("TID", tId)
+    newClass:SetNetworkedCustomProperty('OID', oId)
+    newClass:SetNetworkedCustomProperty('QID', qId)
+    newClass:SetNetworkedCustomProperty('EID', eId)
+    newClass:SetNetworkedCustomProperty('RID', rId)
+    newClass:SetNetworkedCustomProperty('TID', tId)
     Task.Wait()
     if Object.IsValid(player) then
         newClass:Equip(player)
@@ -61,7 +61,9 @@ local function EquipPlayer(player, classID)
 end
 
 local function UnequipPlayer(player)
-    if not Object.IsValid(player) then return end
+    if not Object.IsValid(player) then
+        return
+    end
     for _, equipment in pairs(player:GetEquipment()) do
         if Object.IsValid(equipment) then
             equipment:Unequip()
@@ -77,14 +79,14 @@ end
 function OnClassChanged(player, classID)
     --if classID == player.serverUserData.CurrentClass then return end
 
-    if player:GetResource("CLASS_MAP") == classID then
-        if player:GetResource("CLOSE_CLASS_SELECTION") == 0 then
-            player:SetResource("CLOSE_CLASS_SELECTION", 1)
+    if player:GetResource('CLASS_MAP') == classID then
+        if player:GetResource('CLOSE_CLASS_SELECTION') == 0 then
+            player:SetResource('CLOSE_CLASS_SELECTION', 1)
         else
-            player:SetResource("CLOSE_CLASS_SELECTION", 0)
+            player:SetResource('CLOSE_CLASS_SELECTION', 0)
         end
     else
-        player:SetResource("CLASS_MAP", classID)
+        player:SetResource('CLASS_MAP', classID)
     end
 
     --[[if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
@@ -108,7 +110,7 @@ function OnClassChanged(player, classID)
 end
 
 function OnRewardSelected(player)
-    local classID = player:GetResource("CLASS_MAP")
+    local classID = player:GetResource('CLASS_MAP')
     if classID == 0 then
         classID = META_AP().WARRIOR
     end
@@ -126,7 +128,7 @@ function OnGameStateChanged(oldState, newState)
             -- unequip everything just in case
             UnequipPlayer(player)
 
-            local classID = player:GetResource("CLASS_MAP")
+            local classID = player:GetResource('CLASS_MAP')
             if classID == 0 then
                 classID = META_AP().WARRIOR
             end
@@ -145,15 +147,15 @@ function OnGameStateChanged(oldState, newState)
             UnequipPlayer(player)
 
             if Object.IsValid(player) then
-                local classID = player:GetResource("CLASS_MAP")
+                local classID = player:GetResource('CLASS_MAP')
                 if classID == 0 then
                     classID = META_AP().WARRIOR
                 end
 
                 local newOutfit = World.SpawnAsset(COSTUME_EQUIPMENT_TEMPLATE)
                 local skinId = GetCurrentCosmeticId(player, classID, 8)
-                newOutfit:SetNetworkedCustomProperty("OID", skinId)
-                newOutfit:SetNetworkedCustomProperty("ClassID", classID)
+                newOutfit:SetNetworkedCustomProperty('OID', skinId)
+                newOutfit:SetNetworkedCustomProperty('ClassID', classID)
                 newOutfit:Equip(player)
 
                 player:SetVisibility(true)
@@ -167,7 +169,7 @@ end
 function OnPlayerJoined(player, classId)
     classId = classId or math.random(5)
     --player.serverUserData.CurrentClass = META_AP().WARRIOR
-    player:SetResource("CLASS_MAP", classId)
+    player:SetResource('CLASS_MAP', classId)
     player.animationStance = Class_Stances[classId]
     local currentState = ABGS.GetGameState()
     if currentState == ABGS.GAME_STATE_LOBBY then
@@ -179,7 +181,7 @@ function OnPlayerJoined(player, classId)
     elseif currentState == ABGS.GAME_STATE_ROUND then
         --local newClass = World.SpawnAsset(ClassTemplates[META_AP().WARRIOR])
         --newClass:Equip(player)
-        player:SetVisibility(false)
+        --player:SetVisibility(false)
     elseif
         currentState == ABGS.GAME_STATE_ROUND_END or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE or
             currentState == ABGS.GAME_STATE_REWARDS or
@@ -198,7 +200,7 @@ if Environment.IsSinglePlayerPreview() then
     OnPlayerJoined(Game.GetPlayers()[1])
 end
 
-Events.ConnectForPlayer("ClassChanged_SERVER", OnClassChanged)
-Events.Connect("CH_ClassChanged_SERVER", OnClassChanged)
-Events.Connect("GameStateChanged", OnGameStateChanged)
-Events.ConnectForPlayer("RewardSelected", OnRewardSelected)
+Events.ConnectForPlayer('ClassChanged_SERVER', OnClassChanged)
+Events.Connect('CH_ClassChanged_SERVER', OnClassChanged)
+Events.Connect('GameStateChanged', OnGameStateChanged)
+Events.ConnectForPlayer('RewardSelected', OnRewardSelected)

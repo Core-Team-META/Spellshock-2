@@ -17,6 +17,7 @@ Objects {
   ParentId: 8449425048508702060
   ChildIds: 9266164554250188459
   ChildIds: 17674078469758383639
+  ChildIds: 12144156332427776880
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -27,6 +28,62 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 12144156332427776880
+  Name: "RespawnModeClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16423545465644512281
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:API"
+      AssetReference {
+        Id: 13062533657555781867
+      }
+    }
+    Overrides {
+      Name: "cs:Camera"
+      ObjectReference {
+        SelfId: 10082428241932679056
+      }
+    }
+    Overrides {
+      Name: "cs:RespawnMusic"
+      ObjectReference {
+        SelfId: 17192106309769407465
+      }
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8711574990210648335
+    }
   }
 }
 Objects {

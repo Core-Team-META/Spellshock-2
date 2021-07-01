@@ -1,7 +1,7 @@
 local MapGlobalVariables = require(script:GetCustomProperty('MapGlobalVariables'))
 local GameManager_API = require(script:GetCustomProperty('GameManager_API'))
 local EventSetUp = require(script:GetCustomProperty('EventSetUp'))
-local ABGS = script:GetCustomProperty('APIBasicGameState')
+local ABGS = require(script:GetCustomProperty('APIBasicGameState'))
 local Trap_Count = script:GetCustomProperty('Trap_Count')
 local Modifier_Count = script:GetCustomProperty('Modifier_Count')
 
@@ -95,9 +95,17 @@ function GameManager:GameEnd()
     end
 
 end 
-function GameManager:GameStart()
+function GameManager:SpawnPlayers()
     for key, player in pairs(self.isPlaying) do
-        if self.data.map then
+        if self.data.map then 
+            player:Spawn({spawnKey = self.data.map.name})
+        end
+    end
+end
+function GameManager:GameStart()
+    
+    for key, player in pairs(self.isPlaying) do
+        if self.data.map then 
             player:Spawn({spawnKey = self.data.map.name})
         end
     end
@@ -131,8 +139,12 @@ function OnGameStateChanged(oldState, newState, hasDuration, stateTime)
     if newState == ABGS.GAME_STATE_LOADING and oldState ~= ABGS.GAME_STATE_LOADING then
         GameManager:SelectModes()
     end
-    if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+    if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then 
         GameManager:GameStart()
+    end
+    if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then 
+
+        GameManager:SpawnPlayers()
     end
     if newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
         GameManager:GameEnd()
@@ -140,3 +152,7 @@ function OnGameStateChanged(oldState, newState, hasDuration, stateTime)
 end
 Events.Connect('GameStateChanged', OnGameStateChanged)
 _G["GameManager"] = GameManager
+
+
+
+Events.Broadcast("ToggleLoadScreen", true)

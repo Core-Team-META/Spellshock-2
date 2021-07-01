@@ -107,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17440982127418626575
+  Name: "Frame Tri 001 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameTri_001Wedge"
+  }
+}
+Assets {
   Id: 17415737976547250906
   Name: "Fern 01"
   PlatformAssetType: 1
@@ -170,6 +179,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16806313330175629846
+  Name: "Frame Outlined Thick 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameFlat_020"
+  }
+}
+Assets {
   Id: 16792581383048137430
   Name: "Waterfall Base Volume VFX"
   PlatformAssetType: 8
@@ -185,6 +203,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_sakura_hero_02_ref"
+  }
+}
+Assets {
+  Id: 16759978556497479664
+  Name: "Center Arrow 005 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_005Wedge"
   }
 }
 Assets {
@@ -212,6 +239,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rocks_small_002"
+  }
+}
+Assets {
+  Id: 16215335743376183929
+  Name: "Meta Heartbeat Single 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_meta_heartbeat_single_01_Cue_ref"
   }
 }
 Assets {
@@ -440,6 +476,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14002637459053075183
+  Name: "4 Point Star"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFI_Icon_020"
+  }
+}
+Assets {
   Id: 13950225922132296555
   Name: "Cylinder"
   PlatformAssetType: 1
@@ -503,6 +548,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13462854128336502995
+  Name: "Center Circle 001 Outline"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterCircle_001Outline"
+  }
+}
+Assets {
   Id: 13289287315688338835
   Name: "Japanese Temple Wall 01 - 150cm 01 Half"
   PlatformAssetType: 1
@@ -527,6 +581,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_sixsided_002"
+  }
+}
+Assets {
+  Id: 12978135121763375046
+  Name: "Fantasy Craft Stone 028"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Stone_028"
   }
 }
 Assets {
@@ -590,6 +653,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_002"
+  }
+}
+Assets {
+  Id: 12086971798166130178
+  Name: "BG Flat 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_27"
   }
 }
 Assets {
@@ -683,6 +755,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
+  }
+}
+Assets {
   Id: 11285795607111097174
   Name: "Japanese Temple Torii Gate Ornament 01"
   PlatformAssetType: 1
@@ -734,6 +815,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_oak_001"
+  }
+}
+Assets {
+  Id: 10769838940944209875
+  Name: "Score Tick Tally Single 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_score_tick_count_tally_single_01_Cue_ref"
   }
 }
 Assets {
@@ -917,6 +1007,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9008238566657320754
+  Name: "Sci-fi Frame 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Frame_006"
+  }
+}
+Assets {
   Id: 9003366446115612244
   Name: "Column Topper 01"
   PlatformAssetType: 1
@@ -1034,6 +1133,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8277338959376334210
+  Name: "Frame Outline Thin 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_025"
+  }
+}
+Assets {
   Id: 8200369361722297468
   Name: "Scaffold Wood Bolt 01"
   PlatformAssetType: 1
@@ -1085,6 +1193,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_bark_dead_001_uv"
+  }
+}
+Assets {
+  Id: 7615847344375253670
+  Name: "UI Basic Frame 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Frame_001"
   }
 }
 Assets {
@@ -1169,6 +1286,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6724534832103276994
+  Name: "BG Flat 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_015"
+  }
+}
+Assets {
   Id: 6693051322045641436
   Name: "Rope"
   PlatformAssetType: 2
@@ -1223,6 +1349,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6173243591385665392
+  Name: "Frame Outlined 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_025"
+  }
+}
+Assets {
   Id: 6136827371784165474
   Name: "Bark Oak 01"
   PlatformAssetType: 2
@@ -1238,6 +1373,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_jpn_vase_porcelain_debris_001"
+  }
+}
+Assets {
+  Id: 5879483734359299184
+  Name: "Frame Line 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameLine_001"
   }
 }
 Assets {
@@ -1319,6 +1463,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_bark_redwood_001_uv"
+  }
+}
+Assets {
+  Id: 5223287246289902870
+  Name: "Frame Outline Thin 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_020"
   }
 }
 Assets {
@@ -1457,6 +1610,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3949834070363475541
+  Name: "Grandfather Clock Tick Tock Single 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_grandfather_clock_ticktock_single_01a_Cue_ref"
+  }
+}
+Assets {
   Id: 3704876582486151245
   Name: "Hill 04"
   PlatformAssetType: 1
@@ -1499,6 +1661,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_railing_straight_001_ref"
+  }
+}
+Assets {
+  Id: 3483798833601977176
+  Name: "Fantasy Shape 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Shape_003"
   }
 }
 Assets {
@@ -1601,6 +1772,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2764905514123890102
+  Name: "Frame Outlined 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_020"
+  }
+}
+Assets {
   Id: 2754963224534021958
   Name: "Invisible"
   PlatformAssetType: 2
@@ -1616,6 +1796,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_wall_001_half_01_ref"
+  }
+}
+Assets {
+  Id: 2604353830693238371
+  Name: "BG Highlighted 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_020"
   }
 }
 Assets {
@@ -1670,6 +1859,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_pillar_001_top_01_ref"
+  }
+}
+Assets {
+  Id: 1814707273787853473
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {
@@ -1733,6 +1931,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_roof_001_cap_01_ref"
+  }
+}
+Assets {
+  Id: 1316376324599490360
+  Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_cinematic_boomy_impacts_01_ref"
   }
 }
 Assets {
@@ -1850,5 +2057,23 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_brick_stone_floor_large_001"
+  }
+}
+Assets {
+  Id: 73478753972977788
+  Name: "BG Flat 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_25"
+  }
+}
+Assets {
+  Id: 48307754774318265
+  Name: "UI Gradient Rectangular 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_002"
   }
 }
