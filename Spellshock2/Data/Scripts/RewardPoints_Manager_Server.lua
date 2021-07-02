@@ -20,13 +20,13 @@ function AddRewardPoints(player, rewardId)
 
     if shouldGrant then
         if RewardPoints[rewardId].name and RewardPoints[rewardId].amount and player.GrantRewardPoints then
+            data[CONST.STORAGE.REWARD_POINTS] = data[CONST.STORAGE.REWARD_POINTS] or {}
             data[CONST.STORAGE.REWARD_POINTS][rewardId] = yearDay
             player:GrantRewardPoints(CoreMath.Round(RewardPoints[rewardId].amount), RewardPoints[rewardId].name)
             Storage.SetPlayerData(player, data)
         end
     end
 end
-
 
 --@params Object player
 --@params Int rewardId
