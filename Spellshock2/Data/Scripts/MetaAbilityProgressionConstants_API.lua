@@ -26,7 +26,8 @@ API.STORAGE = {
     PROGRESSION_MULTIPLIERS = 12,
     CLASS_FAVORITE = 13,
     ADMIN_PERKS = 14,
-    TRAINING_STATUS = 15
+    TRAINING_STATUS = 15,
+    REWARD_POINTS = 16
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -74,6 +75,13 @@ API.STATUS_EFFECT = {
     SLOW = 4,
     SPEED_BOOST = 5,
     STUN = 6
+}
+
+-- REWARD POINT KEYS
+API.REWARD_POINTS = {
+    [1] = {name = "Play 3 Rounds", amount = 200, required = 3},
+    [2] = {name = "Win 1 Round", amount = 100, required = 1},
+    [3] = {name = "Capture 3 Points", amount = 100, required = 3}
 }
 
 API.STARTING_LEVEL = 1
@@ -171,9 +179,8 @@ API.DIMINISHING_RETURNS = {
     [10] = 0.05
 }
 
-
 --Default XP Values before multipliers
-API.CLASS_XP = { 
+API.CLASS_XP = {
     Kills = 300,
     Captures = 900,
     CapAssists = 600,
@@ -189,11 +196,10 @@ API.KILL_STREAK_BONUS_GOLD = 5
 API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
 API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
 
-
 -- Server Wide Mulitpliers (0 is default no multiplier)
 API.EVENT_XP_MULITPLIER = 0
 API.EVENT_GOLD_MULTIPLIER = 0
-API.EVENT_SHARD_MULTIPLIER = 0 
+API.EVENT_SHARD_MULTIPLIER = 0
 API.EVENT_COSMETIC_MULTIPLIER = 0
 API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 --Leave at 1.0 for 100% (Default Price)
 
@@ -204,7 +210,6 @@ API.VIP_SHARDS_MULTIPLIER = 0.5 -- 25% Bonus
 API.VIP_COSMETIC_MULTIPLIER = 0.5 -- 25% Bonus
 API.VIP_DAILY_SHOP_DISCOUNT = 0.8 -- 10% Discount in Daily Shop
 API.VIP_SERVER_MULTIPLIER = 0.0 -- Each VIP in a server gives a 5% boost to both gold & xp
-
 
 --STARTER Pack Muliplier Value
 API.STARTER_PACK_MULTIPLIER = 0 -- 50% To XP & Currency Gains
@@ -228,8 +233,6 @@ API.GOLD_SELF_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 -- Will cap a players total multipliers to make sure nothing gets out of control
 API.MAX_TOTAL_MULTIPLIER = 3 -- Max bonus 300%
 API.TARGET_LEVEL_XP_BONUS = 10 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
-
-
 
 API.LEVEL_DIF_BONUS = {
     --Gold player gets from killing a higher level player
@@ -284,8 +287,6 @@ API.LEVEL_DIF_BONUS = {
     [49] = 500,
     [50] = 500
 }
-
-
 
 API.POINT_NAMES = {
     [1] = "War Camp",
@@ -406,8 +407,6 @@ API.SELF_BOOST_KEYS = {
 API.SELF_XP_BOOST_KEY = API.SELF_BOOST_KEYS[1]
 API.SELF_GOLD_BOOST_KEY = API.SELF_BOOST_KEYS[2]
 
-
-
 API.SERVER_XP_BOOST_KEY = "sxt"
 API.SERVER_GOLD_BOOST_KEY = "sgt"
 API.STARTER_PACK_KEY = "SPK"
@@ -434,7 +433,6 @@ API.PERK_TYPES = {
     CURRENCY = 2,
     STARTER_PACK = 3
 }
-
 
 ------------------------------------------------------------------------------------------------------------------------
 -- COMBAT TIMERS

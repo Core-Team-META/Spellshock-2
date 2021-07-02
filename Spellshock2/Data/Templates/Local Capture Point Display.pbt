@@ -504,6 +504,10 @@ Assets {
               B: 0.5
               A: 1
             }
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -565,6 +569,10 @@ Assets {
               G: 0.5
               B: 0.5
               A: 1
+            }
+            FillBrush {
+            }
+            BackgroundBrush {
             }
           }
           AnchorLayout {
@@ -841,5 +849,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 87
+  SerializationVersion: 91
 }

@@ -434,6 +434,9 @@ function Tick(deltaTime)
         script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
         if capturePlayer and Object.IsValid(capturePlayer) and capturePlayer.id then
             Events.Broadcast("Stats.Helper.CapturePoint", capturePlayer.id)
+
+            -- Used For Reward Points
+            Events.Broadcast("AddRewardPointsProgress", capturePlayer, 3, 1)
         end
         -- Disable if DisableOnCapture
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then

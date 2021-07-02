@@ -2,7 +2,7 @@ Assets {
   Id: 10716218552546186561
   Name: "Custom Flame from Candle Flame VFX"
   PlatformAssetType: 13
-  SerializationVersion: 87
+  SerializationVersion: 91
   CustomMaterialAsset {
     BaseMaterialId: 11142872697084185430
     ParameterOverrides {

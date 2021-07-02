@@ -3099,6 +3099,10 @@ Objects {
         A: 1
       }
       Percent: 0.84750253
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
