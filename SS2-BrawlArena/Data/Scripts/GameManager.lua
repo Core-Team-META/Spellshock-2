@@ -4,6 +4,7 @@ local EventSetUp = require(script:GetCustomProperty('EventSetUp'))
 local ABGS = require(script:GetCustomProperty('APIBasicGameState'))
 local Trap_Count = script:GetCustomProperty('Trap_Count')
 local Modifier_Count = script:GetCustomProperty('Modifier_Count')
+local GameManager_DataReader = require(script:GetCustomProperty("GameManager_DataReader"))
 
 Task.Wait()
 local GameManager = {
@@ -27,6 +28,17 @@ local function SelectMap()
     end
     assert(#enabledMaps > 0, 'No maps are enabled')
     return enabledMaps[math.random(1, #enabledMaps)]
+end
+
+local function SelectTraps()
+    local enabledTraps = {}
+    local cloneTraps = table.pack(table.unpack(MapGlobalVariables.MapThreats))
+    for i = 1, math.random(Trap_Count.x, Trap_Count.y) do
+        local random = math.random(#cloneTraps)
+        table.insert(enabledTraps, cloneTraps[random])
+        table.remove(cloneTraps, random)
+    end 
+    return enabledTraps
 end
 
 local function EnableMap(map, bool)
@@ -62,10 +74,14 @@ end
 
 function GameManager:SelectType()
     self.data.map = SelectMap()
-    for i = 1, math.random(Trap_Count.x, Trap_Count.y) do
-    end
+    Trap_Count.x = math.min(Trap_Count.x,#MapGlobalVariables.MapThreats)
+    Trap_Count.y = math.min(Trap_Count.y,#MapGlobalVariables.MapThreats)
+    self.data.traps = SelectTraps()
+
     for i = 1, math.random(Modifier_Count.x, Modifier_Count.y) do
+        
     end
+    GameManager_DataReader:SetData(self.data)
 end
 function GameManager:AddPlaying(player)
     table.insert(self.isPlaying, player)

@@ -145,38 +145,37 @@ local MapGlobalVariable = {
             name = 'None',
             title = '',
             description = 'No threats added to map',
-            serverstartfunction = function()
-                Events.Broadcast('Spikes')
+            serverstartfunction = function() 
             end,
             clientstartfunction = function()
             end
         },
         {
-            name = 'Spikes',
+            name = 'Spike',
             title = 'Spikey',
             description = 'Spikes are added to map',
             serverstartfunction = function()
-                Events.Broadcast('Spikes')
+ 
             end,
             clientstartfunction = function()
             end
         },
         {
-            name = 'Traps',
-            title = 'Dangerous',
-            description = 'Traps are added to the map',
+            name = 'Shooter',
+            title = 'Blast',
+            description = 'Shooters are added to the map',
             serverstartfunction = function()
-                Events.Broadcast('Spikes')
+ 
             end,
             clientstartfunction = function()
             end
         },
+
         {
-            name = 'Elemets',
-            title = 'Elemental',
-            description = 'Dangerous elements are added to the map',
-            serverstartfunction = function()
-                Events.Broadcast('Spikes')
+            name = 'Spitter',
+            title = 'Spraying',
+            description = 'Spitters are added to the map',
+            serverstartfunction = function() 
             end,
             clientstartfunction = function()
             end
