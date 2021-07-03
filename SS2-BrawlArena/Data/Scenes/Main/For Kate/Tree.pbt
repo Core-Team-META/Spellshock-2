@@ -1,6 +1,35 @@
 Name: "For Kate"
 RootId: 7229031333071442508
 Objects {
+  Id: 5753521562115192628
+  Name: "ToxicArena SpawnProtection"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7229031333071442508
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "ToxicArena SpawnProtection"
+  }
+}
+Objects {
   Id: 15443005704835508813
   Name: "Traps"
   Transform {
