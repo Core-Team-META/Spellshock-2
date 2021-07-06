@@ -38,14 +38,14 @@ Objects {
     Location {
       X: -775
       Y: -10050
-      Z: 3300
+      Z: 4734.33203
     }
     Rotation {
     }
     Scale {
       X: 24
       Y: 29
-      Z: 14
+      Z: 41.915844
     }
   }
   ParentId: 11425713729631903967
@@ -77,14 +77,14 @@ Objects {
     Location {
       X: -800
       Y: 5425
-      Z: 3025
+      Z: 4459.33203
     }
     Rotation {
     }
     Scale {
       X: 25
       Y: 29
-      Z: 14
+      Z: 41.915844
     }
   }
   ParentId: 11425713729631903967
