@@ -207,7 +207,9 @@ function NavMeshGenerator.GetRectangles(NAVMESH_FOLDER)
 			partCenter + partRotation * (partSize * Vector3.New(-.5, .5, 0)), -- back right
 			partCenter + partRotation * (partSize * Vector3.New(-.5, -.5, 0)) -- back left
 		}
-		
+		rect.center = partCenter
+		rect.rotation = partRotation
+		rect.size = partSize
 		rect.edges = {}
 		for i = 1, 4 do
 			local vertex1 = rect.vertices[i]

@@ -5,6 +5,7 @@ local ABGS = require(script:GetCustomProperty('APIBasicGameState'))
 local Trap_Count = script:GetCustomProperty('Trap_Count')
 local Modifier_Count = script:GetCustomProperty('Modifier_Count')
 local GameManager_DataReader = require(script:GetCustomProperty("GameManager_DataReader"))
+local GlobalBaseStats = require(script:GetCustomProperty("GlobalBaseStats"))
 
 Task.Wait()
 local GameManager = {
@@ -18,6 +19,29 @@ local GameManager = {
         effects = {}
     }
 }
+
+local function SelectEffects()
+    local EnabledEffect = {}
+    local CloneEffects = {}
+    
+    for _, value in pairs(MapGlobalVariables.MapModifiers) do
+        if value.IsEnabled then 
+            table.insert(CloneEffects,value)
+        end
+    end
+    Modifier_Count.x = math.min(Modifier_Count.x,#CloneEffects)
+    Modifier_Count.y = math.min(Modifier_Count.y,#CloneEffects)
+    for i = 1, math.random(Modifier_Count.x, Modifier_Count.y) do
+        local random = math.random(#CloneEffects)
+        table.insert(EnabledEffect, CloneEffects[random])
+        print(CloneEffects[random].DisplayName)
+        table.remove(CloneEffects, random) 
+        Modifier_Count.x = math.min(Modifier_Count.x,#CloneEffects)
+        Modifier_Count.y = math.min(Modifier_Count.y,#CloneEffects)
+    end 
+    return EnabledEffect
+end
+
 
 local function SelectMap()
     local enabledMaps = {}
@@ -51,25 +75,16 @@ local function EnableMap(map, bool)
 
     map.root.isEnabled = bool
 end
-local function ApplyToplayer(func, player)
-    if Object.IsValid(player) then
-        func(player)
-    end
-end
-
-local function ApplyToEveryone(func, players)
-    for _, player in pairs(players) do
-        ApplyToplayer(func, player)
+ 
+local function ApplyEffects(effects)
+    for _, value in ipairs(effects) do
+        local Effect = require(value.ServerScript)
+        Effect.Activate()
     end
 end
 
 local function SpawnPlayer(data,player)
     player:Spawn({spawnKey = data.map.name})
-    if data.effects then
-        for _, value in pairs(data.effects) do
-            ApplyToplayer(value.serverstartfunction, player)
-        end
-    end
 end
 
 function GameManager:SelectType()
@@ -77,10 +92,7 @@ function GameManager:SelectType()
     Trap_Count.x = math.min(Trap_Count.x,#MapGlobalVariables.MapThreats)
     Trap_Count.y = math.min(Trap_Count.y,#MapGlobalVariables.MapThreats)
     self.data.traps = SelectTraps()
-
-    for i = 1, math.random(Modifier_Count.x, Modifier_Count.y) do
-        
-    end
+    self.data.effects = SelectEffects()
     GameManager_DataReader:SetData(self.data)
 end
 function GameManager:AddPlaying(player)
@@ -102,6 +114,7 @@ function GameManager:SelectModes()
     EnableMap(self.data.map, false)
     GameManager:SelectType()
     EnableMap(self.data.map, true)
+    ApplyEffects(self.data.effects)
 end
 
 function GameManager:GameEnd()
@@ -109,7 +122,7 @@ function GameManager:GameEnd()
         self.addnewlyjoinedEvent:Disconnect()
         self.addnewlyjoinedEvent = nil
     end
-
+    GlobalBaseStats:Reset()
 end 
 function GameManager:SpawnPlayers()
     for key, player in pairs(self.isPlaying) do
@@ -123,11 +136,6 @@ function GameManager:GameStart()
     for key, player in pairs(self.isPlaying) do
         if self.data.map then 
             player:Spawn({spawnKey = self.data.map.name})
-        end
-    end
-    if self.effects then
-        for _, value in pairs(self.effects) do
-            ApplyToEveryone(value.serverstartfunction, self.isPlaying)
         end
     end
     self.addnewlyjoinedEvent = self.addedPlayerEvent:Connect(function(player)

@@ -18,6 +18,10 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:MapName"
+        String: ""
+      }
+      Overrides {
         Name: "cs:ActiveChart:isrep"
         Bool: true
       }

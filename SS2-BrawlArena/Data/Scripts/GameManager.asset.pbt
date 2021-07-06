@@ -65,6 +65,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:GlobalBaseStats"
+        AssetReference {
+          Id: 15851838205026338885
+        }
+      }
+      Overrides {
         Name: "cs:Queued:isrep"
         Bool: true
       }
