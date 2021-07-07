@@ -134,6 +134,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17301492098691373205
+  Name: "Japanese Ability Teleport"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "IllustratedIcons_Japan_Abilities_Teleport"
+  }
+}
+Assets {
   Id: 17187907443819873485
   Name: "Japanese Temple Foundation 01"
   PlatformAssetType: 1
@@ -275,6 +284,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "cliff_002"
+  }
+}
+Assets {
+  Id: 15881443024086301834
+  Name: "Fantasy Ability Red 037"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_037"
   }
 }
 Assets {
@@ -1079,6 +1097,24 @@ Assets {
   }
 }
 Assets {
+  Id: 8867952198783375491
+  Name: "Fantasy Ability Purple 018"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_018"
+  }
+}
+Assets {
+  Id: 8854358530398708523
+  Name: "Fantasy Ability Green 019"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Green_019"
+  }
+}
+Assets {
   Id: 8777307662385110705
   Name: "Fern 03"
   PlatformAssetType: 1
@@ -1196,6 +1232,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7692351994274583204
+  Name: "Sci-fi Gear Shoulder 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Gear_Shoulder_006"
+  }
+}
+Assets {
   Id: 7663308268157147922
   Name: "Bark Dead 01"
   PlatformAssetType: 2
@@ -1283,6 +1328,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_window_frame_003_ref"
+  }
+}
+Assets {
+  Id: 7131225191693505755
+  Name: "Fantasy Craft Crystal 023"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Crystal_023"
   }
 }
 Assets {
@@ -1445,6 +1499,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_torii_rope_001_ref"
+  }
+}
+Assets {
+  Id: 5485640623370883304
+  Name: "Fantasy Ability Blue 029"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_029"
   }
 }
 Assets {
@@ -1976,6 +2039,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_railing_stringer_straight_001_ref"
+  }
+}
+Assets {
+  Id: 1190927332923649620
+  Name: "Japanese Ability Dash"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "IllustratedIcons_Japan_Abilities_Dash"
   }
 }
 Assets {

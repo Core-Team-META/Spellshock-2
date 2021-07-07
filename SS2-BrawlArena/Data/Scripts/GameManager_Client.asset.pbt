@@ -10,6 +10,18 @@ Assets {
           SelfId: 6460215782845203968
         }
       }
+      Overrides {
+        Name: "cs:GameManager_DataReader"
+        AssetReference {
+          Id: 11557698293725642091
+        }
+      }
+      Overrides {
+        Name: "cs:GameManager_API"
+        AssetReference {
+          Id: 9632532963862958783
+        }
+      }
     }
   }
   SerializationVersion: 91

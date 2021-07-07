@@ -29,6 +29,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Icon"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
         Name: "cs:Game_Effect_API"
         AssetReference {
           Id: 7289763351587042869

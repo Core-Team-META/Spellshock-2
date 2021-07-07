@@ -5,12 +5,6 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:MapGlobalVariables"
-        AssetReference {
-          Id: 2470986630732914518
-        }
-      }
-      Overrides {
         Name: "cs:Trap_Count"
         Vector2 {
           X: 2
@@ -25,20 +19,10 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Queued"
-        String: ""
-      }
-      Overrides {
-        Name: "cs:Traps"
-        String: ""
-      }
-      Overrides {
-        Name: "cs:GameModifiers"
-        String: ""
-      }
-      Overrides {
-        Name: "cs:Gamemode"
-        String: ""
+        Name: "cs:MapGlobalVariables"
+        AssetReference {
+          Id: 2470986630732914518
+        }
       }
       Overrides {
         Name: "cs:GameManager_API"
@@ -71,20 +55,9 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Queued:isrep"
-        Bool: true
-      }
-      Overrides {
-        Name: "cs:Traps:isrep"
-        Bool: true
-      }
-      Overrides {
-        Name: "cs:GameModifiers:isrep"
-        Bool: true
-      }
-      Overrides {
-        Name: "cs:Gamemode:isrep"
-        Bool: true
+        Name: "cs:Networking"
+        ObjectReference {
+        }
       }
     }
   }

@@ -24,10 +24,9 @@ function Stats:SetPlayerStats(player)
         player.serverUserData.playerStats[key] = value
     end
     player.maxJumpCount = (self.currentStats.jumps or 1)
-    player.canMount = self.currentStats.canMount or true
-    player.gravityScale = self.currentStats.gravity or 1.9
-    player:SetWorldScale((self.currentStats.scale or Vector3.ONE))
-    
+    player.canMount = self.currentStats.canMount 
+    player.gravityScale = self.currentStats.gravity  
+    player:SetWorldScale( self.currentStats.scale  ) 
     player:SetPrivateNetworkedData('playerStats', player.serverUserData.playerStats)
 end
 
