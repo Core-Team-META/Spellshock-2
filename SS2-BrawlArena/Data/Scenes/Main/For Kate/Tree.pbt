@@ -1,6 +1,174 @@
 Name: "For Kate"
 RootId: 7229031333071442508
 Objects {
+  Id: 16088310544326173973
+  Name: "TeamDamager"
+  Transform {
+    Location {
+      X: -765.75238
+      Y: -9881.58203
+      Z: 4825.87451
+    }
+    Rotation {
+    }
+    Scale {
+      X: 71.8082886
+      Y: 36.3682404
+      Z: 46.8991966
+    }
+  }
+  ParentId: 7229031333071442508
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7724387321884702281
+      value {
+        Overrides {
+          Name: "Name"
+          String: "TeamDamager"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 254441.016
+            Y: 32272.4082
+            Z: 798.03418
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 74.6081
+            Y: 37.786232
+            Z: 38.841938
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "TriggerShape"
+          Enum {
+            Value: "mc:etriggershape:capsule"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13263840505660947950
+    }
+  }
+}
+Objects {
+  Id: 4899994088715208247
+  Name: "TeamDamager"
+  Transform {
+    Location {
+      X: -765.75238
+      Y: 5384.604
+      Z: 4825.87451
+    }
+    Rotation {
+    }
+    Scale {
+      X: 71.8082886
+      Y: 36.3682404
+      Z: 46.8991966
+    }
+  }
+  ParentId: 7229031333071442508
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7724387321884702281
+      value {
+        Overrides {
+          Name: "Name"
+          String: "TeamDamager"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 254459.203
+            Y: 44927.8477
+            Z: 743.376099
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 124.462936
+            Y: 64.4316559
+            Z: 38.4445038
+          }
+        }
+        Overrides {
+          Name: "TeamsTeam"
+          Int: 1
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "TriggerShape"
+          Enum {
+            Value: "mc:etriggershape:capsule"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13263840505660947950
+    }
+  }
+}
+Objects {
+  Id: 16204541589638700544
+  Name: "ChineseArena SpawnProtection"
+  Transform {
+    Location {
+      X: 254404.391
+      Y: 40570.5039
+      Z: -2725.65576
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7229031333071442508
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "ChineseArena SpawnProtection"
+  }
+}
+Objects {
   Id: 5753521562115192628
   Name: "ToxicArena SpawnProtection"
   Transform {
@@ -238,11 +406,7 @@ Objects {
   }
   ParentId: 15443005704835508813
   ChildIds: 16972409360172371798
-  ChildIds: 18048869094648759971
   ChildIds: 10225319048838568523
-  ChildIds: 151733931082741668
-  ChildIds: 10222003008108710612
-  ChildIds: 11998726756138108180
   ChildIds: 3633865107923030765
   ChildIds: 2006801501429192130
   ChildIds: 2607802880796968069
@@ -277,6 +441,10 @@ Objects {
   ChildIds: 6915611383479628311
   ChildIds: 6924332378940727628
   ChildIds: 3535823347879362527
+  ChildIds: 2342562072833111504
+  ChildIds: 4292475094227742466
+  ChildIds: 9869617969703950974
+  ChildIds: 9455727389940564378
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -291,6 +459,294 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 9455727389940564378
+  Name: "Trap_Shooter"
+  Transform {
+    Location {
+      X: 256381.922
+      Y: 40306.8
+      Z: 197.917236
+    }
+    Rotation {
+      Pitch: 90
+      Roll: -90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5519472747263749635
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Trap_Shooter"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 252410.969
+            Y: 36531.2344
+            Z: -2132.96387
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 90
+            Roll: 90
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6275652929316109429
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.140625
+            Y: -0.000732421875
+            Z: 3551.91699
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15873584286264005083
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.143554688
+            Y: -0.000732421875
+            Z: 3576.82324
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12534933327196427864
+    }
+  }
+}
+Objects {
+  Id: 9869617969703950974
+  Name: "Trap_Shooter"
+  Transform {
+    Location {
+      X: 256217.016
+      Y: 36559.707
+      Z: 197.917236
+    }
+    Rotation {
+      Pitch: 90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5519472747263749635
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Trap_Shooter"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 256248.516
+            Y: 40112.0703
+            Z: -2132.96387
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 90
+            Roll: -90
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6275652929316109429
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.140625
+            Y: -0.000732421875
+            Z: 3551.91699
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15873584286264005083
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.143554688
+            Y: -0.000732421875
+            Z: 3576.82324
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12534933327196427864
+    }
+  }
+}
+Objects {
+  Id: 4292475094227742466
+  Name: "Trap_Shooter"
+  Transform {
+    Location {
+      X: 256217.016
+      Y: 36559.707
+      Z: 197.917236
+    }
+    Rotation {
+      Pitch: 90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5519472747263749635
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Trap_Shooter"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 252594
+            Y: 40282.0469
+            Z: -2132.96387
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 90
+            Roll: 180
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12534933327196427864
+    }
+  }
+}
+Objects {
+  Id: 2342562072833111504
+  Name: "Trap_Shooter"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5519472747263749635
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Trap_Shooter"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 256083.609
+            Y: 36364.9766
+            Z: -2132.96387
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 90
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12534933327196427864
+    }
   }
 }
 Objects {
@@ -125729,6 +126185,19 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 6275652929316109429
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1.08642578
+            Y: 1.08789063
+            Z: 8665.25586
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 9689918792289578235
       value {
         Overrides {
@@ -125751,6 +126220,19 @@ Objects {
         Overrides {
           Name: "cs:Deactive_Time"
           Float: 0.1
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15873584286264005083
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1.08642578
+            Y: 1.08789063
+            Z: 8690.16406
+          }
         }
       }
     }
@@ -125819,6 +126301,19 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 6275652929316109429
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.785644531
+            Y: 0.787109375
+            Z: 8661.68848
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 9689918792289578235
       value {
         Overrides {
@@ -125844,273 +126339,16 @@ Objects {
         }
       }
     }
-    TemplateAsset {
-      Id: 12534933327196427864
-    }
-  }
-}
-Objects {
-  Id: 11998726756138108180
-  Name: "Trap_Shooter"
-  Transform {
-    Location {
-      X: 134.406677
-      Y: 2069.64429
-      Z: 2577.81812
-    }
-    Rotation {
-      Pitch: 90
-      Roll: -90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
     ParameterOverrideMap {
-      key: 5519472747263749635
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Trap_Shooter"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -1810.47876
-            Y: -6798.14111
-            Z: 142.263428
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 90
-            Roll: 90
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9689918792289578235
+      key: 15873584286264005083
       value {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3.81469727e-06
-            Y: 1.52587891e-05
-            Z: 91.7495
+            X: 0.785644531
+            Y: 0.787109375
+            Z: 8686.60059
           }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10478055985890258417
-      value {
-        Overrides {
-          Name: "cs:Active_Time"
-          Float: 1
-        }
-        Overrides {
-          Name: "cs:Deactive_Time"
-          Float: 0.1
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 12534933327196427864
-    }
-  }
-}
-Objects {
-  Id: 10222003008108710612
-  Name: "Trap_Shooter"
-  Transform {
-    Location {
-      X: -1963.15942
-      Y: 2064.43896
-      Z: 2577.81812
-    }
-    Rotation {
-      Pitch: 90
-      Roll: -90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5519472747263749635
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Trap_Shooter"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 262.376984
-            Y: -6792.93408
-            Z: 142.263428
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 90
-            Roll: 90
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9689918792289578235
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 3.81469727e-06
-            Y: 0.000625610352
-            Z: 91.7495
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10478055985890258417
-      value {
-        Overrides {
-          Name: "cs:Active_Time"
-          Float: 1
-        }
-        Overrides {
-          Name: "cs:Deactive_Time"
-          Float: 0.1
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 12534933327196427864
-    }
-  }
-}
-Objects {
-  Id: 151733931082741668
-  Name: "Trap_Shooter"
-  Transform {
-    Location {
-      X: -1681.22498
-      Y: 2064.43896
-      Z: 2577.81812
-    }
-    Rotation {
-      Pitch: 90
-      Roll: -90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5519472747263749635
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Trap_Shooter"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -2096.56616
-            Y: 1891.84216
-            Z: 142.263428
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 90
-            Roll: -90
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9689918792289578235
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 3.81469727e-06
-            Y: -1.52587891e-05
-            Z: 86.988266
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10478055985890258417
-      value {
-        Overrides {
-          Name: "cs:Active_Time"
-          Float: 1
-        }
-        Overrides {
-          Name: "cs:Deactive_Time"
-          Float: 0.1
         }
       }
     }
@@ -126179,6 +126417,19 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 6275652929316109429
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.875488281
+            Y: -0.876953125
+            Z: 8665.17383
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 9689918792289578235
       value {
         Overrides {
@@ -126204,92 +126455,16 @@ Objects {
         }
       }
     }
-    TemplateAsset {
-      Id: 12534933327196427864
-    }
-  }
-}
-Objects {
-  Id: 18048869094648759971
-  Name: "Trap_Shooter"
-  Transform {
-    Location {
-      X: 400.792297
-      Y: 2069.64429
-      Z: 2577.81812
-    }
-    Rotation {
-      Pitch: 90
-      Roll: -90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
     ParameterOverrideMap {
-      key: 5519472747263749635
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Trap_Shooter"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 0.999938965
-            Y: 1897.04749
-            Z: 142.263428
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 90
-            Roll: -90
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9689918792289578235
+      key: 15873584286264005083
       value {
         Overrides {
           Name: "Position"
           Vector {
-            Y: -0.000270843506
-            Z: 62.656723
+            X: 0.881347656
+            Y: -0.8828125
+            Z: 8690.08203
           }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10478055985890258417
-      value {
-        Overrides {
-          Name: "cs:Active_Time"
-          Float: 1
-        }
-        Overrides {
-          Name: "cs:Deactive_Time"
-          Float: 0.1
         }
       }
     }
@@ -126349,6 +126524,19 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 6275652929316109429
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.992675781
+            Y: -0.994140625
+            Z: 8661.36914
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 9689918792289578235
       value {
         Overrides {
@@ -126371,6 +126559,19 @@ Objects {
         Overrides {
           Name: "cs:Deactive_Time"
           Float: 0.1
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15873584286264005083
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.994628906
+            Y: -0.99609375
+            Z: 8686.27344
+          }
         }
       }
     }
@@ -126407,17 +126608,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -675.657
+            X: -765.75238
             Y: -9881.58203
-            Z: 1953.99268
+            Z: 4825.87451
           }
         }
         Overrides {
           Name: "Scale"
           Vector {
-            X: 65.0916443
-            Y: 34.4652901
-            Z: 4.32997561
+            X: 71.8082886
+            Y: 36.3682404
+            Z: 46.8991966
           }
         }
         Overrides {
@@ -126467,17 +126668,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -675.657
+            X: -765.75238
             Y: 5384.604
-            Z: 1953.99268
+            Z: 4825.87451
           }
         }
         Overrides {
           Name: "Scale"
           Vector {
-            X: 65.0916443
-            Y: 34.4652901
-            Z: 4.32997561
+            X: 71.8082886
+            Y: 36.3682404
+            Z: 46.8991966
           }
         }
         Overrides {

@@ -836,6 +836,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13653543951252471024
+  Name: "Japanese Temple Door Shoji 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_jpn_tem_door_shoji_01_ref"
+  }
+}
+Assets {
   Id: 13639117121097227691
   Name: "Bricks Stone Block 01"
   PlatformAssetType: 2
@@ -1241,6 +1250,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11521250418432815603
+  Name: "Ivy 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ivy_generic_005"
+  }
+}
+Assets {
   Id: 11515840070784317904
   Name: "Skylight"
   PlatformAssetType: 6
@@ -1376,6 +1394,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10230959292029196430
+  Name: "Prism - 3-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_001"
+  }
+}
+Assets {
   Id: 10223008057381932438
   Name: "Fantasy Castle Floor 01 4m"
   PlatformAssetType: 1
@@ -1427,6 +1454,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_urban_destruction_debris_brick_01_ref"
+  }
+}
+Assets {
+  Id: 10004207146509026755
+  Name: "Ivy 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ivy_generic_001"
   }
 }
 Assets {
@@ -1499,6 +1535,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_smoke_volume_vfx"
+  }
+}
+Assets {
+  Id: 9241339813623090261
+  Name: "Ivy 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ivy_generic_004"
   }
 }
 Assets {
@@ -2312,6 +2357,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3889761782241328614
+  Name: "Japanese Temple Door Shoji 01 - Wide 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_jpn_tem_door_shoji_01_wide_01_ref"
+  }
+}
+Assets {
   Id: 3874182602644405188
   Name: "Square Column Base 02"
   PlatformAssetType: 1
@@ -2516,6 +2570,15 @@ Assets {
   PrimaryAsset {
     AssetType: "BlueprintAssetRef"
     AssetId: "fxbp_post_process_vignette_grain"
+  }
+}
+Assets {
+  Id: 2868585289287072490
+  Name: "Ivy 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ivy_generic_002"
   }
 }
 Assets {
