@@ -701,15 +701,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14320420807192399895
-  Name: "Whelp Mob"
-  PlatformAssetType: 17
-  PrimaryAsset {
-    AssetType: "AnimatedMeshAssetRef"
-    AssetId: "npc_dragonling_chubby_basic_001_ref"
-  }
-}
-Assets {
   Id: 14310375594674475352
   Name: "Fantasy Castle Wall Foundation 01 - Pillar 01"
   PlatformAssetType: 1
