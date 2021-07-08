@@ -1,6 +1,6 @@
 Assets {
   Id: 5079583662896106804
-  Name: "Custom Stone Foundation 01"
+  Name: "Toxic Stone Foundation 01"
   PlatformAssetType: 13
   SerializationVersion: 91
   CustomMaterialAsset {
