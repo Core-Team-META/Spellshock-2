@@ -515,14 +515,6 @@ Objects {
   ChildIds: 4292475094227742466
   ChildIds: 9869617969703950974
   ChildIds: 9455727389940564378
-  ChildIds: 16124357284882789389
-  ChildIds: 3160829159310843202
-  ChildIds: 11321100118680642179
-  ChildIds: 16985474860459403821
-  ChildIds: 8014298209693888594
-  ChildIds: 16008621027521275021
-  ChildIds: 9670667515986975590
-  ChildIds: 14582908131035383669
   ChildIds: 3386538858445668297
   ChildIds: 13400940550768679007
   ChildIds: 5679130022377526490
@@ -543,6 +535,14 @@ Objects {
   ChildIds: 4951686530266828877
   ChildIds: 6884843343208197182
   ChildIds: 3979399798549582441
+  ChildIds: 13685600268564219143
+  ChildIds: 1469476591892704116
+  ChildIds: 2765519610845417442
+  ChildIds: 5080364371951980585
+  ChildIds: 3066341281007864706
+  ChildIds: 3373720661368991663
+  ChildIds: 16008621027521275021
+  ChildIds: 2492670650719845803
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -557,6 +557,4759 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 2492670650719845803
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 252932.047
+      Y: 33416.3828
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Roll: 135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 14874594581597097875
+  ChildIds: 1858452675659317359
+  ChildIds: 15422476220462832430
+  ChildIds: 15173205599365908209
+  ChildIds: 9157891280519951876
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 9157891280519951876
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2492670650719845803
+  ChildIds: 9719607344756527894
+  ChildIds: 4905814583221943609
+  ChildIds: 16860611415771906210
+  ChildIds: 9674787586888388163
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 9674787586888388163
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 9157891280519951876
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 16860611415771906210
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9157891280519951876
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 15422476220462832430
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 2492670650719845803
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 1858452675659317359
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 4905814583221943609
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9157891280519951876
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 2492670650719845803
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 9719607344756527894
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 9719607344756527894
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 9157891280519951876
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15173205599365908209
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2492670650719845803
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 1858452675659317359
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 15422476220462832430
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 2492670650719845803
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 1858452675659317359
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2492670650719845803
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 15422476220462832430
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 2492670650719845803
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 14874594581597097875
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 2492670650719845803
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16008621027521275021
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 252927.734
+      Y: 43393.1
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Yaw: 7.12502289
+      Roll: -142.125061
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 12999709256510633984
+  ChildIds: 1071991185412345769
+  ChildIds: 6503189563034958495
+  ChildIds: 16895839851553878626
+  ChildIds: 8895951184352038294
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 8895951184352038294
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16008621027521275021
+  ChildIds: 8504293689957341063
+  ChildIds: 9865790726452441853
+  ChildIds: 14100393962167108004
+  ChildIds: 8880007809247980219
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 8880007809247980219
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 8895951184352038294
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 14100393962167108004
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8895951184352038294
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 6503189563034958495
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 16008621027521275021
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 1071991185412345769
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 9865790726452441853
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8895951184352038294
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 16008621027521275021
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 8504293689957341063
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 8504293689957341063
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 8895951184352038294
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 16895839851553878626
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16008621027521275021
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 1071991185412345769
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 6503189563034958495
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 16008621027521275021
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 1071991185412345769
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16008621027521275021
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 6503189563034958495
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 16008621027521275021
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 12999709256510633984
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 16008621027521275021
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 3373720661368991663
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 252933.672
+      Y: 30717.6309
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Roll: -135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 15507246125279757845
+  ChildIds: 15106161394558425313
+  ChildIds: 10196220418181469557
+  ChildIds: 2796863858457876132
+  ChildIds: 15737887080615570182
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 15737887080615570182
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3373720661368991663
+  ChildIds: 10262129854967350011
+  ChildIds: 15180828134097086431
+  ChildIds: 12138002231392285622
+  ChildIds: 4646770802537288556
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 4646770802537288556
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 15737887080615570182
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 12138002231392285622
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15737887080615570182
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 10196220418181469557
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 3373720661368991663
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 15106161394558425313
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 15180828134097086431
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15737887080615570182
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 3373720661368991663
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 10262129854967350011
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 10262129854967350011
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 15737887080615570182
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2796863858457876132
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3373720661368991663
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 15106161394558425313
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 10196220418181469557
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 3373720661368991663
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 15106161394558425313
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3373720661368991663
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 10196220418181469557
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 3373720661368991663
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 15507246125279757845
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 3373720661368991663
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 3066341281007864706
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 255635.484
+      Y: 30690.166
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Roll: -45
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 757444393072889923
+  ChildIds: 12631228973505533756
+  ChildIds: 15704482997927660038
+  ChildIds: 18213648725591137980
+  ChildIds: 17717181385962759065
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 17717181385962759065
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3066341281007864706
+  ChildIds: 9644630722679399876
+  ChildIds: 2889251207530636831
+  ChildIds: 4992329824896407867
+  ChildIds: 17338572228093504744
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 17338572228093504744
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 17717181385962759065
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 4992329824896407867
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17717181385962759065
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 15704482997927660038
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 3066341281007864706
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 12631228973505533756
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 2889251207530636831
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17717181385962759065
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 3066341281007864706
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 9644630722679399876
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 9644630722679399876
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 17717181385962759065
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 18213648725591137980
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3066341281007864706
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 12631228973505533756
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 15704482997927660038
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 3066341281007864706
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 12631228973505533756
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3066341281007864706
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 15704482997927660038
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 3066341281007864706
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 757444393072889923
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 3066341281007864706
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5080364371951980585
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 255668.875
+      Y: 33411.8906
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Roll: 45
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 11034293814190506499
+  ChildIds: 16982450449570971495
+  ChildIds: 9199018858037943869
+  ChildIds: 1159487130957252567
+  ChildIds: 10908063836006994951
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 10908063836006994951
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5080364371951980585
+  ChildIds: 7091299532481502148
+  ChildIds: 15300195474983140288
+  ChildIds: 6603722174230567701
+  ChildIds: 16621033606680604129
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 16621033606680604129
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 10908063836006994951
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 6603722174230567701
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10908063836006994951
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 9199018858037943869
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 5080364371951980585
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 16982450449570971495
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 15300195474983140288
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10908063836006994951
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 5080364371951980585
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 7091299532481502148
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 7091299532481502148
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 10908063836006994951
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 1159487130957252567
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5080364371951980585
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 16982450449570971495
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 9199018858037943869
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 5080364371951980585
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 16982450449570971495
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5080364371951980585
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 9199018858037943869
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 5080364371951980585
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 11034293814190506499
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 5080364371951980585
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2765519610845417442
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 255663.641
+      Y: 43388.5273
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Roll: -45
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 8482971568083474887
+  ChildIds: 2472902971209586988
+  ChildIds: 8426886589547595985
+  ChildIds: 3524181529230718014
+  ChildIds: 9550569994326856492
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 9550569994326856492
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2765519610845417442
+  ChildIds: 817534042751174864
+  ChildIds: 7746893823848825681
+  ChildIds: 632527763408310590
+  ChildIds: 5955329569809600016
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 5955329569809600016
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 9550569994326856492
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 632527763408310590
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9550569994326856492
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 8426886589547595985
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 2765519610845417442
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 2472902971209586988
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 7746893823848825681
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9550569994326856492
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 2765519610845417442
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 817534042751174864
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 817534042751174864
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 9550569994326856492
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3524181529230718014
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2765519610845417442
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 2472902971209586988
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 8426886589547595985
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 2765519610845417442
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 2472902971209586988
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2765519610845417442
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 8426886589547595985
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 2765519610845417442
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 8482971568083474887
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 2765519610845417442
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 1469476591892704116
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 255662.766
+      Y: 46089.0195
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Roll: 45
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 5293843461099423265
+  ChildIds: 135756129698188192
+  ChildIds: 16910781241188995077
+  ChildIds: 14965001471959474776
+  ChildIds: 14239838801022373212
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 14239838801022373212
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1469476591892704116
+  ChildIds: 8277927609394880103
+  ChildIds: 15538064043226086357
+  ChildIds: 10307020254583424573
+  ChildIds: 5906899129292221987
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 5906899129292221987
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 14239838801022373212
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 10307020254583424573
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14239838801022373212
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 16910781241188995077
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1469476591892704116
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 135756129698188192
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 15538064043226086357
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14239838801022373212
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1469476591892704116
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 8277927609394880103
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 8277927609394880103
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 14239838801022373212
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14965001471959474776
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1469476591892704116
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 135756129698188192
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 16910781241188995077
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 1469476591892704116
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 135756129698188192
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1469476591892704116
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 16910781241188995077
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1469476591892704116
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 5293843461099423265
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 1469476591892704116
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13685600268564219143
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+      X: 252962.047
+      Y: 46116.7109
+      Z: -1894.45459
+    }
+    Rotation {
+      Pitch: -90
+      Roll: 135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 5569003642308416280
+  ChildIds: 10069694194535664814
+  ChildIds: 4074373190981061828
+  ChildIds: 11531780246990247698
+  ChildIds: 1435249455112612667
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 1435249455112612667
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13685600268564219143
+  ChildIds: 4087640329682631289
+  ChildIds: 16855074848892466534
+  ChildIds: 12398212479380776254
+  ChildIds: 12355599622816227267
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 12355599622816227267
+  Name: "Whelp Mob"
+  Transform {
+    Location {
+      X: 112.718323
+      Y: -1.78125
+      Z: -191.796875
+    }
+    Rotation {
+      Pitch: -66.1305466
+      Yaw: -177.718842
+      Roll: -4.04644442
+    }
+    Scale {
+      X: -9.01537132
+      Y: 9.01537132
+      Z: 9.01537132
+    }
+  }
+  ParentId: 1435249455112612667
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 15761460511220986007
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4809529976550021000
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14320420807192399895
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        Animation: "unarmed_spit"
+        StartPosition: 0.173575714
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 901767670555343160
+    SubobjectId: 10722857430708773649
+    InstanceId: 5759006789451155182
+    TemplateId: 4431700335417501559
+  }
+}
+Objects {
+  Id: 12398212479380776254
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1435249455112612667
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 4074373190981061828
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 13685600268564219143
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 10069694194535664814
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 16855074848892466534
+  Name: "Traps_Spitter_VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1435249455112612667
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 13685600268564219143
+      }
+    }
+    Overrides {
+      Name: "cs:VFX"
+      ObjectReference {
+        SelfId: 4087640329682631289
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15426375932374349823
+    }
+  }
+}
+Objects {
+  Id: 4087640329682631289
+  Name: "Torch Fire VFX"
+  Transform {
+    Location {
+      X: 0.000335693359
+      Y: -0.21875
+      Z: 220.203125
+    }
+    Rotation {
+    }
+    Scale {
+      X: -2.77981257
+      Y: 2.77981257
+      Z: 2.77981257
+    }
+  }
+  ParentId: 1435249455112612667
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Initial Velocity"
+      Vector {
+        Z: 4000
+      }
+    }
+    Overrides {
+      Name: "bp:Wind Speed"
+      Vector {
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+    Overrides {
+      Name: "bp:Sort Priority Adjustment"
+      Int: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4603537691901304316
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9074867869076465935
+    SubobjectId: 15568097061606479674
+    InstanceId: 6211587817445561844
+    TemplateId: 5370067321157212092
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11531780246990247698
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13685600268564219143
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 10069694194535664814
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -37.7976074
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 4074373190981061828
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -0.00885009766
+      Y: -0.00271606445
+      Z: 605.612061
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.82092404
+      Y: 2.68134713
+      Z: 7.7224493
+    }
+  }
+  ParentId: 13685600268564219143
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 10069694194535664814
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13685600268564219143
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 4074373190981061828
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 13685600268564219143
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 9664098175555383578
+      }
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 1746548212483133802
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 17653918653799502091
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
+  }
+}
+Objects {
+  Id: 5569003642308416280
+  Name: "Dragonhead_collision"
+  Transform {
+    Location {
+      X: 10.7392883
+      Y: 17.0147629
+      Z: 81.5161438
+    }
+    Rotation {
+      Yaw: -89.9999847
+      Roll: 8.94353676
+    }
+    Scale {
+      X: 2.34635878
+      Y: 3.09879279
+      Z: 2.310853
+    }
+  }
+  ParentId: 13685600268564219143
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
   }
 }
 Objects {
@@ -78917,4879 +83670,6 @@ Objects {
     SubobjectId: 15705337203579287153
     InstanceId: 10133192130718723744
     TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 14582908131035383669
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 255663.281
-      Y: 46088.9805
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Roll: 45
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 15454244806411993914
-  ChildIds: 16496243007079273439
-  ChildIds: 5066365859175665263
-  ChildIds: 14216119762741165642
-  ChildIds: 10029112148078285867
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 10029112148078285867
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14582908131035383669
-  ChildIds: 2228008178488791451
-  ChildIds: 8255159866957720631
-  ChildIds: 11024376681493532894
-  ChildIds: 17361534795447742323
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 17361534795447742323
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 10029112148078285867
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 11024376681493532894
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10029112148078285867
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 5066365859175665263
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 16496243007079273439
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 14582908131035383669
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 8255159866957720631
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10029112148078285867
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 14582908131035383669
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 2228008178488791451
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 2228008178488791451
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 10029112148078285867
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 14216119762741165642
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14582908131035383669
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 16496243007079273439
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 5066365859175665263
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 14582908131035383669
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 16496243007079273439
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14582908131035383669
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 5066365859175665263
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 14582908131035383669
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 15454244806411993914
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 14582908131035383669
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 9670667515986975590
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 255664.547
-      Y: 43389.2031
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Roll: -45
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 15357276076447530886
-  ChildIds: 11256151941738786568
-  ChildIds: 11441803842930032367
-  ChildIds: 3784385284195231714
-  ChildIds: 10629350941055740103
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 10629350941055740103
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9670667515986975590
-  ChildIds: 15354719658149111366
-  ChildIds: 8396704747823509230
-  ChildIds: 8738421500574183248
-  ChildIds: 594297526865372763
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 594297526865372763
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 10629350941055740103
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 8738421500574183248
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10629350941055740103
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 11441803842930032367
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 11256151941738786568
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 9670667515986975590
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 8396704747823509230
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10629350941055740103
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 9670667515986975590
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 15354719658149111366
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 15354719658149111366
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 10629350941055740103
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3784385284195231714
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9670667515986975590
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 11256151941738786568
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 11441803842930032367
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 9670667515986975590
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 11256151941738786568
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9670667515986975590
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 11441803842930032367
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 9670667515986975590
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 15357276076447530886
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 9670667515986975590
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 16008621027521275021
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 252927.734
-      Y: 43393.1
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Roll: -135
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 12999709256510633984
-  ChildIds: 2685283581237533124
-  ChildIds: 6503189563034958495
-  ChildIds: 16895839851553878626
-  ChildIds: 8895951184352038294
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 8895951184352038294
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16008621027521275021
-  ChildIds: 8504293689957341063
-  ChildIds: 9865790726452441853
-  ChildIds: 14100393962167108004
-  ChildIds: 8880007809247980219
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 8880007809247980219
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 8895951184352038294
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 14100393962167108004
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8895951184352038294
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 6503189563034958495
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 2685283581237533124
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16008621027521275021
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 9865790726452441853
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8895951184352038294
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16008621027521275021
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 8504293689957341063
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 8504293689957341063
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 8895951184352038294
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 16895839851553878626
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16008621027521275021
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 2685283581237533124
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 6503189563034958495
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 16008621027521275021
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 2685283581237533124
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16008621027521275021
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 6503189563034958495
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16008621027521275021
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 12999709256510633984
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 16008621027521275021
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 8014298209693888594
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 252961.906
-      Y: 46117.1484
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Yaw: -7.12503052
-      Roll: 142.125061
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 8343754431115108159
-  ChildIds: 4328758467066326172
-  ChildIds: 7736321697057627248
-  ChildIds: 17399278353108258267
-  ChildIds: 16545078427380194581
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 16545078427380194581
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8014298209693888594
-  ChildIds: 3329973287029700848
-  ChildIds: 3795934624000921659
-  ChildIds: 7082985086429809549
-  ChildIds: 10793471494618291357
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 10793471494618291357
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 16545078427380194581
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 7082985086429809549
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16545078427380194581
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 7736321697057627248
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 4328758467066326172
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 8014298209693888594
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 3795934624000921659
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16545078427380194581
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 8014298209693888594
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 3329973287029700848
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 3329973287029700848
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 16545078427380194581
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 17399278353108258267
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8014298209693888594
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 4328758467066326172
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 7736321697057627248
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 8014298209693888594
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 4328758467066326172
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8014298209693888594
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 7736321697057627248
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 8014298209693888594
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 8343754431115108159
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 8014298209693888594
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 16985474860459403821
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 252932.672
-      Y: 33416.4766
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Roll: 135
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 4482649235303514763
-  ChildIds: 12313072346066368396
-  ChildIds: 16843918996241887977
-  ChildIds: 10835973406557779122
-  ChildIds: 58095522014113367
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 58095522014113367
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16985474860459403821
-  ChildIds: 16243635307699254870
-  ChildIds: 17187208489741643738
-  ChildIds: 4456428226943399552
-  ChildIds: 3345788241629856948
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 3345788241629856948
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 58095522014113367
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 4456428226943399552
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 58095522014113367
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 16843918996241887977
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 12313072346066368396
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16985474860459403821
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 17187208489741643738
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 58095522014113367
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16985474860459403821
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 16243635307699254870
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 16243635307699254870
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 58095522014113367
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 10835973406557779122
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16985474860459403821
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 12313072346066368396
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 16843918996241887977
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 16985474860459403821
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 12313072346066368396
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16985474860459403821
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 16843918996241887977
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16985474860459403821
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 4482649235303514763
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 16985474860459403821
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 11321100118680642179
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 252933.625
-      Y: 30718.0605
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Roll: -135
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 11819669766772101340
-  ChildIds: 8891451035593897862
-  ChildIds: 3290194562340775870
-  ChildIds: 952134198328446588
-  ChildIds: 4062526282263171994
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 4062526282263171994
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11321100118680642179
-  ChildIds: 16290666267070181795
-  ChildIds: 1639592960612142658
-  ChildIds: 881804227427054603
-  ChildIds: 5722808338925222160
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 5722808338925222160
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 4062526282263171994
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 881804227427054603
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4062526282263171994
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 3290194562340775870
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 8891451035593897862
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 11321100118680642179
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 1639592960612142658
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4062526282263171994
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 11321100118680642179
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 16290666267070181795
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 16290666267070181795
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 4062526282263171994
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 952134198328446588
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11321100118680642179
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 8891451035593897862
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 3290194562340775870
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 11321100118680642179
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 8891451035593897862
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11321100118680642179
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 3290194562340775870
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 11321100118680642179
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 11819669766772101340
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 11321100118680642179
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 3160829159310843202
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 255635.234
-      Y: 30689.5781
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Roll: -45
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 16686062902205177960
-  ChildIds: 8142171492104184867
-  ChildIds: 14462098649674322734
-  ChildIds: 7344097213201693487
-  ChildIds: 14782071400388501510
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 14782071400388501510
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3160829159310843202
-  ChildIds: 1782443207772957827
-  ChildIds: 16527364341633371597
-  ChildIds: 16120717897398432904
-  ChildIds: 14661756175997378025
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 14661756175997378025
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 14782071400388501510
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 16120717897398432904
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14782071400388501510
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 14462098649674322734
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 8142171492104184867
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 3160829159310843202
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 16527364341633371597
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14782071400388501510
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 3160829159310843202
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 1782443207772957827
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 1782443207772957827
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 14782071400388501510
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 7344097213201693487
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3160829159310843202
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 8142171492104184867
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 14462098649674322734
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 3160829159310843202
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 8142171492104184867
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3160829159310843202
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 14462098649674322734
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 3160829159310843202
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 16686062902205177960
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 3160829159310843202
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 16124357284882789389
-  Name: "Trap_Spitter"
-  Transform {
-    Location {
-      X: 255668.672
-      Y: 33412.3164
-      Z: -1894.45459
-    }
-    Rotation {
-      Pitch: -90
-      Roll: 45
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5230287842309158673
-  ChildIds: 7196763592420727724
-  ChildIds: 892039945637255384
-  ChildIds: 3451545131457060349
-  ChildIds: 6577015180494259579
-  ChildIds: 9526943199505889543
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17876911858117836105
-    SubobjectId: 16740550787422529991
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 9526943199505889543
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16124357284882789389
-  ChildIds: 9074867869076465935
-  ChildIds: 16043588403101581069
-  ChildIds: 18165931966690293035
-  ChildIds: 901767670555343160
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 629948573773010316
-    SubobjectId: 1800287852305662210
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 901767670555343160
-  Name: "Whelp Mob"
-  Transform {
-    Location {
-      X: 112.718323
-      Y: -1.78125
-      Z: -191.796875
-    }
-    Rotation {
-      Pitch: -66.1305466
-      Yaw: -177.718842
-      Roll: -4.04644442
-    }
-    Scale {
-      X: -9.01537132
-      Y: 9.01537132
-      Z: 9.01537132
-    }
-  }
-  ParentId: 9526943199505889543
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 15761460511220986007
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4809529976550021000
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14320420807192399895
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        Animation: "unarmed_spit"
-        StartPosition: 0.173575714
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 901767670555343160
-    SubobjectId: 10722857430708773649
-    InstanceId: 5759006789451155182
-    TemplateId: 4431700335417501559
-  }
-}
-Objects {
-  Id: 18165931966690293035
-  Name: "Trap_Spikes_Client"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9526943199505889543
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 3451545131457060349
-      }
-    }
-    Overrides {
-      Name: "cs:Trap"
-      ObjectReference {
-        SelfId: 892039945637255384
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16124357284882789389
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4185338573117725157
-    }
-  }
-  InstanceHistory {
-    SelfId: 12702617122900713631
-    SubobjectId: 11532922978793354257
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 16043588403101581069
-  Name: "Traps_Spitter_VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9526943199505889543
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16124357284882789389
-      }
-    }
-    Overrides {
-      Name: "cs:VFX"
-      ObjectReference {
-        SelfId: 9074867869076465935
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15426375932374349823
-    }
-  }
-}
-Objects {
-  Id: 9074867869076465935
-  Name: "Torch Fire VFX"
-  Transform {
-    Location {
-      X: 0.000335693359
-      Y: -0.21875
-      Z: 220.203125
-    }
-    Rotation {
-    }
-    Scale {
-      X: -2.77981257
-      Y: 2.77981257
-      Z: 2.77981257
-    }
-  }
-  ParentId: 9526943199505889543
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Initial Velocity"
-      Vector {
-        Z: 4000
-      }
-    }
-    Overrides {
-      Name: "bp:Wind Speed"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Sort Priority Adjustment"
-      Int: 2
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 4603537691901304316
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  InstanceHistory {
-    SelfId: 9074867869076465935
-    SubobjectId: 15568097061606479674
-    InstanceId: 6211587817445561844
-    TemplateId: 5370067321157212092
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 6577015180494259579
-  Name: "Switch_PressurePlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16124357284882789389
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1588993302858132563
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Switch_PressurePlate"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:Trap"
-          ObjectReference {
-            SelfId: 892039945637255384
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3175600130149665580
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3700353392715534511
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 4.06047821
-            Y: 2.59672761
-            Z: 0.645208418
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -37.7976074
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5663777047047607862
-    }
-  }
-}
-Objects {
-  Id: 3451545131457060349
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -0.00885009766
-      Y: -0.00271606445
-      Z: 605.612061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.82092404
-      Y: 2.68134713
-      Z: 7.7224493
-    }
-  }
-  ParentId: 16124357284882789389
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 1139888192983532079
-    SubobjectId: 2275545850997528225
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 892039945637255384
-  Name: "Trap_Spikes"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16124357284882789389
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Activate_SFX"
-      AssetReference {
-        Id: 9664098175555383578
-      }
-    }
-    Overrides {
-      Name: "cs:Deactivate_SFX"
-      AssetReference {
-        Id: 1746548212483133802
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_SFX"
-      AssetReference {
-        Id: 17653918653799502091
-      }
-    }
-    Overrides {
-      Name: "cs:Active_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Deactive_Time"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 3451545131457060349
-      }
-    }
-    Overrides {
-      Name: "cs:Impact_Effect"
-      AssetReference {
-        Id: 10190295064405951269
-      }
-    }
-    Overrides {
-      Name: "cs:Amount"
-      Float: 50
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 16124357284882789389
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10588926804005198247
-    }
-  }
-  InstanceHistory {
-    SelfId: 14533536394924630783
-    SubobjectId: 15705337203579287153
-    InstanceId: 10133192130718723744
-    TemplateId: 16249070746938859883
-  }
-}
-Objects {
-  Id: 7196763592420727724
-  Name: "Dragonhead_collision"
-  Transform {
-    Location {
-      X: 10.7392883
-      Y: 17.0147629
-      Z: 81.5161438
-    }
-    Rotation {
-      Yaw: -89.9999847
-      Roll: 8.94353676
-    }
-    Scale {
-      X: 2.34635878
-      Y: 3.09879279
-      Z: 2.310853
-    }
-  }
-  ParentId: 16124357284882789389
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
   }
 }
 Objects {
