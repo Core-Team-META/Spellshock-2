@@ -129,19 +129,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13201759682801862308
-  Name: "SS2_BE_ARENA_PROGRESSION"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "e6e84d6a3888426abee2fe91ac07ef32"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 12913628546500597405
   Name: "Premium 1"
   PlatformAssetType: 24
@@ -202,19 +189,6 @@ Assets {
       Key: "ed3f26e02a3f4bbaa2b8953812753225"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 11542869115790566308
-  Name: "SS2_BE_ARENA_CURRENCY"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "c311f5f902d6413295505a45e8e1d041"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -376,6 +350,19 @@ Assets {
   }
 }
 Assets {
+  Id: 6513722607140703668
+  Name: "currency"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "1a5ecc2c810f46ce9dc07d513237dcef"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 6413593786046088799
   Name: "Self XP"
   PlatformAssetType: 24
@@ -506,12 +493,12 @@ Assets {
   }
 }
 Assets {
-  Id: 3414851193831569927
-  Name: "SS2_BE_ARENA_COSMETICS"
+  Id: 2533256867890313190
+  Name: "progression"
   PlatformAssetType: 23
   NetReferenceAsset {
     NetReference {
-      Key: "642b5edadf174f36b5f7cdef4eb3890b"
+      Key: "0e5b26c9143d45b8972d263bd6d59dc3"
       Type {
         Value: "mc:enetreferencetype:sharedpersistence"
       }
@@ -553,6 +540,19 @@ Assets {
       Key: "062eacbe6ab349fa819ec6135d8b456b"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 705608279125273885
+  Name: "cosmetic"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "11dde318f1264f638847f4c2230d9a05"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

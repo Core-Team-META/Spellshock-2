@@ -91,7 +91,7 @@ local function SetPlayerMountSpeed(player)
     local level = GetLevel(player, API.MOUNT_SPEED) or 1
     local mountSpeed = MOUNT_LEVELS[level]
     if mountSpeed then
-        mountSpeed:ApplyToPlayer(player)
+        --mountSpeed:ApplyToPlayer(player)
     end
 end
 

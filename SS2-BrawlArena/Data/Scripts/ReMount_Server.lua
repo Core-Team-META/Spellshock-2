@@ -1,5 +1,6 @@
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local GlobalBaseStats = require(script:GetCustomProperty("GlobalBaseStats"))
 
 -------------------------------------------------------------------------------
 -- Local Variables
@@ -45,7 +46,7 @@ function Tick(deltaTime)
             IsOutOfCombat() and
             not Equipment.owner.canMount
      then
-        Equipment.owner.canMount = true
+        Equipment.owner.canMount = GlobalBaseStats.currentStats.canMount
     end
 end
 

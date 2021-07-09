@@ -46,7 +46,24 @@ function wrapper.ApplyDamage(attackData)
 	if attackData.tags.id and attackData.tags.id == "StatusEffect" then
 		attackData.object.serverUserData.killedByStatusEffect = true
 	end
-	attackData.object:ApplyDamage(attackData.damage)
+
+	local function CalculateDamage()
+		if not attackData.object.serverUserData.playerStats then return attackData.damage end 
+
+		local basedamge = attackData.damage.amount
+		local totaldamage = basedamge
+		if attackData.source and  attackData.source.serverUserData.playerStats then 
+			totaldamage = totaldamage * (attackData.source.serverUserData.playerStats.damageMul or 1) 
+		end 
+		if attackData.object.serverUserData.playerStats  then  
+			totaldamage = (totaldamage * ((1 - attackData.object.serverUserData.playerStats.resistance) or 1))
+		end 
+		attackData.damage.amount = totaldamage 
+		return attackData.damage
+	end
+
+	attackData.object:ApplyDamage(CalculateDamage() )
+
 end
 
 -- AddImpulse()
