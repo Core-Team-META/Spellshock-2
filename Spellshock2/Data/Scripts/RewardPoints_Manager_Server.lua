@@ -1,5 +1,9 @@
-local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
-local RewardPoints = CONST.REWARD_POINTS
+local StorageKey = "RewardPoints"
+local RewardPoints = {
+    [1] = {name = "Play 3 Rounds", amount = 200, required = 3},
+    [2] = {name = "Win 1 Round", amount = 100, required = 1},
+    [3] = {name = "Capture 3 Points", amount = 100, required = 3}
+}
 
 --@params Object player
 --@params Int rewardId
@@ -12,18 +16,20 @@ function AddRewardPoints(player, rewardId)
     local shouldGrant = true
     local yearDay = os.date("*t").yday
 
-    if data[CONST.STORAGE.REWARD_POINTS] and data[CONST.STORAGE.REWARD_POINTS][rewardId] then
-        if yearDay == data[CONST.STORAGE.REWARD_POINTS][rewardId] then
+    if data[StorageKey] and data[StorageKey][rewardId] then
+        if yearDay == data[StorageKey][rewardId] then
             shouldGrant = false
         end
     end
 
+    -- and player.GrantRewardPoints
     if shouldGrant then
-        if RewardPoints[rewardId].name and RewardPoints[rewardId].amount and player.GrantRewardPoints then
-            data[CONST.STORAGE.REWARD_POINTS] = data[CONST.STORAGE.REWARD_POINTS] or {}
-            data[CONST.STORAGE.REWARD_POINTS][rewardId] = yearDay
-            player:GrantRewardPoints(CoreMath.Round(RewardPoints[rewardId].amount), RewardPoints[rewardId].name)
+        if RewardPoints[rewardId].name and RewardPoints[rewardId].amount then
+            data[StorageKey] = data[StorageKey] or {}
+            data[StorageKey][rewardId] = yearDay
+            --player:GrantRewardPoints(CoreMath.Round(RewardPoints[rewardId].amount), RewardPoints[rewardId].name)
             Storage.SetPlayerData(player, data)
+            player:SetPrivateNetworkedData("RewardPoints", RewardPoints[rewardId])
         end
     end
 end

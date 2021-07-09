@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Copyright 2019 Manticore Games, Inc. 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -27,6 +27,7 @@ local PANEL_DEFAULT = script:GetCustomProperty("PanelDefault"):WaitForObject()
 local PANEL_ELF = script:GetCustomProperty("PanelElf"):WaitForObject()
 local PANEL_ORC = script:GetCustomProperty("PanelOrc"):WaitForObject()
 local PANEL_LOOT = script:GetCustomProperty("PanelLoot"):WaitForObject()
+local PANEL_REWARD_POINTS = script:GetCustomProperty("SS2AlertPanelRewardPoints"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local PlayerClassLevelup = script:GetCustomProperty("PlayerClassLevelup"):WaitForObject()
 local LocalPlayerClassLevelup = script:GetCustomProperty("LocalPlayerClassLevelup"):WaitForObject()
@@ -134,6 +135,8 @@ function OnBannerMessageEvent(message, duration, type)
     elseif type == 3 then --
         tempTbl.visable = PANEL_LOOT
         tempTbl.sfx = LootSFX
+    elseif type == 4 then
+         tempTbl.visable = PANEL_REWARD_POINTS
     else --
         tempTbl.visable = PANEL_DEFAULT
     end
@@ -320,7 +323,9 @@ end
         PlayerClassLevelup.visibility = Visibility.FORCE_OFF
         LocalPlayerClassLevelup.visibility = Visibility.FORCE_OFF
     end
-end]] function Tick()
+end]] 
+
+function Tick()
     if #messageQueue > 0 then
         for i, message in ipairs(messageQueue) do
             for _, priorityMessage in ipairs(priorityQueue) do
