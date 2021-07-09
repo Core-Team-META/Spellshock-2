@@ -1,6 +1,2801 @@
 Name: "For Kate"
 RootId: 7229031333071442508
 Objects {
+  Id: 10717457525316061296
+  Name: "Acid_Spitter_Rotating"
+  Transform {
+    Location {
+      X: 2020.46045
+      Y: -3643.31787
+      Z: 2601.69165
+    }
+    Rotation {
+      Yaw: -179.999985
+      Roll: -179.999985
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7229031333071442508
+  ChildIds: 9381096146425819571
+  ChildIds: 15508437032515253726
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 15508437032515253726
+  Name: "Acid_Spitter_NEED ROTATION"
+  Transform {
+    Location {
+      Y: 0.831481934
+    }
+    Rotation {
+      Pitch: 25.4769859
+    }
+    Scale {
+      X: 0.859253824
+      Y: 0.859253824
+      Z: 0.859253824
+    }
+  }
+  ParentId: 10717457525316061296
+  ChildIds: 10040079035711410567
+  ChildIds: 12771585647638907381
+  ChildIds: 12679489809639963639
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12679489809639963639
+  Name: "Object Rotator Continuous"
+  Transform {
+    Scale {
+      X: 1.16380048
+      Y: 1.16380048
+      Z: 1.16380048
+    }
+  }
+  ParentId: 15508437032515253726
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 15508437032515253726
+      }
+    }
+    Overrides {
+      Name: "cs:RotateVelocity"
+      Rotator {
+        Pitch: -10
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:LocalSpace"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartDelayRange"
+      Vector2 {
+        Y: 1
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier:tooltip"
+      String: "Optional multiplier for very fast rotations."
+    }
+    Overrides {
+      Name: "cs:StartDelayRange:tooltip"
+      String: "Random delay range for the object to take action at the start of the game."
+    }
+    Overrides {
+      Name: "cs:LocalSpace:tooltip"
+      String: "Whether RotateTo is in local space"
+    }
+    Overrides {
+      Name: "cs:Object:tooltip"
+      String: "Object to transform"
+    }
+    Overrides {
+      Name: "cs:RotateVelocity:tooltip"
+      String: "Smoothly rotates the object over time by the given angular velocity."
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2331688389429807128
+    }
+  }
+  InstanceHistory {
+    SelfId: 12003291094558184955
+    SubobjectId: 5456438743692384211
+    InstanceId: 4807172764554062727
+    TemplateId: 4605677790148742513
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 12771585647638907381
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 73.5010605
+      Y: 2.63844109
+      Z: -0.000284130976
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15508437032515253726
+  ChildIds: 2654082900543653586
+  ChildIds: 5873830917785364595
+  ChildIds: 5859876817725841581
+  ChildIds: 4265281550137769439
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 4265281550137769439
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 47.8990517
+      Y: -95.2171936
+      Z: 112.235107
+    }
+    Rotation {
+      Pitch: -50.4456367
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 12771585647638907381
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 2
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 8564234532836736840
+    SubobjectId: 3733590859218868562
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5859876817725841581
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 99.1032486
+      Y: 100.493645
+      Z: 14.0654697
+    }
+    Rotation {
+      Pitch: -72.7069626
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 12771585647638907381
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 0.560533583
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.32219958
+    }
+    Overrides {
+      Name: "bp:Velocity Max"
+      Float: 5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9438044402681096921
+    SubobjectId: 14407173079523691715
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5873830917785364595
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.500679
+      Y: 225.541107
+      Z: 0.000116538096
+    }
+    Rotation {
+      Pitch: 6.83018879e-05
+      Yaw: 179.999954
+      Roll: 89.9999313
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 12771585647638907381
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 2654082900543653586
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.5010605
+      Y: -230.817566
+      Z: -1.7758186e-05
+    }
+    Rotation {
+      Pitch: 44.9999313
+      Yaw: 179.999924
+      Roll: -89.999939
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 12771585647638907381
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 10462761496224679339
+    SubobjectId: 15292279100285412273
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 10040079035711410567
+  Name: "TeamDamager"
+  Transform {
+    Location {
+      X: 555.818054
+      Y: 3.29442763
+      Z: 244.65126
+    }
+    Rotation {
+      Pitch: 25.8292408
+      Roll: 28.592659
+    }
+    Scale {
+      X: 9.72336674
+      Y: 2.58296585
+      Z: 0.975442946
+    }
+  }
+  ParentId: 15508437032515253726
+  ChildIds: 15407315260662165976
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DamagePerSecond"
+      Int: 20
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 15503121208559977253
+    SubobjectId: 7724387321884702281
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 15407315260662165976
+  Name: "Team_Damage_Volume"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10040079035711410567
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 10040079035711410567
+      }
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15949524715981449915
+    }
+  }
+  InstanceHistory {
+    SelfId: 6426650026698131136
+    SubobjectId: 16511502351201596332
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+  }
+}
+Objects {
+  Id: 9381096146425819571
+  Name: "collision acid trap"
+  Transform {
+    Location {
+      X: -0.000244140625
+      Y: -0.831481934
+      Z: 0.00048828125
+    }
+    Rotation {
+      Pitch: -25.4768906
+      Yaw: 179.999954
+      Roll: 89.9999
+    }
+    Scale {
+      X: 3.24982309
+      Y: 3.24982405
+      Z: 3.75973773
+    }
+  }
+  ParentId: 10717457525316061296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 3179510928316726592
+  Name: "Acid_Spitter_Rotating"
+  Transform {
+    Location {
+      X: 2020.46045
+      Y: -824.74762
+      Z: 2601.69165
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7229031333071442508
+  ChildIds: 10872188070475456326
+  ChildIds: 5770299298327460832
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5770299298327460832
+  Name: "Acid_Spitter_NEED ROTATION"
+  Transform {
+    Location {
+      Y: 0.831481934
+    }
+    Rotation {
+      Pitch: 25.4769859
+    }
+    Scale {
+      X: 0.859253824
+      Y: 0.859253824
+      Z: 0.859253824
+    }
+  }
+  ParentId: 3179510928316726592
+  ChildIds: 10589096067732877686
+  ChildIds: 7193432958470685127
+  ChildIds: 6616495374965250521
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6616495374965250521
+  Name: "Object Rotator Continuous"
+  Transform {
+    Scale {
+      X: 1.16380048
+      Y: 1.16380048
+      Z: 1.16380048
+    }
+  }
+  ParentId: 5770299298327460832
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 5770299298327460832
+      }
+    }
+    Overrides {
+      Name: "cs:RotateVelocity"
+      Rotator {
+        Pitch: -10
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:LocalSpace"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartDelayRange"
+      Vector2 {
+        Y: 1
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier:tooltip"
+      String: "Optional multiplier for very fast rotations."
+    }
+    Overrides {
+      Name: "cs:StartDelayRange:tooltip"
+      String: "Random delay range for the object to take action at the start of the game."
+    }
+    Overrides {
+      Name: "cs:LocalSpace:tooltip"
+      String: "Whether RotateTo is in local space"
+    }
+    Overrides {
+      Name: "cs:Object:tooltip"
+      String: "Object to transform"
+    }
+    Overrides {
+      Name: "cs:RotateVelocity:tooltip"
+      String: "Smoothly rotates the object over time by the given angular velocity."
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2331688389429807128
+    }
+  }
+  InstanceHistory {
+    SelfId: 12003291094558184955
+    SubobjectId: 5456438743692384211
+    InstanceId: 4807172764554062727
+    TemplateId: 4605677790148742513
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 7193432958470685127
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 73.5010605
+      Y: 2.63844109
+      Z: -0.000284130976
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5770299298327460832
+  ChildIds: 117472632153766666
+  ChildIds: 11326882947586982892
+  ChildIds: 5737552294592534566
+  ChildIds: 10088627107702843986
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 10088627107702843986
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 47.8990517
+      Y: -95.2171936
+      Z: 112.235107
+    }
+    Rotation {
+      Pitch: -50.4456367
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 7193432958470685127
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 2
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 8564234532836736840
+    SubobjectId: 3733590859218868562
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5737552294592534566
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 99.1032486
+      Y: 100.493645
+      Z: 14.0654697
+    }
+    Rotation {
+      Pitch: -72.7069626
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 7193432958470685127
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 0.560533583
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.32219958
+    }
+    Overrides {
+      Name: "bp:Velocity Max"
+      Float: 5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9438044402681096921
+    SubobjectId: 14407173079523691715
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11326882947586982892
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.500679
+      Y: 225.541107
+      Z: 0.000116538096
+    }
+    Rotation {
+      Pitch: 6.83018879e-05
+      Yaw: 179.999954
+      Roll: 89.9999313
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 7193432958470685127
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 117472632153766666
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.5010605
+      Y: -230.817566
+      Z: -1.7758186e-05
+    }
+    Rotation {
+      Pitch: 44.9999313
+      Yaw: 179.999924
+      Roll: -89.999939
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 7193432958470685127
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 10462761496224679339
+    SubobjectId: 15292279100285412273
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 10589096067732877686
+  Name: "TeamDamager"
+  Transform {
+    Location {
+      X: 555.818054
+      Y: 3.29442763
+      Z: 244.65126
+    }
+    Rotation {
+      Pitch: 25.8292408
+      Roll: 28.592659
+    }
+    Scale {
+      X: 9.72336674
+      Y: 2.58296585
+      Z: 0.975442946
+    }
+  }
+  ParentId: 5770299298327460832
+  ChildIds: 3086221702674942866
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DamagePerSecond"
+      Int: 20
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 15503121208559977253
+    SubobjectId: 7724387321884702281
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 3086221702674942866
+  Name: "Team_Damage_Volume"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10589096067732877686
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 10589096067732877686
+      }
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15949524715981449915
+    }
+  }
+  InstanceHistory {
+    SelfId: 6426650026698131136
+    SubobjectId: 16511502351201596332
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+  }
+}
+Objects {
+  Id: 10872188070475456326
+  Name: "collision acid trap"
+  Transform {
+    Location {
+      X: -0.000244140625
+      Y: -0.831481934
+      Z: 0.00048828125
+    }
+    Rotation {
+      Pitch: -25.4768906
+      Yaw: 179.999954
+      Roll: 89.9999
+    }
+    Scale {
+      X: 3.24982309
+      Y: 3.24982405
+      Z: 3.75973773
+    }
+  }
+  ParentId: 3179510928316726592
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 11797918448288338826
+  Name: "Acid_Spitter_Rotating"
+  Transform {
+    Location {
+      X: -3559.90332
+      Y: -3643.32153
+      Z: 2601.69165
+    }
+    Rotation {
+      Pitch: 180
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7229031333071442508
+  ChildIds: 10649199245218680561
+  ChildIds: 16072142428228300625
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16072142428228300625
+  Name: "Acid_Spitter_NEED ROTATION"
+  Transform {
+    Location {
+      Y: 0.831481934
+    }
+    Rotation {
+      Pitch: 25.4769859
+    }
+    Scale {
+      X: 0.859253824
+      Y: 0.859253824
+      Z: 0.859253824
+    }
+  }
+  ParentId: 11797918448288338826
+  ChildIds: 10143522408173133245
+  ChildIds: 8698925229186241480
+  ChildIds: 12363230871498406120
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12363230871498406120
+  Name: "Object Rotator Continuous"
+  Transform {
+    Scale {
+      X: 1.16380048
+      Y: 1.16380048
+      Z: 1.16380048
+    }
+  }
+  ParentId: 16072142428228300625
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 16072142428228300625
+      }
+    }
+    Overrides {
+      Name: "cs:RotateVelocity"
+      Rotator {
+        Pitch: 10
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:LocalSpace"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartDelayRange"
+      Vector2 {
+        Y: 1
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier:tooltip"
+      String: "Optional multiplier for very fast rotations."
+    }
+    Overrides {
+      Name: "cs:StartDelayRange:tooltip"
+      String: "Random delay range for the object to take action at the start of the game."
+    }
+    Overrides {
+      Name: "cs:LocalSpace:tooltip"
+      String: "Whether RotateTo is in local space"
+    }
+    Overrides {
+      Name: "cs:Object:tooltip"
+      String: "Object to transform"
+    }
+    Overrides {
+      Name: "cs:RotateVelocity:tooltip"
+      String: "Smoothly rotates the object over time by the given angular velocity."
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2331688389429807128
+    }
+  }
+  InstanceHistory {
+    SelfId: 12003291094558184955
+    SubobjectId: 5456438743692384211
+    InstanceId: 4807172764554062727
+    TemplateId: 4605677790148742513
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 8698925229186241480
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 73.5010605
+      Y: 2.63844109
+      Z: -0.000284130976
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16072142428228300625
+  ChildIds: 9792787362906867029
+  ChildIds: 4466077403230181571
+  ChildIds: 14283176746559351288
+  ChildIds: 10507656286235803195
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 10507656286235803195
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 47.8990517
+      Y: -95.2171936
+      Z: 112.235107
+    }
+    Rotation {
+      Pitch: -50.4456367
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 8698925229186241480
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 2
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 8564234532836736840
+    SubobjectId: 3733590859218868562
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14283176746559351288
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 99.1032486
+      Y: 100.493645
+      Z: 14.0654697
+    }
+    Rotation {
+      Pitch: -72.7069626
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 8698925229186241480
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 0.560533583
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.32219958
+    }
+    Overrides {
+      Name: "bp:Velocity Max"
+      Float: 5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9438044402681096921
+    SubobjectId: 14407173079523691715
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4466077403230181571
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.500679
+      Y: 225.541107
+      Z: 0.000116538096
+    }
+    Rotation {
+      Pitch: 6.83018879e-05
+      Yaw: 179.999954
+      Roll: 89.9999313
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 8698925229186241480
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 9792787362906867029
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.5010605
+      Y: -230.817566
+      Z: -1.7758186e-05
+    }
+    Rotation {
+      Pitch: 44.9999313
+      Yaw: 179.999924
+      Roll: -89.999939
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 8698925229186241480
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 10462761496224679339
+    SubobjectId: 15292279100285412273
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 10143522408173133245
+  Name: "TeamDamager"
+  Transform {
+    Location {
+      X: 555.818054
+      Y: 3.29442763
+      Z: 244.65126
+    }
+    Rotation {
+      Pitch: 25.8292408
+      Roll: 28.592659
+    }
+    Scale {
+      X: 9.72336674
+      Y: 2.58296585
+      Z: 0.975442946
+    }
+  }
+  ParentId: 16072142428228300625
+  ChildIds: 6961889505679028277
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DamagePerSecond"
+      Int: 20
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 15503121208559977253
+    SubobjectId: 7724387321884702281
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 6961889505679028277
+  Name: "Team_Damage_Volume"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10143522408173133245
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 10143522408173133245
+      }
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15949524715981449915
+    }
+  }
+  InstanceHistory {
+    SelfId: 6426650026698131136
+    SubobjectId: 16511502351201596332
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+  }
+}
+Objects {
+  Id: 10649199245218680561
+  Name: "collision acid trap"
+  Transform {
+    Location {
+      X: -0.000244140625
+      Y: -0.831481934
+      Z: 0.00048828125
+    }
+    Rotation {
+      Pitch: -25.4768906
+      Yaw: 179.999954
+      Roll: 89.9999
+    }
+    Scale {
+      X: 3.24982309
+      Y: 3.24982405
+      Z: 3.75973773
+    }
+  }
+  ParentId: 11797918448288338826
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 3987814525059974344
+  Name: "Acid_Spitter_Rotating"
+  Transform {
+    Location {
+      X: -3559.90332
+      Y: -824.751282
+      Z: 2601.69165
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7229031333071442508
+  ChildIds: 18372359063133700099
+  ChildIds: 5706180465008934839
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5706180465008934839
+  Name: "Acid_Spitter_NEED ROTATION"
+  Transform {
+    Location {
+      Y: 0.831481934
+    }
+    Rotation {
+      Pitch: 25.4769859
+    }
+    Scale {
+      X: 0.859253824
+      Y: 0.859253824
+      Z: 0.859253824
+    }
+  }
+  ParentId: 3987814525059974344
+  ChildIds: 15503121208559977253
+  ChildIds: 2005136049689126046
+  ChildIds: 12003291094558184955
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12003291094558184955
+  Name: "Object Rotator Continuous"
+  Transform {
+    Scale {
+      X: 1.16380048
+      Y: 1.16380048
+      Z: 1.16380048
+    }
+  }
+  ParentId: 5706180465008934839
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 5706180465008934839
+      }
+    }
+    Overrides {
+      Name: "cs:RotateVelocity"
+      Rotator {
+        Pitch: 10
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:LocalSpace"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartDelayRange"
+      Vector2 {
+        Y: 1
+      }
+    }
+    Overrides {
+      Name: "cs:RotationMultiplier:tooltip"
+      String: "Optional multiplier for very fast rotations."
+    }
+    Overrides {
+      Name: "cs:StartDelayRange:tooltip"
+      String: "Random delay range for the object to take action at the start of the game."
+    }
+    Overrides {
+      Name: "cs:LocalSpace:tooltip"
+      String: "Whether RotateTo is in local space"
+    }
+    Overrides {
+      Name: "cs:Object:tooltip"
+      String: "Object to transform"
+    }
+    Overrides {
+      Name: "cs:RotateVelocity:tooltip"
+      String: "Smoothly rotates the object over time by the given angular velocity."
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2331688389429807128
+    }
+  }
+  InstanceHistory {
+    SelfId: 12003291094558184955
+    SubobjectId: 5456438743692384211
+    InstanceId: 4807172764554062727
+    TemplateId: 4605677790148742513
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 2005136049689126046
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 73.5010605
+      Y: 2.63844109
+      Z: -0.000284130976
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5706180465008934839
+  ChildIds: 10462761496224679339
+  ChildIds: 14637177746434632580
+  ChildIds: 9438044402681096921
+  ChildIds: 8564234532836736840
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 8564234532836736840
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 47.8990517
+      Y: -95.2171936
+      Z: 112.235107
+    }
+    Rotation {
+      Pitch: -50.4456367
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 2005136049689126046
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 2
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 8564234532836736840
+    SubobjectId: 3733590859218868562
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9438044402681096921
+  Name: "Water Jet VFX"
+  Transform {
+    Location {
+      X: 99.1032486
+      Y: 100.493645
+      Z: 14.0654697
+    }
+    Rotation {
+      Pitch: -72.7069626
+    }
+    Scale {
+      X: 3.23465323
+      Y: 3.23465323
+      Z: 3.23465323
+    }
+  }
+  ParentId: 2005136049689126046
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.15639998
+        G: 0.68
+        B: 0.267361552
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 0.560533583
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1.58348489
+    }
+    Overrides {
+      Name: "bp:Angle Min"
+      Float: 22.7889709
+    }
+    Overrides {
+      Name: "bp:Angle Max"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Velocity Min"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.32219958
+    }
+    Overrides {
+      Name: "bp:Velocity Max"
+      Float: 5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16585282183739788606
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  InstanceHistory {
+    SelfId: 9438044402681096921
+    SubobjectId: 14407173079523691715
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14637177746434632580
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.500679
+      Y: 225.541107
+      Z: 0.000116538096
+    }
+    Rotation {
+      Pitch: 6.83018879e-05
+      Yaw: 179.999954
+      Roll: 89.9999313
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 2005136049689126046
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 10462761496224679339
+  Name: "Urban Pipe Cap 02"
+  Transform {
+    Location {
+      X: -73.5010605
+      Y: -230.817566
+      Z: -1.7758186e-05
+    }
+    Rotation {
+      Pitch: 44.9999313
+      Yaw: 179.999924
+      Roll: -89.999939
+    }
+    Scale {
+      X: 11.4094572
+      Y: 11.4094572
+      Z: 11.4094572
+    }
+  }
+  ParentId: 2005136049689126046
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18031180683407583988
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 10462761496224679339
+    SubobjectId: 15292279100285412273
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 15503121208559977253
+  Name: "TeamDamager"
+  Transform {
+    Location {
+      X: 555.818054
+      Y: 3.29442763
+      Z: 244.65126
+    }
+    Rotation {
+      Pitch: 25.8292408
+      Roll: 28.592659
+    }
+    Scale {
+      X: 9.72336674
+      Y: 2.58296585
+      Z: 0.975442946
+    }
+  }
+  ParentId: 5706180465008934839
+  ChildIds: 6426650026698131136
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DamagePerSecond"
+      Int: 20
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 15503121208559977253
+    SubobjectId: 7724387321884702281
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 6426650026698131136
+  Name: "Team_Damage_Volume"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15503121208559977253
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 15503121208559977253
+      }
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15949524715981449915
+    }
+  }
+  InstanceHistory {
+    SelfId: 6426650026698131136
+    SubobjectId: 16511502351201596332
+    InstanceId: 6808656952782270414
+    TemplateId: 13263840505660947950
+  }
+}
+Objects {
+  Id: 18372359063133700099
+  Name: "collision acid trap"
+  Transform {
+    Location {
+      X: -0.000244140625
+      Y: -0.831481934
+      Z: 0.00048828125
+    }
+    Rotation {
+      Pitch: -25.4768906
+      Yaw: 179.999954
+      Roll: 89.9999
+    }
+    Scale {
+      X: 3.24982309
+      Y: 3.24982405
+      Z: 3.75973773
+    }
+  }
+  ParentId: 3987814525059974344
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail2:color"
+      Color {
+        G: 0.97
+        B: 0.17986761
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:color"
+      Color {
+        R: 0.71875
+        G: 0.104246
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 14637177746434632580
+    SubobjectId: 10244448283346996638
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
   Id: 6425381072422173976
   Name: "TeamDamager"
   Transform {
@@ -543,6 +3338,7 @@ Objects {
   ChildIds: 3373720661368991663
   ChildIds: 16008621027521275021
   ChildIds: 2492670650719845803
+  ChildIds: 1516098830669021010
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -557,6 +3353,512 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 1516098830669021010
+  Name: "Trap_Flood"
+  Transform {
+    Location {
+      X: -856.644653
+      Y: -2411.42969
+      Z: 2.84130859
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5230287842309158673
+  ChildIds: 15354525876030367366
+  ChildIds: 14051360101214758743
+  ChildIds: 13979612681506343634
+  ChildIds: 8293790735398359017
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17876911858117836105
+    SubobjectId: 16740550787422529991
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 8293790735398359017
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1516098830669021010
+  ChildIds: 13088321033434505241
+  ChildIds: 16525646356846056229
+  ChildIds: 5643239370102745189
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 629948573773010316
+    SubobjectId: 1800287852305662210
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 5643239370102745189
+  Name: "Trap_Spikes_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8293790735398359017
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 14051360101214758743
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1516098830669021010
+      }
+    }
+    Overrides {
+      Name: "cs:Trap"
+      ObjectReference {
+        SelfId: 15354525876030367366
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4185338573117725157
+    }
+  }
+  InstanceHistory {
+    SelfId: 12702617122900713631
+    SubobjectId: 11532922978793354257
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 16525646356846056229
+  Name: "Traps_Spikes_Movement"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8293790735398359017
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Movement_Group"
+      ObjectReference {
+        SelfId: 13088321033434505241
+      }
+    }
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1516098830669021010
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2819240841298932326
+    }
+  }
+  InstanceHistory {
+    SelfId: 101182175827760793
+    SubobjectId: 1234714207135515159
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 13088321033434505241
+  Name: "Spikes"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8293790735398359017
+  ChildIds: 7720066844763338034
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17392049198355569615
+    SubobjectId: 16220019970723647297
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 7720066844763338034
+  Name: "DISASTER MODE_The floor is acid"
+  Transform {
+    Location {
+      X: -48.5494385
+      Y: -51.5175781
+      Z: 82.7561
+    }
+    Rotation {
+      Roll: -179.999985
+    }
+    Scale {
+      X: 356.140778
+      Y: 348.113739
+      Z: -0.552725434
+    }
+  }
+  ParentId: 13088321033434505241
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.25
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3741945996274268861
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+  InstanceHistory {
+    SelfId: 7720066844763338034
+    SubobjectId: 3326201966607766312
+    InstanceId: 5386065573627700468
+    TemplateId: 17504744315465721577
+  }
+}
+Objects {
+  Id: 13979612681506343634
+  Name: "Switch_PressurePlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1516098830669021010
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1588993302858132563
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Switch_PressurePlate"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "cs:Trap"
+          ObjectReference {
+            SelfId: 15354525876030367366
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3175600130149665580
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3700353392715534511
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.06047821
+            Y: 2.59672761
+            Z: 0.645208418
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -335.26709
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5663777047047607862
+    }
+  }
+}
+Objects {
+  Id: 14051360101214758743
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: -70.6999512
+    }
+    Rotation {
+    }
+    Scale {
+      X: 90.5122299
+      Y: 105.645149
+      Z: 3.12151623
+    }
+  }
+  ParentId: 1516098830669021010
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+  InstanceHistory {
+    SelfId: 1139888192983532079
+    SubobjectId: 2275545850997528225
+    InstanceId: 10133192130718723744
+    TemplateId: 16249070746938859883
+  }
+}
+Objects {
+  Id: 15354525876030367366
+  Name: "Trap_Spitter"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1516098830669021010
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1516098830669021010
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 14051360101214758743
+      }
+    }
+    Overrides {
+      Name: "cs:Active_Time"
+      Float: 10
+    }
+    Overrides {
+      Name: "cs:Deactive_Time"
+      Float: 60
+    }
+    Overrides {
+      Name: "cs:Amount"
+      Float: 20
+    }
+    Overrides {
+      Name: "cs:Deactivate_SFX"
+      AssetReference {
+        Id: 9104058262701497748
+      }
+    }
+    Overrides {
+      Name: "cs:Activate_SFX"
+      AssetReference {
+        Id: 18025086710152060269
+      }
+    }
+    Overrides {
+      Name: "cs:Impact_SFX"
+      AssetReference {
+        Id: 9294335876939309820
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 683761725017635015
+    }
   }
 }
 Objects {

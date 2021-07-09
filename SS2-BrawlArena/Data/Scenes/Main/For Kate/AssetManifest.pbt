@@ -1,4 +1,13 @@
 Assets {
+  Id: 18031180683407583988
+  Name: "Urban Pipe Cap 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_pipes_acc_cap_002_ref"
+  }
+}
+Assets {
   Id: 18007932134064521969
   Name: "Metal Basic Steel"
   PlatformAssetType: 2
@@ -14,6 +23,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_003"
+  }
+}
+Assets {
+  Id: 16585282183739788606
+  Name: "Water Jet VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_water_jet"
   }
 }
 Assets {
@@ -68,6 +86,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_hq_test_001"
+  }
+}
+Assets {
+  Id: 8933537604162373856
+  Name: "Plane 1m - One Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_1m_001"
   }
 }
 Assets {

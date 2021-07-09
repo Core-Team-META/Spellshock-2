@@ -71,15 +71,6 @@ Assets {
   }
 }
 Assets {
-  Id: 18031180683407583988
-  Name: "Urban Pipe Cap 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_prop_urb_pipes_acc_cap_002_ref"
-  }
-}
-Assets {
   Id: 18007932134064521969
   Name: "Metal Basic Steel"
   PlatformAssetType: 2
@@ -311,15 +302,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_torii_crossbeam_001_ref"
-  }
-}
-Assets {
-  Id: 16585282183739788606
-  Name: "Water Jet VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_water_jet"
   }
 }
 Assets {
