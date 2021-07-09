@@ -16,6 +16,14 @@ Assets {
           SelfId: 8552166520367088189
         }
       }
+      Overrides {
+        Name: "cs:UpSpeed"
+        Float: 0.1
+      }
+      Overrides {
+        Name: "cs:DownSpeed"
+        Float: 0.1
+      }
     }
   }
   SerializationVersion: 91
