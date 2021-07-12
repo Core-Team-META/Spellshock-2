@@ -51,11 +51,11 @@ Assets {
       }
       Overrides {
         Name: "emissive top"
-        Float: 1.1597358
+        Float: 0.639539421
       }
       Overrides {
         Name: "emissive bottom"
-        Float: 1.49063158
+        Float: 0.988964677
       }
       Overrides {
         Name: "thickness"
@@ -67,7 +67,7 @@ Assets {
       }
       Overrides {
         Name: "bubbles brightness"
-        Float: 0.455301791
+        Float: 0
       }
       Overrides {
         Name: "metallic"

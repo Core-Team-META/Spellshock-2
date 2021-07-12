@@ -29,7 +29,7 @@ Assets {
       }
       Overrides {
         Name: "bubbles brightness"
-        Float: 0.20712997
+        Float: 0
       }
       Overrides {
         Name: "color bottom"
@@ -42,11 +42,11 @@ Assets {
       }
       Overrides {
         Name: "emissive top"
-        Float: 0
+        Float: 0.523062944
       }
       Overrides {
         Name: "emissive bottom"
-        Float: 2.52468085
+        Float: 2.01394248
       }
       Overrides {
         Name: "internal cracks brightness"

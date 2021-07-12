@@ -341,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16320741599048844093
+  Name: "Corner - Smoothed - 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_corner_smooth_001_ref"
+  }
+}
+Assets {
   Id: 16285172041817233770
   Name: "Advanced Color Grading Post Process"
   PlatformAssetType: 6
@@ -356,6 +365,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_urb_pipes_acc_valve_003_ref"
+  }
+}
+Assets {
+  Id: 16076924560798306934
+  Name: "Urban Damaged Concrete Panel 01 - 8x2m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dmg_concrete_panel_001_8x2m_ref"
   }
 }
 Assets {
@@ -1004,6 +1022,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_urb_dest_concrete_pillar_bottom_002_ref"
+  }
+}
+Assets {
+  Id: 12239571452334311883
+  Name: "Metal Corrugated 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_mil_metal_corrugated_metal_001_uv_ref"
   }
 }
 Assets {
@@ -1853,6 +1880,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7147607578013694397
+  Name: "Sphere - Half Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hemisphere_002"
+  }
+}
+Assets {
   Id: 7143710901708887767
   Name: "Stucco Wall"
   PlatformAssetType: 2
@@ -1934,6 +1970,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6433548446612999816
+  Name: "Decal Soil Cracks Big 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_soil_cracks_001"
+  }
+}
+Assets {
   Id: 6431976723384230552
   Name: "Japanese Temple Roof Spire 01 - Base"
   PlatformAssetType: 1
@@ -1949,6 +1994,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_roof_001_co_ref"
+  }
+}
+Assets {
+  Id: 6293838519925911015
+  Name: "Horn"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_horn_001"
   }
 }
 Assets {

@@ -20,11 +20,11 @@ Assets {
       }
       Overrides {
         Name: "emissive top"
-        Float: 2.54252672
+        Float: 0.3
       }
       Overrides {
         Name: "emissive bottom"
-        Float: 0.314132243
+        Float: 0.2
       }
       Overrides {
         Name: "internal cracks brightness"
@@ -36,15 +36,15 @@ Assets {
       }
       Overrides {
         Name: "bubbles brightness"
-        Float: 0.359945714
+        Float: 0
       }
       Overrides {
         Name: "metallic"
-        Float: 0.954184234
+        Float: 0.3
       }
       Overrides {
         Name: "roughness"
-        Float: 0.0522150435
+        Float: 0
       }
       Overrides {
         Name: "specular"
@@ -75,14 +75,14 @@ Assets {
         Name: "color bottom"
         Color {
           R: 0.279999971
-          G: 1
-          B: 0.899867535
+          G: 0.399999857
+          B: 1
           A: 1
         }
       }
       Overrides {
         Name: "scale"
-        Float: 8.0562458
+        Float: 10
       }
     }
     Assets {
