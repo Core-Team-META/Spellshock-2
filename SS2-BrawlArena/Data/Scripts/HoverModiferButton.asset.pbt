@@ -10,6 +10,11 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Button"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:Info_Panel"
         AssetReference {
           Id: 17227732480376628598

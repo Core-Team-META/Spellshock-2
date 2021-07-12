@@ -28,13 +28,12 @@ local Networkswitch = {
 
 function NewtorkingUpdate(_, element)
     if Networkswitch[element] then
-        Networkswitch[element](Networking:GetCustomProperty(element))
-        UpdateDataReader()
+        Networkswitch[element](Networking:GetCustomProperty(element)) 
     end
 end
- 
+
 for key, value in pairs(Networkswitch) do
-    Networkswitch[key](Networking:GetCustomProperty(key))
+    Networkswitch[key](Networking:GetCustomProperty(key)) 
 end
 UpdateDataReader()
 

@@ -5,6 +5,10 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:MapName"
+        String: ""
+      }
+      Overrides {
         Name: "cs:IsEnabled"
         Bool: false
       }
@@ -18,8 +22,10 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:MapName"
-        String: ""
+        Name: "cs:GameManager_DataReader"
+        AssetReference {
+          Id: 11557698293725642091
+        }
       }
       Overrides {
         Name: "cs:ActiveChart:isrep"

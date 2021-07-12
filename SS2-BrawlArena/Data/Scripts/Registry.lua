@@ -1,4 +1,6 @@
 local Root = script:GetCustomProperty("Root"):WaitForObject()
+local GameManager_DataReader = require(script:GetCustomProperty("GameManager_DataReader"))
+local MapName = script:GetCustomProperty("MapName")
 
 local Registered = {}
 local function write()
@@ -32,3 +34,15 @@ for _, child in pairs(Root:GetChildren()) do
     table.insert(Registered,false)
 end
 write() 
+
+function UpdateEnabled(data)
+    if not data.map then return end 
+    local Enabled = data.map.name == MapName
+    for _, child in pairs(Root:GetChildren()) do
+        if child.serverUserData.TrapAPI then 
+            child.serverUserData.TrapAPI.Enable(Enabled)
+        end
+    end
+end
+UpdateEnabled(GameManager_DataReader:GetData())
+GameManager_DataReader.updateDataEvent:Connect(UpdateEnabled)

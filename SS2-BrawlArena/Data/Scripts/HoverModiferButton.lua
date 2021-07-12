@@ -1,7 +1,7 @@
 local Root = script:GetCustomProperty("Root"):WaitForObject()
 local Container = script:FindAncestorByType("UIContainer")
 local Info_Panel = script:GetCustomProperty("Info_Panel")
-
+local Button = script:GetCustomProperty("Button"):WaitForObject()
 local Spawn
 
 
@@ -9,7 +9,6 @@ function DespawnSpawn()
     if Object.IsValid(Spawn) then 
         Spawn:Destroy()
         Spawn = nil
-        
     end
 end
 
@@ -37,5 +36,5 @@ function Tick()
     end
 end
 
-Root.hoveredEvent:Connect(Hover)
-Root.unhoveredEvent:Connect(UnHover)
+Button.hoveredEvent:Connect(Hover)
+Button.unhoveredEvent:Connect(UnHover)

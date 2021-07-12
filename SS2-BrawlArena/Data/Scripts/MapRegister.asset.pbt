@@ -28,6 +28,11 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:Map_NavMesh"
+        ObjectReference {
+        }
+      }
     }
   }
   SerializationVersion: 91

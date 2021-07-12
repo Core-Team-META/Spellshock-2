@@ -74,6 +74,10 @@ function Deactivate()
     TrapAPI.activateEvent:_Fire(Root,false)
 end
 
+function TrapAPI.Enable(bool)
+    IsEnabled = bool
+end
+
 ChangeEnabled()
 GameManager_DataReader.updateDataEvent:Connect(ChangeEnabled) 
 

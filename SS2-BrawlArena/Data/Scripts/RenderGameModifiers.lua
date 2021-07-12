@@ -26,7 +26,7 @@ end
 
 function UpdateEffect()
     DetroySpawns()
-    local effects = GameManager_DataReader:GetEffects()
+    local effects = GameManager_DataReader:GetEffects() 
     if effects then 
     for key, Effect in pairs(effects) do
         SpawnPanel(Effect)
@@ -36,4 +36,5 @@ end
 
 
 GameManager_DataReader.updateDataEvent:Connect(UpdateEffect)
+Task.Wait()
 UpdateEffect()

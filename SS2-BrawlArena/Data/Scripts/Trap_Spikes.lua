@@ -1,4 +1,3 @@
-
 local IsEnabled = true
 local Active = script:GetCustomProperty("Active")
 local Amount = script:GetCustomProperty("Amount")
@@ -71,6 +70,10 @@ function Deactivate()
 end
 
 Deactivate()
+
+function TrapAPI.Enable(bool)
+    IsEnabled = bool
+end
 
  
 ChangeEnabled()

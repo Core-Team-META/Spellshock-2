@@ -102,6 +102,10 @@ function Deactivate()
     end
 end
 
+function TrapAPI.Enable(bool)
+    IsEnabled = bool
+end
+
 Deactivate()
 
  

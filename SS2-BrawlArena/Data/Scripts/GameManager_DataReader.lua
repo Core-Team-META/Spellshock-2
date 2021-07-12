@@ -12,6 +12,7 @@ function Reader:GetEffects()
     if self.data.effects then
         return self.data.effects
     end
+    return nil
 end
 
 function Reader:GetMap()
