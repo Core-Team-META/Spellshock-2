@@ -101,6 +101,15 @@ Assets {
               Id: 18007932134064521969
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -351,6 +360,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 6.7477169
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -406,6 +424,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 18007932134064521969
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
             }
           }
         }
@@ -647,6 +674,15 @@ Assets {
               Id: 18007932134064521969
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -702,6 +738,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 18007932134064521969
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
             }
           }
         }
@@ -955,6 +1000,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 6.7477169
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1010,6 +1064,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 18007932134064521969
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
             }
           }
         }
@@ -1250,6 +1313,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 18007932134064521969
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
             }
           }
         }
@@ -1493,6 +1565,15 @@ Assets {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 18007932134064521969
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
             }
           }
         }
@@ -1849,6 +1930,15 @@ Assets {
               Id: 18007932134064521969
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.716256
+              G: 0.804902375
+              B: 0.864
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1910,7 +2000,7 @@ Assets {
         Light {
           Intensity: 20
           Color {
-            G: 0.132847577
+            G: 0.26549989
             B: 0.590000033
             A: 1
           }
@@ -1920,7 +2010,7 @@ Assets {
           Light {
             Temperature: 6500
             LocalLight {
-              AttenuationRadius: 1200
+              AttenuationRadius: 462.280487
               PointLight {
                 SourceRadius: 20
                 SoftSourceRadius: 20

@@ -24,7 +24,7 @@ Assets {
       }
       Overrides {
         Name: "emissive bottom"
-        Float: 0.2
+        Float: 0
       }
       Overrides {
         Name: "internal cracks brightness"
@@ -75,7 +75,7 @@ Assets {
         Name: "color bottom"
         Color {
           R: 0.279999971
-          G: 0.399999857
+          G: 0.555999875
           B: 1
           A: 1
         }
