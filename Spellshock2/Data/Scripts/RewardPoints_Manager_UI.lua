@@ -1,15 +1,14 @@
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local ICON = script:GetCustomProperty("Icon")
+local Objectives = script:GetCustomProperty("Objectives"):WaitForObject()
+local RewardsPanelMini = script:GetCustomProperty("RewardsPanelMini"):WaitForObject()
+local RewardsPanel = script:GetCustomProperty("RewardsPanel"):WaitForObject()
 
 local RewardPoints = {
     [1] = {name = "Play 2 Rounds", amount = 200, required = 2},
     [2] = {name = "Win 1 Round", amount = 100, required = 1},
     [3] = {name = "Capture 3 Points", amount = 100, required = 3}
 }
-
-local Objectives = script:GetCustomProperty("Objectives"):WaitForObject()
-local RewardsPanelMini = script:GetCustomProperty("RewardsPanelMini"):WaitForObject()
-local RewardsPanel = script:GetCustomProperty("RewardsPanel"):WaitForObject()
 
 local function UpdateUI()
     local data = LOCAL_PLAYER:GetPrivateNetworkedData("RewardPointClient")
@@ -37,7 +36,9 @@ end
 local function SendData(player, key)
     local data = player:GetPrivateNetworkedData(key)
     data.icon = ICON
-    Events.Broadcast("RewardPoints", data)
+    local dataTbl = player:GetPrivateNetworkedData(key)
+    local message = "(" .. tostring(dataTbl.amount) .. ") Reward Points Granted"
+    Events.Broadcast("BannerMessage", message, 5, 4)
 end
 
 function OnDataChanged(player, key)
@@ -50,10 +51,10 @@ function OnDataChanged(player, key)
 end
 
 function OnBindingPressed(player, keybind)
-    if keybind == "ability_extra_44" and RewardsPanelMini:IsVisibleInHierarchy() then
+    if keybind == "ability_extra_26" and RewardsPanelMini:IsVisibleInHierarchy() then
         RewardsPanelMini.visibility = Visibility.FORCE_OFF
         RewardsPanel.visibility = Visibility.FORCE_ON
-    elseif keybind == "ability_extra_44" then
+    elseif keybind == "ability_extra_26" then
         RewardsPanelMini.visibility = Visibility.FORCE_ON
         RewardsPanel.visibility = Visibility.FORCE_OFF
     end

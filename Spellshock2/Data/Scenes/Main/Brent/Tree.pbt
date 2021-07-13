@@ -1,8 +1,8 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
-  Id: 8036481235152800246
-  Name: "Reward Points "
+  Id: 959615130709640471
+  Name: "RewardPoints"
   Transform {
     Location {
     }
@@ -29,7 +29,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Reward Points"
+    FilePartitionName: "RewardPoints"
   }
 }
 Objects {

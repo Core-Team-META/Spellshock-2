@@ -146,6 +146,8 @@ Objects {
           HighDistance: 13000
         }
       }
+      PlayerInteractDistance: 500
+      PlayerInteractAngleDeg: 50
     }
   }
 }

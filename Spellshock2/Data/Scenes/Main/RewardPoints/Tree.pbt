@@ -1,7 +1,7 @@
-Name: "Reward Points"
-RootId: 8036481235152800246
+Name: "RewardPoints"
+RootId: 959615130709640471
 Objects {
-  Id: 10870773757221711233
+  Id: 8094837237058190297
   Name: "ClientContext"
   Transform {
     Location {
@@ -14,9 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8036481235152800246
-  ChildIds: 2128776616398804337
-  ChildIds: 4502561980755718672
+  ParentId: 959615130709640471
+  ChildIds: 1717442115325723776
+  ChildIds: 8835535621715138359
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -33,7 +33,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4502561980755718672
+  Id: 8835535621715138359
   Name: "UI Container"
   Transform {
     Location {
@@ -46,9 +46,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10870773757221711233
-  ChildIds: 4116980639988425537
-  ChildIds: 12417563381124245968
+  ParentId: 8094837237058190297
+  ChildIds: 6617004882535561646
+  ChildIds: 300036864869407769
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -88,7 +88,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12417563381124245968
+  Id: 300036864869407769
   Name: "RewardsPanel-Mini"
   Transform {
     Location {
@@ -101,14 +101,14 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4502561980755718672
-  ChildIds: 18084813446833714526
-  ChildIds: 15639020576338623784
+  ParentId: 8835535621715138359
+  ChildIds: 16441753023623424534
+  ChildIds: 1571474161662771515
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -119,7 +119,7 @@ Objects {
   Control {
     Width: 266
     Height: 50
-    UIY: -77.2005386
+    UIY: -107.621239
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -143,7 +143,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15639020576338623784
+  Id: 1571474161662771515
   Name: "TOP BAR"
   Transform {
     Location {
@@ -156,9 +156,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12417563381124245968
-  ChildIds: 10466411848425844063
-  ChildIds: 13698529781941478229
+  ParentId: 300036864869407769
+  ChildIds: 4111399797902151970
+  ChildIds: 7499163263921159387
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -198,7 +198,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13698529781941478229
+  Id: 7499163263921159387
   Name: "Title"
   Transform {
     Location {
@@ -211,7 +211,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15639020576338623784
+  ParentId: 1571474161662771515
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -236,7 +236,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "[N] View RP Objectives"
+      Label: "[U] View RP Objectives"
       Color {
         R: 1
         G: 1
@@ -278,7 +278,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10466411848425844063
+  Id: 4111399797902151970
   Name: "RewardPoints Icon"
   Transform {
     Location {
@@ -291,7 +291,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15639020576338623784
+  ParentId: 1571474161662771515
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -331,7 +331,7 @@ Objects {
       }
       ShadowOffset {
       }
-      10: 1
+      ScreenshotIndex: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -348,7 +348,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18084813446833714526
+  Id: 16441753023623424534
   Name: "BACKGROUND"
   Transform {
     Location {
@@ -361,7 +361,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12417563381124245968
+  ParentId: 300036864869407769
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -397,7 +397,7 @@ Objects {
       }
       ShadowOffset {
       }
-      10: 1
+      ScreenshotIndex: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -414,7 +414,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4116980639988425537
+  Id: 6617004882535561646
   Name: "RewardsPanel"
   Transform {
     Location {
@@ -427,10 +427,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4502561980755718672
-  ChildIds: 4568670675623656119
-  ChildIds: 4496192422522937816
-  ChildIds: 16790658053734251460
+  ParentId: 8835535621715138359
+  ChildIds: 16366710847043318214
+  ChildIds: 17422114410808159228
+  ChildIds: 9563148007833960456
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -446,6 +446,7 @@ Objects {
   Control {
     Width: 406
     Height: 200
+    UIY: -30.7425308
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -469,7 +470,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16790658053734251460
+  Id: 9563148007833960456
   Name: "Objectives"
   Transform {
     Location {
@@ -482,10 +483,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4116980639988425537
-  ChildIds: 7212245852473216927
-  ChildIds: 12368274763563175006
-  ChildIds: 17619905047101223572
+  ParentId: 6617004882535561646
+  ChildIds: 9726755070098987086
+  ChildIds: 754515070630099211
+  ChildIds: 17075907405154622937
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -526,7 +527,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17619905047101223572
+  Id: 17075907405154622937
   Name: "Objective3"
   Transform {
     Location {
@@ -539,13 +540,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16790658053734251460
-  ChildIds: 1177761044564878706
+  ParentId: 9563148007833960456
+  ChildIds: 14982734469327688512
   UnregisteredParameters {
     Overrides {
       Name: "cs:UITextBox"
       ObjectReference {
-        SelfId: 1177761044564878706
+        SelfId: 14982734469327688512
       }
     }
   }
@@ -589,7 +590,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1177761044564878706
+  Id: 14982734469327688512
   Name: "UI Text Box"
   Transform {
     Location {
@@ -602,7 +603,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17619905047101223572
+  ParentId: 17075907405154622937
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -669,7 +670,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12368274763563175006
+  Id: 754515070630099211
   Name: "Objective2"
   Transform {
     Location {
@@ -682,13 +683,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16790658053734251460
-  ChildIds: 162374215734275021
+  ParentId: 9563148007833960456
+  ChildIds: 10585381513144979626
   UnregisteredParameters {
     Overrides {
       Name: "cs:UITextBox"
       ObjectReference {
-        SelfId: 162374215734275021
+        SelfId: 10585381513144979626
       }
     }
   }
@@ -732,7 +733,7 @@ Objects {
   }
 }
 Objects {
-  Id: 162374215734275021
+  Id: 10585381513144979626
   Name: "UI Text Box"
   Transform {
     Location {
@@ -745,7 +746,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12368274763563175006
+  ParentId: 754515070630099211
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -812,7 +813,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7212245852473216927
+  Id: 9726755070098987086
   Name: "Objective1"
   Transform {
     Location {
@@ -825,13 +826,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16790658053734251460
-  ChildIds: 4466024535835397787
+  ParentId: 9563148007833960456
+  ChildIds: 7874034032227374662
   UnregisteredParameters {
     Overrides {
       Name: "cs:UITextBox"
       ObjectReference {
-        SelfId: 4466024535835397787
+        SelfId: 7874034032227374662
       }
     }
   }
@@ -875,7 +876,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4466024535835397787
+  Id: 7874034032227374662
   Name: "UI Text Box"
   Transform {
     Location {
@@ -888,7 +889,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7212245852473216927
+  ParentId: 9726755070098987086
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -955,7 +956,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4496192422522937816
+  Id: 17422114410808159228
   Name: "TOP BAR"
   Transform {
     Location {
@@ -968,9 +969,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4116980639988425537
-  ChildIds: 4118741246361242480
-  ChildIds: 11495468898191406375
+  ParentId: 6617004882535561646
+  ChildIds: 13546132085875123771
+  ChildIds: 10889396570271771436
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1010,7 +1011,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11495468898191406375
+  Id: 10889396570271771436
   Name: "Title"
   Transform {
     Location {
@@ -1023,7 +1024,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4496192422522937816
+  ParentId: 17422114410808159228
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1090,7 +1091,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4118741246361242480
+  Id: 13546132085875123771
   Name: "RewardPoints Icon"
   Transform {
     Location {
@@ -1103,7 +1104,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4496192422522937816
+  ParentId: 17422114410808159228
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1143,7 +1144,7 @@ Objects {
       }
       ShadowOffset {
       }
-      10: 1
+      ScreenshotIndex: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -1160,7 +1161,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4568670675623656119
+  Id: 16366710847043318214
   Name: "BACKGROUND"
   Transform {
     Location {
@@ -1173,7 +1174,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4116980639988425537
+  ParentId: 6617004882535561646
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1209,7 +1210,7 @@ Objects {
       }
       ShadowOffset {
       }
-      10: 1
+      ScreenshotIndex: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -1226,7 +1227,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2128776616398804337
+  Id: 1717442115325723776
   Name: "RewardPoints_Manager_Client"
   Transform {
     Location {
@@ -1239,7 +1240,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10870773757221711233
+  ParentId: 8094837237058190297
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1248,26 +1249,21 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:UITextBox"
-      ObjectReference {
-      }
-    }
-    Overrides {
       Name: "cs:Objectives"
       ObjectReference {
-        SelfId: 16790658053734251460
+        SelfId: 9563148007833960456
       }
     }
     Overrides {
       Name: "cs:RewardsPanelMini"
       ObjectReference {
-        SelfId: 12417563381124245968
+        SelfId: 300036864869407769
       }
     }
     Overrides {
       Name: "cs:RewardsPanel"
       ObjectReference {
-        SelfId: 4116980639988425537
+        SelfId: 6617004882535561646
       }
     }
   }
@@ -1290,7 +1286,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5630294638434545487
+  Id: 2112428787534771276
   Name: "ServerContext"
   Transform {
     Location {
@@ -1303,8 +1299,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8036481235152800246
-  ChildIds: 17642489946001633777
+  ParentId: 959615130709640471
+  ChildIds: 10306279200654875878
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1322,7 +1318,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17642489946001633777
+  Id: 10306279200654875878
   Name: "RewardPoints_Manager_Server"
   Transform {
     Location {
@@ -1335,9 +1331,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5630294638434545487
-  UnregisteredParameters {
-  }
+  ParentId: 2112428787534771276
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
