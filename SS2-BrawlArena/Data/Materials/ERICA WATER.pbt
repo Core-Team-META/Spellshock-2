@@ -9,23 +9,13 @@ Assets {
       Overrides {
         Name: "deep color"
         Color {
-          R: 1
-          G: 1
-          B: 1
+          G: 0.145960152
+          B: 0.25333333
           A: 1
         }
       }
       Overrides {
         Name: "foam color"
-        Color {
-          R: 1
-          G: 1
-          B: 1
-          A: 1
-        }
-      }
-      Overrides {
-        Name: "shallow color"
         Color {
           R: 1
           G: 1
@@ -47,7 +37,7 @@ Assets {
       }
       Overrides {
         Name: "opacity"
-        Float: 0.423614115
+        Float: 0.677669942
       }
       Overrides {
         Name: "opacity distance"
@@ -80,6 +70,19 @@ Assets {
       Overrides {
         Name: "reflection brightness"
         Float: 0.879904449
+      }
+      Overrides {
+        Name: "emissive"
+        Float: 0
+      }
+      Overrides {
+        Name: "shallow color"
+        Color {
+          R: 0.480000019
+          G: 0.869138956
+          B: 1
+          A: 1
+        }
       }
     }
     Assets {

@@ -341,15 +341,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16320741599048844093
-  Name: "Corner - Smoothed - 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_corner_smooth_001_ref"
-  }
-}
-Assets {
   Id: 16285172041817233770
   Name: "Advanced Color Grading Post Process"
   PlatformAssetType: 6
@@ -1877,15 +1868,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tooth_002"
-  }
-}
-Assets {
-  Id: 7147607578013694397
-  Name: "Sphere - Half Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hemisphere_002"
   }
 }
 Assets {

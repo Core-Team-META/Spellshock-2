@@ -60,7 +60,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6292723328988203524
+              Id: 11013362381804920182
             }
           }
         }
@@ -82,7 +82,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
-          DisableReceiveDecals: true
           InteractWithTriggers: true
           StaticMesh {
             Physics {
