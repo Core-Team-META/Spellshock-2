@@ -2,7 +2,7 @@ Assets {
   Id: 10168087902402353964
   Name: "Snow_wood Composite Mask Blend_3"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 11258093824579777513
   Name: "painted wood"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 2203533764476795359
     ParameterOverrides {

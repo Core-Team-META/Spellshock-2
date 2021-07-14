@@ -2,7 +2,7 @@ Assets {
   Id: 11013362381804920182
   Name: "Arena Ice Opaque Ground"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 12760964430457573432
     ParameterOverrides {

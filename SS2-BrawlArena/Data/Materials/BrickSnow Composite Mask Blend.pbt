@@ -2,7 +2,7 @@ Assets {
   Id: 1842406357799741628
   Name: "BrickSnow Composite Mask Blend"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

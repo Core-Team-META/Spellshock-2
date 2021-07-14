@@ -2235,7 +2235,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: -4
+    UIY: -16.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2307,7 +2307,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -3
+    UIY: -15.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2376,7 +2376,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -3
+    UIY: -15.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2445,7 +2445,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -5
+    UIY: -17.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2514,7 +2514,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -5
+    UIY: -17.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5224,6 +5224,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -12.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5295,7 +5296,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5364,7 +5365,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5433,7 +5434,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5502,7 +5503,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8212,6 +8213,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -12.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8283,7 +8285,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8352,7 +8354,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8421,7 +8423,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8490,7 +8492,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -11200,6 +11202,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -12.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -11271,7 +11274,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -11340,7 +11343,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -11409,7 +11412,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -11478,7 +11481,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14188,6 +14191,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -12.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14259,7 +14263,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14328,7 +14332,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14397,7 +14401,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14466,7 +14470,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17175,6 +17179,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -12.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17246,7 +17251,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17315,7 +17320,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17384,7 +17389,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17453,7 +17458,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -20162,6 +20167,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -12.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -20233,7 +20239,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -20302,7 +20308,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -20371,7 +20377,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -20440,7 +20446,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -23151,6 +23157,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: -12.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -23222,7 +23229,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -23291,7 +23298,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: 1
+    UIY: -11.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -23360,7 +23367,7 @@ Objects {
   }
   Control {
     UIX: 1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -23429,7 +23436,7 @@ Objects {
   }
   Control {
     UIX: -1
-    UIY: -1
+    UIY: -13.7017822
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"

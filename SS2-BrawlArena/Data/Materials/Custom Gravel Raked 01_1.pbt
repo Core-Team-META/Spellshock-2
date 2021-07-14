@@ -2,7 +2,7 @@ Assets {
   Id: 3059689455105882357
   Name: "Custom Gravel Raked 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 8772778959370683656
     ParameterOverrides {

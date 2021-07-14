@@ -16,7 +16,7 @@
 local NavMeshGenerator = require(script:GetCustomProperty("NavMeshGenerator"))
 local NAVMESH_FOLDER = script:GetCustomProperty("NAVMESH_FOLDER"):WaitForObject()
 
-local NavMesh = {}
+NavMesh = {}
 _G.NavMesh = NavMesh
 
 NavMesh.rectangles = NavMeshGenerator.GetRectangles(NAVMESH_FOLDER)
@@ -346,3 +346,5 @@ function NavMesh.FindPath(startPoint, endPoint)
 		warn("no path was found between "..tostring(startPoint).." and "..tostring(endPoint))
 	end
 end
+
+script.serverUserData.navMesh = NavMesh

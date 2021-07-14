@@ -2,7 +2,7 @@ Assets {
   Id: 5079583662896106804
   Name: "Toxic Stone Foundation 01"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 14695026740610331948
     ParameterOverrides {

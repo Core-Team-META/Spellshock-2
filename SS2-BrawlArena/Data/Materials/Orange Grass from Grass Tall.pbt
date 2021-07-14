@@ -2,7 +2,7 @@ Assets {
   Id: 2051011659055543602
   Name: "Orange Grass from Grass Tall"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 10665935622760157020
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 8343490005594389231
   Name: "Custom Flower from Tree Sakura Hero 01"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 960043015537733341
     ParameterOverrides {

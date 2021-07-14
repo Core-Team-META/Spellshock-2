@@ -2,7 +2,7 @@ Assets {
   Id: 11904271009902172271
   Name: "Maya Leaves from Flower Wild Lily 01"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 7786923248984333054
     ParameterOverrides {

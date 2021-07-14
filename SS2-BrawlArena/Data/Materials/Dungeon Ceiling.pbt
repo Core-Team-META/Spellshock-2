@@ -2,7 +2,7 @@ Assets {
   Id: 229700575872047980
   Name: "Dungeon Ceiling"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 9564538927409393589
     ParameterOverrides {

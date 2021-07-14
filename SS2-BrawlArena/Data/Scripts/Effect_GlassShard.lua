@@ -1,10 +1,15 @@
 local GlobalBaseStats = require(script:GetCustomProperty("GlobalBaseStats"))
+local GameManager_DataReader = require(script:GetCustomProperty("GameManager_DataReader"))
+
 local Spawn = script:GetCustomProperty("Spawn")
 local Spawns = {}
 function Activate()
     Spawns = {}
-    while not _G.NavMesh do Task.Wait() end
-    local navmesh = _G.NavMesh
+    local map =  GameManager_DataReader:GetMap()
+    if not map then return end 
+    local navmesh = map.navMesh
+    if not navmesh then return end
+    
     local rectangles = navmesh.rectangles 
     
     local function GeneratePoint()
@@ -14,7 +19,7 @@ function Activate()
         table.insert(Spawns,World.SpawnAsset(Spawn,{position = point, rotation = randomRotation}))
     end
     
-    for i = 1, 15 do
+    for i = 1,  5 do
         GeneratePoint()
     end
 end

@@ -35,15 +35,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15761460511220986007
-  Name: "Emissive Glow Transparent"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_emissive_001"
-  }
-}
-Assets {
   Id: 15683169359350375517
   Name: "Capsule"
   PlatformAssetType: 1

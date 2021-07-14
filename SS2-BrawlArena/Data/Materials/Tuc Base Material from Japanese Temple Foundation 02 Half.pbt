@@ -2,7 +2,7 @@ Assets {
   Id: 12598766417117084467
   Name: "Tuc Base Material from Japanese Temple Foundation 02 Half"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 13381634335429392173
     ParameterOverrides {

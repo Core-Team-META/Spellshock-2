@@ -16,9 +16,9 @@ Assets {
       }
       Overrides {
         Name: "cs:Delay"
-        Float: 0
+        Float: 0.6
       }
     }
   }
-  SerializationVersion: 91
+  SerializationVersion: 92
 }

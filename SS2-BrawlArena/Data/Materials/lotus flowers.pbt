@@ -2,7 +2,7 @@ Assets {
   Id: 1722643814321117062
   Name: "lotus flowers"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 5654055410009725706
     ParameterOverrides {

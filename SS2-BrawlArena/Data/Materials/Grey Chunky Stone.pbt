@@ -2,7 +2,7 @@ Assets {
   Id: 2918254435129611360
   Name: "Grey Chunky Stone"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 3021659511268152745
     ParameterOverrides {

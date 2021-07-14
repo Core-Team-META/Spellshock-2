@@ -2,7 +2,7 @@ Assets {
   Id: 1002280726180043930
   Name: "Jungle Leaves from Tree Oak 01"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 15911317047966805396
     ParameterOverrides {

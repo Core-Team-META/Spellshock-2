@@ -2,7 +2,7 @@ Assets {
   Id: 571020486784087161
   Name: "Custom Wall - Outer from Fantasy Castle Accessory Tower 01 - 12m"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 934355235590210955
     ParameterOverrides {

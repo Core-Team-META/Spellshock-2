@@ -55,7 +55,7 @@ function OnPlayerShowCase()
     end
 
     -- Set TimerPanel info
-    WaitText.text = "REWARDS IN"
+    WaitText.text = "NEW ROUND IN"
     --WaitIcon:SetImage()
 
     -- Show tabs
@@ -83,12 +83,30 @@ function OnRewards()
 
     --WaitIcon:SetImage()
 end
+function OnLoading()
+    Events.Broadcast("HideVictoryPanels")
 
+    -- Hide tabs
+    OnTabClicked(victoryButton)
+    VictoryTabs.visibility = Visibility.FORCE_OFF
+
+    -- Set TimerPanel info
+    WaitText.text = "SELECTION LOCKED IN"
+
+    Task.Wait(1)
+    -- Show rewards title
+    VictoryHeader.visibility = Visibility.INHERIT
+    RewardsTitle.visibility = Visibility.INHERIT
+
+    --WaitIcon:SetImage()
+end
 function OnRewardsEnd()
     RewardsTitle.visibility = Visibility.FORCE_OFF
 end
 
-function OnLobby()
+function OnLobby() 
+    Events.Broadcast("HideVictoryPanels")
+    VictoryTabs.visibility = Visibility.FORCE_OFF
     VictoryHeader.visibility = Visibility.FORCE_OFF
 end
 
@@ -108,6 +126,8 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         OnPlayerShowCase()
     elseif newState == ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
         OnRewards()
+    elseif newState == ABGS.GAME_STATE_LOADING then
+        OnLoading()
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
         OnRewardsEnd()
     elseif newState == ABGS.GAME_STATE_LOBBY then

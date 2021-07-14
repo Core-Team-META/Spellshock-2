@@ -2,7 +2,7 @@ Assets {
   Id: 12427515273599474596
   Name: "back wall stones"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 15025871309956447741
     ParameterOverrides {

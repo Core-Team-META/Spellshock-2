@@ -1286,6 +1286,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7373923845242469710
+  Name: "Icon Settings"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Settings"
+  }
+}
+Assets {
   Id: 7309744140635875442
   Name: "Large Pot"
   PlatformAssetType: 1

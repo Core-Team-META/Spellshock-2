@@ -2,7 +2,7 @@ Assets {
   Id: 9276621160021538464
   Name: "Custom Leaves from Tree Sakura Hero 01"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 5654055410009725706
     ParameterOverrides {

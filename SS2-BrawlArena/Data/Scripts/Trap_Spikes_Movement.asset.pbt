@@ -18,13 +18,13 @@ Assets {
       }
       Overrides {
         Name: "cs:UpSpeed"
-        Float: 0.1
+        Float: 0.001
       }
       Overrides {
         Name: "cs:DownSpeed"
-        Float: 0.1
+        Float: 0.001
       }
     }
   }
-  SerializationVersion: 91
+  SerializationVersion: 92
 }

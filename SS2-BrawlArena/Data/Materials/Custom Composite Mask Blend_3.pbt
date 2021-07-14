@@ -2,7 +2,7 @@ Assets {
   Id: 4354267088460730309
   Name: "M_GoldenBricks_Composite Mask Blend_3"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

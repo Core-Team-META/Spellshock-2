@@ -2,7 +2,7 @@ Assets {
   Id: 3403431557829438534
   Name: "RoofSnow Composite Mask Blend_1"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

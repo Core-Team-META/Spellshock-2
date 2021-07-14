@@ -2,7 +2,7 @@ Assets {
   Id: 12125653654999238162
   Name: "ERICA WATER"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 6279993523772827179
     ParameterOverrides {

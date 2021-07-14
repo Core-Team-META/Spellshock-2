@@ -16,7 +16,13 @@ Assets {
           Id: 5295683451349387295
         }
       }
+      Overrides {
+        Name: "cs:GameManager_DataReader"
+        AssetReference {
+          Id: 11557698293725642091
+        }
+      }
     }
   }
-  SerializationVersion: 91
+  SerializationVersion: 92
 }

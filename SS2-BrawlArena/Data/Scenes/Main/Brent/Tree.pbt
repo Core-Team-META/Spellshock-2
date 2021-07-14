@@ -294,35 +294,6 @@ Objects {
   }
 }
 Objects {
-  Id: 17893953040524120313
-  Name: "Spawn Protect"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1157304452307746040
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Spawn Protect"
-  }
-}
-Objects {
   Id: 12757111310091907033
   Name: "Game Play Stats"
   Transform {

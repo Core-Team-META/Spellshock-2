@@ -2,7 +2,7 @@ Assets {
   Id: 14720224063326067646
   Name: "Jungle Terrain - Grass Cliffs"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 13407417223406409810
     ParameterOverrides {

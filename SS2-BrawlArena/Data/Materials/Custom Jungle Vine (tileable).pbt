@@ -2,7 +2,7 @@ Assets {
   Id: 16280738594150995021
   Name: "Custom Jungle Vine (tileable)"
   PlatformAssetType: 13
-  SerializationVersion: 91
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 1179351314570022897
     ParameterOverrides {
