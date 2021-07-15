@@ -38,7 +38,7 @@ Assets {
       }
       Overrides {
         Name: "internal cracks brightness"
-        Float: 6.29022074
+        Float: 5.75172186
       }
       Overrides {
         Name: "color bottom"
@@ -51,15 +51,15 @@ Assets {
       }
       Overrides {
         Name: "emissive top"
-        Float: 0.639539421
+        Float: 0
       }
       Overrides {
         Name: "emissive bottom"
-        Float: 0.988964677
+        Float: 0.3
       }
       Overrides {
         Name: "thickness"
-        Float: 1.12568581
+        Float: 0
       }
       Overrides {
         Name: "scale"
@@ -71,27 +71,27 @@ Assets {
       }
       Overrides {
         Name: "metallic"
-        Float: 0.587660074
-      }
-      Overrides {
-        Name: "roughness"
-        Float: 0
+        Float: 0.0440458357
       }
       Overrides {
         Name: "normal strength"
-        Float: 0.405667424
-      }
-      Overrides {
-        Name: "specular"
-        Float: 1
+        Float: 0.5
       }
       Overrides {
         Name: "internal cracks color"
         Color {
-          G: 0.115893848
-          B: 0.700000048
+          G: 0.165561914
+          B: 1
           A: 1
         }
+      }
+      Overrides {
+        Name: "roughness"
+        Float: 0.141884893
+      }
+      Overrides {
+        Name: "specular"
+        Float: 0.449379086
       }
     }
     Assets {

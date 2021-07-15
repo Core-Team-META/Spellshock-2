@@ -9,8 +9,8 @@ Assets {
       Overrides {
         Name: "deep color"
         Color {
-          G: 0.145960152
-          B: 0.25333333
+          G: 0.0678999871
+          B: 0.097
           A: 1
         }
       }
@@ -37,7 +37,7 @@ Assets {
       }
       Overrides {
         Name: "opacity"
-        Float: 0.677669942
+        Float: 0.901302099
       }
       Overrides {
         Name: "opacity distance"
@@ -78,9 +78,9 @@ Assets {
       Overrides {
         Name: "shallow color"
         Color {
-          R: 0.480000019
-          G: 0.869138956
-          B: 1
+          R: 0.16896002
+          G: 0.352000028
+          B: 0.342848033
           A: 1
         }
       }

@@ -8,7 +8,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "scale"
-        Float: 10
+        Float: 20
       }
       Overrides {
         Name: "color inside"

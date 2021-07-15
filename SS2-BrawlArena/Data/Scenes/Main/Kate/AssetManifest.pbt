@@ -26,15 +26,6 @@ Assets {
   }
 }
 Assets {
-  Id: 18243333251623460988
-  Name: "Candle 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_prop_fantasy_candle_003"
-  }
-}
-Assets {
   Id: 18200200076012147990
   Name: "Fantasy Castle Pillar 02 - Top"
   PlatformAssetType: 1
@@ -287,15 +278,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16701925266063006038
-  Name: "Craftsman Stairs 01 Pillar"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_sub_craftsman_stairs_001_pillar"
-  }
-}
-Assets {
   Id: 16615061049325523054
   Name: "Japanese Temple Torii Gate Crossbeam 01"
   PlatformAssetType: 1
@@ -431,15 +413,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15686909077460378362
-  Name: "Fantasy Castle Trim - Parapet 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_parapet_001"
-  }
-}
-Assets {
   Id: 15683169359350375517
   Name: "Capsule"
   PlatformAssetType: 1
@@ -500,15 +473,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_foundation_002_corner_ref"
-  }
-}
-Assets {
-  Id: 15240646233324917545
-  Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_sm"
   }
 }
 Assets {
@@ -581,15 +545,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_window_frame_001_ref"
-  }
-}
-Assets {
-  Id: 14800789141718969789
-  Name: "Column Topper 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_column_top_002"
   }
 }
 Assets {
@@ -692,15 +647,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14310375594674475352
-  Name: "Fantasy Castle Wall Foundation 01 - Pillar 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_found_001_pillar_01"
-  }
-}
-Assets {
   Id: 14293176668765266901
   Name: "Rock Pile 001"
   PlatformAssetType: 1
@@ -755,15 +701,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14031147348977058477
-  Name: "Bricks Wall Flat 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_wall_flat_001"
-  }
-}
-Assets {
   Id: 13950225922132296555
   Name: "Cylinder"
   PlatformAssetType: 1
@@ -806,15 +743,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_pillar_001_mid_01_ref"
-  }
-}
-Assets {
-  Id: 13689626934332135285
-  Name: "Fantasy Castle Wall 02 Half"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_half_002"
   }
 }
 Assets {
@@ -863,30 +791,12 @@ Assets {
   }
 }
 Assets {
-  Id: 13405450940038911275
-  Name: "Fantasy Castle Stairs Spiral 01 - Small 150cm"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_spiral_001_sm_150cm"
-  }
-}
-Assets {
   Id: 13385452079565467522
   Name: "Japanese Temple Wall 01 - Doorway 01 Half"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_wall_001_door_01_half_ref"
-  }
-}
-Assets {
-  Id: 13304908840312358092
-  Name: "Fantasy Castle Pillar 01 Top"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_pillar_001_top"
   }
 }
 Assets {
@@ -980,15 +890,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12455776894202311928
-  Name: "Fantasy Castle Wall 02 Half - Window 03"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_half_002_win_03"
-  }
-}
-Assets {
   Id: 12385794193739794509
   Name: "Decal Stains Round 01"
   PlatformAssetType: 14
@@ -1061,15 +962,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12134312456753117730
-  Name: "Fantasy Castle Wall 03 - Arch 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_003_arch_01"
-  }
-}
-Assets {
   Id: 12116815701817907526
   Name: "Fantasy Book Pile 02"
   PlatformAssetType: 1
@@ -1094,15 +986,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_002"
-  }
-}
-Assets {
-  Id: 12022302972670429875
-  Name: "Coral Spikes Big"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_coral_spike_big_01"
   }
 }
 Assets {
@@ -1439,15 +1322,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10025827227867342626
-  Name: "Urban Brick Debris 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_prop_urban_destruction_debris_brick_01_ref"
-  }
-}
-Assets {
   Id: 10004207146509026755
   Name: "Ivy 01"
   PlatformAssetType: 1
@@ -1574,39 +1448,12 @@ Assets {
   }
 }
 Assets {
-  Id: 9081085500199892623
-  Name: "Bricks Worn Stone 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_stone_worn_001"
-  }
-}
-Assets {
-  Id: 9005202394387316338
-  Name: "Craftsman Wall Interior 02 Corner"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_sub_craftsman_wall_int_002_corner"
-  }
-}
-Assets {
   Id: 8993869571187819051
   Name: "Stone Block Long"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fantasy_block_03"
-  }
-}
-Assets {
-  Id: 8983708969469221779
-  Name: "Fantasy Castle Wall 03"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_003"
   }
 }
 Assets {
@@ -1988,15 +1835,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6237721853954450664
-  Name: "Fantasy Castle Floor 01 - Curved 4m "
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_floor_curve_001"
-  }
-}
-Assets {
   Id: 6212730592139143061
   Name: "Japanese Temple Roof 01 - Eaves 01 Half"
   PlatformAssetType: 1
@@ -2204,15 +2042,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4565574025644870814
-  Name: "Fantasy Castle Trim - Battlement 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_battlement_001"
-  }
-}
-Assets {
   Id: 4542959667302136808
   Name: "Portcullis"
   PlatformAssetType: 1
@@ -2300,15 +2129,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_roof_002_ref"
-  }
-}
-Assets {
-  Id: 4193024863549911546
-  Name: "Column Base 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_column_bottom_002"
   }
 }
 Assets {
@@ -2510,15 +2330,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3198339828547995592
-  Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_spiral_wall_002_sm_ref"
-  }
-}
-Assets {
   Id: 3074283765671670909
   Name: "Japanese Temple Awning 01"
   PlatformAssetType: 1
@@ -2618,21 +2429,21 @@ Assets {
   }
 }
 Assets {
-  Id: 2723232960546970913
-  Name: "Wood Floor Dark"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_wood_floor_dark_001_uv"
-  }
-}
-Assets {
   Id: 2656599276388620395
   Name: "Decal Rubble Concrete 02"
   PlatformAssetType: 14
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_mil_rubble_concrete_002_ref"
+  }
+}
+Assets {
+  Id: 2625392818632861632
+  Name: "Urban Damaged Concrete Panel 01 - 4x4m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dmg_concrete_panel_001_4x4m_ref"
   }
 }
 Assets {
@@ -2651,15 +2462,6 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_guy_lower_scifi_002_ref"
-  }
-}
-Assets {
-  Id: 2546368164849416374
-  Name: "Fantasy Castle Wall 01 - Curved"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_curve_001"
   }
 }
 Assets {
@@ -2735,15 +2537,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1717792855373237741
-  Name: "Fantasy Castle Wall 02 - Curved"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_curve_002"
-  }
-}
-Assets {
   Id: 1687528788148422459
   Name: "Prism - 8-Sided"
   PlatformAssetType: 1
@@ -2789,39 +2582,12 @@ Assets {
   }
 }
 Assets {
-  Id: 1367565729547875542
-  Name: "Fantasy Castle Wall 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_001"
-  }
-}
-Assets {
   Id: 1314789330736675714
   Name: "Japanese Temple Railing Stringer 01 - Straight 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_railing_stringer_straight_001_ref"
-  }
-}
-Assets {
-  Id: 1283637584618690841
-  Name: "Fantasy Castle Wall 03 - Curve Top"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_curve_003_top_01"
-  }
-}
-Assets {
-  Id: 1197983536016875073
-  Name: "Rock Flat 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_005"
   }
 }
 Assets {
@@ -2849,33 +2615,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bush_generic_001"
-  }
-}
-Assets {
-  Id: 897429753597555270
-  Name: "Fantasy Castle Bannister 01 - Post"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_bannister_001_post"
-  }
-}
-Assets {
-  Id: 864127425101462573
-  Name: "Fantasy Castle Wall 02 - Curved Window 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_curve_002_win_01"
-  }
-}
-Assets {
-  Id: 780506516886625447
-  Name: "Small False Window"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_false_window_001"
   }
 }
 Assets {
@@ -2993,5 +2732,14 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_column_square_segment_001"
+  }
+}
+Assets {
+  Id: 35140778096668424
+  Name: "Craftsman Stairs 01 150cm"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_sub_craftsman_stairs_001_150cm"
   }
 }
