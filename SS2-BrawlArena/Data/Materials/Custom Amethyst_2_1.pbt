@@ -28,7 +28,7 @@ Assets {
       }
       Overrides {
         Name: "internal cracks brightness"
-        Float: 10
+        Float: 1.93133354
       }
       Overrides {
         Name: "thickness"
