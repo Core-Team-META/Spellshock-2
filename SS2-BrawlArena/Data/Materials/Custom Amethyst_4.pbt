@@ -42,11 +42,11 @@ Assets {
       }
       Overrides {
         Name: "emissive top"
-        Float: 0.523062944
+        Float: 0.942373216
       }
       Overrides {
         Name: "emissive bottom"
-        Float: 2.01394248
+        Float: 0
       }
       Overrides {
         Name: "internal cracks brightness"

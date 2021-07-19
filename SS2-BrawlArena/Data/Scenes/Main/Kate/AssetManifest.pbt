@@ -323,6 +323,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16320741599048844093
+  Name: "Corner - Smoothed - 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_corner_smooth_001_ref"
+  }
+}
+Assets {
   Id: 16285172041817233770
   Name: "Advanced Color Grading Post Process"
   PlatformAssetType: 6
@@ -1718,6 +1727,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7147607578013694397
+  Name: "Sphere - Half Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hemisphere_002"
+  }
+}
+Assets {
   Id: 7143710901708887767
   Name: "Stucco Wall"
   PlatformAssetType: 2
@@ -1760,6 +1778,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_003"
+  }
+}
+Assets {
+  Id: 6717054932271956401
+  Name: "Magic Glass"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_magic_glass"
   }
 }
 Assets {
@@ -2066,6 +2093,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_jpn_tem_pillar_002_base_01_ref"
+  }
+}
+Assets {
+  Id: 4469854780720062320
+  Name: "Ring - Beveled Thin - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ring_faceted_thin_lg_001_ref"
   }
 }
 Assets {
