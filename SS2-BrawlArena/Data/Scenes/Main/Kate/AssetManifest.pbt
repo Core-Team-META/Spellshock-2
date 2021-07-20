@@ -863,6 +863,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12811459392516577413
+  Name: "Grid Dual-Projected"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_grid_dual-projected_001"
+  }
+}
+Assets {
   Id: 12650985443469059164
   Name: "Bricks Large Foundation 01"
   PlatformAssetType: 2
