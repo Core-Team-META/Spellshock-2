@@ -49,6 +49,10 @@ Assets {
         Name: "metallic"
         Float: 0.4
       }
+      Overrides {
+        Name: "bubbles brightness"
+        Float: 0
+      }
     }
     Assets {
       Id: 12760964430457573432

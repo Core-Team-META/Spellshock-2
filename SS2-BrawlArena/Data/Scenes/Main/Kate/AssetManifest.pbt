@@ -1790,15 +1790,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6717054932271956401
-  Name: "Magic Glass"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxmi_magic_glass"
-  }
-}
-Assets {
   Id: 6693051322045641436
   Name: "Rope"
   PlatformAssetType: 2
@@ -1823,6 +1814,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_crate_reinforced_150cm_001"
+  }
+}
+Assets {
+  Id: 6603680508387870299
+  Name: "Underwater Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_water"
   }
 }
 Assets {
