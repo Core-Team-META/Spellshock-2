@@ -283,7 +283,7 @@ Assets {
         Name: "Bottle 03"
         Transform {
           Location {
-            X: -5.69726563
+            X: -5.69726562
             Y: -9.83984375
             Z: -57.2753906
           }
@@ -701,7 +701,7 @@ Assets {
         Name: "Bottle 03"
         Transform {
           Location {
-            X: 89.6601563
+            X: 89.6601562
             Y: -9.83984375
             Z: -53.4936523
           }
@@ -1369,5 +1369,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

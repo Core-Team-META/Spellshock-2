@@ -8857,7 +8857,7 @@ Assets {
             Z: 0.377744257
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: -89.9996948
             Roll: 72.6200409
           }
@@ -11556,7 +11556,7 @@ Assets {
             Z: 9.74514771
           }
           Rotation {
-            Pitch: -7.14257813
+            Pitch: -7.14257812
             Yaw: -162.070877
             Roll: 111.672195
           }
@@ -15442,7 +15442,7 @@ Assets {
             Z: 14.709897
           }
           Rotation {
-            Pitch: -5.75195313
+            Pitch: -5.75195312
             Yaw: -137.126343
             Roll: -108.943298
           }
@@ -17216,7 +17216,7 @@ Assets {
           Location {
             X: 0.84161377
             Y: 0.49407196
-            Z: -6.10351563e-05
+            Z: -6.10351562e-05
           }
           Rotation {
             Pitch: -7.16214943
@@ -26072,7 +26072,7 @@ Assets {
         Name: "Cube - Rounded"
         Transform {
           Location {
-            X: 61.2539063
+            X: 61.2539062
             Y: 37.4765625
             Z: 15.4599609
           }
@@ -26144,7 +26144,7 @@ Assets {
         Transform {
           Location {
             X: 47.875
-            Y: 58.0195313
+            Y: 58.0195312
             Z: 15.8095703
           }
           Rotation {
@@ -28675,7 +28675,7 @@ Assets {
           Rotation {
             Pitch: -0.000518798828
             Yaw: -89.9980469
-            Roll: -5.25976563
+            Roll: -5.25976562
           }
           Scale {
             X: 1.8368125
@@ -29349,7 +29349,7 @@ Assets {
           Rotation {
             Pitch: -0.000518798828
             Yaw: -89.9980774
-            Roll: -5.25976563
+            Roll: -5.25976562
           }
           Scale {
             X: 1.90908337
@@ -30629,5 +30629,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

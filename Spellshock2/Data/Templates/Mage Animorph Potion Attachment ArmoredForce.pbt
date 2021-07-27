@@ -4194,7 +4194,7 @@ Assets {
         Transform {
           Location {
             X: -24.7202759
-            Y: -19.3789063
+            Y: -19.3789062
             Z: 14.1269531
           }
           Rotation {
@@ -4949,7 +4949,7 @@ Assets {
         Transform {
           Location {
             X: -24.7202759
-            Y: -19.3789063
+            Y: -19.3789062
             Z: 14.1269531
           }
           Rotation {
@@ -8461,7 +8461,7 @@ Assets {
           Location {
             X: 429.984375
             Y: 44.984375
-            Z: -18.5820313
+            Z: -18.5820312
           }
           Rotation {
             Yaw: -90
@@ -8915,7 +8915,7 @@ Assets {
           Location {
             X: 429.875
             Y: 35.890625
-            Z: -18.5820313
+            Z: -18.5820312
           }
           Rotation {
             Yaw: -90
@@ -21654,5 +21654,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

@@ -283,7 +283,7 @@ Objects {
   Name: "Map Camera"
   Transform {
     Location {
-      X: -27076.4063
+      X: -27076.4062
       Y: 11593.4746
       Z: 36532.3086
     }
@@ -326,6 +326,7 @@ Objects {
     }
     MinPitch: -89
     MaxPitch: 89
+    UseAsAudioListener: true
   }
 }
 Objects {

@@ -158,7 +158,7 @@ Assets {
         Name: "GEO_head"
         Transform {
           Location {
-            Z: 21.5039063
+            Z: 21.5039062
           }
           Rotation {
             Yaw: 30
@@ -3363,5 +3363,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

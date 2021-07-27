@@ -205,7 +205,7 @@ Assets {
         Name: "Bottle 03"
         Transform {
           Location {
-            X: -18.3007813
+            X: -18.3007812
             Y: -279.630859
             Z: 210.720703
           }
@@ -401,7 +401,7 @@ Assets {
         Transform {
           Location {
             X: 12.7919922
-            Y: -2.82226563
+            Y: -2.82226562
             Z: 229.735352
           }
           Rotation {
@@ -617,5 +617,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 3438328496937940008
   Name: "Shop Gems"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 16476630519103366502
     ParameterOverrides {

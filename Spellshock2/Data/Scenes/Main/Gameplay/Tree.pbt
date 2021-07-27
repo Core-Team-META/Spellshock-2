@@ -6151,7 +6151,7 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 7.43164063
+      X: 7.43164062
       Y: 4.77685547
       Z: 136.294434
     }
@@ -6762,7 +6762,7 @@ Objects {
   Name: "Cylinder - Polished"
   Transform {
     Location {
-      X: 4.93164063
+      X: 4.93164062
       Y: 24.6484375
       Z: 1011.71899
     }
@@ -7631,7 +7631,7 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 931.632813
+      X: 931.632812
       Y: -1003.41406
       Z: 990.742432
     }
@@ -7682,7 +7682,7 @@ Objects {
   Transform {
     Location {
       X: -382.053711
-      Y: 589.351563
+      Y: 589.351562
       Z: 639.863525
     }
     Rotation {
@@ -7913,7 +7913,7 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -228.851563
+      X: -228.851562
       Y: 1082.88477
       Z: 1003.88525
     }
@@ -8722,7 +8722,7 @@ Objects {
   Name: "ClientContext"
   Transform {
     Location {
-      Z: -0.000122070313
+      Z: -0.000122070312
     }
     Rotation {
     }
@@ -10797,7 +10797,7 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 7.43164063
+      X: 7.43164062
       Y: 4.77685547
       Z: 136.294434
     }
@@ -11408,7 +11408,7 @@ Objects {
   Name: "Cylinder - Polished"
   Transform {
     Location {
-      X: 4.93164063
+      X: 4.93164062
       Y: 24.6484375
       Z: 1011.71899
     }
@@ -12243,7 +12243,7 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 931.632813
+      X: 931.632812
       Y: -1003.41406
       Z: 990.742432
     }
@@ -12294,7 +12294,7 @@ Objects {
   Transform {
     Location {
       X: -382.053711
-      Y: 589.351563
+      Y: 589.351562
       Z: 639.863525
     }
     Rotation {
@@ -12525,7 +12525,7 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -228.851563
+      X: -228.851562
       Y: 1082.88477
       Z: 1003.88525
     }
@@ -13271,7 +13271,7 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -4973.89063
+      X: -4973.89062
       Y: -4536.7749
       Z: 165.981567
     }
@@ -13397,7 +13397,7 @@ Objects {
   Name: "ClientContext"
   Transform {
     Location {
-      Z: -0.000122070313
+      Z: -0.000122070312
     }
     Rotation {
     }
@@ -15413,7 +15413,7 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 7.43164063
+      X: 7.43164062
       Y: 4.77685547
       Z: 136.294434
     }
@@ -16024,7 +16024,7 @@ Objects {
   Name: "Cylinder - Polished"
   Transform {
     Location {
-      X: 4.93164063
+      X: 4.93164062
       Y: 24.6484375
       Z: 1011.71899
     }
@@ -16860,7 +16860,7 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 931.632813
+      X: 931.632812
       Y: -1003.41406
       Z: 990.742432
     }
@@ -16911,7 +16911,7 @@ Objects {
   Transform {
     Location {
       X: -382.053711
-      Y: 589.351563
+      Y: 589.351562
       Z: 639.863525
     }
     Rotation {
@@ -17142,7 +17142,7 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -228.851563
+      X: -228.851562
       Y: 1082.88477
       Z: 1003.88525
     }
@@ -17628,7 +17628,7 @@ Objects {
   Name: "ClientContext"
   Transform {
     Location {
-      Z: -0.000122070313
+      Z: -0.000122070312
     }
     Rotation {
     }
@@ -19645,7 +19645,7 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 7.43164063
+      X: 7.43164062
       Y: 4.77685547
       Z: 136.294434
     }
@@ -20256,7 +20256,7 @@ Objects {
   Name: "Cylinder - Polished"
   Transform {
     Location {
-      X: 4.93164063
+      X: 4.93164062
       Y: 24.6484375
       Z: 1011.71899
     }
@@ -21093,7 +21093,7 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 931.632813
+      X: 931.632812
       Y: -1003.41406
       Z: 990.742432
     }
@@ -21144,7 +21144,7 @@ Objects {
   Transform {
     Location {
       X: -382.053711
-      Y: 589.351563
+      Y: 589.351562
       Z: 639.863525
     }
     Rotation {
@@ -21375,7 +21375,7 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -228.851563
+      X: -228.851562
       Y: 1082.88477
       Z: 1003.88525
     }
@@ -22246,7 +22246,7 @@ Objects {
   Name: "ClientContext"
   Transform {
     Location {
-      Z: -0.000122070313
+      Z: -0.000122070312
     }
     Rotation {
     }
@@ -25044,7 +25044,7 @@ Objects {
     Scale {
       X: 6.60675478
       Y: 6.60675335
-      Z: 7.57226563
+      Z: 7.57226562
     }
   }
   ParentId: 11972347679962644335
@@ -25272,7 +25272,7 @@ Objects {
     Scale {
       X: 6.60675478
       Y: 6.60675335
-      Z: 7.57226563
+      Z: 7.57226562
     }
   }
   ParentId: 11972347679962644335
@@ -29472,7 +29472,7 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 7.43164063
+      X: 7.43164062
       Y: 4.77685547
       Z: 136.294434
     }
@@ -30083,7 +30083,7 @@ Objects {
   Name: "Cylinder - Polished"
   Transform {
     Location {
-      X: 4.93164063
+      X: 4.93164062
       Y: 24.6484375
       Z: 1011.71899
     }
@@ -30951,7 +30951,7 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 931.632813
+      X: 931.632812
       Y: -1003.41406
       Z: 990.742432
     }
@@ -31002,7 +31002,7 @@ Objects {
   Transform {
     Location {
       X: -382.053711
-      Y: 589.351563
+      Y: 589.351562
       Z: 639.863525
     }
     Rotation {
@@ -31233,7 +31233,7 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -228.851563
+      X: -228.851562
       Y: 1082.88477
       Z: 1003.88525
     }
@@ -31567,7 +31567,7 @@ Objects {
   Transform {
     Location {
       X: 289.646484
-      Y: -1090.01563
+      Y: -1090.01562
       Z: 137.091064
     }
     Rotation {
@@ -32103,7 +32103,7 @@ Objects {
   Name: "ClientContext"
   Transform {
     Location {
-      Z: -0.000122070313
+      Z: -0.000122070312
     }
     Rotation {
     }
@@ -35543,6 +35543,7 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     DoesPositionOffsetSpring: true
+    UseAsAudioListener: true
   }
   InstanceHistory {
     SelfId: 17856428405439583264

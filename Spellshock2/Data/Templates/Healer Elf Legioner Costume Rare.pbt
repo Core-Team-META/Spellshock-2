@@ -1176,7 +1176,7 @@ Assets {
         Transform {
           Location {
             X: 10.6180115
-            Y: 4.61914063
+            Y: 4.61914062
             Z: 18.8303223
           }
           Rotation {
@@ -4429,7 +4429,7 @@ Assets {
         Name: "left_shoulder"
         Transform {
           Location {
-            X: -0.00219726563
+            X: -0.00219726562
             Y: -45.6956406
             Z: 34.7663879
           }
@@ -4516,7 +4516,7 @@ Assets {
         Transform {
           Location {
             X: 0.0731887817
-            Y: 18.1289063
+            Y: 18.1289062
             Z: 22.2800293
           }
           Rotation {
@@ -8665,5 +8665,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

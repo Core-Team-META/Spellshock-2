@@ -2,7 +2,7 @@ Assets {
   Id: 16893807489114963331
   Name: "Orc Mage Face Cyber Punk skin"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 58872637069711017
     ParameterOverrides {

@@ -1163,7 +1163,7 @@ Assets {
         Name: "Heart - Polished"
         Transform {
           Location {
-            X: -3.16601563
+            X: -3.16601562
             Y: -5.91796875
             Z: 36.083252
           }
@@ -1248,7 +1248,7 @@ Assets {
         Transform {
           Location {
             X: -3.171875
-            Y: 5.80664063
+            Y: 5.80664062
             Z: 35.9907227
           }
           Rotation {
@@ -2026,7 +2026,7 @@ Assets {
           Location {
             X: -5.44921875
             Y: -9.30078125
-            Z: 19.9101563
+            Z: 19.9101562
           }
           Rotation {
             Pitch: -18.3577652
@@ -2346,7 +2346,7 @@ Assets {
         Name: "Grass Tall"
         Transform {
           Location {
-            X: 0.372070313
+            X: 0.372070312
             Y: 9.5835495
             Z: -16.2140503
           }
@@ -7667,7 +7667,7 @@ Assets {
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
-            X: -0.418945313
+            X: -0.418945312
             Y: 15.227356
             Z: 13.8064957
           }
@@ -9136,7 +9136,7 @@ Assets {
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 61.2539063
+            X: 61.2539062
             Y: 37.4765625
             Z: 15.4599609
           }
@@ -9211,7 +9211,7 @@ Assets {
         Transform {
           Location {
             X: 47.875
-            Y: 58.0195313
+            Y: 58.0195312
             Z: 15.8095703
           }
           Rotation {
@@ -9617,7 +9617,7 @@ Assets {
         Transform {
           Location {
             X: 59.3457031
-            Y: -40.6757813
+            Y: -40.6757812
             Z: 15.8085938
           }
           Rotation {
@@ -11682,5 +11682,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

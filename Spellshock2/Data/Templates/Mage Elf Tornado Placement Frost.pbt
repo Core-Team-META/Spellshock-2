@@ -237,7 +237,7 @@ Assets {
         Name: "Tornado VFX_test"
         Transform {
           Location {
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: 853.129
           }
           Rotation {
@@ -530,7 +530,7 @@ Assets {
         Name: "Swirling Dust VFX"
         Transform {
           Location {
-            Z: -178.789063
+            Z: -178.789062
           }
           Rotation {
           }
@@ -924,5 +924,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

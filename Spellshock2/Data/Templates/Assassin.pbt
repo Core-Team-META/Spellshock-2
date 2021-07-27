@@ -1258,7 +1258,7 @@ Assets {
         Name: "HealthRegenServer"
         Transform {
           Location {
-            X: 6.96289063
+            X: 6.96289062
             Y: -159.097656
             Z: 4.1484375
           }
@@ -3771,5 +3771,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

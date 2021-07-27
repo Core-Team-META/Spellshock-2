@@ -97,7 +97,7 @@ Assets {
           AudioAsset {
             Id: 15526876363029501392
           }
-          Pitch: 132.070313
+          Pitch: 132.070312
           Volume: 1
           Falloff: -1
           Radius: -1
@@ -156,5 +156,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

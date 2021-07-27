@@ -163,7 +163,7 @@ Assets {
         Name: "Resurrection VFX"
         Transform {
           Location {
-            Z: 111.757813
+            Z: 111.757812
           }
           Rotation {
           }
@@ -1170,5 +1170,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

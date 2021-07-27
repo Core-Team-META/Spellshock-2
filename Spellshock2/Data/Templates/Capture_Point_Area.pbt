@@ -97,7 +97,7 @@ Assets {
         Name: "Decal Stains Round 01"
         Transform {
           Location {
-            X: -228.851563
+            X: -228.851562
             Y: 1082.88477
             Z: 1003.88525
           }
@@ -305,7 +305,7 @@ Assets {
         Transform {
           Location {
             X: -382.053711
-            Y: 589.351563
+            Y: 589.351562
             Z: 639.863525
           }
           Rotation {
@@ -356,7 +356,7 @@ Assets {
         Name: "Grass Tall"
         Transform {
           Location {
-            X: 931.632813
+            X: 931.632812
             Y: -1003.41406
             Z: 990.742432
           }
@@ -762,7 +762,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 7.43164063
+            X: 7.43164062
             Y: 4.77685547
             Z: 136.294434
           }
@@ -1071,7 +1071,7 @@ Assets {
         Name: "Cylinder - Polished"
         Transform {
           Location {
-            X: 4.93164063
+            X: 4.93164062
             Y: 24.6484375
             Z: 1011.71899
           }
@@ -2364,5 +2364,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

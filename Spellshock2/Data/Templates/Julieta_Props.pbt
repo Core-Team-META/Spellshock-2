@@ -6473,7 +6473,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -12.4882813
+            X: -12.4882812
             Y: -26.3671875
             Z: 4.72034454
           }
@@ -9338,7 +9338,7 @@ Assets {
         Name: "Rope"
         Transform {
           Location {
-            X: 0.274414063
+            X: 0.274414062
             Y: 0.354003906
           }
           Rotation {
@@ -9878,7 +9878,7 @@ Assets {
         Transform {
           Location {
             X: 0.207641602
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: 0.555877686
           }
           Rotation {
@@ -9938,7 +9938,7 @@ Assets {
         Transform {
           Location {
             X: 3.95837402
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
             Pitch: -81.5699
@@ -9997,7 +9997,7 @@ Assets {
         Transform {
           Location {
             X: -4.16577148
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: 0.146499634
           }
           Rotation {
@@ -11185,7 +11185,7 @@ Assets {
         Name: "Large Round Wood Beam 8m"
         Transform {
           Location {
-            X: -1.33789063
+            X: -1.33789062
             Y: -26.2197266
             Z: 0.00012588501
           }
@@ -12448,5 +12448,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

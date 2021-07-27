@@ -2,7 +2,7 @@ Assets {
   Id: 15330609608527731922
   Name: "OrcFire"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 2385379350514910265
     ParameterOverrides {

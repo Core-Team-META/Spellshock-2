@@ -181,7 +181,7 @@ Assets {
         Name: "Play Capture Animation"
         Transform {
           Location {
-            X: -40510.1563
+            X: -40510.1562
             Y: -4935.60547
             Z: -7200
           }
@@ -423,5 +423,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

@@ -3795,7 +3795,7 @@ Assets {
         Name: "left_shoulder"
         Transform {
           Location {
-            X: -6.05664063
+            X: -6.05664062
             Y: -23.6191406
             Z: 168.666016
           }
@@ -5397,7 +5397,7 @@ Assets {
           Location {
             X: -7.69140625
             Y: -39.4375
-            Z: 141.289063
+            Z: 141.289062
           }
           Rotation {
             Pitch: 18.4199886
@@ -6548,7 +6548,7 @@ Assets {
         Transform {
           Location {
             X: 2.83880615
-            Y: 1.84570313
+            Y: 1.84570312
             Z: 16.1826172
           }
           Rotation {
@@ -7826,7 +7826,7 @@ Assets {
         Transform {
           Location {
             X: 1.9375
-            Y: -52.7226563
+            Y: -52.7226562
             Z: 118.995117
           }
           Rotation {
@@ -8599,7 +8599,7 @@ Assets {
         Name: "right_shoulder"
         Transform {
           Location {
-            X: -6.05664063
+            X: -6.05664062
             Y: 23.6191406
             Z: 168.666016
           }
@@ -9683,7 +9683,7 @@ Assets {
         Name: "Grass Tall"
         Transform {
           Location {
-            X: -2.20507813
+            X: -2.20507812
             Y: -1.4101944
             Z: 5.10827637
           }
@@ -11404,7 +11404,7 @@ Assets {
           Location {
             X: -7.69140625
             Y: 41.7460938
-            Z: 141.289063
+            Z: 141.289062
           }
           Rotation {
             Pitch: 18.419981
@@ -11629,7 +11629,7 @@ Assets {
         Transform {
           Location {
             X: 1.9375
-            Y: 52.7226563
+            Y: 52.7226562
             Z: 118.995605
           }
           Rotation {
@@ -15454,5 +15454,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

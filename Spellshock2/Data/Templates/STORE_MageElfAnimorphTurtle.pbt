@@ -158,7 +158,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            Z: 34.7851563
+            Z: 34.7851562
           }
           Rotation {
             Yaw: -30
@@ -3060,7 +3060,7 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated Polished"
         Transform {
           Location {
-            X: -7.65039063
+            X: -7.65039062
             Y: 50.46875
             Z: 80.4492188
           }
@@ -3618,5 +3618,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

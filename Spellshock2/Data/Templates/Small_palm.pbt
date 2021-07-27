@@ -160,7 +160,7 @@ Assets {
         Name: "Kelp Bush 01"
         Transform {
           Location {
-            X: 4.50195313
+            X: 4.50195312
             Y: -0.0703125
             Z: 139.467773
           }
@@ -239,5 +239,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

@@ -148,7 +148,7 @@ Assets {
         Name: "Geo1"
         Transform {
           Location {
-            X: -12.8632813
+            X: -12.8632812
             Y: -2.21679688
             Z: -0.017578125
           }
@@ -2688,5 +2688,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

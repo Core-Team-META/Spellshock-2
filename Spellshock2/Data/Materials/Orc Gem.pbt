@@ -2,7 +2,7 @@ Assets {
   Id: 8216873922047098167
   Name: "Orc Gem"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 6631081666212622438
     ParameterOverrides {

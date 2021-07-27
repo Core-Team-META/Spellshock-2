@@ -3120,7 +3120,7 @@ Assets {
         Name: "Fantasy Pommel 01"
         Transform {
           Location {
-            X: -0.000122070313
+            X: -0.000122070312
             Y: 14.7754059
             Z: -22.1307983
           }
@@ -8240,5 +8240,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

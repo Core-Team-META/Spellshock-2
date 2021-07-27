@@ -95,7 +95,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 14.3945313
+            X: 14.3945312
             Y: 0.0390625
             Z: 57.3828125
           }
@@ -684,7 +684,7 @@ Assets {
           Location {
             X: 1.87207031
             Y: -0.0888671875
-            Z: 23.1914063
+            Z: 23.1914062
           }
           Rotation {
             Pitch: 60.6765289
@@ -756,7 +756,7 @@ Assets {
         Transform {
           Location {
             X: -3.84765625
-            Y: 3.02539063
+            Y: 3.02539062
             Z: 10.130127
           }
           Rotation {
@@ -875,7 +875,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -0.215820313
+            X: -0.215820312
             Y: 7.27636719
             Z: 0.391845703
           }
@@ -1175,7 +1175,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -1.72070313
+            X: -1.72070312
             Y: 3.82324219
             Z: 3.22827148
           }
@@ -1296,7 +1296,7 @@ Assets {
         Transform {
           Location {
             X: -1.97265625
-            Y: 2.91601563
+            Y: 2.91601562
             Z: 15.1311035
           }
           Rotation {
@@ -2300,7 +2300,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 0.555664063
+            X: 0.555664062
             Y: -4.55175781
             Z: 4.19091797
           }
@@ -2805,7 +2805,7 @@ Assets {
         Name: "Bone Human Scapula 01"
         Transform {
           Location {
-            X: -8.86914063
+            X: -8.86914062
             Y: -31.9658203
             Z: 36.6486816
           }
@@ -3312,5 +3312,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

@@ -323,7 +323,7 @@ Assets {
         Transform {
           Location {
             X: 4.18554688
-            Y: 4.75976563
+            Y: 4.75976562
             Z: 102.06543
           }
           Rotation {
@@ -385,7 +385,7 @@ Assets {
         Transform {
           Location {
             X: 0.1640625
-            Y: -8.33007813
+            Y: -8.33007812
             Z: -161.325195
           }
           Rotation {
@@ -446,7 +446,7 @@ Assets {
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: -1.08007813
+            X: -1.08007812
             Y: -4.13085938
             Z: -218.95459
           }
@@ -509,7 +509,7 @@ Assets {
         Transform {
           Location {
             X: 3.55078125
-            Y: 2.40820313
+            Y: 2.40820312
             Z: 101.405762
           }
           Rotation {
@@ -670,5 +670,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

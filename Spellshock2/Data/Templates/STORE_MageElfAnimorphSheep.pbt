@@ -158,7 +158,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            Z: 34.7851563
+            Z: 34.7851562
           }
           Rotation {
             Yaw: -30
@@ -4607,7 +4607,7 @@ Assets {
         Name: "Lids"
         Transform {
           Location {
-            X: 6.43164063
+            X: 6.43164062
             Y: 42.8984375
             Z: 2.61035156
           }
@@ -5995,5 +5995,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

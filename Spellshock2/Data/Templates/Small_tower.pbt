@@ -1389,7 +1389,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -368.320313
+            X: -368.320312
             Y: 295.469391
             Z: 1969.34375
           }
@@ -2989,7 +2989,7 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: -134.382813
+            X: -134.382812
             Y: -314.087891
             Z: -212.663574
           }
@@ -7430,7 +7430,7 @@ Assets {
         Name: "Street Light Pole 02"
         Transform {
           Location {
-            X: 65.1757813
+            X: 65.1757812
             Y: 97.247673
             Z: 267.551758
           }
@@ -8940,7 +8940,7 @@ Assets {
         Name: "Street Light Pole 02"
         Transform {
           Location {
-            X: 65.1757813
+            X: 65.1757812
             Y: 97.247673
             Z: 267.551758
           }
@@ -10444,7 +10444,7 @@ Assets {
         Name: "Street Light Pole 02"
         Transform {
           Location {
-            X: 65.1757813
+            X: 65.1757812
             Y: 97.247673
             Z: 267.551758
           }
@@ -11946,7 +11946,7 @@ Assets {
         Name: "Street Light Pole 02"
         Transform {
           Location {
-            X: 65.1757813
+            X: 65.1757812
             Y: 97.247673
             Z: 267.551758
           }
@@ -15602,7 +15602,7 @@ Assets {
           Location {
             X: 891.980713
             Y: 0.291381836
-            Z: 0.000122070313
+            Z: 0.000122070312
           }
           Rotation {
             Pitch: 1.36603776e-05
@@ -16148,5 +16148,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

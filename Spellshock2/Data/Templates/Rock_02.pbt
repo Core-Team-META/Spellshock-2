@@ -101,9 +101,9 @@ Assets {
         Name: "Rock Flat 01"
         Transform {
           Location {
-            X: -212.007813
+            X: -212.007812
             Y: -130.025391
-            Z: -97.9414063
+            Z: -97.9414062
           }
           Rotation {
             Yaw: 40.7653465
@@ -321,5 +321,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

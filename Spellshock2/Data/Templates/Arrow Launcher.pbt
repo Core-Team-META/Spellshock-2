@@ -77,7 +77,7 @@ Assets {
         Transform {
           Location {
             X: 370.627441
-            Y: 208.914063
+            Y: 208.914062
             Z: -29.2568016
           }
           Rotation {
@@ -3135,7 +3135,7 @@ Assets {
         Transform {
           Location {
             X: 136.510315
-            Y: 179.414063
+            Y: 179.414062
             Z: 166.436325
           }
           Rotation {
@@ -5670,7 +5670,7 @@ Assets {
         Name: "Bottle 03"
         Transform {
           Location {
-            X: 246.507813
+            X: 246.507812
             Y: 509.322815
             Z: 9.63874754e-07
           }
@@ -6695,7 +6695,7 @@ Assets {
         Name: "Ring - Thick"
         Transform {
           Location {
-            X: 1.08007813
+            X: 1.08007812
             Y: 626.227539
             Z: 32.8930664
           }
@@ -6761,7 +6761,7 @@ Assets {
         Name: "Ring - Thick"
         Transform {
           Location {
-            X: 449.195313
+            X: 449.195312
             Y: 382.955078
             Z: 80.7585449
           }
@@ -7374,5 +7374,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

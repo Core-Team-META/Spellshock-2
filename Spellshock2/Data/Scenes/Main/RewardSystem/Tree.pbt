@@ -7460,7 +7460,7 @@ Objects {
   Name: "Tabs Panel"
   Transform {
     Location {
-      X: -22514.2813
+      X: -22514.2812
       Y: 3737.76758
       Z: 6493
     }
@@ -8134,7 +8134,7 @@ Objects {
   Name: "UI Image"
   Transform {
     Location {
-      X: 31562.0313
+      X: 31562.0312
       Y: 2402.00708
       Z: 14624
     }
@@ -8790,7 +8790,7 @@ Objects {
   Name: "UI Image"
   Transform {
     Location {
-      X: 31562.0313
+      X: 31562.0312
       Y: 2402.00708
       Z: 14624
     }
@@ -9446,7 +9446,7 @@ Objects {
   Name: "UI Image"
   Transform {
     Location {
-      X: 31562.0313
+      X: 31562.0312
       Y: 2402.00708
       Z: 14624
     }
@@ -10102,7 +10102,7 @@ Objects {
   Name: "UI Image"
   Transform {
     Location {
-      X: 31562.0313
+      X: 31562.0312
       Y: 2402.00708
       Z: 14624
     }

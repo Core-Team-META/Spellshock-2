@@ -747,7 +747,7 @@ Assets {
         Name: "Fantasy Gauntlet Arm 01"
         Transform {
           Location {
-            X: -4.72851563
+            X: -4.72851562
             Y: 8.99990845
             Z: -7.93621063
           }
@@ -1011,7 +1011,7 @@ Assets {
             Z: 21.1683941
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: 89.9994583
             Roll: -70.8714294
           }
@@ -5456,5 +5456,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

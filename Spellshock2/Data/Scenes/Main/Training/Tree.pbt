@@ -41,8 +41,8 @@ Objects {
   Name: "ORC_TRAINING_TRIGGER"
   Transform {
     Location {
-      X: -23818.6563
-      Y: -30542.9063
+      X: -23818.6562
+      Y: -30542.9062
       Z: 6564.43848
     }
     Rotation {

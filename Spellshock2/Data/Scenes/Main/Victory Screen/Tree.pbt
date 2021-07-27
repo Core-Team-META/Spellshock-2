@@ -7,7 +7,7 @@ Objects {
     Location {
       X: -0.37890625
       Y: 0.43359375
-      Z: 0.180664063
+      Z: 0.180664062
     }
     Rotation {
       Yaw: 174.999985
@@ -862,7 +862,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -934,7 +934,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -1006,7 +1006,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -1078,7 +1078,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -3851,7 +3851,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -3923,7 +3923,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -3995,7 +3995,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -4067,7 +4067,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -6839,7 +6839,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -6911,7 +6911,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -6983,7 +6983,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -7055,7 +7055,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -9827,7 +9827,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -9899,7 +9899,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -9971,7 +9971,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -10043,7 +10043,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -12815,7 +12815,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -12887,7 +12887,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -12959,7 +12959,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -13031,7 +13031,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -15802,7 +15802,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -15874,7 +15874,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -15946,7 +15946,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -16018,7 +16018,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -18789,7 +18789,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -18861,7 +18861,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -18933,7 +18933,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -19005,7 +19005,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -21774,7 +21774,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -21846,7 +21846,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -21918,7 +21918,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -21990,7 +21990,7 @@ Objects {
   Transform {
     Location {
       X: -0.0009765625
-      Y: -0.000122070313
+      Y: -0.000122070312
     }
     Rotation {
       Yaw: 3.8419812e-06
@@ -24571,6 +24571,7 @@ Objects {
     }
     MinPitch: -89
     MaxPitch: 89
+    UseAsAudioListener: true
   }
 }
 Objects {

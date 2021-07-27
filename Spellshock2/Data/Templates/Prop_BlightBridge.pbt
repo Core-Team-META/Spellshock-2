@@ -433,7 +433,7 @@ Assets {
             Color {
               R: 0.5625
               G: 0.518127322
-              B: 0.430664063
+              B: 0.430664062
               A: 1
             }
           }
@@ -662,7 +662,7 @@ Assets {
             Color {
               R: 0.5625
               G: 0.518127322
-              B: 0.430664063
+              B: 0.430664062
               A: 1
             }
           }
@@ -724,7 +724,7 @@ Assets {
             Color {
               R: 0.5625
               G: 0.518127322
-              B: 0.430664063
+              B: 0.430664062
               A: 1
             }
           }
@@ -2390,7 +2390,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 14.3483887
             Z: 10
           }
@@ -2461,7 +2461,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 34.2235107
             Z: 326.318909
           }
@@ -2608,7 +2608,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 14.3483887
             Z: 10
           }
@@ -2679,7 +2679,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 34.2235107
             Z: 326.318909
           }
@@ -2714,7 +2714,7 @@ Assets {
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: -46.5379639
           }
           Rotation {
@@ -4195,7 +4195,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 34.2235107
             Z: 326.318909
           }
@@ -4403,7 +4403,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 34.2235107
             Z: 326.318909
           }
@@ -7877,7 +7877,7 @@ Assets {
         Transform {
           Location {
             X: 410.208984
-            Y: 246.820313
+            Y: 246.820312
             Z: -37.2993164
           }
           Rotation {
@@ -9343,5 +9343,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

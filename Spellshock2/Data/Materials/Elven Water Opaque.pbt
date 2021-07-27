@@ -2,7 +2,7 @@ Assets {
   Id: 3072860601980276895
   Name: "Elven Water Opaque"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 6717054932271956401
     ParameterOverrides {

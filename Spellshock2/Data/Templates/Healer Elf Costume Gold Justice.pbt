@@ -1985,7 +1985,7 @@ Assets {
         Transform {
           Location {
             X: 0.01953125
-            Y: 20.1914063
+            Y: 20.1914062
             Z: 23.5146484
           }
           Rotation {
@@ -2383,7 +2383,7 @@ Assets {
         Name: "Gem - Diamond 8-Sided Polished"
         Transform {
           Location {
-            X: -0.262695313
+            X: -0.262695312
             Y: 14.2625694
             Z: 15.7481871
           }
@@ -4693,7 +4693,7 @@ Assets {
         Name: "Gem - Diamond 8-Sided Polished"
         Transform {
           Location {
-            X: -0.262695313
+            X: -0.262695312
             Y: 14.2625694
             Z: 15.7481871
           }
@@ -7814,7 +7814,7 @@ Assets {
         Transform {
           Location {
             X: 10.6180115
-            Y: 4.61914063
+            Y: 4.61914062
             Z: 18.8303223
           }
           Rotation {
@@ -9202,5 +9202,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

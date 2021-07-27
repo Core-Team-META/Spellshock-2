@@ -23476,7 +23476,7 @@ Assets {
         Control {
           Width: 200
           Height: 34
-          UIY: 0.000122070313
+          UIY: 0.000122070312
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -35391,5 +35391,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

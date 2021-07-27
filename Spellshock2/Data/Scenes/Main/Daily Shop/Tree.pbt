@@ -4040,7 +4040,7 @@ Objects {
   Name: "LVL NEXT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -4587,7 +4587,7 @@ Objects {
   Name: "LVL CURRENT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -10468,7 +10468,7 @@ Objects {
   Name: "LVL NEXT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -11015,7 +11015,7 @@ Objects {
   Name: "LVL CURRENT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -16896,7 +16896,7 @@ Objects {
   Name: "LVL NEXT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -17443,7 +17443,7 @@ Objects {
   Name: "LVL CURRENT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -23323,7 +23323,7 @@ Objects {
   Name: "LVL NEXT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -23870,7 +23870,7 @@ Objects {
   Name: "LVL CURRENT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -29750,7 +29750,7 @@ Objects {
   Name: "LVL NEXT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -30297,7 +30297,7 @@ Objects {
   Name: "LVL CURRENT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -36177,7 +36177,7 @@ Objects {
   Name: "LVL NEXT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }
@@ -36724,7 +36724,7 @@ Objects {
   Name: "LVL CURRENT"
   Transform {
     Location {
-      X: -8838.82813
+      X: -8838.82812
       Y: 64551.8125
       Z: -1445
     }

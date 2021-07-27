@@ -158,7 +158,7 @@ Assets {
         Name: "GEO"
         Transform {
           Location {
-            X: 10.8007813
+            X: 10.8007812
             Z: 31.796875
           }
           Rotation {
@@ -605,7 +605,7 @@ Assets {
           }
           Rotation {
             Pitch: -45
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 1
@@ -3549,7 +3549,7 @@ Assets {
           }
           Rotation {
             Pitch: -45
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 1
@@ -6493,7 +6493,7 @@ Assets {
           }
           Rotation {
             Pitch: -45
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 1
@@ -9131,5 +9131,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

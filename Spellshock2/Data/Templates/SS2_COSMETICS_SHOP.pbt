@@ -579,6 +579,7 @@ Assets {
           }
           MinPitch: -89
           MaxPitch: 89
+          UseAsAudioListener: true
         }
       }
       Objects {
@@ -1467,7 +1468,7 @@ Assets {
         Transform {
           Location {
             X: 83.3733521
-            Y: 6.88476563
+            Y: 6.88476562
             Z: 294.798798
           }
           Rotation {
@@ -2367,7 +2368,7 @@ Assets {
         Transform {
           Location {
             X: 83.3733521
-            Y: 6.88476563
+            Y: 6.88476562
             Z: 294.798798
           }
           Rotation {
@@ -15680,5 +15681,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

@@ -2304,7 +2304,7 @@ Assets {
         Transform {
           Location {
             X: -102.638672
-            Y: 130.226563
+            Y: 130.226562
             Z: 131.102051
           }
           Rotation {
@@ -6472,7 +6472,7 @@ Assets {
         Name: "Pyramid - 4-Sided Polished"
         Transform {
           Location {
-            X: -732.320313
+            X: -732.320312
             Y: 906.081482
             Z: 1434.16907
           }
@@ -12779,7 +12779,7 @@ Assets {
           Location {
             X: -1230.00378
             Y: 1338.68274
-            Z: 6238.20313
+            Z: 6238.20312
           }
           Rotation {
             Pitch: -83.0365677
@@ -13649,5 +13649,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

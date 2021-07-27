@@ -158,7 +158,7 @@ Assets {
         Name: "BladeFan"
         Transform {
           Location {
-            X: 17.7539063
+            X: 17.7539062
             Y: 1.9921875
             Z: 27.6708984
           }
@@ -632,5 +632,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

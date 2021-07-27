@@ -535,6 +535,7 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     DoesPositionOffsetSpring: true
+    UseAsAudioListener: true
   }
 }
 Objects {
@@ -852,7 +853,7 @@ Objects {
   Transform {
     Location {
       X: 2.40992737
-      Y: 52.5976563
+      Y: 52.5976562
       Z: 119.551605
     }
     Rotation {
@@ -3211,7 +3212,7 @@ Objects {
   Name: "Prism - 8-Sided"
   Transform {
     Location {
-      Z: 164.226563
+      Z: 164.226562
     }
     Rotation {
       Yaw: 3.19870019
@@ -5320,7 +5321,7 @@ Objects {
   Name: "Plant_part_02"
   Transform {
     Location {
-      X: 5718.39063
+      X: 5718.39062
       Y: 605.853271
       Z: 15152.2
     }
@@ -5482,7 +5483,7 @@ Objects {
   Transform {
     Location {
       X: -0.291015625
-      Y: 1.11132813
+      Y: 1.11132812
     }
     Rotation {
       Pitch: -9.50164604
@@ -5709,7 +5710,7 @@ Objects {
   Transform {
     Location {
       X: -0.291015625
-      Y: 1.11132813
+      Y: 1.11132812
     }
     Rotation {
       Pitch: -9.50164604
@@ -6121,7 +6122,7 @@ Objects {
   Name: "Fern 03"
   Transform {
     Location {
-      X: 38.9414063
+      X: 38.9414062
       Y: 39.9941406
       Z: 1109.49121
     }
@@ -6190,7 +6191,7 @@ Objects {
   Transform {
     Location {
       X: 49.1738281
-      Y: 44.3476563
+      Y: 44.3476562
       Z: 1123.90576
     }
     Rotation {
@@ -7062,7 +7063,7 @@ Objects {
   Name: "Fern 03"
   Transform {
     Location {
-      X: 38.9414063
+      X: 38.9414062
       Y: 39.9941406
       Z: 1109.49121
     }
@@ -7131,7 +7132,7 @@ Objects {
   Transform {
     Location {
       X: 49.1738281
-      Y: 44.3476563
+      Y: 44.3476562
       Z: 1123.90576
     }
     Rotation {
@@ -7887,7 +7888,7 @@ Objects {
   Name: "Fern 03"
   Transform {
     Location {
-      X: 38.9414063
+      X: 38.9414062
       Y: 39.9941406
       Z: 1109.49121
     }
@@ -7956,7 +7957,7 @@ Objects {
   Transform {
     Location {
       X: 49.1738281
-      Y: 44.3476563
+      Y: 44.3476562
       Z: 1123.90576
     }
     Rotation {
@@ -8689,9 +8690,9 @@ Objects {
   Name: "Rock Flat 01"
   Transform {
     Location {
-      X: -212.007813
+      X: -212.007812
       Y: -130.025391
-      Z: -97.9414063
+      Z: -97.9414062
     }
     Rotation {
       Yaw: 40.7653465
@@ -9098,6 +9099,7 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     DoesPositionOffsetSpring: true
+    UseAsAudioListener: true
   }
 }
 Objects {
@@ -9362,7 +9364,7 @@ Objects {
   Transform {
     Location {
       X: -3.74597168
-      Y: 0.188476563
+      Y: 0.188476562
       Z: 190.712616
     }
     Rotation {
@@ -9408,7 +9410,7 @@ Objects {
     }
     Rotation {
       Pitch: 9.93498802
-      Yaw: -0.000122070313
+      Yaw: -0.000122070312
       Roll: -3.05175781e-05
     }
     Scale {
@@ -9447,7 +9449,7 @@ Objects {
     Location {
       X: 2.03466797
       Y: -4.2734375
-      Z: 4.42382813
+      Z: 4.42382812
     }
     Rotation {
       Pitch: 16.8496037
@@ -48581,7 +48583,7 @@ Objects {
   Name: "BG"
   Transform {
     Location {
-      X: -82925.5313
+      X: -82925.5312
       Y: 89981.8594
       Z: 18537.5605
     }
@@ -48869,7 +48871,7 @@ Objects {
   Transform {
     Location {
       X: 13072.7539
-      Y: -94480.1563
+      Y: -94480.1562
       Z: 18772.8125
     }
     Rotation {
@@ -48934,7 +48936,7 @@ Objects {
   Transform {
     Location {
       X: 5656.0625
-      Y: 27250.7813
+      Y: 27250.7812
       Z: -8112.43945
     }
     Rotation {
@@ -50004,7 +50006,7 @@ Objects {
   Name: "BG"
   Transform {
     Location {
-      X: -82925.5313
+      X: -82925.5312
       Y: 89981.8594
       Z: 18537.5605
     }
@@ -50293,7 +50295,7 @@ Objects {
   Transform {
     Location {
       X: 13072.7539
-      Y: -94480.1563
+      Y: -94480.1562
       Z: 18772.8125
     }
     Rotation {
@@ -50356,7 +50358,7 @@ Objects {
   Transform {
     Location {
       X: 5656.0625
-      Y: 27250.7813
+      Y: 27250.7812
       Z: -8112.43945
     }
     Rotation {
@@ -51322,7 +51324,7 @@ Objects {
   Control {
     Width: 17
     Height: 13
-    UIY: -37.5664063
+    UIY: -37.5664062
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -51362,7 +51364,7 @@ Objects {
   Name: "BG"
   Transform {
     Location {
-      X: -82925.5313
+      X: -82925.5312
       Y: 89981.8594
       Z: 18537.5605
     }
@@ -51651,7 +51653,7 @@ Objects {
   Transform {
     Location {
       X: 13072.7539
-      Y: -94480.1563
+      Y: -94480.1562
       Z: 18772.8125
     }
     Rotation {
@@ -51716,7 +51718,7 @@ Objects {
   Transform {
     Location {
       X: 5656.0625
-      Y: 27250.7813
+      Y: 27250.7812
       Z: -8112.43945
     }
     Rotation {
@@ -52871,7 +52873,7 @@ Objects {
   Name: "BG"
   Transform {
     Location {
-      X: -82925.5313
+      X: -82925.5312
       Y: 89981.8594
       Z: 18537.5605
     }
@@ -53079,7 +53081,7 @@ Objects {
   Transform {
     Location {
       X: 13072.7539
-      Y: -94480.1563
+      Y: -94480.1562
       Z: 18772.8125
     }
     Rotation {
@@ -53142,7 +53144,7 @@ Objects {
   Transform {
     Location {
       X: 5656.0625
-      Y: 27250.7813
+      Y: 27250.7812
       Z: -8112.43945
     }
     Rotation {
@@ -54212,7 +54214,7 @@ Objects {
   Name: "BG"
   Transform {
     Location {
-      X: -82925.5313
+      X: -82925.5312
       Y: 89981.8594
       Z: 18537.5605
     }
@@ -54500,7 +54502,7 @@ Objects {
   Transform {
     Location {
       X: 13072.7539
-      Y: -94480.1563
+      Y: -94480.1562
       Z: 18772.8125
     }
     Rotation {
@@ -54565,7 +54567,7 @@ Objects {
   Transform {
     Location {
       X: 5656.0625
-      Y: 27250.7813
+      Y: 27250.7812
       Z: -8112.43945
     }
     Rotation {
@@ -55603,7 +55605,7 @@ Objects {
   Name: "ICON"
   Transform {
     Location {
-      X: 70610.6563
+      X: 70610.6562
       Y: -5784.11719
       Z: -13325
     }
@@ -62057,7 +62059,7 @@ Objects {
   Name: "ICON"
   Transform {
     Location {
-      X: 70610.6563
+      X: 70610.6562
       Y: -5784.11719
       Z: -13325
     }

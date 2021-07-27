@@ -57,7 +57,7 @@ Assets {
         Name: "ClientContext"
         Transform {
           Location {
-            X: -4.23632813
+            X: -4.23632812
             Y: 0.4453125
             Z: -4.20410156
           }
@@ -131,5 +131,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }
