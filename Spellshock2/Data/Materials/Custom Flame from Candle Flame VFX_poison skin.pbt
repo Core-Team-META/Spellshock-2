@@ -2,7 +2,7 @@ Assets {
   Id: 9256274676797994247
   Name: "Custom Flame from Candle Flame VFX_poison skin"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 95
   CustomMaterialAsset {
     BaseMaterialId: 2871833781071350255
     ParameterOverrides {

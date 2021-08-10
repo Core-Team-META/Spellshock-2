@@ -2,7 +2,7 @@ Assets {
   Id: 7981509993700104010
   Name: "Gradient Metal Iron 01"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 95
   CustomMaterialAsset {
     BaseMaterialId: 15592158619972675004
     ParameterOverrides {

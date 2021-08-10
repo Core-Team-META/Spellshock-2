@@ -2,7 +2,7 @@ Assets {
   Id: 1471451371423214926
   Name: "Assassin Invisible Costume"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 95
   CustomMaterialAsset {
     BaseMaterialId: 15566980280380802683
     ParameterOverrides {
