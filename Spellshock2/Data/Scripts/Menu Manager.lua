@@ -148,6 +148,16 @@ function OnBindingPressed(whichPlayer, binding)
 	end
 end
 
+function OnEscPressed(player, params)
+    print("ESC Pressed!")
+    params.openPauseMenu = false
+    if _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and _G.CurrentMenu ~= _G.MENU_TABLE["Respawn"] 
+    and _G.CurrentMenu ~= _G.MENU_TABLE["Rewards"] then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    end
+end
+
+
 function Tick()
 	if LOCAL_PLAYER.isDead and _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and _G.CurrentMenu ~= _G.MENU_TABLE["Respawn"] then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
@@ -165,6 +175,7 @@ end
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Changing Menu", OnMenuChanged)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+Input.escapeHook:Connect(OnEscPressed)
 
 -- Initalize _G.CurrentMenu
 if
