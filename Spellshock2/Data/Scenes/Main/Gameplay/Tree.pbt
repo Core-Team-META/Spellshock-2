@@ -651,6 +651,14 @@ Objects {
     }
     Canvas {
       Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
   }
 }
@@ -35145,6 +35153,14 @@ Objects {
     }
     Canvas {
       Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
   }
   InstanceHistory {
@@ -35659,6 +35675,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {

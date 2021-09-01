@@ -2,7 +2,7 @@ Assets {
   Id: 530467518942051297
   Name: "Custom Leaves from Fern 04_cyber punk skin"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 97
   CustomMaterialAsset {
     BaseMaterialId: 12437127690715522820
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 926391387561774024
   Name: "FrostBoulder"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 97
   CustomMaterialAsset {
     BaseMaterialId: 1512708355930270667
     ParameterOverrides {
