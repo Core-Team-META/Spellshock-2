@@ -150,9 +150,9 @@ end
 
 function OnEscPressed(player, params)
     print("ESC Pressed!")
-    params.openPauseMenu = false
     if _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and _G.CurrentMenu ~= _G.MENU_TABLE["Respawn"] 
     and _G.CurrentMenu ~= _G.MENU_TABLE["Rewards"] then
+		params.openPauseMenu = false
         Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
     end
 end
