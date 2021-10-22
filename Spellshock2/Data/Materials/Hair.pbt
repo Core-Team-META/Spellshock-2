@@ -2,7 +2,7 @@ Assets {
   Id: 10556886957675734021
   Name: "Hair"
   PlatformAssetType: 13
-  SerializationVersion: 97
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 10184847056121543272
     ParameterOverrides {

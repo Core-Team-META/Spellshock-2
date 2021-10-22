@@ -20,6 +20,9 @@ local VIP_MULTIPLIER = script:GetCustomProperty("VIP_MULTIPLIER"):WaitForObject(
 local SERVER_MULTIPLIER = script:GetCustomProperty("SERVER_MULTIPLIER"):WaitForObject()
 local EVENT_BONUS = script:GetCustomProperty("EVENT_BONUS"):WaitForObject()
 
+local META_EventsAPI = script:GetCustomProperty("META_EventsAPI")
+local eventsAPI = require(META_EventsAPI)
+
 local goldBoostTime = 0
 local xpBoostTime = 0
 local isVip = false
@@ -62,18 +65,25 @@ function Int()
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
     for _, xpText in ipairs(XP_MULITPLIER_TEXT:GetChildren()) do
+        local multiplier = CONST.XP_SELF_BOOST_MULTIPLIER + 1
         if isVip then
-            xpText.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1 + CONST.VIP_XP_MULTIPLIER) .. "x"
-        else
-            xpText.text = tostring(CONST.XP_SELF_BOOST_MULTIPLIER + 1) .. "x"
+            multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
         end
+        if eventsAPI.IsEventKeyActive("2CXP") then
+            multiplier = multiplier * 2
+        end
+        xpText.text = tostring(multiplier) .. "x"
     end
     for _, goldText in ipairs(GOLD_MULITPLIER_TEXT:GetChildren()) do
+
+        local multiplier = CONST.GOLD_SELF_BOOST_MULTIPLIER + 1
         if isVip then
-            goldText.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1 + CONST.VIP_GOLD_MULTIPLIER) .. "x"
-        else
-            goldText.text = tostring(CONST.GOLD_SELF_BOOST_MULTIPLIER + 1) .. "x"
+            multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
         end
+        if eventsAPI.IsEventKeyActive("2Gold") then
+            multiplier = multiplier * 2
+        end
+        goldText.text = tostring(multiplier) .. "x"
     end
 end
 
@@ -127,7 +137,7 @@ function Tick()
             local seconds = math.floor(currentGoldBoost) % 60
             GOLD_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
         end
-    elseif goldIsVisable then
+    elseif goldIsVisable or true then
         GOLD_BOOST_PANEL.visibility = Visibility.FORCE_OFF
         goldIsVisable = false
     end
@@ -143,7 +153,7 @@ function Tick()
             local seconds = math.floor(currentXpBoost) % 60
             XP_BOOST_TEXT.text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
         end
-    elseif xpIsVisable then
+    elseif xpIsVisable or true then
         XP_BOOST_PANEL.visibility = Visibility.FORCE_OFF
         xpIsVisable = false
     end

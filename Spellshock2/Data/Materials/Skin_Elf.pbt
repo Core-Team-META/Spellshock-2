@@ -2,7 +2,7 @@ Assets {
   Id: 5768177943714727905
   Name: "Skin_Elf"
   PlatformAssetType: 13
-  SerializationVersion: 97
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 17117735896314006411
     ParameterOverrides {

@@ -13,6 +13,9 @@ local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 local REWARD = require(script:GetCustomProperty("META_Rewards_UTIL"))
 
+local META_EventsAPI = script:GetCustomProperty("META_EventsAPI")
+local eventsAPI = require(META_EventsAPI)
+
 while not _G["Class.Progression"] do
     Task.Wait()
 end
@@ -153,6 +156,11 @@ local function GetXpAfterMultipliers(player, value)
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
 
+    if eventsAPI.IsEventKeyActive("2CXP") then
+        print("Applying event class xp multiplier!")
+        multiplier = multiplier * 2
+    end
+
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 
@@ -182,6 +190,11 @@ local function GetGoldAfterMultipliers(player, value)
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
 
+    if eventsAPI.IsEventKeyActive("2Gold") then
+        print("Applying event gold multiplier!")
+        multiplier = multiplier * 2
+    end    
+
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 
@@ -203,6 +216,12 @@ local function GetShardsAfterMultipliers(player, value)
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
+
+    if eventsAPI.IsEventKeyActive("2AXP") then
+        print("Applying event ability multiplier!")
+        multiplier = multiplier * 2
+    end
+
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 
@@ -224,6 +243,12 @@ local function GetCosmeticAfterMultipliers(player, value)
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
+
+    if eventsAPI.IsEventKeyActive("2Cos") then
+        print("Applying cosmetic token multiplier!")
+        multiplier = multiplier * 2
+    end
+
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 

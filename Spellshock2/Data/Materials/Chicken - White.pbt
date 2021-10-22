@@ -2,7 +2,7 @@ Assets {
   Id: 12080468635147864458
   Name: "Chicken - White"
   PlatformAssetType: 13
-  SerializationVersion: 97
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 2079600448408145992
     ParameterOverrides {

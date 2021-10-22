@@ -81,6 +81,12 @@ Objects {
         SelfId: 19076367533069996
       }
     }
+    Overrides {
+      Name: "cs:META_EventsAPI"
+      AssetReference {
+        Id: 10951157757427207286
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -726,6 +732,12 @@ Objects {
       Name: "cs:METARewards_Networked"
       ObjectReference {
         SelfId: 9019563002044163780
+      }
+    }
+    Overrides {
+      Name: "cs:META_EventsAPI"
+      AssetReference {
+        Id: 10951157757427207286
       }
     }
   }

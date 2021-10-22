@@ -2,7 +2,7 @@ Assets {
   Id: 6883788449530957799
   Name: "Palm_bark_gradient"
   PlatformAssetType: 13
-  SerializationVersion: 97
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 9343637653438665698
     ParameterOverrides {
