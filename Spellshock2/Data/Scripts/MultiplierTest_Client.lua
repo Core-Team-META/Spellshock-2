@@ -51,7 +51,7 @@ function Update()
         VIP_BOOST_TEXT:SetColor(Color.RED)
     end
     for _, xpText in ipairs(XP_MULITPLIER_TEXT:GetChildren()) do
-        local multiplier = 0
+        local multiplier = 1
         if isVip then
             multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
         end
@@ -64,7 +64,7 @@ function Update()
         xpText.text = tostring(multiplier) .. "x"
     end
     for _, goldText in ipairs(GOLD_MULITPLIER_TEXT:GetChildren()) do
-        local multiplier = 0
+        local multiplier = 1
         if isVip then
             multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
         end

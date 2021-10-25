@@ -179,7 +179,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ForceActive"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {

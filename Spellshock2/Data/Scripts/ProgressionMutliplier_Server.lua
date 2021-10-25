@@ -152,16 +152,20 @@ local function GetXpAfterMultipliers(player, value)
         multiplier = multiplier + CONST.XP_SELF_BOOST_MULTIPLIER
     end
 
+ 
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
 
+    local multipliedValue = GetProgressAfterMultiplier(multiplier, value)
+
     if eventsAPI.IsEventKeyActive("2CXP") then
         print("Applying event class xp multiplier!")
-        multiplier = multiplier * 2
+        multipliedValue = multipliedValue * 2
     end
 
-    return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
+   
+    return CoreMath.Round(multipliedValue)
 end
 
 --@param object player
@@ -190,12 +194,14 @@ local function GetGoldAfterMultipliers(player, value)
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
 
+    local multipliedValue = GetProgressAfterMultiplier(multiplier, value)
+
     if eventsAPI.IsEventKeyActive("2Gold") then
         print("Applying event gold multiplier!")
-        multiplier = multiplier * 2
+        multipliedValue = multipliedValue * 2
     end    
 
-    return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
+    return CoreMath.Round(multipliedValue)
 end
 
 --@param object player
@@ -217,12 +223,14 @@ local function GetShardsAfterMultipliers(player, value)
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
 
+    local multipliedValue = GetProgressAfterMultiplier(multiplier, value)
+
     if eventsAPI.IsEventKeyActive("2AXP") then
         print("Applying event ability multiplier!")
-        multiplier = multiplier * 2
+        multipliedValue = multipliedValue * 2
     end
 
-    return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
+    return CoreMath.Round(multipliedValue)
 end
 
 --@param object player
@@ -244,12 +252,14 @@ local function GetCosmeticAfterMultipliers(player, value)
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
 
+    local multipliedValue = GetProgressAfterMultiplier(multiplier, value)
+
     if eventsAPI.IsEventKeyActive("2Cos") then
         print("Applying cosmetic token multiplier!")
-        multiplier = multiplier * 2
+        multipliedValue = multipliedValue * 2
     end
 
-    return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
+    return CoreMath.Round(multipliedValue)
 end
 
 --@params object source -- player
