@@ -1,4 +1,4 @@
-﻿local Root = script:GetCustomProperty("Root"):WaitForObject()
+local Root = script:GetCustomProperty("Root"):WaitForObject()
 
 local Equipment = Root:GetCustomProperty("Equipment"):WaitForObject()
 local MuzzleToLookTarget = Root:GetCustomProperty("MuzzleToLookTarget")

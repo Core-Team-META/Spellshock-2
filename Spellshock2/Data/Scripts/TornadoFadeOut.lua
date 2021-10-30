@@ -1,4 +1,4 @@
-﻿local Root = script.parent
+local Root = script.parent
 local Visual = script:GetCustomProperty("Visual"):WaitForObject()
 local Audio = script:GetCustomProperty("Audio"):WaitForObject()
 local Decal = Root:FindChildByType("Decal")

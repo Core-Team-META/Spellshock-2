@@ -1,4 +1,4 @@
-﻿local Shield = script:GetCustomProperty("Shield"):WaitForObject()
+local Shield = script:GetCustomProperty("Shield"):WaitForObject()
 local Ease3D = require(script:GetCustomProperty("Ease3D"))
 
 --play when the ability is spawned

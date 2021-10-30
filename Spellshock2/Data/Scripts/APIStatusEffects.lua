@@ -1,4 +1,4 @@
-﻿local API = {}
+local API = {}
 
 local STATE_TRACKER_GROUP = nil
 

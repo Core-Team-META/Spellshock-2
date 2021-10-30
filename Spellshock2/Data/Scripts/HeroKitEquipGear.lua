@@ -1,4 +1,4 @@
-﻿local HERO_KIT = script:GetCustomProperty("HeroKit"):WaitForObject()
+local HERO_KIT = script:GetCustomProperty("HeroKit"):WaitForObject()
 local HERO_KIT_GEAR = script:GetCustomProperty("HeroKitEquipment"):WaitForObject()
 
 EQUIPPED_GEAR = {}

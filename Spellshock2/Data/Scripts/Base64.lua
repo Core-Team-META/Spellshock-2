@@ -1,4 +1,4 @@
-﻿--[[
+--[[
     ItemSystems.Base64
     ====================
     This library is used by the Item system to transform data into a shorter length of that data so it's easy on the network and

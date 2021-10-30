@@ -1,4 +1,4 @@
-﻿local propChicken = script:GetCustomProperty("Chicken"):WaitForObject()
+local propChicken = script:GetCustomProperty("Chicken"):WaitForObject()
 local propSound = script:GetCustomProperty("Sound"):WaitForObject()
 local IDLE = script:GetCustomProperty("IdleStance") or "unarmed_idle_relaxed"
 local RUN = script:GetCustomProperty("RunStance") or "unarmed_run_forward"

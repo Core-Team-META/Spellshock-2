@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 	Combat Wrap - NPC
 	v0.11.0
 	by: standardcombo

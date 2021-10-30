@@ -1,4 +1,4 @@
-﻿local MODULE = require(script:GetCustomProperty("ModuleManager"))
+local MODULE = require(script:GetCustomProperty("ModuleManager"))
 function COMBAT()
 	return MODULE:Get("standardcombo.Combat.Wrap")
 end

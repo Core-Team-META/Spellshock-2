@@ -1,4 +1,4 @@
-﻿--local SpawnPoint = script:GetCustomProperty("SpawnPoint"):WaitForObject()
+--local SpawnPoint = script:GetCustomProperty("SpawnPoint"):WaitForObject()
 
 function OnBindingPressed(whichPlayer, binding)
 	--print("player " .. whichPlayer.name .. " pressed binding: " .. binding)

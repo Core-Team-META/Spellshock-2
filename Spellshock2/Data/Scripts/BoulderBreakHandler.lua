@@ -1,4 +1,4 @@
-﻿local Root = script.parent --:GetCustomProperty("Root"):WaitForObject()
+local Root = script.parent --:GetCustomProperty("Root"):WaitForObject()
 local FX_Template = script:GetCustomProperty("FX_Template")
 local Geo = script:GetCustomProperty("Geo"):WaitForObject()
 

@@ -1,4 +1,4 @@
-﻿local BladeFan = script:GetCustomProperty("BladeFan"):WaitForObject()
+local BladeFan = script:GetCustomProperty("BladeFan"):WaitForObject()
 local BladeFan2 = script:GetCustomProperty("BladeFan2"):WaitForObject()
 local Dagger1 = script:GetCustomProperty("Dagger1"):WaitForObject()
 local Dagger2 = script:GetCustomProperty("Dagger2"):WaitForObject()

@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 	Destructible Weapon - Server
 	by: standardcombo, Chris C.
 	v0.9.0

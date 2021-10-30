@@ -1,4 +1,4 @@
-﻿local Audio = script:GetCustomProperty("Audio"):WaitForObject()
+local Audio = script:GetCustomProperty("Audio"):WaitForObject()
 local ElfBridgeEnd = script:GetCustomProperty("ElfBridgeEnd"):WaitForObject()
 
 function OnRoundStart()

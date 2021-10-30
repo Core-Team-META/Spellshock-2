@@ -1,4 +1,4 @@
-﻿-- Internal custom properties
+-- Internal custom properties
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject()
 if not WEAPON:IsA('Weapon') then
     error(script.name .. " should be part of Weapon object hierarchy.")

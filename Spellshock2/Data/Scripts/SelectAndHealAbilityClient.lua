@@ -1,4 +1,4 @@
-﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
 

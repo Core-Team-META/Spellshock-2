@@ -1,4 +1,4 @@
-﻿function RespawnPlayer(player, objectRef)
+function RespawnPlayer(player, objectRef)
 	--print(">> Respawning "..player.name)
 	
 	if objectRef then

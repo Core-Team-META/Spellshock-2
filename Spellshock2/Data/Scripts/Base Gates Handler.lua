@@ -1,4 +1,4 @@
-﻿local ABGS = require(script:GetCustomProperty("ABGS"))
+local ABGS = require(script:GetCustomProperty("ABGS"))
 local ElvenBridge = script:GetCustomProperty("ElvenBridge"):WaitForObject()
 local OrcGateLeft = script:GetCustomProperty("OrcGateLeft"):WaitForObject()
 local OrcGateRight = script:GetCustomProperty("OrcGateRight"):WaitForObject()

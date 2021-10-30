@@ -1,4 +1,4 @@
-﻿local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
+local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
 
 local HealVFX = script:GetCustomProperty("HealVFX")

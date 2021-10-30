@@ -1,4 +1,4 @@
-﻿-- table of info for each mesh
+-- table of info for each mesh
 local myMesh = script.parent
 local costumeGEO = script:GetCustomProperty("Costume")
 local retargetTable = {}

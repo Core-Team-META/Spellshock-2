@@ -1,4 +1,4 @@
-﻿local Fist = script:GetCustomProperty("Fist"):WaitForObject()
+local Fist = script:GetCustomProperty("Fist"):WaitForObject()
 local Burst = script:GetCustomProperty("Burst"):WaitForObject()
 local Flares = script:GetCustomProperty("Flares"):WaitForObject()
 local Debris = script:GetCustomProperty("Debris"):WaitForObject()

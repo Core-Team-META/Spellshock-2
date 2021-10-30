@@ -1,4 +1,4 @@
-﻿local LOCAL_PLAYER = Game.GetLocalPlayer()
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 function Tick()
     for _, ability in ipairs(LOCAL_PLAYER:GetAbilities()) do

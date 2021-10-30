@@ -1,4 +1,4 @@
-﻿local RockWall = script:GetCustomProperty("RockWall"):WaitForObject()
+local RockWall = script:GetCustomProperty("RockWall"):WaitForObject()
 local Center = script:GetCustomProperty("Center"):WaitForObject()
 local Mid = script:GetCustomProperty("Mid"):WaitForObject()
 local Outer = script:GetCustomProperty("Outer"):WaitForObject()

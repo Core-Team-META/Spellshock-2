@@ -1,4 +1,4 @@
-﻿local LeftRock = script:GetCustomProperty("LeftRock"):WaitForObject()
+local LeftRock = script:GetCustomProperty("LeftRock"):WaitForObject()
 local FarLeftRock = script:GetCustomProperty("FarLeftRock"):WaitForObject()
 local RightRock = script:GetCustomProperty("RightRock"):WaitForObject()
 local FarRightRock = script:GetCustomProperty("FarRightRock"):WaitForObject()

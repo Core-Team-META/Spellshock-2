@@ -1,4 +1,4 @@
-﻿if true then return end
+if true then return end
 ------------------------------------------------------------------------------------------------------------------------
 -- BaseUserInterfaceUpdater
 -- Authors: Montoli (META) (https://www.coregames.com/user/422e57c184374923b8ce32176b018db5)

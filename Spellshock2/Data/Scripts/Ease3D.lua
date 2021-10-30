@@ -1,4 +1,4 @@
-﻿-- Ease3D.lua
+-- Ease3D.lua
 -- Handles easing (interpolation) of 3D objects in the hierarchy.
 -- Created by Nicholas Foreman (https://www.coregames.com/user/f9df3457225741c89209f6d484d0eba8)
 

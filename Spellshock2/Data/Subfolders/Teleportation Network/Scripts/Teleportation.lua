@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 	Teleportation Network
 	v1.2
 	by: standardcombo

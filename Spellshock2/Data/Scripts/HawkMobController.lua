@@ -1,4 +1,4 @@
-﻿local AnimatedMesh = script:GetCustomProperty("AnimatedMesh"):WaitForObject()
+local AnimatedMesh = script:GetCustomProperty("AnimatedMesh"):WaitForObject()
 local HawkRoot = script:GetCustomProperty("HawkRoot"):WaitForObject()
 local AnimationStance = HawkRoot:GetCustomProperty("AnimationStance")
 local AttackSound = script:GetCustomProperty("AttackSound"):WaitForObject()

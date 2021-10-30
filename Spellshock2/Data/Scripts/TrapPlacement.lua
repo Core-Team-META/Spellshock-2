@@ -1,4 +1,4 @@
-﻿local Root = script:GetCustomProperty("Root"):WaitForObject()
+local Root = script:GetCustomProperty("Root"):WaitForObject()
 local Trap = script:GetCustomProperty("Trap"):WaitForObject()
 local Jaw = script:GetCustomProperty("Jaw"):WaitForObject()
 local JawOffset = script:GetCustomProperty("JawOffset"):WaitForObject()

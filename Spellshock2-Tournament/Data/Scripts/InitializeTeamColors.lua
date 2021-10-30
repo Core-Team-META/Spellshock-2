@@ -1,4 +1,4 @@
-﻿local Root = script:GetCustomProperty("Root"):WaitForObject()
+local Root = script:GetCustomProperty("Root"):WaitForObject()
 
 _G.TeamColors = {}
 _G.TeamColors[1] = Root:GetCustomProperty("Orc")

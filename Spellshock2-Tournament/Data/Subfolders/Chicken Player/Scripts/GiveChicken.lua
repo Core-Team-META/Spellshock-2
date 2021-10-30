@@ -1,4 +1,4 @@
-﻿local CHICKEN = script:GetCustomProperty("Chicken")
+local CHICKEN = script:GetCustomProperty("Chicken")
 
 local chickens = {}
 local chickenMap = ""

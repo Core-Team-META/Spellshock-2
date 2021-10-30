@@ -1,4 +1,4 @@
-﻿-- Internal custom properties
+-- Internal custom properties
 local AS = require(script:GetCustomProperty("API"))
 local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
 local PROGRESS_BAR = script:GetCustomProperty("ProgressBar"):WaitForObject()

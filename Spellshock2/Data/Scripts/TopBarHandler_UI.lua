@@ -1,4 +1,4 @@
-﻿-- Internal custom properties
+-- Internal custom properties
 local ABGS = require(script:GetCustomProperty("API"))
 while not _G.CurrentMenu do Task.Wait() end
 

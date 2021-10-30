@@ -1,4 +1,4 @@
-﻿local AS = require(script:GetCustomProperty("API"))
+local AS = require(script:GetCustomProperty("API"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
 local RespawnMusic = script:GetCustomProperty("RespawnMusic"):WaitForObject()

@@ -1,4 +1,4 @@
-﻿local ABGS = require(script:GetCustomProperty("ABGS"))
+local ABGS = require(script:GetCustomProperty("ABGS"))
 local Root = script:GetCustomProperty("Root"):WaitForObject()
 local PositionPoint = script:GetCustomProperty("PositionPoint"):WaitForObject()
 local IsEnabled = Root:GetCustomProperty("IsEnabled")

@@ -1,4 +1,4 @@
-﻿local Crystal = script:GetCustomProperty("Crystal"):WaitForObject()
+local Crystal = script:GetCustomProperty("Crystal"):WaitForObject()
 local Timer = script:GetCustomProperty("Timer")
 local ResurrectionVFX = script:GetCustomProperty("ResurrectionVFX")
 local Ease3D = require(script:GetCustomProperty("Ease3D"))

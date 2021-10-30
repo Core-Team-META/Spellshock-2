@@ -1,4 +1,4 @@
-﻿local BODY = script:GetCustomProperty("Body"):WaitForObject()
+local BODY = script:GetCustomProperty("Body"):WaitForObject()
 local ARMS = script:GetCustomProperty("Arms"):WaitForObject()
 local Ease3D = require(script:GetCustomProperty("Ease3D"))
 

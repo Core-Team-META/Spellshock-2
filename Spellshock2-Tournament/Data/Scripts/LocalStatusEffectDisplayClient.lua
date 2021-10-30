@@ -1,4 +1,4 @@
-﻿local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()

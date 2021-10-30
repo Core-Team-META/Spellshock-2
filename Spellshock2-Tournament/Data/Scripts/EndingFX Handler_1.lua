@@ -1,4 +1,4 @@
-﻿local FX_Template = script:GetCustomProperty("FX_Template")
+local FX_Template = script:GetCustomProperty("FX_Template")
 local ParentObject = script:GetCustomProperty("ParentObject"):WaitForObject()
 
 local DestroyedEventListener

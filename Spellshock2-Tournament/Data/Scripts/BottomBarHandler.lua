@@ -1,4 +1,4 @@
-﻿local ABGS = require(script:GetCustomProperty("ABGS"))
+local ABGS = require(script:GetCustomProperty("ABGS"))
 local AS = require(script:GetCustomProperty("API_Spectator"))
 local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local ClassInfo = script:GetCustomProperty("ClassInfo"):WaitForObject()

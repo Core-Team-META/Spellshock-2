@@ -1,4 +1,4 @@
-﻿local EaseUI = require(script:GetCustomProperty("EaseUI"))
+local EaseUI = require(script:GetCustomProperty("EaseUI"))
 
 local RewardDropPanel = script:GetCustomProperty("RewardDrop"):WaitForObject()
 local Chest = script:GetCustomProperty("Chest"):WaitForObject()
