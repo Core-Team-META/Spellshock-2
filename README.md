@@ -45,9 +45,13 @@ In this fantasy PvP battleground, the warring Legion of Light and Dark Devout cl
 
 Spellshock 2 consists of 7 games, each of those are in their respective top level folder of the project:
 
-- DungeonHubWorld, the main game.
-- Dungeon_01
-- Dungeon_02
+- Spellshock2, the main game.
+- Spellshock2-Tournament
+- Spellshock 2 Tournament Lobby
+- SS2 Versus Arena
+- SS2-BrawlArena
+- SS2-NewPlayerArena
+- BrawlArena
 
 ## Feedback & Support
 
