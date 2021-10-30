@@ -8,7 +8,7 @@ UserSettings/
 
 # Screenshots used when publishing & for project thumbnails in the Create tab
 # Comment out if you want to synchronize screenshots
-Screenshots/
+#Screenshots/
 
 # Directory created when publishing a game, excluding this allows anyone to publish without
 # the "You aren't authorized" message
