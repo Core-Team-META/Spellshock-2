@@ -1,0 +1,26 @@
+{
+    "cSpell.words": [
+        "ABGS",
+        "Aggripina",
+        "Bigglebuns",
+        "KonzZwodrei",
+        "luacheck",
+        "Melamoryxq",
+        "mjcortes",
+        "MOBA",
+        "Montoli",
+        "Morticai",
+        "Ooccoo",
+        "Rolok",
+        "Shhteve",
+        "Strategize",
+        "Tobs",
+        "unhovered",
+        "upvalue"
+    ],
+    "Lua.workspace.maxPreload": 4000,
+    "Lua.diagnostics.disable": [
+        "lowercase-global",
+        "unbalanced-assignments"
+    ]
+}

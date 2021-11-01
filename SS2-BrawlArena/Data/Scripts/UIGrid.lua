@@ -1,16 +1,32 @@
 local UIPivotFunctions = {
-    [UIPivot.TOP_LEFT] = function(width,height) return 0,0  end,
-    [UIPivot.TOP_CENTER] = function(width,height) return width/2,0  end,
-    [UIPivot.TOP_RIGHT] = function(width,height) return width,0  end,
-    [UIPivot.MIDDLE_LEFT] = function(width,height) return 0,height/2  end,
-    [UIPivot.MIDDLE_CENTER] = function(width,height) return width/2,height/2   end,
-    [UIPivot.MIDDLE_RIGHT] = function(width,height) return width,height/2  end,
-    [UIPivot.BOTTOM_LEFT] = function(width,height) return 0,height end,
-    [UIPivot.BOTTOM_CENTER] = function(width,height)  return width/2,height end,
-    [UIPivot.BOTTOM_RIGHT] = function(width,height)  return width,height  end,
+    [UIPivot.TOP_LEFT] = function(width, height)
+        return 0, 0
+    end,
+    [UIPivot.TOP_CENTER] = function(width, height)
+        return width/2, 0
+    end,
+    [UIPivot.TOP_RIGHT] = function(width, height)
+        return width, 0
+    end,
+    [UIPivot.MIDDLE_LEFT] = function(width, height)
+        return 0, height/2
+    end,
+    [UIPivot.MIDDLE_CENTER] = function(width, height)
+        return width/2, height/2
+    end,
+    [UIPivot.MIDDLE_RIGHT] = function(width, height)
+        return width, height/2
+    end,
+    [UIPivot.BOTTOM_LEFT] = function(width, height)
+        return 0, height
+    end,
+    [UIPivot.BOTTOM_CENTER] = function(width, height)
+        return width/2,height
+    end,
+    [UIPivot.BOTTOM_RIGHT] = function(width, height)
+        return width, height
+    end,
 }
-
-
 
 local UIGrid = {
     children = {},
@@ -24,13 +40,9 @@ local UIGrid = {
         rowGap = 0,
     },
     type,
-
 }
 
-
 UIGrid.__index = UIGrid
-
-
 
 local function GenerateGrid(data)
     local Grid = {}
@@ -77,7 +89,7 @@ local function GrabHousingScale(Housing)
         end
 
         --If we had a check if inherit width
-        if false then 
+        if false then
             width = GrabHousingScale(Housing.parent)
             --If we had addself check
             if false then
@@ -87,9 +99,7 @@ local function GrabHousingScale(Housing)
 
         return width, height
     end
-
 end
-
 
 local UIGridGen = {}
 UIGridGen.types = {
@@ -106,6 +116,7 @@ local DefaultGrid = {
     rowGap = 0,
     offset = Vector2.New(0,0)
 }
+
 function UIGridGen.New(UIHousing,data)
     local UIHousingtrue = UIHousing:IsA("UIContainer") or UIHousing:IsA("UIPanel")
     assert(UIHousingtrue,"A UI Container must be the first element")
@@ -120,6 +131,7 @@ function UIGridGen.New(UIHousing,data)
         o.data[key] = data[key] or DefaultGrid[key]
     end
     o:Update()
+
     return o
 end
 
@@ -128,16 +140,17 @@ function UIGrid:AddChild(newChild)
     newChild.parent = self.data.housing
     self:Update()
 end
+
 function UIGrid:GetTotalWidth()
     return self.data.totalWidth
 end
+
 function UIGrid:GetTotalHeight()
     return self.data.totalHeight
 end
 
-
 function UIGrid:SetOffset(offset)
-    assert(offset:IsA("Vector2"), "offset is not a vetor3")
+    assert(offset:IsA("Vector2"), "offset is not a vector3")
     self.data.offset = offset
     self:Update()
 end
@@ -161,17 +174,17 @@ function UIGrid:Update()
     self.data.width = width
     self.data.height = height
 
-    if self.data.type ==  UIGridGen.types.grid then 
+    if self.data.type ==  UIGridGen.types.grid then
         self.data.totalWidth = self.data.housing.width
         self.data.totalheight =self.data.housing.height
-        local _,Grid, GWidth, Gheight = GenerateGrid(self.data)
+        local _, Grid, gWidth, gHeight = GenerateGrid(self.data)
         for index, value in ipairs(self.children) do
             if Object.IsValid(value) then
                 if Object.IsValid(value) and Grid[index] then
-                    local Anchorx,Anchory = UIPivotFunctions[value.anchor](GWidth,Gheight)
-                    local Dockx,Docky = UIPivotFunctions[UIPivot.TOP_LEFT](value.width,value.height)
-                    value.x = Grid[index].x + Dockx + Anchorx
-                    value.y = Grid[index].y + Docky + Anchory
+                    local anchorX, anchorY = UIPivotFunctions[value.anchor](gWidth, gHeight)
+                    local dockX, dockY = UIPivotFunctions[UIPivot.TOP_LEFT](value.width, value.height)
+                    value.x = Grid[index].x + dockX + anchorX
+                    value.y = Grid[index].y + dockY + anchorY
                 else
                     value.y = -1000
                 end
@@ -181,29 +194,27 @@ function UIGrid:Update()
     end
 
     if self.data.type ==  UIGridGen.types.autoleft then
-        local xtotal = self.margin or 0 + self.data.offset.x
-        local ytotal = self.margin or 0 + self.data.offset.y
-        for index, value in ipairs(self.children) do
+        local xTotal = self.margin or (0 + self.data.offset.x)
+        local yTotal = self.margin or (0 + self.data.offset.y)
+        for _, value in ipairs(self.children) do
             if Object.IsValid(value) then
-                local Anchorx,Anchory = UIPivotFunctions[value.anchor](GWidth,Gheight)
-                local Dockx,Docky = UIPivotFunctions[UIPivot.TOP_LEFT](value.width,value.height)
-                value.x = xtotal + Dockx + Anchorx
-                value.y = ytotal + Docky + Anchory
+                local anchorX, anchorY = UIPivotFunctions[value.anchor](gWidth, gHeight)
+                local dockX, dockY = UIPivotFunctions[UIPivot.TOP_LEFT](value.width, value.height)
+                value.x = xTotal + dockX + anchorX
+                value.y = yTotal + dockY + anchorY
                 local Addwidth = value.width + self.data.columnGap
-                xtotal = xtotal + Addwidth
-                if xtotal + Addwidth > self.data.housing.width then
-                   self.data.totalWidth = xtotal
-                   ytotal = ytotal + value.height + self.data.rowGap
-                   xtotal = 0
+                xTotal = xTotal + Addwidth
+                if xTotal + Addwidth > self.data.housing.width then
+                   self.data.totalWidth = xTotal
+                   yTotal = yTotal + value.height + self.data.rowGap
+                   xTotal = 0
                 end
-                self.data.totalHeight = ytotal + value.height + self.data.rowGap - self.data.offset.y
+                self.data.totalHeight = yTotal + value.height + self.data.rowGap - self.data.offset.y
                 self.data.totalWidth = self.data.totalWidth - self.data.offset.x
             end
         end
         return
     end
 end
-
-
 
 return UIGridGen
