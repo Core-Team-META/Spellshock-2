@@ -60,7 +60,7 @@ local playerListeners = {}
 local npcTriggers = {}
 local spamPrevent
 local refreshTime, refreshCount
-local closeButtonLisener = nil
+local closeButtonListener = nil
 local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 local shopItems = SHOP_ITEMS:GetChildren()
 local shouldRefresh = true
@@ -150,7 +150,7 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
     if panel.name ~= "Background" then
         local slotId = panel:GetCustomProperty("SLOT")
         local infoTable = nil
-        local currentAmmount, requiredAmount = nil
+        local currentAmount, requiredAmount = nil
         local cost = nil
 
         if slotId and slotId == slot then
@@ -158,8 +158,8 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
                 --Shard Cost
                 cost = REWARD_UTIL.CalculateShardCost(amount)
                 infoTable = rewardAssets[rewardType][class][bind]
-                --currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
-                currentAmmount = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetXpString(class, bind))
+                --currentAmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+                currentAmount = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetXpString(class, bind))
                 requiredAmount = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
             elseif rewardType == REWARD_UTIL.REWARD_TYPES.COSMETIC then
                 infoTable = rewardAssets[rewardType][bind]
@@ -209,8 +209,8 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
                     NextLevel.text = "MAX"
                 end
                 RewardCurrencyIcon:SetImage(ShardIcon)
-                CURRENT_BAR.progress = currentAmmount / requiredAmount
-                REWARD_BAR.progress = (currentAmmount + amount) / requiredAmount
+                CURRENT_BAR.progress = currentAmount / requiredAmount
+                REWARD_BAR.progress = (currentAmount + amount) / requiredAmount
                 ClassImage.visibility = Visibility.FORCE_ON
                 PROGRESS_BARS.visibility = Visibility.FORCE_ON
             else
@@ -256,7 +256,7 @@ local function BuildShopItems(slot, rewardType, class, bind, rarity, amount)
         end
     end
 end
---@param tabl tbl -- Nested table reward
+--@param table tbl -- Nested table reward
 local function BuildRewardSlots(tbl)
     refreshCount = tbl["TIME"].R
     refreshTime = tbl["TIME"].T
@@ -332,7 +332,7 @@ function OnRewardSelected(button)
     Events.BroadcastToServer(NAMESPACE .. "PURCHASE", button.clientUserData.id, button.clientUserData.slot)
 end
 
---Builds the cosmeticTable based on the heirarchy
+--Builds the cosmeticTable based on the hierarchy
 function OnDataObjectAdded(parent, object)
     if parent == NETWORKED and object.name == LOCAL_PLAYER.id then
         local dataStr = object:GetCustomProperty("data")
