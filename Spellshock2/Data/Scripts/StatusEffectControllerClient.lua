@@ -1,4 +1,4 @@
-﻿local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local STATE_TRACKER_GROUP = script:GetCustomProperty("StateTrackerGroup"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()

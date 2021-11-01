@@ -1,4 +1,4 @@
-﻿local Trap = script:GetCustomProperty("Trap"):WaitForObject()
+local Trap = script:GetCustomProperty("Trap"):WaitForObject()
 local Jaw = script:GetCustomProperty("Jaw"):WaitForObject()
 local JawOffset = script:GetCustomProperty("JawOffset"):WaitForObject()
 local SparkVFX = script:GetCustomProperty("SparkVFX"):WaitForObject()

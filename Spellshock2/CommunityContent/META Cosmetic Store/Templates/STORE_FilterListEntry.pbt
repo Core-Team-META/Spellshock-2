@@ -74,6 +74,7 @@ Assets {
           }
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -162,6 +163,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -396,6 +398,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -456,6 +460,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -517,6 +523,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -576,6 +584,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -628,6 +638,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -746,6 +757,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -807,6 +820,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -862,6 +877,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1100,6 +1116,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -1161,6 +1179,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -1292,6 +1312,8 @@ Assets {
               Id: 2704989702499929423
             }
             IsButtonEnabled: true
+            Font {
+            }
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1414,5 +1436,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

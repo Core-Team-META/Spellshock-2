@@ -1,4 +1,4 @@
-﻿local LOCAL_PLAYER = Game.GetLocalPlayer()
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 local xp = 1
 local skinId = 1
 local function META_AP()

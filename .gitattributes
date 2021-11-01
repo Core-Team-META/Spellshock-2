@@ -1,1 +1,4 @@
-*.pbt linguist-language=Protobuf-Text-Format
+# Auto detect text files and perform LF normalization
+* text=auto
+*.pbt text eol=lf -delta linguist-language=Protobuf-Text-Format
+*.terrain binary -delta

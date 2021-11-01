@@ -36,7 +36,9 @@ function OnGameStateChanged(oldState, newState, hasDuration, endTime)
 		local perPlayerDelay = PERIOD / numPlayers
 		for _, player in pairs(Game.GetPlayers()) do
 			if Object.IsValid(player) then
-				player:Respawn()
+				player:Spawn(
+					{spawnKey = _G["GameManager"].data.map.name}
+				)
 			end
 			Task.Wait(perPlayerDelay)
 		end

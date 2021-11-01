@@ -73,7 +73,7 @@ function EnableRoamingCamera(player)
 	end
 	
 	-- Set player settings
-	SPEED_SETTINGS_3:ApplyToPlayer(player)
+	--SPEED_SETTINGS_3:ApplyToPlayer(player)
 	playerSpeedIndexes[player] = 3
 	
 	-- Make player fly
@@ -96,7 +96,7 @@ function DisableRoamingCamera(player)
 	
 	-- Revert player settings
 	if defaultPlayerSettings ~= nil then
-		defaultPlayerSettings:ApplyToPlayer(player)
+		--defaultPlayerSettings:ApplyToPlayer(player)
 	end
 	
 	-- Revert flying
@@ -130,13 +130,13 @@ function ApplySpeedSettingsToPlayer(speedIndex, player)
 	playerSpeedIndexes[player] = speedIndex
 	
 	if speedIndex == 1 then
-		SPEED_SETTINGS_1:ApplyToPlayer(player)
+		--SPEED_SETTINGS_1:ApplyToPlayer(player)
 		
 	elseif speedIndex == 2 then
-		SPEED_SETTINGS_2:ApplyToPlayer(player)
+		--SPEED_SETTINGS_2:ApplyToPlayer(player)
 		
 	elseif speedIndex == 3 then
-		SPEED_SETTINGS_3:ApplyToPlayer(player)
+		--SPEED_SETTINGS_3:ApplyToPlayer(player)
 		
 	elseif speedIndex == 4 then
 		SPEED_SETTINGS_4:ApplyToPlayer(player)

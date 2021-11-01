@@ -49,13 +49,16 @@ function OnRewardSelected(player)
 	VictoryScreenAPI.OnPlayerRestored(RootGroup, player, emptyData)
 	VictoryScreenAPI.playerRestoredEvent:_Fire(player, RootGroup, emptyData)
 	--Events.Broadcast("TeleportPlayer", player)
-	player:Respawn()
+	player:Spawn(
+		{spawnKey = _G["GameManager"].data.map.name}
+	)
+
 end
 
 function OnGameStateChanged(oldState, newState, hasDuration, time)
 	if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE and oldState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		Activate()
-	elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+	elseif newState == ABGS.GAME_STATE_LOADING and oldState ~= ABGS.GAME_STATE_LOADING then
 		Deactivate()
 	end
 end

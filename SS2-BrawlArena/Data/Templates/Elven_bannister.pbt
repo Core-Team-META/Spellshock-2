@@ -15,8 +15,7 @@ Assets {
             Z: 1.24802315
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 8846893437263903214
+        ParentId: 10326949487463697498
         ChildIds: 1087970490233162383
         ChildIds: 1098764772194726930
         ChildIds: 14497495760541582849
@@ -37,69 +36,20 @@ Assets {
         }
       }
       Objects {
-        Id: 8846893437263903214
-        Name: "collision"
-        Transform {
-          Location {
-            Y: 252.501953
-            Z: 63.109375
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 5.1629281
-            Z: 2.35426664
-          }
-        }
-        ParentId: 12959015206063195225
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12889861000896994476
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12095835209017042614
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
         Id: 1087970490233162383
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: -17.171875
-            Y: -0.58984375
-            Z: 158.553711
+            X: -17.1502476
+            Y: -72.0157318
+            Z: 158.553864
           }
           Rotation {
             Yaw: 89.9999771
           }
           Scale {
-            X: 0.625703812
-            Y: 0.926954567
+            X: 0.83115679
+            Y: 0.927033484
             Z: 0.53655386
           }
         }
@@ -108,16 +58,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.744791687
-              G: 0.744791687
-              B: 0.623449266
+              R: 0.881250143
+              G: 0.875
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1626097446304398136
+              Id: 13193876312782744037
             }
           }
         }
@@ -128,7 +78,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -150,13 +100,15 @@ Assets {
         Name: "SciFi Trim 01"
         Transform {
           Location {
+            X: -0.376953125
+            Y: -130.625
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1.24902344
-            Z: 1
+            X: 0.999919057
+            Y: 1.96149206
+            Z: 0.999999881
           }
         }
         ParentId: 12959015206063195225
@@ -164,16 +116,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.723958313
-              G: 0.723958313
-              B: 0.606010079
+              R: 0.870800138
+              G: 0.863999963
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1626097446304398136
+              Id: 13193876312782744037
             }
           }
         }
@@ -184,7 +136,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -224,8 +176,8 @@ Assets {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 1
-              G: 1
-              B: 1
+              G: 0.912
+              B: 0.99999994
               A: 1
             }
           }
@@ -243,7 +195,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -283,8 +235,8 @@ Assets {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 1
-              G: 1
-              B: 1
+              G: 0.912
+              B: 0.99999994
               A: 1
             }
           }
@@ -302,7 +254,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -344,8 +296,8 @@ Assets {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 1
-              G: 1
-              B: 1
+              G: 0.912
+              B: 0.99999994
               A: 1
             }
           }
@@ -363,7 +315,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -405,8 +357,8 @@ Assets {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 1
-              G: 1
-              B: 1
+              G: 0.912
+              B: 0.99999994
               A: 1
             }
           }
@@ -424,7 +376,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -443,39 +395,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 12889861000896994476
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
-      }
-    }
-    Assets {
       Id: 7676573587134565567
       Name: "Trim Large Brick 8m"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_trim_brick_6m_001"
-      }
-    }
-    Assets {
-      Id: 1626097446304398136
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
       }
     }
     Assets {
@@ -510,5 +435,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 92
 }

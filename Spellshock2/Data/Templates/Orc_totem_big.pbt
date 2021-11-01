@@ -3338,7 +3338,7 @@ Assets {
           Scale {
             X: 6.60675478
             Y: 6.60675335
-            Z: 7.57226563
+            Z: 7.57226562
           }
         }
         ParentId: 10870991258724433484
@@ -3548,7 +3548,7 @@ Assets {
           Scale {
             X: 6.60675478
             Y: 6.60675335
-            Z: 7.57226563
+            Z: 7.57226562
           }
         }
         ParentId: 10870991258724433484
@@ -4973,5 +4973,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -20,6 +20,10 @@ Objects {
       Name: "cs:AfkGameID"
       String: "9abe5f/spellshock-2-afk-zone"
     }
+    Overrides {
+      Name: "cs:MainGame"
+      String: "f8b143/spellshock-2"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -213,7 +217,7 @@ Objects {
     Overrides {
       Name: "cs:Cosmetics"
       NetReference {
-        Key: "5de58cc9214344bca1a53c803d5d9292"
+        Key: "c333b186a0784c47af674b7704808501"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -222,7 +226,7 @@ Objects {
     Overrides {
       Name: "cs:Progression"
       NetReference {
-        Key: "06aa8a5ccba94efe82095b881462eab5"
+        Key: "fda12f8c98b648b0a612628d288062a6"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -231,7 +235,7 @@ Objects {
     Overrides {
       Name: "cs:Currency"
       NetReference {
-        Key: "627fd490885c4745bc44c7d55a8fb5db"
+        Key: "d5d513aebe8a4907862c98637c1f7b6f"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }

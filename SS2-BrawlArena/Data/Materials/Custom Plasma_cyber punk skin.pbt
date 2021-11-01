@@ -2,7 +2,7 @@ Assets {
   Id: 17931748151921024499
   Name: "Custom Plasma_cyber punk skin"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 4494269202942641356
     ParameterOverrides {

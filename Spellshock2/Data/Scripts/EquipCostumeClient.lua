@@ -1,4 +1,4 @@
-﻿--if true then return end
+--if true then return end
 local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
 local ClassID = ParentEquipment:GetCustomProperty("ClassID")
 local listeners = {}

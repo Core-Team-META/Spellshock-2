@@ -66,10 +66,8 @@ function ToggleShop(bool)
     local currentState = GAME_STATE_API.GetGameState()
     if bool and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and (currentState == GAME_STATE_API.GAME_STATE_LOBBY or currentState == GAME_STATE_API.GAME_STATE_ROUND or
      LOCAL_PLAYER.clientUserData.hasSkippedReward) and not LOCAL_PLAYER.isDead then
-        print("opening cos shop")
         Events.Broadcast("Changing Menu", _G.MENU_TABLE["CosmeticStore"])
     elseif _G.CurrentMenu == _G.MENU_TABLE["CosmeticStore"] then
-        print("closing cos shop")
         Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
     end
 end

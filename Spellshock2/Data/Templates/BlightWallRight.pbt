@@ -353,7 +353,7 @@ Assets {
         Transform {
           Location {
             X: -3890.73828
-            Y: 474.070313
+            Y: 474.070312
             Z: 4164.64648
           }
           Rotation {
@@ -1224,7 +1224,7 @@ Assets {
         Transform {
           Location {
             X: -1974.78711
-            Y: 129.757813
+            Y: 129.757812
             Z: 5320.88477
           }
           Rotation {
@@ -1579,7 +1579,7 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 216.320313
+            X: 216.320312
             Y: 41.0546875
             Z: 5320.88477
           }
@@ -2735,7 +2735,7 @@ Assets {
           Location {
             X: -541.196899
             Y: 118.686584
-            Z: 65.0351563
+            Z: 65.0351562
           }
           Rotation {
             Pitch: -71.1965485
@@ -4187,7 +4187,7 @@ Assets {
           Location {
             X: -354.738159
             Y: -133.085617
-            Z: 628.195313
+            Z: 628.195312
           }
           Rotation {
             Pitch: -0.960468
@@ -4252,7 +4252,7 @@ Assets {
           Location {
             X: -310.110229
             Y: -102.278038
-            Z: 27.7226563
+            Z: 27.7226562
           }
           Rotation {
             Pitch: 84.8395309
@@ -7468,7 +7468,7 @@ Assets {
           Location {
             X: -820.668579
             Y: -63.1221313
-            Z: 998.351563
+            Z: 998.351562
           }
           Rotation {
             Pitch: 3.36937308
@@ -13487,7 +13487,7 @@ Assets {
           Location {
             X: -269.693909
             Y: -12.6576385
-            Z: 6.75195313
+            Z: 6.75195312
           }
           Rotation {
             Yaw: -2.3403945
@@ -13794,7 +13794,7 @@ Assets {
     }
     Assets {
       Id: 10634098119816284342
-      Name: "Wood Planks Dark"
+      Name: "Wood Planks"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
@@ -14013,5 +14013,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

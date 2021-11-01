@@ -15,6 +15,7 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
@@ -138,7 +139,7 @@ function MeleeAttack(other)
 			source = ABILITY.owner,
 			position = pos,
 			rotation = rot,
-			tags = {id = "BasicAttack", ability = ABILITY, equipment = EQUIPMENT}
+			tags = {id = "BasicAttack", ability = ABILITY, equipment = ROOT}
 		}
 		COMBAT().ApplyDamage(attackData)
 
@@ -176,7 +177,7 @@ function OnEquipped(equipment, player)
 end
 
 function OnBindingReleased(player, bind)
-	if ABILITY:GetCurrentPhase() == AbilityPhase.CAST and bind == "ability_primary" then
+	if Object.IsValid(ABILITY) and ABILITY:GetCurrentPhase() == AbilityPhase.CAST and bind == "ability_primary" then
 		isCharging = 0
 		ABILITY:AdvancePhase()
 	end
@@ -241,7 +242,7 @@ function OnExecute(ability)
 			player.brakingDecelerationFalling = 4000
 
 			Task.Wait(1)
-
+			Events.Broadcast("TrainingAbilityUsed", ability.owner, "Warrior_RMB")
 			if Object.IsValid(player) then
 				player.desiredFacingMode = desiredFacingMode
 				player.brakingDecelerationFalling = brakingDecelerationFalling

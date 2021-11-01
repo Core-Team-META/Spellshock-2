@@ -579,6 +579,7 @@ Assets {
           }
           MinPitch: -89
           MaxPitch: 89
+          UseAsAudioListener: true
         }
       }
       Objects {
@@ -1467,7 +1468,7 @@ Assets {
         Transform {
           Location {
             X: 83.3733521
-            Y: 6.88476563
+            Y: 6.88476562
             Z: 294.798798
           }
           Rotation {
@@ -2367,7 +2368,7 @@ Assets {
         Transform {
           Location {
             X: 83.3733521
-            Y: 6.88476563
+            Y: 6.88476562
             Z: 294.798798
           }
           Rotation {
@@ -3340,6 +3341,15 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
+            IsHUD: true
+            CanvasWorldSize {
+              X: 1024
+              Y: 1024
+            }
+            TwoSided: true
+            TickWhenOffScreen: true
+            RedrawTime: 30
           }
           AnchorLayout {
             SelfAnchor {
@@ -3392,6 +3402,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3442,6 +3453,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3499,6 +3511,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3562,6 +3575,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3614,6 +3628,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3693,6 +3708,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5355,6 +5371,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5409,6 +5426,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5586,6 +5604,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5763,6 +5782,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6489,6 +6509,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6789,6 +6810,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6964,6 +6986,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7143,6 +7166,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7202,6 +7226,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7441,6 +7466,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7619,6 +7645,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7980,6 +8007,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8223,6 +8251,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8652,6 +8681,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9253,6 +9283,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9309,6 +9340,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9486,6 +9518,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9980,6 +10013,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -10038,6 +10072,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -10480,6 +10515,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11023,6 +11059,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11082,6 +11119,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11137,6 +11175,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11189,6 +11228,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11615,6 +11655,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11669,6 +11710,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11721,6 +11763,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12144,6 +12187,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12326,6 +12370,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12379,6 +12424,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12433,6 +12479,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12889,6 +12936,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13087,6 +13135,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15127,6 +15176,15 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
+            IsHUD: true
+            CanvasWorldSize {
+              X: 1024
+              Y: 1024
+            }
+            TwoSided: true
+            TickWhenOffScreen: true
+            RedrawTime: 30
           }
           AnchorLayout {
             SelfAnchor {
@@ -15176,6 +15234,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15638,5 +15697,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

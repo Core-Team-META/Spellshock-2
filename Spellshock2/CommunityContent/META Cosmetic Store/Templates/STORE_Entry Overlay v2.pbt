@@ -94,6 +94,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -265,6 +266,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -327,6 +329,8 @@ Assets {
               Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -379,6 +383,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -438,6 +443,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -668,6 +674,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -732,6 +739,8 @@ Assets {
               Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -854,6 +863,8 @@ Assets {
               Value: "mc:etextjustify:right"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -915,6 +926,8 @@ Assets {
               Value: "mc:etextjustify:right"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -970,6 +983,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1203,6 +1217,7 @@ Assets {
           }
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1313,6 +1328,7 @@ Assets {
           }
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1392,6 +1408,8 @@ Assets {
               Id: 1814707273787853473
             }
             IsButtonEnabled: true
+            Font {
+            }
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1473,5 +1491,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

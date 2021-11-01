@@ -505,7 +505,7 @@ Assets {
         Name: "Craftsman Roof 01 Beam"
         Transform {
           Location {
-            X: 396.539063
+            X: 396.539062
             Y: 157.959488
             Z: -6.01384068
           }
@@ -7438,5 +7438,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -481,7 +481,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -550,7 +550,7 @@ Assets {
         Name: "RockStrike"
         Transform {
           Location {
-            X: 12.1289063
+            X: 12.1289062
             Y: 6.15234375
             Z: 36.3232422
           }
@@ -799,7 +799,7 @@ Assets {
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.8789063
+            X: 30.8789062
             Y: 893.984375
             Z: -227.8125
           }
@@ -870,7 +870,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -1188,7 +1188,7 @@ Assets {
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.8789063
+            X: 30.8789062
             Y: 893.984375
             Z: -227.8125
           }
@@ -1259,7 +1259,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -1330,7 +1330,7 @@ Assets {
           Location {
             X: -14.21875
             Y: 26.6210938
-            Z: 30.0976563
+            Z: 30.0976562
           }
           Rotation {
             Pitch: -4.31131
@@ -1577,7 +1577,7 @@ Assets {
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.8789063
+            X: 30.8789062
             Y: 893.984375
             Z: -227.8125
           }
@@ -1648,7 +1648,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -1745,5 +1745,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

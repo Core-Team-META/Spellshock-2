@@ -37,6 +37,15 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
+            IsHUD: true
+            CanvasWorldSize {
+              X: 1024
+              Y: 1024
+            }
+            TwoSided: true
+            TickWhenOffScreen: true
+            RedrawTime: 30
           }
           AnchorLayout {
             SelfAnchor {
@@ -89,6 +98,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -161,6 +171,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1069,6 +1080,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1828,6 +1840,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2622,6 +2635,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3403,6 +3417,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3455,6 +3470,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4052,6 +4068,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4109,6 +4126,10 @@ Assets {
             BackgroundColor {
             }
             Percent: 0.581979156
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -4233,6 +4254,10 @@ Assets {
               A: 1
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -4291,6 +4316,10 @@ Assets {
               G: 0.00556291826
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -4636,6 +4665,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4688,6 +4718,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5295,6 +5326,10 @@ Assets {
               A: 1
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -5354,6 +5389,10 @@ Assets {
               G: 0.00556291826
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -5413,6 +5452,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6245,6 +6285,10 @@ Assets {
               A: 1
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -6304,6 +6348,10 @@ Assets {
               G: 0.00556291826
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -6362,6 +6410,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6908,6 +6957,10 @@ Assets {
               A: 1
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -6967,6 +7020,10 @@ Assets {
               G: 0.00556291826
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -7025,6 +7082,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7571,6 +7629,10 @@ Assets {
               A: 1
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -7630,6 +7692,10 @@ Assets {
               G: 0.00556291826
             }
             Percent: 0.383960754
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -7684,6 +7750,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7744,6 +7811,10 @@ Assets {
               A: 1
             }
             Percent: 0.615063429
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -7987,6 +8058,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8595,6 +8667,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8881,7 +8954,7 @@ Assets {
         Control {
           Width: 85
           Height: 12
-          UIY: -3.15039063
+          UIY: -3.15039062
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -9014,6 +9087,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9190,6 +9264,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9249,6 +9324,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9854,6 +9930,10 @@ Assets {
               A: 0.394000024
             }
             Percent: 0.637802184
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -9977,6 +10057,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -10581,6 +10662,10 @@ Assets {
               A: 0.394000024
             }
             Percent: 0.401268125
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -10703,6 +10788,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11368,6 +11454,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12086,6 +12173,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12263,6 +12351,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12318,6 +12407,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12740,6 +12830,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13160,6 +13251,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13582,6 +13674,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14004,6 +14097,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14424,6 +14518,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14604,6 +14699,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14661,6 +14757,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14835,6 +14932,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15205,6 +15303,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -15324,6 +15426,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15498,6 +15601,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15868,6 +15972,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -15987,6 +16095,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -16161,6 +16270,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -16531,6 +16641,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -16650,6 +16764,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -16824,6 +16939,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -17194,6 +17310,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -17313,6 +17433,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -17487,6 +17608,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -17857,6 +17979,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -17976,6 +18102,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -18150,6 +18277,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -18520,6 +18648,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -18639,6 +18771,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -18813,6 +18946,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -19183,6 +19317,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -19302,6 +19440,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -19476,6 +19615,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -19846,6 +19986,10 @@ Assets {
               A: 1
             }
             Percent: 0.295449585
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -19965,6 +20109,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -20383,6 +20528,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -20752,6 +20898,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -21479,6 +21626,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -21531,6 +21679,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -21827,6 +21976,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -22123,6 +22273,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -22419,6 +22570,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -22715,6 +22867,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -23009,6 +23162,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -23072,6 +23226,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -23864,6 +24019,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -24356,6 +24512,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -25148,6 +25305,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -25640,6 +25798,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -26432,6 +26591,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -27215,5 +27375,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

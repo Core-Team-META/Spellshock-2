@@ -861,7 +861,7 @@ Assets {
           Location {
             X: -17.1898193
             Y: -10.2732544
-            Z: 9.73632813
+            Z: 9.73632812
           }
           Rotation {
             Pitch: -6.63491821
@@ -1194,7 +1194,7 @@ Assets {
             Z: 15.2326965
           }
           Rotation {
-            Pitch: -7.14257813
+            Pitch: -7.14257812
             Yaw: -162.070877
             Roll: 111.672203
           }
@@ -8895,7 +8895,7 @@ Assets {
         Name: "Grass Tall"
         Transform {
           Location {
-            X: 0.372070313
+            X: 0.372070312
             Y: 9.5835495
             Z: -16.2140503
           }
@@ -15584,7 +15584,7 @@ Assets {
         Name: "Cube - Rounded"
         Transform {
           Location {
-            X: 61.2539063
+            X: 61.2539062
             Y: 37.4765625
             Z: 15.4599609
           }
@@ -15659,7 +15659,7 @@ Assets {
         Transform {
           Location {
             X: 47.875
-            Y: 58.0195313
+            Y: 58.0195312
             Z: 15.8095703
           }
           Rotation {
@@ -16062,7 +16062,7 @@ Assets {
         Transform {
           Location {
             X: 59.3457031
-            Y: -40.6757813
+            Y: -40.6757812
             Z: 15.8085938
           }
           Rotation {
@@ -19595,5 +19595,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

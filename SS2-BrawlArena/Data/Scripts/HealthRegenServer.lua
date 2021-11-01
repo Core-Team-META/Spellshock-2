@@ -54,7 +54,7 @@ function Tick(deltaTime)
      then
         --local classId = Equipment.owner:GetResource("CLASS_MAP")
         -- Starts at 0.1 and maxes out at 2
-        local regenAmount = GetRegenValue(Equipment.owner, classId)
+        local regenAmount = GetRegenValue(Equipment.owner, classId) * (Equipment.owner.serverUserData.playerStats.recoveryMul or 1  )
 
         Equipment.owner.hitPoints =
             CoreMath.Clamp(Equipment.owner.hitPoints + regenAmount, 0, Equipment.owner.maxHitPoints)

@@ -62,7 +62,7 @@ local function UpdateCombatAmmount(attackData)
     local source = attackData.source
     local amount = attackData.damage.amount
 
-    if amount > 0 then
+    if source and source:IsA("Player") and target and target:IsA("Player") and amount > 0 then
         local afterDmg = target.hitPoints - amount
         if afterDmg < 0 then
             amount = amount + afterDmg
@@ -77,7 +77,7 @@ local function UpdateCombatAmmount(attackData)
         local classDamage = source.serverUserData.classDamage[class] or 0
         classDamage = classDamage and classDamage + amount or amount
         source.serverUserData.classDamage[class] = classDamage
-    elseif amount < 0 then
+    elseif source and source:IsA("Player") and target and target:IsA("Player") and amount < 0 then
         if attackData.tags and (attackData.tags.Type == "HealthPotion" or attackData.tags.id == "Mage_T") then
             return
         end
@@ -91,7 +91,7 @@ local function UpdateCombatAmmount(attackData)
         source:AddResource(CONST.ROUND_HEALING, CoreMath.Round(amount))
         amount = amount * -1 -- turn back negative
     end
-    
+
     attackData.damage.amount = amount
     Events.Broadcast("AS.PlayerDamaged", attackData)
 end
@@ -220,12 +220,14 @@ function OnDied(attackData)
                     assistPlayer.team ~= target.team and
                     assist.timer and
                     assist.timer >= time()
-                then
+             then
                 local assistPlayerData = assistPlayer.serverUserData.tournament
-                assistPlayerData.killAssists = assistPlayerData.killAssists + 1
-                assistPlayer.serverUserData.tournament = assistPlayerData
+                if assistPlayerData then
+                    assistPlayerData.killAssists = assistPlayerData.killAssists + 1
+                    assistPlayer.serverUserData.tournament = assistPlayerData
                     --warn(assistPlayer.name .. " Got Assist")
-                assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
+                    assistPlayer:AddResource(CONST.COMBAT_STATS.ASSIST_KILLS, 1)
+                end
             end
         end
     end

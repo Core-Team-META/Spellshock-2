@@ -2061,7 +2061,7 @@ Assets {
           Location {
             X: -7.69140625
             Y: -39.4375
-            Z: 141.289063
+            Z: 141.289062
           }
           Rotation {
             Pitch: 18.4199886
@@ -3282,7 +3282,7 @@ Assets {
         Name: "right_shoulder"
         Transform {
           Location {
-            X: -6.05664063
+            X: -6.05664062
             Y: 23.6191406
             Z: 168.666016
           }
@@ -4199,7 +4199,7 @@ Assets {
           Location {
             X: -7.69140625
             Y: 41.7460938
-            Z: 141.289063
+            Z: 141.289062
           }
           Rotation {
             Pitch: 18.419981
@@ -5375,7 +5375,7 @@ Assets {
           }
           Rotation {
             Pitch: -0.000305175781
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: -89.9999695
           }
           Scale {
@@ -6247,5 +6247,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

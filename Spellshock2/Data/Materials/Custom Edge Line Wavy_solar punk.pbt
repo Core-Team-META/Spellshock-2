@@ -2,7 +2,7 @@ Assets {
   Id: 3680483983726814736
   Name: "Custom Edge Line Wavy_solar punk"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 8442400693995056375
     ParameterOverrides {

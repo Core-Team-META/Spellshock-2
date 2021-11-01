@@ -1,4 +1,4 @@
-﻿local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
+local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
 local ConeVertex = script:GetCustomProperty("ConeVertex"):WaitForObject()
 
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()

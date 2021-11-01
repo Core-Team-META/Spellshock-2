@@ -10,9 +10,9 @@ Assets {
         Name: "Spikes with light"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.907762647
+            Y: 0.907762647
+            Z: 0.907762647
           }
         }
         ParentId: 4781671109827199097
@@ -136,9 +136,9 @@ Assets {
         Name: "Cylinder - Chamfered Polished"
         Transform {
           Location {
-            X: 250.683411
-            Y: 2.03528023
-            Z: -2.79332256
+            X: 196.749939
+            Y: -0.355418086
+            Z: -1.89753342
           }
           Rotation {
             Pitch: -46.6489868
@@ -191,9 +191,9 @@ Assets {
         Name: "Cylinder - Chamfered Polished"
         Transform {
           Location {
-            X: 191.791153
-            Y: 1.45904708
-            Z: -0.913673341
+            X: 128.910934
+            Y: -2.67278576
+            Z: 1.61935782
           }
           Rotation {
             Pitch: -46.5671387
@@ -874,18 +874,18 @@ Assets {
           }
           Overrides {
             Name: "bp:Width"
-            Float: 1.42784882
+            Float: 6
           }
           Overrides {
             Name: "bp:Height"
-            Float: 1.6
+            Float: 6
           }
           Overrides {
             Name: "bp:Color B"
             Color {
               R: 0.65
-              G: 0.193708614
-              A: 1
+              G: 0.193708658
+              A: 0.0840000063
             }
           }
           Overrides {
@@ -893,7 +893,7 @@ Assets {
             Color {
               R: 0.0700000525
               G: 0.0208609495
-              A: 1
+              A: 0.088000007
             }
           }
           Overrides {
@@ -932,6 +932,15 @@ Assets {
           Overrides {
             Name: "bp:Rotation Rate"
             Float: -41
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 0.487748384
+              B: 0.149999976
+              A: 0.408000022
+            }
           }
         }
         Collidable_v2 {
@@ -1853,9 +1862,9 @@ Assets {
         Name: "Cylinder - Chamfered Polished"
         Transform {
           Location {
-            X: 157.766113
-            Y: -1.00604367
-            Z: 0.943297923
+            X: 107.798683
+            Y: -3.50018811
+            Z: 0.0206418056
           }
           Rotation {
             Pitch: -46.7739868
@@ -1963,16 +1972,16 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: 98.5676575
-            Y: -0.000349072245
-            Z: -0.000110539542
+            X: 59.9158173
+            Y: -0.000209443344
+            Z: 5.81787071e-06
           }
           Rotation {
           }
           Scale {
-            X: 0.429231286
-            Y: 1.11736751
-            Z: 1.11741912
+            X: 0.486272514
+            Y: 1.117383
+            Z: 1.11742842
           }
         }
         ParentId: 9806602594666413690
@@ -2391,5 +2400,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 92
 }

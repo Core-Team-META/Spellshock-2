@@ -189,6 +189,15 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
     AnchorLayout {
       SelfAnchor {
@@ -223,6 +232,7 @@ Objects {
   ChildIds: 12175380316231059901
   ChildIds: 11735929514260642779
   ChildIds: 1664786702072140966
+  ChildIds: 12170018650420203636
   ChildIds: 11971379403727237408
   UnregisteredParameters {
   }
@@ -230,7 +240,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -245,6 +255,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -298,7 +309,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "Message Banner"
+      Label: "Reward Points Granted"
       Color {
         R: 1
         G: 1
@@ -315,6 +326,636 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12170018650420203636
+  Name: "SS2 Alert Panel Reward Points"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 148093730151781395
+  ChildIds: 8019407927254488330
+  ChildIds: 1295205945485760008
+  ChildIds: 15762921844359760273
+  ChildIds: 1614087430844326833
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:BannerText"
+      ObjectReference {
+        SelfId: 11971379403727237408
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 694
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1614087430844326833
+  Name: "Background Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12170018650420203636
+  ChildIds: 5655611038507803003
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -42
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Panel {
+      IsClipping: true
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5655611038507803003
+  Name: "BG_1"
+  Transform {
+    Location {
+      X: -23295
+      Y: -32670
+      Z: 6395
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1614087430844326833
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 769
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
+      Color {
+        R: 0.0989583358
+        G: 0.023592703
+        A: 0.677000046
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 15762921844359760273
+  Name: "Border Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12170018650420203636
+  ChildIds: 3215286088070295674
+  ChildIds: 15801106240550853846
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 15801106240550853846
+  Name: "Border Bottom"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15762921844359760273
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Height: 2
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    Image {
+      Brush {
+        Id: 1814707273787853473
+      }
+      Color {
+        R: 0.651405811
+        G: 0.351532787
+        A: 1
+      }
+      TeamSettings {
+        UseTeamColor: true
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3215286088070295674
+  Name: "Border Top"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15762921844359760273
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Height: 2
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    Image {
+      Brush {
+        Id: 1814707273787853473
+      }
+      Color {
+        R: 0.651405811
+        G: 0.351532787
+        A: 1
+      }
+      TeamSettings {
+        UseTeamColor: true
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1295205945485760008
+  Name: "UI Image"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12170018650420203636
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 150
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 5196377603841433560
+      }
+      Color {
+        R: 0.020833334
+        G: 0.00496688485
+        A: 0.181000009
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8019407927254488330
+  Name: "CRYSTALS"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12170018650420203636
+  ChildIds: 10498878608385575737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 155
+    Height: 62
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      IsClipping: true
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10498878608385575737
+  Name: "UI Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8019407927254488330
+  ChildIds: 8892917063077059453
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: -17.7965183
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8892917063077059453
+  Name: "UI Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10498878608385575737
+  ChildIds: 6497045128146676001
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 80
+    Height: 80
+    UIX: 36.0198364
+    UIY: 21.5875626
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6497045128146676001
+  Name: "Coins"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8892917063077059453
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 15
+    Height: 15
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
       }
     }
     AnchorLayout {
@@ -369,6 +1010,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -421,6 +1063,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -534,6 +1177,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -766,6 +1410,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -819,6 +1464,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -870,6 +1516,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -925,6 +1572,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -1287,6 +1935,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -1648,6 +2297,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2009,6 +2659,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2364,6 +3015,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2416,6 +3068,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2541,6 +3194,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2797,6 +3451,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2865,6 +3520,7 @@ Objects {
     }
     UseParentWidth: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2927,6 +3583,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -3314,6 +3971,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -3701,6 +4359,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4085,6 +4744,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4213,6 +4873,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4601,6 +5262,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4989,6 +5651,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -5373,6 +6036,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -5567,6 +6231,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -5955,6 +6620,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -6343,6 +7009,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -6730,6 +7397,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7111,6 +7779,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7163,6 +7832,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7288,6 +7958,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7544,6 +8215,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7609,6 +8281,7 @@ Objects {
     }
     UseParentWidth: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7671,6 +8344,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -8058,6 +8732,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -8446,6 +9121,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -8833,6 +9509,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -9221,6 +9898,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -9603,6 +10281,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -9665,6 +10344,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -10052,6 +10732,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -10439,6 +11120,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -10805,7 +11487,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10820,6 +11502,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -10872,6 +11555,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -10985,6 +11669,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11217,6 +11902,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11270,6 +11956,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11599,6 +12286,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11790,6 +12478,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11841,6 +12530,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11962,6 +12652,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12098,6 +12789,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12220,6 +12912,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12274,6 +12967,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12328,6 +13022,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12383,6 +13078,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12768,6 +13464,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12823,6 +13520,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -13209,6 +13907,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -13439,6 +14138,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -13739,6 +14439,7 @@ Objects {
     }
     AddSizeToParentIfUsingParentSize: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -13792,6 +14493,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -13848,6 +14550,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -14241,6 +14944,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -14297,6 +15001,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -14691,6 +15396,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -14745,6 +15451,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -15139,6 +15846,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -15194,6 +15902,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -15589,6 +16298,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -15761,6 +16471,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -16048,6 +16759,12 @@ Objects {
       Name: "cs:LocalPlayerClassLevelup"
       ObjectReference {
         SelfId: 3183937714962445112
+      }
+    }
+    Overrides {
+      Name: "cs:SS2AlertPanelRewardPoints"
+      ObjectReference {
+        SelfId: 12170018650420203636
       }
     }
   }

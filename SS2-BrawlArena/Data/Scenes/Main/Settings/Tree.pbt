@@ -35,41 +35,6 @@ Objects {
   }
 }
 Objects {
-  Id: 13138408104099998467
-  Name: "Respawn Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16180445914411969106
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    RespawnSettings {
-      RespawnDelay: 1000
-      RespawnMode_v2 {
-        Value: "mc:erespawnmode:roundrobin"
-      }
-    }
-  }
-}
-Objects {
   Id: 12364410320731872468
   Name: "Game Settings"
   Transform {
@@ -145,6 +110,8 @@ Objects {
           HighDistance: 13000
         }
       }
+      PlayerInteractDistance: 500
+      PlayerInteractAngleDeg: 50
     }
   }
 }

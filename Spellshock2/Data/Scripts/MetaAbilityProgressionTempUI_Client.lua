@@ -1,4 +1,4 @@
-﻿--[[local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+--[[local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 
 local TEST = script:GetCustomProperty("TEST_LevelUpScript"):WaitForObject()

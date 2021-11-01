@@ -114,6 +114,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -199,6 +200,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -284,6 +286,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -369,6 +372,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -454,6 +458,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -539,6 +544,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -624,6 +630,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -709,6 +716,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -794,6 +802,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -879,6 +888,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {

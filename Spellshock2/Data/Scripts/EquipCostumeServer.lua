@@ -1,4 +1,4 @@
-﻿local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
+local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
 local HidePlayer = script:GetCustomProperty("HidePlayer")
 local CLASS_ID = ParentEquipment:GetCustomProperty("ClassID")
 local AnimationStance = ParentEquipment:GetCustomProperty("AnimationStance")

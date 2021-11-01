@@ -877,7 +877,7 @@ Assets {
         Name: "Large Wood Board 8m"
         Transform {
           Location {
-            X: 120.570313
+            X: 120.570312
             Y: 419.962891
             Z: 663.668945
           }
@@ -1252,7 +1252,7 @@ Assets {
         Name: "Large Wood Board 8m"
         Transform {
           Location {
-            X: 380.164063
+            X: 380.164062
             Y: 546.431641
             Z: 319.091797
           }
@@ -7302,5 +7302,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

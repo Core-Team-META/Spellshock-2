@@ -12,6 +12,10 @@ function OnGoingToTakeDamage(attackData)
         return
     end
 
+    if not attackData.object:IsA("Player") then
+        return
+    end
+
 	if attackData.damage.amount < 0 then
         if attackData.object.hitPoints - attackData.damage.amount > attackData.object.maxHitPoints then
             attackData.damage.amount = -(attackData.object.maxHitPoints-attackData.object.hitPoints) 

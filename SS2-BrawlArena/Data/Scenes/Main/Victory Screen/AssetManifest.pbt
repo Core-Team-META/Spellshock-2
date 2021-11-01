@@ -18,7 +18,7 @@ Assets {
 }
 Assets {
   Id: 12096222413138628974
-  Name: "Japan Corners 001"
+  Name: "Japanese Corners 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
@@ -77,6 +77,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
+  }
+}
+Assets {
+  Id: 4842806961858489681
+  Name: "Rock Flat 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_004"
   }
 }
 Assets {

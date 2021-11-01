@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16814107545177638090
+  Name: "Fabric Burlap Old 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fan_fabric_burlap_001_uv"
+  }
+}
+Assets {
   Id: 16670222695632479546
   Name: "Play Bold"
   PlatformAssetType: 28
@@ -152,6 +161,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14746711894802914664
+  Name: "Pipe"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_001"
+  }
+}
+Assets {
   Id: 14653709633606201813
   Name: "Fantasy Gauntlet Arm 01"
   PlatformAssetType: 1
@@ -221,6 +239,24 @@ Assets {
   PrimaryAsset {
     AssetType: "AnimatedMeshAssetRef"
     AssetId: "npc_human_guy_fantasy_001_ref"
+  }
+}
+Assets {
+  Id: 13784467660178889007
+  Name: "Human Gal 1"
+  PlatformAssetType: 17
+  PrimaryAsset {
+    AssetType: "AnimatedMeshAssetRef"
+    AssetId: "npc_human_gal_basic_001_ref"
+  }
+}
+Assets {
+  Id: 13352595166498895188
+  Name: "Large Round Wood Beam 8m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_large_beam_round_6m"
   }
 }
 Assets {
@@ -395,12 +431,57 @@ Assets {
   }
 }
 Assets {
+  Id: 10184847056121543272
+  Name: "Basic Material"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_pbr_material_001"
+  }
+}
+Assets {
+  Id: 10032220657942432256
+  Name: "Wooden Bucket"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bucket_001"
+  }
+}
+Assets {
+  Id: 9889561244489589632
+  Name: "Cone - Truncated Concave"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_truncated_concave_001"
+  }
+}
+Assets {
   Id: 9675776263369201294
   Name: "Fantasy Pommel 03"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_pommel_003"
+  }
+}
+Assets {
+  Id: 9651684874529213799
+  Name: "Metal Iron Rusted 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_iron_003"
+  }
+}
+Assets {
+  Id: 9564538927409393589
+  Name: "Stone Basic"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "stone_001"
   }
 }
 Assets {
@@ -419,6 +500,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "dcl_basicShapes"
+  }
+}
+Assets {
+  Id: 9223391083233434823
+  Name: "Cylinder - Chamfered Small Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_hq_003"
   }
 }
 Assets {
@@ -491,6 +581,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_bark_dead_001_uv"
+  }
+}
+Assets {
+  Id: 7631280887685656354
+  Name: "Cylinder - Chamfered"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_chamfer"
   }
 }
 Assets {
@@ -620,6 +719,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5646704112327633341
+  Name: "Sphere - Half"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hemisphere_001"
+  }
+}
+Assets {
   Id: 5475761223416488121
   Name: "Fabric Burlap New 01"
   PlatformAssetType: 2
@@ -746,6 +854,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3179843506183788979
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
+  }
+}
+Assets {
   Id: 3090596827184957478
   Name: "Rope"
   PlatformAssetType: 2
@@ -815,6 +932,15 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_gal_head_basic_003_ref"
+  }
+}
+Assets {
+  Id: 999045349070579722
+  Name: "Wooden Barrel"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_barrel_001"
   }
 }
 Assets {

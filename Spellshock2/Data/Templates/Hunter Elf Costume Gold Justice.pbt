@@ -40,7 +40,7 @@ Assets {
         Name: "right_prop"
         Transform {
           Location {
-            X: 6.61132813
+            X: 6.61132812
             Y: 103.652344
           }
           Rotation {
@@ -2913,7 +2913,7 @@ Assets {
         Transform {
           Location {
             X: 56.6259766
-            Y: 41.1914063
+            Y: 41.1914062
             Z: 19.9008789
           }
           Rotation {
@@ -3161,7 +3161,7 @@ Assets {
         Transform {
           Location {
             X: -1.78710938
-            Y: 6.60351563
+            Y: 6.60351562
             Z: 43.4331055
           }
           Rotation {
@@ -6446,7 +6446,7 @@ Assets {
           Location {
             X: 3.52636719
             Y: 137.176178
-            Z: 0.000122070313
+            Z: 0.000122070312
           }
           Rotation {
             Roll: 115.350937
@@ -6540,8 +6540,8 @@ Assets {
         Transform {
           Location {
             X: -0.00048828125
-            Y: 6.10351563e-05
-            Z: 0.000122070313
+            Y: 6.10351562e-05
+            Z: 0.000122070312
           }
           Rotation {
             Roll: 115.350937
@@ -7614,7 +7614,7 @@ Assets {
         Transform {
           Location {
             X: 8.7334528
-            Y: -5.89257813
+            Y: -5.89257812
             Z: 15.7118025
           }
           Rotation {
@@ -9836,5 +9836,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -2400,7 +2400,7 @@ Assets {
             Z: -10
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 5
@@ -2454,7 +2454,7 @@ Assets {
             Z: -10
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 5
@@ -2508,7 +2508,7 @@ Assets {
             Z: -10
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 5
@@ -2562,7 +2562,7 @@ Assets {
             Z: -5
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 2.5
@@ -2616,7 +2616,7 @@ Assets {
             Z: -5
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 1.25
@@ -3152,7 +3152,7 @@ Assets {
         Transform {
           Location {
             X: -3609.73462
-            Y: -7975.45313
+            Y: -7975.45312
             Z: -20
           }
           Rotation {
@@ -7001,6 +7001,15 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
+            IsHUD: true
+            CanvasWorldSize {
+              X: 1024
+              Y: 1024
+            }
+            TwoSided: true
+            TickWhenOffScreen: true
+            RedrawTime: 30
           }
           AnchorLayout {
             SelfAnchor {
@@ -7055,6 +7064,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7085,5 +7095,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

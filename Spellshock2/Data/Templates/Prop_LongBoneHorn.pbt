@@ -44,7 +44,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 14.3483887
             Z: 10
           }
@@ -115,7 +115,7 @@ Assets {
         Name: "Ropes"
         Transform {
           Location {
-            X: -0.965820313
+            X: -0.965820312
             Y: 34.2235107
             Z: 326.318909
           }
@@ -236,7 +236,7 @@ Assets {
           Rotation {
             Pitch: -18.995575
             Yaw: 1.68091774e-05
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.615370691
@@ -379,7 +379,7 @@ Assets {
           Rotation {
             Pitch: -22.79422
             Yaw: 0.000317340688
-            Roll: -0.000122070313
+            Roll: -0.000122070312
           }
           Scale {
             X: 2.63753271
@@ -1047,7 +1047,7 @@ Assets {
           Rotation {
             Pitch: -10.065155
             Yaw: 1.22538077e-05
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.532781422
@@ -1247,5 +1247,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

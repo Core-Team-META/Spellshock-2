@@ -396,7 +396,7 @@ Assets {
         Name: "Ring - Quarter Thick"
         Transform {
           Location {
-            X: 6.24414063
+            X: 6.24414062
             Y: -2.32275391
             Z: 108.256348
           }
@@ -1052,7 +1052,7 @@ Assets {
         Name: "Ring - Quarter Thick"
         Transform {
           Location {
-            X: 6.24414063
+            X: 6.24414062
             Y: -2.32275391
             Z: 108.256348
           }
@@ -1711,7 +1711,7 @@ Assets {
         Name: "Ring - Quarter Thick"
         Transform {
           Location {
-            X: 6.24414063
+            X: 6.24414062
             Y: -2.32275391
             Z: 108.256348
           }
@@ -2125,5 +2125,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

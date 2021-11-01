@@ -1755,7 +1755,7 @@ Assets {
         Transform {
           Location {
             X: 20.5240479
-            Y: -0.0668945313
+            Y: -0.0668945312
             Z: -5.00985718
           }
           Rotation {
@@ -2860,7 +2860,7 @@ Assets {
         Transform {
           Location {
             X: 19.3966064
-            Y: -6.02539063
+            Y: -6.02539062
             Z: -5.67272949
           }
           Rotation {
@@ -3061,7 +3061,7 @@ Assets {
         Transform {
           Location {
             X: 17.4509277
-            Y: 5.47070313
+            Y: 5.47070312
             Z: 16.8861237
           }
           Rotation {
@@ -4410,7 +4410,7 @@ Assets {
         Name: "Fantasy Shield 03"
         Transform {
           Location {
-            Y: 7.77539063
+            Y: 7.77539062
             Z: -20.6572266
           }
           Rotation {
@@ -6212,5 +6212,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

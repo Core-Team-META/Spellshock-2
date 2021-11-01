@@ -40,6 +40,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -576,5 +577,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

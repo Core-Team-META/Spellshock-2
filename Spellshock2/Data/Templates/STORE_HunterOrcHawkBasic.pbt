@@ -95,7 +95,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 14.3945313
+            X: 14.3945312
             Y: 0.0390625
             Z: 57.3828125
           }
@@ -612,7 +612,7 @@ Assets {
           Location {
             X: 2.00097656
             Y: -0.0205078125
-            Z: 23.1914063
+            Z: 23.1914062
           }
           Rotation {
             Pitch: 60.6763802
@@ -745,7 +745,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 1.08007813
+            X: 1.08007812
             Y: 1.41699219
             Z: 0.100097656
           }
@@ -863,7 +863,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 1.83007813
+            X: 1.83007812
             Y: 4.71386719
           }
           Rotation {
@@ -1598,7 +1598,7 @@ Assets {
         Name: "Gem - Trillion Polished"
         Transform {
           Location {
-            X: -7.05664063
+            X: -7.05664062
             Y: 26.6855469
             Z: 37.4309082
           }
@@ -1873,7 +1873,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -1.04882813
+            X: -1.04882812
             Y: -7.25
             Z: 1.20166016
           }
@@ -2236,7 +2236,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 0.684570313
+            X: 0.684570312
             Y: -4.48339844
             Z: 4.19091797
           }
@@ -2730,7 +2730,7 @@ Assets {
         Name: "Gem - Trillion Polished"
         Transform {
           Location {
-            X: -7.05664063
+            X: -7.05664062
             Y: -26.7265625
             Z: 37.4311523
           }
@@ -2805,7 +2805,7 @@ Assets {
         Transform {
           Location {
             X: -8.73339844
-            Y: -31.8945313
+            Y: -31.8945312
             Z: 36.6516113
           }
           Rotation {
@@ -3382,5 +3382,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

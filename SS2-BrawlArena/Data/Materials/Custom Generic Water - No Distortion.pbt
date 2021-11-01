@@ -2,7 +2,7 @@ Assets {
   Id: 8335153518807122013
   Name: "Elven Generic Water - No Distortion"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 211372444056789047
     ParameterOverrides {
@@ -30,7 +30,7 @@ Assets {
       }
       Overrides {
         Name: "opacity"
-        Float: 1
+        Float: 0.9
       }
       Overrides {
         Name: "u_tiles"
@@ -89,6 +89,10 @@ Assets {
       }
       Overrides {
         Name: "foam shift"
+        Float: 1
+      }
+      Overrides {
+        Name: "normal amount"
         Float: 1
       }
     }

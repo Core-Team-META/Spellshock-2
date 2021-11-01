@@ -48,7 +48,7 @@ function Attack()
 	local playerFacingDirection = SpecialAbility.owner:GetWorldRotation() * Vector3.FORWARD
 	local spherePosition = SpecialAbility.owner:GetWorldPosition() --+ (playerFacingDirection * 100)
 	local AttackRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_AttackRadius, SpecialAbility.name..": Radius")
-	local nearbyEnemies = Game.FindPlayersInCylinder(spherePosition, AttackRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
+	--local nearbyEnemies = Game.FindPlayersInCylinder(spherePosition, AttackRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	--CoreDebug.DrawSphere(spherePosition, AttackRadius, {duration = 5})
 	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 	local dmg = Damage.New()
@@ -57,8 +57,31 @@ function Attack()
 	dmg.sourcePlayer = SpecialAbility.owner
 	dmg.sourceAbility = SpecialAbility
 
+
+--[[
 	for _, enemy in pairs(nearbyEnemies) do
 		META_AP().SpawnAsset(PlayerVFX.Target, {position=enemy:GetWorldPosition()})
+		local attackData = {
+			object = enemy,
+			damage = dmg,
+			source = dmg.sourcePlayer,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Assassin_E"}
+		}
+		COMBAT().ApplyDamage(attackData)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
+	end	]]--
+
+		-- Get enemies in a sphere
+		local enemiesInRange = COMBAT().FindInSphere(SpecialAbility.owner:GetWorldPosition(), AttackRadius,
+		{ignorePlayers = SpecialAbility.owner, ignoreTeams = COMBAT().GetTeam(SpecialAbility.owner)})
+	for _, enemy in pairs(enemiesInRange) do
+		META_AP().SpawnAsset(PlayerVFX.Target, {position=enemy:GetWorldPosition()})
+		local enemy = enemy
+		if not enemy:IsA("Player") then
+			enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
+		end
 		local attackData = {
 			object = enemy,
 			damage = dmg,

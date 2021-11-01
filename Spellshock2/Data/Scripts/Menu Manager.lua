@@ -1,4 +1,4 @@
-﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
 -- Date: 04/02/2021
 -- Version 0.0.1
 --===========================================================================================
@@ -26,7 +26,7 @@ _G.MENU_TABLE = {
 	PerkShop = 8,
 	DailyShop = 9,
 	Tutorial_Slides = 10,
-	TourneyPopup = 11
+	Training = 11
 }
 
 function SpamPrevent()
@@ -128,12 +128,12 @@ function OnBindingPressed(whichPlayer, binding)
 				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 			end
 		end
-	elseif binding == "ability_extra_36" and SpamPrevent() then -- J
+	--[[elseif binding == "ability_extra_36" and SpamPrevent() then -- J
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["TourneyPopup"]) -- Show
 		elseif _G.CurrentMenu == _G.MENU_TABLE["TourneyPopup"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
-		end
+		end]]
 
 --[[elseif (binding == "ability_extra_51" and SpamPrevent()) then -- F2 and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		if LOCAL_PLAYER.clientUserData.hasSkippedReward or ((CurrentGameState == ABGS.GAME_STATE_LOBBY) or (CurrentGameState == ABGS.GAME_STATE_ROUND)) 
@@ -147,6 +147,16 @@ function OnBindingPressed(whichPlayer, binding)
 		end]]--
 	end
 end
+
+function OnEscPressed(player, params)
+    print("ESC Pressed!")
+    if _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and _G.CurrentMenu ~= _G.MENU_TABLE["Respawn"] 
+    and _G.CurrentMenu ~= _G.MENU_TABLE["Rewards"] then
+		params.openPauseMenu = false
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    end
+end
+
 
 function Tick()
 	if LOCAL_PLAYER.isDead and _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] and _G.CurrentMenu ~= _G.MENU_TABLE["Respawn"] then
@@ -165,6 +175,7 @@ end
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Changing Menu", OnMenuChanged)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+Input.escapeHook:Connect(OnEscPressed)
 
 -- Initalize _G.CurrentMenu
 if

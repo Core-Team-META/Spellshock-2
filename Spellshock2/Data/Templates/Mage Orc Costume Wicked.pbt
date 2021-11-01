@@ -1480,7 +1480,7 @@ Assets {
           }
           Rotation {
             Pitch: -3.04830933
-            Yaw: -89.1757813
+            Yaw: -89.1757812
             Roll: -131.120773
           }
           Scale {
@@ -1742,7 +1742,7 @@ Assets {
           }
           Rotation {
             Pitch: -3.04830933
-            Yaw: -89.1757813
+            Yaw: -89.1757812
             Roll: -131.120773
           }
           Scale {
@@ -2825,7 +2825,7 @@ Assets {
         Name: "left_shoulder"
         Transform {
           Location {
-            X: -6.05664063
+            X: -6.05664062
             Y: -23.6191406
             Z: 168.666016
           }
@@ -3780,7 +3780,7 @@ Assets {
         Name: "Grass Tall"
         Transform {
           Location {
-            X: 0.00122070313
+            X: 0.00122070312
             Y: 9.2824707
             Z: -21.5226135
           }
@@ -4167,7 +4167,7 @@ Assets {
           Location {
             X: -7.69140625
             Y: -39.4375
-            Z: 141.289063
+            Z: 141.289062
           }
           Rotation {
             Pitch: 18.4199886
@@ -6028,7 +6028,7 @@ Assets {
         Transform {
           Location {
             X: 1.9375
-            Y: -52.7226563
+            Y: -52.7226562
             Z: 118.995117
           }
           Rotation {
@@ -6822,7 +6822,7 @@ Assets {
         Name: "right_shoulder"
         Transform {
           Location {
-            X: -6.05664063
+            X: -6.05664062
             Y: 23.6191406
             Z: 168.666016
           }
@@ -6995,7 +6995,7 @@ Assets {
             Z: -2.82415605
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: 179.999817
             Roll: -23.8510742
           }
@@ -8970,7 +8970,7 @@ Assets {
           Location {
             X: -7.69140625
             Y: 41.7460938
-            Z: 141.289063
+            Z: 141.289062
           }
           Rotation {
             Pitch: 18.419981
@@ -9260,7 +9260,7 @@ Assets {
         Transform {
           Location {
             X: 1.9375
-            Y: 52.7226563
+            Y: 52.7226562
             Z: 118.995605
           }
           Rotation {
@@ -12939,5 +12939,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -100,7 +100,7 @@ function AddImpulseToPlayer(player)
 end
 
 function OnBeginOverlap(thisTrigger, other)
-	if other:IsA("Player") and other.team ~= SpecialAbility.owner.team then
+	if (other:IsA("Player") or other.name == "Collider") and other.team ~= SpecialAbility.owner.team then
 		AddImpulseToPlayer(other)
 	end
 end
@@ -145,6 +145,8 @@ function ToggleDash(mode)
 		if SpecialAbility and Object.IsValid(SpecialAbility) and originalPlayerSettings ~= {} then
 			SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
 			SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
+			SpecialAbility.owner.groundFriction = 8
+			SpecialAbility.owner.movementControlMode = MovementControlMode.LOOK_RELATIVE
 			_G["Consumables"].SetMovement(Equipment.owner)
 		end
 	end

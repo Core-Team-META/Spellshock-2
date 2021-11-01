@@ -2,7 +2,7 @@ Assets {
   Id: 9675454739010876153
   Name: "Custom Detail 1 from Fantasy Castle Stairs Spiral Trim 01 - Large"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 10170820684068197978
     ParameterOverrides {

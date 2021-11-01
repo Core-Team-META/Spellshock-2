@@ -30,7 +30,7 @@ local function SetPlayerMountSpeed(player, level)
     local mountSpeed = MOUNT_LEVELS[level]
     player:SetResource("MOUNT_LEVEL", level)
     if mountSpeed then
-        mountSpeed:ApplyToPlayer(player)
+        --mountSpeed:ApplyToPlayer(player)
     end
 end
 ------------------------------------------------------------------------------------------------------------------------

@@ -674,7 +674,7 @@ Assets {
         Transform {
           Location {
             X: 49.1738281
-            Y: 44.3476563
+            Y: 44.3476562
             Z: 1123.90576
           }
           Rotation {
@@ -735,7 +735,7 @@ Assets {
         Name: "Fern 03"
         Transform {
           Location {
-            X: 38.9414063
+            X: 38.9414062
             Y: 39.9941406
             Z: 1109.49121
           }
@@ -1062,5 +1062,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -37,7 +37,7 @@ Assets {
         Name: "Coral Branches Big"
         Transform {
           Location {
-            X: -3.51757813
+            X: -3.51757812
             Y: 1.6953125
             Z: 32.9360352
           }
@@ -243,5 +243,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

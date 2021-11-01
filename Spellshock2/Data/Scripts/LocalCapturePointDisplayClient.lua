@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Copyright 2019 Manticore Games, Inc. 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -18,6 +18,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- Internal custom properties
 local ABCP = require(script:GetCustomProperty("API_BasicCapturePoint"))
 local AS = require(script:GetCustomProperty("API_Spectator"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local CANVAS = script:GetCustomProperty("Canvas"):WaitForObject()
 local NAME_TEXT = script:GetCustomProperty("NameText"):WaitForObject()
@@ -27,6 +28,7 @@ local RIGHT_PROGRESS_BAR = script:GetCustomProperty("RightProgressBar"):WaitForO
 local LEFT_THRESHOLD_MARKER = script:GetCustomProperty("LeftThresholdMarker"):WaitForObject()
 local RIGHT_THRESHOLD_MARKER = script:GetCustomProperty("RightThresholdMarker"):WaitForObject()
 local CONTESTED_TEXT_PANEL = script:GetCustomProperty("ContestedText"):WaitForObject()
+local CaptureHintPanel = script:GetCustomProperty("CaptureHintPanel"):WaitForObject()
 
 -- User exposed properties
 local SHOW_POINT_NAME = COMPONENT_ROOT:GetCustomProperty("ShowPointName")
@@ -132,15 +134,6 @@ function Tick(deltaTime)
 
         -- Set progress
         RIGHT_PROGRESS_BAR.progress = capturePointState.captureProgress
-
-        --[[ Set color
-        if capturePointState.owningTeam == LOCAL_PLAYER.team then
-            RIGHT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
-        elseif capturePointState.owningTeam ~= 0 then
-            RIGHT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
-        else
-            RIGHT_PROGRESS_BAR:SetFillColor(NEUTRAL_COLOR)
-        end ]]
     else
         LEFT_PROGRESS_BAR.visibility = Visibility.FORCE_ON
         if SHOW_THRESHOLD_MARKERS then
@@ -160,28 +153,19 @@ function Tick(deltaTime)
             LEFT_PROGRESS_BAR.progress = CoreMath.Round(capturePointState.captureProgress, 2)
             RIGHT_PROGRESS_BAR.progress = 0.0
         end
-
-        --[[ Update colors
-        if capturePointState.owningTeam ~= 0 then
-            LEFT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
-            RIGHT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
-        else
-            LEFT_PROGRESS_BAR:SetFillColor(NEUTRAL_COLOR)
-            RIGHT_PROGRESS_BAR:SetFillColor(NEUTRAL_COLOR)
-        end]]
     end
-
-	--[[ Set progress bar colors
-	if LOCAL_PLAYER.team == 1 then -- Orcs
-		LEFT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
-        RIGHT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
-	else -- Elf
-		LEFT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
-        RIGHT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
-	end]]
 	
 	LEFT_PROGRESS_BAR:SetFillColor(_G.TeamColors[3-LOCAL_PLAYER.team])
     RIGHT_PROGRESS_BAR:SetFillColor(_G.TeamColors[LOCAL_PLAYER.team])
+
+    -- Show/Hide capture hint message
+    local totalBattles = LOCAL_PLAYER:GetResource(CONST.TOTAL_GAMES)
+    if totalBattles < 6 and (capturePointState.capturePlayer == nil or capturePointState.capturePlayer == "") 
+    and not (capturePointState.owningTeam == LOCAL_PLAYER.team and capturePointState.captureProgress == 1) then
+        CaptureHintPanel.visibility = Visibility.INHERIT
+    else
+        CaptureHintPanel.visibility = Visibility.FORCE_OFF
+    end
 
     -- Show threshold markers
     if SHOW_THRESHOLD_MARKERS then
@@ -198,6 +182,7 @@ function Tick(deltaTime)
 end
 
 -- Initialize
+CaptureHintPanel.visibility = Visibility.FORCE_OFF
 if not SHOW_POINT_NAME then
     NAME_TEXT.visibility = Visibility.FORCE_OFF
 end

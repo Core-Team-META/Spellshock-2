@@ -2,15 +2,14 @@ Assets {
   Id: 5313591537705840007
   Name: "Custom Base Material from Human Gal 2"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 8409460106290987535
     ParameterOverrides {
       Overrides {
         Name: "secondary color"
         Color {
-          R: 0.86
-          G: 0.290463597
+          R: 1
           A: 1
         }
       }

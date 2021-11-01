@@ -100,7 +100,7 @@ Assets {
         Name: "Game Portal"
         Transform {
           Location {
-            Y: -4.97851563
+            Y: -4.97851562
             Z: -8.72924805
           }
           Rotation {
@@ -581,5 +581,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

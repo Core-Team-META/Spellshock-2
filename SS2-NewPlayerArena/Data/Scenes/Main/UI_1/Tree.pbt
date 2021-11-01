@@ -1,6 +1,38 @@
 Name: "UI_1"
 RootId: 18118910128564520673
 Objects {
+  Id: 5811339876210712894
+  Name: "Training UI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18118910128564520673
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Quest UI"
+  }
+}
+Objects {
   Id: 6074680472044671425
   Name: "Top Players"
   Transform {

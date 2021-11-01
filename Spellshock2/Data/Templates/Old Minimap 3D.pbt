@@ -2067,7 +2067,7 @@ Assets {
         Name: "Plane 1m"
         Transform {
           Location {
-            X: 8157.39063
+            X: 8157.39062
             Y: 5873.53271
             Z: -1596.96973
           }
@@ -2796,7 +2796,7 @@ Assets {
         Transform {
           Location {
             X: -9178.29
-            Y: -17628.1563
+            Y: -17628.1562
             Z: -1445.1438
           }
           Rotation {
@@ -3748,7 +3748,7 @@ Assets {
         Transform {
           Location {
             X: 1411.27832
-            Y: -9478.14063
+            Y: -9478.14062
             Z: -1673.76978
           }
           Rotation {
@@ -4309,7 +4309,7 @@ Assets {
           Location {
             X: 2610.58838
             Y: 15346.7559
-            Z: -722.382813
+            Z: -722.382812
           }
           Rotation {
             Yaw: -57.0369873
@@ -4869,7 +4869,7 @@ Assets {
           Location {
             X: -8733.2207
             Y: 7416.84717
-            Z: -2298.89063
+            Z: -2298.89062
           }
           Rotation {
             Yaw: -13.3076782
@@ -5261,7 +5261,7 @@ Assets {
           Location {
             X: -9506.96484
             Y: 7084.87109
-            Z: -2298.89063
+            Z: -2298.89062
           }
           Rotation {
             Yaw: -66.7782898
@@ -5317,7 +5317,7 @@ Assets {
           Location {
             X: -10848.249
             Y: 6274.75244
-            Z: -2298.89063
+            Z: -2298.89062
           }
           Rotation {
             Yaw: -51.2081909
@@ -5373,7 +5373,7 @@ Assets {
           Location {
             X: -11970.6191
             Y: 5141.81152
-            Z: -2298.89063
+            Z: -2298.89062
           }
           Rotation {
             Yaw: -38.1111145
@@ -5429,7 +5429,7 @@ Assets {
           Location {
             X: -12914.2588
             Y: 3860.83789
-            Z: -2298.89063
+            Z: -2298.89062
           }
           Rotation {
             Yaw: -35.0487976
@@ -13729,5 +13729,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

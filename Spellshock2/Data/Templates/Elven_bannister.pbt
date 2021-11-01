@@ -206,7 +206,7 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 3.60351563
+            X: 3.60351562
             Y: 26.7910156
             Z: 34.362793
           }
@@ -265,8 +265,8 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: -14.9570313
-            Y: 86.2695313
+            X: -14.9570312
+            Y: 86.2695312
             Z: 34.362793
           }
           Rotation {
@@ -385,7 +385,7 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: -5.56445313
+            X: -5.56445312
             Y: 83.9023438
             Z: 171.216797
           }
@@ -510,5 +510,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

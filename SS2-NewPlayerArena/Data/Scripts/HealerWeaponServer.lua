@@ -8,6 +8,7 @@ local function META_AP()
 end
 
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject(1) or script.parent
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 local DEFAULT_DamageRange = {min=30, max=40}
 
 local BindingName = script:GetCustomProperty("BindingName")
@@ -22,7 +23,7 @@ end
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount
-	if spamPrevent < time() and Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
+	if spamPrevent < time() and Object.IsValid(impactData.targetObject) and (impactData.targetObject:IsA("Player") or impactData.targetObject.name == "Collider") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Healer Staff: Damage Range")
 		amount = math.random(rangeTable.min, rangeTable.max)
 	else 
@@ -51,7 +52,7 @@ function OnTargetImpact(theWeapon, impactData)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "BasicAttack", weapon = WEAPON}
+		tags = {id = "BasicAttack", weapon = WEAPON, equipment = EQUIPMENT}
 	}
 
     COMBAT().ApplyDamage(attackData)

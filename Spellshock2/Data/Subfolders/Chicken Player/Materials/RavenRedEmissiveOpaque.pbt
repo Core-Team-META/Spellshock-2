@@ -2,7 +2,7 @@ Assets {
   Id: 4441027262456668814
   Name: "RavenRedEmissiveOpaque"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 5351428073291024820
     ParameterOverrides {

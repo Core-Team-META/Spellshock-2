@@ -44,11 +44,12 @@ local function SetPlayerWinLoss(player, orcScore, elfScore)
             (orcScore < elfScore and player.team == CONST.TEAM.ELF)
      then
         player:AddResource(CONST.GAMES_WON, 1)
+        Events.Broadcast("AddRewardPointsProgress", player, 2, 1)
     else
         player:AddResource(CONST.GAMES_LOST, 1)
         winValue = 0
     end
-
+    Events.Broadcast("AddRewardPointsProgress", player, 1, 1)
     weightedWinRate = weightedWinRate * (1 - NEW_GAME_WEIGHT) + winValue * NEW_GAME_WEIGHT
 
     player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = weightedWinRate

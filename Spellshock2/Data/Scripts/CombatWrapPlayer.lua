@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 	Combat Wrap - Player
 	v0.11.0
 	by: standardcombo

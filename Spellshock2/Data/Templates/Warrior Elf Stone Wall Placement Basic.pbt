@@ -836,7 +836,7 @@ Assets {
         Name: "Decal Soil Cracks Big 01"
         Transform {
           Location {
-            X: -82.5195313
+            X: -82.5195312
             Y: -382.310547
           }
           Rotation {
@@ -887,7 +887,7 @@ Assets {
         Name: "Decal Soil Cracks Big 01"
         Transform {
           Location {
-            X: -82.5195313
+            X: -82.5195312
             Y: 382.310547
           }
           Rotation {
@@ -1603,5 +1603,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

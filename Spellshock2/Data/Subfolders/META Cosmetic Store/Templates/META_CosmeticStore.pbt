@@ -589,6 +589,7 @@ Assets {
           }
           MinPitch: -89
           MaxPitch: 89
+          UseAsAudioListener: true
         }
       }
       Objects {
@@ -1477,7 +1478,7 @@ Assets {
         Transform {
           Location {
             X: 83.3733521
-            Y: 6.88476563
+            Y: 6.88476562
             Z: 294.798798
           }
           Rotation {
@@ -2377,7 +2378,7 @@ Assets {
         Transform {
           Location {
             X: 83.3733521
-            Y: 6.88476563
+            Y: 6.88476562
             Z: 294.798798
           }
           Rotation {
@@ -3367,6 +3368,15 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
+            IsHUD: true
+            CanvasWorldSize {
+              X: 1024
+              Y: 1024
+            }
+            TwoSided: true
+            TickWhenOffScreen: true
+            RedrawTime: 30
           }
           AnchorLayout {
             SelfAnchor {
@@ -3419,6 +3429,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3473,6 +3484,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3594,6 +3606,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3887,6 +3900,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3940,6 +3954,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4302,6 +4317,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4659,6 +4675,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4712,6 +4729,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5070,6 +5088,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5191,6 +5210,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5764,6 +5784,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6208,6 +6229,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6646,6 +6668,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6763,6 +6786,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7004,6 +7028,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7184,6 +7209,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7366,6 +7392,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7695,6 +7722,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7872,6 +7900,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7927,6 +7956,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8101,6 +8131,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9439,6 +9470,15 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
+            IsHUD: true
+            CanvasWorldSize {
+              X: 1024
+              Y: 1024
+            }
+            TwoSided: true
+            TickWhenOffScreen: true
+            RedrawTime: 30
           }
           AnchorLayout {
             SelfAnchor {
@@ -9488,6 +9528,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9773,6 +9814,6 @@ Assets {
   Marketplace {
     Description: "This is a store component that allows creators to to sell cosmetic items in their game using currency tracked with player resource. The store is designed to make it easy \r\nfor creators to add and remove cosmetic items in the store and includes features such as type and rarity filters. This version of the store is also compatable with the PERKS\r\ncomponents featured in the Perks Examples Community Project.\r\n\r\nThis set comes with:\r\n 1) STORE_CosmeticStore\r\n 2) STORE_StoreContents\r\n 3) STORE_CurrenciesDefinitions \r\n 3) STORE_TagDefinitions\r\n 4) STORE_TypeDefinitions\r\n 5) STORE_SampleTrigger\r\n 6) STORE_SampleUI\r\n\r\nMake sure to read the META_CosmeticStore_README file for setup and configuration instructions\r\n\r\nMessage @Buckmonster or @estlogic in Discord with feedback or feature requests - https://discord.com/invite/core-creators\r\n\r\nThanks to:\r\n\342\200\242 @Montoli for scripting\r\n\342\200\242 @Mucusinator for first pass on UI\r\n\342\200\242 @KonzZwodrei for second pass on UI\r\n\342\200\242 @Buckmoster for implementing KonzZwodrei\'s UI and being META lead\r\n\342\200\242 @standardcombo for review and documentation template\r\n\342\200\242 @Aggripina for thumbnail design\r\n\r\nChangelog.\r\nv1.0.1\r\n* Cosmetic item purchases are now verified server-side.\r\n* Added support for multiple currencies.\r\n\r\nv1.0.2\r\n* Fixed a bug where selecting the filter buttons caused an error.\r\n* Added an additional function to handle server-side broadcasts (for Perks Examples)."
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
   DirectlyPublished: true
 }

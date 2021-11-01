@@ -283,7 +283,7 @@ Objects {
   Name: "Map Camera"
   Transform {
     Location {
-      X: -27076.4063
+      X: -27076.4062
       Y: 11593.4746
       Z: 36532.3086
     }
@@ -326,6 +326,7 @@ Objects {
     }
     MinPitch: -89
     MaxPitch: 89
+    UseAsAudioListener: true
   }
 }
 Objects {
@@ -361,6 +362,15 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
     AnchorLayout {
       SelfAnchor {
@@ -412,6 +422,15 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
   }
 }
@@ -451,6 +470,15 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
   }
 }

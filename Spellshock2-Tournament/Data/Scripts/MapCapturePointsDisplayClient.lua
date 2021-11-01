@@ -1,4 +1,4 @@
-﻿-- Internal custom properties --
+-- Internal custom properties --
 local ABCP = require(script:GetCustomProperty("ABCP"))
 local AS = require(script:GetCustomProperty("AS"))
 

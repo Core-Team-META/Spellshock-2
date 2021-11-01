@@ -24,6 +24,10 @@ Objects {
       Name: "cs:Tourney"
       String: "68b525/spellshock-2-tournament"
     }
+    Overrides {
+      Name: "cs:TrainingArena"
+      String: "cbe76f/spellshock-2-training"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

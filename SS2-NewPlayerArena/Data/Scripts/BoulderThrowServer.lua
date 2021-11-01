@@ -68,7 +68,7 @@ function OnStunBeginOverlap(thisTrigger, other)
 end
 
 function OnBoulderBeginOverlap(thisTrigger, other)
-	if not Object.IsValid(PickupAbility) or not other:IsA("Player")
+	if not Object.IsValid(PickupAbility)
 	or other == PickupAbility.owner then return end
 	
 	if COMBAT().IsDead(other) then return end
@@ -76,8 +76,9 @@ function OnBoulderBeginOverlap(thisTrigger, other)
 	local otherTeam = COMBAT().GetTeam(other)
 	if not Object.IsValid(PickupAbility.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, PickupAbility.owner.team) then return end
-	
+	if other:IsA("Player") then
 	Events.BroadcastToPlayer(other, "Camera Shake", 2, 90, 5)
+	end
 			
 	local dmg = Damage.New()
 	dmg.amount = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")

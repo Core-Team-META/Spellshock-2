@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 942795955972537342
+        ParentId: 17533471905452040579
         ChildIds: 12212383084261177572
         ChildIds: 6775656757682069790
         ChildIds: 4767913856677695152
@@ -60,6 +60,12 @@ Assets {
               SubObjectId: 8189025233330705345
             }
           }
+          Overrides {
+            Name: "cs:CheckmarkPanel"
+            ObjectReference {
+              SubObjectId: 1158748863911665839
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -83,6 +89,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -139,6 +146,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -739,6 +747,7 @@ Assets {
         ChildIds: 13698367038315432998
         ChildIds: 18210383208304509185
         ChildIds: 11783388667147017031
+        ChildIds: 1158748863911665839
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -757,6 +766,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1566,6 +1576,133 @@ Assets {
         }
       }
       Objects {
+        Id: 1158748863911665839
+        Name: "Checkmark Panel"
+        Transform {
+          Location {
+            X: -3168.82422
+            Y: -9418.01563
+            Z: 5337.52637
+          }
+          Rotation {
+            Yaw: -44.7412148
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6775656757682069790
+        ChildIds: 11792215112116511455
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 2
+          Height: 2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+            Opacity: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11792215112116511455
+        Name: "Checkmark"
+        Transform {
+          Location {
+            X: 2.49473378e-05
+            Y: 0.00552421529
+          }
+          Rotation {
+            Yaw: 6.48867863e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1158748863911665839
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: -20
+          Height: -20
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 4479180494355222818
+            }
+            Color {
+              R: 0.874000072
+              G: 0.804635108
+              A: 0.8
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
         Id: 4767913856677695152
         Name: "SHINE_TL"
         Transform {
@@ -1729,6 +1866,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2139,6 +2277,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2198,6 +2337,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2725,6 +2865,15 @@ Assets {
       }
     }
     Assets {
+      Id: 4479180494355222818
+      Name: "Icon Checkmark"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_Checkmark"
+      }
+    }
+    Assets {
       Id: 8578995028087510781
       Name: "UI Gradient Circular 001"
       PlatformAssetType: 9
@@ -2792,5 +2941,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 87
 }

@@ -457,7 +457,7 @@ Assets {
         Transform {
           Location {
             X: 1.29492188
-            Y: 0.192382813
+            Y: 0.192382812
             Z: 71.8486328
           }
           Rotation {
@@ -1346,7 +1346,7 @@ Assets {
         Name: "upper_spine"
         Transform {
           Location {
-            X: -1.89257813
+            X: -1.89257812
             Y: -15.0058594
             Z: 40.7827148
           }
@@ -1704,7 +1704,7 @@ Assets {
         Transform {
           Location {
             X: -0.55859375
-            Y: 3.65820313
+            Y: 3.65820312
             Z: 43.7163086
           }
           Rotation {
@@ -5719,7 +5719,7 @@ Assets {
             Z: 17.849802
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: -89.9998779
             Roll: 179.999893
           }
@@ -6866,5 +6866,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

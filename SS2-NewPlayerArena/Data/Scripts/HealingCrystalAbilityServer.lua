@@ -87,9 +87,10 @@ function Tick(dTime)
 				break
 			end 
 			
-			if Object.IsValid(thisObject) and thisObject:IsA("Player") and not thisObject.isDead then
+			if Object.IsValid(thisObject) and (thisObject:IsA("Player") or thisObject.name == "Collider") and not COMBAT().IsDead(thisObject) then
 				local dmg = Damage.New()
 				local HealAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_HealAmount, SpecialAbility.name..": Heal Amount")
+			
 				if thisObject.team == SpecialAbility.owner.team then
 					dmg.amount = -HealAmount
 				else
@@ -108,7 +109,7 @@ function Tick(dTime)
 					tags = {id = "Healer_E"}
 				}
 
-				if dmg.amount < 0 and thisObject.hitPoints < thisObject.maxHitPoints then
+				if (dmg.amount < 0 and thisObject:IsA("Player") and thisObject.hitPoints < thisObject.maxHitPoints) or (dmg.amount < 0 and not thisObject:IsA("Player")) then
 					COMBAT().ApplyDamage(attackData)	
 				elseif dmg.amount > 0 then
 					COMBAT().ApplyDamage(attackData)

@@ -1,4 +1,4 @@
-﻿local sockets = script:GetChildren()
+local sockets = script:GetChildren()
 local propFantasyHumanGuy = script:GetCustomProperty("FantasyHumanGuy"):WaitForObject()
 
 for idx, child in pairs(sockets) do  --  for all the socket folders under the script node...

@@ -361,6 +361,7 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -412,6 +413,7 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
     }
   }
 }
@@ -451,6 +453,7 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
     }
   }
 }

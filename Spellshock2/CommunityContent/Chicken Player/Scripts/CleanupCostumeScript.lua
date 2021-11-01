@@ -1,4 +1,4 @@
-﻿local costumeGEO = script.parent
+local costumeGEO = script.parent
 local costumeInitialized = false
 
 local propertyTable = costumeGEO:GetCustomProperties()

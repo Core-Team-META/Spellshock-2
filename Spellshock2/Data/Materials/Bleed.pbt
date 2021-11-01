@@ -2,7 +2,7 @@ Assets {
   Id: 15520903157796868046
   Name: "BleedMaterial"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 12315230890479394018
     ParameterOverrides {

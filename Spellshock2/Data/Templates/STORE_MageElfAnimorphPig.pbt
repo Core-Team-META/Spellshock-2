@@ -158,7 +158,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            Z: 34.7851563
+            Z: 34.7851562
           }
           Rotation {
             Yaw: -30
@@ -3629,7 +3629,7 @@ Assets {
           Location {
             X: -10.9072266
             Y: 43.2578125
-            Z: 92.2226563
+            Z: 92.2226562
           }
           Rotation {
             Pitch: 3.23088431
@@ -4339,5 +4339,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

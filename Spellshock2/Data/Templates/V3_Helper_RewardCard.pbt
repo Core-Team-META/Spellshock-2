@@ -58,6 +58,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -120,6 +121,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -177,6 +179,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -433,6 +436,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -620,6 +624,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -672,6 +677,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -907,6 +913,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1140,6 +1147,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1194,6 +1202,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1248,6 +1257,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1301,6 +1311,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -1662,6 +1673,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2033,6 +2045,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2149,6 +2162,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2269,6 +2283,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2760,6 +2775,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -2996,6 +3012,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3081,7 +3098,7 @@ Assets {
         Transform {
           Location {
             X: 18290.0215
-            Y: 20960.0313
+            Y: 20960.0312
             Z: 8130
           }
           Rotation {
@@ -3176,6 +3193,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3544,6 +3562,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -3629,7 +3648,7 @@ Assets {
         Transform {
           Location {
             X: 18290.0215
-            Y: 20960.0313
+            Y: 20960.0312
             Z: 8130
           }
           Rotation {
@@ -3729,6 +3748,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4117,6 +4137,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4445,6 +4466,7 @@ Assets {
           }
           AddSizeToParentIfUsingParentSize: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4501,6 +4523,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4553,6 +4576,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4607,6 +4631,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4726,6 +4751,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4844,6 +4870,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -4960,6 +4987,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5262,6 +5290,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5506,6 +5535,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5750,6 +5780,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -5874,6 +5905,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6171,6 +6203,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6289,6 +6322,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6522,6 +6556,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6576,6 +6611,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -6639,6 +6675,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7244,6 +7281,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7607,6 +7645,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -7978,6 +8017,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8094,6 +8134,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8216,6 +8257,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -8842,6 +8884,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9081,6 +9124,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9166,7 +9210,7 @@ Assets {
         Transform {
           Location {
             X: 18290.0215
-            Y: 20960.0313
+            Y: 20960.0312
             Z: 8130
           }
           Rotation {
@@ -9330,6 +9374,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9505,6 +9550,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9810,6 +9856,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9884,6 +9931,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -9944,6 +9992,10 @@ Assets {
               G: 0.774834216
             }
             Percent: 1
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -10005,6 +10057,10 @@ Assets {
               B: 0.5
             }
             Percent: 0.264941484
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -10066,6 +10122,10 @@ Assets {
               B: 0.5
             }
             Percent: 0.13884142
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -10123,6 +10183,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -10413,6 +10474,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -10673,7 +10735,7 @@ Assets {
         Name: "LVL CURRENT"
         Transform {
           Location {
-            X: -8838.82813
+            X: -8838.82812
             Y: 64551.8125
             Z: -1445
           }
@@ -10710,6 +10772,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -10954,6 +11017,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11170,7 +11234,7 @@ Assets {
         Name: "LVL NEXT"
         Transform {
           Location {
-            X: -8838.82813
+            X: -8838.82812
             Y: 64551.8125
             Z: -1445
           }
@@ -11207,6 +11271,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11451,6 +11516,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11704,6 +11770,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -11788,7 +11855,7 @@ Assets {
         Transform {
           Location {
             X: 18290.0215
-            Y: 20960.0313
+            Y: 20960.0312
             Z: 8130
           }
           Rotation {
@@ -12149,6 +12216,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12339,6 +12407,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12749,6 +12818,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12851,6 +12921,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -12907,6 +12978,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13148,6 +13220,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13390,6 +13463,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13628,6 +13702,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13682,6 +13757,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -13936,6 +14012,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14157,6 +14234,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14464,6 +14542,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14659,6 +14738,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14715,6 +14795,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14767,6 +14848,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14821,6 +14903,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -14940,6 +15023,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15058,6 +15142,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15174,6 +15259,7 @@ Assets {
           UseParentWidth: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15477,6 +15563,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15721,6 +15808,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -15969,6 +16057,7 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -16092,6 +16181,7 @@ Assets {
           }
           UseParentWidth: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -16155,6 +16245,10 @@ Assets {
               B: 0.5
             }
             Percent: 1
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -16284,6 +16378,10 @@ Assets {
               B: 0.5
             }
             Percent: 1
+            FillBrush {
+            }
+            BackgroundBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -16535,6 +16633,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -16832,6 +16931,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -16950,6 +17050,7 @@ Assets {
           UseParentHeight: true
           Panel {
             IsClipping: true
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -17315,5 +17416,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -65,6 +65,15 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
     AnchorLayout {
       SelfAnchor {
@@ -119,6 +128,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -510,6 +520,15 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
     AnchorLayout {
       SelfAnchor {
@@ -560,6 +579,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -633,6 +653,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -702,6 +723,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -959,6 +981,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -1545,6 +1568,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -1726,6 +1750,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2131,6 +2156,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2388,6 +2414,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -2974,6 +3001,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -3155,6 +3183,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -3551,6 +3580,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -3740,6 +3770,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4327,6 +4358,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4385,6 +4417,7 @@ Objects {
     }
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4697,6 +4730,7 @@ Objects {
     }
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -5016,6 +5050,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -5847,6 +5882,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -5907,6 +5943,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -5965,6 +6002,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7062,6 +7100,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -7120,6 +7159,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -8418,6 +8458,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -8476,6 +8517,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -9771,6 +9813,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -9829,6 +9872,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11186,6 +11230,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -11244,6 +11289,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12540,6 +12586,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -12598,6 +12645,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -13895,6 +13943,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -13953,6 +14002,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -14822,6 +14872,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -15734,6 +15785,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -15788,6 +15840,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -15960,6 +16013,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -16140,6 +16194,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -16195,6 +16250,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -16262,6 +16318,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -16572,6 +16629,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -16882,6 +16940,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -17192,6 +17251,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -17501,6 +17561,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -18361,6 +18422,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -18477,6 +18539,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -19241,6 +19304,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -19295,6 +19359,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -19350,6 +19415,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -19772,6 +19838,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -20192,6 +20259,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -20614,6 +20682,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -21036,6 +21105,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -21454,6 +21524,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -21700,6 +21771,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -22362,6 +22434,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -23028,6 +23101,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -23153,6 +23227,10 @@ Objects {
         A: 0.394000024
       }
       Percent: 0.401268125
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -23775,6 +23853,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -23901,6 +23980,10 @@ Objects {
         A: 0.394000024
       }
       Percent: 0.61664
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -24652,6 +24735,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -24706,6 +24790,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -24767,6 +24852,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -24825,6 +24911,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -25376,6 +25463,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -25498,6 +25586,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -25813,6 +25902,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -25929,6 +26019,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -26039,6 +26130,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -26636,6 +26728,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -26694,6 +26787,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -27245,6 +27339,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -27367,6 +27462,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -27682,6 +27778,7 @@ Objects {
     UseParentHeight: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -27798,6 +27895,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -27908,6 +28006,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -28682,6 +28781,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -29350,6 +29450,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -29654,6 +29755,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -29904,6 +30006,10 @@ Objects {
         A: 1
       }
       Percent: 0.935734928
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -30153,6 +30259,10 @@ Objects {
         A: 1
       }
       Percent: 0.615063429
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -30318,6 +30428,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -30426,6 +30537,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -30487,6 +30599,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -30598,6 +30714,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -30714,6 +30831,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -30824,6 +30942,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -30969,6 +31088,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -31541,6 +31661,7 @@ Objects {
     UseParentWidth: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -31659,6 +31780,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -32079,6 +32201,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -32898,6 +33021,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -32959,6 +33083,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -33412,6 +33540,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -33528,6 +33657,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -33638,6 +33768,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -33783,6 +33914,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -34355,6 +34487,7 @@ Objects {
     UseParentWidth: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -34473,6 +34606,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -34893,6 +35027,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -35717,6 +35852,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -35778,6 +35914,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -35889,6 +36029,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -36005,6 +36146,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -36115,6 +36257,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -36260,6 +36403,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -36832,6 +36976,7 @@ Objects {
     UseParentWidth: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -36950,6 +37095,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -37370,6 +37516,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -38188,6 +38335,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -38249,6 +38397,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -38360,6 +38512,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -38476,6 +38629,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -38586,6 +38740,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -38731,6 +38886,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -39303,6 +39459,7 @@ Objects {
     UseParentWidth: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -39421,6 +39578,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -39841,6 +39999,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -40659,6 +40818,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -40720,6 +40880,10 @@ Objects {
         A: 1
       }
       Percent: 0.552933455
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -40831,6 +40995,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -40947,6 +41112,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -41057,6 +41223,7 @@ Objects {
     }
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -41202,6 +41369,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -41774,6 +41942,7 @@ Objects {
     UseParentWidth: true
     Panel {
       IsClipping: true
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -41892,6 +42061,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -42312,6 +42482,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -43117,6 +43288,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -43900,6 +44072,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -44695,6 +44868,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -45455,6 +45629,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {

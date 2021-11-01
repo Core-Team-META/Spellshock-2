@@ -2013,8 +2013,8 @@ Assets {
         Name: "Text 04: ,"
         Transform {
           Location {
-            X: 3.68945313
-            Y: 216.664063
+            X: 3.68945312
+            Y: 216.664062
             Z: 772.124
           }
           Rotation {
@@ -2272,7 +2272,7 @@ Assets {
         Transform {
           Location {
             X: -11.4003906
-            Y: 27.2695313
+            Y: 27.2695312
             Z: 625.641602
           }
           Rotation {
@@ -2567,5 +2567,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

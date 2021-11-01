@@ -2,7 +2,7 @@ Assets {
   Id: 10909158495694406608
   Name: "Orc_beard_Bark Dead 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 7663308268157147922
     ParameterOverrides {

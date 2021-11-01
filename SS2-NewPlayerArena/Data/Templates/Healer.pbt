@@ -922,6 +922,12 @@ Assets {
               SubObjectId: 18270922159998676275
             }
           }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2976,5 +2982,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 87
 }

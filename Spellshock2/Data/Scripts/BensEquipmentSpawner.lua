@@ -1,4 +1,4 @@
-﻿local ABGS = require(script:GetCustomProperty("ABGS"))
+local ABGS = require(script:GetCustomProperty("ABGS"))
 
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()

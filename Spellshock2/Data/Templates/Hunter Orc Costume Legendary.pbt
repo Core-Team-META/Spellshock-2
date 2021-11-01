@@ -2209,7 +2209,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 1.75976563
+            X: 1.75976562
             Y: -4.23046875
             Z: 29.6469727
           }
@@ -2276,7 +2276,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -1.18164063
+            X: -1.18164062
             Y: -13.6542969
             Z: 9.45336914
           }
@@ -2544,7 +2544,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 4.33789063
+            X: 4.33789062
             Y: -12.5
             Z: 12.8898926
           }
@@ -2613,7 +2613,7 @@ Assets {
           Location {
             X: -12.6796875
             Y: -12.7324219
-            Z: 10.5976563
+            Z: 10.5976562
           }
           Rotation {
             Pitch: -8.99721
@@ -3014,7 +3014,7 @@ Assets {
         Transform {
           Location {
             X: -19.6308594
-            Y: -7.73632813
+            Y: -7.73632812
             Z: 14.1057129
           }
           Rotation {
@@ -3148,7 +3148,7 @@ Assets {
         Transform {
           Location {
             X: -4.61523438
-            Y: -14.0820313
+            Y: -14.0820312
             Z: 17.0446777
           }
           Rotation {
@@ -3349,7 +3349,7 @@ Assets {
         Transform {
           Location {
             X: -15.7617188
-            Y: -10.2226563
+            Y: -10.2226562
             Z: 17.1521
           }
           Rotation {
@@ -3683,7 +3683,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -5.99414063
+            X: -5.99414062
             Y: -12.9765625
             Z: 21.8276367
           }
@@ -3952,7 +3952,7 @@ Assets {
         Transform {
           Location {
             X: -14.7617188
-            Y: -2.15039063
+            Y: -2.15039062
             Z: 24.5361328
           }
           Rotation {
@@ -4420,7 +4420,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 3.62695313
+            X: 3.62695312
             Y: -9.31054688
             Z: 26.3764648
           }
@@ -4622,7 +4622,7 @@ Assets {
         Transform {
           Location {
             X: -10.7148438
-            Y: -5.77539063
+            Y: -5.77539062
             Z: 25.666748
           }
           Rotation {
@@ -4889,7 +4889,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -7.96289063
+            X: -7.96289062
             Y: -4.140625
             Z: 28.6889648
           }
@@ -5023,7 +5023,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 4.18164063
+            X: 4.18164062
             Y: -0.515625
             Z: 29.5046387
           }
@@ -5157,7 +5157,7 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.04882813
+            X: 6.04882812
             Y: -2.0546875
             Z: 28.1940918
           }
@@ -5225,7 +5225,7 @@ Assets {
         Transform {
           Location {
             X: 0.0703125
-            Y: -2.31445313
+            Y: -2.31445312
             Z: 30.3288574
           }
           Rotation {
@@ -5291,8 +5291,8 @@ Assets {
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -2.65039063
-            Y: -5.44726563
+            X: -2.65039062
+            Y: -5.44726562
             Z: 29.9169922
           }
           Rotation {
@@ -8998,7 +8998,7 @@ Assets {
         Name: "Grass Tall"
         Transform {
           Location {
-            X: 0.372070313
+            X: 0.372070312
             Y: 9.5835495
             Z: -16.2140503
           }
@@ -15210,7 +15210,7 @@ Assets {
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 61.2539063
+            X: 61.2539062
             Y: 37.4765625
             Z: 15.4599609
           }
@@ -15285,7 +15285,7 @@ Assets {
         Transform {
           Location {
             X: 47.875
-            Y: 58.0195313
+            Y: 58.0195312
             Z: 15.8095703
           }
           Rotation {
@@ -15659,7 +15659,7 @@ Assets {
         Transform {
           Location {
             X: 59.3457031
-            Y: -40.6757813
+            Y: -40.6757812
             Z: 15.8085938
           }
           Rotation {
@@ -17642,5 +17642,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

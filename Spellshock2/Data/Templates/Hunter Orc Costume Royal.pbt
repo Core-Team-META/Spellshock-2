@@ -7529,7 +7529,7 @@ Assets {
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 61.2539063
+            X: 61.2539062
             Y: 37.4765625
             Z: 15.4599609
           }
@@ -7604,7 +7604,7 @@ Assets {
         Transform {
           Location {
             X: 47.875
-            Y: 58.0195313
+            Y: 58.0195312
             Z: 15.8095703
           }
           Rotation {
@@ -7915,7 +7915,7 @@ Assets {
         Transform {
           Location {
             X: 59.3457031
-            Y: -40.6757813
+            Y: -40.6757812
             Z: 15.8085938
           }
           Rotation {
@@ -8984,5 +8984,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

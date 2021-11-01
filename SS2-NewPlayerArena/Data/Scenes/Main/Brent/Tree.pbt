@@ -1,6 +1,38 @@
 Name: "Brent"
 RootId: 3175943422500344162
 Objects {
+  Id: 4061218764847954597
+  Name: "Training Dummies"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3175943422500344162
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Training Dummies"
+  }
+}
+Objects {
   Id: 7723627352085677843
   Name: "Class Logs"
   Transform {

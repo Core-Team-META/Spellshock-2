@@ -15,6 +15,7 @@ end
 
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject()
 local CHARGED_WEAPON = script:GetCustomProperty("ChargedWeapon"):WaitForObject()
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local SHOOT_ABILITY = script:GetCustomProperty("ShootAbility"):WaitForObject()
 local CHARGED_PROJECTILE_BOMB = script:GetCustomProperty("ChargedProjectileBomb")
@@ -34,7 +35,7 @@ local CHARGE_DURATION = SHOOT_ABILITY:GetCustomProperty("ChargeDuration") or 0.5
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount = DAMAGE_TO_OBJECTS
-	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
+	if Object.IsValid(impactData.targetObject) and (impactData.targetObject:IsA("Player") or impactData.targetObject.name == "Collider") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 		amount = math.random(rangeTable.min, rangeTable.max)
 	else 
@@ -76,8 +77,9 @@ function OnTargetImpact(theWeapon, impactData)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "BasicAttack", weapon = WEAPON}
+		tags = {id = "BasicAttack", weapon = WEAPON, equipment = EQUIPMENT}
 	}
+	
 	COMBAT().ApplyDamage(attackData)
 	
 	if theWeapon.owner:GetResource("CLASS_MAP") == META_AP().HUNTER and impactData.targetObject:IsA("Player") then
@@ -138,7 +140,7 @@ function OnProjectileSpawned(weapon, projectile)
 end
 
 function OnChargedProjectileImpacted(projectile, other, hitResult)
-	if not Object.IsValid(WEAPON) or not WEAPON.owner or not Object.IsValid(WEAPON.owner) or not other:IsA("Player") then return end
+	if not Object.IsValid(WEAPON) or not WEAPON.owner or not Object.IsValid(WEAPON.owner) or not (other:IsA("Player") or other.name == "Collider") then return end
 
 	local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 	local amount = math.random(rangeTable.min, rangeTable.max)
@@ -171,6 +173,7 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 	local rotation = Rotation.New(normal, Vector3.UP)
 
 	if Object.IsValid(other) then
+		Events.Broadcast("TrainingAbilityUsed", WEAPON.owner, "Hunter_RMB")
 		if other:IsA("Player") then
 			local bomb = META_AP().SpawnAsset(CHARGED_PROJECTILE_BOMB, {position = position, rotation = rotation})
 			bomb.serverUserData.damage = bombDamage

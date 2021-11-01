@@ -25,8 +25,8 @@ API.STORAGE = {
     ACHIEVEMENTS = 11,
     PROGRESSION_MULTIPLIERS = 12,
     CLASS_FAVORITE = 13,
-    ADMIN_PERKS = 14
-    --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
+    ADMIN_PERKS = 14,
+    TRAINING_STATUS = 15
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -356,6 +356,7 @@ API.CLASS_RES = "CLASS_MAP"
 API.SKIN_RES = "SKIN_MAP"
 API.ROUND_DAMAGE = "RDMG"
 API.ROUND_HEALING = "RHEAL"
+API.TRAINING_STATUS = "TSTATUS"
 
 API.COMBAT_STATS = {
     TOTAL_DAMAGE_RES = "TOTALDMG",

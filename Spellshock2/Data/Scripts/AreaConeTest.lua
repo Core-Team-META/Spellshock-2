@@ -1,4 +1,4 @@
-﻿local Target = script:GetCustomProperty("Sphere"):WaitForObject()
+local Target = script:GetCustomProperty("Sphere"):WaitForObject()
 
 Target:SetColor(Color.RED)
 

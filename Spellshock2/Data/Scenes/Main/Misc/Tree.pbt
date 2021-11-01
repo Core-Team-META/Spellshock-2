@@ -1906,7 +1906,7 @@ Objects {
     Rotation {
       Pitch: 90
       Yaw: -2.73207552e-05
-      Roll: -6.10351563e-05
+      Roll: -6.10351562e-05
     }
     Scale {
       X: 0.721942246
@@ -2053,7 +2053,7 @@ Objects {
     Rotation {
       Pitch: 90
       Yaw: -2.73207552e-05
-      Roll: -6.10351563e-05
+      Roll: -6.10351562e-05
     }
     Scale {
       X: 0.721942246

@@ -20,7 +20,7 @@ local function META_AP()
 end
 
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject(1) or script.parent
-
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 local DAMAGE_TO_PLAYERS = script:GetCustomProperty("DamageRange")
 local DEFAULT_DamageRange = {min=DAMAGE_TO_PLAYERS.x, max=DAMAGE_TO_PLAYERS.y}
 local DAMAGE_TO_OBJECTS = script:GetCustomProperty("DamageToObjects")
@@ -30,7 +30,7 @@ local AbilityMod = script:GetCustomProperty("AbilityMod")
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount = DAMAGE_TO_OBJECTS
-	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
+	if Object.IsValid(impactData.targetObject) and (impactData.targetObject:IsA("Player") or impactData.targetObject.name == "Collider") then
 		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 		amount = math.random(rangeTable.min, rangeTable.max)
 	else 
@@ -55,7 +55,7 @@ function OnTargetImpact(theWeapon, impactData)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "BasicAttack", weapon = WEAPON}
+		tags = {id = "BasicAttack", weapon = WEAPON, equipment = EQUIPMENT}
 	}
 	COMBAT().ApplyDamage(attackData)
 	

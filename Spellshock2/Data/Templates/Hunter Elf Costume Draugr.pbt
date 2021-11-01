@@ -6736,7 +6736,7 @@ Assets {
             Z: 6.01094103
           }
           Rotation {
-            Pitch: -7.10351563
+            Pitch: -7.10351562
             Yaw: 172.841888
             Roll: 135.444031
           }
@@ -8111,7 +8111,7 @@ Assets {
           Rotation {
             Pitch: -3.05175781e-05
             Yaw: -89.9999695
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.175907597
@@ -9232,7 +9232,7 @@ Assets {
             Z: 17.7286701
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: 0.000157948045
           }
           Scale {
@@ -9673,7 +9673,7 @@ Assets {
             Z: 22.0319595
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: 89.9997177
             Roll: 170.949402
           }
@@ -10270,5 +10270,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

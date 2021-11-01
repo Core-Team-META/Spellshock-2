@@ -160,7 +160,7 @@ Assets {
           Location {
             X: 16.1523438
             Y: -9.27734375
-            Z: 37.2851563
+            Z: 37.2851562
           }
           Rotation {
             Yaw: -50
@@ -261,7 +261,7 @@ Assets {
         Name: "FarRightRock"
         Transform {
           Location {
-            X: -12.2070313
+            X: -12.2070312
             Y: 23.0078125
             Z: 2.27050781
           }
@@ -455,8 +455,8 @@ Assets {
         Name: "FarLeftRock"
         Transform {
           Location {
-            X: -12.2070313
-            Y: -22.0507813
+            X: -12.2070312
+            Y: -22.0507812
             Z: 2.27050781
           }
           Rotation {
@@ -520,7 +520,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 13.6914063
+            X: 13.6914062
             Y: 0.0390625
             Z: 2.20214844
           }
@@ -696,5 +696,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

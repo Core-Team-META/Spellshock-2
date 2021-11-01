@@ -110,6 +110,7 @@ Assets {
             CanMoveDown: true
             IsMountEnabled: true
             MaxHitpoints: 100
+            PlayerMasterVolumeMultiplier: 1
           }
         }
       }
@@ -189,6 +190,7 @@ Assets {
           MinPitch: -89
           MaxPitch: 89
           DoesPositionOffsetSpring: true
+          UseAsAudioListener: true
         }
       }
     }
@@ -197,5 +199,5 @@ Assets {
       AssetId: "Third_Person_Camera_Settings"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

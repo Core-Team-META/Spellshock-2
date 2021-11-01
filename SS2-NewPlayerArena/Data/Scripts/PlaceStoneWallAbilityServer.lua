@@ -28,6 +28,7 @@ function PlaceObject(thisAbility)
 	local v = targetData:GetAimPosition()
 	local rotation = Rotation.New(v.x, v.y, v.z)
 
+	Events.Broadcast("TrainingAbilityUsed", player, "Warrior_E")
 	local newObject = META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
 	local newLifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	newObject.lifeSpan = newLifeSpan

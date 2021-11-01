@@ -2841,7 +2841,7 @@ Assets {
         Transform {
           Location {
             X: -7.65234375
-            Y: -1.85351563
+            Y: -1.85351562
             Z: 67.4018555
           }
           Rotation {
@@ -3411,7 +3411,7 @@ Assets {
           Location {
             X: 13.373291
             Y: 3.16503906
-            Z: 16.9882813
+            Z: 16.9882812
           }
           Rotation {
             Pitch: 6.90232944
@@ -4481,7 +4481,7 @@ Assets {
         Name: "Wedge - Curved"
         Transform {
           Location {
-            X: -2.10351563
+            X: -2.10351562
             Y: -0.269042969
             Z: 44.5946045
           }
@@ -5430,5 +5430,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

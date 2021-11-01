@@ -1,4 +1,4 @@
-﻿local RecticleTemplate = script:GetCustomProperty("RecticleTemplate")
+local RecticleTemplate = script:GetCustomProperty("RecticleTemplate")
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()

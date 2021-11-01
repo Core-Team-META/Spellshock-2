@@ -101,8 +101,10 @@ end
 function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
     if sourcePlayer == LOCAL_PLAYER then
         -- Show text on targetPlayer
+        local targetPosition = position
         if Object.IsValid(targetPlayer) then
-            local targetPosition = targetPlayer:GetWorldPosition() + Vector3.New(0, 0, 50)
+            targetPosition = targetPlayer:GetWorldPosition() + Vector3.New(0, 0, 50)
+        end
             
             -- Show damage number on targetPlayer
             if damage > 0 then 
@@ -123,7 +125,7 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
                     ShowFlyUpText("Immune", targetPosition, Color.WHITE)
                 end
             end
-        end
+        
     elseif targetPlayer == LOCAL_PLAYER then
         local targetPosition = targetPlayer:GetWorldPosition() + Vector3.New(0, 0, 50)
         

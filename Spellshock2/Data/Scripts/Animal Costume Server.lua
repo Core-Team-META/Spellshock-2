@@ -1,4 +1,4 @@
-﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local GarbageCollection = script:GetCustomProperty("GarbageCollection"):WaitForObject()
 
 local FX_Template = Equipment:GetCustomProperty("FX_Template")

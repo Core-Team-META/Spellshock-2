@@ -454,7 +454,7 @@ Assets {
             Z: 16.0469646
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: 89.9990311
             Roll: -33.7789307
           }
@@ -733,7 +733,7 @@ Assets {
             Z: 17.849802
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: -89.9998779
             Roll: 179.999893
           }
@@ -1017,7 +1017,7 @@ Assets {
         Transform {
           Location {
             X: -14.2823486
-            Y: -6.10351563e-05
+            Y: -6.10351562e-05
             Z: 24.3105164
           }
           Rotation {
@@ -5259,7 +5259,7 @@ Assets {
           Location {
             X: 10.2241211
             Y: 5.16671753
-            Z: -7.49414063
+            Z: -7.49414062
           }
           Rotation {
             Pitch: 84.6799
@@ -5784,7 +5784,7 @@ Assets {
         Transform {
           Location {
             X: 1.9375
-            Y: 52.7226563
+            Y: 52.7226562
             Z: 118.995605
           }
           Rotation {
@@ -6408,7 +6408,7 @@ Assets {
           Location {
             X: 0.67578125
             Y: -0.405273438
-            Z: 0.000610351563
+            Z: 0.000610351562
           }
           Rotation {
             Pitch: 8.6351757
@@ -6747,7 +6747,7 @@ Assets {
         Transform {
           Location {
             X: 0.03515625
-            Y: -0.977539063
+            Y: -0.977539062
             Z: 2.29748535
           }
           Rotation {
@@ -7288,7 +7288,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -13.4726563
+            X: -13.4726562
             Y: 17.0214844
             Z: 4.09564209
           }
@@ -8261,5 +8261,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

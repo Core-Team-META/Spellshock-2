@@ -40,7 +40,7 @@ Assets {
         Name: "Decal Stone Cracks Variants 01"
         Transform {
           Location {
-            X: 186.789063
+            X: 186.789062
             Y: -45.3808594
           }
           Rotation {
@@ -461,5 +461,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

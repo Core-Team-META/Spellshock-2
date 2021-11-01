@@ -480,7 +480,7 @@ Assets {
             Z: 16.6154804
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: 89.9990311
             Roll: -33.7789307
           }
@@ -759,7 +759,7 @@ Assets {
             Z: 17.849802
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: -89.9998779
             Roll: 179.999893
           }
@@ -7433,7 +7433,7 @@ Assets {
           Location {
             X: 10.2241211
             Y: 5.16671753
-            Z: -7.49414063
+            Z: -7.49414062
           }
           Rotation {
             Pitch: 84.6799
@@ -8836,7 +8836,7 @@ Assets {
         Transform {
           Location {
             X: 1.9375
-            Y: 52.7226563
+            Y: 52.7226562
             Z: 118.995605
           }
           Rotation {
@@ -12153,7 +12153,7 @@ Assets {
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
-            X: 2.68945313
+            X: 2.68945312
             Y: 0.000157356262
             Z: 46.9014931
           }
@@ -12495,7 +12495,7 @@ Assets {
         Transform {
           Location {
             X: 2.54003906
-            Y: 0.321289063
+            Y: 0.321289062
             Z: 46.5715
           }
           Rotation {
@@ -13390,5 +13390,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

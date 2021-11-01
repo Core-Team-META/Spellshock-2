@@ -5071,7 +5071,7 @@ Assets {
         Transform {
           Location {
             X: 131.980835
-            Y: 112.039063
+            Y: 112.039062
             Z: 100.695595
           }
           Rotation {
@@ -5305,7 +5305,7 @@ Assets {
         Transform {
           Location {
             X: -8.13802108e-05
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -5598,7 +5598,7 @@ Assets {
         Transform {
           Location {
             X: -8.13802108e-05
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -5891,7 +5891,7 @@ Assets {
         Transform {
           Location {
             X: -8.13802108e-05
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -6186,7 +6186,7 @@ Assets {
         Transform {
           Location {
             X: -8.13802108e-05
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -8161,7 +8161,7 @@ Assets {
         Name: "Rope"
         Transform {
           Location {
-            X: 0.274414063
+            X: 0.274414062
             Y: 0.354003906
           }
           Rotation {
@@ -8591,7 +8591,7 @@ Assets {
         Transform {
           Location {
             X: 0.207641602
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: 0.555877686
           }
           Rotation {
@@ -8651,7 +8651,7 @@ Assets {
         Transform {
           Location {
             X: 3.95837402
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
             Pitch: -81.5699
@@ -8710,7 +8710,7 @@ Assets {
         Transform {
           Location {
             X: -4.16577148
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: 0.146499634
           }
           Rotation {
@@ -9019,7 +9019,7 @@ Assets {
         Transform {
           Location {
             X: 0.207641602
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: 0.555877686
           }
           Rotation {
@@ -9079,7 +9079,7 @@ Assets {
         Transform {
           Location {
             X: 3.95837402
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
             Pitch: -81.5699
@@ -10298,5 +10298,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -27,7 +27,7 @@ local ProjectileVelocity = nil
 function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(SpecialAbility) or other == SpecialAbility.owner then return end
 	
-	if not other:IsA("Player") or COMBAT().IsDead(other) then return end
+	if not other:IsA("Player") and other.name ~= "Collider" or COMBAT().IsDead(other) then return end
 	
 	local otherTeam = COMBAT().GetTeam(other)
 	if not Object.IsValid(SpecialAbility.owner) then return end
@@ -62,7 +62,9 @@ function OnBeginOverlap(thisTrigger, other)
 	directionVector = -directionVector
 	directionVector.z = 1
 	local impulseVector = directionVector * META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_ImpulseAmount, SpecialAbility.name..": Impulse Amount")
-	other:AddImpulse(impulseVector)
+	if other:IsA("Player") then
+		other:AddImpulse(impulseVector)
+	end
 end
 
 function OnAbilityCast(thisAbility)

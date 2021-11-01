@@ -588,7 +588,7 @@ Assets {
           }
           Rotation {
             Pitch: -44.9999695
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: 6.04715497e-05
           }
           Scale {
@@ -837,7 +837,7 @@ Assets {
           Rotation {
             Pitch: -3.05175781e-05
             Yaw: -60.0001221
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.212630615
@@ -1284,5 +1284,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

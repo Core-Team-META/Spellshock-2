@@ -78,13 +78,16 @@ function SetGameState(newState)
 		stateDuration = ROUND_END_DURATION
 	elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		stateHasduration = true
-		stateDuration = 20
+		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 60
+		stateDuration = 3
 	elseif newState == ABGS.GAME_STATE_REWARDS_END then
 		stateHasduration = true
 		stateDuration = 5
+	elseif newState == ABGS.GAME_STATE_LOADING then
+		stateHasduration = true
+		stateDuration = 3
 	else
 		error("Tried to set game state to unknown state %d", newState)
 	end
@@ -133,6 +136,7 @@ function Tick(deltaTime)
 	if GetTimeRemainingInState() == 0.0 and script:GetCustomProperty("StateHasDuration") then
 		local previousState = GetGameState()
 		local nextState
+
 		if previousState == ABGS.GAME_STATE_LOBBY then
 			nextState = ABGS.GAME_STATE_ROUND
 		elseif previousState == ABGS.GAME_STATE_ROUND then
@@ -140,14 +144,16 @@ function Tick(deltaTime)
 		elseif previousState == ABGS.GAME_STATE_ROUND_END then
 			nextState = ABGS.GAME_STATE_PLAYER_SHOWCASE
 		elseif previousState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
-			nextState = ABGS.GAME_STATE_REWARDS
-		elseif previousState == ABGS.GAME_STATE_REWARDS then
+			nextState = ABGS.GAME_STATE_LOADING
+		elseif previousState == ABGS.GAME_STATE_LOADING then
+			nextState = ABGS.GAME_STATE_LOBBY
+		--[[elseif previousState == ABGS.GAME_STATE_REWARDS then
 			nextState = ABGS.GAME_STATE_REWARDS_END
 		elseif previousState == ABGS.GAME_STATE_REWARDS_END then
-			nextState = ABGS.GAME_STATE_LOBBY
+			nextState = ABGS.GAME_STATE_LOBBY]]
 		end
 
-		SetGameState(nextState)
+		SetGameState(nextState) 
 	end
 end
 

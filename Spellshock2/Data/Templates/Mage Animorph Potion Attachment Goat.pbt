@@ -4686,7 +4686,7 @@ Assets {
         Name: "Lids"
         Transform {
           Location {
-            X: 6.43164063
+            X: 6.43164062
             Y: 42.8984375
             Z: 2.61035156
           }
@@ -6762,5 +6762,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

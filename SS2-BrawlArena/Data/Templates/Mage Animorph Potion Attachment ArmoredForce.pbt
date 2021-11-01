@@ -7,7 +7,7 @@ Assets {
       RootId: 8510115313151259704
       Objects {
         Id: 8510115313151259704
-        Name: "Mage Animorph Potion Attachment Tank"
+        Name: "Mage Animorph Potion Attachment ArmoredForce"
         Transform {
           Scale {
             X: 1
@@ -39,7 +39,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -21654,5 +21654,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 92
 }

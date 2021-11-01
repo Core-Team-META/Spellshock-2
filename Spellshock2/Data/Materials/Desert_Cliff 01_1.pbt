@@ -2,7 +2,7 @@ Assets {
   Id: 8772095799891222028
   Name: "Desert_Cliff 01"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 998074920267973145
     ParameterOverrides {
@@ -46,7 +46,7 @@ Assets {
         Color {
           R: 0.9375
           G: 0.600100696
-          B: 0.395507813
+          B: 0.395507812
           A: 1
         }
       }

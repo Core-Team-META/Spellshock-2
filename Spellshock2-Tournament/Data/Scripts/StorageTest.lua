@@ -1,4 +1,4 @@
-﻿while not _G.STORAGE_KEYS do
+while not _G.STORAGE_KEYS do
     Task.Wait()
 end
 

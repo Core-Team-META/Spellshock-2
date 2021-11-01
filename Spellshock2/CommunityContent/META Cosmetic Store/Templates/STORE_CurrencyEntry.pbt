@@ -37,6 +37,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -147,6 +148,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -209,6 +211,8 @@ Assets {
               Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -239,5 +243,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

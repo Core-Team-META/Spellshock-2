@@ -10,12 +10,12 @@ Assets {
         Name: "Palm_Tree_kelp_01_new"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.52968848
+            Y: 1.52968848
+            Z: 1.52968848
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 11961583227632804075
         ChildIds: 8381946262341368480
         ChildIds: 9470666448041979234
         ChildIds: 7691045379245716057
@@ -824,7 +824,7 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.0797902197
+              R: 0.0496805385
               G: 0.159999967
               B: 0.0191666652
               A: 1
@@ -1062,5 +1062,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 92
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 2205540955390950024
   Name: "Justice Metal Frame 03_1"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 12289444008824645774
     ParameterOverrides {

@@ -601,7 +601,7 @@ Assets {
         Name: "Rope"
         Transform {
           Location {
-            X: 1268.20313
+            X: 1268.20312
             Z: -6.89672852
           }
           Rotation {
@@ -1203,7 +1203,7 @@ Assets {
         Name: "Rope"
         Transform {
           Location {
-            X: 1268.20313
+            X: 1268.20312
             Z: -6.89672852
           }
           Rotation {
@@ -1391,7 +1391,7 @@ Assets {
             Z: 14.3752546
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: 2.41506041e-06
             Roll: 89.9997711
           }
@@ -2020,7 +2020,7 @@ Assets {
             Z: 14.3753576
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: 2.415067e-06
             Roll: 89.9997711
           }
@@ -3500,7 +3500,7 @@ Assets {
             Z: 14.3752031
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: 5.05631169e-06
             Roll: 89.9997711
           }
@@ -6090,7 +6090,7 @@ Assets {
           }
           Rotation {
             Pitch: -84.8604736
-            Yaw: -0.0122070313
+            Yaw: -0.0122070312
             Roll: -89.9883728
           }
           Scale {
@@ -6279,7 +6279,7 @@ Assets {
         Name: "Pyramid - 4-Sided Polished"
         Transform {
           Location {
-            X: -395.570313
+            X: -395.570312
             Y: 216.444336
             Z: 4343.25684
           }
@@ -6476,7 +6476,7 @@ Assets {
         Transform {
           Location {
             X: -1185.88672
-            Y: -10.1914063
+            Y: -10.1914062
             Z: 2213.41211
           }
           Rotation {
@@ -6654,7 +6654,7 @@ Assets {
         Name: "Craftsman Roof 01 Beam"
         Transform {
           Location {
-            X: 1045.45313
+            X: 1045.45312
             Y: 3.16113281
             Z: -72.7109375
           }
@@ -6967,7 +6967,7 @@ Assets {
         Name: "Peak"
         Transform {
           Location {
-            X: 0.500976563
+            X: 0.500976562
             Y: -105.925781
             Z: 510.919678
           }
@@ -7210,7 +7210,7 @@ Assets {
         Name: "Peak"
         Transform {
           Location {
-            X: 0.500976563
+            X: 0.500976562
             Y: -105.925781
             Z: 510.919678
           }
@@ -7453,7 +7453,7 @@ Assets {
         Name: "Peak"
         Transform {
           Location {
-            X: 0.500976563
+            X: 0.500976562
             Y: -105.925781
             Z: 510.919678
           }
@@ -7696,7 +7696,7 @@ Assets {
         Name: "Peak"
         Transform {
           Location {
-            X: 0.500976563
+            X: 0.500976562
             Y: -105.925781
             Z: 510.919678
           }
@@ -7939,7 +7939,7 @@ Assets {
         Name: "Peak"
         Transform {
           Location {
-            X: 0.500976563
+            X: 0.500976562
             Y: -105.925781
             Z: 510.919678
           }
@@ -8182,7 +8182,7 @@ Assets {
         Name: "Peak"
         Transform {
           Location {
-            X: 0.500976563
+            X: 0.500976562
             Y: -105.925781
             Z: 510.919678
           }
@@ -8468,7 +8468,7 @@ Assets {
         Name: "Pyramid - 4-Sided Polished"
         Transform {
           Location {
-            X: 323.914063
+            X: 323.914062
             Y: -68.5556641
             Z: 2219.14185
           }
@@ -8968,7 +8968,7 @@ Assets {
     }
     Assets {
       Id: 10634098119816284342
-      Name: "Wood Planks Dark"
+      Name: "Wood Planks"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
@@ -9070,5 +9070,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

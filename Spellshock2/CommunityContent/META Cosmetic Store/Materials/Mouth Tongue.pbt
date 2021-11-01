@@ -2,7 +2,7 @@ Assets {
   Id: 8666387561855090206
   Name: "Mouth Tongue"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 6278985560465791740
     ParameterOverrides {

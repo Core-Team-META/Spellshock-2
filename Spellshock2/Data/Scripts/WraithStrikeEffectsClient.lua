@@ -1,4 +1,4 @@
-﻿local function META_AP()
+local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 

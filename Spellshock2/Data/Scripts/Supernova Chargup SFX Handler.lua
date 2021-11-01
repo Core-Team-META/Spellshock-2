@@ -1,4 +1,4 @@
-﻿local Loop_SFX = script:GetCustomProperty("Loop_SFX"):WaitForObject()
+local Loop_SFX = script:GetCustomProperty("Loop_SFX"):WaitForObject()
 local InnerSphere = script:GetCustomProperty("InnerSphere"):WaitForObject()
 
 function Tick(dTime)

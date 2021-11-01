@@ -33,23 +33,28 @@ end
 local OverlapEvent 
 
 function DoDamage(other)
-	if other:IsA("Player") and other.team ~= TrapOwner.team and not other.isDead then
-		other:ResetVelocity()
+	if (other:IsA("Player") and other.team ~= TrapOwner.team and not other.isDead) or other.name == "Collider" then
 		if OverlapEvent then
 			OverlapEvent:Disconnect()
 			OverlapEvent = nil
 		end
 		Root.visibility = Visibility.FORCE_OFF
 		World.SpawnAsset(TrapActivationTemplate, {position = Root:GetWorldPosition(), rotation = Root:GetWorldRotation()})
-		local bleedStatus = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod4", {}, "Bear Trap: Status")
-		local stunStatus = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod5", {}, "Bear Trap: Status")
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, TrapOwner, bleedStatus.duration, bleedStatus.damage, bleedStatus.multiplier)
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, TrapOwner, stunStatus.duration, stunStatus.damage, stunStatus.multiplier)
 		
 		local dmg = Damage.New()
 		dmg.amount = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod3", DEFAULT_DamageAmount, "Bear Trap : Damage Amount")
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = TrapOwner
+		
+		if other:IsA("Player") then
+			other:ResetVelocity()
+			local bleedStatus = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod4", {}, "Bear Trap: Status")
+			local stunStatus = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod5", {}, "Bear Trap: Status")
+			API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, TrapOwner, bleedStatus.duration, bleedStatus.damage, bleedStatus.multiplier)
+			API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, TrapOwner, stunStatus.duration, stunStatus.damage, stunStatus.multiplier)
+			Task.Wait()
+			other:ResetVelocity()
+		end
 
 		local attackData = {
 			object = other,
@@ -61,8 +66,6 @@ function DoDamage(other)
 		}
 		COMBAT().ApplyDamage(attackData)
 		Root:Destroy()
-		Task.Wait()
-		other:ResetVelocity()
 	end
 end
 

@@ -234,17 +234,17 @@ Objects {
   Name: "ELF_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 40486.4141
-      Y: 51907.3125
+      X: 40487.2266
+      Y: 51895.3906
       Z: 1051.16553
     }
     Rotation {
       Yaw: 33.1580811
     }
     Scale {
-      X: 4.19803429
-      Y: 4.21105433
-      Z: 4.60918236
+      X: 3.59588623
+      Y: 3.60703874
+      Z: 3.94806099
     }
   }
   ParentId: 16765011581879931807

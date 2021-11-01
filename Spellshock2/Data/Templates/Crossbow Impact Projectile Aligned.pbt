@@ -158,7 +158,7 @@ Assets {
           Location {
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
           }
           Scale {
             X: 1
@@ -265,5 +265,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

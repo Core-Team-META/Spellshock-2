@@ -64,6 +64,7 @@ Objects {
       ContentType {
         Value: "mc:ecanvascontenttype:dynamic"
       }
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -114,6 +115,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -176,6 +178,10 @@ Objects {
         A: 1
       }
       Percent: 0.118145563
+      FillBrush {
+      }
+      BackgroundBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {

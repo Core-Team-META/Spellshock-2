@@ -34,6 +34,19 @@ Assets {
   }
 }
 Assets {
+  Id: 16308237089458265974
+  Name: "ss2_live_cosmetic"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "c333b186a0784c47af674b7704808501"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 15969669977645369301
   Name: "SERVERXPBOOST"
   PlatformAssetType: 24
@@ -204,19 +217,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12468353192930553913
-  Name: "SS2_BE_PROD_PROGRESSION"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "06aa8a5ccba94efe82095b881462eab5"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 11738101196508092081
   Name: "Server Gold"
   PlatformAssetType: 24
@@ -378,19 +378,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8845614076972316242
-  Name: "SS2_BE_PROD_CURRENCY"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "627fd490885c4745bc44c7d55a8fb5db"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
@@ -435,19 +422,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7612318090407833903
-  Name: "SS2_BE_PROD_COSMETICS"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "5de58cc9214344bca1a53c803d5d9292"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 7169333528181342794
   Name: "Starter Pack"
   PlatformAssetType: 24
@@ -478,6 +452,19 @@ Assets {
       Key: "d353a02d625648ecbc5f591d80dd14ab"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 6218305262580163704
+  Name: "ss2_live_progression"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "fda12f8c98b648b0a612628d288062a6"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -652,6 +639,19 @@ Assets {
       Key: "062eacbe6ab349fa819ec6135d8b456b"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 632985966116652060
+  Name: "ss2_live_currency"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "d5d513aebe8a4907862c98637c1f7b6f"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

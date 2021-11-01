@@ -2,7 +2,7 @@ Assets {
   Id: 12774855966506262352
   Name: "Blood Metal Basic 01"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 9551966620731737544
     ParameterOverrides {

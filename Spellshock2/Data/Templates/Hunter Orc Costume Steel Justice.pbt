@@ -3139,7 +3139,7 @@ Assets {
           }
           Rotation {
             Pitch: -9.47729492
-            Yaw: -83.9101563
+            Yaw: -83.9101562
             Roll: 158.901169
           }
           Scale {
@@ -5136,7 +5136,7 @@ Assets {
         Transform {
           Location {
             X: -27.9118805
-            Y: 0.129882813
+            Y: 0.129882812
             Z: 16.7112732
           }
           Rotation {
@@ -5859,7 +5859,7 @@ Assets {
         Transform {
           Location {
             X: -29.8074036
-            Y: 0.176757813
+            Y: 0.176757812
             Z: -2.13241577
           }
           Rotation {
@@ -7721,7 +7721,7 @@ Assets {
             Z: 17.3007126
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: -101.249939
             Roll: -89.9999084
           }
@@ -8464,7 +8464,7 @@ Assets {
             Z: 16.0104485
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: 0.000169794221
           }
           Scale {
@@ -11358,7 +11358,7 @@ Assets {
         Name: "right_shoulder"
         Transform {
           Location {
-            X: 9.79101563
+            X: 9.79101562
             Y: 7.46679688
             Z: 47.5786133
           }
@@ -12405,7 +12405,7 @@ Assets {
         Transform {
           Location {
             X: 9.26171875
-            Y: -9.36914063
+            Y: -9.36914062
             Z: 58.112793
           }
           Rotation {
@@ -13119,7 +13119,7 @@ Assets {
         Name: "Grass Tall"
         Transform {
           Location {
-            X: 0.372070313
+            X: 0.372070312
             Y: 9.5835495
             Z: -16.2140503
           }
@@ -14204,5 +14204,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

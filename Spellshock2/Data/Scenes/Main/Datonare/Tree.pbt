@@ -257,6 +257,15 @@ Objects {
       }
     }
     Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
     }
     AnchorLayout {
       SelfAnchor {
@@ -298,7 +307,7 @@ Objects {
   }
   Control {
     Width: 680
-    Height: 680
+    Height: 505
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"

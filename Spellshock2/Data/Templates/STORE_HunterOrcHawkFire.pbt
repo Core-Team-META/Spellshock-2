@@ -95,7 +95,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 14.3945313
+            X: 14.3945312
             Y: 0.0390625
             Z: 57.3828125
           }
@@ -172,7 +172,7 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: 21.8945313
+            X: 21.8945312
             Y: -0.0390625
             Z: 35.9130859
           }
@@ -231,7 +231,7 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: 24.4726563
+            X: 24.4726562
             Y: 1.796875
             Z: 39.6337891
           }
@@ -299,7 +299,7 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: 24.4726563
+            X: 24.4726562
             Y: -1.875
             Z: 39.6337891
           }
@@ -440,7 +440,7 @@ Assets {
           Location {
             X: -11.09375
             Y: -42.5
-            Z: 48.7851563
+            Z: 48.7851562
           }
           Rotation {
             Pitch: 23.5822372
@@ -564,7 +564,7 @@ Assets {
         Transform {
           Location {
             X: -5.546875
-            Y: -27.2851563
+            Y: -27.2851562
             Z: 51.8408203
           }
           Rotation {
@@ -3272,5 +3272,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

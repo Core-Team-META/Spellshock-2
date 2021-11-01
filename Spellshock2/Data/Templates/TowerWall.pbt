@@ -3039,7 +3039,7 @@ Assets {
         Name: "Rope"
         Transform {
           Location {
-            X: 1268.20313
+            X: 1268.20312
             Z: -6.89672852
           }
           Rotation {
@@ -4997,7 +4997,7 @@ Assets {
           }
           Rotation {
             Pitch: -84.8604736
-            Yaw: -0.0122070313
+            Yaw: -0.0122070312
             Roll: -89.9883728
           }
           Scale {
@@ -5186,7 +5186,7 @@ Assets {
         Name: "Pyramid - 4-Sided Polished"
         Transform {
           Location {
-            X: -395.570313
+            X: -395.570312
             Y: 216.444336
             Z: 4343.25684
           }
@@ -5506,7 +5506,7 @@ Assets {
     }
     Assets {
       Id: 10634098119816284342
-      Name: "Wood Planks Dark"
+      Name: "Wood Planks"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
@@ -5563,5 +5563,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

@@ -282,7 +282,7 @@ Assets {
         Name: "rope"
         Transform {
           Location {
-            X: -78.0195313
+            X: -78.0195312
             Y: -43.75
             Z: 10.328125
           }
@@ -1627,7 +1627,7 @@ Assets {
         Name: "Bone Human Scapula 01"
         Transform {
           Location {
-            X: 5.48632813
+            X: 5.48632812
             Y: 9.76501465
             Z: 29.4921875
           }
@@ -1767,7 +1767,7 @@ Assets {
         Name: "Bone Human Scapula 01"
         Transform {
           Location {
-            X: 4.06445313
+            X: 4.06445312
             Y: 42.0101318
             Z: 19.2944336
           }
@@ -2048,7 +2048,7 @@ Assets {
           Location {
             X: 8.390625
             Y: 8.32550049
-            Z: 18.6132813
+            Z: 18.6132812
           }
           Rotation {
             Pitch: 71.2228165
@@ -3414,7 +3414,7 @@ Assets {
         Name: "Banner"
         Transform {
           Location {
-            X: 89.3320313
+            X: 89.3320312
             Y: 25.4296875
             Z: 692.439941
           }
@@ -3704,7 +3704,7 @@ Assets {
         Name: "Banner"
         Transform {
           Location {
-            X: 80.6445313
+            X: 80.6445312
             Y: 36.9941406
             Z: 692.439941
           }
@@ -3995,8 +3995,8 @@ Assets {
         Transform {
           Location {
             X: -17.2578125
-            Y: 29.0507813
-            Z: 65.1914063
+            Y: 29.0507812
+            Z: 65.1914062
           }
           Rotation {
             Pitch: 85.2423782
@@ -4066,7 +4066,7 @@ Assets {
           Location {
             X: -28.3300781
             Y: -20.5371094
-            Z: 65.1914063
+            Z: 65.1914062
           }
           Rotation {
             Pitch: 87.477562
@@ -4258,7 +4258,7 @@ Assets {
         Name: "Rock Pile 001"
         Transform {
           Location {
-            X: 3.97851563
+            X: 3.97851562
             Y: 49.2774353
             Z: 75.0136719
           }
@@ -4612,5 +4612,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

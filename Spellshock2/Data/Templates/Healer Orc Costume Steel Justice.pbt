@@ -38,9 +38,9 @@ Assets {
         Name: "right_shoulder"
         Transform {
           Location {
-            X: 2.71289063
+            X: 2.71289062
             Y: 9.8359375
-            Z: 49.0039063
+            Z: 49.0039062
           }
           Rotation {
             Roll: -44.8001556
@@ -1278,7 +1278,7 @@ Assets {
           }
           Rotation {
             Pitch: -0.47164917
-            Yaw: -0.0473632813
+            Yaw: -0.0473632812
             Roll: 7.81989574
           }
           Scale {
@@ -2306,7 +2306,7 @@ Assets {
         Name: "left_shoulder"
         Transform {
           Location {
-            X: 6.29882813
+            X: 6.29882812
             Y: -33.1953125
             Z: 52.9052734
           }
@@ -3486,7 +3486,7 @@ Assets {
           }
           Rotation {
             Pitch: -0.47164917
-            Yaw: -0.0473632813
+            Yaw: -0.0473632812
             Roll: 7.81989574
           }
           Scale {
@@ -4514,7 +4514,7 @@ Assets {
         Name: "right_prop"
         Transform {
           Location {
-            X: -4.79101563
+            X: -4.79101562
             Y: 51.3808594
           }
           Rotation {
@@ -6598,7 +6598,7 @@ Assets {
         Name: "head"
         Transform {
           Location {
-            X: -4.22070313
+            X: -4.22070312
             Y: -12.1679688
             Z: 79.796875
           }
@@ -9508,5 +9508,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

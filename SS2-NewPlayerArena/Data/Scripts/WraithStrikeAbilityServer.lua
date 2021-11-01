@@ -42,7 +42,6 @@ local CancelBindings = {
 	ability_extra_20 = true,
 	ability_extra_22 = true,
 	ability_extra_23 = true,
-	ability_extra_4 = true,
 	ability_secondary = true,
 	ability_extra_12 = true
 }
@@ -249,6 +248,10 @@ function DamageInArea()
 		dmg.sourcePlayer = SpecialAbility.owner
 		dmg.sourceAbility = SpecialAbility
 
+		local enemy = enemy
+		if not enemy:IsA("Player") then
+			enemy = enemy:GetCustomProperty("Collider"):WaitForObject()
+		end
 		local attackData = {
 			object = enemy,
 			damage = dmg,
@@ -293,7 +296,7 @@ end
 function GoOnShortCooldown()
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 	goingIntoShortCooldown = true
-	while Object.IsValid(SpecialAbility) and SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
+	while Object.IsValid(SpecialAbility) and SpecialAbility.owner and SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 			SpecialAbility:Activate()
 		else

@@ -2875,7 +2875,7 @@ Assets {
         Name: "right_shoulder"
         Transform {
           Location {
-            X: -6.05664063
+            X: -6.05664062
             Y: 23.6191406
             Z: 168.666016
           }
@@ -3829,7 +3829,7 @@ Assets {
         Transform {
           Location {
             X: 1.9375
-            Y: 52.7226563
+            Y: 52.7226562
             Z: 118.995605
           }
           Rotation {
@@ -3868,7 +3868,7 @@ Assets {
             Z: -17.2380104
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: 89.999794
             Roll: 7.32375483e-05
           }
@@ -4733,5 +4733,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

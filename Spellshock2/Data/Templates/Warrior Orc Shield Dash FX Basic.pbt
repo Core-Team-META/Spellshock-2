@@ -895,7 +895,7 @@ Assets {
         Name: "Skid Trail VFX"
         Transform {
           Location {
-            X: 203.820313
+            X: 203.820312
             Y: 60
             Z: 30
           }
@@ -965,7 +965,7 @@ Assets {
         Name: "Skid Trail VFX"
         Transform {
           Location {
-            X: 203.820313
+            X: 203.820312
             Y: -60
             Z: 30
           }
@@ -1239,5 +1239,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 101
 }

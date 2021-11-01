@@ -2,17 +2,17 @@ Assets {
   Id: 13795170071507932677
   Name: "Terrain Material_2"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 12032822587521192598
     ParameterOverrides {
       Overrides {
         Name: "material1_scale"
-        Float: 0.1
+        Float: 0.5
       }
       Overrides {
         Name: "material1side_scale"
-        Float: 0.1
+        Float: 0.2
       }
       Overrides {
         Name: "cmp:Material3"
@@ -28,11 +28,11 @@ Assets {
       }
       Overrides {
         Name: "material3_scale"
-        Float: 0.1
+        Float: 0.2
       }
       Overrides {
         Name: "material3side_scale"
-        Float: 0.1
+        Float: 0.2
       }
       Overrides {
         Name: "cmp:Material2"

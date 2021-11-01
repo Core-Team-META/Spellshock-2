@@ -1,5 +1,5 @@
 GameId: "7A27B28744BDD660F345909B6C8B2FB1"
-DisplayName: "Spellshock 2 Arena"
-GameSerializationVersion: 84
+DisplayName: "Spellshock 2 Training"
+GameSerializationVersion: 87
 Framework: "Empty Project"
 StorageVersion: 2
