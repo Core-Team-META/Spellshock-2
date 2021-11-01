@@ -11,6 +11,9 @@
 
 In this fantasy PvP battleground, the warring Legion of Light and Dark Devout clash to gain dominion over the war-torn land. Strategize with your teammates to capture and control power crystals on this classic battlefield. Choose from any of five unique MOBA inspired classes, each outfitted with specialized powers, appearances, and playstyles. Level up your skills, collect treasure after each round, and master your favorite class!
 
+## Disclaimer
+This project is being released as-is and targetted towards more advanced users. It does not reflect current best practices nor is it perfectly optimized, please keep that in mind.
+
 ## Credits
 
 - META Director: Buckmonster
@@ -38,14 +41,14 @@ In this fantasy PvP battleground, the warring Legion of Light and Dark Devout cl
 - EaseUI -- NicholasForeman
 - META Cosmetic Store -- Montoli, Estlogic, Buckmonster
 - Teleportation Network -- standardcombo
-- Roaming Spectating Cam  -- standardcombo
+- Roaming Spectating Cam -- standardcombo
 - Simple Audio Trigger -- deadlyfishes
 
 ## Project Structure
 
 Spellshock 2 consists of 7 games, each of those are in their respective top level folder of the project:
 
-- Spellshock2, the main game.
+- Spellshock2, the main game
 - Spellshock2-Tournament
 - Spellshock 2 Tournament Lobby
 - SS2 Versus Arena
