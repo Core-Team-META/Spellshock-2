@@ -1,6 +1,6 @@
 <div align="center">
 
-# Corehaven Chronicles
+# Spellshock 2
 
 [![Build Status](https://github.com/Core-Team-META/Spellshock-2/workflows/CI/badge.svg)](https://github.com/Core-Team-META/Spellshock-2/actions/workflows/ci.yml?query=workflow%3ACI%29)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Core-Team-META/Spellshock-2?style=plastic)
