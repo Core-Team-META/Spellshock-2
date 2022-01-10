@@ -3,6 +3,8 @@ Assets {
   Name: "DeadPlayerIndicatorServer"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

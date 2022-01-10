@@ -28,6 +28,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16765011581879931807
@@ -65,6 +68,9 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -105,6 +111,9 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -148,6 +157,9 @@ Objects {
       Value: "mc:etriggershape:box"
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4267200546041941223
@@ -186,6 +198,9 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -228,6 +243,9 @@ Objects {
       Value: "mc:etriggershape:box"
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1344518710125391134
@@ -267,6 +285,9 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -310,6 +331,9 @@ Objects {
       Value: "mc:etriggershape:box"
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11170131055330862764
@@ -348,6 +372,9 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -389,5 +416,8 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

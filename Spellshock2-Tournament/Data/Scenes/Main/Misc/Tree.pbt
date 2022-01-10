@@ -32,6 +32,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14996873474237789481
@@ -63,6 +66,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -101,6 +107,9 @@ Objects {
     Radius: -1
     IsSpatializationEnabled: true
     IsAttenuationEnabled: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -149,6 +158,9 @@ Objects {
       Id: 17205657525544299071
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10203455416443750590
@@ -184,6 +196,9 @@ Objects {
       Value: "mc:etriggershape:sphere"
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14291644262325182723
@@ -214,6 +229,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -263,6 +281,9 @@ Objects {
       Radius: 400
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16274504631121882860
@@ -295,6 +316,9 @@ Objects {
     Volume: 2
     Falloff: -1
     Radius: -1
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -352,6 +376,9 @@ Objects {
       Id: 16329543708675641342
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5236111476486582131
@@ -385,6 +412,9 @@ Objects {
     Falloff: -1
     Radius: -1
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9301756161479620603
@@ -413,6 +443,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -448,6 +481,9 @@ Objects {
     Radius: -1
     FadeInTime: 0.5
     FadeOutTime: 0.5
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -493,6 +529,9 @@ Objects {
       Id: 11204381079391085941
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2450592768795792909
@@ -528,6 +567,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 584950173788901337
@@ -561,6 +603,9 @@ Objects {
   }
   NetworkContext {
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9795943750057415602
@@ -593,6 +638,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -632,6 +680,9 @@ Objects {
     IsSpatializationEnabled: true
     IsAttenuationEnabled: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10369797205618147404
@@ -669,6 +720,9 @@ Objects {
     Radius: -1
     IsSpatializationEnabled: true
     IsAttenuationEnabled: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -722,6 +776,9 @@ Objects {
       IsAttenuationEnabled: true
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16877977979735346816
@@ -769,6 +826,9 @@ Objects {
       Id: 5336971825443968389
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12868024918956283430
@@ -803,6 +863,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -856,6 +919,9 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -913,6 +979,9 @@ Objects {
     SubobjectId: 13621417251271377984
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -977,6 +1046,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17522349337762062822
@@ -1033,6 +1105,9 @@ Objects {
     SubobjectId: 13621417251271377984
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1110,6 +1185,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16098808602755099209
@@ -1181,6 +1259,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6612959831143154920
@@ -1237,6 +1318,9 @@ Objects {
     SubobjectId: 13621417251271377984
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1295,6 +1379,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 334752411250606779
@@ -1351,6 +1438,9 @@ Objects {
     SubobjectId: 16314371789353632275
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1409,6 +1499,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5663329771856567051
@@ -1466,6 +1559,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2529719035705997115
@@ -1522,6 +1618,9 @@ Objects {
     SubobjectId: 14255673139308738451
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1599,6 +1698,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5205737910222676768
@@ -1668,6 +1770,9 @@ Objects {
     SubobjectId: 12606545348308296584
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1745,6 +1850,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17977496420612044935
@@ -1814,6 +1922,9 @@ Objects {
     SubobjectId: 2283862126855485487
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1893,6 +2004,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1169110602214028820
@@ -1906,7 +2020,7 @@ Objects {
     Rotation {
       Pitch: 90
       Yaw: -2.73207552e-05
-      Roll: -6.10351563e-05
+      Roll: -6.10351562e-05
     }
     Scale {
       X: 0.721942246
@@ -1963,6 +2077,9 @@ Objects {
     SubobjectId: 17795005094102808252
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -2040,6 +2157,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9339642934025391377
@@ -2053,7 +2173,7 @@ Objects {
     Rotation {
       Pitch: 90
       Yaw: -2.73207552e-05
-      Roll: -6.10351563e-05
+      Roll: -6.10351562e-05
     }
     Scale {
       X: 0.721942246
@@ -2110,6 +2230,9 @@ Objects {
     SubobjectId: 7444484252626685369
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -2187,6 +2310,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13760854211680428887
@@ -2257,6 +2383,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 234309320784315977
@@ -2320,6 +2449,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8656445734106906709
@@ -2372,6 +2504,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8217724171443529518
@@ -2406,6 +2541,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -2459,6 +2597,9 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -2516,6 +2657,9 @@ Objects {
     SubobjectId: 13621417251271377984
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -2580,6 +2724,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6987961002559184766
@@ -2636,6 +2783,9 @@ Objects {
     SubobjectId: 13621417251271377984
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -2713,6 +2863,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8173458800068886671
@@ -2783,6 +2936,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4583363347076463302
@@ -2839,6 +2995,9 @@ Objects {
     SubobjectId: 13621417251271377984
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -2897,6 +3056,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14934559279624897645
@@ -2953,6 +3115,9 @@ Objects {
     SubobjectId: 16314371789353632275
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -3011,6 +3176,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8772099451302914107
@@ -3068,6 +3236,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5090168715796239447
@@ -3124,6 +3295,9 @@ Objects {
     SubobjectId: 14255673139308738451
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -3201,6 +3375,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2804912036923489267
@@ -3271,6 +3448,9 @@ Objects {
     SubobjectId: 12606545348308296584
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -3348,6 +3528,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10860035268084895923
@@ -3418,6 +3601,9 @@ Objects {
     SubobjectId: 2283862126855485487
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -3497,6 +3683,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 195288818704976562
@@ -3567,6 +3756,9 @@ Objects {
     SubobjectId: 17795005094102808252
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -3644,6 +3836,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17586199878928954138
@@ -3714,6 +3909,9 @@ Objects {
     SubobjectId: 7444484252626685369
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -3791,6 +3989,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9005013076460633021
@@ -3862,6 +4063,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17675542219629579626
@@ -3925,6 +4129,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7086410682005525320
@@ -3978,6 +4185,9 @@ Objects {
     InstanceId: 16600128214425996607
     TemplateId: 2690866932413183682
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10505394200489241392
@@ -4018,6 +4228,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
     WasRoot: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4067,6 +4280,9 @@ Objects {
   NetworkContext {
     Type: RuntimeStatic
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4051748264459384856
@@ -4112,6 +4328,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4159,6 +4378,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9217056826464283178
@@ -4192,6 +4414,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4229,6 +4454,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4290,6 +4518,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16945876125399375651
@@ -4349,6 +4580,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4410,6 +4644,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13565523861198560723
@@ -4470,6 +4707,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15696412029016759997
@@ -4504,6 +4744,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4555,6 +4798,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4615,6 +4861,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4687,6 +4936,9 @@ Objects {
     InstanceId: 17804719125548591397
     TemplateId: 182375513380770216
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7789236062843174752
@@ -4740,6 +4992,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4803,6 +5058,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12271545225754577259
@@ -4839,6 +5097,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4900,6 +5161,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16469149231326772485
@@ -4959,6 +5223,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5020,6 +5287,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4003603090784726992
@@ -5080,6 +5350,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16061472190131555031
@@ -5114,6 +5387,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5165,6 +5441,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5225,6 +5504,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5297,6 +5579,9 @@ Objects {
     InstanceId: 17804719125548591397
     TemplateId: 182375513380770216
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13297563783748700399
@@ -5351,6 +5636,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7718568551427512001
@@ -5403,6 +5691,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13671284273415983427
@@ -5443,6 +5734,9 @@ Objects {
     SubobjectId: 17482592696516241271
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5537,6 +5831,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5787986911031990677
@@ -5629,6 +5926,9 @@ Objects {
     SubobjectId: 2267424557961080737
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5723,6 +6023,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3490654164813558816
@@ -5816,6 +6119,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4081822806341811740
@@ -5863,6 +6169,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14100472669565348920
@@ -5896,6 +6205,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5959,6 +6271,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1068083705075707251
@@ -6021,6 +6336,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 346922338626205228
@@ -6054,6 +6372,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -6117,6 +6438,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4318342602625859032
@@ -6179,6 +6503,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12415189574170189444
@@ -6213,6 +6540,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -6278,6 +6608,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8294216606979575553
@@ -6341,6 +6674,9 @@ Objects {
     SubobjectId: 2477031935959469919
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -6406,6 +6742,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3487167564064436788
@@ -6470,6 +6809,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7565684067974363054
@@ -6511,6 +6853,9 @@ Objects {
     SubobjectId: 3337539427063389618
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -6576,6 +6921,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14025572329274664118
@@ -6638,6 +6986,9 @@ Objects {
     SubobjectId: 15757281494394125413
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -6703,6 +7054,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6588744313770171812
@@ -6767,6 +7121,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13912713574297000575
@@ -6799,6 +7156,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -6862,6 +7222,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4697566626201523105
@@ -6924,6 +7287,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7582787778333882074
@@ -6958,6 +7324,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7017,6 +7386,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11290240642929975733
@@ -7074,6 +7446,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7133,6 +7508,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3458873564504672804
@@ -7174,6 +7552,9 @@ Objects {
     SubobjectId: 9161710174524816400
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7239,6 +7620,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7873596851004504427
@@ -7301,6 +7685,9 @@ Objects {
     SubobjectId: 2477031935959469919
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7366,6 +7753,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13326425454312383590
@@ -7430,6 +7820,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15877430874285717494
@@ -7470,6 +7863,9 @@ Objects {
     SubobjectId: 10624970845307978178
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7535,6 +7931,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7103829069606165672
@@ -7597,6 +7996,9 @@ Objects {
     SubobjectId: 3292504148453386908
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7662,6 +8064,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7989422956291323513
@@ -7725,6 +8130,9 @@ Objects {
     SubobjectId: 2433259003244970061
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7795,6 +8203,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7022765070984752006
@@ -7835,6 +8246,9 @@ Objects {
     SubobjectId: 3337539427063389618
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7885,6 +8299,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10775304086990015057
@@ -7932,6 +8349,9 @@ Objects {
     SubobjectId: 15757281494394125413
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7982,6 +8402,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15827347239906865929
@@ -8030,6 +8453,9 @@ Objects {
     SubobjectId: 10701262481659004221
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -8081,6 +8507,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4858090718335448773
@@ -8130,6 +8559,9 @@ Objects {
     SubobjectId: 887185170638684401
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -8183,6 +8615,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6773960688229063285
@@ -8233,6 +8668,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2840261777267681982
@@ -8281,6 +8719,9 @@ Objects {
   }
   Relevance {
     Value: "mc:eproxyrelevance:high"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -8331,6 +8772,9 @@ Objects {
   Relevance {
     Value: "mc:eproxyrelevance:high"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9557047502685272825
@@ -8379,6 +8823,9 @@ Objects {
   }
   Relevance {
     Value: "mc:eproxyrelevance:high"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -8432,6 +8879,9 @@ Objects {
     InstanceId: 12747568712310361586
     TemplateId: 10298965103520888440
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9437946792556109196
@@ -8478,6 +8928,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4569889889318511770
@@ -8523,6 +8976,9 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -8581,5 +9037,8 @@ Objects {
     ScriptAsset {
       Id: 14138177962761407593
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

@@ -18,7 +18,7 @@ Assets {
 }
 Assets {
   Id: 12096222413138628974
-  Name: "Japan Corners 001"
+  Name: "Japanese Corners 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"

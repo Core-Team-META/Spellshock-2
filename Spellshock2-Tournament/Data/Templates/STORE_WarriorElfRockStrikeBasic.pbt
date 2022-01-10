@@ -29,6 +29,9 @@ Assets {
         }
         NetworkContext {
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 4251404975037943881
@@ -58,6 +61,9 @@ Assets {
         }
         Folder {
           IsFilePartition: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -91,6 +97,9 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -155,6 +164,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 12233739226106800034
@@ -193,6 +205,9 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -264,6 +279,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 2538344830838350899
@@ -333,6 +351,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -404,6 +425,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 14390426454399367342
@@ -474,6 +498,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 15087715274610839570
@@ -481,7 +508,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -544,13 +571,16 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 7672289149381426758
         Name: "RockStrike"
         Transform {
           Location {
-            X: 12.1289063
+            X: 12.1289062
             Y: 6.15234375
             Z: 36.3232422
           }
@@ -582,6 +612,9 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -653,6 +686,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 70184176204426830
@@ -722,6 +758,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -793,13 +832,16 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 3966167970077166113
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.8789063
+            X: 30.8789062
             Y: 893.984375
             Z: -227.8125
           }
@@ -863,6 +905,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 10812164152441822469
@@ -870,7 +915,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -933,6 +978,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 5192693045972958391
@@ -971,6 +1019,9 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -1042,6 +1093,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 13077508054397032297
@@ -1111,6 +1165,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -1182,13 +1239,16 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 817197171116117800
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.8789063
+            X: 30.8789062
             Y: 893.984375
             Z: -227.8125
           }
@@ -1252,6 +1312,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 2977405187584871227
@@ -1259,7 +1322,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -1322,6 +1385,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 8989016220231117644
@@ -1330,7 +1396,7 @@ Assets {
           Location {
             X: -14.21875
             Y: 26.6210938
-            Z: 30.0976563
+            Z: 30.0976562
           }
           Rotation {
             Pitch: -4.31131
@@ -1360,6 +1426,9 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -1431,6 +1500,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 5049856603611715155
@@ -1500,6 +1572,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -1571,13 +1646,16 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 5923044917921527763
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.8789063
+            X: 30.8789062
             Y: 893.984375
             Z: -227.8125
           }
@@ -1641,6 +1719,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 18011365166119379516
@@ -1648,7 +1729,7 @@ Assets {
         Transform {
           Location {
             X: 48.6328125
-            Y: -391.914063
+            Y: -391.914062
             Z: -227.8125
           }
           Rotation {
@@ -1711,6 +1792,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     Assets {
@@ -1745,5 +1829,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 951812188214422914
   Name: "Custom Waterfall from Waterfall Straight_2"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 103
   CustomMaterialAsset {
     BaseMaterialId: 4729541953461097043
     ParameterOverrides {
@@ -54,7 +54,7 @@ Assets {
             Color {
               R: 0.9375
               G: 0.600100696
-              B: 0.395507813
+              B: 0.395507812
               A: 1
             }
           }

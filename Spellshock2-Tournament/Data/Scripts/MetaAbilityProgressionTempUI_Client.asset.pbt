@@ -3,6 +3,8 @@ Assets {
   Name: "MetaAbilityProgressionTempUI_Client"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

@@ -28,6 +28,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Tournament"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10371575606117460542
@@ -56,6 +59,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Leaderboard"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -111,6 +117,9 @@ Objects {
       Id: 14585374219509659484
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5892343681043908828
@@ -140,6 +149,9 @@ Objects {
     ScriptAsset {
       Id: 10932134586341208386
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -176,5 +188,8 @@ Objects {
     ScriptAsset {
       Id: 1793765842147830625
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

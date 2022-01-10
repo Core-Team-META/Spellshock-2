@@ -3,6 +3,8 @@ Assets {
   Name: "StatusEffectsDefinition_Stun"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

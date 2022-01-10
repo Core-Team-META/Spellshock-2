@@ -47,6 +47,9 @@ Objects {
       IsSpatializationEnabled: true
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4859817366682487914
@@ -101,6 +104,9 @@ Objects {
     InstanceId: 13303893279092191653
     TemplateId: 2961603344546662916
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15630855271564211800
@@ -154,5 +160,8 @@ Objects {
       FadeOutTime: 1
       IsSpatializationEnabled: true
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

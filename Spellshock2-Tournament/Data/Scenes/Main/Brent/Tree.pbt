@@ -28,6 +28,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Class Logs"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1133890144562814122
@@ -56,6 +59,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Garbage Cleanup"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -89,6 +95,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Tutorial"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3457668934632133835
@@ -117,6 +126,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Progression Mutlipliers"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -147,6 +159,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Perk Shop"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13143194677747676118
@@ -175,6 +190,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Mount Manager"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -205,6 +223,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Consumable Progression"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2948169366293580591
@@ -233,6 +254,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Class Progress System"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -263,6 +287,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "PlayerJoinedManager"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14181934291677398887
@@ -291,6 +318,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Misc Objects"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -321,6 +351,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "TEMP_MAP_OBECTS"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4287960005776040561
@@ -349,6 +382,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Game Play Stats"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -379,6 +415,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Chat Hook Commands"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10393850260092772171
@@ -408,6 +447,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Networked Events"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15057716785033630782
@@ -432,6 +474,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "DataCompression"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -462,6 +507,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Status Effect System"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11490187644604034792
@@ -490,6 +538,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Cosmetics"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -526,6 +577,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Achivment System"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16629351977808918313
@@ -554,5 +608,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Skills"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

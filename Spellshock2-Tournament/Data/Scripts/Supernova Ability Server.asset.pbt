@@ -3,6 +3,8 @@ Assets {
   Name: "Supernova Ability Server"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

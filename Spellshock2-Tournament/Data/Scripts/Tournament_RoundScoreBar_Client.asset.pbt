@@ -3,6 +3,8 @@ Assets {
   Name: "Tournament_RoundScoreBar_Client"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

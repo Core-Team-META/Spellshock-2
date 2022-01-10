@@ -35,6 +35,9 @@ Assets {
         Folder {
           IsGroup: true
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 8846893437263903214
@@ -83,6 +86,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -144,6 +150,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 1098764772194726930
@@ -200,13 +209,16 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 14497495760541582849
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 3.60351563
+            X: 3.60351562
             Y: 26.7910156
             Z: 34.362793
           }
@@ -259,14 +271,17 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 10903999051012644632
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: -14.9570313
-            Y: 86.2695313
+            X: -14.9570312
+            Y: 86.2695312
             Z: 34.362793
           }
           Rotation {
@@ -317,6 +332,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -379,13 +397,16 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 12743444847015052782
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: -5.56445313
+            X: -5.56445312
             Y: 83.9023438
             Z: 171.216797
           }
@@ -439,6 +460,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
     }
@@ -510,5 +534,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

@@ -28,6 +28,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Top Players"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4362092203162598167
@@ -56,6 +59,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Daily Shop"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -89,6 +95,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "CosmeticStore"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1204198035822590699
@@ -121,6 +130,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Tutorial Overlay"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4683464414535277849
@@ -149,6 +161,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "DamageHelper"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -231,6 +246,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Map Mode"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10701854205104381264
@@ -259,6 +277,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Respawn _ Quick Class Selection"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -289,6 +310,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Midgame UI"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3281734247870618909
@@ -318,6 +342,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "UI Components"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15766608560554198711
@@ -346,6 +373,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "RewardSystem"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -381,6 +411,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Victory Screen"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 527033524674069522
@@ -412,6 +445,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Capture Point UI"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7371117519618108034
@@ -440,6 +476,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Minimap"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -471,5 +510,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Player UI"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

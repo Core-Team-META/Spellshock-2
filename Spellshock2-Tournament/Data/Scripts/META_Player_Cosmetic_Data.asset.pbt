@@ -3,6 +3,8 @@ Assets {
   Name: "META_Player_Cosmetic_Data"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

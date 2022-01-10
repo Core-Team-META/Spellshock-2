@@ -37,6 +37,9 @@ Assets {
         Folder {
           IsGroup: true
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 5897086136171418973
@@ -84,6 +87,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -141,6 +147,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 7573666094246985552
@@ -197,6 +206,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 15724068470038554648
@@ -240,6 +252,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -316,6 +331,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 11796276521910194849
@@ -323,7 +341,7 @@ Assets {
         Transform {
           Location {
             X: 4.18554688
-            Y: 4.75976563
+            Y: 4.75976562
             Z: 102.06543
           }
           Rotation {
@@ -378,6 +396,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 11738703386456557234
@@ -385,7 +406,7 @@ Assets {
         Transform {
           Location {
             X: 0.1640625
-            Y: -8.33007813
+            Y: -8.33007812
             Z: -161.325195
           }
           Rotation {
@@ -440,13 +461,16 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 6781448492523231802
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: -1.08007813
+            X: -1.08007812
             Y: -4.13085938
             Z: -218.95459
           }
@@ -502,6 +526,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 4812145124933715632
@@ -509,7 +536,7 @@ Assets {
         Transform {
           Location {
             X: 3.55078125
-            Y: 2.40820313
+            Y: 2.40820312
             Z: 101.405762
           }
           Rotation {
@@ -563,6 +590,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
     }
@@ -670,5 +700,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

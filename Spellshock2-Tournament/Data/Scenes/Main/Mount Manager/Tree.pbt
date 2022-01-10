@@ -37,6 +37,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14973844586117912821
@@ -114,6 +117,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -121,6 +125,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -199,6 +206,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -206,6 +214,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -284,6 +295,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -291,6 +303,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -369,6 +384,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -376,6 +392,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -454,6 +473,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -461,6 +481,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -539,6 +562,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -546,6 +570,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -624,6 +651,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -631,6 +659,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -709,6 +740,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -716,6 +748,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -794,6 +829,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -801,6 +837,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -879,6 +918,7 @@ Objects {
       CanMoveDown: true
       IsMountEnabled: true
       MaxHitpoints: -1
+      PlayerMasterVolumeMultiplier: 1
     }
   }
   InstanceHistory {
@@ -886,6 +926,9 @@ Objects {
     SubobjectId: 11592647923584693331
     InstanceId: 1967900192041222895
     TemplateId: 425347663873707340
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -914,6 +957,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -953,6 +999,9 @@ Objects {
       Id: 1148359876689999994
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7181858312778661679
@@ -981,6 +1030,9 @@ Objects {
   }
   NetworkContext {
     Type: Server
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1025,5 +1077,8 @@ Objects {
     ScriptAsset {
       Id: 3266292934643434662
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

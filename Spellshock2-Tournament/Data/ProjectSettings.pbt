@@ -104,4 +104,4 @@ LeaderboardConfigs {
     EntryLimit: 100
   }
 }
-MaxPlayers: 16
+MainScene: "Main"

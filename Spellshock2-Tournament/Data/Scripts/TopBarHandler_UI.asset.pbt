@@ -3,6 +3,8 @@ Assets {
   Name: "TopBarHandler_UI"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }

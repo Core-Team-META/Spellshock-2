@@ -3,6 +3,8 @@ Assets {
   Name: "MetaAfk_Whitelist_API"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 85
+  SerializationVersion: 103
 }
