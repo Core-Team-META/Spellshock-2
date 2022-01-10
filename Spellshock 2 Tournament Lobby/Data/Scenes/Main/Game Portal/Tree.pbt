@@ -35,6 +35,9 @@ Objects {
     InstanceId: 3740988481560433105
     TemplateId: 500406429346550918
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17260614677856287485
@@ -85,6 +88,9 @@ Objects {
     VerticalAlignment {
       Value: "mc:ecoretextverticalalign:center"
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -245,6 +251,9 @@ Objects {
     TeamSettings {
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5700778022310553026
@@ -296,6 +305,9 @@ Objects {
     InstanceId: 3740988481560433105
     TemplateId: 500406429346550918
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14271162159852144186
@@ -339,5 +351,8 @@ Objects {
     SubobjectId: 2271583699116595092
     InstanceId: 3740988481560433105
     TemplateId: 500406429346550918
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

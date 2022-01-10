@@ -2,7 +2,7 @@ Assets {
   Id: 15002237624574350477
   Name: "Custom Base Material from Floor Candle Holder 02"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 103
   CustomMaterialAsset {
     BaseMaterialId: 11870135095448207350
     ParameterOverrides {
