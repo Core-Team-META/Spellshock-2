@@ -10,9 +10,9 @@ Assets {
         Name: "Plant_branches_big"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.74294
+            Y: 1.74294
+            Z: 1.74294
           }
         }
         ParentId: 15778795352663330980
@@ -45,9 +45,9 @@ Assets {
             Z: 32.9360352
           }
           Rotation {
-            Pitch: -0.26748386
+            Pitch: -0.267486572
             Yaw: -34.861908
-            Roll: -2.87298608
+            Roll: -2.87298584
           }
           Scale {
             X: 0.615678

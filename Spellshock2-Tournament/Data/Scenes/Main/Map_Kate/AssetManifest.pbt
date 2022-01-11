@@ -746,15 +746,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14281826121533999733
-  Name: "Coral Tubes Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_coral_tube_small_01"
-  }
-}
-Assets {
   Id: 14270419193600238466
   Name: "Hill 02"
   PlatformAssetType: 1
@@ -770,6 +761,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_raw_white_001_uv"
+  }
+}
+Assets {
+  Id: 14191450020956741978
+  Name: "Tree Redwood Medium"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_redwood_002"
   }
 }
 Assets {
@@ -1826,6 +1826,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9227631276655353491
+  Name: "Hill 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hill_004"
+  }
+}
+Assets {
   Id: 9223391083233434823
   Name: "Cylinder - Chamfered Small Polished"
   PlatformAssetType: 1
@@ -2006,15 +2015,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8777307662385110705
-  Name: "Fern 03"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_fern_generic_003"
-  }
-}
-Assets {
   Id: 8772778959370683656
   Name: "Gravel Raked 01"
   PlatformAssetType: 2
@@ -2084,6 +2084,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cone_truncated_hollow_006"
+  }
+}
+Assets {
+  Id: 8469703296194386726
+  Name: "Tree Redwood Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_redwood_005"
   }
 }
 Assets {
@@ -2312,6 +2321,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7368953753208724264
+  Name: "Tree Redwood Bare Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_redwood_006"
+  }
+}
+Assets {
   Id: 7363477334452929865
   Name: "Sphere"
   PlatformAssetType: 1
@@ -2363,6 +2381,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_birch_001"
+  }
+}
+Assets {
+  Id: 7107893718859707457
+  Name: "Tree Redwood Bare Medium"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_redwood_004"
   }
 }
 Assets {
@@ -3086,6 +3113,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3834487395638995980
+  Name: "Decal Snow Patch"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_snow_patch_001"
+  }
+}
+Assets {
   Id: 3817933812062928360
   Name: "Wood Planks"
   PlatformAssetType: 2
@@ -3572,6 +3608,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1523214900353875295
+  Name: "Snow 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_snow_001_uv"
+  }
+}
+Assets {
   Id: 1471773936938775611
   Name: "Ellipsoid - Truncated"
   PlatformAssetType: 1
@@ -3641,6 +3686,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_tib_01_ref"
+  }
+}
+Assets {
+  Id: 1165672060587372127
+  Name: "Snow Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_snow_volume"
   }
 }
 Assets {

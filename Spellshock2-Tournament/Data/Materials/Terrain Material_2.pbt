@@ -97,6 +97,12 @@ Assets {
           A: 1
         }
       }
+      Overrides {
+        Name: "cmp:Material1"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
     }
     Assets {
       Id: 12032822587521192598

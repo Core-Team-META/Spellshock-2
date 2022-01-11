@@ -30,8 +30,8 @@ Assets {
         Name: "cmpc:Material1_Sides"
         Color {
           R: 1
-          G: 0.558854222
-          B: 0.197916687
+          G: 0.8339
+          B: 0.697999954
           A: 1
         }
       }
@@ -44,7 +44,7 @@ Assets {
       Overrides {
         Name: "cmp:Material2_Sides"
         AssetReference {
-          Id: 15281399694292404596
+          Id: 14402556056167558311
         }
       }
       Overrides {
@@ -58,7 +58,7 @@ Assets {
       Overrides {
         Name: "cmp:Material3"
         AssetReference {
-          Id: 15281399694292404596
+          Id: 1523214900353875295
         }
       }
       Overrides {
@@ -70,7 +70,7 @@ Assets {
       Overrides {
         Name: "cmp:Material4"
         AssetReference {
-          Id: 2148407408977013770
+          Id: 1523214900353875295
         }
       }
       Overrides {
@@ -112,53 +112,35 @@ Assets {
         Name: "cmpc:Material1"
         Color {
           R: 1
-          G: 0.558854222
-          B: 0.197916687
-          A: 1
-        }
-      }
-      Overrides {
-        Name: "cmpc:Material3"
-        Color {
-          R: 0.796875
-          G: 0.610107422
-          B: 0.610107422
+          G: 0.8339
+          B: 0.697999954
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material3_Sides"
         Color {
-          R: 0.932291687
-          G: 0.521015167
-          B: 0.184516087
+          R: 1
+          G: 0.8339
+          B: 0.697999954
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material4_Sides"
         Color {
-          R: 1
-          G: 0.759375036
-          B: 0.5625
+          R: 0.802000046
+          G: 0.802000046
+          B: 0.802000046
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material2"
         Color {
-          R: 1
-          G: 0.575000048
-          B: 0.291666687
-          A: 1
-        }
-      }
-      Overrides {
-        Name: "cmpc:Material4"
-        Color {
-          R: 0.734375
-          G: 0.67390269
-          B: 0.596467376
+          R: 0.631267
+          G: 0.62769
+          B: 0.735
           A: 1
         }
       }
@@ -200,7 +182,7 @@ Assets {
       }
     }
     Assets {
-      Id: 15281399694292404596
+      Id: 14402556056167558311
       Name: "Sand 01"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -209,12 +191,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15281399694292404596
-      Name: "Sand 01"
+      Id: 1523214900353875295
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_sand_001_uv"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {
@@ -227,12 +209,12 @@ Assets {
       }
     }
     Assets {
-      Id: 2148407408977013770
-      Name: "Grass Clumps"
+      Id: 1523214900353875295
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_grass_002_uv"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {

@@ -18,6 +18,14 @@ Assets {
           A: 1
         }
       }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.102529
+          G: 0.151042
+          A: 1
+        }
+      }
     }
     Assets {
       Id: 15437848753356882295

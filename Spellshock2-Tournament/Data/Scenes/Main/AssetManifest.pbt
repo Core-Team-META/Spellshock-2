@@ -1,4 +1,22 @@
 Assets {
+  Id: 17178536972242907425
+  Name: "Tree Redwood Big"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_redwood_001"
+  }
+}
+Assets {
+  Id: 16910278292812118833
+  Name: "Sun Light"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_SunLight"
+  }
+}
+Assets {
   Id: 16772265683136066156
   Name: "JewelPack4"
   PlatformAssetType: 24
@@ -31,6 +49,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rocks_small_002"
+  }
+}
+Assets {
+  Id: 16285172041817233770
+  Name: "Advanced Color Grading Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_advanced_color_grading"
   }
 }
 Assets {
@@ -96,15 +123,6 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
-  }
-}
-Assets {
-  Id: 15128280182623405640
-  Name: "Fern 04"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_fern_generic_004"
   }
 }
 Assets {
@@ -178,6 +196,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13266663870848907036
+  Name: "Coral Branches Big"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_branch_big_01"
+  }
+}
+Assets {
   Id: 12913628546500597405
   Name: "Premium 1"
   PlatformAssetType: 24
@@ -230,6 +257,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12107410425077790377
+  Name: "Simple Exposure Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_simple_exposure"
+  }
+}
+Assets {
   Id: 11738101196508092081
   Name: "Server Gold"
   PlatformAssetType: 24
@@ -269,6 +305,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11515840070784317904
+  Name: "Skylight"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_Skylight"
+  }
+}
+Assets {
   Id: 11232852364461677985
   Name: "JewelPack3"
   PlatformAssetType: 24
@@ -291,12 +336,12 @@ Assets {
   }
 }
 Assets {
-  Id: 10784387645319107096
-  Name: "Tree Oak 01"
-  PlatformAssetType: 1
+  Id: 11221279654899718078
+  Name: "Ambient Occlusion Post Process"
+  PlatformAssetType: 20
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_tree_oak_001"
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_ao"
   }
 }
 Assets {
@@ -419,6 +464,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_001"
+  }
+}
+Assets {
+  Id: 7887238662729938253
+  Name: "Sky Dome"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_Sky"
   }
 }
 Assets {
@@ -606,6 +660,15 @@ Assets {
         Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
+  }
+}
+Assets {
+  Id: 2224571462023946700
+  Name: "Environment Fog Default VFX"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_env_fog_default"
   }
 }
 Assets {

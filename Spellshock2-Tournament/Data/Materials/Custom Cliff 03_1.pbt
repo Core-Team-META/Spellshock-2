@@ -1,0 +1,54 @@
+Assets {
+  Id: 15693582222767046264
+  Name: "Redwood bark Cliff 03_1"
+  PlatformAssetType: 13
+  SerializationVersion: 103
+  CustomMaterialAsset {
+    BaseMaterialId: 17686025311361638391
+    ParameterOverrides {
+      Overrides {
+        Name: "u_tiles"
+        Float: 2
+      }
+      Overrides {
+        Name: "v_tiles"
+        Float: 0.4
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.767
+          G: 0.577167511
+          B: 0.387335
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "gradient_color"
+        Color {
+          R: 0.637051105
+          G: 0.633323
+          B: 0.857000053
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "gradient_shift"
+        Float: 0
+      }
+      Overrides {
+        Name: "gradient_falloff"
+        Float: 0.234174132
+      }
+    }
+    Assets {
+      Id: 17686025311361638391
+      Name: "Cliff 03"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "cliff_003"
+      }
+    }
+  }
+}
