@@ -37,13 +37,13 @@ Assets {
       Overrides {
         Name: "cmp:Material2"
         AssetReference {
-          Id: 14643090495247569259
+          Id: 1523214900353875295
         }
       }
       Overrides {
         Name: "cmp:Material2_Sides"
         AssetReference {
-          Id: 14643090495247569259
+          Id: 1523214900353875295
         }
       }
       Overrides {
@@ -80,28 +80,18 @@ Assets {
         }
       }
       Overrides {
-        Name: "cmpc:Material2_Sides"
-        Color {
-          R: 1
-          G: 0.931854308
-          B: 0.79
-          A: 1
-        }
-      }
-      Overrides {
-        Name: "cmpc:Material2"
-        Color {
-          R: 1
-          G: 0.931854308
-          B: 0.79
-          A: 1
-        }
-      }
-      Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 841534158063459245
+          Id: 1523214900353875295
         }
+      }
+      Overrides {
+        Name: "material2_scale"
+        Float: 0.3
+      }
+      Overrides {
+        Name: "material2side_scale"
+        Float: 0.3
       }
     }
     Assets {
@@ -132,21 +122,21 @@ Assets {
       }
     }
     Assets {
-      Id: 14643090495247569259
-      Name: "Dirt 01"
+      Id: 1523214900353875295
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "dirt_001"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {
-      Id: 14643090495247569259
-      Name: "Dirt 01"
+      Id: 1523214900353875295
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "dirt_001"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {
@@ -156,6 +146,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "cliff_002"
+      }
+    }
+    Assets {
+      Id: 1523214900353875295
+      Name: "Snow 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_snow_001_uv"
       }
     }
   }

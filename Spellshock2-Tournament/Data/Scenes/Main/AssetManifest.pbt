@@ -174,15 +174,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13800436588944964225
-  Name: "Bush 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_002"
-  }
-}
-Assets {
   Id: 13420476618392182070
   Name: "Gem Pack 1"
   PlatformAssetType: 24
@@ -695,15 +686,6 @@ Assets {
         Value: "mc:enetreferencetype:creatorperk"
       }
     }
-  }
-}
-Assets {
-  Id: 901541979513849367
-  Name: "Bush 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_001"
   }
 }
 Assets {

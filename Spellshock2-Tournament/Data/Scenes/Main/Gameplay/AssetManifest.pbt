@@ -332,15 +332,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8553298544017934648
-  Name: "Grass Tall"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_grass_generic_001"
-  }
-}
-Assets {
   Id: 7842257786309086050
   Name: "Metal Frame 01"
   PlatformAssetType: 2

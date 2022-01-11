@@ -224,15 +224,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17076031360332202797
-  Name: "Terrain - Desert"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_terrain_rock-sand_001_wa"
-  }
-}
-Assets {
   Id: 16933361490793048899
   Name: "Metal Iron Rusted 02"
   PlatformAssetType: 2
@@ -701,15 +692,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14402556056167558311
-  Name: "Sand 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_sand_001_uv"
-  }
-}
-Assets {
   Id: 14333097303507909878
   Name: "Bone Human Scattered 01"
   PlatformAssetType: 1
@@ -923,15 +905,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
-  }
-}
-Assets {
-  Id: 13354969486855787710
-  Name: "Decal Sand Patch"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_sand_patch_001"
   }
 }
 Assets {
@@ -1166,15 +1139,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_001"
-  }
-}
-Assets {
-  Id: 12307252604743719184
-  Name: "Decal Soil Cracks Smal Variants 02"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_soil_cracks_002"
   }
 }
 Assets {
@@ -2528,15 +2492,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6433548446612999816
-  Name: "Decal Soil Cracks Big 01"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_soil_cracks_001"
-  }
-}
-Assets {
   Id: 6367527662954153739
   Name: "Ring 01"
   PlatformAssetType: 1
@@ -3509,15 +3464,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1964254608213071037
-  Name: "Bark Redwood 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_redwood_001_uv"
-  }
-}
-Assets {
   Id: 1944519723993473514
   Name: "Pipe - 4-Sided Thick"
   PlatformAssetType: 1
@@ -3551,6 +3497,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_stone-arch_6m_002"
+  }
+}
+Assets {
+  Id: 1755255133030522901
+  Name: "Tree Oak Bare 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_oak_002"
   }
 }
 Assets {

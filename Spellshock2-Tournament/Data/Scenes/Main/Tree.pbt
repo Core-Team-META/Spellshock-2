@@ -1479,7 +1479,7 @@ Objects {
       Materials {
         key: "Nature_Trunk"
         value {
-          Id: 841534158063459245
+          Id: 15693582222767046264
         }
       }
       LocalPositionOffset {
@@ -1491,120 +1491,6 @@ Objects {
       }
       Height {
         Min: 8000
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 901541979513849367
-      }
-      DistanceBetweenInstances: 1500
-      MaterialChannel: 3
-      SpawnDistance: 24000
-      CullDistance {
-        Min: 7000
-        Max: 10000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 45
-      }
-      Scaling {
-        ScaleX {
-          Min: 1
-          Max: 1.5
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Leaves"
-        value {
-          Id: 8016426914143833807
-        }
-      }
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -50
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: 7000
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 13800436588944964225
-      }
-      DistanceBetweenInstances: 1500
-      MaterialChannel: 3
-      SpawnDistance: 24000
-      CullDistance {
-        Min: 7000
-        Max: 10000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 45
-      }
-      Scaling {
-        ScaleX {
-          Min: 1
-          Max: 1
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Leaves"
-        value {
-          Id: 8016426914143833807
-        }
-      }
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -50
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: 7000
         Max: 102400
       }
     }
@@ -2028,9 +1914,9 @@ Objects {
     Overrides {
       Name: "bp:Scene Tint"
       Color {
-        R: 0.996514797
-        G: 1.06434321
-        B: 1.2
+        R: 1.07955754
+        G: 1.15303838
+        B: 1.3
         A: 1
       }
     }
