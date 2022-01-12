@@ -35,6 +35,10 @@ Assets {
         Name: "Faceted"
         Bool: false
       }
+      Overrides {
+        Name: "emissive_boost"
+        Float: 0.2
+      }
     }
     Assets {
       Id: 17117735896314006411

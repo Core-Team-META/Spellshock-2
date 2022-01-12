@@ -23630,6 +23630,7 @@ Objects {
   ChildIds: 17599823104688422833
   ChildIds: 11972347679962644335
   ChildIds: 17800263749469557598
+  ChildIds: 6634772112520892046
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -23651,6 +23652,51 @@ Objects {
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6634772112520892046
+  Name: "Decal Snow Patch"
+  Transform {
+    Location {
+      X: 7.64721632
+      Y: -10.8986397
+      Z: -105.026207
+    }
+    Rotation {
+      Pitch: -0.324734509
+      Yaw: 1.22866304e-08
+    }
+    Scale {
+      X: 2.00712514
+      Y: 1.75937712
+      Z: 0.0876094326
+    }
+  }
+  ParentId: 14436680703868858686
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3834487395638995980
+    }
+    TeamSettings {
+    }
+    DecalBP {
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:medium"
   }
 }
 Objects {

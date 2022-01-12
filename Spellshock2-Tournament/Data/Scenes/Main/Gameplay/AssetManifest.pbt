@@ -494,6 +494,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3834487395638995980
+  Name: "Decal Snow Patch"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_snow_patch_001"
+  }
+}
+Assets {
   Id: 3164364020326874740
   Name: "Plasma Charge Up Start VFX"
   PlatformAssetType: 8

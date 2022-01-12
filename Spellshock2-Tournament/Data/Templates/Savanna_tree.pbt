@@ -10,9 +10,9 @@ Assets {
         Name: "Savanna_tree"
         Transform {
           Scale {
-            X: 1.23517
-            Y: 1.23517
-            Z: 1.23517
+            X: 2.42893362
+            Y: 2.42893362
+            Z: 2.42893362
           }
         }
         ParentId: 4781671109827199097
@@ -98,16 +98,16 @@ Assets {
           Overrides {
             Name: "ma:Nature_Trunk:color"
             Color {
-              R: 0.760416687
-              G: 0.760416687
-              B: 0.760416687
+              R: 1.2
+              G: 0.903000057
+              B: 0.606
               A: 1
             }
           }
           Overrides {
             Name: "ma:Nature_Trunk:id"
             AssetReference {
-              Id: 9650217245010659427
+              Id: 15693582222767046264
             }
           }
         }
@@ -118,7 +118,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -166,9 +166,9 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.182614028
-              G: 0.219000012
-              B: 0.0205311067
+              R: 0.690277815
+              G: 0.291666657
+              B: 0.875
               A: 1
             }
           }
@@ -193,7 +193,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -229,9 +229,9 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.156347618
-              G: 0.1875
-              B: 0.0175780021
+              R: 0.690277815
+              G: 0.291666657
+              B: 0.875
               A: 1
             }
           }
@@ -256,7 +256,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -289,6 +289,15 @@ Assets {
               Id: 12889861000896994476
             }
           }
+          Overrides {
+            Name: "ma:Nature_Leaves:color"
+            Color {
+              R: 0.712937772
+              G: 0.152500018
+              B: 0.953125
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -310,7 +319,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -346,9 +355,9 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.156347618
-              G: 0.1875
-              B: 0.0175780021
+              R: 0.690277815
+              G: 0.291666657
+              B: 0.875
               A: 1
             }
           }
@@ -373,7 +382,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -409,9 +418,9 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.156347618
-              G: 0.1875
-              B: 0.0175780021
+              R: 0.690277815
+              G: 0.291666657
+              B: 0.875
               A: 1
             }
           }
@@ -436,7 +445,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -472,9 +481,9 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.182614028
-              G: 0.219000012
-              B: 0.0205311067
+              R: 0.712937772
+              G: 0.152500018
+              B: 0.953125
               A: 1
             }
           }
@@ -499,7 +508,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -535,9 +544,9 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.156347618
-              G: 0.1875
-              B: 0.0175780021
+              R: 0.712937772
+              G: 0.152500018
+              B: 0.953125
               A: 1
             }
           }
@@ -562,7 +571,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -598,9 +607,9 @@ Assets {
           Overrides {
             Name: "ma:Nature_Leaves:color"
             Color {
-              R: 0.182614028
-              G: 0.219000012
-              B: 0.0205311067
+              R: 0.712937772
+              G: 0.152500018
+              B: 0.953125
               A: 1
             }
           }
@@ -625,7 +634,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
@@ -658,6 +667,15 @@ Assets {
               Id: 12889861000896994476
             }
           }
+          Overrides {
+            Name: "ma:Nature_Leaves:color"
+            Color {
+              R: 0.712937772
+              G: 0.152500018
+              B: 0.953125
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -679,7 +697,7 @@ Assets {
           StaticMesh {
             Physics {
             }
-            BoundsScale: 1
+            BoundsScale: 2
           }
         }
         NetworkRelevanceDistance {
