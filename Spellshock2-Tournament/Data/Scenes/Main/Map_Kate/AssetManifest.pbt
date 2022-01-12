@@ -1691,15 +1691,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9564538927409393589
-  Name: "Stone Basic"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "stone_001"
-  }
-}
-Assets {
   Id: 9544913535066953067
   Name: "Fantasy Sword Guard 02"
   PlatformAssetType: 1

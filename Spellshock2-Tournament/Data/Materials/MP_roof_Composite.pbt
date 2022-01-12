@@ -9,16 +9,7 @@ Assets {
       Overrides {
         Name: "cmp:Material2"
         AssetReference {
-          Id: 1074325996530918974
-        }
-      }
-      Overrides {
-        Name: "cmpc:Material2"
-        Color {
-          R: 0.494791657
-          G: 0.493744284
-          B: 0.166828528
-          A: 1
+          Id: 1523214900353875295
         }
       }
       Overrides {
@@ -71,7 +62,7 @@ Assets {
       }
       Overrides {
         Name: "blend_amount"
-        Float: 0.273883283
+        Float: 0.199779496
       }
       Overrides {
         Name: "invert_height"
@@ -96,12 +87,12 @@ Assets {
       }
     }
     Assets {
-      Id: 1074325996530918974
-      Name: "Hay 02"
+      Id: 1523214900353875295
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_fan_hay_002_uv"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {
