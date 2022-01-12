@@ -88,7 +88,7 @@ Assets {
         Name: "deep color"
         Color {
           R: 0.0210781284
-          G: 0.0569999851
+          G: 0.0420325547
           B: 0.0570000038
           A: 1
         }
@@ -96,7 +96,7 @@ Assets {
       Overrides {
         Name: "shallow color"
         Color {
-          G: 0.0788333192
+          G: 0.0587666519
           B: 0.086
           A: 1
         }

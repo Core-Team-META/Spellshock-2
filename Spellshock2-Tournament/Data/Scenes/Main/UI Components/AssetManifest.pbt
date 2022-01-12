@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17853943551029294903
-  Name: "Short Banner Fleur-de-lis"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_banner_003"
-  }
-}
-Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -134,15 +125,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15977747936357021178
-  Name: "Ivy 03"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_003"
-  }
-}
-Assets {
   Id: 15450196944859968109
   Name: "Crosshair 021"
   PlatformAssetType: 9
@@ -170,6 +152,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14746711894802914664
+  Name: "Pipe"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_001"
+  }
+}
+Assets {
   Id: 14653709633606201813
   Name: "Fantasy Gauntlet Arm 01"
   PlatformAssetType: 1
@@ -194,15 +185,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Military_Icon_051"
-  }
-}
-Assets {
-  Id: 14281826121533999733
-  Name: "Coral Tubes Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_coral_tube_small_01"
   }
 }
 Assets {
@@ -332,15 +314,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13161146325196931920
-  Name: "Coral Table 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_coral_table_02"
-  }
-}
-Assets {
   Id: 12978135121763375046
   Name: "Fantasy Craft Stone 028"
   PlatformAssetType: 9
@@ -350,30 +323,12 @@ Assets {
   }
 }
 Assets {
-  Id: 12889861000896994476
-  Name: "Invisible"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_invisible_001"
-  }
-}
-Assets {
   Id: 12684968738269658065
   Name: "Icon Add"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Add"
-  }
-}
-Assets {
-  Id: 12416815806534727809
-  Name: "Kelp Bush 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_kelp_bush_01"
   }
 }
 Assets {
@@ -413,6 +368,24 @@ Assets {
   }
 }
 Assets {
+  Id: 11892494746123028781
+  Name: "Cylinder - Chamfered Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_hq_002"
+  }
+}
+Assets {
+  Id: 11803454095962429961
+  Name: "Pipe - Spiral"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_spiral_001"
+  }
+}
+Assets {
   Id: 11726854071015571091
   Name: "Fantasy Craft Crystal 042"
   PlatformAssetType: 9
@@ -428,15 +401,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_005"
-  }
-}
-Assets {
-  Id: 11521250418432815603
-  Name: "Ivy 05"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_005"
   }
 }
 Assets {
@@ -482,15 +446,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_019"
-  }
-}
-Assets {
-  Id: 9241339813623090261
-  Name: "Ivy 04"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_004"
   }
 }
 Assets {
@@ -728,15 +683,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5512000712628422335
-  Name: "Bark Dead 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_dead_001_uv"
-  }
-}
-Assets {
   Id: 5351428073291024820
   Name: "Emissive Glow Opaque"
   PlatformAssetType: 2
@@ -809,15 +755,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3702365963781758101
-  Name: "Teardrop - Truncated"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_truncated_teardrop_001"
-  }
-}
-Assets {
   Id: 3682206342183528038
   Name: "Fantasy Sword Grip 01"
   PlatformAssetType: 1
@@ -863,15 +800,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3179843506183788979
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
   Id: 2990917165450855258
   Name: "Oswald Italic"
   PlatformAssetType: 28
@@ -908,15 +836,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2406204288165372094
-  Name: "Decal Vines End 01"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_liane_002"
-  }
-}
-Assets {
   Id: 2245538709031651504
   Name: "Emblem 005"
   PlatformAssetType: 9
@@ -935,24 +854,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1984553197323830660
-  Name: "Kelp Bush 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_kelp_bush_02"
-  }
-}
-Assets {
-  Id: 1964254608213071037
-  Name: "Bark Redwood 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_redwood_001_uv"
-  }
-}
-Assets {
   Id: 1814707273787853473
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -968,6 +869,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_stucco_tint_001_uv"
+  }
+}
+Assets {
+  Id: 1471773936938775611
+  Name: "Ellipsoid - Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ellipsoid_truncated_001"
   }
 }
 Assets {
@@ -998,15 +908,6 @@ Assets {
   }
 }
 Assets {
-  Id: 901541979513849367
-  Name: "Bush 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_001"
-  }
-}
-Assets {
   Id: 634785656113528393
   Name: "Fantasy Medal 002"
   PlatformAssetType: 9
@@ -1022,15 +923,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Gear_Glove_010"
-  }
-}
-Assets {
-  Id: 114278397929005302
-  Name: "Horn"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_horn_001"
   }
 }
 Assets {

@@ -224,6 +224,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16967182821200846753
+  Name: "Pipe - Quarter Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_003"
+  }
+}
+Assets {
   Id: 16933361490793048899
   Name: "Metal Iron Rusted 02"
   PlatformAssetType: 2
@@ -368,15 +377,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15977747936357021178
-  Name: "Ivy 03"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_003"
-  }
-}
-Assets {
   Id: 15946579520938017950
   Name: "Motion Blur Post Process"
   PlatformAssetType: 20
@@ -491,15 +491,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F5_Text_000"
-  }
-}
-Assets {
-  Id: 15128280182623405640
-  Name: "Fern 04"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_fern_generic_004"
   }
 }
 Assets {
@@ -638,15 +629,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14633329416983781101
-  Name: "Decal Moss Patch"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_moss_patch_001"
-  }
-}
-Assets {
   Id: 14580885173560146840
   Name: "Sphere - Half Quarter"
   PlatformAssetType: 1
@@ -680,6 +662,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_urb_pipes_acc_coupling_001_ref"
+  }
+}
+Assets {
+  Id: 14484348279392694593
+  Name: "Bush Leafy Tall 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_leafy_bush_001"
   }
 }
 Assets {
@@ -851,15 +842,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_ribhalf_01_ref"
-  }
-}
-Assets {
-  Id: 13712937578215925698
-  Name: "Ivy 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_002"
   }
 }
 Assets {
@@ -1295,6 +1277,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11803454095962429961
+  Name: "Pipe - Spiral"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_spiral_001"
+  }
+}
+Assets {
   Id: 11761871474221141479
   Name: "Fantasy Castle Door 02"
   PlatformAssetType: 1
@@ -1376,15 +1367,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11521250418432815603
-  Name: "Ivy 05"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_005"
-  }
-}
-Assets {
   Id: 11506445268311817944
   Name: "Gem - Radiant Polished"
   PlatformAssetType: 1
@@ -1448,15 +1430,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11228299035028749551
-  Name: "Leafy Patch 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_foliage_gen_leafy_groundcover_002"
-  }
-}
-Assets {
   Id: 11162297399913732681
   Name: "Cube - Polished"
   PlatformAssetType: 1
@@ -1517,6 +1490,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_scap_01_ref"
+  }
+}
+Assets {
+  Id: 10727817675464078874
+  Name: "Arch Fancy 3m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_arch_fancy_3m_001"
   }
 }
 Assets {
@@ -1769,15 +1751,6 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_smoke_volume_vfx"
-  }
-}
-Assets {
-  Id: 9241339813623090261
-  Name: "Ivy 04"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_004"
   }
 }
 Assets {
@@ -2888,15 +2861,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4545713430863939559
-  Name: "Ivy 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ivy_generic_001"
-  }
-}
-Assets {
   Id: 4542959667302136808
   Name: "Portcullis"
   PlatformAssetType: 1
@@ -3365,15 +3329,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2406204288165372094
-  Name: "Decal Vines End 01"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_liane_002"
-  }
-}
-Assets {
   Id: 2342913754323375322
   Name: "Modern Weapon - Magazine 01"
   PlatformAssetType: 1
@@ -3425,6 +3380,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_scifi_trim_001_bend90"
+  }
+}
+Assets {
+  Id: 2077525421079657949
+  Name: "Energy Tube Glow"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "Energy_Tube_Glow"
   }
 }
 Assets {
@@ -3569,6 +3533,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_snow_001_uv"
+  }
+}
+Assets {
+  Id: 1498713988055516158
+  Name: "Flower Wild Lily 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_flower_wild_lily_001_ref"
   }
 }
 Assets {
@@ -3878,6 +3851,15 @@ Assets {
   }
 }
 Assets {
+  Id: 172372313931898727
+  Name: "Crescent - 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_crescent_003"
+  }
+}
+Assets {
   Id: 125457281986470150
   Name: "Bricks Stone Floor Large 01"
   PlatformAssetType: 2
@@ -3893,6 +3875,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_horn_001"
+  }
+}
+Assets {
+  Id: 84254442598276906
+  Name: "Bush Leafy Low 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_leafy_bush_002"
   }
 }
 Assets {
