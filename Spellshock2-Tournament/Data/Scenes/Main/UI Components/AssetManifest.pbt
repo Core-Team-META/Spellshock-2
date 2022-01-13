@@ -755,6 +755,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3834487395638995980
+  Name: "Decal Snow Patch"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_snow_patch_001"
+  }
+}
+Assets {
   Id: 3682206342183528038
   Name: "Fantasy Sword Grip 01"
   PlatformAssetType: 1

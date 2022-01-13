@@ -575,6 +575,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14896056843544193431
+  Name: "Pipe - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_lg_001_ref"
+  }
+}
+Assets {
   Id: 14881799801148158487
   Name: "Trim Top 8m 02"
   PlatformAssetType: 1
@@ -1085,15 +1094,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_half_002_win_03"
-  }
-}
-Assets {
-  Id: 12416815806534727809
-  Name: "Kelp Bush 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_kelp_bush_01"
   }
 }
 Assets {
@@ -2573,6 +2573,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6024748366808673382
+  Name: "Terrain - Snow"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_terrain_rock-snow_001_wa"
+  }
+}
+Assets {
   Id: 5944393796542654307
   Name: "Capsule"
   PlatformAssetType: 1
@@ -3398,15 +3407,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prism_octagon_001"
-  }
-}
-Assets {
-  Id: 1984553197323830660
-  Name: "Kelp Bush 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_kelp_bush_02"
   }
 }
 Assets {

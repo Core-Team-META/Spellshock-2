@@ -206,6 +206,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12510968351439123370
+  Name: "Ice Opaque"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_ice_opaque"
+  }
+}
+Assets {
   Id: 12385794193739794509
   Name: "Decal Stains Round 01"
   PlatformAssetType: 14

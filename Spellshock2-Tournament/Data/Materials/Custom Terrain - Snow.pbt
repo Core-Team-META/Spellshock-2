@@ -8,7 +8,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "splotchiness"
-        Float: 0.595315
+        Float: 0.603913069
       }
       Overrides {
         Name: "direction"
@@ -16,7 +16,7 @@ Assets {
       }
       Overrides {
         Name: "roughness_multiplier"
-        Float: 0.8
+        Float: 0.6
       }
       Overrides {
         Name: "color_top"
@@ -38,7 +38,7 @@ Assets {
       }
       Overrides {
         Name: "density"
-        Float: 0.707096934
+        Float: 0.294363737
       }
       Overrides {
         Name: "material_scale"

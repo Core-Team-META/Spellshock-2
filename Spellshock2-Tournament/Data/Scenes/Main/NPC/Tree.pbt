@@ -2501,6 +2501,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableReceiveDecals: true
     AnimatedMesh {
       AnimationStance: "unarmed_idle_relaxed"
       AnimationStancePlaybackRate: 1
@@ -36228,6 +36229,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableReceiveDecals: true
     AnimatedMesh {
       AnimationStance: "unarmed_idle_relaxed"
       AnimationStancePlaybackRate: 1

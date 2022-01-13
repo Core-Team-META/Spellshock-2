@@ -2211,6 +2211,8 @@ Objects {
     }
   }
   ParentId: 14125097880635815930
+  ChildIds: 7776314689226913625
+  ChildIds: 11328736804480071232
   ChildIds: 11959520892639672796
   ChildIds: 8215312186094399176
   ChildIds: 17766027967768768275
@@ -3673,7 +3675,16 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 18299768880977311987
+        Id: 12510968351439123370
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0452692769
+        G: 0.0442709699
+        B: 0.104167
+        A: 1
       }
     }
   }
@@ -3770,6 +3781,8 @@ Objects {
     }
   }
   ParentId: 2567923650549952521
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3821,6 +3834,8 @@ Objects {
     }
   }
   ParentId: 2567923650549952521
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3872,6 +3887,8 @@ Objects {
     }
   }
   ParentId: 2567923650549952521
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3923,6 +3940,8 @@ Objects {
     }
   }
   ParentId: 2567923650549952521
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4088,6 +4107,8 @@ Objects {
     }
   }
   ParentId: 7832982750357067366
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4139,6 +4160,8 @@ Objects {
     }
   }
   ParentId: 7832982750357067366
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4190,6 +4213,8 @@ Objects {
     }
   }
   ParentId: 7832982750357067366
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4241,6 +4266,8 @@ Objects {
     }
   }
   ParentId: 7832982750357067366
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4438,7 +4465,16 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 18299768880977311987
+        Id: 12510968351439123370
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0452692769
+        G: 0.0442709699
+        B: 0.104167
+        A: 1
       }
     }
   }
@@ -5829,7 +5865,16 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 18299768880977311987
+        Id: 12510968351439123370
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0428126305
+        G: 0.0530383512
+        B: 0.104167
+        A: 1
       }
     }
   }
@@ -5864,6 +5909,92 @@ Objects {
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11328736804480071232
+  Name: "Decal Snow Patch"
+  Transform {
+    Location {
+      X: 114.152924
+      Y: 51.460125
+      Z: -100.017471
+    }
+    Rotation {
+    }
+    Scale {
+      X: 4.15061855
+      Y: 2.59526563
+      Z: 0.0653574467
+    }
+  }
+  ParentId: 15059765403058345506
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3834487395638995980
+    }
+    TeamSettings {
+    }
+    DecalBP {
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:high"
+  }
+}
+Objects {
+  Id: 7776314689226913625
+  Name: "Decal Snow Patch"
+  Transform {
+    Location {
+      X: 114.152924
+      Y: 51.460125
+      Z: -140.956665
+    }
+    Rotation {
+    }
+    Scale {
+      X: 4.15061855
+      Y: 3.5316174
+      Z: 0.0653574467
+    }
+  }
+  ParentId: 15059765403058345506
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3834487395638995980
+    }
+    TeamSettings {
+    }
+    DecalBP {
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:high"
   }
 }
 Objects {
