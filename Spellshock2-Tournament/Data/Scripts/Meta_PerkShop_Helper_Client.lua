@@ -168,7 +168,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-NETWORKED.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
+NETWORKED.customPropertyChangedEvent:Connect(OnNetworkChanged)
 listener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnResourceChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Int()

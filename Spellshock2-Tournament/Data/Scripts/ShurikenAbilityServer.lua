@@ -56,8 +56,8 @@ function OnProjectileImpacted(projectile, other, hitResult)
         other.serverUserData.shuriken[SpecialAbility.owner.id] = time() + lifeStealDuration
         local playersStr = UTIL.ConvertTableToString(playerTbl)
 
-        SpecialAbility:SetNetworkedCustomProperty("PID", playersStr)
-        SpecialAbility:SetNetworkedCustomProperty("HT", time() + lifeStealDuration)
+        SpecialAbility:SetCustomProperty("PID", playersStr)
+        SpecialAbility:SetCustomProperty("HT", time() + lifeStealDuration)
       
 
         local attackData = {

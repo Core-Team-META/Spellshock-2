@@ -50,4 +50,4 @@ function OnNetworkChanged(object, str)
     end
 end
 
-SpecialAbility.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
+SpecialAbility.customPropertyChangedEvent:Connect(OnNetworkChanged)

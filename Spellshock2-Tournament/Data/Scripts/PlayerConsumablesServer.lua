@@ -67,7 +67,7 @@ function Tick(deltaTime)
             value = value - deltaTime
             if value < 0 then value = 0 end
             CooldownTimers[name] = value
-            ConsumablesNetwork:SetNetworkedCustomProperty(name, CoreMath.Round(value, 1))
+            ConsumablesNetwork:SetCustomProperty(name, CoreMath.Round(value, 1))
         end
     end
 end

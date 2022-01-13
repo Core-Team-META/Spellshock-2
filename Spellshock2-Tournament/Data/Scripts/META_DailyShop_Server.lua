@@ -132,7 +132,7 @@ end
 local function ReplicateShopItems(player)
     local dataObject = World.SpawnAsset(PLAYER_DATA_TEMP)
     dataObject.name = tostring(player.id)
-    dataObject:SetNetworkedCustomProperty("data", UTIL.DailyShopConvertToString(dailyRewards[player.id]))
+    dataObject:SetCustomProperty("data", UTIL.DailyShopConvertToString(dailyRewards[player.id]))
     dataObject.parent = NETWORKED
 end
 

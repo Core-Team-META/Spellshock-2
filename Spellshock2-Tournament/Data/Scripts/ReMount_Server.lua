@@ -8,7 +8,7 @@ local mountPrevent = time()
 local listener
 
 local function UpdateMountPreventTime(mountTime)
-    Equipment:SetNetworkedCustomProperty("MT", mountTime)
+    Equipment:SetCustomProperty("MT", mountTime)
     mountPrevent = mountTime
 end
 

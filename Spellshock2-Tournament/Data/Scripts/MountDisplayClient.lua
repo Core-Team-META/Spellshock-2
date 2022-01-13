@@ -47,7 +47,7 @@ function SetNetworkObject(thisObject)
     if PropertyChangeEvent then
         PropertyChangeEvent:Disconnect()
     end
-    thisObject.networkedPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
+    thisObject.customPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
     PropertyChangeEvent = thisObject.destroyEvent:Connect(OnNetworkObjectDestroyed)
 end
 

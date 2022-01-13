@@ -37,7 +37,7 @@ local CancelKeys = {
 
 
 local function SetNetworkProperty(bool)
-	Equipment:SetNetworkedCustomProperty("isInvisible", bool)
+	Equipment:SetCustomProperty("isInvisible", bool)
 end
 
 function Attack()
@@ -140,7 +140,7 @@ function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
-	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, player.spawnedEvent:Connect( OnPlayerRespawn ))
 
 	local skin = Equipment:GetCustomProperty("EID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().ASSASSIN, player.team, skin, META_AP().E)

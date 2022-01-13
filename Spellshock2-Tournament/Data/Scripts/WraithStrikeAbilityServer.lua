@@ -47,7 +47,7 @@ local CancelBindings = {
 }
 
 local function SetNetworkProperty(bool)
-	Equipment:SetNetworkedCustomProperty("T_isPreviewing", bool)
+	Equipment:SetCustomProperty("T_isPreviewing", bool)
 end
 
 function OnBindingPressed(player, binding)
@@ -304,7 +304,7 @@ function GoOnShortCooldown()
 end
 
 function SetCooldownOverride(value)
-	SpecialAbility:SetNetworkedCustomProperty("CooldownOverride", value)
+	SpecialAbility:SetCustomProperty("CooldownOverride", value)
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -372,7 +372,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect(OnSpecialAbilityReady))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown))
 	table.insert(EventListeners, player.diedEvent:Connect(OnPlayerDied))
-	table.insert(EventListeners, player.respawnedEvent:Connect(OnPlayerRespawn))
+	table.insert(EventListeners, player.spawnedEvent:Connect(OnPlayerRespawn))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
 	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))

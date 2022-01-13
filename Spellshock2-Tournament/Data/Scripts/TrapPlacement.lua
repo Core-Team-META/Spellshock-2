@@ -36,5 +36,5 @@ function OnNetworkPropertyChanged(thisObject, name)
 	Ease3D.EaseRotation(JawOffset, Rotation.New(0, 0, 180), .75, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
 end
 
-Root.networkedPropertyChangedEvent:Connect( OnNetworkPropertyChanged )
+Root.customPropertyChangedEvent:Connect( OnNetworkPropertyChanged )
 

@@ -81,7 +81,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 					newCostume:SetScale(newCostume:GetScale() * 1.5)
 					local Duration =
 						META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Duration, SpecialAbility.name .. ": Duration")
-					newCostume:SetNetworkedCustomProperty("Duration", Duration)
+					newCostume:SetCustomProperty("Duration", Duration)
 					newCostume:Equip(enemy)
 				end
 			end

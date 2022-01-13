@@ -148,7 +148,7 @@ end
 function BuildCosmeticStringTable(player, str)
     local dataObject = World.SpawnAsset(DATA_TEMP)
     dataObject.name = player.id
-    dataObject:SetNetworkedCustomProperty("data", str)
+    dataObject:SetCustomProperty("data", str)
     Task.Wait()
     dataObject.parent = DATA_TRANSFER
 

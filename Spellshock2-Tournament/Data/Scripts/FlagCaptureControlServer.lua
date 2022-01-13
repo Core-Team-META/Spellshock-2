@@ -115,13 +115,13 @@ function Reset()
     progressedTeam = 0
     owningTeam = 0
     isCurrentEnabled = ENABLED_BY_DEFAULT
-    script:SetNetworkedCustomProperty("ProgressedTeam", 0)
-    script:SetNetworkedCustomProperty("FriendliesPresent", 0)
-    script:SetNetworkedCustomProperty("EnemiesPresent", 0)
-    script:SetNetworkedCustomProperty("LastCaptureProgress", 0.0)
-    script:SetNetworkedCustomProperty("LastUpdateTime", time())
-    script:SetNetworkedCustomProperty("OwningTeam", 0)
-    script:SetNetworkedCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
+    script:SetCustomProperty("ProgressedTeam", 0)
+    script:SetCustomProperty("FriendliesPresent", 0)
+    script:SetCustomProperty("EnemiesPresent", 0)
+    script:SetCustomProperty("LastCaptureProgress", 0.0)
+    script:SetCustomProperty("LastUpdateTime", time())
+    script:SetCustomProperty("OwningTeam", 0)
+    script:SetCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
 
     lastProgress = 0
     ResetCapturePlayer()
@@ -156,7 +156,7 @@ function GetCaptureSpeed()
 
     if newCaptureSpeed ~= lastCaptureSpeed then
         lastCaptureSpeed = newCaptureSpeed
-        script:SetNetworkedCustomProperty("LastCaptureSpeed", newCaptureSpeed)
+        script:SetCustomProperty("LastCaptureSpeed", newCaptureSpeed)
     end
 
     return newCaptureSpeed
@@ -251,17 +251,17 @@ function UpdateReplicatedProgress()
     --print("Last Captured Progress: "..tostring(newCaptureProgress))
     if friendliesPresent ~= currentFriendlies then
         friendliesPresent = currentFriendlies
-        script:SetNetworkedCustomProperty("FriendliesPresent", friendliesPresent)
+        script:SetCustomProperty("FriendliesPresent", friendliesPresent)
     end
     if enemiesPresent ~= currentEnemies then
         enemiesPresent = currentEnemies
-        script:SetNetworkedCustomProperty("EnemiesPresent", enemiesPresent)
+        script:SetCustomProperty("EnemiesPresent", enemiesPresent)
     end
     if lastCaptureProgress ~= newCaptureProgress then
         lastCaptureProgress = newCaptureProgress
-        script:SetNetworkedCustomProperty("LastCaptureProgress", newCaptureProgress)
+        script:SetCustomProperty("LastCaptureProgress", newCaptureProgress)
     end
-    script:SetNetworkedCustomProperty("LastUpdateTime", time())
+    script:SetCustomProperty("LastUpdateTime", time())
 end
 
 -- nil SetEnabled(bool)
@@ -272,7 +272,7 @@ function SetEnabled(enabled)
 
     local oldEnabled = isCurrentEnabled
     isCurrentEnabled = enabled
-    script:SetNetworkedCustomProperty("IsEnabled", enabled)
+    script:SetCustomProperty("IsEnabled", enabled)
 
     -- Only broadcast 'CapturePointEnabledStateChanged' event if we actually changed the statae
     if oldEnabled ~= enabled then
@@ -321,7 +321,7 @@ function ResetCapturePlayer()
     end
     capturePlayerEvents = {}
     CAPTURE_TRIGGER.isInteractable = isCurrentEnabled
-    script:SetNetworkedCustomProperty("CapturePlayerID", "")
+    script:SetCustomProperty("CapturePlayerID", "")
     capturePlayer = nil
     --end
 end
@@ -353,7 +353,7 @@ function OnInteractedEvent(thisTrigger, player)
         table.insert(capturePlayerEvents, capturePlayer.damagedEvent:Connect(OnCapturePlayerDamaged))
         table.insert(capturePlayerEvents, capturePlayer.bindingPressedEvent:Connect(OnBindingPressed))
         capturePlayer:ResetVelocity()
-        script:SetNetworkedCustomProperty("CapturePlayerID", capturePlayer.id)
+        script:SetCustomProperty("CapturePlayerID", capturePlayer.id)
         capturePlayer:SetMounted(false)
         capturePlayerAnimation = World.SpawnAsset(AnimationAbilityTemplate)
         capturePlayerAnimation.owner = capturePlayer
@@ -398,7 +398,7 @@ function Tick(deltaTime)
         if newProgressTeam ~= progressedTeam then
             -- This depends on the old team so must be first
             UpdateReplicatedProgress()
-            script:SetNetworkedCustomProperty("ProgressedTeam", newProgressTeam)
+            script:SetCustomProperty("ProgressedTeam", newProgressTeam)
             progressedTeam = newProgressTeam
         end
     end
@@ -431,7 +431,7 @@ function Tick(deltaTime)
             Events.Broadcast("AS.PlayerAssistPointCapture", friendly, 1)
         end
 
-        script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
+        script:SetCustomProperty("OwningTeam", owningTeam)
         if capturePlayer and Object.IsValid(capturePlayer) and capturePlayer.id then
             Events.Broadcast("Stats.Helper.CapturePoint", capturePlayer.id)
         end

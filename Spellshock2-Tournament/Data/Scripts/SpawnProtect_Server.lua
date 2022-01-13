@@ -113,4 +113,4 @@ end
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 
-DynamicCapturePoints.networkedPropertyChangedEvent:Connect(OnNetworkChanged)
+DynamicCapturePoints.customPropertyChangedEvent:Connect(OnNetworkChanged)

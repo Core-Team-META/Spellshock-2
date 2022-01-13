@@ -48,7 +48,7 @@ function GetTimeRemainingInState()
 	return math.max(endTime - time(), 0.0)
 end
 
-SERVER_SCRIPT.networkedPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
+SERVER_SCRIPT.customPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
 
 -- Initialize
 ABGS.RegisterGameStateManagerClient(GetGameState, GetTimeRemainingInState)

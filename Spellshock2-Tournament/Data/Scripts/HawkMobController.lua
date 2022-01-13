@@ -46,7 +46,7 @@ function OnRootDestroyed(thisObject)
 end
 
 HawkRoot.destroyEvent:Connect( OnRootDestroyed )
-HawkRoot.networkedPropertyChangedEvent:Connect( OnNetworkPropertyChanged )
+HawkRoot.customPropertyChangedEvent:Connect( OnNetworkPropertyChanged )
 
 function Tick()
 	AnimatedMesh:RotateTo(HawkRoot:GetWorldRotation(), 0.1)

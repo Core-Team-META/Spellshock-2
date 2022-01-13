@@ -250,4 +250,4 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-Equipment.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
+Equipment.customPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)

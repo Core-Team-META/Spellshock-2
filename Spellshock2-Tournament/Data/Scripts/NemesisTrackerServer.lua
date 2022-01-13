@@ -246,13 +246,13 @@ function SetNemesis()
 			
 		end
 		
-		script:SetNetworkedCustomProperty("P" .. tostring(i), nemesisString)
+		script:SetCustomProperty("P" .. tostring(i), nemesisString)
 		
 	end
 	
 	Task.Wait(0.1)
 	
-	script:SetNetworkedCustomProperty("ListSet", true)
+	script:SetCustomProperty("ListSet", true)
 		
 end
 
@@ -267,7 +267,7 @@ function OnGameStateChanged(oldState, newState, hasDuration, time)
 	        
     elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
     
-    	script:SetNetworkedCustomProperty("ListSet", false)
+    	script:SetCustomProperty("ListSet", false)
         
         CleanNemesisTable()
         

@@ -37,7 +37,7 @@ function API.Clear(player)
 	local obj = API.netObjects[player]
 	for k,v in pairs(obj:GetCustomProperties()) do
 		if k ~= "PlayerID" then
-			obj:SetNetworkedCustomProperty(k, "")
+			obj:SetCustomProperty(k, "")
 		end
 	end
 	
@@ -119,8 +119,8 @@ function API.Set(player, key, value)
 		data.valuePositions[1][1] = 1
 		data.valueLengths[1][1] = string.len(value)
 		
-		obj:SetNetworkedCustomProperty("Keys1", key)
-		obj:SetNetworkedCustomProperty("Vals1", value)
+		obj:SetCustomProperty("Keys1", key)
+		obj:SetCustomProperty("Vals1", value)
 		
 	elseif not data.propertyGroups[key] then
 		-- Append at the end
@@ -157,7 +157,7 @@ function API.Set(player, key, value)
 			str = obj:GetCustomProperty(propName)
 			str = str .. "," .. key
 		end
-		obj:SetNetworkedCustomProperty(propName, str)
+		obj:SetCustomProperty(propName, str)
 		
 		-- Value
 		propName = "Vals" .. group
@@ -173,7 +173,7 @@ function API.Set(player, key, value)
 			data.valueLengths[group][index] = string.len(value)
 			str = str .. "," .. value
 		end
-		obj:SetNetworkedCustomProperty(propName, str)
+		obj:SetCustomProperty(propName, str)
 		
 	else
 		-- Replace existing string
@@ -194,7 +194,7 @@ function API.Set(player, key, value)
 		local newStr = startStr .. value .. endStr
 		
 		-- Write
-		obj:SetNetworkedCustomProperty(propName, newStr)
+		obj:SetCustomProperty(propName, newStr)
 		
 		-- Adjust metadata
 		data.valueLengths[group][index] = newLen
@@ -258,7 +258,7 @@ function OnPlayerJoined(player)
 	end
 	
 	-- Assign this object to this player
-	obj:SetNetworkedCustomProperty("PlayerID", player.id)
+	obj:SetCustomProperty("PlayerID", player.id)
 	API.RegisterPlayerObject(player, obj)
 end
 

@@ -27,31 +27,31 @@ function Goto(player, location)
 	if(location == "AS") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointAS:GetWorldPosition())
-		point:SetNetworkedCustomProperty("Team", player.team)
+		point:SetCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
 		SendTeamMessage(player.team, player.name .. ": Head for AS!")
 	elseif(location == "OM") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointOM:GetWorldPosition())
-		point:SetNetworkedCustomProperty("Team", player.team)
+		point:SetCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
 		SendTeamMessage(player.team, player.name .. ": Head for OM!")
 	elseif(location == "WC") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointWC:GetWorldPosition())
-		point:SetNetworkedCustomProperty("Team", player.team)
+		point:SetCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
 		SendTeamMessage(player.team, player.name .. ": Head for WC!")
 	elseif(location == "MK") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointMK:GetWorldPosition())
-		point:SetNetworkedCustomProperty("Team", player.team)
+		point:SetCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
 		SendTeamMessage(player.team, player.name .. ": Head for MK!")
 	elseif(location == "TG") then
 		local point = World.SpawnAsset(Group_POI, {parent = PointsOfInterest})
 		point:SetWorldPosition(PointTG:GetWorldPosition())
-		point:SetNetworkedCustomProperty("Team", player.team)
+		point:SetCustomProperty("Team", player.team)
 		point.lifeSpan = LIFE_SPAN
 		SendTeamMessage(player.team, player.name .. ": Head for TG!")
 	end

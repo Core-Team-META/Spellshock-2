@@ -91,7 +91,7 @@ function OnAbilityIconSet(thisAbility, icon, color)
         	networkedEventListener:Disconnect()
             cooldownOverride = 0
         end
-        networkedEventListener = currentAbility.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
+        networkedEventListener = currentAbility.customPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
     end
 end
 

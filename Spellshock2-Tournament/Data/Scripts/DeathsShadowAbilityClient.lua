@@ -83,7 +83,7 @@ function OnEquip(equipment, player)
 		script:Destroy()
 		return 
 	end
-	NetworkPropertyConnection = Equipment.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
+	NetworkPropertyConnection = Equipment.customPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
 	BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 	Equipment.unequippedEvent:Connect(OnUnequip)
 end

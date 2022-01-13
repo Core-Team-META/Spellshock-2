@@ -295,7 +295,7 @@ function OnPlayerJoined(player)
 	player.serverUserData.tournamentRound = 0
 	player.serverUserData.totalTourneyScore = 0
 	--roundActive[player] = false
-	player.respawnedEvent:Connect(OnPlayerRespawn)
+	player.spawnedEvent:Connect(OnPlayerRespawn)
 	TransferStorageToPlayer(player)
 end
 
