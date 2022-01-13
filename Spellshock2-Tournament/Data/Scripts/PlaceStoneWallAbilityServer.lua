@@ -31,10 +31,10 @@ function PlaceObject(thisAbility)
 	local newObject = META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
 	local newLifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	newObject.lifeSpan = newLifeSpan
-	newObject:SetNetworkedCustomProperty("lifeSpan", newLifeSpan)
+	newObject:SetCustomProperty("lifeSpan", newLifeSpan)
 	if newObject:GetCustomProperty("Team") ~= nil then
 		Task.Wait()
-		newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)
+		newObject:SetCustomProperty("Team", SpecialAbility.owner.team)
 	end
 end
 

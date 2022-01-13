@@ -463,7 +463,7 @@ commands = {
                     return
                 end
                 newCostume:SetScale(newCostume:GetScale() * 1.5)
-                newCostume:SetNetworkedCustomProperty("Duration", duration)
+                newCostume:SetCustomProperty("Duration", duration)
                 newCostume:Equip(target)
             end
         end,

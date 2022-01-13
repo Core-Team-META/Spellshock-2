@@ -633,6 +633,6 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
+NETWORKED.customPropertyChangedEvent:Connect(OnRewardsChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("ERCLAM", LootCallOut)

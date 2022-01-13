@@ -336,7 +336,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
     end
 end
 
-SERVER_SCRIPT.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
+SERVER_SCRIPT.customPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
 
 -- nil Tick(float)
 -- Handles firing events and changing the visual state

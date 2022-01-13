@@ -47,8 +47,8 @@ function PlaceObject(thisAbility)
 	local decalScale = CoreMath.Round(DamageRadius / 125, 3)
 	local mod4 = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	CurrentTornado.lifeSpan = mod4.duration
-	CurrentTornado:SetNetworkedCustomProperty("DecalScale", decalScale)
-	CurrentTornado:SetNetworkedCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
+	CurrentTornado:SetCustomProperty("DecalScale", decalScale)
+	CurrentTornado:SetCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
 
 	Timer = 0.1
 end

@@ -58,7 +58,7 @@ function OnAbilityExecute(thisAbility)
 		end
 		return
 	end
-	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
+	CurrentHawk:SetCustomProperty("Owner", thisAbility.owner.id)
 
 	Task.Wait(1)
 	if Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) and CurrentHawk and Object.IsValid(CurrentHawk) then
@@ -100,7 +100,7 @@ function OnPlayerRespawn(player)
 end
 
 function OnEquip(thisEquipment, player)
-	table.insert(EventListeners, player.respawnedEvent:Connect(OnPlayerRespawn))
+	table.insert(EventListeners, player.spawnedEvent:Connect(OnPlayerRespawn))
 	local skin = Equipment:GetCustomProperty("TID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HUNTER, player.team, skin, META_AP().T)
 end
@@ -151,7 +151,7 @@ function Tick(deltaTime)
 					status.multiplier
 				)
 
-				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
+				CurrentHawk:SetCustomProperty("Attack", true)
 
 				local dmg = Damage.New()
 				dmg.amount =
@@ -186,7 +186,7 @@ function Tick(deltaTime)
 				if not CurrentHawk or not Object.IsValid(CurrentHawk) then
 					return
 				end
-				CurrentHawk:SetNetworkedCustomProperty("Attack", false)
+				CurrentHawk:SetCustomProperty("Attack", false)
 				PreviousTarget = HawkTarget
 				HawkTarget = nil
 			else

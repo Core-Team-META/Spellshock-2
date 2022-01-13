@@ -83,12 +83,12 @@ function Reset()
         Events.Broadcast("CapturePointEnabledStateChanged", COMPONENT_ROOT.id, oldEnabled, ENABLED_BY_DEFAULT)
     end    
 
-    script:SetNetworkedCustomProperty("ProgressedTeam", 0)
-    script:SetNetworkedCustomProperty("FriendliesPresent", 0)
-    script:SetNetworkedCustomProperty("EnemiesPresent", 0)
-    script:SetNetworkedCustomProperty("LastCaptureProgress", 0.0)
-    script:SetNetworkedCustomProperty("LastUpdateTime", time())
-    script:SetNetworkedCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
+    script:SetCustomProperty("ProgressedTeam", 0)
+    script:SetCustomProperty("FriendliesPresent", 0)
+    script:SetCustomProperty("EnemiesPresent", 0)
+    script:SetCustomProperty("LastCaptureProgress", 0.0)
+    script:SetCustomProperty("LastUpdateTime", time())
+    script:SetCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
 end
 
 -- float GetCaptureSpeed()
@@ -242,10 +242,10 @@ end
 function UpdateReplicatedProgress()
     local newCaptureProgress = GetCaptureProgress()
 
-    script:SetNetworkedCustomProperty("FriendliesPresent", GetFriendliesPresent())
-    script:SetNetworkedCustomProperty("EnemiesPresent", GetEnemiesPresent())
-    script:SetNetworkedCustomProperty("LastCaptureProgress", newCaptureProgress)
-    script:SetNetworkedCustomProperty("LastUpdateTime", time())
+    script:SetCustomProperty("FriendliesPresent", GetFriendliesPresent())
+    script:SetCustomProperty("EnemiesPresent", GetEnemiesPresent())
+    script:SetCustomProperty("LastCaptureProgress", newCaptureProgress)
+    script:SetCustomProperty("LastUpdateTime", time())
 end
 
 -- nil SetEnabled(bool)
@@ -255,7 +255,7 @@ function SetEnabled(enabled)
     UpdateReplicatedProgress()
 
     local oldEnabled = script:GetCustomProperty("IsEnabled")
-    script:SetNetworkedCustomProperty("IsEnabled", enabled)
+    script:SetCustomProperty("IsEnabled", enabled)
 
     -- Only broadcast 'CapturePointEnabledStateChanged' event if we actually changed the statae
     if oldEnabled ~= enabled then
@@ -286,7 +286,7 @@ function Tick(deltaTime)
             -- This depends on the old team so must be first
             UpdateReplicatedProgress()
 
-            script:SetNetworkedCustomProperty("ProgressedTeam", newProgressTeam)
+            script:SetCustomProperty("ProgressedTeam", newProgressTeam)
         end
     end
 

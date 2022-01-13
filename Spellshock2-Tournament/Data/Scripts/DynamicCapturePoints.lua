@@ -25,12 +25,12 @@ function OnRoundStart()
         local randIndex = 1 --math.random(2)
         CP_Configuration = configTable[randIndex]
         NewBases = basesTable[randIndex]
-        script:SetNetworkedCustomProperty("ScoreLimit", SmallMapScore)
-        script:SetNetworkedCustomProperty("GameType", 1)
+        script:SetCustomProperty("ScoreLimit", SmallMapScore)
+        script:SetCustomProperty("GameType", 1)
         _G.MAP_MODE = 1
     else
-        script:SetNetworkedCustomProperty("ScoreLimit", BigMapScore)
-        script:SetNetworkedCustomProperty("GameType", 2)
+        script:SetCustomProperty("ScoreLimit", BigMapScore)
+        script:SetCustomProperty("GameType", 2)
         _G.MAP_MODE = 2
     end
 

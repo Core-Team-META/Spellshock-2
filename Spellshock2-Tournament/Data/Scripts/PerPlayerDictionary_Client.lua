@@ -111,7 +111,7 @@ function API.RegisterPlayerObject(player, obj)
 
 	API.netObjects[player] = obj
 	
-	obj.networkedPropertyChangedEvent:Connect(OnPropertyChanged)
+	obj.customPropertyChangedEvent:Connect(OnPropertyChanged)
 	
 	-- Process existing values
 	for k,v in pairs(obj:GetCustomProperties()) do

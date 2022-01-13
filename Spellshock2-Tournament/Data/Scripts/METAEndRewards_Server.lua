@@ -45,7 +45,7 @@ local TEMP_CardCount = 10
 --Sets networked custom property to replicate to clients
 --@param string str
 local function ReplicateRewards(str)
-    NETWORKED:SetNetworkedCustomProperty("rewards", str)
+    NETWORKED:SetCustomProperty("rewards", str)
 end
 
 --@param object player
@@ -288,7 +288,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
+GAME_STATE.customPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "GivePlayerRewards", GivePlayerRewards)
 Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
 -------------------------------------------------------------------------------------------------------------------------

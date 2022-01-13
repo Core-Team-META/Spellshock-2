@@ -141,7 +141,7 @@ function OnSpecialAbilityExecute(thisAbility)
 end
 
 function SetCooldownOverride(value)
-	SpecialAbility:SetNetworkedCustomProperty("CooldownOverride", value)
+	SpecialAbility:SetCustomProperty("CooldownOverride", value)
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -209,7 +209,7 @@ end
 
 function OnEquip(equipment, player)
 	EventListeners["diedEvent"] = player.diedEvent:Connect(OnPlayerDied)
-	EventListeners["respawnedEvent"] = player.respawnedEvent:Connect(OnPlayerRespawn)
+	EventListeners["spawnedEvent"] = player.spawnedEvent:Connect(OnPlayerRespawn)
 	EventListeners["cooldownEvent"] = SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown )
 	
 	local skin = Equipment:GetCustomProperty("RID") or 1

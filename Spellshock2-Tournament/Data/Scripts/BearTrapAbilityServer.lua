@@ -42,7 +42,7 @@ function PlaceObject(thisAbility)
 	if not Object.IsValid(SpecialAbility) or not Object.IsValid(SpecialAbility.owner) then
 		newTrap:Destroy()
 	end
-	newTrap:SetNetworkedCustomProperty("OwnerID", SpecialAbility.owner.id)	
+	newTrap:SetCustomProperty("OwnerID", SpecialAbility.owner.id)	
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -75,7 +75,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
-	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, player.spawnedEvent:Connect( OnPlayerRespawn ))
 
 	--PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().HUNTER)
 	local skin = Equipment:GetCustomProperty("RID") or 1

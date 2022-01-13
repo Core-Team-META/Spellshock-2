@@ -112,6 +112,6 @@ function OnPlayerLeft(player)
 	end
 end
 
-DynamicCapturePoints.networkedPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
+DynamicCapturePoints.customPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

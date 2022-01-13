@@ -40,13 +40,13 @@ local xpVipMultiplier = 0
 
 --@param float value
 local function SetServerXpMultiplier(value)
-    NETWORKED:SetNetworkedCustomProperty("xsm", value)
+    NETWORKED:SetCustomProperty("xsm", value)
     xpVipMultiplier = value
 end
 
 --@param float value
 local function SetServerGoldMultiplier(value)
-    NETWORKED:SetNetworkedCustomProperty("gsm", value)
+    NETWORKED:SetCustomProperty("gsm", value)
     goldVipMultiplier = value
 end
 
@@ -454,4 +454,4 @@ Events.Connect("AS.PlayerPointCapture", OnPlayerCapture)
 Events.Connect("AS.PlayerAssistPointCapture", OnPlayerAssistCapture)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
-NETWORKED.networkedPropertyChangedEvent:Connect(OnNetworkedChanged)
+NETWORKED.customPropertyChangedEvent:Connect(OnNetworkedChanged)

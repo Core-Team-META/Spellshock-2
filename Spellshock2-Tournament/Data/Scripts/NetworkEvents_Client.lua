@@ -30,4 +30,4 @@ function OnNetworkedChanged(object, string)
     end
 end
 
-NETWORK.networkedPropertyChangedEvent:Connect(OnNetworkedChanged)
+NETWORK.customPropertyChangedEvent:Connect(OnNetworkedChanged)

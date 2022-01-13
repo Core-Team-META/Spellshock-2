@@ -11,4 +11,4 @@ function OnNetworkPropertyChanged(thisObject, name)
 end
 
 DisabledGeo.isEnabled = false
-CaptureController.networkedPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
+CaptureController.customPropertyChangedEvent:Connect(OnNetworkPropertyChanged)

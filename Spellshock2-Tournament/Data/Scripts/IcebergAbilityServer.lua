@@ -161,7 +161,7 @@ end
 
 function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
-	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, player.spawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 
 	local skin = Equipment:GetCustomProperty("TID") or 1

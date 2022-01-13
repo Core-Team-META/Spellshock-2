@@ -70,7 +70,7 @@ function OnAbilityExecute(thisAbility)
 	local trapTemplate = PlayerVFX.Placement
 	local newTrap = META_AP().SpawnAsset(trapTemplate, {position = targetPosition, rotation = targetRotation, scale = vfxScale})
 	newTrap.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, SpecialAbility.name .. ": LifeSpan")
-	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
+	newTrap:SetCustomProperty("lifeSpan", newTrap.lifeSpan)
 
 	local nearbyEnemies = Game.FindPlayersInCylinder(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	local bleedStatus = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", {}, SpecialAbility.name .. ": Bleed Status")

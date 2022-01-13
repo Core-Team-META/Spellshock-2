@@ -118,10 +118,10 @@ function SetGameState(newState)
 
 	-- Set replicator fields
 	--print(">> Setting Game State: "..tostring(newState))
-	script:SetNetworkedCustomProperty("OldState", oldState)
-	script:SetNetworkedCustomProperty("State", newState)
-	script:SetNetworkedCustomProperty("StateHasDuration", stateHasduration)
-	script:SetNetworkedCustomProperty("StateEndTime", stateEndTime)
+	script:SetCustomProperty("OldState", oldState)
+	script:SetCustomProperty("State", newState)
+	script:SetCustomProperty("StateHasDuration", stateHasduration)
+	script:SetCustomProperty("StateEndTime", stateEndTime)
 	--Task.Wait()
 	while GetGameState() ~= newState do Task.Wait() end
 	-- Broadcast basic game state event
@@ -137,8 +137,8 @@ function SetTimeRemainingInState(remainingTime)
 	-- We broadcast the event because the time changed, even though we are still in the same state
 	Events.Broadcast("GameStateChanged", currentState, currentState, true, stateEndTime)
 
-	script:SetNetworkedCustomProperty("StateHasDuration", true)
-	script:SetNetworkedCustomProperty("StateEndTime", stateEndTime)
+	script:SetCustomProperty("StateHasDuration", true)
+	script:SetCustomProperty("StateEndTime", stateEndTime)
 end
 
 -- nil Tick(float)
