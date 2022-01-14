@@ -1,7 +1,7 @@
 Name: "Forearm Sleeve_3"
-RootId: 1209215271124958406
+RootId: 1609135237627165291
 Objects {
-  Id: 2418930406105315038
+  Id: 13266294645395818036
   Name: "Ring"
   Transform {
     Location {
@@ -20,12 +20,12 @@ Objects {
       Z: 2.92911911
     }
   }
-  ParentId: 1209215271124958406
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17240925491654302561
+        Id: 17081432065492706426
       }
     }
     Overrides {
@@ -44,7 +44,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5191969749870873519
+      Id: 10684211570384290296
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -68,7 +68,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9810145654559533980
+  Id: 17154226675423903795
   Name: "Ring"
   Transform {
     Location {
@@ -86,12 +86,12 @@ Objects {
       Z: 2.92911696
     }
   }
-  ParentId: 1209215271124958406
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17240925491654302561
+        Id: 17081432065492706426
       }
     }
     Overrides {
@@ -110,7 +110,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5191969749870873519
+      Id: 10684211570384290296
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -134,7 +134,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7389467232874621364
+  Id: 11126318715802727541
   Name: "Ring"
   Transform {
     Location {
@@ -151,12 +151,12 @@ Objects {
       Z: 2.33924246
     }
   }
-  ParentId: 1209215271124958406
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17240925491654302561
+        Id: 17081432065492706426
       }
     }
     Overrides {
@@ -175,7 +175,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5191969749870873519
+      Id: 10684211570384290296
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -199,7 +199,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9851033523532877974
+  Id: 4290833245169295136
   Name: "Ring"
   Transform {
     Location {
@@ -216,12 +216,12 @@ Objects {
       Z: 2.33924174
     }
   }
-  ParentId: 1209215271124958406
+  ParentId: 1609135237627165291
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17240925491654302561
+        Id: 17081432065492706426
       }
     }
     Overrides {
@@ -240,7 +240,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 5191969749870873519
+      Id: 10684211570384290296
     }
     Teams {
       IsTeamCollisionEnabled: true

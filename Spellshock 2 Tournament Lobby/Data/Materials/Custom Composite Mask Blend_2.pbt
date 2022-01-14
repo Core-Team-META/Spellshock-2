@@ -9,27 +9,18 @@ Assets {
       Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 14695280795892700897
+          Id: 16640745019618043245
         }
       }
       Overrides {
         Name: "cmp:Material2"
         AssetReference {
-          Id: 11212504336090518945
+          Id: 11850065454802142668
         }
       }
       Overrides {
         Name: "blend_amount"
-        Float: 0.313603461
-      }
-      Overrides {
-        Name: "cmpc:Material2"
-        Color {
-          R: 1
-          G: 0.7052
-          B: 0.464
-          A: 1
-        }
+        Float: 0.221276239
       }
       Overrides {
         Name: "mask_scale"
@@ -40,13 +31,25 @@ Assets {
         Float: 0.8
       }
       Overrides {
+        Name: "v_tiles2"
+        Float: 3.98091292
+      }
+      Overrides {
+        Name: "material1_scale"
+        Float: 1
+      }
+      Overrides {
         Name: "cmpc:Material1"
         Color {
-          R: 1
-          G: 0.655333877
-          B: 0.48299998
+          R: 0.588542
+          G: 0.588542
+          B: 0.646
           A: 1
         }
+      }
+      Overrides {
+        Name: "u_tiles2"
+        Float: 4.25610161
       }
     }
     Assets {
@@ -59,21 +62,21 @@ Assets {
       }
     }
     Assets {
-      Id: 14695280795892700897
-      Name: "Concrete Basic 01"
+      Id: 16640745019618043245
+      Name: "Stone Basic"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_concrete_001"
+        AssetId: "stone_001"
       }
     }
     Assets {
-      Id: 11212504336090518945
-      Name: "Metal Old Beaten Gold 02"
+      Id: 11850065454802142668
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_002"
+        AssetId: "mi_snow_001_uv"
       }
     }
   }

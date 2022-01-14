@@ -1,7 +1,7 @@
 Name: "Forearm Sleeve_2"
-RootId: 11822655334147479617
+RootId: 9488514153874936800
 Objects {
-  Id: 14213285294643884770
+  Id: 11714641392087237166
   Name: "Ring"
   Transform {
     Location {
@@ -20,12 +20,12 @@ Objects {
       Z: 2.92911911
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 9488514153874936800
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 1287203782625704153
+        Id: 17081432065492706426
       }
     }
     Overrides {
@@ -68,7 +68,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11237880949258211683
+  Id: 996645247196168748
   Name: "Ring"
   Transform {
     Location {
@@ -86,12 +86,12 @@ Objects {
       Z: 2.92911696
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 9488514153874936800
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 1287203782625704153
+        Id: 17081432065492706426
       }
     }
     Overrides {
@@ -134,7 +134,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6568248225617058032
+  Id: 3125298450185639143
   Name: "Ring"
   Transform {
     Location {
@@ -151,12 +151,12 @@ Objects {
       Z: 2.33924246
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 9488514153874936800
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 1287203782625704153
+        Id: 17081432065492706426
       }
     }
     Overrides {
@@ -199,7 +199,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2227889686645249702
+  Id: 6184183759038881584
   Name: "Ring"
   Transform {
     Location {
@@ -216,12 +216,12 @@ Objects {
       Z: 2.33924174
     }
   }
-  ParentId: 11822655334147479617
+  ParentId: 9488514153874936800
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 1287203782625704153
+        Id: 17081432065492706426
       }
     }
     Overrides {

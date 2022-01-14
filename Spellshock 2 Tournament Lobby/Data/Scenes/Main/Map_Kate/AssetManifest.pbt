@@ -35,15 +35,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17965850983566478317
-  Name: "Additive Soft Edge"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_additive_edgefade"
-  }
-}
-Assets {
   Id: 17903652760929758811
   Name: "Humanoid 1 Tennis Top"
   PlatformAssetType: 26
@@ -68,15 +59,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ring_faceted_001"
-  }
-}
-Assets {
-  Id: 17240925491654302561
-  Name: "Concrete Rough"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_gen_concrete_rough_001"
   }
 }
 Assets {
@@ -395,6 +377,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14655116653287160419
+  Name: "Hill 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hill_004"
+  }
+}
+Assets {
   Id: 14653709633606201813
   Name: "Fantasy Gauntlet Arm 01"
   PlatformAssetType: 1
@@ -548,15 +539,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13294902272889086201
-  Name: "Cube"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_002"
-  }
-}
-Assets {
   Id: 13221172065708950507
   Name: "Ring - Quarter Extra Thick"
   PlatformAssetType: 1
@@ -590,6 +572,24 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_ptp_electrical_beam"
+  }
+}
+Assets {
+  Id: 12733235249440583189
+  Name: "Ring - Quarter Beveled Thin - Large "
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter_ring_faceted_thin_lg_001_ref"
+  }
+}
+Assets {
+  Id: 12680791762065004107
+  Name: "Coral Branches Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_branch_small_01"
   }
 }
 Assets {
@@ -656,6 +656,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11850065454802142668
+  Name: "Snow 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_snow_001_uv"
+  }
+}
+Assets {
   Id: 11790905652409919712
   Name: "Cylinder - Rounded"
   PlatformAssetType: 1
@@ -671,6 +680,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_curve45_005"
+  }
+}
+Assets {
+  Id: 11677303810736420556
+  Name: "Disco Ball 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_glass_discoball_001_uv_ref"
   }
 }
 Assets {
@@ -806,6 +824,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_stain_top_001"
+  }
+}
+Assets {
+  Id: 10483340447837342525
+  Name: "Coral Branches Big"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_branch_big_01"
   }
 }
 Assets {
@@ -1016,15 +1043,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7970222735081279493
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
   Id: 7887238662729938253
   Name: "Sky Dome"
   PlatformAssetType: 6
@@ -1043,15 +1061,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7801859645287117218
-  Name: "Cone - Truncated"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_truncated_001"
-  }
-}
-Assets {
   Id: 7797324549164747792
   Name: "Metal Vent Duct Spiral 01"
   PlatformAssetType: 2
@@ -1067,15 +1076,6 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioBlueprintAssetRef"
     AssetId: "abp_legendary_dragons_LayersKit_ref"
-  }
-}
-Assets {
-  Id: 7683011456927666997
-  Name: "Cylinder - Rounded"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_rounded_002"
   }
 }
 Assets {
@@ -1169,15 +1169,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6493722019306381898
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
   Id: 6010285296167592853
   Name: "Decal Military Symbols 01"
   PlatformAssetType: 14
@@ -1214,15 +1205,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5692734142548485196
-  Name: "Diamond - 6-Sided"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_diamond_6_sided_001"
-  }
-}
-Assets {
   Id: 5512335830567327151
   Name: "Arch Fancy Peaked 2m"
   PlatformAssetType: 1
@@ -1256,15 +1238,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxma_opaque_emissive"
-  }
-}
-Assets {
-  Id: 5191969749870873519
-  Name: "Ring 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_torus_002"
   }
 }
 Assets {
@@ -1466,15 +1439,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3593597783924766211
-  Name: "Cone - Bullet"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bullet_001"
-  }
-}
-Assets {
   Id: 3575013281856575933
   Name: "Ring - Quarter Thick"
   PlatformAssetType: 1
@@ -1502,15 +1466,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3323004215598028599
-  Name: "Wedge - Concave Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_wedge_curved_concave_hq_001"
-  }
-}
-Assets {
   Id: 3090596827184957478
   Name: "Rope"
   PlatformAssetType: 2
@@ -1526,6 +1481,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pyramid_threesided_001"
+  }
+}
+Assets {
+  Id: 2957395276039654005
+  Name: "Snow Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_snow_volume"
   }
 }
 Assets {
@@ -1553,15 +1517,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_invisible_001"
-  }
-}
-Assets {
-  Id: 2710768152972342786
-  Name: "Bricks Layered Stone Floor 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_stone_floor_layered_001"
   }
 }
 Assets {
@@ -1616,6 +1571,15 @@ Assets {
   PrimaryAsset {
     AssetType: "BlueprintAssetRef"
     AssetId: "fxbp_env_fog_default"
+  }
+}
+Assets {
+  Id: 2036919895057255883
+  Name: "Decal Snow Patch"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_snow_patch_001"
   }
 }
 Assets {
@@ -1736,21 +1700,12 @@ Assets {
   }
 }
 Assets {
-  Id: 588881991680217981
-  Name: "Cone - Truncated Hollow Wide Thick"
-  PlatformAssetType: 1
+  Id: 470104758409395246
+  Name: "Metal Corrugated 01"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_truncated_hollow_005"
-  }
-}
-Assets {
-  Id: 289956829384114960
-  Name: "Horn"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_horn_001"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_mil_metal_corrugated_metal_001_uv_ref"
   }
 }
 Assets {

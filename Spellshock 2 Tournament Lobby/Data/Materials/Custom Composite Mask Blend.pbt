@@ -9,7 +9,7 @@ Assets {
       Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 11212504336090518945
+          Id: 11850065454802142668
         }
       }
       Overrides {
@@ -70,15 +70,6 @@ Assets {
         Name: "gradient_falloff"
         Float: 0.39188081
       }
-      Overrides {
-        Name: "cmpc:Material1"
-        Color {
-          R: 0.45028773
-          G: 0.354774982
-          B: 0.617000043
-          A: 1
-        }
-      }
     }
     Assets {
       Id: 13801461059896540276
@@ -90,12 +81,12 @@ Assets {
       }
     }
     Assets {
-      Id: 11212504336090518945
-      Name: "Metal Old Beaten Gold 02"
+      Id: 11850065454802142668
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_002"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {

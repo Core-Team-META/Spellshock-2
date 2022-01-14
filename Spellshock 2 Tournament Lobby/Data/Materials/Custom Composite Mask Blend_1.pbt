@@ -9,7 +9,7 @@ Assets {
       Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 14695280795892700897
+          Id: 11850065454802142668
         }
       }
       Overrides {
@@ -28,7 +28,7 @@ Assets {
       }
       Overrides {
         Name: "blend_amount"
-        Float: 0.157049596
+        Float: 0.552321494
       }
       Overrides {
         Name: "u_tiles2"
@@ -37,15 +37,6 @@ Assets {
       Overrides {
         Name: "v_tiles2"
         Float: 5
-      }
-      Overrides {
-        Name: "cmpc:Material1"
-        Color {
-          R: 0.445000023
-          G: 0.36223
-          B: 0.320845
-          A: 1
-        }
       }
       Overrides {
         Name: "cmpc:Material2"
@@ -60,6 +51,14 @@ Assets {
         Name: "gradient_worldspace"
         Bool: false
       }
+      Overrides {
+        Name: "mask_scale"
+        Float: 0.2
+      }
+      Overrides {
+        Name: "invert_height"
+        Bool: true
+      }
     }
     Assets {
       Id: 13801461059896540276
@@ -71,12 +70,12 @@ Assets {
       }
     }
     Assets {
-      Id: 14695280795892700897
-      Name: "Concrete Basic 01"
+      Id: 11850065454802142668
+      Name: "Snow 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_concrete_001"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {
