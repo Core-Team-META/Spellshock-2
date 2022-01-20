@@ -2,7 +2,7 @@ Assets {
   Id: 1284378792418831148
   Name: "ork Wood Planks_3"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 10634098119816284342
     ParameterOverrides {

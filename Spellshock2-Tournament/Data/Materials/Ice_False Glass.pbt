@@ -2,7 +2,7 @@ Assets {
   Id: 13088882925270312072
   Name: "Ice_False Glass"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 17117735896314006411
     ParameterOverrides {

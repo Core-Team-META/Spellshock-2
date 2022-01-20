@@ -2,7 +2,7 @@ Assets {
   Id: 15693582222767046264
   Name: "Redwood bark Cliff 03_1"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 17686025311361638391
     ParameterOverrides {

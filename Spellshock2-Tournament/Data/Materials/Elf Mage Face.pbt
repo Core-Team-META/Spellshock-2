@@ -2,7 +2,7 @@ Assets {
   Id: 16854156078097555186
   Name: "Elf Mage Face"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 58872637069711017
     ParameterOverrides {

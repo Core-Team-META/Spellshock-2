@@ -35,6 +35,7 @@ Objects {
   ChildIds: 7134391544964931455
   ChildIds: 1672145936829432866
   ChildIds: 7894618171110748117
+  ChildIds: 15419325844669997836
   ChildIds: 18439257393742900714
   ChildIds: 13701375997520260708
   UnregisteredParameters {
@@ -113,6 +114,55 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Front UI"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15419325844669997836
+  Name: "Medals Display"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Keybind"
+      String: "ability_extra_45"
+    }
+    Overrides {
+      Name: "cs:BindLabel"
+      String: "M"
+    }
+    Overrides {
+      Name: "cs:Keybind:tooltip"
+      String: "Keybind use to open the Medals Menu"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Summer Jam Medals"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

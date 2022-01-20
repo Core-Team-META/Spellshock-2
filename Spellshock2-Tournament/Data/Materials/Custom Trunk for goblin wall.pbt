@@ -2,7 +2,7 @@ Assets {
   Id: 13252282798599709619
   Name: "Custom Trunk for goblin wall"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 3120509024990734835
     ParameterOverrides {

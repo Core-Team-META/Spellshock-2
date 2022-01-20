@@ -2,7 +2,7 @@ Assets {
   Id: 14039054522345236599
   Name: "Custom Burning Wood_wicked"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 15527939320816128723
     ParameterOverrides {

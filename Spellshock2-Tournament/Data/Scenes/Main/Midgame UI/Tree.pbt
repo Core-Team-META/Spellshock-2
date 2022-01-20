@@ -7403,7 +7403,7 @@ Objects {
 }
 Objects {
   Id: 368675356200495528
-  Name: "Leaderboards"
+  Name: "Medals"
   Transform {
     Location {
     }
@@ -7421,6 +7421,7 @@ Objects {
   ChildIds: 7482942084162992495
   ChildIds: 17839234977719212867
   ChildIds: 112440848307231002
+  ChildIds: 13389969292212951303
   ChildIds: 7682158207287128457
   ChildIds: 10848425359147094693
   ChildIds: 17698906559938302984
@@ -7429,6 +7430,7 @@ Objects {
   ChildIds: 16018205326691246513
   ChildIds: 14366115795125747553
   ChildIds: 7927997764704452532
+  ChildIds: 8359433239324282627
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7459,6 +7461,88 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8359433239324282627
+  Name: "ClaimText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 368675356200495528
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIY: -19.824646
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "CLAIM"
+      Color {
+        G: 0.591999888
+        B: 0.888000071
+        A: 1
+      }
+      Size: 12
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:baseline"
+      }
+      ShadowColor {
+        A: 0.5
+      }
+      ShadowOffset {
+        X: 1
+        Y: 1
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -7502,7 +7586,7 @@ Objects {
   Control {
     Width: 30
     Height: 30
-    UIX: 12.3402328
+    UIX: 12.34
     UIY: 6.24437761
     RenderTransformPivot {
       Anchor {
@@ -7556,7 +7640,7 @@ Objects {
   Control {
     Width: 89
     Height: 35
-    UIX: -25
+    UIX: -26.0045319
     UIY: -65.009964
     RenderTransformPivot {
       Anchor {
@@ -7564,7 +7648,7 @@ Objects {
       }
     }
     Text {
-      Label: "TOURNAMENT"
+      Label: "MEDALS"
       Color {
         R: 1
         G: 0.609006643
@@ -7634,7 +7718,7 @@ Objects {
       }
     }
     Text {
-      Label: "K"
+      Label: "M"
       Color {
         R: 1
         G: 0.609006643
@@ -7702,7 +7786,7 @@ Objects {
       }
     }
     Text {
-      Label: "K"
+      Label: "M"
       Color {
         A: 0.321
       }
@@ -7834,9 +7918,9 @@ Objects {
         Id: 16806313330175629846
       }
       Color {
-        R: 0.690000057
-        B: 0.671721458
-        A: 0.754
+        G: 0.591999888
+        B: 0.888000071
+        A: 0.7
       }
       TeamSettings {
       }
@@ -8223,9 +8307,9 @@ Objects {
         Id: 16806313330175629846
       }
       Color {
-        R: 0.666666687
-        B: 0.622516036
-        A: 0.754
+        G: 0.591999888
+        B: 0.888000071
+        A: 0.7
       }
       TeamSettings {
       }
@@ -8483,6 +8567,145 @@ Objects {
         A: 0.582
       }
       TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 13389969292212951303
+  Name: "Flashy"
+  Transform {
+    Location {
+      X: -1270
+      Y: -885
+    }
+    Rotation {
+      Yaw: -89.9999847
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 368675356200495528
+  ChildIds: 8189327946579076388
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ClaimText"
+      ObjectReference {
+        SelfId: 8359433239324282627
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8189327946579076388
+  Name: "BG"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13389969292212951303
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 1814707273787853473
+      }
+      Color {
+        G: 0.663999856
+        B: 0.996000051
+        A: 0.5
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
       }
     }
     AnchorLayout {

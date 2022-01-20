@@ -2,7 +2,7 @@ Assets {
   Id: 13104334207296005327
   Name: "Crystal_bush Ice Cave 01"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 3753942459901877388
     ParameterOverrides {

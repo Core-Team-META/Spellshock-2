@@ -2,7 +2,7 @@ Assets {
   Id: 9457837136077507109
   Name: "Elven Wood"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 7754470856388882901
     ParameterOverrides {

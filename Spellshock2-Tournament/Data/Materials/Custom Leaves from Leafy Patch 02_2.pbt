@@ -2,7 +2,7 @@ Assets {
   Id: 11709333114637961826
   Name: "winter_Leaves from Leafy Patch 02_2"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 9360389881367369426
     ParameterOverrides {

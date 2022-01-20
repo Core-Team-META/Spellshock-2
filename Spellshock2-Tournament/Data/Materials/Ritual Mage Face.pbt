@@ -2,7 +2,7 @@ Assets {
   Id: 16596999054384078775
   Name: "Ritual Mage Face"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 6717054932271956401
     ParameterOverrides {
