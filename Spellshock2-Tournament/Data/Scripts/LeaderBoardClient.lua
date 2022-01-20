@@ -1,7 +1,5 @@
-
+if true then return end
 local MAIN_PANEL = script:GetCustomProperty("LeaderboardMainPanel"):WaitForObject()
-
-local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 function GenerateLeaderboard()
 	local leaderboardControllers = MAIN_PANEL:FindDescendantsByType("Script")

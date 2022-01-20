@@ -6,6 +6,7 @@ local MedalNotification = script:GetCustomProperty("MedalNotification"):WaitForO
 local NotificationAudio = script:GetCustomProperty("NotificationAudio"):WaitForObject()
 local MenuOpenAudio = script:GetCustomProperty("MenuOpenAudio"):WaitForObject()
 local FlashyPanel = script:GetCustomProperty("FlashyPanel"):WaitForObject()
+local LeaderboardMainPanel = script:GetCustomProperty("LeaderboardMainPanel"):WaitForObject()
 
 local ClaimText = FlashyPanel:GetCustomProperty("ClaimText"):WaitForObject()
 
@@ -81,37 +82,32 @@ function OnClaimButtonClicked(thisButton)
 end
 
 function OnCloseButtonClicked(thisButton)
-    MenuOpenAudio:Play()
-    MedalMenuPanel.visibility = Visibility.FORCE_OFF
-    --UI.SetCursorVisible(false)
-    --UI.SetCanCursorInteractWithUI(false)
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 end
 
-function OnBindingPressed(_, bind)
-    if bind == ToggleBind then
-        MenuOpenAudio:Play()
-        if MedalMenuPanel:IsVisibleInHierarchy() then
-            MedalMenuPanel.visibility = Visibility.FORCE_OFF
-            --UI.SetCursorVisible(false)
-            --UI.SetCanCursorInteractWithUI(false)
-        else
-            MedalMenuPanel.visibility = Visibility.INHERIT
-            MedalNotification.visibility = Visibility.FORCE_OFF
-            --UI.SetCursorVisible(true)
-            --UI.SetCanCursorInteractWithUI(true)
+function ToggleUI(show)
+    MenuOpenAudio:Play()
+    if not show then
+        print(">> Toggle Off")
+        MedalMenuPanel.visibility = Visibility.FORCE_OFF
+        LeaderboardMainPanel.visibility = Visibility.FORCE_OFF
+        UI.SetCursorVisible(false)
+        UI.SetCanCursorInteractWithUI(false)
+    else
+        print(">> Toggle On")
+        MedalMenuPanel.visibility = Visibility.INHERIT
+        LeaderboardMainPanel.visibility = Visibility.INHERIT
+        MedalNotification.visibility = Visibility.FORCE_OFF
+        UI.SetCursorVisible(true)
+        UI.SetCanCursorInteractWithUI(true)
 
-            if FlashTask then
-                FlashTask:Cancel()
-                FlashTask = nil
-                FlashyPanel.opacity = 0
-                ClaimText.visibility = Visibility.FORCE_OFF
-            end
+        if FlashTask then
+            FlashTask:Cancel()
+            FlashTask = nil
+            FlashyPanel.opacity = 0
+            ClaimText.visibility = Visibility.FORCE_OFF
         end
     end
-end
-
-function OnToggleMedalMenu()
-    OnBindingPressed(nil, ToggleBind)
 end
 
 function UpdatePortals(medalID)
@@ -180,9 +176,25 @@ function OnResourceChanged(_, name, amount)
     end
 end
 
+function GenerateLeaderboard()
+	local leaderboardControllers = LeaderboardMainPanel:FindDescendantsByType("Script")
+	for _,v in ipairs(leaderboardControllers) do
+		v.context.GenerateLeaderboard()
+	end
+end
+
+function OnMenuChanged(oldMenu, newMenu)
+    if newMenu == _G.MENU_TABLE["Leaderboards"] then
+		GenerateLeaderboard()
+		ToggleUI(true)
+    elseif oldMenu == _G.MENU_TABLE["Leaderboards"] then
+		ToggleUI(false)
+    end
+end
+
 Init()
 
 LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 CloseButton.clickedEvent:Connect(OnCloseButtonClicked)
-Events.Connect("ToggleMedalMenu", OnToggleMedalMenu)
+
+Events.Connect("Menu Changed", OnMenuChanged)

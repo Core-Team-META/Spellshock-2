@@ -3045,7 +3045,7 @@ Objects {
     }
     UseParentWidth: true
     Text {
-      Label: "Press [m] to claim your medal"
+      Label: "Press [K] to claim your medal"
       Color {
         R: 1
         G: 1
@@ -10737,6 +10737,12 @@ Objects {
       Name: "cs:FlashyPanel"
       ObjectReference {
         SelfId: 13389969292212951303
+      }
+    }
+    Overrides {
+      Name: "cs:LeaderboardMainPanel"
+      ObjectReference {
+        SelfId: 13709143063120748635
       }
     }
   }

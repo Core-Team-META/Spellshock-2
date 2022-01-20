@@ -14,10 +14,10 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
 local StartTime = tonumber(os.time({year = 2021, month = 5, day = 6, hour = 19}))
-local EndTime = tonumber(os.time({year = 2021, month = 5, day = 12, hour = 19}))
+local EndTime = tonumber(os.time({year = 2022, month = 5, day = 12, hour = 19}))
 
 local MIN_PLAYERS_TO_SUBMIT = 1
-local REQUIRED_ROUNDS_PLAYED = 5
+local REQUIRED_ROUNDS_PLAYED = 5 -- #FIXME
 
 local BASE_POINTS = 1000
 
@@ -32,7 +32,7 @@ local POINTS_PER_DEATH_WHILE_SUPPORT = -10 -- -2
 --local POINTS_PER_HEADSHOT = 2
 
 local POINTS_PER_DAMAGE_DONE = 0.65 -- .1
-local POINTS_PER_HEALING_DONE = 0.435 -- .075
+local POINTS_PER_HEALING_DONE = 0.0750 -- .435 
 local POINTS_PER_KILL_STREAK = 25 -- 50
 
 local DIMINISHING_RETURNS = 2 -- 1
@@ -119,6 +119,17 @@ function SubmitScore(player, score)
 
 		--local additionalData = ADDITIONAL_DATA.Serialize(totalKills, teamScore, uniquePlayersKilled)
 		Leaderboards.SubmitPlayerScore(LEADERBOARD_REF, player, score, "")
+
+        -- Winterverse medals logic
+        if score >= 500 then
+            Events.Broadcast("SJ_GivePlayerMedal", player, "Platinum")
+        elseif score >= 400 then 
+            Events.Broadcast("SJ_GivePlayerMedal", player, "Gold")
+        elseif score >= 300 then 
+            Events.Broadcast("SJ_GivePlayerMedal", player, "Silver")
+        elseif score >= 0 then 
+            Events.Broadcast("SJ_GivePlayerMedal", player, "Bronze")
+        end
 
 		local bestScore = SetPlayerScoreToStorage(player, score)
 		TransferStorageToPlayer(player)
@@ -419,11 +430,12 @@ function OnRoundEnded()
 			CalculateSoftCap(roundHealing, POINTS_PER_HEALING_DONE, SOFTCAP_HEALING_COUNT, SOFTCAP_HEALING_REDUCTION)
 		playerData.points = playerData.points + healingPoints
 
-		-- Killstreak Points
+		--[[ Killstreak Points
 		local roundKillStreak = player:GetResource(CONST.COMBAT_STATS.LARGEST_KILL_STREAK)
 		local killStreakPoints =
 			CalculateSoftCap(roundKillStreak, POINTS_PER_KILL_STREAK, SOFTCAP_KILLSTREAK_COUNT, SOFTCAP_KILLSTREAK_REDUCTION)
 		playerData.points = playerData.points + killStreakPoints
+        ]]
 
 		-- Capture Points
 		local objectivesCaptured = player:GetResource(CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS)

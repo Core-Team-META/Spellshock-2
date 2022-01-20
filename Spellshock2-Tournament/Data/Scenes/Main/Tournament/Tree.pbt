@@ -1905,7 +1905,7 @@ Objects {
     Overrides {
       Name: "cs:InfoPanel"
       ObjectReference {
-        SelfId: 11929930111913890287
+        SelfId: 2850896044503075086
       }
     }
   }

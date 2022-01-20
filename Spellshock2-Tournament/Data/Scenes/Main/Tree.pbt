@@ -137,11 +137,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Keybind"
-      String: "ability_extra_45"
+      String: "ability_extra_37"
     }
     Overrides {
       Name: "cs:BindLabel"
-      String: "M"
+      String: "K"
     }
     Overrides {
       Name: "cs:Keybind:tooltip"
