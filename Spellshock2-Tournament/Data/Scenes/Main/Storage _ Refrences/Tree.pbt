@@ -217,9 +217,18 @@ Objects {
   ParentId: 11064051587082207804
   UnregisteredParameters {
     Overrides {
+      Name: "cs:Currency"
+      NetReference {
+        Key: "3f0691c5279a4eefad2e67a37453b8ee"
+        Type {
+          Value: "mc:enetreferencetype:sharedpersistence"
+        }
+      }
+    }
+    Overrides {
       Name: "cs:Cosmetics"
       NetReference {
-        Key: "45adc1911c4e4a839b9613ca9ef3bddb"
+        Key: "f68010fa8189431fac6556437019c841"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -228,16 +237,7 @@ Objects {
     Overrides {
       Name: "cs:Progression"
       NetReference {
-        Key: "fda12f8c98b648b0a612628d288062a6"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-    Overrides {
-      Name: "cs:Currency"
-      NetReference {
-        Key: "d5d513aebe8a4907862c98637c1f7b6f"
+        Key: "c8847a158bea49c0a81cb21d9c831b49"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }

@@ -87,19 +87,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15499488441472625293
-  Name: "ss2_live_currency"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "d5d513aebe8a4907862c98637c1f7b6f"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 15329646696100681115
   Name: "JewelPack1"
   PlatformAssetType: 24
@@ -235,19 +222,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12477160499860297771
-  Name: "ss2_tournament_cosmetic"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "45adc1911c4e4a839b9613ca9ef3bddb"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 12107410425077790377
   Name: "Simple Exposure Post Process"
   PlatformAssetType: 20
@@ -333,6 +307,19 @@ Assets {
   PrimaryAsset {
     AssetType: "BlueprintAssetRef"
     AssetId: "fxbp_post_process_ao"
+  }
+}
+Assets {
+  Id: 10263830506871209326
+  Name: "BE_SS_Winter_Progression"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "c8847a158bea49c0a81cb21d9c831b49"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
   }
 }
 Assets {
@@ -580,6 +567,19 @@ Assets {
   }
 }
 Assets {
+  Id: 4921493534399613584
+  Name: "BE_SS_Winter_Currency"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "3f0691c5279a4eefad2e67a37453b8ee"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 4860066908479684099
   Name: "Premium 3"
   PlatformAssetType: 24
@@ -588,6 +588,19 @@ Assets {
       Key: "8e1db13faf0c4520b3f33c000966ff0e"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 4553826984955245088
+  Name: "BE_SS_Winter_Cosmetics"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "f68010fa8189431fac6556437019c841"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
@@ -636,19 +649,6 @@ Assets {
       Key: "7faf80a1c1fb4e3ea5ec9333a5128889"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
-  Id: 3160041052331178319
-  Name: "ss2_live_progression"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "fda12f8c98b648b0a612628d288062a6"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

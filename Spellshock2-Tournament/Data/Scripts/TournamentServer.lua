@@ -13,11 +13,12 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
-local StartTime = tonumber(os.time({year = 2021, month = 5, day = 6, hour = 19}))
-local EndTime = tonumber(os.time({year = 2022, month = 5, day = 12, hour = 19}))
+local TOURNEY_FORCE_ON = true
+local StartTime = tonumber(os.time({year = 2022, month = 2, day = 4, hour = 20}))
+local EndTime = tonumber(os.time({year = 2022, month = 2, day = 20, hour = 20}))
 
 local MIN_PLAYERS_TO_SUBMIT = 1
-local REQUIRED_ROUNDS_PLAYED = 5 -- #FIXME
+local REQUIRED_ROUNDS_PLAYED = 1 -- #FIXME
 
 local BASE_POINTS = 1000
 
@@ -343,20 +344,17 @@ function OnRoundEnded()
 		end
 		return
 	end
-	local currentTime = os.time(os.date("!*t"))
+	local currentTime = DateTime.CurrentTime()
 
 	warn(
 		" Current Time: " ..
 			tostring(currentTime) .. " StartTime:" .. tostring(StartTime) .. " EndTime: " .. tostring(EndTime)
 	)
 
-	if currentTime < StartTime then
-		return
-	end
-
-	if currentTime > EndTime then
-		return
-	end
+    if not TOURNEY_FORCE_ON and (currentTime.secondsSinceEpoch < startDate.secondsSinceEpoch or currentTime.secondsSinceEpoch > endDate.secondsSinceEpoch) then
+        warn("The event is no longer active!")
+        return
+    end
 
 	-- Wait for some calculations in other scripts
 	Task.Wait()
