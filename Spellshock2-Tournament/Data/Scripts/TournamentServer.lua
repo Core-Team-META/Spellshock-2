@@ -122,13 +122,13 @@ function SubmitScore(player, score)
 		Leaderboards.SubmitPlayerScore(LEADERBOARD_REF, player, score, "")
 
         -- Winterverse medals logic
-        if score >= 500 then
+        if score >= 40000 then
             Events.Broadcast("SJ_GivePlayerMedal", player, "Platinum")
-        elseif score >= 400 then 
+        elseif score >= 35000 then 
             Events.Broadcast("SJ_GivePlayerMedal", player, "Gold")
-        elseif score >= 300 then 
+        elseif score >= 30000 then 
             Events.Broadcast("SJ_GivePlayerMedal", player, "Silver")
-        elseif score >= 0 then 
+        elseif score >= 25000 then 
             Events.Broadcast("SJ_GivePlayerMedal", player, "Bronze")
         end
 

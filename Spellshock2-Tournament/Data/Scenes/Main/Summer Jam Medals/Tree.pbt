@@ -4289,7 +4289,7 @@ Objects {
       }
     }
     Text {
-      Label: "65 Strokes"
+      Label: "40k Points"
       Color {
         R: 1
         G: 1
@@ -4729,7 +4729,7 @@ Objects {
       }
     }
     Text {
-      Label: "70 Strokes"
+      Label: "35k Points"
       Color {
         R: 1
         G: 1
@@ -5169,7 +5169,7 @@ Objects {
       }
     }
     Text {
-      Label: "88 Strokes"
+      Label: "30k Points"
       Color {
         R: 1
         G: 1
@@ -5608,7 +5608,7 @@ Objects {
       }
     }
     Text {
-      Label: "144 Strokes"
+      Label: "25k Points"
       Color {
         R: 1
         G: 1
@@ -6156,7 +6156,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "Welcome to the Winterverse Games Event!\r\nEarn medals in different games and try to get to the highest score for you and your region."
+      Label: "Welcome to the Winterverse Games Event!\r\nEarn medals in different games and try to get the highest score for you and your region."
       Color {
         R: 1
         G: 1
