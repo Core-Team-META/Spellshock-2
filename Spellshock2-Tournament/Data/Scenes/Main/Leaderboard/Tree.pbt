@@ -185,7 +185,7 @@ Objects {
   }
   Control {
     Width: 497
-    Height: 291
+    Height: 344
     UIX: 442.047607
     RenderTransformPivot {
       Anchor {
@@ -307,7 +307,6 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "Scoring in  Spellshock  is based on a combination of points captured, wins, kills, damage, and healing. Penalties exist for dying. Rounds are limited to 10 minutes. Highest score wins!"
       Color {
         R: 1
         G: 1
@@ -386,7 +385,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 17
+      Size: 26
       Justification {
         Value: "mc:etextjustify:left"
       }

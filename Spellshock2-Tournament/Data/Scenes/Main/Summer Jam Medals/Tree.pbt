@@ -5914,7 +5914,7 @@ Objects {
     }
     UseParentWidth: true
     Text {
-      Label: "Slap text here"
+      Label: "Scoring in  Spellshock  is based on a combination of points captured, wins, kills, damage, and healing. Penalties exist for dying. Rounds are limited to 10 minutes. Higher your score is the better the medal!"
       Color {
         R: 1
         G: 1
