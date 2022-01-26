@@ -1544,7 +1544,7 @@ Objects {
       }
     }
     Text {
-      Label: "TOURNAMENT"
+      Label: "EVENT"
       Color {
         R: 0.73791039
         G: 0.386429429
@@ -1610,7 +1610,7 @@ Objects {
       }
     }
     Text {
-      Label: "TOURNAMENT"
+      Label: "EVENT"
       Color {
         A: 0.692000031
       }
@@ -1727,7 +1727,7 @@ Objects {
       }
     }
     Text {
-      Label: "CORE TRIALS "
+      Label: "WINTERVERSE GAMES"
       Color {
         R: 0.65
         G: 0.348675489
@@ -1793,7 +1793,7 @@ Objects {
       }
     }
     Text {
-      Label: "CORE TRIALS "
+      Label: "WINTERVERSE GAMES"
       Color {
         A: 0.692000031
       }

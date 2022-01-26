@@ -13,12 +13,12 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
-local TOURNEY_FORCE_ON = true
+local TOURNEY_FORCE_ON = false
 local StartTime = tonumber(os.time({year = 2022, month = 2, day = 4, hour = 20}))
 local EndTime = tonumber(os.time({year = 2022, month = 2, day = 20, hour = 20}))
 
 local MIN_PLAYERS_TO_SUBMIT = 1
-local REQUIRED_ROUNDS_PLAYED = 1 -- #FIXME
+local REQUIRED_ROUNDS_PLAYED = 5
 
 local BASE_POINTS = 1000
 
