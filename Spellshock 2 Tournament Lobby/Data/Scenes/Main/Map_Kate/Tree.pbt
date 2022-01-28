@@ -5309,9 +5309,6 @@ Objects {
   ChildIds: 15139009930614535493
   ChildIds: 3607913007243213672
   ChildIds: 7890703652775891071
-  ChildIds: 1773127003600374588
-  ChildIds: 15196698796651679124
-  ChildIds: 16606033415684989952
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5329,169 +5326,13 @@ Objects {
   }
 }
 Objects {
-  Id: 16606033415684989952
-  Name: "World Text"
-  Transform {
-    Location {
-      X: -213.158905
-      Y: -55.5129242
-      Z: -153.672363
-    }
-    Rotation {
-      Yaw: 89.9997711
-    }
-    Scale {
-      X: 2.16501975
-      Y: 2.16501975
-      Z: 2.16501975
-    }
-  }
-  ParentId: 8299355614883317077
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Text {
-    Text: "coretrials.coregames.com"
-    FontAsset {
-      Id: 3977866291149364048
-    }
-    Color {
-      R: 0.119
-      G: 0.0495833382
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-    IsLit: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 15196698796651679124
-  Name: "World Text"
-  Transform {
-    Location {
-      X: -217.028656
-      Y: -55.5130272
-      Z: -103.685059
-    }
-    Rotation {
-      Yaw: 89.9997482
-    }
-    Scale {
-      X: 2.16501975
-      Y: 2.16501975
-      Z: 2.16501975
-    }
-  }
-  ParentId: 8299355614883317077
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Text {
-    Text: "applied to the main game"
-    FontAsset {
-      Id: 3977866291149364048
-    }
-    Color {
-      R: 0.119
-      G: 0.0495833382
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-    IsLit: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 1773127003600374588
-  Name: "World Text"
-  Transform {
-    Location {
-      X: -239.2444
-      Y: -55.5129
-      Z: -60.6173096
-    }
-    Rotation {
-      Yaw: 89.9997559
-    }
-    Scale {
-      X: 2.16501975
-      Y: 2.16501975
-      Z: 2.16501975
-    }
-  }
-  ParentId: 8299355614883317077
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Text {
-    Text: "All rewards are automatically"
-    FontAsset {
-      Id: 3977866291149364048
-    }
-    Color {
-      R: 0.119
-      G: 0.0495833382
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-    IsLit: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 7890703652775891071
   Name: "World Text"
   Transform {
     Location {
       X: -252.959274
       Y: -55.5127602
-      Z: -7.50634766
+      Z: -99.0263672
     }
     Rotation {
       Yaw: 89.9998
@@ -5543,7 +5384,7 @@ Objects {
     Location {
       X: -271.169678
       Y: -55.5125847
-      Z: 36.9289551
+      Z: -54.5910645
     }
     Rotation {
       Yaw: 89.9998245
@@ -5779,7 +5620,7 @@ Objects {
     Location {
       X: -200.56575
       Y: -55.5128441
-      Z: 95.4691162
+      Z: 29.2557373
     }
     Rotation {
       Yaw: 89.9998627
@@ -5831,7 +5672,7 @@ Objects {
     Location {
       X: -167.338104
       Y: -55.5129852
-      Z: 141.445557
+      Z: 75.2321777
     }
     Rotation {
       Yaw: 89.9998779
@@ -5883,7 +5724,7 @@ Objects {
     Location {
       X: -213.52684
       Y: -55.5129395
-      Z: 184.984375
+      Z: 118.770996
     }
     Rotation {
       Yaw: 89.9999084
@@ -5935,7 +5776,7 @@ Objects {
     Location {
       X: -246.498703
       Y: -55.5130119
-      Z: 228.875854
+      Z: 162.662476
     }
     Rotation {
       Yaw: 89.999939
@@ -5987,7 +5828,7 @@ Objects {
     Location {
       X: -278.759674
       Y: -55.5126762
-      Z: 288.052246
+      Z: 254.103027
     }
     Rotation {
       Yaw: 89.9999542
@@ -6039,7 +5880,7 @@ Objects {
     Location {
       X: -261.968109
       Y: -55.5123825
-      Z: 332.714722
+      Z: 298.765503
     }
     Rotation {
       Yaw: 89.9999619
@@ -6091,7 +5932,7 @@ Objects {
     Location {
       X: -241.499847
       Y: -55.512661
-      Z: 377.752075
+      Z: 343.802856
     }
     Rotation {
       Yaw: 89.9999771
@@ -6143,7 +5984,7 @@ Objects {
     Location {
       X: -259.327209
       Y: -55.5124664
-      Z: 424.264893
+      Z: 390.315674
     }
     Rotation {
       Yaw: 89.9999847
@@ -13150,6 +12991,12 @@ Objects {
           Name: "bp:Screenshot Index"
           Int: 1
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     TemplateAsset {
@@ -13186,7 +13033,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -193192,9 +193039,9 @@ Objects {
   Name: "Sci-fi Trim 01 S bend"
   Transform {
     Location {
-      X: 404.513916
-      Y: -4988.28662
-      Z: 423.395386
+      X: 404.512695
+      Y: -4988.26709
+      Z: 426.158813
     }
     Rotation {
       Yaw: 89.9999542
@@ -193210,7 +193057,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 12334678993459933684
+        Id: 17081432065492706426
       }
     }
   }
@@ -193306,9 +193153,9 @@ Objects {
   Name: "Sci-fi Trim 01 S bend"
   Transform {
     Location {
-      X: 1122.13586
-      Y: -4867.36865
-      Z: 191.288452
+      X: 1122.13098
+      Y: -4867.34912
+      Z: 194.05188
     }
     Rotation {
       Yaw: 99.7291718
@@ -193324,7 +193171,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 12334678993459933684
+        Id: 17081432065492706426
       }
     }
   }
@@ -193363,12 +193210,12 @@ Objects {
   Name: "Sci-fi Trim 01 S bend"
   Transform {
     Location {
-      X: -1077.802
-      Y: -4867.34033
-      Z: 191.288452
+      X: -1077.80127
+      Y: -4867.3374
+      Z: 194.052246
     }
     Rotation {
-      Yaw: -99.7291946
+      Yaw: -99.729187
     }
     Scale {
       X: -3.73470354
@@ -193381,7 +193228,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 12334678993459933684
+        Id: 17081432065492706426
       }
     }
   }

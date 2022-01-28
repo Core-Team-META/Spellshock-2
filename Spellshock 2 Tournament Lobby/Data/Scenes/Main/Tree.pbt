@@ -18,8 +18,6 @@ Objects {
   ChildIds: 10223229577338714746
   ChildIds: 11819362894632979355
   ChildIds: 12021280769420984884
-  ChildIds: 12686358325783454877
-  ChildIds: 6571501519980276915
   ChildIds: 17436479203009380714
   ChildIds: 6391789068312908978
   ChildIds: 1275772343600876952
@@ -248,7 +246,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 287
+    Width: 313
     Height: 740
     UIX: 10
     UIY: 7
@@ -316,24 +314,25 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: 82.7318649
+    UIY: 78.9841232
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    UseParentWidth: true
     Panel {
       Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -374,8 +373,7 @@ Objects {
   Control {
     Width: 235
     Height: 30
-    UIX: 96.8811
-    UIY: 525.828
+    UIY: 558.308411
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -518,8 +516,7 @@ Objects {
   Control {
     Width: 235
     Height: 30
-    UIX: 96.8811
-    UIY: 359.826508
+    UIY: 426.036591
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -662,15 +659,14 @@ Objects {
   Control {
     Width: 235
     Height: 30
-    UIX: 96.8811
-    UIY: 218.434
+    UIY: 275.899353
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "For the tournament, you have access to ALL COSMETICS, hit [O] to open the cosmetic shop.  Make sure to equip a costume for both Dark and Light sides"
+      Label: "You have access to ALL COSMETICS, hit [O] to open the cosmetic shop.  Make sure to equip a costume for both Dark and Light sides"
       Color {
         R: 1
         G: 1
@@ -806,15 +802,14 @@ Objects {
   Control {
     Width: 235
     Height: 30
-    UIX: 96.8811
-    UIY: 101.961922
+    UIY: 149.433319
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "To get a tournament score, play 5 games in a row. See the progress bar just under the trials banner on the right side of the screen"
+      Label: "To get a score, play 5 games in a row. See the progress bar just under the trials banner on the right side of the screen"
       Color {
         R: 1
         G: 1
@@ -950,8 +945,7 @@ Objects {
   Control {
     Width: 235
     Height: 30
-    UIX: 96.8811
-    UIY: 38.1618042
+    UIY: 55.6512451
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1093,8 +1087,7 @@ Objects {
   Control {
     Width: 253
     Height: 30
-    UIX: 93.5
-    UIY: -29.8244896
+    UIY: 16.3976631
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1103,7 +1096,7 @@ Objects {
     Text {
       Label: "Welcome to the Spellshock 2 Tournament Lobby!"
       Color {
-        R: 0.947020054
+        G: 0.699999809
         B: 1
         A: 1
       }
@@ -1122,12 +1115,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -1155,8 +1148,6 @@ Objects {
   }
   ParentId: 5245963738914802101
   ChildIds: 457297170499083818
-  ChildIds: 927513780448958636
-  ChildIds: 6370627807873559821
   ChildIds: 3321185582676057748
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1171,25 +1162,28 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 100
+    Width: -10
     Height: 100
+    UIY: -7.49546814
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
     Panel {
       Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -1228,15 +1222,15 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIX: 93.5
     UIY: 18.2346649
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    UseParentWidth: true
     Text {
-      Label: "MAY 6 - 12"
+      Label: "Feb 11th 12pm - Feb 20th 12pm PDT"
       Color {
         R: 0.88
         G: 0.507019877
@@ -1263,153 +1257,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 6370627807873559821
-  Name: "UI Text Box"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12907148110108418095
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 253
-    Height: 60
-    UIX: 93.5
-    UIY: -1.9964447
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "$10,000 TOURNAMENT"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 14614763518687256413
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:center"
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 927513780448958636
-  Name: "UI Text Box"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12907148110108418095
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    UIX: 211.063171
-    UIY: -25.9734554
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "WISDOM"
-      Color {
-        R: 0.72847724
-        B: 0.88
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 1644415372798123522
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:center"
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleright"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleright"
         }
       }
     }
@@ -1448,14 +1295,15 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: -25.9734554
+    UIY: 8.74472
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    UseParentWidth: true
     Text {
-      Label: "CORE TRIALS"
+      Label: "Winterverse Games"
       Color {
         R: 1
         G: 1
@@ -1477,12 +1325,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -1589,8 +1437,8 @@ Objects {
         Id: 16759978556497479664
       }
       Color {
-        R: 0.681854486
-        B: 0.72
+        G: 0.699999809
+        B: 1
         A: 1
       }
       TeamSettings {
@@ -1652,8 +1500,8 @@ Objects {
         Id: 16759978556497479664
       }
       Color {
-        R: 0.22099337
-        B: 0.470000029
+        G: 0.268099844
+        B: 0.383000016
         A: 1
       }
       TeamSettings {
@@ -1900,8 +1748,8 @@ Objects {
         Id: 5223287246289902870
       }
       Color {
-        R: 0.830000043
-        B: 0.659602761
+        G: 0.699999809
+        B: 1
         A: 1
       }
       TeamSettings {
@@ -1982,114 +1830,6 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 6571501519980276915
-  Name: "World Text"
-  Transform {
-    Location {
-      X: -1252.90186
-      Y: 4319.00049
-      Z: 2577.28174
-    }
-    Rotation {
-      Yaw: -90
-    }
-    Scale {
-      X: 6.82184505
-      Y: 5.34969139
-      Z: 5.34968519
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Text {
-    Text: "NEXUS WARS"
-    FontAsset {
-      Id: 1644415372798123522
-    }
-    Color {
-      R: 0.789404631
-      B: 0.799999952
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:right"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 12686358325783454877
-  Name: "World Text"
-  Transform {
-    Location {
-      X: 1260.82935
-      Y: 4319.00049
-      Z: 2577.28174
-    }
-    Rotation {
-      Yaw: -90
-    }
-    Scale {
-      X: 6.82184505
-      Y: 5.34969139
-      Z: 5.34968519
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Text {
-    Text: "SPELLSHOCK 2"
-    FontAsset {
-      Id: 1644415372798123522
-    }
-    Color {
-      R: 0.789404631
-      B: 0.799999952
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {

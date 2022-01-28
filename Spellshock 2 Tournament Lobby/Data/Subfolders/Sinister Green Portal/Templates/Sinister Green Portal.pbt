@@ -54,5 +54,5 @@ Assets {
     Version: "1.1.0"
     Description: "A portal that takes you to another game. Includes VFX when you walk through. Can be configured to transfer players to any game."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

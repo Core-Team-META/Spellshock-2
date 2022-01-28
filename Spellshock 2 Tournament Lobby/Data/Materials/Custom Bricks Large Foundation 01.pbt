@@ -2,7 +2,7 @@ Assets {
   Id: 1200203494458278078
   Name: "Golden Bricks Large Foundation 01"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 4710488340079958283
     ParameterOverrides {

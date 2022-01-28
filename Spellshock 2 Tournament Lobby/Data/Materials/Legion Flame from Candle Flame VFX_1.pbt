@@ -2,7 +2,7 @@ Assets {
   Id: 17929682937471604452
   Name: "Legion Flame from Candle Flame VFX_1"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 11912531266626647440
     ParameterOverrides {

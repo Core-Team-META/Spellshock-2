@@ -705,5 +705,5 @@ Assets {
       AssetId: "Fantasy_Clay_Pots_-_Group_01_Treasure_Template"
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }
