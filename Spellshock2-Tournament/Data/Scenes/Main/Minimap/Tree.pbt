@@ -310,11 +310,11 @@ Objects {
     }
     Overrides {
       Name: "bp:Game ID"
-      String: "8261dd/spellshock-2-minimap"
+      String: "08a8c0/winterspellshockminimap"
     }
     Overrides {
       Name: "bp:Screenshot Index"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "bp:Speed"
@@ -359,6 +359,30 @@ Objects {
     Overrides {
       Name: "bp:U Offset"
       Float: 0.05
+    }
+    Overrides {
+      Name: "bp:Color C"
+      Color {
+        G: 0.334201127
+        B: 0.802083
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color B"
+      Color {
+        G: 0.199999809
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        G: 1.19999981
+        B: 2
+        A: 1
+      }
     }
   }
   Collidable_v2 {

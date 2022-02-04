@@ -120,12 +120,6 @@ Objects {
       PlayerMasterVolumeMultiplier: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -208,12 +202,6 @@ Objects {
       MaxHitpoints: -1
       PlayerMasterVolumeMultiplier: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -298,12 +286,6 @@ Objects {
       PlayerMasterVolumeMultiplier: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -386,12 +368,6 @@ Objects {
       MaxHitpoints: -1
       PlayerMasterVolumeMultiplier: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -476,12 +452,6 @@ Objects {
       PlayerMasterVolumeMultiplier: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -564,12 +534,6 @@ Objects {
       MaxHitpoints: -1
       PlayerMasterVolumeMultiplier: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -654,12 +618,6 @@ Objects {
       PlayerMasterVolumeMultiplier: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -742,12 +700,6 @@ Objects {
       MaxHitpoints: -1
       PlayerMasterVolumeMultiplier: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -832,12 +784,6 @@ Objects {
       PlayerMasterVolumeMultiplier: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -920,12 +866,6 @@ Objects {
       MaxHitpoints: -1
       PlayerMasterVolumeMultiplier: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 18224688022444578463
-    SubobjectId: 11592647923584693331
-    InstanceId: 1967900192041222895
-    TemplateId: 425347663873707340
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

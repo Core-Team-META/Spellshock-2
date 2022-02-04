@@ -2,7 +2,7 @@ Assets {
   Id: 6431694384145703818
   Name: "LooseRock"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 8772778959370683656
     ParameterOverrides {

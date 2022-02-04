@@ -2,7 +2,7 @@ Assets {
   Id: 12936208718019739022
   Name: "Orc_roof Composite Mask Blend_2"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

@@ -25186,12 +25186,6 @@ Objects {
       Id: 6804940442675244055
     }
   }
-  InstanceHistory {
-    SelfId: 11033163047941147936
-    SubobjectId: 16885732515113392541
-    InstanceId: 17503051649458603799
-    TemplateId: 1370765236601592822
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -26035,12 +26029,6 @@ Objects {
     ScriptAsset {
       Id: 6804940442675244055
     }
-  }
-  InstanceHistory {
-    SelfId: 11033163047941147936
-    SubobjectId: 16885732515113392541
-    InstanceId: 17503051649458603799
-    TemplateId: 1370765236601592822
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

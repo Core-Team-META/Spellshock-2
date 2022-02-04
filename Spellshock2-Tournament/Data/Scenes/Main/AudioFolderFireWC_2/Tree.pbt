@@ -98,12 +98,6 @@ Objects {
       IsSpatializationEnabled: true
     }
   }
-  InstanceHistory {
-    SelfId: 1884167046061710470
-    SubobjectId: 6907068650606407925
-    InstanceId: 13303893279092191653
-    TemplateId: 2961603344546662916
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }

@@ -2,7 +2,7 @@ Assets {
   Id: 7631516747634430689
   Name: "Elf_winter_roof_ Composite Mask Blend_3"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

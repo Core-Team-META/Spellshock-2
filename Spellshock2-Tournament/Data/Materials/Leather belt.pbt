@@ -2,7 +2,7 @@ Assets {
   Id: 14276509727197349014
   Name: "Leather belt"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 12708451202670911754
     ParameterOverrides {

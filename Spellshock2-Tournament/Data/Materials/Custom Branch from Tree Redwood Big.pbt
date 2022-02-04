@@ -2,7 +2,7 @@ Assets {
   Id: 14634477560395198195
   Name: "winter_Branch from Tree Redwood Big"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 10732868550180063050
     ParameterOverrides {

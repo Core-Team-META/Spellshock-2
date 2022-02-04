@@ -2,7 +2,7 @@ Assets {
   Id: 1021076781247296240
   Name: "Winter_Frosted_sea"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 14477042699193693950
     ParameterOverrides {

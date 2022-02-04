@@ -13,7 +13,7 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
-local TOURNEY_FORCE_ON = false
+local TOURNEY_FORCE_ON = true
 local StartTime = tonumber(os.time({year = 2022, month = 2, day = 11, hour = 20}))
 local EndTime = tonumber(os.time({year = 2022, month = 2, day = 20, hour = 20}))
 

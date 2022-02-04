@@ -2,7 +2,7 @@ Assets {
   Id: 6713596890797036848
   Name: "Chicken - Dark Brown"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 1781535275264321496
     ParameterOverrides {

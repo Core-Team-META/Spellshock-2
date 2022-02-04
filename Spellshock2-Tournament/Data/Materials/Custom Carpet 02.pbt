@@ -2,7 +2,7 @@ Assets {
   Id: 14211313689670436799
   Name: "Custom Carpet beige"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 3662715017593123519
     ParameterOverrides {

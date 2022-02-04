@@ -2,7 +2,7 @@ Assets {
   Id: 1007126261426868767
   Name: "Not Smart Ice"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 2930478605089679230
     ParameterOverrides {

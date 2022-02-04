@@ -2,7 +2,7 @@ Assets {
   Id: 5490393193493046017
   Name: "winter Grass from Grass Tall_3"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 15012139467746256940
     ParameterOverrides {

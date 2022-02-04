@@ -2,7 +2,7 @@ Assets {
   Id: 702395398056428514
   Name: "Water Elementals Ice Spikes_1"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 12510968351439123370
     ParameterOverrides {
