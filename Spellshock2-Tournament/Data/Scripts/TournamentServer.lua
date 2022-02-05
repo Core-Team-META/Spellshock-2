@@ -13,7 +13,7 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
-local TOURNEY_FORCE_ON = true
+local TOURNEY_FORCE_ON = false
 local StartTime = tonumber(os.time({year = 2022, month = 2, day = 11, hour = 20}))
 local EndTime = tonumber(os.time({year = 2022, month = 2, day = 20, hour = 20}))
 
@@ -122,13 +122,13 @@ function SubmitScore(player, score)
 		Leaderboards.SubmitPlayerScore(LEADERBOARD_REF, player, score, "")
 
         -- Winterverse medals logic
-        if score >= 40000 then
+        if score >= 25000 then
             Events.Broadcast("SJ_GivePlayerMedal", player, "Platinum")
-        elseif score >= 35000 then 
+        elseif score >= 20000 then 
             Events.Broadcast("SJ_GivePlayerMedal", player, "Gold")
-        elseif score >= 30000 then 
+        elseif score >= 15000 then 
             Events.Broadcast("SJ_GivePlayerMedal", player, "Silver")
-        elseif score >= 25000 then 
+        elseif score >= 5000 then 
             Events.Broadcast("SJ_GivePlayerMedal", player, "Bronze")
         end
 

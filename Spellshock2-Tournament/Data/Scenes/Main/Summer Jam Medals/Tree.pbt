@@ -4290,7 +4290,7 @@ Objects {
       }
     }
     Text {
-      Label: "40k Points"
+      Label: "25k Points"
       Color {
         R: 1
         G: 1
@@ -4730,7 +4730,7 @@ Objects {
       }
     }
     Text {
-      Label: "35k Points"
+      Label: "20k Points"
       Color {
         R: 1
         G: 1
@@ -5170,7 +5170,7 @@ Objects {
       }
     }
     Text {
-      Label: "30k Points"
+      Label: "15k Points"
       Color {
         R: 1
         G: 1
@@ -5609,7 +5609,7 @@ Objects {
       }
     }
     Text {
-      Label: "25k Points"
+      Label: "5k Points"
       Color {
         R: 1
         G: 1

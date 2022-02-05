@@ -66,41 +66,8 @@ LeaderboardConfigs {
     FormatType {
       Value: "mc:ecoresdkleaderboardformat:numeric"
     }
-    Name: "CoreTrials"
-    Id: "F16061CB3DD1328D"
-    EntryLimit: 100
-  }
-  Config {
-    SortType {
-      Value: "mc:ecoresdkleaderboardsorting:higherisbetter"
-    }
-    FormatType {
-      Value: "mc:ecoresdkleaderboardformat:numeric"
-    }
-    Name: "CoreTrialsReset"
-    Id: "82F25D1CB7587B8E"
-    EntryLimit: 100
-  }
-  Config {
-    SortType {
-      Value: "mc:ecoresdkleaderboardsorting:higherisbetter"
-    }
-    FormatType {
-      Value: "mc:ecoresdkleaderboardformat:numeric"
-    }
-    Name: "CoreTrialsReset2"
-    Id: "791E5BC0434D7A9F"
-    EntryLimit: 100
-  }
-  Config {
-    SortType {
-      Value: "mc:ecoresdkleaderboardsorting:higherisbetter"
-    }
-    FormatType {
-      Value: "mc:ecoresdkleaderboardformat:numeric"
-    }
-    Name: "CoreTrialsReset3"
-    Id: "986CB905D96EEEA6"
+    Name: "WinterEvent"
+    Id: "A34E86673088459F"
     EntryLimit: 100
   }
 }

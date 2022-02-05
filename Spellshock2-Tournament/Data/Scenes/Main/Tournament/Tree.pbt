@@ -1950,7 +1950,7 @@ Objects {
     Overrides {
       Name: "cs:LeaderboardReference"
       NetReference {
-        Key: "986CB905D96EEEA6"
+        Key: "A34E86673088459F"
         Type {
           Value: "mc:enetreferencetype:leaderboard"
         }
@@ -1958,7 +1958,7 @@ Objects {
     }
     Overrides {
       Name: "cs:EventID"
-      String: "CoreTrialsReset3"
+      String: "Winterverse"
     }
     Overrides {
       Name: "cs:MetaAbilityProgressionConstants_API"
