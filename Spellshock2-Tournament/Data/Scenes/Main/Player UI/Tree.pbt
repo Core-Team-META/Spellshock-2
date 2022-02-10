@@ -765,6 +765,12 @@ Objects {
         SelfId: 8573951147540421665
       }
     }
+    Overrides {
+      Name: "cs:Notice"
+      ObjectReference {
+        SelfId: 10087238976296650444
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

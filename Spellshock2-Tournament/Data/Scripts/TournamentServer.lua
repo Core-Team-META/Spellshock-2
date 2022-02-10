@@ -14,8 +14,8 @@ local EVENT_ID = script:GetCustomProperty("EventID")
 local ADDITIONAL_DATA = require(script:GetCustomProperty("AdditionalData"))
 
 local TOURNEY_FORCE_ON = false
-local StartTime = tonumber(os.time({year = 2022, month = 2, day = 11, hour = 20}))
-local EndTime = tonumber(os.time({year = 2022, month = 2, day = 20, hour = 20}))
+local StartTime = DateTime.New({year = 2022, month = 2, day = 11, hour = 20})
+local EndTime = DateTime.New({year = 2022, month = 2, day = 20, hour = 20})
 
 local MIN_PLAYERS_TO_SUBMIT = 1
 local REQUIRED_ROUNDS_PLAYED = 5
@@ -322,6 +322,12 @@ end
 end]]-- 
 
 function OnRoundStarted()
+    local currentTime = DateTime.CurrentTime()
+    if not TOURNEY_FORCE_ON and (currentTime.secondsSinceEpoch < StartTime.secondsSinceEpoch or currentTime.secondsSinceEpoch > EndTime.secondsSinceEpoch) then
+        warn("The event is no longer active!")
+        return
+    end
+    
 	for _, player in ipairs(Game.GetPlayers()) do
 		ClearData(player)
 		player.serverUserData.tournamentRound = player.serverUserData.tournamentRound or 0
@@ -332,6 +338,12 @@ function OnRoundStarted()
 end
 
 function OnRoundEnded()
+    local currentTime = DateTime.CurrentTime()
+    if not TOURNEY_FORCE_ON and (currentTime.secondsSinceEpoch < StartTime.secondsSinceEpoch or currentTime.secondsSinceEpoch > EndTime.secondsSinceEpoch) then
+        warn("The event is no longer active!")
+        return
+    end
+
 	-- Points are only valid if the minimum player count is met
 	if #Game.GetPlayers() < MIN_PLAYERS_TO_SUBMIT then
 		for _, player in ipairs(Game.GetPlayers()) do
@@ -344,17 +356,6 @@ function OnRoundEnded()
 		end
 		return
 	end
-	local currentTime = DateTime.CurrentTime()
-
-	warn(
-		" Current Time: " ..
-			tostring(currentTime) .. " StartTime:" .. tostring(StartTime) .. " EndTime: " .. tostring(EndTime)
-	)
-
-    if not TOURNEY_FORCE_ON and (currentTime.secondsSinceEpoch < startDate.secondsSinceEpoch or currentTime.secondsSinceEpoch > endDate.secondsSinceEpoch) then
-        warn("The event is no longer active!")
-        return
-    end
 
 	-- Wait for some calculations in other scripts
 	Task.Wait()
