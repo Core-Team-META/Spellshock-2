@@ -22,7 +22,7 @@ Objects {
     }
     Overrides {
       Name: "cs:GameId"
-      String: "9abe5f/spellshock-2-afk-zone"
+      String: "b6a98a/winterverse-games"
     }
     Overrides {
       Name: "cs:TimeUntilKick"
