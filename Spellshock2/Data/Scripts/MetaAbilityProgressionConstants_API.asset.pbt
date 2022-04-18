@@ -3,6 +3,8 @@ Assets {
   Name: "MetaAbilityProgressionConstants_API"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 101
+  SerializationVersion: 113
 }

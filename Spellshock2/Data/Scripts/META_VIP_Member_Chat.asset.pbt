@@ -3,6 +3,8 @@ Assets {
   Name: "META_VIP_Member_Chat"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 101
+  SerializationVersion: 113
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 3294055560130360493
   Name: "Lizard Skin"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 12261421290424202325
     ParameterOverrides {

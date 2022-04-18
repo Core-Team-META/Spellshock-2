@@ -33,6 +33,9 @@ Objects {
       }
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 18258535737398421081
@@ -68,6 +71,9 @@ Objects {
       }
       StartSpawned: true
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -139,11 +145,19 @@ Objects {
         }
       }
       RelevanceSettings {
+        key: "mesh"
+        value {
+          LowDistance: 4500
+          MediumDistance: 7000
+          HighDistance: 9000
+        }
+      }
+      RelevanceSettings {
         key: "vfx"
         value {
           LowDistance: 4500
-          MediumDistance: 8000
-          HighDistance: 13000
+          MediumDistance: 7000
+          HighDistance: 9000
         }
       }
       VoiceChatSettings {
@@ -175,12 +189,17 @@ Objects {
         VoiceChatEntryVerticalFlow {
           Value: "mc:ecoreverticalflow:toptobottom"
         }
+        IsVoiceChatWidgetVisible: true
       }
       PlayerInteractDistance: 500
       PlayerInteractAngleDeg: 50
       PlayerStorageMode {
         Value: "mc:eplayerstoragemode:none"
       }
+      EnableNetworkedEventsQueuing: true
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

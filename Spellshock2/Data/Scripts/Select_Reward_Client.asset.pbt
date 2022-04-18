@@ -3,6 +3,8 @@ Assets {
   Name: "Select_Reward_Client"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 101
+  SerializationVersion: 113
 }

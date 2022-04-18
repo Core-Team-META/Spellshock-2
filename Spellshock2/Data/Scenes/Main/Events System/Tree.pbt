@@ -35,6 +35,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10602192213508828268
@@ -74,6 +77,9 @@ Objects {
       Id: 6412881030095810137
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7827559503573666526
@@ -112,6 +118,9 @@ Objects {
     ScriptAsset {
       Id: 6412881030095810137
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -156,6 +165,9 @@ Objects {
       Id: 6412881030095810137
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1810028518889864159
@@ -199,6 +211,9 @@ Objects {
       Id: 6412881030095810137
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 847730675099831797
@@ -241,5 +256,8 @@ Objects {
     ScriptAsset {
       Id: 6412881030095810137
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

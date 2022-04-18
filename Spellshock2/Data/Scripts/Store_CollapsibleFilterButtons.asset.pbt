@@ -3,6 +3,8 @@ Assets {
   Name: "Store_CollapsibleFilterButtons"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 101
+  SerializationVersion: 113
 }

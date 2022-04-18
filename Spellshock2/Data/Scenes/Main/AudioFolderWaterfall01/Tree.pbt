@@ -52,6 +52,9 @@ Objects {
       IsSpatializationEnabled: true
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17388475073476692860
@@ -104,5 +107,8 @@ Objects {
       FadeOutTime: 2
       IsSpatializationEnabled: true
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

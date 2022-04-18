@@ -3,6 +3,8 @@ Assets {
   Name: "BlockAbilityClient 2.0"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 101
+  SerializationVersion: 113
 }

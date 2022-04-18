@@ -47,6 +47,9 @@ Assets {
             Id: 8722953463534536994
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     PrimaryAssetId {
@@ -57,6 +60,6 @@ Assets {
   Marketplace {
     Description: "You are the chicken! Simply drag out GiveChicken into your hierarchy and your players will be made invisible at spawn, and a chicken will be in their place. The chicken has variable run animation speeds, cluck frequency, and more which you can configure on the \"ChickenContext\" object. Should work right out of the box!"
   }
-  SerializationVersion: 101
+  SerializationVersion: 113
   DirectlyPublished: true
 }

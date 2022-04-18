@@ -28,4 +28,7 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Chat"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }

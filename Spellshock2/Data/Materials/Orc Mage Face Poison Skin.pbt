@@ -2,7 +2,7 @@ Assets {
   Id: 17390852605279409251
   Name: "Orc Mage Face Poison Skin"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 58872637069711017
     ParameterOverrides {

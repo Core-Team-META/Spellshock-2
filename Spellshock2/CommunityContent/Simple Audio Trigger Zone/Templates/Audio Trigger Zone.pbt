@@ -31,6 +31,9 @@ Assets {
         }
         NetworkContext {
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 4156506109158557571
@@ -80,6 +83,12 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -131,6 +140,9 @@ Assets {
             Value: "mc:etriggershape:box"
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 2769439484883023347
@@ -166,6 +178,9 @@ Assets {
             Id: 3939760811486497633
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 1563919121921073133
@@ -199,6 +214,9 @@ Assets {
         Folder {
           IsFilePartition: true
           FilePartitionName: "AudioFolderEnter"
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -238,6 +256,9 @@ Assets {
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -280,6 +301,9 @@ Assets {
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 10326014001475722023
@@ -312,6 +336,9 @@ Assets {
         Folder {
           IsFilePartition: true
           FilePartitionName: "AudioFolderLeave"
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -350,6 +377,9 @@ Assets {
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
     }
@@ -406,6 +436,6 @@ Assets {
   Marketplace {
     Description: "An easy-to-use drag-and-drop audio trigger zone. Simply put sounds you want to trigger in the AudioFolderEnter and they will play when you enter the zone. You can also put sounds in the AudioFolderLeave if you want sounds to trigger when you leave the zone.\r\n\r\nComment out the print to screen messages in the script and remove the visual reference object as needed."
   }
-  SerializationVersion: 101
+  SerializationVersion: 113
   DirectlyPublished: true
 }

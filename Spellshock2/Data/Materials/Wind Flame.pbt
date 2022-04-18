@@ -2,7 +2,7 @@ Assets {
   Id: 13136065608076070525
   Name: "Wind Flame"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 11142872697084185430
     ParameterOverrides {

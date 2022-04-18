@@ -2,7 +2,7 @@ Assets {
   Id: 18276034198579100461
   Name: "Shop Backdrop (Witcher)"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

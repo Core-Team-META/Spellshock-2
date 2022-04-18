@@ -2,7 +2,7 @@ Assets {
   Id: 17463584199150662585
   Name: "Bloody Metal Frame 03"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 12289444008824645774
     ParameterOverrides {
