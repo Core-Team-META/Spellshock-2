@@ -124,6 +124,7 @@ function OnPlayerJoined(player)
         end
     end    
     player:SetPrivateNetworkedData("PromoData", data.Promo)
+
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

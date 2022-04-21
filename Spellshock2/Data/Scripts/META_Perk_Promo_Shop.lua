@@ -4,10 +4,14 @@
 -- Date: 2022/4/12
 -- Version 0.1.1
 
+print("perk initializing...")
+
 local isEnabled = true
 if not isEnabled then
-    return
+    print("perk not enabled")
+    --return
 end
+print("perk enabled")
 
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
@@ -18,6 +22,8 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 while not _G.PROGRESS_MULTIPLIER or not _G.STORAGE_KEYS do
     Task.Wait()
 end
+
+print("PROGRESS_MULTIPLIER and STORAGE_KEYS loaded")
 
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
@@ -287,10 +293,10 @@ function IsDateExpired(year, month, day)
 end
 
 function HasPromoMembership(player)
-    local data = Storage.GetPlayerData(player)
+    local promoData = player:GetPrivateNetworkedData("PromoData")
     local promoPerk = ""
-    if data.Promo then
-        for keyString, promo in pairs(data.Promo) do 
+    if promoData then
+        for keyString, promo in pairs(promoData) do 
             print(keyString, 
                 "Claimed on",
                 promo.claimYear,
@@ -309,6 +315,8 @@ function HasPromoMembership(player)
                 return true
             end
         end
+    else
+        print("promo data nil")
     end    
     return false
 end
@@ -316,6 +324,7 @@ end
 function OnPrivateNetworkedDataChanged(player, key)
     if key == "PromoData" then
         if HasPromoMembership(player) then
+            _G.PerPlayerDictionary.Set(player, CONST.VIP_MEMBERSHIP_KEY, 1)
             player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
         end
     end
@@ -323,6 +332,8 @@ end
 
 -- Sets player resource from storage and connects player events
 function OnPlayerJoined(player)
+    print(player.name, "perk promo player joined")
+
     local data = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     local perks = OnLoadPerkData(data)
     -- Setup current Perk purchased count per bundle
@@ -344,9 +355,16 @@ function OnPlayerJoined(player)
         _G.PerPlayerDictionary.Set(player, CONST.VIP_MEMBERSHIP_KEY, 1)
     end
 
+    if HasPromoMembership(player) then
+        print(player.name, " Promo membership active")
+        player:SetResource(CONST.VIP_MEMBERSHIP_KEY, 1)
+        _G.PerPlayerDictionary.Set(player, CONST.VIP_MEMBERSHIP_KEY, 1)
+    end
+
     OnSavePerkData(player, data, perks)
     CheckPerkCountWithStorage(player, data)
     -- Connect events that updates currency balance for player
+    player.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
     player.resourceChangedEvent:Connect(OnResourceChanged)
     player.perkChangedEvent:Connect(OnPerksChanged)
 end
@@ -364,6 +382,10 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Events.Connect("CHATHOOK_GOLD_BOOST", OnGiveGoldBoost)
 Events.Connect("CHATHOOK_XP_BOOST", OnGiveXpBoost)
+print("meta perk promo end")
+
+Events.ConnectForPlayer("PromoDataSet", OnPlayerJoined)

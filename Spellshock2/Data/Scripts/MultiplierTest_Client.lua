@@ -40,7 +40,6 @@ function Update()
     xpBoostTime = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONST.SELF_XP_BOOST_KEY) or 0
     isVip = _G.PerPlayerDictionary.Get(LOCAL_PLAYER, CONST.VIP_MEMBERSHIP_KEY)
 
- 
     if isVip then
         --VIP_MEMBER_PANEL.visibility = Visibility.FORCE_ON
         VIP_BOOST_TEXT.text = "VIP ACTIVE"
@@ -55,7 +54,7 @@ function Update()
         if isVip then
             multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
         end
-        if xpBoostTime and xpBoostTime > 0 then
+        if xpBoostTime and tonumber(xpBoostTime) > 0 then
             multiplier = multiplier + CONST.XP_SELF_BOOST_MULTIPLIER
         end
         if eventsAPI.IsEventKeyActive("2CXP") then
@@ -68,7 +67,7 @@ function Update()
         if isVip then
             multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
         end
-        if goldBoostTime and goldBoostTime > 0 then
+        if goldBoostTime and tonumber(goldBoostTime) > 0 then
             multiplier = multiplier + CONST.GOLD_SELF_BOOST_MULTIPLIER
         end
         if eventsAPI.IsEventKeyActive("2Gold") then
@@ -163,3 +162,9 @@ end
 
 _G.PerPlayerDictionary.valueChangedEvent:Connect(OnDictionaryChanged)
 Update()
+
+function OnPrivateNetworkedDataChanged(player, key)
+    Update()
+end
+
+LOCAL_PLAYER.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)

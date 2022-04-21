@@ -1,4 +1,6 @@
 local GRANT_PERKS_SERVER = script:GetCustomProperty("GrantPerksServer"):WaitForObject()
+local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 
 -- Expiry_Date 
 local EXPIRY_YEAR = GRANT_PERKS_SERVER:GetCustomProperty("ExpiryYear")
@@ -21,7 +23,41 @@ local UIICON_PANEL = script:GetCustomProperty("UIIconPanel"):WaitForObject()
 local UIBINDING = script:GetCustomProperty("UIBinding")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-print("ui", UI.CanCursorInteractWithUI(), "visible", UI.IsCursorVisible(), "locked", UI.IsCursorLockedToViewport())
+local IsFirstLoad = true
+local UITRAINING_CONTAINER = script:GetCustomProperty("UITrainingContainer"):WaitForObject()
+--_G.CurrentMenu = UICLAIM_CONTAINER
+--_G.MENU_TABLE["Promo"] = UICLAIM_CONTAINER
+
+local function META_CP()
+	return _G["Class.Progression"]
+end
+
+function ToggleShop(bool)
+    local currentState = GAME_STATE_API.GetGameState()
+    if bool and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and not LOCAL_PLAYER.isDead then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["Training"])
+    elseif _G.CurrentMenu == _G.MENU_TABLE["Training"] then
+       
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+    end
+end
+
+function NeedsTraining()
+    local hasCompletedTraining = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, CONST.TRAINING_STATUS)
+
+    local isNewPlayer = true
+    for _, class in pairs(CONST.CLASS) do
+        if META_CP().GetClassLevel(LOCAL_PLAYER, class) ~= 1 then
+            isNewPlayer = false
+        end
+    end
+
+    if isNewPlayer and hasCompletedTraining == 0 then 
+        return true
+    else
+        return false
+    end
+end
 
 function GetKeyString()
     local keyYear = tostring(GRANT_YEAR)
@@ -53,10 +89,14 @@ print("Promo data loaded")
 --UI.SetCanCursorInteractWithUI(true)
 
 function OnButtonNowClicked()
-    UI.SetCursorVisible(false)
-    UI.SetCanCursorInteractWithUI(false)
-    UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF
+    --UI.SetCursorVisible(false)
+    --UI.SetCanCursorInteractWithUI(false)
+    --UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF
     --Events.BroadcastToServer("InstaGrowRewardClaim", 46) --Bag Bundle
+
+    UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF
+    UITRAINING_CONTAINER.visibility = Visibility.INHERIT
+    ToggleShop(false)
 
     local keyString = GetKeyString()
 
@@ -64,27 +104,46 @@ function OnButtonNowClicked()
 end
 
 function OnButtonLaterClicked()
-    UI.SetCursorVisible(false)
-    UI.SetCanCursorInteractWithUI(false)
+    if NeedsTraining() then
+        --UITRAINING_CONTAINER.visibility = Visibility.INHERIT
+    else
+        --UI.SetCursorVisible(false)
+        --UI.SetCanCursorInteractWithUI(false)
+    end
+    --UITRAINING_CONTAINER.visibility = Visibility.INHERIT
+    --UI.SetCursorVisible(false)
+    --UI.SetCanCursorInteractWithUI(false)
+
+    UITRAINING_CONTAINER.visibility = Visibility.INHERIT
+    ToggleShop(false)
+    
     UIWINDOW_PANEL.visibility = Visibility.FORCE_OFF  
     UIICON_PANEL.visibility = Visibility.INHERIT 
 end
 
 function OnButtonOpenClicked()
-    UI.SetCursorVisible(true)
-    UI.SetCanCursorInteractWithUI(true)
+    if NeedsTraining() then
+        
+    else
+        --UI.SetCursorVisible(true)
+        --UI.SetCanCursorInteractWithUI(true)
+    end
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE["Training"])
+    UITRAINING_CONTAINER.visibility = Visibility.FORCE_OFF
+    --UI.SetCursorVisible(true)
+    --UI.SetCanCursorInteractWithUI(true)    
+    
     UIWINDOW_PANEL.visibility = Visibility.INHERIT  
     UIICON_PANEL.visibility = Visibility.FORCE_OFF
 
-    print("ui", UI.CanCursorInteractWithUI(), "visible", UI.IsCursorVisible(), "locked", UI.IsCursorLockedToViewport())
+    --print("ui", UI.CanCursorInteractWithUI(), "visible", UI.IsCursorVisible(), "locked", UI.IsCursorLockedToViewport())
 end
 
 UICLAIM_NOW_BUTTON.clickedEvent:Connect(OnButtonNowClicked)
 UICLAIM_LATER_BUTTON.clickedEvent:Connect(OnButtonLaterClicked)
 
-function OnBindingPressed(whichPlayer, binding)      
-    print(binding)
-    if binding == UIBINDING and not IsPromoClaimed() then
+function OnBindingPressed(whichPlayer, binding)          
+    if binding == UIBINDING and not IsPromoClaimed() and IsUserAllowed() and not IsPromoExpired()  then
         if UIWINDOW_PANEL.visibility == Visibility.FORCE_OFF then
             OnButtonOpenClicked()
         else
@@ -168,35 +227,35 @@ end
 print("UI promo display...")
 if IsPromoClaimed() then
     print(GetKeyString().." already claimed")
-    UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF
+    ToggleShop(false)
+    UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF    
 else
     print(GetKeyString().." keystart")
     if IsUserAllowed() then
         if IsPromoExpired() then
             print("Grant date expired")
+            --ToggleShop(false)
+            OnButtonLaterClicked()
             UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF
         else
             if IsPromoActive() then
                 print("Grant date today")
                 UICLAIM_CONTAINER.visibility = Visibility.INHERIT
+                UITRAINING_CONTAINER.visibility = Visibility.FORCE_OFF
                 OnButtonOpenClicked()
             else
                 print("Grant date not due yet")
+                ToggleShop(false)
                 UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF
             end
         end
     else
+        ToggleShop(false)
         UICLAIM_CONTAINER.visibility = Visibility.FORCE_OFF
         print("User not allowed in promo")
     end
 end
 
-function Tick()
-    Task.Wait(1)
-    if UIWINDOW_PANEL.visibility == Visibility.INHERIT then
-        UI.SetCursorVisible(true)
-        --UI.SetCanCursorInteractWithUI(true)
-        --UI.SetCursorLockedToViewport(true)
-    end
-    print("tick ui", UI.CanCursorInteractWithUI(), "visible", UI.IsCursorVisible(), "locked", UI.IsCursorLockedToViewport())
-end
+Task.Wait(2)
+print("broadcast")
+Events.BroadcastToServer("PromoDataSet", true)
