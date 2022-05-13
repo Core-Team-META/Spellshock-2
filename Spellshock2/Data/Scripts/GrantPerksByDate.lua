@@ -194,9 +194,9 @@ end
 
 function IsPromoExpired()
     local currentDate = {}
-    currentDate.Year = tonumber(os.date('%Y', os.time()))
-    currentDate.Month = tonumber(os.date('%m', os.time()))
-    currentDate.Day = tonumber(os.date('%d', os.time()))
+    currentDate.Year = tonumber(os.date('!%Y', os.time()))
+    currentDate.Month = tonumber(os.date('!%m', os.time()))
+    currentDate.Day = tonumber(os.date('!%d', os.time()))
     currentDate.Hour = tonumber(os.date('!%H', os.time()))
     currentDate.Minute = tonumber(os.date('!%M', os.time()))
     if currentDate.Year == EXPIRY_YEAR and currentDate.Month == EXPIRY_MONTH and currentDate.Day == EXPIRY_DAY and currentDate.Hour == EXPIRY_HOUR then
@@ -234,9 +234,9 @@ end
 
 function IsPromoActive()
     local currentDate = {}
-    currentDate.Year = tonumber(os.date('%Y', os.time()))
-    currentDate.Month = tonumber(os.date('%m', os.time()))
-    currentDate.Day = tonumber(os.date('%d', os.time()))
+    currentDate.Year = tonumber(os.date('!%Y', os.time()))
+    currentDate.Month = tonumber(os.date('!%m', os.time()))
+    currentDate.Day = tonumber(os.date('!%d', os.time()))
     currentDate.Hour = tonumber(os.date('!%H', os.time()))
     currentDate.Minute = tonumber(os.date('!%M', os.time()))
     if currentDate.Year > GRANT_YEAR then
@@ -259,9 +259,9 @@ end
 
 function IsPromoAlmostActive()
     local thisDate = {}
-    thisDate.Year = tonumber(os.date('%Y', os.time()))
-    thisDate.Month = tonumber(os.date('%m', os.time()))
-    thisDate.Day = tonumber(os.date('%d', os.time()))
+    thisDate.Year = tonumber(os.date('!%Y', os.time()))
+    thisDate.Month = tonumber(os.date('!%m', os.time()))
+    thisDate.Day = tonumber(os.date('!%d', os.time()))
     thisDate.Hour = tonumber(os.date('!%H', os.time()))
     thisDate.Minute = tonumber(os.date('!%M', os.time()))
     thisDate.Second = tonumber(os.date('!%S', os.time()))
