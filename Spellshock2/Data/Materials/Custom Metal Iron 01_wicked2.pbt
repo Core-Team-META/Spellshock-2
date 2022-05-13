@@ -2,7 +2,7 @@ Assets {
   Id: 9828546233713937847
   Name: "Custom Metal Iron 01_wicked2"
   PlatformAssetType: 13
-  SerializationVersion: 113
+  SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 15592158619972675004
     ParameterOverrides {

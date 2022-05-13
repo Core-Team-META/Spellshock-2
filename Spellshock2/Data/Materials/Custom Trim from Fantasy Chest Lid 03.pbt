@@ -2,7 +2,7 @@ Assets {
   Id: 13282383221109128235
   Name: "Custom Trim from Fantasy Chest Lid 03"
   PlatformAssetType: 13
-  SerializationVersion: 113
+  SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 5097729921329053570
     ParameterOverrides {

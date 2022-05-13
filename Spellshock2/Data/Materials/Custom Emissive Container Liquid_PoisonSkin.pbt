@@ -2,7 +2,7 @@ Assets {
   Id: 6715567782391785927
   Name: "Custom Emissive Container Liquid_PoisonSkin"
   PlatformAssetType: 13
-  SerializationVersion: 113
+  SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 6414569565439168134
     ParameterOverrides {

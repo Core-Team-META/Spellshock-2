@@ -2,7 +2,7 @@ Assets {
   Id: 7871390393991838961
   Name: "Animorph Potion Liquid"
   PlatformAssetType: 13
-  SerializationVersion: 113
+  SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 16460926797002454512
     ParameterOverrides {

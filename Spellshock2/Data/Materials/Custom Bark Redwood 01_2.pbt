@@ -2,7 +2,7 @@ Assets {
   Id: 6937472095790113762
   Name: "small_branch_foliage"
   PlatformAssetType: 13
-  SerializationVersion: 113
+  SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 1964254608213071037
     ParameterOverrides {
