@@ -1721,7 +1721,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ExpiryDay"
-      Int: 3
+      Int: 6
     }
     Overrides {
       Name: "cs:ExpiryHour"
@@ -1741,7 +1741,7 @@ Objects {
     }
     Overrides {
       Name: "cs:GrantDay"
-      Int: 28
+      Int: 26
     }
     Overrides {
       Name: "cs:GrantHour"
@@ -1753,7 +1753,7 @@ Objects {
     }
     Overrides {
       Name: "cs:GrantDurationInDays"
-      Int: 1
+      Int: 30
     }
     Overrides {
       Name: "cs:RestrictToPlayers"
